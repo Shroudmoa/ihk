@@ -1,0 +1,3 @@
+
+--- just a test ---
+TLS 1.3 wurde 2018 veröffentlicht und ist der aktuelle Standard. Es bietet einen schnelleren Handshake (1 Round-Trip statt 2), erzwingt Perfect Forward Secrecy und hat unsichere Algorithmen entfernt.
