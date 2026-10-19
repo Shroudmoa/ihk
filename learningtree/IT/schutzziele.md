@@ -6,6 +6,7 @@ Verfügbarkeit ⚡️ – Daten und Systeme müssen zugänglich sein, wenn sie g
 Authentizität 👤 – Es muss sichergestellt sein, dass jemand/das System wirklich derjenige ist, für den es sich ausgibt.
 Verbindlichkeit - Eine Handlung darf später nicht glaubhaft abgestritten werden.
 
+## Schutzziele der Informationssicherheit (IHK)
 
 | Schutzziel | Definition | Technische Maßnahmen |
 |---|---|---|
