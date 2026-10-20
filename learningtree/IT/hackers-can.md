@@ -66,3 +66,10 @@
 - ARP Spoofing → falsche IP-MAC-Zuordnung im lokalen IPv4-Netz.
 - Replay → gültige Nachricht erneut senden.
 - Webshell → Befehlsausführung über einen kompromittierten Webserver.
+
+## Siehe auch
+
+- [Schutzziele](schutzziele.md) – was genau geschützt werden soll
+- [Firewall](firewall.md) – Abwehr auf Netzwerkebene
+- [DSGVO--TOM](dsgvo-tom.md) – Datenschutz bei personenbezogenen Daten
+

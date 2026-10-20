@@ -77,3 +77,11 @@
 Anwendungsdaten → TCP-Segment/UDP-Datagramm → IP-Paket → Ethernet-Frame → Bits
 
 **Wichtige Adressen:** MAC = Schicht 2, IP = Schicht 3, Port = Schicht 4.
+
+## Siehe auch
+
+- [MAC](mac.md) – Schicht 2: Adressierung
+- [Netzwerktypen](netzwerktypen.md) – Einsatz von Schicht 1–3
+- [Proxy](proxy.md) – Schicht 7: Application Gateway
+- [Firewall](firewall.md) – Paketfilter (3/4) bis Layer 7
+

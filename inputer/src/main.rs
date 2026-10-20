@@ -8,6 +8,8 @@ const SUBJECTS: [&str; 2] = ["IT", "Wirtschaft"];
 #[derive(Serialize, Deserialize, Default)]
 struct Entry {
     title: String,
+    #[serde(default)]
+    category: String,
     text: String,
 }
 
@@ -52,9 +54,11 @@ fn add(root: &Path) -> Result<(), String> {
         return Ok(());
     }
 
+    let category = ask("Kategorie (optional, leer = Allgemein): ");
+
     let file = json_path(root, &subject);
     let mut entries: Vec<Entry> = load(&file)?;
-    entries.push(Entry { title: title.clone(), text: text.clone() });
+    entries.push(Entry { title: title.clone(), category, text: text.clone() });
     save(&file, &entries)?;
 
     let raw = rawinfos_path(root, &subject);
@@ -90,7 +94,7 @@ fn render(root: &Path, subject: &str) -> Result<(), String> {
     }
     let entries: Vec<Entry> = load(&file)?;
 
-    let mut doc = format!("# {subject}\n");
+    let mut groups: Vec<(String, Vec<String>)> = Vec::new();
     let mut used: Vec<String> = Vec::new();
 
     for entry in &entries {
@@ -108,12 +112,34 @@ fn render(root: &Path, subject: &str) -> Result<(), String> {
         let page = format!("# {}\n\n{}\n", entry.title, entry.text);
         fs::write(dir.join(format!("{slug}.md")), page).map_err(|e| e.to_string())?;
 
-        doc += &format!("\n- [{}]({subject}/{slug}.md)\n", entry.title);
+        let category = if entry.category.trim().is_empty() {
+            "Allgemein".to_string()
+        } else {
+            entry.category.trim().to_string()
+        };
+        let link = format!("- [{}]({subject}/{slug}.md)", entry.title);
+        match groups.iter_mut().find(|(c, _)| *c == category) {
+            Some((_, links)) => links.push(link),
+            None => groups.push((category, vec![link])),
+        }
+    }
+
+    let mut doc = format!("# {subject}\n");
+    for (category, links) in &groups {
+        doc += &format!("\n## {category}\n\n");
+        for link in links {
+            doc += &format!("{link}\n");
+        }
     }
 
     let out = tree.join(format!("{subject}.md"));
     fs::write(&out, doc).map_err(|e| e.to_string())?;
-    println!("{}: {} Themen", out.display(), entries.len());
+    println!(
+        "{}: {} Themen in {} Kategorien",
+        out.display(),
+        entries.len(),
+        groups.len()
+    );
     Ok(())
 }
 

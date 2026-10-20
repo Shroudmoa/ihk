@@ -62,3 +62,11 @@ Verbindlichkeit - Eine Handlung darf später nicht glaubhaft abgestritten werden
 - Verfügbarkeit: Funktioniert das System bei Bedarf?
 - Authentizität: Ist der Kommunikationspartner echt?
 - Verbindlichkeit: Kann eine Handlung glaubhaft abgestritten werden?
+
+## Siehe auch
+
+- [DSGVO--TOM](dsgvo-tom.md) – TOM nach Art. 32 DSGVO
+- [hackers-can](hackers-can.md) – Bedrohungen: DoS, Phishing, MitM
+- [RAID](raid.md) – Verfügbarkeit durch Redundanz
+- [Snapshots-Backups](snapshots-backups.md) – Verfügbarkeit durch Sicherungen
+

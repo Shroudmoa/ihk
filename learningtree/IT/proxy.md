@@ -100,3 +100,10 @@ Der Router übersetzt beziehungsweise leitet eingehende Verbindungen anhand eine
 - **Schutzziele:** Zugriffskontrolle unterstützt Vertraulichkeit; Logging unterstützt die Nachvollziehbarkeit; Redundanz eines Reverse Proxys kann die Verfügbarkeit erhöhen.
 
 **Prüfungssatz:** Ein Forward Proxy vermittelt Client-Anfragen, ein Reverse Proxy vermittelt Server-Anfragen und Port Forwarding leitet eingehende Verbindungen anhand einer NAT-Regel an einen internen Dienst weiter.
+
+## Siehe auch
+
+- [Firewall](firewall.md) – Abgrenzung Proxy vs. Firewall
+- [OSI](osi.md) – Schicht 7: Anwendungsprotokolle
+- [Netzwerktypen](netzwerktypen.md) – Zugriff aus LAN/WAN nach außen
+

@@ -56,3 +56,11 @@ Eine **Firewall** kontrolliert Netzwerkverkehr anhand definierter Sicherheitsreg
 - **Schutzziele:** Firewalls unterstützen Vertraulichkeit, Integrität und Verfügbarkeit, garantieren diese aber nicht.
 
 **Merksatz:** Eine Firewall kontrolliert Netzwerkverkehr. Sie ersetzt weder Endgeräteschutz noch sichere Software, Benutzeraufklärung oder ein funktionierendes Backup-Konzept.
+
+## Siehe auch
+
+- [Proxy](proxy.md) – Application-Level Gateway
+- [Netzwerktypen](netzwerktypen.md) – LAN, WAN und Segmentierung
+- [hackers-can](hackers-can.md) – welche Angriffe abgewehrt werden
+- [OSI](osi.md) – Zuordnung der Firewall-Typen zu Schichten
+

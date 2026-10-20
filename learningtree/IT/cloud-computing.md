@@ -68,3 +68,11 @@ NaaS = Netzwerk
 | NaaS | Zentrale Verwaltung, flexible Netzwerkressourcen | Anbieterabhängigkeit, Internet-/Providerabhängigkeit |
 
 **IHK-Merksatz:** Cloud-Dienste reduzieren den eigenen Betriebsaufwand, erhöhen aber häufig die Abhängigkeit vom Anbieter und erfordern weiterhin Sicherheits- und Datenschutzmaßnahmen.
+
+## Siehe auch
+
+- [VM-Container-Server](vm-container-server.md) – Abstraktionsebenen IaaS bis SaaS
+- [Hypervisor-Typen](hypervisor-typen.md) – Basis der Virtualisierung
+- [Live-Migration-VMs](live-migration-vms.md) – Migration im Rechenzentrum
+- [Snapshots-Backups](snapshots-backups.md) – Datensicherung in der Cloud
+

@@ -124,3 +124,11 @@ Die Entscheidung hängt von Performance, Isolation, Ressourceneffizienz, Betrieb
 
 - **Container:** Wenn Anwendungen schnell gestartet, aktualisiert und horizontal skaliert werden müssen.  
   *Beispiel:* Webdienste und APIs mit mehreren Anwendungsversionen für Tests und Rollouts.
+
+## Siehe auch
+
+- [Hypervisor-Typen](hypervisor-typen.md) – Typ 1 vs. Typ 2
+- [Live-Migration-VMs](live-migration-vms.md) – laufende VMs verschieben
+- [BIOS/UEFI-Kernel](bios-uefi-kernel.md) – Kernel und User Space
+- [Snapshots-Backups](snapshots-backups.md) – Sicherung von VMs
+

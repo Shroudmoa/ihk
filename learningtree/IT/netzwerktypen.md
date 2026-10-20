@@ -50,3 +50,12 @@
 - **VPN:** Schützt die Vertraulichkeit und Integrität der Datenübertragung, sofern korrekt konfiguriert.
 - **VLAN:** Trennt Broadcast-Domänen, ist aber allein keine vollständige Sicherheitsmaßnahme.
 - **Wichtig:** Die Netzwerkgröße bestimmt nicht automatisch die Angriffsart. Angriffe hängen von Architektur, Protokollen und Sicherheitskonfiguration ab.
+
+## Siehe auch
+
+- [OSI](osi.md) – Schichtenmodell als Grundlage
+- [MAC](mac.md) – Adressierung im LAN
+- [Firewall](firewall.md) – Trennung zwischen Netzen
+- [Proxy](proxy.md) – kontrollierter Zugriff nach außen
+- [IPv6](ipv6.md) – Adressierung im WAN/LAN
+

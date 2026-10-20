@@ -16,9 +16,12 @@ Themen-Dateien unter `learningtree/` gebaut.
 
 ```
 cd inputer
-cargo run            # neue Eingabe: Fach wählen, Titel, Text (Ende: ACATS)
+cargo run            # neue Eingabe: Fach, Titel, Text (Ende: ACATS), Kategorie
 cargo run -- build   # archive/jsonformat/ -> learningtree/ (alles neu bauen)
 ```
+
+Die Kategorie ist optional (einfach Enter drücken). Sie gruppiert das Thema
+im Index `IT.md`/`Wirtschaft.md` unter eine Überschrift.
 
 Bei jedem `cargo run` wird die Themen-Datei direkt angelegt und in
 `IT.md`/`Wirtschaft.md` verlinkt. `build` ist nur zum Neu-Bauen da, wenn

@@ -82,3 +82,10 @@ IPv6 verwendet **kein ARP**. Stattdessen übernimmt **Neighbor Discovery Protoco
 Ein Client erhält über DNS einen A- und einen AAAA-Record. Er verwendet Dual Stack und kann den Server über IPv4 oder IPv6 erreichen. Happy Eyeballs reduziert Verzögerungen, indem beide Verbindungswege zeitnah berücksichtigt werden.
 
 **Merksatz:** Dual Stack = IPv4 und IPv6 parallel; A = IPv4; AAAA = IPv6; DHCPv6 = optionale zentrale IPv6-Konfiguration; SLAAC = automatische IPv6-Konfiguration.
+
+## Siehe auch
+
+- [MAC](mac.md) – Link-Layer-Adressen im Nachbarverfahren
+- [Netzwerktypen](netzwerktypen.md) – Einsatzbereich und Adressierung
+- [OSI](osi.md) – Schicht 3: logische Adressierung
+

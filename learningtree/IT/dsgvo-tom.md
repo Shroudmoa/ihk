@@ -93,3 +93,9 @@ Diese drei Schutzziele werden häufig als CIA-Triade bezeichnet.
 ## 7. Prüfungsfertige Antwort
 
 Personenbezogene Daten müssen gemäß DSGVO rechtmäßig, zweckgebunden und auf das notwendige Maß beschränkt verarbeitet werden. Für die Verarbeitung ist eine geeignete Rechtsgrundlage nach Art. 6 DSGVO erforderlich; eine Einwilligung ist nur eine von mehreren möglichen Rechtsgrundlagen. Nach Art. 32 DSGVO müssen angemessene technische und organisatorische Maßnahmen umgesetzt werden, beispielsweise Verschlüsselung, Zugriffskontrollen, Firewalls und Datensicherungen. Nicht mehr benötigte personenbezogene Daten sind grundsätzlich zu löschen, sofern keine gesetzlichen Aufbewahrungspflichten oder andere rechtliche Gründe entgegenstehen.
+
+## Siehe auch
+
+- [Schutzziele](schutzziele.md) – Art. 32: Vertraulichkeit, Integrität, Verfügbarkeit
+- [hackers-can](hackers-can.md) – typische Angriffe auf diese Schutzziele
+

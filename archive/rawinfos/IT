@@ -268,8 +268,8 @@ Anwendungsdaten → TCP-Segment/UDP-Datagramm → IP-Paket → Ethernet-Frame �
 
 **Wichtig:** Zwei IP-Adressen können auf dieselbe MAC-Adresse zeigen. Das allein beweist keinen Angriff, da legitime Konfigurationen ebenfalls vorkommen.
 
-**OSI:** Schicht 2, Sicherungsschicht.  
-**Protokoll:** ARP, kein TCP-/UDP-Port.  
+**OSI:** Schicht 2, Sicherungsschicht.
+**Protokoll:** ARP, kein TCP-/UDP-Port.
 **Gerät:** Switch; Schutz beispielsweise durch Dynamic ARP Inspection.
 
 ### 3. Replay Attack
@@ -350,13 +350,13 @@ Anwendungsdaten → TCP-Segment/UDP-Datagramm → IP-Paket → Ethernet-Frame �
 
 ### Merkhilfe
 
-IaaS = Infrastruktur  
-PaaS = Entwicklungsplattform  
-SaaS = fertige Software  
-FaaS = einzelne Funktionen  
-CaaS = Container  
-DBaaS = Datenbank  
-STaaS = Speicher  
+IaaS = Infrastruktur
+PaaS = Entwicklungsplattform
+SaaS = fertige Software
+FaaS = einzelne Funktionen
+CaaS = Container
+DBaaS = Datenbank
+STaaS = Speicher
 NaaS = Netzwerk
 
 
@@ -825,13 +825,13 @@ Die Entscheidung hängt von Performance, Isolation, Ressourceneffizienz, Betrieb
 
 ## 7. Wann verwendet man was?
 
-- **Bare Metal:** Wenn ein Dienst konstante Performance, hohe I/O-Leistung oder direkten Hardwarezugriff benötigt.  
+- **Bare Metal:** Wenn ein Dienst konstante Performance, hohe I/O-Leistung oder direkten Hardwarezugriff benötigt.
   *Beispiel:* Datenbankserver mit hohem Transaktionsvolumen.
 
-- **VM:** Wenn Isolation, unterschiedliche Betriebssysteme oder getrennte Umgebungen benötigt werden.  
+- **VM:** Wenn Isolation, unterschiedliche Betriebssysteme oder getrennte Umgebungen benötigt werden.
   *Beispiel:* Test- und Produktionssysteme oder mehrere Abteilungen auf einem Host.
 
-- **Container:** Wenn Anwendungen schnell gestartet, aktualisiert und horizontal skaliert werden müssen.  
+- **Container:** Wenn Anwendungen schnell gestartet, aktualisiert und horizontal skaliert werden müssen.
   *Beispiel:* Webdienste und APIs mit mehreren Anwendungsversionen für Tests und Rollouts.
 
 --- Hypervisor-Typen ---
@@ -869,3 +869,1046 @@ Läuft als Anwendung auf einem Host-Betriebssystem. Hardwarezugriffe erfolgen ü
 **IHK-Merksatz:** Typ 1 eignet sich besonders für produktive Serverumgebungen, Typ 2 für lokale Entwicklungs- und Testsysteme.
 
 **Wichtig:** Typ 1 ist nicht automatisch stabiler oder sicherer. Entscheidend sind Konfiguration, Updates, Hardware und Betrieb.
+
+--- BIOS/UEFI-Kernel ---
+# BIOS/UEFI, Kernel und Speicherbereiche
+
+## Bootprozess
+
+UEFI/BIOS → Bootloader → Kernel → Systemdienste → Anwendungen
+
+### BIOS / UEFI
+Firmware, die beim Einschalten startet und die Hardware für den Betriebssystemstart vorbereitet.
+
+- POST: Prüft grundlegende Hardwarefunktionen.
+- Initialisiert Hardware und wählt ein Bootmedium.
+- Startet den Bootloader.
+
+**BIOS** ist die ältere Firmware-Technologie; **UEFI** ist der moderne Nachfolger.
+
+### Kernel
+Zentraler Bestandteil des Betriebssystems. Verwaltet Hardware-Ressourcen und stellt Anwendungen kontrollierte Schnittstellen bereit.
+
+- CPU-Zeit und Prozessverwaltung
+- RAM und virtueller Speicher
+- Dateisysteme
+- Netzwerk und Gerätezugriff
+- Gerätetreiber und Berechtigungen
+
+### Kernel Space
+Privilegierter Speicher- und Ausführungsbereich des Kernels. Fehler im Kernel können das gesamte System beeinträchtigen.
+
+### User Space
+Hier laufen normale Anwendungen und viele Systemdienste. Direkter Zugriff auf geschützten Kernel-Speicher ist nicht erlaubt.
+
+**System Calls:** Kontrollierte Schnittstelle, über die Anwendungen Kernel-Funktionen anfordern, z. B. Dateien öffnen oder Netzwerkdaten senden.
+
+## Kernel-Architekturen
+
+| Betriebssystem | Kernel | Architektur |
+|---|---|---|
+| Linux | Linux-Kernel | Monolithisch, modular |
+| Windows | Windows NT | Hybrid |
+| macOS | XNU | Hybrid, Mach + BSD |
+| FreeBSD | FreeBSD-Kernel | Monolithisch, modular |
+
+## IHK-Merksätze
+
+- **Kernel ≠ Kernel Space:** Kernel = Betriebssystemkern; Kernel Space = privilegierter Ausführungsbereich.
+- **User Space:** Begrenzte Rechte; Kernel-Funktionen werden über System Calls angefordert.
+- **UEFI/BIOS:** Firmware, die vor dem Betriebssystem ausgeführt wird.
+- **System Call:** Kontrollierter Übergang vom User Space in den Kernel Space.
+
+## 3-Zeilen-IHK-Antwort
+
+UEFI initialisiert die Hardware und startet den Bootloader, der den Kernel lädt.
+Der Kernel läuft im privilegierten Kernel Space und verwaltet Ressourcen wie CPU, RAM und Geräte.
+Anwendungen laufen im User Space und greifen über System Calls kontrolliert auf Kernel-Funktionen zu.
+
+
+# Kernel, Partitionen und Bootloader – Teil 2
+
+## Kernel: Linux vs. Windows
+
+Der Kernel verwaltet CPU, RAM, Prozesse, Geräte, Dateisysteme und Zugriffsrechte. Er vermittelt zwischen Hardware und Anwendungen.
+
+| Konzept | Linux | Windows |
+|---|---|---|
+| Kernel | Linux-Kernel | Windows NT Kernel |
+| Architektur | Monolithisch, modular | Hybrid |
+| Treiber | Kernel- oder User-Space möglich | Kernel- und User-Mode-Treiber |
+| System Calls | Linux-System-Call-Schnittstelle | Windows-API/NT-Systemdienste |
+| Konfiguration | Häufig Textdateien | Registry, Dienste und Systemtools |
+| Kernel-Module | Ladbare Kernel-Module | Kernel-Treiber und andere Kernel-Komponenten |
+
+**Wichtig:** Die Windows API ist nicht dasselbe wie ein System Call. Anwendungen nutzen APIs, die bei Bedarf Kernel-Funktionen aufrufen.
+
+### Was macht der Kernel konkret?
+
+- **Prozessverwaltung:** Prozesse starten, beenden und CPU-Zeit verteilen.
+- **Speicherverwaltung:** RAM zuweisen, virtuellen Speicher verwalten und Prozesse isolieren.
+- **Geräteverwaltung:** Treiber und Hardwarezugriffe koordinieren.
+- **Dateisysteme:** Dateioperationen und Zugriffsrechte bereitstellen.
+- **Netzwerk:** Netzwerkprotokolle und Kommunikation unterstützen.
+
+## Partitionen und Dateisysteme
+
+Eine Partition ist ein logisch abgegrenzter Bereich eines Datenträgers. Ein Dateisystem organisiert darin Dateien und Verzeichnisse.
+
+**Beispiele:** Linux verwendet häufig ext4 oder XFS, Windows meist NTFS.
+
+### Typische Linux-Partitionen
+
+| Mountpoint / Bereich | Funktion |
+|---|---|
+| `/boot` | Kernel-Dateien und weitere Dateien für den Bootvorgang |
+| `/` (Root) | Wurzel des Linux-Dateisystems; enthält das Betriebssystem |
+| `swap` | Auslagerungsbereich für Speicherseiten; kann Partition oder Datei sein |
+| `/home` | Benutzerdaten und persönliche Konfigurationen |
+| EFI-Systempartition (ESP) | Bootloader-Dateien für UEFI-Systeme |
+
+**Wichtig:** `/` ist nicht dasselbe wie `/root`. `/` ist das Wurzelverzeichnis; `/root` ist das Home-Verzeichnis des Administrators `root`.
+
+Nicht jede Linux-Installation benötigt eine separate `/boot`- oder Swap-Partition. Bei UEFI-Systemen wird üblicherweise eine EFI-Systempartition benötigt.
+
+### Wie macht Windows das?
+
+Windows verwendet ebenfalls Partitionen, aber andere Bezeichnungen und Strukturen:
+
+- **EFI-Systempartition:** Enthält UEFI-Bootdateien.
+- **C:**:** Üblicherweise die Windows-Systempartition.
+- **Recovery-Partition:** Enthält Wiederherstellungswerkzeuge.
+- **System-reservierte Partition:** Kann bei BIOS/MBR-Systemen Bootdateien enthalten.
+- **Auslagerungsdatei (`pagefile.sys`):** Dient als virtueller Speicher; normalerweise keine separate Swap-Partition.
+
+## Bootloader
+
+Ein Bootloader startet den Betriebssystem-Kernel oder übergibt die Kontrolle an einen weiteren Bootloader.
+
+### GRUB
+
+**GRUB (GRand Unified Bootloader)** ist ein verbreiteter Bootloader für Linux.
+
+- Zeigt ein Bootmenü für mehrere Betriebssysteme oder Kernel.
+- Lädt den Linux-Kernel und gegebenenfalls eine initiale RAM-Disk (`initramfs`).
+- Ermöglicht die Auswahl verschiedener Kernel oder Recovery-Einträge.
+
+### Andere Bootloader
+
+| Bootloader | Typischer Einsatz |
+|---|---|
+| Windows Boot Manager | Windows-Systeme |
+| systemd-boot | Linux-Systeme mit UEFI |
+| U-Boot | Embedded-Systeme |
+| Apple Bootprozess | macOS auf Apple-Hardware |
+
+### BIOS vs. UEFI: Bootvorgang
+
+**BIOS/MBR:** Firmware → Bootcode im MBR → Bootloader → Kernel.
+
+**UEFI:** Firmware → EFI-Anwendung auf der EFI-Systempartition → Bootloader → Kernel.
+
+Bei Linux lädt GRUB häufig zusätzlich `initramfs`, das benötigte Treiber und Werkzeuge für den frühen Systemstart enthält.
+
+## IHK-Merksätze
+
+- **Partition:** Logische Aufteilung eines Datenträgers.
+- **Dateisystem:** Organisiert Dateien und Verzeichnisse.
+- **Bootloader:** Lädt den Kernel oder übergibt die Kontrolle an ihn.
+- **Swap/Pagefile:** Unterstützt virtuellen Speicher, ersetzt aber keinen ausreichend dimensionierten RAM.
+- **GRUB:** Häufiger Linux-Bootloader; Windows verwendet normalerweise den Windows Boot Manager.
+
+## 3-Zeilen-IHK-Antwort
+
+Der Bootloader lädt den Betriebssystem-Kernel und gegebenenfalls eine initiale RAM-Disk.
+Der Kernel verwaltet Ressourcen und stellt kontrollierte Schnittstellen für Anwendungen bereit.
+Partitionen strukturieren den Datenträger; Dateisysteme organisieren die darauf gespeicherten Daten.
+
+
+
+----------------------------------
+VMs ?
+cool
+now u can have snapshots or Backup
+
+Snapshots sind für major upüdates oder änderuingen,, wenn man es aktiviert wird ein delta datei erzeigt und alle Änderungen werden dort gespeichert.. das heißt dass diese Datei großer und großer werden kann... Snapshots sind aber kein backup ,,, sie sind neben dem vdhx datei z.b das bedeut6et => Storage ausfall oder ransome attacks können die vm zerstören.
+
+Snapshots sind für kürzfristige Sicherungen bei Änderungen
+
+backups are diffrent.. die sind füre langfristige Aufbewahrung und wiederherstellung gedacht,,
+
+backup prinzip
+
+The 3-2-1-1-0 backup rule is a modern data protection strategy that requires maintaining three copies of your data, using two different types of storage media, keeping one copy offsite, ensuring one copy is stored offline or immutably, and verifying that there are zero errors in the backup process. This approach enhances security against cyber threats like ransomware and ensures reliable data recovery.
+
+diffrent backups be like :
+Vollsicherung / Voll-Backup
+Voll-Backups sind die einfachste Art der Datensicherung. Dabei wird jedes Mal eine vollständige Kopie des gesamten Datensatzes erstellt. Dies reicht von Backups einzelner Dokumente in Form von Dateien und Ordnern bis hin zu Image-Backups ganzer Betriebssysteme. Für Vollsicherungen reicht ein einziges Backup aus, um Ihnen den Zugriff auf sämtliche Ihrer zum Zeitpunkt des Backups vorhandenen Unternehensdaten zu sichern.
+
+Inkrementelle Backups
+Haben Sie mit einem Voll-Backup begonnen, werden bei einem darauffolgenden inkrementellen Backup nur die Daten gesichert, die seit der Sicherung des Voll-Backups geändert wurden. Ebenso werden bei den weiteren inkrementellen Backups nur die bislang noch nicht gesicherten Daten abgespeichert.
+
+Differentielle Backups
+Differentielle Backups sind ein Mittelweg zwischen Vollsicherungen und inkrementellen Backups. Wie bei inkrementellen Backups steht auch bei differentiellen Backups ein Voll-Backup am Anfang. Danach werden jedoch immer alle seit dem letzten Voll-Backup erfolgten Änderungen kopiert und in die Sicherung einbezogen. Jedes differentielle Backup sichert alle Änderungen, die seit dem letzten Voll-Backup vorgenommen wurden.
+
+
+-----
+
+--- Snapshots-Backups ---
+# VM-Snapshots und Backups
+
+## Snapshots
+
+Ein Snapshot speichert den Zustand einer VM zu einem bestimmten Zeitpunkt. Je nach Hypervisor werden Änderungen danach in zusätzlichen Delta-Dateien gespeichert.
+
+- **Einsatz:** Vor Updates, Konfigurationsänderungen oder Softwaretests.
+- **Vorteil:** Schnelles Zurücksetzen auf einen früheren Zustand.
+- **Nachteil:** Benötigen zusätzlichen Storage und können bei langer Aufbewahrung die Performance beeinträchtigen.
+- **Risiko:** Liegen Snapshot und VM auf demselben Storage, können beide durch einen Storage-Ausfall verloren gehen.
+
+**Wichtig:** Ein Snapshot ist kein unabhängiges Backup. Er eignet sich für kurzfristige Rollbacks, nicht als alleinige Datensicherung.
+
+## Backups
+
+Ein Backup ist eine separate Sicherung zur langfristigen Aufbewahrung und Wiederherstellung von Daten oder vollständigen VMs.
+
+### 3-2-1-1-0-Regel
+
+- **3** Kopien der Daten, inklusive Original.
+- **2** unterschiedliche Speichermedien.
+- **1** Kopie extern (Offsite).
+- **1** Kopie offline oder unveränderbar (Immutable).
+- **0** ungeprüfte Fehler: Backups regelmäßig prüfen und Wiederherstellungen testen.
+
+**Ransomware-Schutz:** Getrennte Zugriffsrechte, Offline-Kopien und unveränderbare Backups erschweren die Manipulation von Sicherungen.
+
+## Backup-Arten
+
+### Vollbackup (Full Backup)
+Sichert alle ausgewählten Daten vollständig.
+
+- Vorteil: Einfachste Wiederherstellung.
+- Nachteil: Hoher Speicherbedarf und längere Sicherungszeit.
+- Restore: Ein vollständiges Backup genügt.
+
+### Inkrementelles Backup (Incremental)
+Sichert Änderungen seit dem letzten Backup, egal ob Vollbackup oder inkrementelles Backup.
+
+- Vorteil: Geringer Speicherbedarf und kurze Sicherungszeit.
+- Nachteil: Restore benötigt das Vollbackup und alle erforderlichen nachfolgenden Inkremente.
+
+### Differentielles Backup (Differential)
+Sichert alle Änderungen seit dem letzten Vollbackup.
+
+- Vorteil: Restore benötigt nur das Vollbackup und das letzte differentielle Backup.
+- Nachteil: Speicherbedarf und Sicherungsdauer steigen bis zum nächsten Vollbackup.
+
+## Vergleich
+
+| Kriterium | Vollbackup | Inkrementell | Differentiell |
+|---|---|---|---|
+| Speicherbedarf | Hoch | Niedrig | Steigend |
+| Sicherungsdauer | Hoch | Niedrig | Steigend |
+| Restore-Aufwand | Gering | Hoch | Mittel |
+| Benötigte Sicherungen | Vollbackup | Vollbackup + alle benötigten Inkremente | Vollbackup + letztes Differential |
+
+## IHK-Prüfungswissen
+
+- **RPO (Recovery Point Objective):** Maximal tolerierbarer Datenverlust, ausgedrückt als Zeit.
+- **RTO (Recovery Time Objective):** Maximal tolerierbare Zeit bis zur Wiederherstellung.
+- **RAID ≠ Backup:** RAID schützt je nach Level vor bestimmten Laufwerksausfällen, aber nicht zuverlässig vor Ransomware oder versehentlichem Löschen.
+- **Restore-Test:** Prüft, ob die gesicherten Daten tatsächlich wiederhergestellt werden können.
+
+## 3-Zeilen-IHK-Antwort
+
+Snapshots ermöglichen kurzfristige Rollbacks, sind aber kein Ersatz für unabhängige Backups.
+Backups schützen Daten durch separate Sicherungskopien und ermöglichen die Wiederherstellung nach Ausfällen oder Datenverlust.
+Die 3-2-1-1-0-Regel kombiniert mehrere Kopien, unterschiedliche Medien, externe und offline beziehungsweise unveränderbare Sicherungen sowie überprüfte Wiederherstellbarkeit.
+
+--- RAID ---
+# RAID – Redundant Array of Independent Disks
+
+RAID combines multiple physical drives into one logical storage system to improve performance, availability, or both.
+
+**Main goals:**
+- **Redundancy:** Continue operating after certain drive failures.
+- **Performance:** Increase read/write throughput through parallel I/O.
+- **Capacity:** Combine storage from multiple drives.
+- **Availability:** Reduce downtime after a drive failure.
+
+**Important:** RAID is not a backup. It does not reliably protect against ransomware, accidental deletion, fire, or controller failure affecting the entire array.
+
+## Core concepts
+
+- **Striping:** Data is split across multiple drives. Improves performance but provides no redundancy by itself.
+- **Mirroring:** Identical data is written to multiple drives. Provides redundancy but consumes additional capacity.
+- **Parity:** Additional information is calculated from data blocks so missing data can be reconstructed after a drive failure.
+- **Hot spare:** An unused drive that can automatically replace a failed drive during rebuilding.
+- **Rebuild:** Reconstructing redundant data onto a replacement drive.
+- **Controller:** Hardware or software that manages the RAID array.
+
+## RAID capacity calculations
+
+Let:
+
+- \(N\) = number of drives
+- \(S\) = capacity of each drive
+- \(C\) = usable capacity before filesystem overhead
+
+Assume all drives have the same capacity.
+
+| RAID | Minimum drives | Usable capacity | Drive-failure tolerance |
+|---|---:|---|---|
+| RAID 0 | 2 | \(N \times S\) | 0 |
+| RAID 1 | 2 | \(S\) for a two-drive mirror | 1 in a two-drive mirror |
+| RAID 5 | 3 | \((N-1)\times S\) | 1 |
+| RAID 6 | 4 | \((N-2)\times S\) | 2 |
+| RAID 10 | 4 | \((N/2)\times S\) | At least 1, depending on which drives fail |
+
+Capacity is usually advertised in decimal units: 1 TB = 1,000 GB. Operating systems may display capacity using binary units, so reported values can differ.
+
+## RAID 0 – Striping
+
+**Minimum:** 2 drives  
+**Redundancy:** None
+
+Data is distributed across all drives. Multiple drives can process I/O in parallel.
+
+Example with two 2 TB drives:
+
+- Raw capacity: \(2 \times 2 = 4\) TB
+- Usable capacity: 4 TB
+- Tolerated drive failures: 0
+
+**Advantages**
+- High sequential throughput.
+- Full combined capacity.
+- No parity calculation overhead.
+
+**Disadvantages**
+- Failure of any drive can destroy the entire array.
+- No redundancy or fault tolerance.
+
+**Use case:** Temporary scratch data or workloads where performance matters and the data can be recreated.
+
+**IHK point:** RAID 0 improves performance and capacity, not availability.
+
+## RAID 1 – Mirroring
+
+**Minimum:** 2 drives  
+**Redundancy:** Mirrored copies
+
+The same data is written to both drives.
+
+Example with two 2 TB drives:
+
+- Raw capacity: 4 TB
+- Usable capacity: 2 TB
+- Tolerated drive failures: 1
+
+**Advantages**
+- Simple recovery from a single-drive failure.
+- Read performance can improve depending on implementation.
+- Straightforward configuration.
+
+**Disadvantages**
+- Approximately 50% usable capacity with two equal drives.
+- Writes must maintain both copies.
+
+**Use case:** Operating-system drives, small servers, and systems that need simple drive redundancy.
+
+**IHK point:** RAID 1 trades usable capacity for redundancy.
+
+## RAID 5 – Striping with distributed parity
+
+**Minimum:** 3 drives  
+**Redundancy:** One drive's worth of distributed parity
+
+Data and parity blocks are distributed across all drives. No single drive is permanently dedicated to parity.
+
+Example with four 2 TB drives:
+
+- Raw capacity: \(4 \times 2 = 8\) TB
+- Usable capacity: \((4-1)\times 2 = 6\) TB
+- Tolerated drive failures: 1
+
+**Advantages**
+- Better capacity efficiency than mirroring.
+- Good read performance for many workloads.
+- Can reconstruct data after one drive fails.
+
+**Disadvantages**
+- Parity calculations and small-write operations add overhead.
+- Rebuilds can take a long time on large drives.
+- A second drive failure during a degraded period can destroy the array.
+
+**Use case:** Read-heavy file storage where capacity efficiency matters and the risk profile is acceptable.
+
+**IHK point:** RAID 5 can tolerate one failed drive, not two.
+
+## RAID 6 – Striping with double parity
+
+**Minimum:** 4 drives  
+**Redundancy:** Two independent parity blocks
+
+Example with six 4 TB drives:
+
+- Raw capacity: \(6 \times 4 = 24\) TB
+- Usable capacity: \((6-2)\times 4 = 16\) TB
+- Tolerated drive failures: 2
+
+**Advantages**
+- Continues operating after any two drive failures.
+- Greater protection during rebuilds than RAID 5.
+- Suitable for larger storage arrays.
+
+**Disadvantages**
+- More capacity used for parity.
+- Writes have additional parity overhead.
+- Rebuilds can still be lengthy and stressful for remaining drives.
+
+**Use case:** File servers and larger storage systems where tolerating two drive failures is important.
+
+**IHK point:** RAID 6 sacrifices more capacity than RAID 5 for additional fault tolerance.
+
+## RAID 10 (1+0) – Mirroring plus striping
+
+**Minimum:** 4 drives, usually an even number.
+
+RAID 10 creates mirrored pairs and stripes data across those pairs.
+
+Example with four 2 TB drives:
+
+- Raw capacity: \(4 \times 2 = 8\) TB
+- Usable capacity: \((4/2)\times 2 = 4\) TB
+- Tolerated drive failures: At least one; potentially more if failures occur in different mirrored pairs.
+
+**Advantages**
+- High read/write performance.
+- No parity calculation required.
+- Often faster and more predictable rebuilds than parity RAID.
+
+**Disadvantages**
+- Only around 50% of raw capacity is usable.
+- More expensive per usable TB.
+- Two failed drives in the same mirror pair can destroy the array.
+
+**Use case:** High-performance databases, virtualization storage, and transaction-heavy applications.
+
+**IHK point:** RAID 10 combines the performance of striping with the redundancy of mirroring.
+
+## RAID 50 and RAID 60
+
+These combine multiple parity-based RAID groups using striping across the groups.
+
+### RAID 50 (5+0)
+
+Requires at least six drives: two RAID 5 groups with three drives each.
+
+Example with six 4 TB drives:
+
+- Raw capacity: \(6 \times 4 = 24\) TB
+- Usable capacity: \(6-2=4\) drives' worth of capacity, or 16 TB
+- Failure tolerance: At least one drive, provided no RAID 5 group loses more than one drive.
+
+**Advantages**
+- Higher aggregate performance than a single RAID 5 group in many workloads.
+- Better fault isolation between groups.
+
+**Disadvantages**
+- Two failures in the same RAID 5 group can destroy the array.
+- More complex management.
+
+### RAID 60 (6+0)
+
+Requires at least eight drives: two RAID 6 groups with four drives each.
+
+Example with eight 4 TB drives:
+
+- Raw capacity: \(8 \times 4 = 32\) TB
+- Usable capacity: \(8-4=4\) drives' worth of capacity, or 16 TB
+- Failure tolerance: Up to two failed drives per RAID 6 group.
+
+**Advantages**
+- Can tolerate multiple failures when distributed across groups.
+- Suitable for large storage arrays.
+
+**Disadvantages**
+- Lower capacity efficiency than RAID 50 with the same number of drives.
+- Additional parity overhead and complexity.
+
+**Important:** RAID 50 and RAID 60 are not equally supported by every controller or software implementation.
+
+## Quick comparison
+
+| Level | Usable capacity | Fault tolerance | Typical strength |
+|---|---|---|---|
+| RAID 0 | 100% | None | Performance and capacity |
+| RAID 1 | 50% with two drives | One drive in a two-drive mirror | Simplicity |
+| RAID 5 | \(N-1\) drives' worth | One drive per group | Capacity efficiency |
+| RAID 6 | \(N-2\) drives' worth | Two drives per group | Higher redundancy |
+| RAID 10 | 50% | Depends on failed mirror pairs | Performance and redundancy |
+| RAID 50 | Sum of RAID 5 groups' usable capacity | One drive per group | Scaled RAID 5 |
+| RAID 60 | Sum of RAID 6 groups' usable capacity | Two drives per group | Scaled RAID 6 |
+
+## Worked IHK calculations
+
+### Example A: RAID 5 capacity
+
+A server has five 3 TB drives configured as RAID 5.
+
+\[
+C=(N-1)\times S
+\]
+
+\[
+C=(5-1)\times3=12\text{ TB}
+\]
+
+**Answer:** 12 TB usable capacity before formatting and filesystem overhead.
+
+### Example B: Required drives
+
+A company needs at least 20 TB usable capacity with RAID 6. Each drive has 4 TB.
+
+\[
+(N-2)\times4\geq20
+\]
+
+\[
+N-2\geq5
+\]
+
+\[
+N\geq7
+\]
+
+**Answer:** At least seven drives, ignoring hot spares and implementation-specific constraints.
+
+### Example C: RAID 10 capacity
+
+A server has eight 1.92 TB SSDs in RAID 10.
+
+\[
+C=\frac{N}{2}\times S
+\]
+
+\[
+C=\frac{8}{2}\times1.92=7.68\text{ TB}
+\]
+
+**Answer:** 7.68 TB usable capacity before formatting and overhead.
+
+### Example D: RAID 50 fault tolerance
+
+A RAID 50 array has three RAID 5 groups.
+
+- One drive fails in group A.
+- One drive fails in group B.
+- One drive fails in group C.
+
+The array can continue operating because each group has lost only one drive.
+
+If a second drive fails in group A before recovery, group A loses its RAID 5 redundancy and the entire RAID 50 array may become unavailable or lose data.
+
+## Rebuilds, hot spares and degraded mode
+
+**Degraded mode:** A drive has failed, but the array continues operating using remaining data and redundancy.
+
+**Rebuild:** The array reconstructs missing data onto a replacement drive. Performance may decline during rebuilding.
+
+**Hot spare:** A reserved drive can automatically become the replacement target after a failure.
+
+**Why rebuilds are risky:** Large drives take time to reconstruct. Remaining drives are under load, and another failure or an unrecoverable read error can prevent recovery, depending on RAID level and implementation.
+
+A hot spare reduces the time before rebuilding begins, but does not add another layer of parity to the active array.
+
+## Hardware RAID vs. Software RAID
+
+**Hardware RAID**
+- Managed by a dedicated controller.
+- May provide controller-level cache and battery/flash-backed protection.
+- Depends on controller compatibility and recovery procedures.
+
+**Software RAID**
+- Managed by the operating system, such as Linux `mdadm` or Windows Storage Spaces.
+- Uses host CPU and memory.
+- Can reduce dependence on a specific RAID controller.
+
+Neither is automatically safer or faster in every workload. Configuration, controller quality, cache protection and workload matter.
+
+## RAID vs. backup vs. replication
+
+| Technology | Primary purpose | Main limitation |
+|---|---|---|
+| RAID | Drive-failure tolerance and/or performance | Does not protect against logical deletion or ransomware |
+| Backup | Recover deleted, corrupted or lost data | Recovery depends on backup quality and retention |
+| Replication | Maintain copies across systems or locations | Corruption and deletion may replicate |
+| High availability | Reduce service interruption | Does not replace data recovery |
+
+**DSGVO connection:** For personal data, appropriate technical and organisational measures should protect availability and resilience. RAID alone is not a complete data-protection strategy.
+
+## Choosing a RAID level
+
+- **RAID 0:** Temporary data where loss is acceptable.
+- **RAID 1:** Simple redundancy for a small system.
+- **RAID 5:** Capacity-efficient storage with tolerance for one drive failure.
+- **RAID 6:** Larger arrays requiring tolerance for two drive failures.
+- **RAID 10:** High-performance workloads needing redundancy.
+- **RAID 50/60:** Larger arrays that benefit from multiple RAID groups.
+
+Choose based on usable capacity, write workload, required fault tolerance, rebuild risk, cost and recovery objectives.
+
+## 3-line IHK answer
+
+RAID combines multiple drives to improve performance, availability or fault tolerance through striping, mirroring and/or parity.  
+The usable capacity and number of tolerated drive failures depend on the RAID level and group layout.  
+RAID is not a backup; independent backups and tested recovery procedures are still required.
+
+
+
+
+
+Wartung und Updates sind für Physische Servers erforderlich
+Virtualisierung hier kann dazuhelfen dass keine Downtime für dienste gibt
+LIve Migration 
+
+
+--- CPU ---
+# CPU, GPU, Architektur und Speicherhierarchie
+
+## CPU – Central Processing Unit
+
+Die CPU ist der Hauptprozessor eines Computers. Sie führt Maschinenbefehle aus, berechnet Daten und steuert Abläufe im System.
+
+Eine CPU wird nicht nur anhand ihrer GHz bewertet. Entscheidend sind Architektur, Kernanzahl, Cache, Speicheranbindung, Energieverbrauch und der jeweilige Workload.
+
+## CPU-Aufbau
+
+- **Core (Kern):** Führt Befehle unabhängig von anderen Kernen aus.
+- **Thread:** Ausführungsstrang eines Programms. Ein Kern kann je nach Architektur mehrere Hardware-Threads unterstützen.
+- **ALU:** Führt ganzzahlige arithmetische und logische Operationen aus.
+- **FPU:** Führt Gleitkommaberechnungen aus.
+- **Register:** Extrem schneller Speicher innerhalb des Prozessorkerns.
+- **Control Unit:** Steuert die Verarbeitung und Ausführung von Befehlen.
+- **Cache:** Speichert häufig benötigte Daten nahe am Kern.
+- **MMU:** Übersetzt virtuelle in physische Speicheradressen und unterstützt den Speicherschutz.
+
+### Wie verarbeitet eine CPU Befehle?
+
+Der typische Ablauf ist:
+
+1. **Fetch:** Befehl aus dem Speicher laden.
+2. **Decode:** Befehl interpretieren.
+3. **Execute:** Befehl ausführen.
+4. **Write-back:** Ergebnis zurückschreiben.
+
+Moderne CPUs führen diese Schritte überlappend und teilweise außerhalb der ursprünglichen Programmreihenfolge aus (Pipelining, Superscalar Execution, Out-of-Order Execution).
+
+## CPU-Taktfrequenz
+
+Die Taktfrequenz wird in Hertz angegeben. 1 GHz entspricht einer Milliarde Taktzyklen pro Sekunde.
+
+Beispiel:
+- CPU A: 3,0 GHz
+- CPU B: 4,0 GHz
+
+CPU B hat die höhere Taktfrequenz, ist aber nicht automatisch schneller. CPU A kann pro Takt mehr Arbeit erledigen oder eine effizientere Architektur besitzen.
+
+**Wichtige Begriffe:**
+- **Base Clock:** Referenztakt unter definierten Betriebsbedingungen.
+- **Boost Clock:** Kurzzeitig oder abhängig von Temperatur, Leistungsbudget und Last erreichbare höhere Frequenz.
+- **IPC (Instructions Per Cycle):** Anzahl der pro Takt ausgeführten Befehle, abhängig von Programm und Architektur.
+- **TDP:** Thermische Auslegungsgröße des Herstellers; nicht gleichbedeutend mit dem tatsächlichen Maximalverbrauch.
+- **Latenz:** Zeit bis zum Abschluss einer Operation.
+- **Durchsatz:** Menge der Arbeit pro Zeiteinheit.
+
+**IHK-Merksatz:** Mehr GHz bedeuten nicht automatisch mehr Leistung. Taktfrequenz, IPC, Parallelität und Workload bestimmen gemeinsam die Performance.
+
+## CPU-Kerne und Threads
+
+| Konzept | Bedeutung |
+|---|---|
+| Single-Core | Ein CPU-Kern |
+| Multi-Core | Mehrere CPU-Kerne auf einem Prozessor |
+| Multithreading | Mehrere Ausführungsstränge innerhalb eines Programms |
+| SMT / Hyper-Threading | Ein physischer Kern verwaltet mehrere Hardware-Threads |
+| Multitasking | Betriebssystem führt mehrere Prozesse scheinbar oder tatsächlich parallel aus |
+
+Beispiel: Eine CPU mit 8 Kernen und SMT kann 16 logische Prozessoren bereitstellen. Das bedeutet nicht, dass sie die doppelte Leistung einer CPU mit 8 Threads erreicht.
+
+- **Single-Thread-Last:** Profitiert häufig von hoher IPC und hoher Boost-Frequenz.
+- **Multi-Thread-Last:** Kann von mehr Kernen und effizienter Parallelisierung profitieren.
+- **IHK-Bezug:** CPU-Auslastung, Prozessverwaltung und CPU Contention bei virtuellen Maschinen.
+
+## CPU-Architekturen und Befehlssätze
+
+Architektur und Befehlssatz sind nicht dasselbe.
+
+- **Befehlssatz (ISA):** Definiert, welche Maschinenbefehle ein Prozessor versteht.
+- **Mikroarchitektur:** Beschreibt, wie der Prozessor diese Befehle intern ausführt.
+
+| Architektur / ISA | Typische Verwendung | Beispiele |
+|---|---|---|
+| x86-64 | PCs, Workstations, Server | Intel Core/Xeon, AMD Ryzen/EPYC |
+| ARM64 / AArch64 | Smartphones, Notebooks, Server | Apple Silicon, Snapdragon, Ampere |
+| RISC-V | Embedded, Forschung, zunehmend weitere Systeme | RISC-V-basierte Prozessoren |
+| Power ISA | Spezialisierte Systeme und Server | IBM Power |
+
+### x86-64: Intel und AMD
+
+x86-64 ist eine 64-Bit-Erweiterung der x86-Architektur. Intel und AMD stellen kompatible Prozessoren her, unterscheiden sich aber bei Mikroarchitektur, Cache, Kernaufbau und Implementierung.
+
+- **Intel Core / Core Ultra:** PCs und Notebooks.
+- **Intel Xeon:** Server und Workstations.
+- **AMD Ryzen:** PCs und Workstations.
+- **AMD EPYC:** Server und Rechenzentren.
+
+### ARM: Apple und andere Hersteller
+
+ARM-basierte Prozessoren verwenden eine andere ISA als x86-64. ARM ist besonders in mobilen Geräten verbreitet, wird aber auch in Notebooks und Servern eingesetzt.
+
+- **Apple M-Serie:** Macs; CPU, GPU und weitere Beschleuniger auf einem SoC.
+- **Qualcomm Snapdragon:** Smartphones und ARM-basierte PCs.
+- **Ampere:** ARM-basierte Serverprozessoren.
+
+ARM bedeutet nicht automatisch schneller oder sparsamer. Das Ergebnis hängt von Mikroarchitektur, Fertigung, Leistungsbudget und Workload ab.
+
+### RISC und CISC
+
+- **RISC:** Traditionell einfachere, regelmäßig strukturierte Befehle; beispielsweise ARM und RISC-V.
+- **CISC:** Umfangreicher Befehlssatz; beispielsweise x86.
+
+Moderne Prozessoren sind intern komplexer als diese vereinfachte Einteilung vermuten lässt. Moderne x86-CPUs zerlegen viele Befehle in interne Mikrooperationen.
+
+## Hybrid-CPUs
+
+Einige Prozessoren kombinieren unterschiedliche Kerntypen.
+
+- **Performance-Kerne (P-Cores):** Für hohe Leistung pro Thread.
+- **Efficiency-Kerne (E-Cores):** Für effiziente Verarbeitung geeigneter paralleler oder weniger zeitkritischer Aufgaben.
+
+Beispiel: Einige Intel-Core-Ultra- und Apple-Silicon-Prozessoren nutzen unterschiedliche Kerntypen.
+
+Das Betriebssystem verteilt Threads anhand von Prioritäten, Auslastung und verfügbaren Informationen auf die Kerne.
+
+## CPU-Auswahl nach Einsatz
+
+| Einsatz | Wichtige Kriterien |
+|---|---|
+| Office und Ausbildung | Ausreichende Single-Core-Leistung, RAM, SSD |
+| Gaming | CPU-Leistung, GPU, Cache, Latenz |
+| Virtualisierung | Kerne, RAM, Speicherbandbreite, I/O |
+| Datenbankserver | Latenz, RAM, I/O, Parallelität |
+| Rendering | Multi-Core-Leistung oder GPU-Beschleunigung |
+| Notebook | Leistung pro Watt, Kühlung, Akkulaufzeit |
+| Rechenzentrum | Durchsatz, Energiebedarf, Skalierbarkeit, Verfügbarkeit |
+
+
+
+## CPU-Speicherhierarchie
+
+Die CPU ist deutlich schneller als der Arbeitsspeicher (RAM). Caches reduzieren deshalb die Wartezeit beim Zugriff auf häufig benötigte Daten.
+
+CPU-Register → L1-Cache → L2-Cache → L3-Cache → RAM → SSD/HDD
+
+Je weiter eine Ebene vom Rechenkern entfernt ist, desto größer und normalerweise langsamer ist sie. Die genaue Hierarchie hängt von der CPU ab. [Intel Cache-Dokumentation](https://www.intel.de/content/www/de/de/support/articles/000057727/processors.html) · [Arm Speicherhierarchie](https://learn.arm.com/learning-paths/servers-and-cloud-computing/performix-memory-access/how-to-0/)
+
+### Register
+
+Kleinster und schnellster Speicher direkt im CPU-Kern.
+
+- Speichert Operanden, Adressen und Zwischenergebnisse.
+- Wird direkt von Maschinenbefehlen verwendet.
+
+### L1-Cache
+
+- Sehr klein und extrem schnell.
+- Normalerweise direkt einem CPU-Kern zugeordnet.
+- Häufig getrennt in **L1 Data Cache** und **L1 Instruction Cache**.
+
+### L2-Cache
+
+- Größer als L1, aber langsamer.
+- Häufig pro Kern oder pro Kerngruppe organisiert.
+- Dient als weitere Cache-Ebene vor dem L3-Cache oder RAM.
+
+### L3-Cache
+
+- Häufig größer und von mehreren CPU-Kernen gemeinsam genutzt.
+- Reduziert Zugriffe auf den langsameren RAM.
+- Größe und Aufbau unterscheiden sich je nach Mikroarchitektur.
+
+### Cache Hit und Cache Miss
+
+- **Cache Hit:** Die benötigten Daten liegen bereits im Cache.
+- **Cache Miss:** Die Daten müssen aus einer weiteren Speicherhierarchie geladen werden.
+
+**Beispiel:** Eine Schleife verarbeitet dieselben Daten mehrfach. Wenn diese im Cache bleiben, muss die CPU seltener auf den RAM zugreifen.
+
+### RAM – Arbeitsspeicher
+
+RAM speichert aktuell benötigte Programme und Daten.
+
+- Flüchtiger Speicher: Inhalt geht ohne Stromversorgung verloren.
+- Deutlich größer als CPU-Caches.
+- DDR4 und DDR5 sind verbreitete RAM-Technologien für PCs und Server.
+
+**Wichtig:** Mehr RAM erhöht nicht automatisch die CPU-Leistung. Er verhindert aber, dass Speichermangel zu starkem Swapping führt.
+
+### Virtueller Speicher
+
+Betriebssysteme verwenden virtuelle Adressen, um Prozesse voneinander zu isolieren und Speicher flexibel zu verwalten.
+
+- **MMU:** Unterstützt die Übersetzung virtueller in physische Adressen.
+- **Page Table:** Enthält die Zuordnung von virtuellen zu physischen Speicherseiten.
+- **TLB:** Cache für häufig benötigte Adressübersetzungen.
+- **Swap/Pagefile:** Kann Speicherseiten auf Storage auslagern.
+
+**IHK-Verknüpfung:** Virtueller Speicher, Prozessisolation, Kernel Space und User Space.
+
+## GPU – Graphics Processing Unit
+
+Eine GPU ist auf stark parallele Berechnungen ausgelegt. Während CPUs wenige leistungsfähige Kerne für vielseitige Aufgaben verwenden, besitzt eine GPU viele Recheneinheiten für zahlreiche parallele Operationen.
+
+### GPU-Typen
+
+| Typ | Eigenschaften | Einsatz |
+|---|---|---|
+| iGPU | In CPU/SoC integriert, häufig gemeinsamer RAM | Office, Video, einfache Grafik |
+| dGPU | Dedizierter Grafikprozessor, meist eigener VRAM | Gaming, Rendering, GPU-Berechnungen |
+| Compute-GPU | Auf parallele Berechnungen optimiert | KI, Simulationen, wissenschaftliche Berechnungen |
+
+### CPU vs. GPU
+
+| Kriterium | CPU | GPU |
+|---|---|---|
+| Optimierung | Vielseitige Aufgaben, niedrige Latenz | Hoher paralleler Durchsatz |
+| Recheneinheiten | Weniger, komplexe Kerne | Viele parallele Recheneinheiten |
+| Typische Aufgaben | Betriebssystem, Anwendungen, Datenbanklogik | Grafik, Matrixberechnungen, KI |
+| Speicher | RAM über Speichercontroller | VRAM oder gemeinsam genutzter Speicher |
+
+### GPU-Speicher
+
+- **VRAM:** Dedizierter Grafikspeicher, beispielsweise GDDR6 oder GDDR7.
+- **HBM:** Speicher mit hoher Bandbreite, häufig bei Beschleunigern im Rechenzentrum.
+- **Unified Memory:** CPU und GPU greifen auf einen gemeinsamen oder einheitlich verwalteten Speicherbereich zu; die genaue Implementierung ist plattformabhängig.
+
+**Beispiel:** Eine GPU verarbeitet viele Matrixoperationen parallel. Eine CPU übernimmt dagegen häufig Programmsteuerung, Betriebssystemaufgaben und die Koordination der Berechnung.
+
+## Weitere wichtige Begriffe
+
+### Speicherbandbreite
+
+Datenmenge, die pro Sekunde übertragen werden kann. Angegeben beispielsweise in GB/s.
+
+### Latenz
+
+Zeit zwischen einer Anfrage und dem Beginn beziehungsweise Abschluss der Datenbereitstellung.
+
+### NUMA
+
+Bei Mehrsockelservern hängt die Speicherzugriffszeit davon ab, an welchem Prozessor der RAM angeschlossen ist. Lokaler Speicherzugriff ist normalerweise günstiger als entfernter Zugriff.
+
+### PCIe
+
+Schnittstelle zur Verbindung von Komponenten wie GPUs, NVMe-SSDs und Netzwerkkarten mit dem System.
+
+### SoC – System on a Chip
+
+Integriert mehrere Komponenten auf einem Chip beziehungsweise in einem Chip-Paket, beispielsweise CPU, GPU, Speichercontroller und Medienbeschleuniger.
+
+Beispiel: Apple Silicon kombiniert CPU- und GPU-Recheneinheiten mit weiteren Funktionen und einer gemeinsamen Speicherarchitektur.
+
+## IHK-Prüfungswissen
+
+- **Mehr GHz ≠ automatisch mehr Leistung:** IPC und Mikroarchitektur beeinflussen die tatsächliche Rechenleistung.
+- **Mehr Kerne ≠ automatisch schneller:** Die Anwendung muss parallelisierbar sein.
+- **Cache ≠ RAM:** Cache ist kleiner und näher an der CPU; RAM bietet wesentlich mehr Kapazität.
+- **RAM ≠ Storage:** RAM ist flüchtiger Arbeitsspeicher, SSD/HDD sind dauerhafte Datenspeicher.
+- **CPU ≠ GPU:** CPU für vielseitige Verarbeitung, GPU für stark parallele Workloads.
+- **Bandbreite ≠ Latenz:** Bandbreite beschreibt Datenmenge pro Zeit, Latenz die Verzögerung eines Zugriffs.
+
+## 3-Zeilen-IHK-Antwort
+
+Die CPU führt Maschinenbefehle aus; ihre Leistung hängt unter anderem von Taktfrequenz, IPC, Kernanzahl und Cache ab.  
+Die Speicherhierarchie aus Registern, Cache und RAM reduziert Zugriffszeiten und versorgt die CPU mit Daten.  
+GPUs optimieren stark parallele Berechnungen, während CPUs vielseitige Aufgaben und die Programmsteuerung übernehmen.
+
+--- Live-Migration-VMs ---
+# Live Migration – Laufende VMs ohne spürbare Unterbrechung verschieben
+
+## Was ist Live Migration?
+
+Live Migration ist das Verschieben einer **laufenden virtuellen Maschine (VM)** von einem physischen Host auf einen anderen, ohne das Gastbetriebssystem herunterzufahren. Der Arbeitsspeicher und der aktuelle Laufzeitzustand werden zum Zielhost übertragen. Dadurch bleibt ein Dienst normalerweise erreichbar; eine kurze Unterbrechung beim Umschalten kann trotzdem auftreten.
+
+**Beispiele für Technologien:**
+- **VMware vSphere vMotion** – Migration zwischen ESXi-Hosts.
+- **Microsoft Hyper-V Live Migration** – Migration zwischen Hyper-V-Hosts.
+- **KVM/QEMU Live Migration** – Migration zwischen kompatiblen KVM-Hosts, häufig mit libvirt verwaltet.
+
+Quelle: [Microsoft Learn – Live Migration Overview](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/live-migration-overview)
+
+## Real-Life-Anwendungen
+
+### Wartung eines Servers ohne geplanten Dienstausfall
+
+Ein Unternehmen betreibt auf Host A mehrere VMs:
+- eine VM für Active Directory und DNS
+- einen Webserver
+- einen Datenbankserver
+- einen Fileserver
+
+Host A benötigt ein Firmware-Update oder neue RAM-Module. Statt alle VMs herunterzufahren, werden sie auf Host B migriert. Danach kann Host A gewartet werden. Anschließend können die VMs zurückverschoben werden.
+
+**Nutzen:** weniger geplante Ausfallzeit und flexiblere Wartungsfenster.
+
+### Lastverteilung im Rechenzentrum
+
+Host A ist stark ausgelastet, während Host B noch freie CPU- und RAM-Kapazität hat. Das Virtualisierungsmanagement verschiebt eine oder mehrere VMs auf Host B.
+
+**Nutzen:** bessere Ressourcenverteilung und weniger Engpässe. Eine Migration selbst benötigt allerdings CPU-, RAM- und Netzwerkressourcen.
+
+### Rechenzentrum erweitern oder umbauen
+
+Ein Unternehmen ersetzt ältere Hosts durch neue Server. VMs können – sofern die Kompatibilität und die Infrastruktur stimmen – auf die neuen Hosts verschoben werden, ohne jede Anwendung einzeln neu installieren zu müssen.
+
+### Cloud- und Hosting-Betrieb
+
+Cloud- und Hosting-Anbieter verwalten viele virtuelle Server auf einer gemeinsamen Infrastruktur. Migrationen helfen bei Wartung, Kapazitätsplanung und Lastverteilung. Ob eine konkrete Cloud-Plattform Live Migration anbietet, hängt vom jeweiligen Dienst ab.
+
+---
+
+## Wie funktioniert Live Migration technisch?
+
+Ein Beispiel: Eine VM mit 16 GB RAM läuft auf Host A und soll auf Host B wechseln.
+
+<box gap={2}>
+  <box border radius="lg" padding={3} gap={1}>
+    **1. Zielhost prüfen**
+
+    Host B muss kompatibel sein und genug CPU-, RAM- und gegebenenfalls Speicherressourcen besitzen. Netzwerk, Berechtigungen und Migrationsverbindung werden geprüft.
+  </box>
+  <box align="center">
+    <icon name="arrow-down" size="lg" />
+  </box>
+  <box border radius="lg" padding={3} gap={1}>
+    **2. VM-Zustand übertragen**
+
+    Der Quellhost überträgt den Speicherinhalt der VM über das Netzwerk. Bei Pre-Copy-Verfahren läuft die VM währenddessen weiter. Speicherseiten, die erneut geändert werden, können nochmals übertragen werden.
+  </box>
+  <box align="center">
+    <icon name="arrow-down" size="lg" />
+  </box>
+  <box border radius="lg" padding={3} gap={1}>
+    **3. Kurzes Umschalten**
+
+    Wenn nur noch wenige Änderungen offen sind, wird die VM kurz angehalten. Der letzte CPU- und Gerätezustand sowie verbleibende Speicherseiten werden übertragen.
+  </box>
+  <box align="center">
+    <icon name="arrow-down" size="lg" />
+  </box>
+  <box border radius="lg" padding={3} gap={1}>
+    **4. VM auf Host B fortsetzen**
+
+    Host B setzt die VM fort. Das virtuelle Netzwerk muss die VM weiterhin korrekt erreichbar machen. Der alte Host gibt die VM-Ressourcen frei.
+  </box>
+</box>
+
+### Was wird übertragen?
+
+- **RAM:** laufender Speicherinhalt und Änderungen während der Übertragung.
+- **CPU-Zustand:** Register und Ausführungszustand der VM beim Umschalten.
+- **Virtuelle Geräte:** Zustand virtueller Netzwerk- und anderer Geräte.
+- **Speicher:** abhängig von der Migrationsart entweder bereits gemeinsam verfügbar oder zusätzlich zu übertragen.
+
+Wichtig: Bei einer reinen **Compute-/Live Migration** bleiben die virtuellen Festplatten häufig auf gemeinsamem Storage. Bei einer **Storage Migration** werden die virtuellen Festplatten zusätzlich an einen anderen Speicherort verschoben. Manche Plattformen können beides kombinieren.
+
+## Voraussetzungen
+
+| Voraussetzung | Warum? |
+|---|---|
+| Kompatible Virtualisierung | Quelle und Ziel müssen die VM-Konfiguration und deren virtuelle Hardware unterstützen. |
+| Ausreichend RAM | Der Zielhost benötigt genug freien Arbeitsspeicher für die VM. |
+| Ausreichende CPU-Kapazität | Der Zielhost muss die zusätzliche Rechenlast übernehmen können. |
+| CPU-Kompatibilität | Die CPU-Funktionen müssen kompatibel sein; unterschiedliche Generationen können Einschränkungen verursachen. |
+| Netzwerkverbindung | RAM und Laufzeitzustand müssen zuverlässig übertragen werden. |
+| Storage-Zugriff | Die VM-Festplatten müssen am Ziel verfügbar sein oder mitmigriert werden. |
+| Netzwerk-Konfiguration | VLANs, virtuelle Switches, IP-Erreichbarkeit und Sicherheitsregeln müssen passen. |
+| Authentifizierung und Berechtigungen | Die Hosts müssen die Migration sicher autorisieren können. |
+| Passende Software und Lizenzen | Hypervisor-Version, Konfiguration und gegebenenfalls Lizenz müssen die Funktion unterstützen. |
+
+Nicht jede Umgebung braucht einen Cluster oder Shared Storage zwingend. Die genauen Anforderungen hängen von Hypervisor, Version und gewählter Migrationsart ab.
+
+Quelle: [Microsoft Learn – Voraussetzungen und Konfiguration](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/use-live-migration-without-failover-clustering-to-move-a-virtual-machine)
+
+## Shared Storage vs. lokaler Storage
+
+### Shared Storage
+
+Beide Hosts greifen auf denselben zentralen Speicher zu, zum Beispiel über SAN, NAS oder einen passenden Cluster-Speicher.
+
+- Die VM-Dateien müssen beim Wechsel nicht vollständig kopiert werden.
+- Die Migration betrifft vor allem RAM und Laufzeitzustand.
+- Der gemeinsame Speicher muss erreichbar und korrekt konfiguriert sein.
+
+### Lokaler Storage
+
+Die virtuellen Festplatten liegen direkt auf dem Quellhost. Wenn der Zielhost keinen Zugriff darauf hat, müssen die VM-Dateien ebenfalls übertragen werden.
+
+- Mehr Datenverkehr und längere Migrationsdauer möglich.
+- Ausreichende Bandbreite und freier Speicherplatz erforderlich.
+- Je nach Plattform wird dies als Storage Migration oder kombinierte Migration durchgeführt.
+
+## Wie lange dauert eine Live Migration?
+
+Die Dauer hängt unter anderem ab von:
+- RAM-Größe der VM
+- Netzwerkbandbreite und Latenz
+- CPU- und Netzwerkauslastung
+- Häufigkeit, mit der die VM ihren RAM verändert
+- Größe der zu übertragenden virtuellen Festplatten
+
+Beispiel: Eine VM mit 16 GiB RAM benötigt bei idealen 10 Gbit/s für die reine Übertragung ungefähr 14 Sekunden. Protokoll-Overhead, erneute Übertragungen, Storage-Daten und Umschaltvorgang können die tatsächliche Zeit deutlich erhöhen.
+
+Eine hohe Änderungsrate im RAM kann die Migration verlangsamen, weil Speicherseiten wiederholt übertragen werden müssen.
+
+## Vorteile und Nachteile
+
+| Vorteile | Nachteile |
+|---|---|
+| Weniger geplante Ausfallzeit | Benötigt Netzwerkbandbreite |
+| Wartung ohne reguläres Herunterfahren der VM | Zusätzliche CPU- und RAM-Last |
+| Lastverteilung zwischen Hosts | Kompatibilität und Konfiguration müssen stimmen |
+| Flexiblere Hardwarewechsel | Gemeinsamer Storage kann ein zentraler Engpass sein |
+| Kann mit Clustering und Hochverfügbarkeit kombiniert werden | Keine Garantie gegen jeden Ausfall |
+
+## Live Migration ist nicht dasselbe wie Failover
+
+**Live Migration:** Ein Administrator oder das Management verschiebt eine noch laufende VM kontrolliert auf einen anderen Host.
+
+**Failover:** Ein Host fällt aus und eine Hochverfügbarkeitslösung startet oder übernimmt die VM auf einem anderen Host. Dabei kann es zu einer Unterbrechung kommen, weil der ursprüngliche Host nicht mehr normal mitarbeitet.
+
+**Cluster:** Eine Gruppe von Hosts, die Ressourcen und gegebenenfalls Ausfallsicherheit gemeinsam verwaltet. Ein Cluster kann Live Migration und automatisches Failover unterstützen, aber beide Funktionen sind unterschiedlich.
+
+**Snapshot:** Ein gespeicherter VM-Zustand beziehungsweise eine Änderungsbasis. Ein Snapshot ist weder eine Live Migration noch automatisch ein Backup.
+
+## Sicherheit und Betrieb
+
+- Migrationsverkehr sollte über ein dafür vorgesehenes, geschütztes Netzwerk geführt werden.
+- Authentifizierung und Berechtigungen müssen restriktiv konfiguriert sein.
+- Bei sensiblen Daten sind Vertraulichkeit und angemessener Schutz des Übertragungswegs wichtig.
+- Monitoring sollte CPU, RAM, Netzwerkauslastung und Migrationsfehler erfassen.
+- Ein Wartungsplan braucht weiterhin eine Rückfallstrategie; Live Migration ersetzt kein Backup.
+
+**DSGVO-Bezug:** Werden personenbezogene Daten übertragen, müssen Vertraulichkeit, Integrität und Verfügbarkeit angemessen geschützt werden. Dazu gehören passende Zugriffskontrollen und Sicherheitsmaßnahmen nach Art. 32 DSGVO. Live Migration allein erfüllt diese Anforderungen nicht automatisch.
+
+## IHK-Merksatz
+
+Live Migration verschiebt eine laufende VM zwischen kompatiblen Hosts, indem RAM und Laufzeitzustand übertragen und die VM anschließend am Ziel fortgesetzt werden. Voraussetzungen sind unter anderem kompatible Hosts, ausreichende Ressourcen, eine sichere Netzwerkverbindung sowie passender Zugriff auf den virtuellen Speicher. Typische Einsatzfälle sind Serverwartung und Lastverteilung; im Gegensatz zum Failover erfolgt die Migration normalerweise geplant und kontrolliert.
+
+## Quellen
+
+- [Microsoft Learn – Live Migration Overview](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/live-migration-overview)
+- [Microsoft Learn – Live Migration ohne Failover Clustering](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/use-live-migration-without-failover-clustering-to-move-a-virtual-machine)
+- [Broadcom – CPU-Kompatibilität bei VMware vMotion](https://knowledge.broadcom.com/external/article/316536/migration-to-a-different-processor.html)
