@@ -19,3 +19,7 @@
 - [IPv6](IT/ipv6.md)
 
 - [Proxy](IT/proxy.md)
+
+- [VM-Container-Server](IT/vm-container-server.md)
+
+- [Hypervisor-Typen](IT/hypervisor-typen.md)
