@@ -1912,3 +1912,1329 @@ Live Migration verschiebt eine laufende VM zwischen kompatiblen Hosts, indem RAM
 - [Microsoft Learn – Live Migration Overview](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/live-migration-overview)
 - [Microsoft Learn – Live Migration ohne Failover Clustering](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/use-live-migration-without-failover-clustering-to-move-a-virtual-machine)
 - [Broadcom – CPU-Kompatibilität bei VMware vMotion](https://knowledge.broadcom.com/external/article/316536/migration-to-a-different-processor.html)
+
+--- Symmetrische-und-Asymmetrische ---
+# Symmetrische und asymmetrische Verschlüsselung
+
+## Symmetrische Verschlüsselung
+
+Bei der symmetrischen Verschlüsselung verwenden Sender und Empfänger **denselben geheimen Schlüssel** zum Ver- und Entschlüsseln.
+
+Beispiele:
+- AES
+- ChaCha20
+- 3DES (veraltet, nicht mehr für neue Systeme empfohlen)
+
+### Problem: Schlüsselaustausch
+
+Beide Kommunikationspartner müssen den geheimen Schlüssel sicher austauschen. Wenn sie vorher keinen gemeinsamen Schlüssel besitzen, entsteht das Problem: **Wie überträgt man den Schlüssel sicher über einen unsicheren Kanal?**
+
+Bei vielen Kommunikationspartnern wird die Schlüsselverwaltung aufwendig.
+
+Für `n` Teilnehmer, die jeweils paarweise einen eigenen Schlüssel benötigen, sind insgesamt
+
+`n · (n − 1) / 2`
+
+verschiedene Schlüssel nötig.
+
+Beispiel: 100 Teilnehmer benötigen 4.950 paarweise Schlüssel.
+
+## Asymmetrische Verschlüsselung
+
+Bei der asymmetrischen Verschlüsselung besitzt jeder Teilnehmer ein Schlüsselpaar:
+
+- **Public Key:** öffentlicher Schlüssel, darf verteilt werden.
+- **Private Key:** privater Schlüssel, muss geheim bleiben.
+
+Bei der klassischen Verschlüsselung mit Public-Key-Verfahren verschlüsselt der Sender mit dem Public Key des Empfängers. Entschlüsseln kann der Empfänger mit seinem Private Key.
+
+Beispiele:
+- RSA
+- ElGamal
+- ECC-basierte Verfahren, z. B. ECIES
+
+### Vorteil
+
+Der öffentliche Schlüssel muss nicht geheim übermittelt werden. Dadurch entfällt der direkte Austausch eines gemeinsamen symmetrischen Schlüssels.
+
+### Problem: Vertrauen in den Public Key
+
+Ein Angreifer könnte seinen eigenen Public Key als den Schlüssel des Empfängers ausgeben. Deshalb muss überprüft werden, ob ein öffentlicher Schlüssel tatsächlich zur angegebenen Person oder zum Server gehört.
+
+Lösungen:
+- **PKI (Public Key Infrastructure):** verwaltet Zertifikate und Vertrauensbeziehungen.
+- **Digitale Zertifikate:** binden einen öffentlichen Schlüssel an eine Identität.
+- **Zertifizierungsstellen (CA):** stellen Zertifikate aus.
+- **Fingerprint-Prüfung:** öffentlicher Schlüssel wird über seinen Fingerprint auf einem vertrauenswürdigen Weg überprüft.
+
+## Warum kombiniert man beide Verfahren?
+
+Asymmetrische Verfahren sind für den Schlüsselaustausch und die Authentifizierung nützlich. Symmetrische Verfahren sind für die eigentliche Datenverschlüsselung meist effizienter.
+
+Beispiel HTTPS/TLS:
+
+1. Der Client baut eine Verbindung zum Webserver auf.
+2. Der Server präsentiert ein Zertifikat, dessen Gültigkeit und Identität der Client prüft.
+3. Beide Seiten handeln über einen Schlüsselaustausch, beispielsweise ECDHE, gemeinsame Sitzungsschlüssel aus.
+4. Die eigentlichen Daten werden mit symmetrischer Verschlüsselung, beispielsweise AES-GCM oder ChaCha20-Poly1305, geschützt.
+
+Moderne TLS-Verbindungen verwenden häufig **ephemeren Diffie-Hellman-Schlüsselaustausch**. Dabei werden gemeinsame Schlüssel abgeleitet; die übertragenen Daten werden nicht einfach mit dem öffentlichen RSA-Schlüssel verschlüsselt.
+
+## Vergleich
+
+| Merkmal | Symmetrisch | Asymmetrisch |
+|---|---|---|
+| Schlüssel | Gemeinsamer geheimer Schlüssel | Public Key + Private Key |
+| Geschwindigkeit | Sehr hoch | Meist langsamer |
+| Schlüsselverteilung | Geheimer Schlüssel muss sicher vereinbart werden | Public Key darf öffentlich sein |
+| Hauptproblem | Sicherer Schlüsselaustausch und Schlüsselverwaltung | Authentizität des Public Keys |
+| Beispiele | AES, ChaCha20 | RSA, ECC |
+| Typische Nutzung | Verschlüsselung großer Datenmengen | Schlüsselaustausch, Signaturen, Authentifizierung |
+
+## IHK-Merksatz
+
+Symmetrische Verschlüsselung ist schnell, benötigt aber einen gemeinsamen geheimen Schlüssel. Asymmetrische Kryptografie verwendet ein öffentliches und ein privates Schlüsselpaar und vereinfacht den Schlüsselaustausch, benötigt aber eine vertrauenswürdige Zuordnung des Public Keys zur Identität. In der Praxis kombinieren Protokolle wie TLS beide Ansätze.
+
+--- Abkürzungen ---
+# IT-Abkürzungen – IHK AP2
+
+## Netzwerke und Protokolle
+
+| Abkürzung | Vollständiger Name | Erklärung |
+|---|---|---|
+| LAN | Local Area Network | Lokales Netzwerk, z. B. im Büro. |
+| WAN | Wide Area Network | Netzwerk über große geografische Entfernungen. |
+| WLAN | Wireless Local Area Network | Drahtloses lokales Netzwerk. |
+| VLAN | Virtual Local Area Network | Trennt ein physisches Netzwerk logisch in mehrere Netze. |
+| VPN | Virtual Private Network | Verschlüsselte Verbindung über ein unsicheres Netzwerk. |
+| IP | Internet Protocol | Adressierung und Weiterleitung von IP-Paketen. |
+| IPv4 | Internet Protocol Version 4 | 32-Bit-Adressen, z. B. `192.168.1.10`. |
+| IPv6 | Internet Protocol Version 6 | 128-Bit-Adressen, z. B. `2001:db8::1`. |
+| TCP | Transmission Control Protocol | Zuverlässige, verbindungsorientierte Datenübertragung. |
+| UDP | User Datagram Protocol | Verbindungslos, geringer Overhead, keine Zustellgarantie. |
+| DNS | Domain Name System | Übersetzt Domainnamen in IP-Adressen. |
+| DHCP | Dynamic Host Configuration Protocol | Vergibt IP-Konfiguration automatisch. |
+| ARP | Address Resolution Protocol | Ermittelt im IPv4-LAN die MAC-Adresse zu einer IPv4-Adresse. |
+| ICMP | Internet Control Message Protocol | Fehlermeldungen und Diagnose, z. B. bei `ping`. |
+| HTTP | Hypertext Transfer Protocol | Übertragung von Webinhalten, standardmäßig Port 80. |
+| HTTPS | Hypertext Transfer Protocol Secure | HTTP mit TLS-Verschlüsselung, standardmäßig Port 443. |
+| FTP | File Transfer Protocol | Dateiübertragung; ohne zusätzliche Absicherung nicht verschlüsselt. |
+| SFTP | SSH File Transfer Protocol | Verschlüsselte Dateiübertragung über SSH. |
+| SSH | Secure Shell | Verschlüsselte Fernadministration, standardmäßig Port 22. |
+| SMTP | Simple Mail Transfer Protocol | Versand bzw. Weiterleitung von E-Mails. |
+| IMAP | Internet Message Access Protocol | Zugriff und Synchronisierung von E-Mails auf dem Server. |
+| POP3 | Post Office Protocol Version 3 | Ruft E-Mails vom Server ab. |
+| SNMP | Simple Network Management Protocol | Überwachung und Verwaltung von Netzwerkgeräten. |
+| NTP | Network Time Protocol | Synchronisiert die Systemzeit über Netzwerke. |
+| TLS | Transport Layer Security | Verschlüsselt Daten und ermöglicht Integrität sowie Authentifizierung. |
+| MAC | Media Access Control | Bezeichnet die Sicherungsschicht-Adresse einer Netzwerkschnittstelle. |
+| QoS | Quality of Service | Priorisiert bestimmten Netzwerkverkehr. |
+| MTU | Maximum Transmission Unit | Maximale Paketgröße einer Verbindung ohne Fragmentierung auf dieser Ebene. |
+| PoE | Power over Ethernet | Versorgt Netzwerkgeräte über das Ethernet-Kabel mit Strom. |
+
+## Netzwerkgeräte und Infrastruktur
+
+| Abkürzung | Vollständiger Name | Erklärung |
+|---|---|---|
+| NIC | Network Interface Card | Netzwerkschnittstelle eines Geräts. |
+| AP | Access Point | Verbindet WLAN-Geräte mit einem Netzwerk. |
+| NAS | Network Attached Storage | Dateispeicher im Netzwerk. |
+| SAN | Storage Area Network | Netzwerk für blockbasierten Speicherzugriff. |
+| IDS | Intrusion Detection System | Erkennt verdächtige Aktivitäten und meldet sie. |
+| IPS | Intrusion Prevention System | Erkennt und blockiert verdächtige Aktivitäten. |
+| CDN | Content Delivery Network | Verteilt Inhalte über geografisch verteilte Server. |
+| ISP | Internet Service Provider | Anbieter eines Internetzugangs. |
+| PoP | Point of Presence | Standort eines Netzknotens oder Zugangspunkts eines Anbieters. |
+
+## IT-Sicherheit und Kryptografie
+
+| Abkürzung | Vollständiger Name | Erklärung |
+|---|---|---|
+| CIA | Confidentiality, Integrity, Availability | Vertraulichkeit, Integrität und Verfügbarkeit. |
+| MFA | Multi-Factor Authentication | Anmeldung mit mindestens zwei unterschiedlichen Faktorarten. |
+| 2FA | Two-Factor Authentication | Anmeldung mit genau zwei unterschiedlichen Faktorarten. |
+| ACL | Access Control List | Regeln, welche Benutzer oder Systeme Zugriff erhalten. |
+| RBAC | Role-Based Access Control | Zugriffsrechte werden über Rollen vergeben. |
+| PKI | Public Key Infrastructure | Verwaltet Zertifikate und Vertrauensbeziehungen. |
+| CA | Certificate Authority | Stellt digitale Zertifikate aus. |
+| CSR | Certificate Signing Request | Antrag auf Ausstellung eines Zertifikats. |
+| AES | Advanced Encryption Standard | Symmetrisches Verschlüsselungsverfahren. |
+| RSA | Rivest–Shamir–Adleman | Asymmetrisches Kryptografieverfahren. |
+| ECC | Elliptic Curve Cryptography | Kryptografie auf Basis elliptischer Kurven. |
+| SHA | Secure Hash Algorithm | Hashfunktionen zur Integritätsprüfung. |
+| HMAC | Hash-based Message Authentication Code | Prüft Datenintegrität und Authentizität mit einem geheimen Schlüssel. |
+| DoS | Denial of Service | Angriff, der einen Dienst beeinträchtigen oder unerreichbar machen soll. |
+| DDoS | Distributed Denial of Service | DoS-Angriff über viele verteilte Systeme. |
+| EDR | Endpoint Detection and Response | Erkennt und untersucht Sicherheitsvorfälle auf Endgeräten. |
+| SIEM | Security Information and Event Management | Sammelt und analysiert Sicherheitsereignisse zentral. |
+| Zero Trust | Zero Trust Security Model | Zugriffe werden konsequent geprüft; Vertrauen allein aufgrund des Netzwerkstandorts reicht nicht. |
+
+## Betriebssysteme, Server und Virtualisierung
+
+| Abkürzung | Vollständiger Name | Erklärung |
+|---|---|---|
+| OS | Operating System | Betriebssystem, z. B. Linux oder Windows. |
+| CLI | Command-Line Interface | Bedienung über eine Kommandozeile. |
+| GUI | Graphical User Interface | Bedienung über eine grafische Oberfläche. |
+| CPU | Central Processing Unit | Führt allgemeine Rechen- und Steueroperationen aus. |
+| GPU | Graphics Processing Unit | Spezialisiert auf Grafik und parallele Berechnungen. |
+| RAM | Random Access Memory | Flüchtiger Arbeitsspeicher. |
+| ROM | Read-Only Memory | Nichtflüchtiger Speicher, traditionell für dauerhaft gespeicherte Inhalte. |
+| SSD | Solid-State Drive | Flash-basierter Datenspeicher ohne bewegliche Teile. |
+| HDD | Hard Disk Drive | Magnetischer Datenspeicher mit rotierenden Scheiben. |
+| RAID | Redundant Array of Independent Disks | Kombiniert Laufwerke für Leistung, Kapazität oder Ausfallsicherheit; ersetzt kein Backup. |
+| VM | Virtual Machine | Virtueller Computer mit eigenem Gastbetriebssystem. |
+| VMM | Virtual Machine Monitor | Andere Bezeichnung für einen Hypervisor. |
+| HA | High Availability | Architektur zur Reduzierung von Ausfallzeiten. |
+| FT | Fault Tolerance | Fehlertoleranz; Systeme arbeiten trotz bestimmter Fehler weiter. |
+| DR | Disaster Recovery | Wiederherstellung von IT-Systemen nach größeren Störungen. |
+| RPO | Recovery Point Objective | Maximal tolerierter Datenverlust, gemessen als Zeitraum. |
+| RTO | Recovery Time Objective | Zielwert für die maximal akzeptierte Wiederherstellungszeit. |
+| CI/CD | Continuous Integration / Continuous Delivery oder Deployment | Automatisiert Integration, Tests und Bereitstellung von Software. |
+| API | Application Programming Interface | Definierte Schnittstelle für die Kommunikation zwischen Softwarekomponenten. |
+| SDK | Software Development Kit | Werkzeuge und Bibliotheken für die Softwareentwicklung. |
+| IDE | Integrated Development Environment | Entwicklungsumgebung mit Editor, Debugger und weiteren Werkzeugen. |
+| DBMS | Database Management System | Software zur Verwaltung von Datenbanken. |
+| SQL | Structured Query Language | Sprache zur Abfrage und Manipulation relationaler Datenbanken. |
+| ACID | Atomicity, Consistency, Isolation, Durability | Eigenschaften zuverlässiger Datenbanktransaktionen. |
+| ETL | Extract, Transform, Load | Daten extrahieren, umwandeln und in ein Zielsystem laden. |
+
+## Cloud und moderne Infrastruktur
+
+| Abkürzung | Vollständiger Name | Erklärung |
+|---|---|---|
+| IaaS | Infrastructure as a Service | Virtuelle Infrastruktur wie Server, Netzwerke und Speicher. |
+| PaaS | Platform as a Service | Plattform zum Entwickeln und Betreiben von Anwendungen. |
+| SaaS | Software as a Service | Fertige Software wird als Dienst bereitgestellt. |
+| FaaS | Function as a Service | Einzelne Funktionen werden ereignisgesteuert ausgeführt. |
+| IaC | Infrastructure as Code | Infrastruktur wird durch versionierbare Konfigurationen definiert. |
+| VM | Virtual Machine | Virtualisiert einen vollständigen Computer. |
+| OCI | Open Container Initiative | Definiert Standards für Containerformate und Laufzeitumgebungen. |
+| K8s | Kubernetes | Plattform zur Orchestrierung containerisierter Anwendungen. |
+| CI | Continuous Integration | Änderungen werden regelmäßig integriert und automatisiert getestet. |
+| CD | Continuous Delivery / Continuous Deployment | Automatisiert die Bereitstellung; Deployment kann die automatische Produktivsetzung bedeuten. |
+| SLA | Service Level Agreement | Vereinbarung über messbare Serviceleistungen, z. B. Verfügbarkeit. |
+| SLI | Service Level Indicator | Messwert für die Servicequalität. |
+| SLO | Service Level Objective | Zielwert für einen Service-Messwert. |
+
+## Datenschutz und Recht
+
+| Abkürzung | Vollständiger Name | Erklärung |
+|---|---|---|
+| DSGVO | Datenschutz-Grundverordnung | EU-Verordnung zum Schutz personenbezogener Daten. |
+| BDSG | Bundesdatenschutzgesetz | Ergänzt die DSGVO im deutschen Recht. |
+| TOM | Technische und organisatorische Maßnahmen | Maßnahmen zum Schutz personenbezogener Daten, z. B. Zugriffskontrolle und Verschlüsselung. |
+| DSB | Datenschutzbeauftragter | Berät und überwacht die Einhaltung datenschutzrechtlicher Vorgaben im gesetzlichen Rahmen. |
+| AVV | Auftragsverarbeitungsvertrag | Regelt die Auftragsverarbeitung personenbezogener Daten nach Art. 28 DSGVO. |
+| VVT | Verzeichnis von Verarbeitungstätigkeiten | Dokumentiert Verarbeitungstätigkeiten personenbezogener Daten. |
+| DSFA | Datenschutz-Folgenabschätzung | Bewertung der Risiken einer Verarbeitung mit voraussichtlich hohem Risiko. |
+| Betroffenenrechte | Rechte betroffener Personen | Dazu zählen z. B. Auskunft, Berichtigung und Löschung, jeweils unter den gesetzlichen Voraussetzungen. |
+
+## Hardware, Daten und Leistung
+
+| Abkürzung | Vollständiger Name | Erklärung |
+|---|---|---|
+| BIOS | Basic Input/Output System | Ältere Firmware zur Hardwareinitialisierung und zum Startvorgang. |
+| UEFI | Unified Extensible Firmware Interface | Moderne Firmware-Schnittstelle für den Systemstart. |
+| POST | Power-On Self-Test | Prüft beim Start grundlegende Hardwarefunktionen. |
+| PCIe | Peripheral Component Interconnect Express | Hochgeschwindigkeitsverbindung für Erweiterungskarten und Geräte. |
+| USB | Universal Serial Bus | Schnittstelle für Peripheriegeräte und Datenübertragung. |
+| SATA | Serial Advanced Technology Attachment | Schnittstelle für Laufwerke. |
+| NVMe | Non-Volatile Memory Express | Protokoll für nichtflüchtige Speicher, häufig über PCIe. |
+| DIMM | Dual In-line Memory Module | Speichermodul, z. B. für Desktop- und Serversysteme. |
+| ECC | Error-Correcting Code | Erkennt und korrigiert bestimmte Speicherfehler; bei ECC-RAM. |
+| TDP | Thermal Design Power | Kennwert zur Auslegung der Kühlung; nicht gleich dem tatsächlichen Maximalverbrauch. |
+| GHz | Gigahertz | Eine Milliarde Taktzyklen pro Sekunde. |
+| IPC | Instructions Per Cycle | Anzahl der pro Taktzyklus ausgeführten Instruktionen im Mittel. |
+| IOPS | Input/Output Operations Per Second | Anzahl der Ein-/Ausgabeoperationen pro Sekunde. |
+| RAID | Redundant Array of Independent Disks | Verbund aus mehreren Laufwerken mit je nach RAID-Level unterschiedlichen Eigenschaften. |
+| NAS | Network Attached Storage | Netzwerkbasierter Dateispeicher. |
+
+## Wirtschaft und Projektmanagement
+
+| Abkürzung | Vollständiger Name | Erklärung |
+|---|---|---|
+| ROI | Return on Investment | Verhältnis des wirtschaftlichen Erfolgs zum eingesetzten Kapital. |
+| TCO | Total Cost of Ownership | Gesamtkosten eines Systems über seinen Lebenszyklus. |
+| CAPEX | Capital Expenditure | Investitionsausgaben, z. B. für Serverhardware. |
+| OPEX | Operational Expenditure | Laufende Betriebsausgaben, z. B. Strom oder Abonnements. |
+| SWOT | Strengths, Weaknesses, Opportunities, Threats | Analyse von Stärken, Schwächen, Chancen und Risiken. |
+| SMART | Specific, Measurable, Achievable, Relevant, Time-bound | Kriterien für konkret formulierte Ziele. |
+| PSP | Projektstrukturplan | Zerlegt ein Projekt in Teilaufgaben und Arbeitspakete. |
+| Gantt | Gantt-Diagramm | Stellt Aufgaben und deren Zeitplanung grafisch dar. |
+| Lastenheft | – | Beschreibt, **was** der Auftraggeber benötigt. |
+| Pflichtenheft | – | Beschreibt, **wie** der Auftragnehmer die Anforderungen umsetzt. |
+
+## Wichtige Ports zum Auswendiglernen
+
+| Port | Protokoll / Dienst |
+|---:|---|
+| 20/21 | FTP-Datenübertragung / FTP-Steuerung, klassischer FTP-Modus |
+| 22 | SSH, SFTP |
+| 25 | SMTP-Serverkommunikation, häufig zwischen Mailservern |
+| 53 | DNS über UDP oder TCP |
+| 67/68 | DHCPv4-Server / DHCPv4-Client |
+| 80 | HTTP |
+| 110 | POP3 |
+| 123 | NTP |
+| 143 | IMAP |
+| 161/162 | SNMP-Abfragen / SNMP-Traps |
+| 389 | LDAP |
+| 443 | HTTPS |
+| 445 | SMB |
+| 465 | SMTP über implizites TLS, üblich für Mail-Submission |
+| 587 | SMTP Message Submission |
+| 636 | LDAPS |
+| 993 | IMAP über implizites TLS |
+| 995 | POP3 über implizites TLS |
+| 1433 | Microsoft SQL Server, Standardport |
+| 3306 | MySQL, Standardport |
+| 3389 | RDP |
+| 5432 | PostgreSQL, Standardport |
+| 5900 | VNC, häufig verwendeter Standardport |
+
+## IHK-Fallen
+
+- **TCP vs. UDP:** TCP bietet zuverlässige, geordnete Übertragung; UDP garantiert weder Zustellung noch Reihenfolge.
+- **HTTPS vs. HTTP:** HTTPS schützt die Verbindung durch TLS; es garantiert nicht, dass die Website seriös ist.
+- **RAID vs. Backup:** RAID erhöht je nach Level Verfügbarkeit oder Leistung, schützt aber nicht zuverlässig vor versehentlichem Löschen oder Ransomware.
+- **Authentifizierung vs. Autorisierung:** Authentifizierung prüft die Identität; Autorisierung prüft die erlaubten Aktionen.
+- **Verschlüsselung vs. Hashing:** Verschlüsselung ist mit passendem Schlüssel umkehrbar; ein kryptografischer Hash ist dafür nicht vorgesehen.
+- **IDS vs. IPS:** IDS erkennt und meldet; IPS kann aktiv blockieren.
+- **RPO vs. RTO:** RPO beschreibt den tolerierten Datenverlustzeitraum; RTO beschreibt die angestrebte Wiederherstellungszeit.
+- **IaaS vs. PaaS vs. SaaS:** Infrastruktur, Entwicklungsplattform, fertige Anwendung.
+- **RAM vs. SSD:** RAM ist flüchtiger Arbeitsspeicher; SSD ist nichtflüchtiger Massenspeicher.
+- **Public Key vs. Private Key:** Der Public Key darf veröffentlicht werden; der Private Key muss geheim bleiben.
+
+--- Fachbegriffe ---
+# IT-Slang und Fachbegriffe – IHK AP2
+
+Begriffe, mit denen du technische Probleme, Softwarearchitektur und IT-Prozesse präzise beschreiben kannst. Die Definitionen orientieren sich an etablierten technischen Quellen; einige Begriffe werden in Teams unterschiedlich verwendet.
+
+## Softwareentwicklung
+
+| Begriff | Bedeutung | Kurz erklärt |
+|---|---|---|
+| **Technical Debt** | Technische Schulden | Kurzfristige technische Kompromisse erhöhen den späteren Wartungs- und Änderungsaufwand. |
+| **Refactoring** | Code umstrukturieren | Verbessert die interne Codequalität, ohne das beobachtbare Verhalten zu verändern. |
+| **Code Smell** | Hinweis auf ein Codeproblem | Auffälligkeit im Code, die auf ein tieferes Designproblem hindeuten kann. Nicht jeder Code Smell ist automatisch ein Fehler. |
+| **Legacy System** | Bestandssystem | Bestehendes System, das weiter genutzt wird, obwohl Technologie oder Wartbarkeit problematisch sein können. |
+| **Workaround** | Behelfslösung | Umgeht ein Problem, ohne zwingend dessen Ursache zu beheben. |
+| **Hotfix** | Dringende Fehlerkorrektur | Schnelle Korrektur eines kritischen Fehlers, häufig direkt für ein Produktivsystem. |
+| **Patch** | Softwarekorrektur | Änderung, die beispielsweise Fehler oder Sicherheitslücken behebt. |
+| **Regression** | Rückschritt durch Änderung | Eine Änderung verursacht einen Fehler in bereits funktionierender Funktionalität. |
+| **Breaking Change** | Inkompatible Änderung | Eine Änderung bricht bestehende Schnittstellen oder die Kompatibilität mit bisherigen Nutzern. |
+| **Backward Compatibility** | Rückwärtskompatibilität | Eine neue Version unterstützt weiterhin relevante ältere Schnittstellen oder Formate. |
+| **Refactoring vs. Rewrite** | Umstrukturierung vs. Neuentwicklung | Refactoring verbessert bestehenden Code schrittweise; ein Rewrite ersetzt ihn weitgehend neu. |
+| **Code Duplication** | Doppelte Codeabschnitte | Gleiche Logik an mehreren Stellen erhöht Änderungsaufwand und Inkonsistenzrisiko. |
+| **Hardcoding** | Fest codierte Werte | Werte wie IP-Adressen oder Zugangsdaten stehen direkt im Code statt in geeigneter Konfiguration. |
+| **Dependency** | Abhängigkeit | Eine Komponente benötigt eine andere Bibliothek, einen Dienst oder ein System. |
+| **Dependency Hell** | Abhängigkeitskonflikte | Bibliotheken haben unvereinbare Versionen oder widersprüchliche Anforderungen. |
+| **Vendor Lock-in** | Herstellerbindung | Ein Wechsel wird durch proprietäre Technologien, Datenformate oder hohe Migrationskosten erschwert. |
+
+Quellen: [Martin Fowler – Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html), [Martin Fowler – Code Smell](https://martinfowler.com/bliki/CodeSmell.html).
+
+## Architektur und Systemdesign
+
+| Begriff | Bedeutung | Kurz erklärt |
+|---|---|---|
+| **Single Point of Failure (SPOF)** | Einzelne Ausfallstelle | Der Ausfall einer einzelnen Komponente kann den gesamten Dienst beeinträchtigen. |
+| **Bottleneck** | Engpass | Eine begrenzte Ressource limitiert die Gesamtleistung, z. B. CPU, RAM, Storage oder Netzwerk. |
+| **Scalability** | Skalierbarkeit | Fähigkeit, steigende Last durch zusätzliche Ressourcen oder bessere Ressourcennutzung zu bewältigen. |
+| **Vertical Scaling (Scale up)** | Vertikale Skalierung | Einen Server leistungsfähiger machen, z. B. mehr RAM oder CPU-Kerne. |
+| **Horizontal Scaling (Scale out)** | Horizontale Skalierung | Weitere Server oder Instanzen hinzufügen und die Last verteilen. |
+| **High Availability (HA)** | Hohe Verfügbarkeit | Durch Redundanz und Failover werden Ausfallzeiten reduziert. |
+| **Fault Tolerance** | Fehlertoleranz | Das System kann trotz bestimmter Fehler weiterarbeiten. |
+| **Redundancy** | Redundanz | Kritische Komponenten sind mehrfach vorhanden, damit ein Ausfall abgefangen werden kann. |
+| **Failover** | Umschaltung bei Ausfall | Ein Ersatzsystem übernimmt nach einem Fehler, automatisch oder manuell. |
+| **Graceful Degradation** | Kontrollierter Funktionsverlust | Bei Teilausfällen bleiben Kernfunktionen verfügbar, während optionale Funktionen eingeschränkt werden. |
+| **Loose Coupling** | Lose Kopplung | Komponenten hängen möglichst wenig von internen Details anderer Komponenten ab. |
+| **Tight Coupling** | Enge Kopplung | Änderungen oder Ausfälle einer Komponente wirken sich stark auf andere Komponenten aus. |
+| **Single Responsibility** | Ein Verantwortungsbereich | Eine Komponente soll einen klar abgegrenzten Verantwortungsbereich besitzen. |
+| **Separation of Concerns** | Trennung von Zuständigkeiten | Unterschiedliche Aufgaben werden in getrennten Komponenten oder Schichten umgesetzt. |
+| **Monolith** | Monolithische Anwendung | Eine Anwendung wird als zusammenhängende Einheit entwickelt und bereitgestellt. |
+| **Microservices** | Kleine, eigenständig betreibbare Dienste | Fachliche Funktionen werden auf getrennte Dienste verteilt, die über definierte Schnittstellen kommunizieren. |
+| **Distributed System** | Verteiltes System | Mehrere vernetzte Rechner oder Dienste arbeiten zusammen; Netzwerkfehler und Latenzen müssen berücksichtigt werden. |
+| **Blast Radius** | Auswirkungsbereich eines Fehlers | Beschreibt, wie viele Systeme oder Nutzer von einem Fehler betroffen sein können. |
+| **Single Tenant** | Einzelmandantenbetrieb | Eine Instanz oder Umgebung wird exklusiv für einen Mandanten betrieben. |
+| **Multi-Tenant** | Mehrmandantenbetrieb | Mehrere Mandanten nutzen dieselbe Anwendung oder Infrastruktur mit logischer Trennung ihrer Daten und Rechte. |
+
+Quelle: [AWS Well-Architected – Ausfälle in verteilten Systemen begrenzen](https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.question.REL_5.en.html).
+
+```markdown
+## Betrieb und DevOps
+
+| Begriff | Bedeutung | Kurz erklärt |
+|---|---|---|
+| **DevOps** | Development + Operations | Entwicklung und IT-Betrieb arbeiten eng zusammen und automatisieren Abläufe. |
+| **SRE** | Site Reliability Engineering | Wendet Software-Engineering auf Betrieb, Verfügbarkeit und Zuverlässigkeit an. |
+| **Toil** | Wiederkehrende Betriebsarbeit | Manuelle, repetitive und automatisierbare Aufgaben, die mit dem System mitwachsen. |
+| **Observability** | Beobachtbarkeit | Aus Logs, Metriken und Traces ableiten, was in einem System passiert. |
+| **Monitoring** | Systemüberwachung | Erfasst Zustände und Messwerte; Alarme melden relevante Probleme. |
+| **Telemetry** | Telemetriedaten | Automatisch erfasste Daten über Zustand und Verhalten eines Systems. |
+| **Alert Fatigue** | Alarmmüdigkeit | Zu viele irrelevante Alarme führen dazu, dass wichtige Warnungen übersehen werden. |
+| **Incident** | Betriebsstörung | Ereignis, das einen Dienst oder dessen Qualität beeinträchtigt. |
+| **Root Cause** | Grundursache | Ursache, deren Behebung das zugrunde liegende Problem adressiert. |
+| **Postmortem** | Nachbesprechung eines Vorfalls | Dokumentiert Auswirkungen, Ursachen und Maßnahmen, damit ähnliche Vorfälle seltener auftreten. |
+| **Runbook** | Betriebsanleitung | Dokumentiert konkrete Schritte für wiederkehrende Betriebsaufgaben oder Störungen. |
+| **MTTR** | Mean Time to Repair/Recover/Restore | Zeitkennzahl für Reparatur oder Wiederherstellung; die genaue Bedeutung hängt von der Definition ab. |
+| **MTBF** | Mean Time Between Failures | Durchschnittliche Betriebszeit zwischen Ausfällen. |
+| **Error Budget** | Fehlerbudget | Bei einem definierten SLO der tolerierte Anteil an Fehlern oder Nichtverfügbarkeit. |
+| **SLO** | Service Level Objective | Internes oder vereinbartes Ziel für eine messbare Serviceeigenschaft. |
+| **SLI** | Service Level Indicator | Messgröße für die Servicequalität, z. B. Antwortzeit oder Erfolgsquote. |
+| **SLA** | Service Level Agreement | Vertragliche Vereinbarung über Serviceleistungen und gegebenenfalls Konsequenzen bei Nichteinhaltung. |
+
+Quellen: [Google SRE – Toil](https://sre.google/sre-book/eliminating-toil/), [Google SRE – Monitoring](https://sre.google/sre-book/monitoring-distributed-systems/), [Google SRE – Postmortems](https://sre.google/sre-book/postmortem-culture/).
+
+## Fehlerbehandlung und verteilte Systeme
+
+| Begriff | Bedeutung | Kurz erklärt |
+|---|---|---|
+| **Idempotency** | Idempotenz | Wiederholte identische Operationen haben hinsichtlich des definierten Ergebnisses dieselbe Wirkung wie eine einmalige Ausführung. |
+| **Retry** | Wiederholungsversuch | Eine fehlgeschlagene Anfrage wird erneut ausgeführt. |
+| **Retry Storm** | Überlastung durch Wiederholungen | Viele automatische Wiederholungen verstärken eine bestehende Störung. |
+| **Exponential Backoff** | Exponentiell steigende Wartezeit | Zwischen Wiederholungen wird die Wartezeit schrittweise erhöht. |
+| **Circuit Breaker** | Schutzschalter für Dienstaufrufe | Unterbricht vorübergehend Aufrufe an einen fehlerhaften Dienst, um weitere Belastung zu vermeiden. |
+| **Timeout** | Zeitüberschreitung | Ein Vorgang wird nicht unbegrenzt abgewartet. |
+| **Race Condition** | Nebenläufigkeitsfehler | Das Ergebnis hängt vom zeitlichen Ablauf konkurrierender Vorgänge ab. |
+| **Deadlock** | Verklemmung | Prozesse oder Threads warten dauerhaft aufeinander beziehungsweise auf Ressourcen. |
+| **Cascading Failure** | Kaskadenausfall | Der Ausfall einer Komponente löst weitere Ausfälle aus. |
+| **Graceful Degradation** | Kontrollierte Einschränkung | Kernfunktionen bleiben bei Teilausfällen verfügbar, optionale Funktionen können ausfallen. |
+| **Eventual Consistency** | Zeitverzögerte Konsistenz | Replikate können vorübergehend unterschiedliche Daten zeigen und sich später angleichen. |
+| **Race-to-failure** | Kein einheitlich definierter Fachbegriff | Nicht als feststehende technische Definition verwenden; besser den konkreten Fehlermechanismus benennen. |
+
+Quelle: [AWS – Zuverlässige Interaktionen in verteilten Systemen](https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.question.REL_4.en.html).
+
+## Releases und Projektarbeit
+
+| Begriff | Bedeutung | Kurz erklärt |
+|---|---|---|
+| **MVP** | Minimum Viable Product | Früheste Produktversion, die genügend Nutzen bietet, um Annahmen mit echten Nutzern zu prüfen. |
+| **PoC** | Proof of Concept | Prüft, ob eine Idee oder technische Lösung grundsätzlich funktioniert. |
+| **Prototype** | Prototyp | Frühes Modell zur Prüfung von Bedienung, Konzept oder Technik. |
+| **Scope Creep** | Unkontrollierte Ausweitung des Umfangs | Zusätzliche Anforderungen kommen hinzu, ohne Umfang, Zeit und Ressourcen entsprechend anzupassen. |
+| **Bottleneck** | Engpass | Eine begrenzte Ressource bestimmt die Gesamtleistung. |
+| **Quick Win** | Schnell erreichbarer Nutzen | Maßnahme mit vergleichsweise geringem Aufwand und kurzfristig erkennbarem Nutzen. |
+| **KPI** | Key Performance Indicator | Kennzahl zur Bewertung eines wichtigen Leistungs- oder Geschäftsziels. |
+| **Proof of Value** | Nachweis des Nutzens | Prüft, ob eine Lösung einen erwarteten geschäftlichen Nutzen liefert. |
+| **Staging** | Vorproduktionsumgebung | Testumgebung, die der Produktionsumgebung möglichst ähnlich ist. |
+| **Production / Prod** | Produktivumgebung | Umgebung, in der die Anwendung für echte Nutzer betrieben wird. |
+| **Rollback** | Rücknahme einer Änderung | Kehrt nach einem fehlerhaften Release zu einer vorherigen Version oder Konfiguration zurück. |
+| **Canary Release** | Schrittweise Veröffentlichung | Neue Version wird zunächst einem kleinen Teil der Nutzer oder Infrastruktur bereitgestellt. |
+| **Blue-Green Deployment** | Zwei parallele Umgebungen | Neue Version wird in einer zweiten Umgebung vorbereitet; der Verkehr wird anschließend umgeschaltet. |
+| **Feature Flag** | Funktion per Schalter aktivieren | Eine Funktion kann unabhängig vom Code-Release aktiviert oder deaktiviert werden. |
+| **Dogfooding** | Eigenes Produkt selbst nutzen | Das Team verwendet sein eigenes Produkt, um Probleme aus Nutzersicht zu erkennen. |
+
+Quelle: [Martin Fowler – Canary Release](https://www.martinfowler.com/bliki/CanaryRelease.html).
+
+## Infrastruktur und Konfiguration
+
+| Begriff | Bedeutung | Kurz erklärt |
+|---|---|---|
+| **Infrastructure as Code (IaC)** | Infrastruktur als Code | Server, Netzwerke und andere Ressourcen werden deklarativ oder per Code definiert und verwaltet. |
+| **Configuration Drift** | Konfigurationsabweichung | Ein System weicht im Laufe der Zeit von der vorgesehenen Konfiguration ab. |
+| **Immutable Infrastructure** | Unveränderliche Infrastruktur | Bestehende Instanzen werden bei Änderungen möglichst ersetzt statt manuell angepasst. |
+| **Golden Image** | Standardisiertes Systemabbild | Vorgefertigtes Image mit definiertem Betriebssystem und festgelegter Grundkonfiguration. |
+| **Container Image** | Container-Abbild | Paket aus Anwendung und benötigten Dateien, aus dem Container gestartet werden. |
+| **Ephemeral** | Kurzlebig | Ressource ist für eine begrenzte Lebensdauer vorgesehen und kann ersetzt werden. |
+| **Stateless** | Zustandslos | Eine Instanz speichert keinen für spätere Anfragen notwendigen Sitzungszustand lokal. |
+| **Stateful** | Zustandsbehaftet | Eine Komponente verwaltet dauerhaften oder sitzungsbezogenen Zustand. |
+| **Autoscaling** | Automatische Skalierung | Anzahl oder Größe von Ressourcen wird anhand definierter Regeln angepasst. |
+| **Load Balancing** | Lastverteilung | Anfragen werden auf mehrere Server oder Instanzen verteilt. |
+| **Capacity Planning** | Kapazitätsplanung | Ressourcenbedarf wird anhand von Last, Wachstum und Reserven geplant. |
+
+## Security-Slang
+
+| Begriff | Bedeutung | Kurz erklärt |
+|---|---|---|
+| **Attack Surface** | Angriffsfläche | Alle erreichbaren Schnittstellen, Komponenten und Wege, über die ein Angriff möglich sein könnte. |
+| **Defense in Depth** | Mehrschichtige Sicherheit | Mehrere unabhängige Schutzmaßnahmen begrenzen die Wirkung eines einzelnen Versagens. |
+| **Least Privilege** | Minimalprinzip | Benutzer und Dienste erhalten nur die Rechte, die sie tatsächlich benötigen. |
+| **Zero-day Vulnerability** | Noch nicht behobene Sicherheitslücke | Sicherheitslücke, für die zum relevanten Zeitpunkt kein wirksamer Patch verfügbar ist. Der Begriff wird nicht in jeder Quelle exakt gleich abgegrenzt. |
+| **Hardening** | Systemhärtung | Deaktiviert unnötige Dienste und reduziert unsichere Konfigurationen und Funktionen. |
+| **Misconfiguration** | Fehlkonfiguration | Eine unsichere oder fehlerhafte Einstellung erzeugt ein Risiko. |
+| **Lateral Movement** | Seitliche Ausbreitung | Angreifer bewegen sich nach einem ersten Zugriff zu weiteren Systemen oder Konten. |
+| **Privilege Escalation** | Rechteausweitung | Ein Benutzer oder Prozess erlangt höhere Berechtigungen als vorgesehen. |
+| **Patch Management** | Patch-Verwaltung | Sicherheits- und Fehlerkorrekturen werden bewertet, getestet und kontrolliert ausgerollt. |
+| **Attack Chain** | Angriffskette | Mehrere Schritte werden kombiniert, um ein Angriffsziel zu erreichen. |
+
+## Begriffe, die in Gesprächen besonders viel ausdrücken
+
+| Statt langer Erklärung | Präziser Begriff |
+|---|---|
+| „Der Code funktioniert, ist aber schwer zu ändern.“ | Technical Debt |
+| „Die neue Änderung hat etwas Altes kaputtgemacht.“ | Regression |
+| „Ein Server ist der Grund, warum alles langsam ist.“ | Bottleneck |
+| „Wenn diese eine Komponente ausfällt, fällt der Dienst aus.“ | Single Point of Failure |
+| „Der Fehler eines Dienstes bringt andere Dienste mit herunter.“ | Cascading Failure |
+| „Wir beheben nur das Symptom, nicht die eigentliche Ursache.“ | Workaround statt Root-Cause-Fix |
+| „Wir testen eine neue Version erst mit wenigen Nutzern.“ | Canary Release |
+| „Die Serverkonfiguration ist nicht mehr überall gleich.“ | Configuration Drift |
+| „Das Team verbringt zu viel Zeit mit wiederholten manuellen Aufgaben.“ | Toil |
+| „Wir sammeln Daten, können aber nicht erkennen, warum das System fehlerhaft ist.“ | Unzureichende Observability |
+| „Wir bauen immer mehr Funktionen ein, ohne den vereinbarten Umfang anzupassen.“ | Scope Creep |
+| „Die Anwendung soll bei Ausfall einer Zusatzfunktion weiterarbeiten.“ | Graceful Degradation |
+| „Ein wiederholter API-Aufruf darf keine Doppelbuchung auslösen.“ | Idempotency |
+| „Zu viele Warnungen verdecken die wichtigen Alarme.“ | Alert Fatigue |
+
+**Merksatz:** Fachbegriffe sind nur dann nützlich, wenn sie präzise verwendet werden. Bei Begriffen wie *MTTR*, *Zero-day* oder *MVP* sollte die konkrete Definition im jeweiligen Team oder Projekt geklärt sein.
+
+--- CAPEX-OPEX ---
+# CAPEX, OPEX und IT-Beschaffung
+
+| Begriff | Vollständiger Name | Erklärung |
+|---|---|---|
+| **CAPEX** | Capital Expenditure | Investitionsausgaben, z. B. Server, Switches oder eigene Rechenzentrums-Hardware. |
+| **OPEX** | Operational Expenditure | Laufende Betriebsausgaben, z. B. Cloud-Abos, Strom, Wartung und Support. |
+| **TCO** | Total Cost of Ownership | Gesamtkosten über den Lebenszyklus, inklusive Anschaffung, Betrieb, Wartung und Entsorgung. |
+| **ROI** | Return on Investment | Bewertet das Verhältnis zwischen Investition und wirtschaftlichem Nutzen. |
+| **Vendor Lock-in** | Herstellerbindung | Ein Wechsel wird durch proprietäre Technologien, Datenformate, Schnittstellen oder hohe Migrationskosten erschwert. |
+| **Exit Strategy** | Ausstiegsstrategie | Plant, wie ein Anbieterwechsel technisch, organisatorisch und finanziell umgesetzt werden kann. |
+| **SLA** | Service Level Agreement | Vereinbart messbare Serviceleistungen, z. B. Verfügbarkeit und Reaktionszeiten. |
+| **Skalierbarkeit** | Scalability | Fähigkeit, Ressourcen an steigenden oder sinkenden Bedarf anzupassen. |
+| **Opportunitätskosten** | Opportunity Cost | Nutzen der besten Alternative, auf die man durch eine Entscheidung verzichtet. |
+| **Abschreibung** | Depreciation | Verteilt die Anschaffungs- oder Herstellungskosten eines Vermögensgegenstands buchhalterisch über seine Nutzungsdauer. |
+| **Break-even** | Gewinnschwelle | Punkt, an dem Erlöse und Kosten gleich hoch sind. |
+| **Make or Buy** | Eigenentwicklung oder Fremdbezug | Entscheidung, ob eine Leistung selbst erstellt oder extern eingekauft wird. |
+| **OPEX-Modell** | Laufendes Kostenmodell | Kosten fallen regelmäßig an, beispielsweise als monatliche Cloud-Gebühr. |
+| **CAPEX-Modell** | Investitionsmodell | Höhere Anfangsinvestition, beispielsweise für eigene Serverhardware. |
+
+## Beispiel: Eigener Server vs. Cloud
+
+| Kriterium | Eigener Server | Cloud-Dienst |
+|---|---|---|
+| Kostenmodell | Häufig hoher CAPEX | Häufig laufender OPEX |
+| Wartung | Eigenverantwortung oder Dienstleister | Je nach Service-Modell teilweise beim Anbieter |
+| Skalierung | Hardware muss erweitert werden | Ressourcen häufig kurzfristig anpassbar |
+| Kontrolle | Mehr Kontrolle über Hardware und Umgebung | Abhängig vom Anbieter und Service-Modell |
+| Vendor Lock-in | Möglich, z. B. durch proprietäre Hardware | Möglich, z. B. durch proprietäre APIs und Dienste |
+| Ausstieg | Hardwarewechsel und Datenmigration | Datenexport, Migration und Vertragsbedingungen prüfen |
+
+## IHK-Fakten
+
+- **CAPEX vs. OPEX:** Anschaffung bzw. Investition gegenüber laufenden Betriebsausgaben.
+- **TCO statt nur Kaufpreis:** Auch Strom, Personal, Lizenzen, Wartung und Migration berücksichtigen.
+- **Vendor Lock-in reduzieren:** Offene Standards, portable Datenformate, dokumentierte Schnittstellen und getestete Datenexporte nutzen.
+- **Cloud ist nicht automatisch günstiger:** Laufzeit, Datenübertragung, Support, Skalierung und Ressourcenverbrauch beeinflussen die Gesamtkosten.
+- **DSGVO:** Bei Cloud-Diensten Auftragsverarbeitung, Datenstandorte, Zugriffsschutz und gegebenenfalls Drittlandtransfers prüfen.
+
+**Merksatz:** CAPEX beschreibt Investitionsausgaben, OPEX laufende Betriebsausgaben und TCO die Gesamtkosten über den Lebenszyklus. Vendor Lock-in bezeichnet die erschwerte Wechselmöglichkeit zu einem anderen Anbieter.
+
+--- IPv4 ---
+# IPv4, Subnetting und IPv6 – IHK AP2
+
+## IPv4 – Grundlagen
+
+**IPv4 (Internet Protocol Version 4)** adressiert Geräte auf Layer 3 des OSI-Modells. Eine IPv4-Adresse besteht aus **32 Bit**, aufgeteilt in vier Oktette mit jeweils 8 Bit.
+
+- Beispiel: `192.168.1.10`
+- Binär: `11000000.10101000.00000001.00001010`
+- Adressbereich: `0.0.0.0` bis `255.255.255.255`
+- Theoretischer Adressraum: \(2^{32} = 4.294.967.296\) Adressen
+- Schreibweise: Dezimal mit Punkten, z. B. `192.168.1.10/24`
+
+Eine IP-Adresse besteht logisch aus **Netzanteil** und **Hostanteil**. Die Subnetzmaske bzw. der CIDR-Präfix legt fest, welche Bits zum Netz gehören.
+
+## IPv4-Adressklassen – historisches System
+
+Die Klassen A bis E sind historisch relevant. Moderne Netzwerke verwenden **CIDR** statt fester Klassen, um Netzgrößen flexibel festzulegen.
+
+| Klasse | Historischer Bereich | Historische Verwendung | Beispiel |
+|---|---|---|---|
+| A | `1.0.0.0` – `126.255.255.255` | Große Unicast-Netze | `10.0.0.0/8` ist privat |
+| B | `128.0.0.0` – `191.255.255.255` | Mittlere Unicast-Netze | `172.16.0.0/12` ist privat |
+| C | `192.0.0.0` – `223.255.255.255` | Kleine Unicast-Netze | `192.168.0.0/16` ist privat |
+| D | `224.0.0.0` – `239.255.255.255` | Multicast | `224.0.0.1` |
+| E | `240.0.0.0` – `255.255.255.255` | Reserviert bzw. spezielle Zwecke | `240.0.0.1` |
+
+**Wichtig:**
+- `127.0.0.0/8` ist für Loopback reserviert, z. B. `127.0.0.1`.
+- `0.0.0.0` hat spezielle Bedeutungen, z. B. als nicht spezifizierte Adresse.
+- `255.255.255.255` ist die begrenzte IPv4-Broadcast-Adresse.
+- Die historischen Klassenbereiche sind keine zuverlässige Methode, um die Netzgröße einer heutigen IP-Adresse zu bestimmen. Dafür nutzt man den Präfix, z. B. `/20` oder `/27`.
+
+Quelle: [RFC 4632 – CIDR](https://www.rfc-editor.org/rfc/rfc4632)
+
+## Private IPv4-Adressen – RFC 1918
+
+Private IPv4-Adressen werden in internen Netzen verwendet und sind **nicht direkt global über das Internet routbar**. Für den Internetzugang wird häufig NAT am Router eingesetzt.
+
+| Privater Bereich | CIDR | Subnetzmaske | Anzahl Adressen |
+|---|---|---|---:|
+| `10.0.0.0` – `10.255.255.255` | `10.0.0.0/8` | `255.0.0.0` | 16.777.216 |
+| `172.16.0.0` – `172.31.255.255` | `172.16.0.0/12` | `255.240.0.0` | 1.048.576 |
+| `192.168.0.0` – `192.168.255.255` | `192.168.0.0/16` | `255.255.0.0` | 65.536 |
+
+**Merke:** Nicht der gesamte Bereich `172.x.x.x` ist privat. Privat ist nur `172.16.0.0` bis `172.31.255.255`.
+
+Quelle: [RFC 1918 – Private Address Allocation](https://www.rfc-editor.org/rfc/rfc1918)
+
+## Subnetting – ein großes Netz aufteilen
+
+**Subnetting** teilt einen IP-Adressbereich in kleinere logische Netze. Das verbessert die Adressplanung, trennt Broadcast-Domänen und ermöglicht eine strukturierte Netzwerkverwaltung.
+
+### CIDR-Präfix und Subnetzmaske
+
+Der CIDR-Präfix gibt an, wie viele der 32 Bits zum Netzanteil gehören.
+
+Beispiel: `192.168.1.0/24`
+
+- Netzanteil: 24 Bit
+- Hostanteil: \(32 - 24 = 8\) Bit
+- Subnetzmaske: `255.255.255.0`
+- Gesamtadressen: \(2^8 = 256\)
+- Üblicherweise nutzbare Hostadressen: \(256 - 2 = 254\)
+
+Die zwei abgezogenen Adressen sind normalerweise die Netzadresse und die Broadcast-Adresse. Sonderfälle wie `/31` für Punkt-zu-Punkt-Verbindungen und `/32` für eine einzelne Adresse folgen anderen Regeln.
+
+### Wichtige Präfixe
+
+| CIDR | Subnetzmaske | Gesamtadressen | Übliche nutzbare Hosts |
+|---|---|---:|---:|
+| `/8` | `255.0.0.0` | 16.777.216 | 16.777.214 |
+| `/16` | `255.255.0.0` | 65.536 | 65.534 |
+| `/24` | `255.255.255.0` | 256 | 254 |
+| `/25` | `255.255.255.128` | 128 | 126 |
+| `/26` | `255.255.255.192` | 64 | 62 |
+| `/27` | `255.255.255.224` | 32 | 30 |
+| `/28` | `255.255.255.240` | 16 | 14 |
+| `/29` | `255.255.255.248` | 8 | 6 |
+| `/30` | `255.255.255.252` | 4 | 2 |
+
+### Formeln für Subnetting
+
+- **Hostbits:** `32 − Präfix`
+- **Gesamtadressen:** \(2^{\text{Hostbits}}\)
+- **Übliche nutzbare Hosts:** \(2^{\text{Hostbits}} - 2\)
+- **Anzahl gleich großer Subnetze:** \(2^{\text{zusätzlich ausgeliehene Netzbits}}\)
+
+Die Hostformel gilt für gewöhnliche IPv4-Subnetze, nicht unverändert für `/31`- und `/32`-Sonderfälle.
+
+### Beispiel: `192.168.1.0/26`
+
+Ein `/26`-Netz hat 6 Hostbits.
+
+- Gesamtadressen: \(2^6 = 64\)
+- Nutzbare Hosts: \(64 - 2 = 62\)
+- Subnetzmaske: `255.255.255.192`
+- Blockgröße im letzten Oktett: `256 − 192 = 64`
+
+| Eigenschaft | Wert |
+|---|---|
+| Netzadresse | `192.168.1.0` |
+| Erste Hostadresse | `192.168.1.1` |
+| Letzte Hostadresse | `192.168.1.62` |
+| Broadcast-Adresse | `192.168.1.63` |
+
+Die nächsten `/26`-Netze beginnen bei `.64`, `.128` und `.192`.
+
+### Subnetting mit einer bestimmten Hostanzahl
+
+Beispiel: Ein Teilnetz soll mindestens 50 Geräte aufnehmen.
+
+- 5 Hostbits ergeben \(2^5 - 2 = 30\) Hosts – zu wenig.
+- 6 Hostbits ergeben \(2^6 - 2 = 62\) Hosts – ausreichend.
+- Benötigter Präfix: `32 − 6 = /26`.
+
+**Ergebnis:** Ein `/26`-Subnetz bietet 62 übliche Hostadressen.
+
+## Netzadresse und Broadcast-Adresse
+
+In einem gewöhnlichen IPv4-Subnetz haben zwei Adressen besondere Aufgaben.
+
+- **Netzadresse:** Hostbits sind alle `0`. Sie bezeichnet das Subnetz.
+- **Broadcast-Adresse:** Hostbits sind alle `1`. Sie adressiert alle Geräte im lokalen IPv4-Subnetz.
+- **Hostadressen:** Adressen zwischen Netz- und Broadcast-Adresse, normalerweise für Geräte verwendbar.
+
+Beispiel für `192.168.10.0/24`:
+
+| Typ | Adresse |
+|---|---|
+| Netzadresse | `192.168.10.0` |
+| Hostbereich | `192.168.10.1` – `192.168.10.254` |
+| Broadcast | `192.168.10.255` |
+
+Ein Router leitet einen lokalen Broadcast normalerweise nicht einfach in andere Subnetze weiter. Für die Kommunikation zwischen IP-Netzen wird Routing benötigt.
+
+## IPv4 vs. IPv6
+
+IPv6 wurde unter anderem entwickelt, um den stark begrenzten IPv4-Adressraum zu erweitern und die Netzwerkkonfiguration weiterzuentwickeln.
+
+| Eigenschaft | IPv4 | IPv6 |
+|---|---|---|
+| Adresslänge | 32 Bit | 128 Bit |
+| Schreibweise | Dezimal, vier Oktette | Hexadezimal, acht Gruppen |
+| Beispiel | `192.168.1.10` | `2001:db8::10` |
+| Adressraum | \(2^{32}\) | \(2^{128}\) |
+| Broadcast | Ja | Nein |
+| Multicast | Ja | Ja |
+| Automatische Konfiguration | DHCP, teils automatische Verfahren | SLAAC und/oder DHCPv6 |
+| NAT | Häufig eingesetzt | Für globale IPv6-Kommunikation normalerweise nicht erforderlich |
+| ARP | Für IPv4 im lokalen Netz | Kein ARP; Neighbor Discovery nutzt ICMPv6 |
+| Header | Variabel, mindestens 20 Byte | Fester Basisheader mit 40 Byte |
+| Fragmentierung | Router und Endgeräte können fragmentieren | Nur der Sender fragmentiert, falls nötig |
+| Loopback | `127.0.0.1` | `::1` |
+| Private/lokale Adressen | RFC-1918-Adressen | Unique Local Addresses, typischerweise `fc00::/7` |
+| Link-local | `169.254.0.0/16` | `fe80::/10` |
+
+`2001:db8::/32` ist für Dokumentation und Beispiele reserviert und keine normale öffentliche Zuweisung.
+
+### IPv6: wichtige Unterschiede
+
+- IPv6 verwendet **128 Bit** und bietet dadurch einen sehr großen Adressraum.
+- IPv6 kennt keinen Broadcast; vergleichbare Aufgaben übernehmen unter anderem Multicast und Anycast.
+- SLAAC ermöglicht Geräten, selbstständig eine IPv6-Adresse zu konfigurieren. DHCPv6 kann ergänzend oder alternativ eingesetzt werden.
+- IPv6 verwendet ICMPv6 Neighbor Discovery statt ARP.
+- NAT ist bei IPv6 nicht grundsätzlich erforderlich, aber Firewalls bleiben wichtig. Eine globale IPv6-Adresse bedeutet nicht, dass ein Gerät ungeschützt erreichbar sein sollte.
+
+## Vorteile und Nachteile
+
+### IPv4
+
+**Vorteile**
+- Sehr weit verbreitet und von nahezu allen gängigen Netzwerksystemen unterstützt.
+- Bekannte Werkzeuge, ausgereifte Infrastruktur und umfangreiche Betriebserfahrung.
+- NAT ermöglicht mehreren privaten Geräten die gemeinsame Nutzung einer öffentlichen IPv4-Adresse.
+
+**Nachteile**
+- Begrenzter Adressraum; öffentliche IPv4-Adressen sind knapp.
+- NAT erhöht die Komplexität bestimmter eingehender Verbindungen und kann Fehlersuche erschweren.
+- Subnetting und manuelle Adressplanung können bei großen Netzen aufwendig werden.
+
+### IPv6
+
+**Vorteile**
+- Sehr großer Adressraum mit 128 Bit.
+- Kein Broadcast; Multicast und Neighbor Discovery übernehmen entsprechende Netzwerkaufgaben.
+- SLAAC ermöglicht automatische Adresskonfiguration.
+- Unterstützt moderne, hierarchische Adressplanung und Routing-Aggregation.
+
+**Nachteile**
+- Dual-Stack-Betrieb kann vorübergehend zusätzliche Komplexität verursachen.
+- Administratoren müssen IPv6-Adressierung, Routing, ICMPv6 und Sicherheitsregeln beherrschen.
+- Ältere Geräte oder Anwendungen können IPv6 unvollständig unterstützen.
+- Die längeren Adressen sind für Menschen schwieriger zu lesen und manuell zu verwalten.
+
+## IHK-Merksätze
+
+- IPv4 hat 32 Bit, IPv6 hat 128 Bit.
+- CIDR `/26` bedeutet: 26 Netzbits und 6 Hostbits.
+- In einem gewöhnlichen IPv4-Subnetz sind Netz- und Broadcast-Adresse nicht als normale Hostadressen nutzbar.
+- RFC 1918 definiert private IPv4-Bereiche; private Adressen sind nicht global eindeutig.
+- Ein Router verbindet unterschiedliche IP-Netze; ein Switch verbindet Geräte innerhalb eines lokalen Netzes.
+- IPv6 besitzt keinen Broadcast und nutzt ICMPv6 Neighbor Discovery statt ARP.
+- NAT ist kein Ersatz für eine Firewall.
+- Subnetting kann Broadcast-Domänen verkleinern; die Kommunikation zwischen Subnetzen benötigt Routing.
+
+## Quellen
+
+- [RFC 1918 – Private IPv4-Adressbereiche](https://www.rfc-editor.org/rfc/rfc1918)
+- [RFC 4632 – CIDR und klassenlose Adressierung](https://www.rfc-editor.org/rfc/rfc4632)
+- [RFC 791 – Internet Protocol (IPv4)](https://www.rfc-editor.org/rfc/rfc791)
+- [RFC 8200 – Internet Protocol, Version 6 (IPv6)](https://www.rfc-editor.org/rfc/rfc8200)
+
+--- SLA ---
+# SLA – Service Level Agreement
+
+**SLA (Service Level Agreement)** = vertragliche Vereinbarung über die zugesicherte Servicequalität zwischen Dienstleister und Kunde.
+
+Ein SLA legt beispielsweise Verfügbarkeit, Reaktionszeiten, Entstörungszeiten, Wartungsfenster, Messmethoden und mögliche Konsequenzen bei Nichterfüllung fest.
+
+## Verfügbarkeit: die „Nines“
+
+Die Verfügbarkeit wird häufig in Prozent angegeben. Je mehr Neunen, desto weniger Ausfallzeit ist erlaubt.
+
+**Formel:**
+
+`Ausfallzeit = Bezugszeitraum × (1 − Verfügbarkeit)`
+
+Bei einem Jahr mit 365 Tagen gilt: `365 × 24 = 8.760 Stunden`.
+
+| Verfügbarkeit | Ausfallzeit pro Jahr | Ausfallzeit pro 30-Tage-Monat |
+|---:|---:|---:|
+| 90 % | 876 Stunden | 72 Stunden |
+| 99 % – 2 Nines | 87,6 Stunden | 7,2 Stunden |
+| 99,9 % – 3 Nines | 8,76 Stunden | 43,2 Minuten |
+| 99,99 % – 4 Nines | 52,56 Minuten | 4,32 Minuten |
+| 99,999 % – 5 Nines | 5,256 Minuten | 25,92 Sekunden |
+
+**Wichtig:** 99,9 % Verfügbarkeit bedeutet maximal 8,76 Stunden Ausfall pro Jahr, wenn rund um die Uhr gemessen wird und geplante Wartung nicht herausgerechnet wird.
+
+```markdown
+## 99,5 % und 5 Nines im Vergleich
+
+| Verfügbarkeit | Bezeichnung | Max. Ausfallzeit/Jahr |
+|---:|---|---:|
+| 99 % | 2 Nines | 87,6 Stunden |
+| 99,5 % | 99,5 % Verfügbarkeit | 43,8 Stunden |
+| 99,9 % | 3 Nines | 8,76 Stunden |
+| 99,99 % | 4 Nines | 52,56 Minuten |
+| 99,999 % | 5 Nines | 5,26 Minuten |
+
+„Nines“ bezeichnet die Anzahl der Neunen nach dem Komma bei der Verfügbarkeit, z. B. 99,999 % = 5 Nines. 99,5 % wird normalerweise nicht als 2 Nines bezeichnet.
+
+Die Werte beziehen sich auf 365 Tage und darauf, dass sämtliche Ausfallzeiten in die Messung eingehen. Ein SLA kann stattdessen monatlich messen oder bestimmte Zeiten ausschließen.
+
+## Was gilt als Ausfall?
+
+Ein SLA muss festlegen, wann ein Dienst als nicht verfügbar gilt. Beispiele:
+
+- **Komplettausfall:** Der Dienst ist für Nutzer nicht erreichbar.
+- **Teilausfall:** Eine zugesicherte Kernfunktion funktioniert nicht.
+- **Leistungsausfall:** Der Dienst unterschreitet vereinbarte Grenzwerte, z. B. bei Antwortzeiten.
+- **Geplante Wartung:** Kann vom Ausfallwert ausgenommen sein, wenn das SLA dies ausdrücklich vorsieht.
+- **Kundenseitige Störung:** Kann ausgeschlossen sein, wenn beispielsweise das Kundennetzwerk die Ursache ist.
+
+Entscheidend sind die Vertragsdefinition, die Messmethode und der Messzeitraum. Manche SLAs werten beispielsweise nur Ausfälle ab einer bestimmten Mindestdauer.
+
+## Geplante Wartung und höhere Gewalt
+
+| Begriff | Bedeutung | Mögliche Auswirkung auf das SLA |
+|---|---|---|
+| Geplante Wartung | Vorher angekündigte Updates, Upgrades oder Hardwarearbeiten | Kann aus der Verfügbarkeitsberechnung ausgeschlossen sein |
+| Notfallwartung | Ungeplante Arbeiten zur Behebung oder Vermeidung schwerwiegender Probleme | Behandlung hängt vom Vertrag ab |
+| Höhere Gewalt (Force Majeure) | Außergewöhnliches Ereignis außerhalb der zumutbaren Kontrolle einer Vertragspartei, z. B. bestimmte Naturkatastrophen | Kann Haftung oder SLA-Pflichten nach den Vertragsbedingungen beeinflussen |
+| Drittanbieter-Ausfall | Störung bei einem externen Anbieter, z. B. Telekommunikation oder Hosting | Kann ausgeschlossen sein, muss aber vertraglich geprüft werden |
+
+**Wichtig:** Wartung oder höhere Gewalt sind nicht automatisch immer vom SLA ausgeschlossen. Das hängt von der konkreten Vereinbarung und gegebenenfalls dem anwendbaren Recht ab. Auch bei höherer Gewalt können vertragliche Informations- oder Notfallpflichten bestehen.
+
+Beispiele für echte Vertragsklauseln mit Wartungs- und Force-Majeure-Ausnahmen:
+- [Beispiel-SLA mit Verfügbarkeitsdefinition und Ausnahmen](https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/720323/427161438010014-terms-and-conditions-2024-05-04-1031.pdf)
+- [Beispiel-SLA mit Wartungsfenstern und Service Credits](https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/715960/793015773126709-terms-and-conditions-2024-04-29-2035.pdf)
+
+## Konsequenzen bei SLA-Verletzung
+
+Wenn der Anbieter die vereinbarte Leistung nicht einhält, können je nach Vertrag folgende Konsequenzen gelten:
+
+- **Service Credits:** Gutschrift oder Rabatt auf zukünftige Rechnungen.
+- **Vertragsstrafen:** Nur, wenn wirksam vereinbart und rechtlich anwendbar.
+- **Schadensersatz:** Kann bei entsprechenden rechtlichen und vertraglichen Voraussetzungen infrage kommen.
+- **Sonderkündigungsrecht:** Kann bei bestimmten oder wiederholten schwerwiegenden Verstößen vorgesehen sein.
+- **Eskalation:** Vorgesehener Ablauf über Support, Service Manager oder Management.
+
+Ein SLA-Verstoß führt nicht automatisch zu einer Geldstrafe oder zu Schadensersatz. Der Vertrag regelt, welche Ansprüche bestehen und wie der Kunde diese geltend machen muss.
+
+## IHK-Merksatz
+
+Ein SLA definiert messbare Serviceziele, insbesondere Verfügbarkeit, Reaktionszeiten und Entstörungszeiten. Der Vertrag muss festlegen, wie Ausfälle gemessen werden, welche Wartungszeiten oder außergewöhnlichen Ereignisse ausgeschlossen sind und welche Konsequenzen bei Nichterfüllung gelten. Service Credits, Schadensersatz und Kündigungsrechte sind voneinander zu unterscheiden.
+
+--- Skalierbarkeit-Elastizität ---
+# Skalierbarkeit und Elastizität – IHK AP2
+
+## Skalierbarkeit (Scalability)
+
+Skalierbarkeit beschreibt, wie gut ein IT-System steigende oder sinkende Last bewältigen kann, indem Ressourcen angepasst werden.
+
+## Vertikale Skalierung vs. horizontale Skalierung
+
+| Merkmal | Vertikal – Scale Up / Down | Horizontal – Scale Out / In |
+|---|---|---|
+| Prinzip | Ressourcen eines Servers erweitern oder reduzieren | Server hinzufügen oder entfernen |
+| Beispiel | Mehr RAM, stärkere CPU | Einen weiteren Webserver bereitstellen |
+| Hardware | Oft Upgrade bestehender Hardware | Zusätzliche Server oder Instanzen |
+| Downtime | Bei physischen Upgrades häufig nötig | Häufig ohne vollständige Downtime möglich |
+| Grenze | Durch maximale Hardwarekapazität begrenzt | Durch Architektur und Infrastruktur begrenzt |
+| Komplexität | Meist einfacher | Höher, z. B. Verteilung und Synchronisation |
+| Kosten | Teure leistungsfähige Einzelhardware möglich | Mehrere kleinere Instanzen; zusätzlicher Betriebsaufwand |
+| Ausfallsicherheit | Einzelserver kann Single Point of Failure sein | Mehrere Instanzen können Ausfälle abfangen |
+
+### Vertikal skalieren – Scale Up
+
+Ein Server bekommt mehr CPU-Leistung, RAM oder schnelleren Speicher.
+
+- **Physisch:** Hardwaretausch oder RAM-Erweiterung kann Abschaltung und Wartungsfenster erfordern.
+- **Virtualisiert:** CPU- und RAM-Zuweisungen lassen sich häufig schnell anpassen. Je nach Hypervisor, Gastbetriebssystem und Änderung kann trotzdem ein Neustart nötig sein.
+- **Grenze:** Ein einzelner Server kann nicht unbegrenzt wachsen.
+
+### Horizontal skalieren – Scale Out
+
+Zusätzliche Server oder virtuelle Maschinen übernehmen einen Teil der Last.
+
+- Ein Load Balancer verteilt Anfragen auf mehrere Server.
+- Fällt eine Instanz aus, können andere weiterarbeiten, sofern die Architektur entsprechend ausgelegt ist.
+- Anwendungen müssen häufig für mehrere Instanzen ausgelegt sein. Sessions, Datenbanken und gemeinsam genutzte Dateien müssen berücksichtigt werden.
+
+**Scale In** bedeutet, Instanzen zu entfernen, wenn weniger Leistung benötigt wird.
+
+## Elastizität (Elasticity)
+
+Elastizität beschreibt, wie dynamisch Ressourcen an den aktuellen Bedarf angepasst werden – nach oben und nach unten.
+
+**Beispiel:** Ein Onlineshop benötigt während einer Verkaufsaktion zehn Server statt zwei. Nach dem Ende der Aktion werden die zusätzlichen Instanzen wieder entfernt.
+
+| Skalierbarkeit | Elastizität |
+|---|---|
+| System kann mit steigender Last umgehen | Ressourcen passen sich dynamisch an die Last an |
+| Kann manuell oder automatisch erfolgen | Häufig automatisiert und bedarfsabhängig |
+| Fokus: Wachstum und Kapazität | Fokus: flexible Anpassung nach oben und unten |
+
+**Merksatz:** Skalierbarkeit ist die Fähigkeit zu wachsen. Elastizität ist die dynamische Anpassung an den tatsächlichen Bedarf.
+
+## Cloud: schneller – aber zu welchem Preis?
+
+Cloud-Dienste können Ressourcen oft innerhalb von Minuten oder Sekunden bereitstellen. Das hängt vom Anbieter, Dienst und der Architektur ab.
+
+### Vorteile
+
+- Schnelle Bereitstellung ohne vorherigen Hardwarekauf.
+- Automatische Skalierung bei Lastspitzen.
+- Abrechnung häufig nutzungsabhängig (OPEX).
+- Weniger eigene Hardwarewartung, abhängig vom Cloud-Service-Modell.
+
+### Nachteile und Kosten
+
+- Laufende Kosten können bei dauerhaft hoher Auslastung erheblich sein.
+- Unbeachtete Ressourcen können weiter Kosten verursachen.
+- Datenübertragung aus der Cloud kann zusätzliche Gebühren verursachen.
+- Proprietäre Dienste können Vendor Lock-in erzeugen.
+- Abhängigkeit von Internetverbindung, Anbieter und dessen Verfügbarkeit.
+- Datenschutz und Compliance müssen geprüft werden, z. B. Auftragsverarbeitung und Drittlandtransfers nach DSGVO.
+
+### Kostenvergleich
+
+| Szenario | Typische Konsequenz |
+|---|---|
+| Dauerhaft hohe Last | Eigene oder reservierte Kapazität kann wirtschaftlich sein |
+| Stark schwankende Last | Elastische Cloud-Ressourcen können Kosten und Überkapazität reduzieren |
+| Schlechte Kostenkontrolle | Unbenutzte Instanzen und Datenverkehr erhöhen die Rechnung |
+| Abhängigkeit von proprietären Cloud-Diensten | Migration kann aufwendig und teuer werden |
+
+Cloud ist daher nicht automatisch günstiger. Entscheidend sind TCO, Lastprofil, Betriebsaufwand, Verfügbarkeit und mögliche Wechselkosten.
+
+## Load Balancer
+
+Ein Load Balancer verteilt eingehende Anfragen auf mehrere Backend-Server.
+
+**Typische Verfahren:**
+- **Round Robin:** Anfragen werden der Reihe nach verteilt.
+- **Least Connections:** Bevorzugt den Server mit den wenigsten aktiven Verbindungen.
+- **Health Checks:** Prüfen, ob ein Backend erreichbar ist; fehlerhafte Instanzen können aus der Verteilung genommen werden.
+
+Ein Load Balancer ermöglicht horizontale Skalierung, garantiert aber allein keine Hochverfügbarkeit. Er selbst muss ebenfalls gegen Ausfälle abgesichert sein.
+
+## IHK-Merksatz
+
+Vertikale Skalierung erweitert die Ressourcen eines einzelnen Systems (Scale Up), horizontale Skalierung fügt weitere Systeme hinzu (Scale Out). Elastizität beschreibt die dynamische Anpassung dieser Ressourcen an den Bedarf. Cloud-Dienste ermöglichen häufig eine schnelle Bereitstellung, verursachen aber nutzungsabhängige Kosten und können Abhängigkeiten vom Anbieter schaffen.
+
+--- USB-SSD-HDD ---
+# Speicher, USB, SSD, HDD und Kabel – IHK AP2
+
+**Wichtig:** Gbit/s (Gigabit pro Sekunde) und GB/s (Gigabyte pro Sekunde) sind nicht dasselbe. 8 Gbit/s entsprechen theoretisch 1 GB/s, bevor Protokoll-Overhead berücksichtigt wird.
+
+## HDD – Hard Disk Drive
+
+Speichert Daten magnetisch auf rotierenden Scheiben. Günstig bei großen Speichermengen, aber langsamer und empfindlicher gegenüber Erschütterungen als SSDs.
+
+| Typ | Typische Geschwindigkeit | Eigenschaften / Einsatz |
+|---|---:|---|
+| HDD, 5.400 RPM | ca. 80–150 MB/s | Leiser, oft weniger Stromverbrauch |
+| HDD, 7.200 RPM | ca. 120–250 MB/s | Desktop-PCs, NAS, große Datenmengen |
+| HDD, 10.000/15.000 RPM | stark modellabhängig | Ältere Enterprise-Systeme; heute oft durch SSDs ersetzt |
+
+- **RPM** = Umdrehungen pro Minute.
+- Zugriffszeiten liegen typischerweise im Millisekundenbereich.
+- HDDs eignen sich für Archive, Backups und große Datenbestände.
+- Nachteile: mechanischer Verschleiß, Geräusche, höhere Latenz.
+
+## SSD – Solid State Drive
+
+Speichert Daten in Flash-Speicher ohne bewegliche Teile. Deutlich kürzere Zugriffszeiten als HDDs.
+
+| Schnittstelle / Typ | Theoretische Schnittstellenrate | Eigenschaften / Einsatz |
+|---|---:|---|
+| SATA SSD | bis 6 Gbit/s, ca. 600 MB/s vor Overhead | Ältere PCs, günstiges Upgrade |
+| NVMe über PCIe 3.0 x4 | ca. 3,9 GB/s | Schnelle System- und Datenträger |
+| NVMe über PCIe 4.0 x4 | ca. 7,9 GB/s | Gaming, Workstations, schnelle Dateiübertragung |
+| NVMe über PCIe 5.0 x4 | ca. 15,8 GB/s | Sehr schnelle Workstations und professionelle Systeme |
+| NVMe über PCIe 6.0 x4 | theoretisch ca. 31,5 GB/s | Neuere Plattformen; tatsächliche Produkte variieren |
+
+Die Werte sind theoretische Richtwerte für die Schnittstelle, keine garantierten SSD-Transferraten. Die reale Geschwindigkeit hängt von SSD, Controller, Temperatur, Datenart und System ab.
+
+### SATA vs. NVMe
+
+- **SATA** ist eine Schnittstelle, die bei HDDs und SSDs eingesetzt wird.
+- **NVMe** ist ein für Flash-Speicher optimiertes Protokoll, das meist über PCIe angebunden ist.
+- Eine **M.2-SSD** beschreibt zunächst den Formfaktor. M.2 kann SATA oder NVMe/PCIe nutzen – nicht jede M.2-SSD ist NVMe.
+
+## HDD vs. SSD
+
+| Eigenschaft | HDD | SATA SSD | NVMe SSD |
+|---|---|---|---|
+| Technik | Magnetische Scheiben | Flash-Speicher | Flash-Speicher |
+| Mechanische Teile | Ja | Nein | Nein |
+| Zugriffszeit | Millisekunden | Sehr niedrig | Sehr niedrig |
+| Geschwindigkeit | Niedrig | Mittel | Hoch bis sehr hoch |
+| Preis pro GB | Häufig günstig | Mittel | Häufig höher |
+| Typischer Einsatz | Archive, NAS, Backups | Office-PCs, Upgrades | Betriebssystem, Spiele, Workstations |
+
+**Merksatz:** HDD = viel Speicher günstig. SATA-SSD = gutes Upgrade. NVMe-SSD = hohe Geschwindigkeit über PCIe.
+
+---
+
+## USB – Generationen und Geschwindigkeit
+
+USB (Universal Serial Bus) überträgt Daten und kann Geräte mit Strom versorgen. Die tatsächliche Geschwindigkeit hängt von Host, Gerät und Kabel ab.
+
+| Standard / Bezeichnung | Maximale Datenrate | Hinweise |
+|---|---:|---|
+| USB 1.1 Low Speed | 1,5 Mbit/s | Langsame Eingabegeräte |
+| USB 1.1 Full Speed | 12 Mbit/s | Ältere Peripherie |
+| USB 2.0 | 480 Mbit/s | Tastaturen, Mäuse, viele einfache Geräte |
+| USB 3.2 Gen 1 | 5 Gbit/s | Früher USB 3.0 / USB 3.1 Gen 1 |
+| USB 3.2 Gen 2 | 10 Gbit/s | Früher USB 3.1 Gen 2 |
+| USB 3.2 Gen 2x2 | 20 Gbit/s | Nutzt zwei Lanes; häufig USB-C |
+| USB4 20 Gbit/s | 20 Gbit/s | USB-C, Daten und optional DisplayPort-Tunneling |
+| USB4 40 Gbit/s | 40 Gbit/s | USB-C, hohe Datenrate |
+| USB4 80 Gbit/s | 80 Gbit/s | USB4 Version 2.0, geeignetes Gerät und Kabel erforderlich |
+
+Die Namen älterer USB-3.x-Versionen wurden mehrfach geändert. Für den Kauf ist die angegebene **Datenrate** oft eindeutiger als ein allgemeiner Begriff wie „USB 3“.
+
+Quelle: [USB-IF – USB 3.2](https://www.usb.org/usb-32-0), [USB-IF – USB4](https://www.usb.org/usb4)
+
+```markdown
+## USB-Stecker und Kabeltypen
+
+**Steckerform ≠ Übertragungsgeschwindigkeit.** USB-C beschreibt die Bauform des Steckers, nicht automatisch USB4 oder eine bestimmte Geschwindigkeit.
+
+| Anschluss | Eigenschaften | Typischer Einsatz |
+|---|---|---|
+| USB-A | Rechteckiger Stecker, nicht umkehrbar | PCs, USB-Sticks, Tastaturen |
+| USB-B | Meist quadratisch | Drucker, ältere Geräte |
+| Mini-USB | Kleiner älterer Anschluss | Ältere Kameras |
+| Micro-USB | Sehr kleiner Anschluss | Ältere Smartphones, Geräte |
+| USB-C | Klein, beidseitig einsteckbar | Moderne Smartphones, Laptops, Docks, SSDs |
+
+### USB-C-Kabel: Worauf achten?
+
+- **Datenrate:** z. B. 5, 10, 20, 40 oder 80 Gbit/s – abhängig von Kabel und Geräten.
+- **Ladeleistung:** Nicht jedes Kabel unterstützt dieselbe Stromstärke oder Leistung.
+- **DisplayPort-Unterstützung:** Nicht jeder USB-C-Port unterstützt Bildausgabe.
+- **USB Power Delivery (USB PD):** Standard zur Aushandlung der Stromversorgung; geeignete Kabel und Geräte vorausgesetzt.
+- **Aktive Kabel:** Enthalten Elektronik zur Signalaufbereitung; bei hohen Datenraten und größeren Längen relevant.
+- **Passive Kabel:** Übertragen Signale ohne aktive Signalaufbereitung.
+
+Ein Kabel kann äußerlich wie ein anderes aussehen und trotzdem eine deutlich geringere Datenrate unterstützen.
+
+## Thunderbolt
+
+Thunderbolt nutzt ebenfalls den USB-C-Stecker, bietet aber definierte Funktionen und Anforderungen je nach Generation. Es kann Daten, DisplayPort-Signale und PCIe über eine Verbindung transportieren.
+
+| Generation | Maximale Bandbreite | Typische Verwendung |
+|---|---:|---|
+| Thunderbolt 1 | 10 Gbit/s | Ältere schnelle Peripherie |
+| Thunderbolt 2 | 20 Gbit/s | Ältere professionelle Systeme |
+| Thunderbolt 3 | 40 Gbit/s | Docks, schnelle externe SSDs, Displays |
+| Thunderbolt 4 | 40 Gbit/s | Docks, mehrere Displays, externe Speicher |
+| Thunderbolt 5 | 80 Gbit/s bidirektional; bis zu 120 Gbit/s in einem speziellen Bandwidth-Boost-Modus | Hochleistungs-Docks, schnelle Speicher, professionelle Displays |
+
+Die Geschwindigkeit allein unterscheidet Thunderbolt 3 und 4 nicht. Thunderbolt 4 stellt strengere Mindestanforderungen an bestimmte Funktionen und Kompatibilität.
+
+Quelle: [Intel – Thunderbolt-Technik](https://www.intel.de/content/www/de/de/architecture-and-technology/thunderbolt/overview.html)
+
+### Daisy Chaining
+
+**Daisy Chaining** bedeutet, mehrere Geräte in Reihe zu verbinden.
+
+Beispiel:
+
+`Laptop → Thunderbolt-Monitor → Thunderbolt-SSD → weiteres Thunderbolt-Gerät`
+
+- Unterstützt von Thunderbolt-Geräten, wenn die Geräte entsprechende Downstream-Ports besitzen.
+- Reduziert den Kabelbedarf am Laptop.
+- Die gemeinsame Verbindung hat eine begrenzte Bandbreite.
+- Nicht jeder Monitor oder jedes USB-C-Gerät kann das Signal weiterleiten.
+- USB-C allein garantiert kein Daisy Chaining.
+
+**Hub vs. Daisy Chain:**
+- **Hub/Dock:** Mehrere Geräte werden an einen zentralen Verteiler angeschlossen.
+- **Daisy Chain:** Geräte werden hintereinander verbunden.
+
+Quelle: [Intel – Thunderbolt 4 und USB-C](https://www.intel.com/content/www/us/en/architecture-and-technology/thunderbolt/thunderbolt-4-vs-usb-c.html)
+
+## Weitere wichtige Kabel und Schnittstellen
+
+| Typ | Geschwindigkeit / Eigenschaft | Einsatz |
+|---|---|---|
+| SATA-Datenkabel | SATA III: 6 Gbit/s brutto | Interne SATA-HDDs und SATA-SSDs |
+| SATA-Stromkabel | Stromversorgung, keine Datenübertragung | Interne SATA-Laufwerke |
+| PCIe | Je nach Generation und Lane-Anzahl sehr hohe Bandbreite | NVMe-SSDs, Grafikkarten, Erweiterungskarten |
+| Ethernet Cat 5e | Bis 1 Gbit/s bei bis zu 100 m | Heim- und Firmennetzwerke |
+| Ethernet Cat 6 | Bis 10 Gbit/s auf kürzeren Strecken; 1 Gbit/s bis 100 m | LAN-Verkabelung |
+| Ethernet Cat 6A | 10 Gbit/s bis 100 m | Professionelle LANs |
+| Ethernet Cat 8 | Bis 25/40 Gbit/s auf kurzen Strecken, typischerweise bis 30 m | Rechenzentrum |
+| HDMI | Version und Kabelklasse bestimmen die unterstützten Datenraten und Auflösungen | Fernseher, Monitore, Beamer |
+| DisplayPort | Version und Kabel bestimmen die mögliche Bandbreite | PC-Monitore, hohe Auflösungen und Bildwiederholraten |
+| Glasfaser | Hohe Bandbreite, große Reichweite, unempfindlich gegen elektromagnetische Störungen | Backbone, Rechenzentrum, Provider |
+
+**Achtung:** Bei Ethernet hängen die tatsächlich unterstützten Geschwindigkeiten von Kategorie, Länge, Installation und den Netzwerkports ab. Bei HDMI und DisplayPort sollte man die unterstützte Version bzw. zertifizierte Kabelklasse prüfen, nicht nur die Steckerform.
+
+## IHK-Merksätze
+
+- **HDD vs. SSD:** HDD ist mechanisch; SSD nutzt Flash-Speicher.
+- **SATA vs. NVMe:** SATA ist eine Schnittstelle; NVMe ist ein Speicherprotokoll, das meist PCIe nutzt.
+- **M.2 vs. NVMe:** M.2 ist ein Formfaktor, NVMe ein Protokoll.
+- **USB-C vs. USB4:** USB-C ist ein Steckertyp, USB4 ein Übertragungsstandard.
+- **USB-C vs. Thunderbolt:** Gleiche Steckerform möglich, aber nicht dieselben garantierten Funktionen.
+- **Gbit/s vs. GB/s:** 8 Gbit/s entsprechen rechnerisch 1 GB/s vor Overhead.
+- **Daisy Chain vs. Hub:** Reihenschaltung gegenüber zentralem Verteiler.
+- **SATA-Datenkabel vs. SATA-Stromkabel:** Datenübertragung gegenüber Stromversorgung.
+- **Ethernet vs. Glasfaser:** Ethernet bezeichnet eine Netzwerktechnik; Glasfaser ist ein Übertragungsmedium, über das Ethernet laufen kann.
+
+--- Bit-Byte ---
+# Bit, Byte, GB, GiB und Datenraten – IHK AP2
+
+## Bit und Byte
+
+| Einheit | Bedeutung |
+|---|---|
+| bit (`b`) | Kleinste digitale Informationseinheit: `0` oder `1` |
+| Byte (`B`) | 8 Bit |
+| Kilobit (`kbit`) | 1.000 Bit |
+| Kilobyte (`kB`) | 1.000 Byte |
+| Megabyte (`MB`) | 1.000.000 Byte |
+| Gigabyte (`GB`) | 1.000.000.000 Byte |
+| Terabyte (`TB`) | 1.000.000.000.000 Byte |
+
+**Groß- und Kleinschreibung ist wichtig:**
+- `b` = Bit
+- `B` = Byte
+- `Mbit/s` = Megabit pro Sekunde
+- `MB/s` = Megabyte pro Sekunde
+
+## GB vs. GiB – dezimal vs. binär
+
+Hersteller verwenden für Speicherkapazitäten üblicherweise das Dezimalsystem. Betriebssysteme zeigen Speichergrößen teilweise in binären Einheiten an.
+
+| Dezimal | Wert | Binär | Wert |
+|---|---:|---|---:|
+| 1 kB | 1.000 Byte | 1 KiB | 1.024 Byte |
+| 1 MB | 1.000.000 Byte | 1 MiB | 1.048.576 Byte |
+| 1 GB | 1.000.000.000 Byte | 1 GiB | 1.073.741.824 Byte |
+| 1 TB | 1.000.000.000.000 Byte | 1 TiB | 1.099.511.627.776 Byte |
+
+**Merke:**
+- `GB` = Gigabyte, dezimal: \(10^9\) Byte
+- `GiB` = Gibibyte, binär: \(2^{30}\) Byte
+- `1 GiB ≈ 1,074 GB`
+- `1 GB ≈ 0,931 GiB`
+
+### Beispiel: Warum zeigt eine 1-TB-Festplatte weniger an?
+
+Herstellerangabe: `1 TB = 1.000.000.000.000 Byte`
+
+Umrechnung in TiB:
+
+\[
+\frac{1.000.000.000.000}{2^{40}}
+\approx 0{,}9095\ \text{TiB}
+\]
+
+Die Kapazität ist nicht verschwunden. Die Anzeige verwendet eine andere Einheit. Zusätzlich können Dateisysteme und Formatierung etwas Speicherplatz belegen.
+
+## Datenrate umrechnen
+
+Netzwerkgeschwindigkeiten werden häufig in Bit/s angegeben, Speicherdurchsatz dagegen in Byte/s.
+
+**Grundregel: 8 Bit = 1 Byte**
+
+| Datenrate | Theoretischer Durchsatz |
+|---|---:|
+| 8 Mbit/s | 1 MB/s |
+| 100 Mbit/s | 12,5 MB/s |
+| 1 Gbit/s | 125 MB/s |
+| 2,5 Gbit/s | 312,5 MB/s |
+| 10 Gbit/s | 1.250 MB/s = 1,25 GB/s |
+
+Das sind theoretische Werte ohne Protokoll-Overhead. In der Praxis ist der Durchsatz meist niedriger.
+
+### Beispiel: Downloadzeit
+
+Datei: `2 GB`  
+Verbindung: `100 Mbit/s`
+
+1. `2 GB = 16.000 Mbit`
+2. `Zeit = Datenmenge ÷ Datenrate`
+3. `16.000 Mbit ÷ 100 Mbit/s = 160 Sekunden`
+
+**Ergebnis:** Theoretisch 2 Minuten und 40 Sekunden. In der Praxis dauert es wegen Overhead und schwankender Verbindung länger.
+
+## Wichtige Formeln
+
+| Gesucht | Formel |
+|---|---|
+| Bit in Byte | Bit ÷ 8 |
+| Byte in Bit | Byte × 8 |
+| Übertragungszeit | Datenmenge in Bit ÷ Datenrate in Bit/s |
+| Datenmenge | Datenrate × Zeit |
+| Dezimal GB in GiB | GB ÷ 1,073741824 |
+| Binär GiB in GB | GiB × 1,073741824 |
+
+Bei Übertragungszeit-Aufgaben müssen Datenmenge und Datenrate in kompatiblen Einheiten stehen.
+
+## IHK-Fallen
+
+- `MB/s` ist achtmal so groß wie der Zahlenwert in `Mbit/s`, wenn dieselbe Datenrate gemeint ist.
+- `1 GB` sind dezimal 1.000.000.000 Byte, `1 GiB` sind 1.073.741.824 Byte.
+- `1 Gbit/s` bedeutet nicht `1 GB/s`.
+- Eine Leitung mit 100 Mbit/s lädt theoretisch höchstens 12,5 MB pro Sekunde.
+- Herstellerkapazität und Betriebssystemanzeige können sich durch unterschiedliche Einheiten unterscheiden.
+
+--- Speicherhirachie ---
+# Speicherhierarchie – Schnell = teuer = klein
+
+## Grundprinzip
+
+Die Speicherhierarchie ordnet Speicher nach Zugriffsgeschwindigkeit, Kapazität und Kosten pro Bit.
+
+**Je schneller der Speicher, desto kleiner und teurer pro Bit ist er normalerweise.** Langsamere Speicher bieten meist mehr Kapazität zu geringeren Kosten pro Bit.
+
+Quelle: https://openstax.org/books/introduction-computer-science/pages/5-5-memory-hierarchy
+
+## Speicherpyramide
+
+CPU-Register  
+↓  
+L1-Cache  
+↓  
+L2-Cache  
+↓  
+L3-Cache  
+↓  
+RAM (DRAM)  
+↓  
+SSD / NVMe  
+↓  
+HDD  
+↓  
+Archivspeicher
+
+- Oben: schnell, klein, teuer pro Bit
+- Unten: langsamer, größer, günstiger pro Bit
+
+## Ebenen im Vergleich
+
+| Speicher | Geschwindigkeit | Typische Kapazität | Kosten pro Bit |
+|---|---|---|---|
+| CPU-Register | Extrem schnell | Sehr klein | Sehr hoch |
+| L1-Cache | Extrem schnell | KB bis hunderte KB | Sehr hoch |
+| L2-Cache | Sehr schnell | Hunderte KB bis wenige MB | Hoch |
+| L3-Cache | Schnell | Einige bis hunderte MB | Hoch |
+| RAM (DRAM) | Schnell | GB bis TB bei großen Systemen | Mittel |
+| SSD / NVMe | Langsamer als RAM | Hunderte GB bis mehrere TB | Niedrig |
+| HDD | Langsamer als SSD | Mehrere TB | Sehr niedrig |
+| Archivspeicher | Je nach Medium langsam | Groß bis sehr groß | Häufig sehr niedrig |
+
+*Die Werte sind typische Größenordnungen und hängen von der Hardware ab.*
+
+## Aufgaben der einzelnen Ebenen
+
+1. **Register:** Enthalten Werte, mit denen die CPU unmittelbar rechnet.
+2. **Cache:** Speichert häufig benötigte Daten und Befehle nahe an der CPU.
+3. **RAM:** Hält Daten und Programme, die gerade verwendet werden.
+4. **SSD/HDD:** Speichert Betriebssystem, Programme und Dateien dauerhaft.
+5. **Archivspeicher:** Dient der langfristigen Aufbewahrung großer Datenmengen.
+
+## Cache Hit und Cache Miss
+
+- **Cache Hit:** Die gesuchten Daten befinden sich im Cache. Der Zugriff ist schnell.
+- **Cache Miss:** Die Daten fehlen im Cache und müssen aus einer langsameren Speicherebene geladen werden.
+
+Quelle: https://learn.arm.com/learning-paths/servers-and-cloud-computing/memory-subsystem/cache-hierarchy/
+
+## SRAM vs. DRAM
+
+| Eigenschaft | SRAM | DRAM |
+|---|---|---|
+| Verwendung | Typischerweise CPU-Cache | Typischerweise Arbeitsspeicher |
+| Geschwindigkeit | Sehr schnell | Langsamer als SRAM |
+| Kosten pro Bit | Hoch | Niedriger |
+| Speicherdichte | Geringer | Höher |
+| Refresh erforderlich | Nein | Ja |
+
+## Flüchtig vs. nichtflüchtig
+
+- **Flüchtig:** Register, Cache und RAM verlieren ihren Inhalt ohne Strom.
+- **Nichtflüchtig:** SSD und HDD behalten gespeicherte Daten ohne Strom.
+
+## Warum nutzt man nicht nur schnellen Speicher?
+
+- Schneller Speicher ist teuer und deshalb nur begrenzt sinnvoll einsetzbar.
+- Langsamer Speicher ist günstiger und kann große Datenmengen speichern.
+- Die Kombination bietet ein gutes Verhältnis aus Leistung, Kapazität und Kosten.
+
+## IHK-Merksatz
+
+**Nach oben: schneller, kleiner, teurer pro Bit.**
+
+**Nach unten: langsamer, größer, günstiger pro Bit.**
+
+Ziel der Speicherhierarchie ist es, hohe Geschwindigkeit mit großer Speicherkapazität und vertretbaren Kosten zu kombinieren.
+
+--- DAS-NAS-SAN ---
+# DAS vs. NAS vs. SAN – Speicherlösungen
+
+## 1. DAS – Direct Attached Storage
+
+**DAS** ist direkt an einen einzelnen Computer oder Server angeschlossener Speicher, ohne dass der Speicherzugriff über ein Netzwerk erfolgt.
+
+- Verbindung: SATA, SAS, USB, PCIe/NVMe
+- Zugriff: Blockebene
+- Beispiele: Interne HDD, SATA-SSD, NVMe-SSD, externe USB-Festplatte
+- Vorteile: Einfach, geringe Latenz, meist kostengünstig
+- Nachteile: Nicht automatisch zentral über das Netzwerk verfügbar, schwieriger gemeinsam zu nutzen
+- Einsatz: PC-Speicher, Serverlaufwerke, lokale Datenbanken
+
+**Beispiel:** Ein Server verwendet eine intern eingebaute NVMe-SSD für sein Betriebssystem und seine Anwendungen.
+
+## 2. NAS – Network Attached Storage
+
+Ein NAS stellt Dateien über ein Netzwerk für mehrere Clients bereit.
+
+- Verbindung: Ethernet/LAN
+- Zugriff: Dateiebene
+- Protokolle: SMB/CIFS, NFS
+- Vorteile: Gemeinsame Dateifreigaben, zentrale Verwaltung, einfache Nutzung
+- Nachteile: Netzwerk und NAS können Engpässe oder Ausfallpunkte sein
+- Einsatz: Teamordner, Dateiserver, Medien, Backups
+
+**Beispiel:** Mitarbeiter speichern Dokumente in einem gemeinsamen Netzwerkordner.
+
+## 3. SAN – Storage Area Network
+
+Ein SAN stellt Servern über ein Speichernetzwerk zentralen Speicher auf Blockebene bereit.
+
+- Verbindung: Fibre Channel oder iSCSI über Ethernet/IP
+- Zugriff: Blockebene
+- Typische Begriffe: LUN, Volume, Multipathing
+- Vorteile: Zentraler Speicher, hohe Leistung und Verfügbarkeit bei entsprechender Auslegung
+- Nachteile: Höhere Komplexität und häufig höhere Kosten
+- Einsatz: Virtualisierung, Datenbanken, Unternehmensserver
+
+**Beispiel:** Mehrere Virtualisierungshosts greifen über ein SAN auf einen zentralen VM-Datastore zu.
+
+## 4. Vergleich
+
+| Eigenschaft | DAS | NAS | SAN |
+|---|---|---|---|
+| Vollständiger Name | Direct Attached Storage | Network Attached Storage | Storage Area Network |
+| Anschluss | Direkt am Rechner | Netzwerk | Speichernetzwerk |
+| Zugriff | Block | Datei | Block |
+| Typische Protokolle | SATA, SAS, NVMe | SMB, NFS | iSCSI, Fibre Channel |
+| Gemeinsame Nutzung | Nicht standardmäßig über Netzwerk | Einfach für mehrere Clients | Für mehrere Server, mit passender Konfiguration |
+| Komplexität | Niedrig | Mittel | Häufig hoch |
+| Typische Kosten | Niedrig bis mittel | Niedrig bis hoch | Mittel bis hoch |
+| Einsatz | Lokale Laufwerke | Gemeinsame Dateien | VM-Storage, Datenbanken |
+
+## 5. Merksätze für die IHK
+
+- **DAS:** Speicher direkt am Rechner.
+- **NAS:** Dateien über das Netzwerk.
+- **SAN:** Speicherblöcke über ein Speichernetzwerk.
+
+## 6. Wichtige Prüfungsfallen
+
+- DAS bedeutet nicht zwingend eine interne Festplatte: Eine direkt per USB angeschlossene externe Festplatte ist ebenfalls DAS.
+- NAS und SAN sind Speicherarchitekturen, keine bestimmten Festplattentypen. Intern können sie HDDs, SSDs oder NVMe verwenden.
+- NAS und SAN sind nicht automatisch schneller als DAS. Die tatsächliche Leistung hängt von Hardware, Netzwerk, Protokoll und Auslastung ab.
+- RAID ist weder DAS noch NAS noch SAN, sondern eine Methode zur Organisation mehrerer Laufwerke.
+- RAID ersetzt kein Backup.
