@@ -14,3 +14,6 @@
 ## Lerntrees
 - `./IT.md`
 - `./Wirtschaft.md`
+
+## Themenformat
+`In 30 Sekunden` → `Kernwissen` → `Prüfungsfrage` → `Falle` → `Merksatz` → `Verwandt`

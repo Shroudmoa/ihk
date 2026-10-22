@@ -67,7 +67,7 @@
 - Replay → gültige Nachricht erneut senden.
 - Webshell → Befehlsausführung über einen kompromittierten Webserver.
 
-## Siehe auch
+## Verwandt
 
 - [Schutzziele](schutzziele.md) – was genau geschützt werden soll
 - [Firewall](firewall.md) – Abwehr auf Netzwerkebene

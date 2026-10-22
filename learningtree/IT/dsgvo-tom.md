@@ -1,101 +1,61 @@
-# DSGVO--TOM
+# DSGVO & TOM
 
-# Datenschutz und IT-Sicherheit – IHK-Prüfung
+## In 30 Sekunden
 
-## 1. Personenbezogene Daten
+- Personenbezogene Daten sind alles, was sich auf eine Person beziehen lässt – auch IP-Adresse und Personalnummer.
+- Jede Verarbeitung braucht eine **Rechtsgrundlage** nach Art. 6 DSGVO.
+- **TOM** (Art. 32) sind technische und organisatorische Maßnahmen – die Prüfung will konkrete Beispiele, keine Floskeln.
+- Betroffenenrechte: Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch.
+- Datenschutzverletzung mit Risiko: Meldung an die Aufsichtsbehörde **innerhalb von 72 Stunden**.
 
-**Definition:** Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen (Art. 4 Nr. 1 DSGVO).
+## Kernwissen
 
-**Beispiele:**
-- Name, Adresse und Geburtsdatum
-- E-Mail-Adresse und Telefonnummer
-- IP-Adresse, sofern sie einer Person zugeordnet werden kann
-- Standortdaten und Personalnummer
-- Gesundheitsdaten (besondere Kategorien nach Art. 9 DSGVO)
-
-## 2. DSGVO und Einwilligung
-
-**Grundsatz:** Personenbezogene Daten dürfen nicht beliebig verarbeitet werden. Für jede Verarbeitung ist eine Rechtsgrundlage nach Art. 6 DSGVO erforderlich.
-
-Mögliche Rechtsgrundlagen:
-- **Einwilligung (Art. 6 Abs. 1 lit. a DSGVO):** freiwillig, informiert, eindeutig und nachweisbar.
-- **Vertrag (Art. 6 Abs. 1 lit. b DSGVO):** Verarbeitung ist für die Vertragserfüllung erforderlich.
-- **Gesetzliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO):** beispielsweise gesetzliche Aufbewahrungspflichten.
-- **Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO):** Interessenabwägung erforderlich.
-
-**Wichtig:** Eine Einwilligung ist nicht immer notwendig. Es muss aber eine gültige Rechtsgrundlage vorliegen. Eine Einwilligung kann unter den Voraussetzungen der Art. 7 DSGVO widerrufen werden.
-
-## 3. DSGVO, BDSG und LDSG
-
-| Regelwerk | Bedeutung |
-|---|---|
-| DSGVO | EU-weite Datenschutz-Grundverordnung; unmittelbar geltendes EU-Recht |
-| BDSG | Bundesdatenschutzgesetz; ergänzt die DSGVO in bestimmten Bereichen |
-| LDSG | Landesdatenschutzgesetz; regelt ergänzende Datenschutzfragen auf Landesebene |
-
-**IHK-Prüfungswissen:**
-- Die DSGVO bildet den zentralen europäischen Rechtsrahmen.
-- Das BDSG ergänzt die DSGVO insbesondere für bestimmte nationale Regelungsbereiche.
-- Das LDSG betrifft insbesondere den Datenschutz bei öffentlichen Stellen des jeweiligen Bundeslandes.
-- Für Unternehmen sind zusätzlich bereichsspezifische Gesetze zu beachten.
-
-## 4. Daten verschlüsseln, sichern und löschen
-
-Die Aussage „Alle Daten müssen verschlüsselt und gesichert werden“ ist zu pauschal.
-
-### Verschlüsselung
-- Schützt die Vertraulichkeit von Daten vor unbefugtem Zugriff.
-- Beispiele: TLS bei der Übertragung und Festplattenverschlüsselung bei gespeicherten Daten.
-- Nach Art. 32 DSGVO ist Verschlüsselung eine mögliche geeignete technische Maßnahme, abhängig vom Risiko und den Umständen. Sie ist nicht pauschal für jede einzelne Datei vorgeschrieben.
-
-### Datensicherung (Backup)
-- Ermöglicht die Wiederherstellung von Daten nach Verlust, Beschädigung oder einem Cyberangriff.
-- Backups sollten regelmäßig erstellt, vor Manipulation geschützt und auf ihre Wiederherstellbarkeit getestet werden.
-- Backup und Verschlüsselung erfüllen unterschiedliche Aufgaben: Backup schützt die Verfügbarkeit, Verschlüsselung die Vertraulichkeit.
-
-### Datenlöschung
-- Personenbezogene Daten dürfen nicht unbegrenzt gespeichert werden.
-- Nach Art. 5 Abs. 1 lit. e DSGVO gilt die Speicherbegrenzung.
-- Nach Art. 17 DSGVO besteht unter bestimmten Voraussetzungen eine Pflicht zur Löschung.
-- Gesetzliche Aufbewahrungspflichten können einer sofortigen Löschung entgegenstehen.
-
-**Merksatz:** Daten nur so lange speichern, wie es erforderlich oder gesetzlich zulässig ist. Danach löschen, sofern keine andere Rechtsgrundlage oder Aufbewahrungspflicht entgegensteht.
-
-## 5. Technische und organisatorische Maßnahmen (TOM)
-
-Art. 32 DSGVO fordert geeignete technische und organisatorische Maßnahmen (TOM), die ein dem Risiko angemessenes Schutzniveau gewährleisten.
-
-| Maßnahme | Schutzziel |
-|---|---|
-| Firewall | Kontrolliert den Netzwerkverkehr anhand definierter Regeln |
-| Virenschutz / EDR | Erkennt und blockiert Schadsoftware und verdächtige Aktivitäten |
-| Backup | Unterstützt die Wiederherstellung von Daten |
-| Verschlüsselung | Schützt die Vertraulichkeit |
-| Zugriffskontrolle | Verhindert unbefugten Zugriff |
-| MFA | Erhöht die Sicherheit der Authentifizierung |
-| Rechteverwaltung | Beschränkt Zugriffe nach dem Minimalprinzip |
-| Protokollierung | Unterstützt die Nachvollziehbarkeit von Ereignissen |
-| Updates und Patches | Schließen bekannte Sicherheitslücken |
-| Löschkonzept | Regelt die fristgerechte Löschung von Daten |
-
-**Wichtig:** Eine Firewall, ein Virenscanner und ein Backup allein gewährleisten keine vollständige IT-Sicherheit. Die Maßnahmen müssen zum konkreten Risiko passen und zusammenwirken.
-
-## 6. Verbindung zu den IT-Schutzzielen
-
-| Schutzziel | Bedeutung | Beispiel |
+**Rechtsgrundlagen nach Art. 6**
+| Grundlage | Wann | Beispiel |
 |---|---|---|
-| Vertraulichkeit | Nur Berechtigte dürfen Daten lesen | Verschlüsselung, Zugriffskontrolle |
-| Integrität | Daten dürfen nicht unbemerkt unzulässig verändert werden | Hashwerte, Berechtigungen |
-| Verfügbarkeit | Daten und Systeme müssen bei Bedarf verfügbar sein | Backups, Redundanz, Notfallkonzept |
+| Einwilligung (lit. a) | freiwillig, informiert, widerrufbar | Newsletter |
+| Vertrag (lit. b) | für die Vertragserfüllung nötig | Lieferadresse |
+| Rechtliche Pflicht (lit. c) | Gesetz verlangt es | Rechnungsaufbewahrung |
+| Berechtigtes Interesse (lit. f) | Abwägung nötig | Videoüberwachung |
 
-Diese drei Schutzziele werden häufig als CIA-Triade bezeichnet.
+**Die TOM, die in der Prüfung zählen**
+| Maßnahme | Konkret |
+|---|---|
+| Zutrittskontrolle | Wer kommt ins Rechenzentrum? Karte, Protokoll |
+| Zugangskontrolle | Wer darf sich anmelden? Passwort, MFA |
+| Zugriffskontrolle | Wer darf welche Daten? Rollen, ACL |
+| Weitergabekontrolle | Was verlässt das Netz? TLS, VPN |
+| Eingabekontrolle | Wer hat was geändert? Logs, Vier-Augen-Prinzip |
+| Auftragskontrolle | Externer Dienstleister? AVV nach Art. 28 |
+| Verfügbarkeitskontrolle | Backup, RAID, USV |
+| Trennungskontrolle | Mandanten, Test und Produktion getrennt |
 
-## 7. Prüfungsfertige Antwort
+**Rollen**
+- **Verantwortlicher:** entscheidet über Zweck und Mittel der Verarbeitung.
+- **Auftragsverarbeiter:** verarbeitet weisungsgebunden, braucht einen AVV.
+- **Datenschutzbeauftragter:** berät und überwacht intern, ist nicht die Aufsichtsbehörde.
 
-Personenbezogene Daten müssen gemäß DSGVO rechtmäßig, zweckgebunden und auf das notwendige Maß beschränkt verarbeitet werden. Für die Verarbeitung ist eine geeignete Rechtsgrundlage nach Art. 6 DSGVO erforderlich; eine Einwilligung ist nur eine von mehreren möglichen Rechtsgrundlagen. Nach Art. 32 DSGVO müssen angemessene technische und organisatorische Maßnahmen umgesetzt werden, beispielsweise Verschlüsselung, Zugriffskontrollen, Firewalls und Datensicherungen. Nicht mehr benötigte personenbezogene Daten sind grundsätzlich zu löschen, sofern keine gesetzlichen Aufbewahrungspflichten oder andere rechtliche Gründe entgegenstehen.
+**Wichtig:** Eine Einwilligung ist nicht immer nötig. Es muss nur eine passende Rechtsgrundlage geben.
 
-## Siehe auch
+## Prüfungsfrage
 
-- [Schutzziele](schutzziele.md) – Art. 32: Vertraulichkeit, Integrität, Verfügbarkeit
+**Frage:** Ein Dienstleister soll für ein Unternehmen E-Mails archivieren. Nenne zwei DSGVO-Pflichten und je eine passende TOM.
+
+**Musterantwort:** Es braucht einen Auftragsverarbeitungsvertrag nach Art. 28 und eine Rechtsgrundlage für die Verarbeitung. Technisch: Verschlüsselung bei Übertragung und Speicherung als Weitergabekontrolle. Organisatorisch: Rollenkonzept mit minimalen Rechten und Protokollierung als Zugriffskontrolle.
+
+## Falle
+
+- „Einwilligung ist immer nötig“ → falsch, eine andere Rechtsgrundlage reicht.
+- TOM nur mit „Firewall“ beantworten → organisatorische Maßnahmen fehlen, das gibt Punktabzug.
+- Datenschutzbeauftragter und Aufsichtsbehörde verwechseln.
+- DSGVO und BDSG gleichsetzen: die DSGVO gilt EU-weit, das BDSG ergänzt national.
+
+## Merksatz
+
+**„Rechtsgrundlage zuerst, TOM danach.“** Und die acht Kontrollen: **Zutritt, Zugang, Zugriff, Weitergabe, Eingabe, Auftrag, Verfügbarkeit, Trennung.**
+
+## Verwandt
+
+- [Schutzziele](schutzziele.md) – Vertraulichkeit, Integrität, Verfügbarkeit
 - [hackers-can](hackers-can.md) – typische Angriffe auf diese Schutzziele
-
+- [Symmetrische-und-Asymmetrische](symmetrische-und-asymmetrische.md) – Verschlüsselung als TOM

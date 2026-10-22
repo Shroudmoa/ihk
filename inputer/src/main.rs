@@ -1,15 +1,43 @@
 use serde::{Deserialize, Serialize};
+use std::collections::BTreeSet;
 use std::fs;
 use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 
 const SUBJECTS: [&str; 2] = ["IT", "Wirtschaft"];
 
-#[derive(Serialize, Deserialize, Default)]
+const IT_CATEGORIES: [&str; 7] = [
+    "Grundlagen & Hardware",
+    "Netzwerk",
+    "Sicherheit & Datenschutz",
+    "Virtualisierung & Server",
+    "Storage & Backup",
+    "Cloud & Wirtschaftlichkeit",
+    "Referenz",
+];
+
+const WIRTSCHAFT_CATEGORIES: [&str; 4] = [
+    "Ausbildung & Arbeitsrecht",
+    "Sozialversicherung",
+    "Wirtschaft & Unternehmen",
+    "Recht & Steuern",
+];
+
+fn categories(subject: &str) -> &'static [&'static str] {
+    if subject == "IT" {
+        &IT_CATEGORIES
+    } else {
+        &WIRTSCHAFT_CATEGORIES
+    }
+}
+
+#[derive(Serialize, Deserialize, Default, Clone)]
 struct Entry {
     title: String,
     #[serde(default)]
     category: String,
+    #[serde(default)]
+    summary: String,
     text: String,
 }
 
@@ -19,8 +47,9 @@ fn main() {
     let result = match cmd.as_str() {
         "" | "add" => add(&root),
         "build" => build(&root),
+        "check" => check(&root),
         _ => {
-            println!("inputer [add|build]");
+            println!("inputer [add|build|check]");
             return;
         }
     };
@@ -48,17 +77,35 @@ fn add(root: &Path) -> Result<(), String> {
         println!("Titel darf nicht leer sein");
     };
 
+    let cats = categories(subject);
+    println!("Kategorie:");
+    for (i, c) in cats.iter().enumerate() {
+        println!("  {}. {c}", i + 1);
+    }
+    let category = loop {
+        let a = ask("Nummer: ");
+        if let Ok(n) = a.parse::<usize>() {
+            if n >= 1 && n <= cats.len() {
+                break cats[n - 1].to_string();
+            }
+        }
+        if let Some(c) = cats.iter().find(|c| c.eq_ignore_ascii_case(a.trim())) {
+            break c.to_string();
+        }
+        println!("bitte 1-{} wählen", cats.len());
+    };
+
+    let summary = ask("Ein Satz zu dem Thema: ");
+
     let text = read_text();
     if text.is_empty() {
         println!("abgebrochen, kein Text eingegeben");
         return Ok(());
     }
 
-    let category = ask("Kategorie (optional, leer = Allgemein): ");
-
     let file = json_path(root, &subject);
     let mut entries: Vec<Entry> = load(&file)?;
-    entries.push(Entry { title: title.clone(), category, text: text.clone() });
+    entries.push(Entry { title: title.clone(), category, summary, text: text.clone() });
     save(&file, &entries)?;
 
     let raw = rawinfos_path(root, &subject);
@@ -76,7 +123,7 @@ fn normalize_subject(input: &str) -> Option<&'static str> {
     }
 }
 
-// -------------------------------------------------------------- build
+// --------------------------------------------------------- build/check
 
 fn build(root: &Path) -> Result<(), String> {
     for subject in SUBJECTS {
@@ -93,11 +140,119 @@ fn render(root: &Path, subject: &str) -> Result<(), String> {
         return Ok(());
     }
     let entries: Vec<Entry> = load(&file)?;
+    let slugs = slugs_of(&entries);
 
-    let mut groups: Vec<(String, Vec<String>)> = Vec::new();
+    let dir = tree.join(subject);
+    fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
+    for (entry, slug) in entries.iter().zip(&slugs) {
+        let page = format!("# {}\n\n{}\n", entry.title, entry.text);
+        fs::write(dir.join(format!("{slug}.md")), page).map_err(|e| e.to_string())?;
+    }
+
+    let order = category_order(subject, &entries);
+    let mut doc = format!("# {subject}\n\n> {} Themen in {} Kategorien.\n", entries.len(), order.len());
+    for category in &order {
+        let items: Vec<(&Entry, &String)> = entries
+            .iter()
+            .zip(&slugs)
+            .filter(|(e, _)| effective_category(e) == *category)
+            .collect();
+        doc += &format!("\n## {category} ({})\n\n| Thema | In einem Satz |\n|---|---|\n", items.len());
+        for (entry, slug) in items {
+            let summary = if entry.summary.trim().is_empty() {
+                "–"
+            } else {
+                entry.summary.trim()
+            };
+            doc += &format!("| [{}]({subject}/{slug}.md) | {summary} |\n", entry.title);
+        }
+    }
+
+    let out = tree.join(format!("{subject}.md"));
+    fs::write(&out, doc).map_err(|e| e.to_string())?;
+    println!("{}: {} Themen, {} Kategorien", out.display(), entries.len(), order.len());
+    Ok(())
+}
+
+fn check(root: &Path) -> Result<(), String> {
+    let tree = root.join("learningtree");
+    let mut problems = 0usize;
+
+    for subject in SUBJECTS {
+        let file = json_path(root, subject);
+        if !file.exists() {
+            continue;
+        }
+        let entries: Vec<Entry> = load(&file)?;
+        let slugs = slugs_of(&entries);
+        let dir = tree.join(subject);
+
+        let mut seen = BTreeSet::new();
+        for entry in &entries {
+            if !seen.insert(entry.title.to_lowercase()) {
+                println!("[{subject}] doppelter Titel: {}", entry.title);
+                problems += 1;
+            }
+            if entry.summary.trim().is_empty() {
+                println!("[{subject}] kein Ein-Satz: {}", entry.title);
+                problems += 1;
+            }
+            for target in link_targets(&entry.text) {
+                let local = target.split('#').next().unwrap_or("");
+                if local.is_empty() || local.contains("://") || local.starts_with("mailto:") {
+                    continue;
+                }
+                if !dir.join(local).exists() {
+                    println!("[{subject}] toter Link in „{}“: {local}", entry.title);
+                    problems += 1;
+                }
+            }
+        }
+
+        if let Ok(read) = fs::read_dir(&dir) {
+            for item in read.flatten() {
+                let name = item.file_name().to_string_lossy().to_string();
+                if name.ends_with(".md") && !slugs.iter().any(|s| format!("{s}.md") == name) {
+                    println!("[{subject}] verwaiste Datei: {subject}/{name}");
+                    problems += 1;
+                }
+            }
+        }
+    }
+
+    if problems == 0 {
+        println!("alles sauber");
+    } else {
+        println!("{problems} Punkte gefunden");
+    }
+    Ok(())
+}
+
+fn effective_category(entry: &Entry) -> String {
+    if entry.category.trim().is_empty() {
+        "Sonstiges".to_string()
+    } else {
+        entry.category.trim().to_string()
+    }
+}
+
+fn category_order(subject: &str, entries: &[Entry]) -> Vec<String> {
+    let mut order: Vec<String> = categories(subject).iter().map(|c| c.to_string()).collect();
+    for entry in entries {
+        let category = effective_category(entry);
+        if !order.contains(&category) {
+            order.push(category);
+        }
+    }
+    order
+        .into_iter()
+        .filter(|c| entries.iter().any(|e| effective_category(e) == *c))
+        .collect()
+}
+
+fn slugs_of(entries: &[Entry]) -> Vec<String> {
     let mut used: Vec<String> = Vec::new();
-
-    for entry in &entries {
+    for entry in entries {
         let mut slug = slugify(&entry.title);
         let base = slug.clone();
         let mut n = 2;
@@ -105,42 +260,25 @@ fn render(root: &Path, subject: &str) -> Result<(), String> {
             slug = format!("{base}-{n}");
             n += 1;
         }
-        used.push(slug.clone());
+        used.push(slug);
+    }
+    used
+}
 
-        let dir = tree.join(subject);
-        fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
-        let page = format!("# {}\n\n{}\n", entry.title, entry.text);
-        fs::write(dir.join(format!("{slug}.md")), page).map_err(|e| e.to_string())?;
-
-        let category = if entry.category.trim().is_empty() {
-            "Allgemein".to_string()
-        } else {
-            entry.category.trim().to_string()
-        };
-        let link = format!("- [{}]({subject}/{slug}.md)", entry.title);
-        match groups.iter_mut().find(|(c, _)| *c == category) {
-            Some((_, links)) => links.push(link),
-            None => groups.push((category, vec![link])),
+fn link_targets(text: &str) -> Vec<String> {
+    let mut out = Vec::new();
+    let mut rest = text;
+    while let Some(i) = rest.find("](") {
+        rest = &rest[i + 2..];
+        match rest.find(')') {
+            Some(j) => {
+                out.push(rest[..j].to_string());
+                rest = &rest[j + 1..];
+            }
+            None => break,
         }
     }
-
-    let mut doc = format!("# {subject}\n");
-    for (category, links) in &groups {
-        doc += &format!("\n## {category}\n\n");
-        for link in links {
-            doc += &format!("{link}\n");
-        }
-    }
-
-    let out = tree.join(format!("{subject}.md"));
-    fs::write(&out, doc).map_err(|e| e.to_string())?;
-    println!(
-        "{}: {} Themen in {} Kategorien",
-        out.display(),
-        entries.len(),
-        groups.len()
-    );
-    Ok(())
+    out
 }
 
 fn slugify(title: &str) -> String {
@@ -152,8 +290,7 @@ fn slugify(title: &str) -> String {
             'ü' | 'Ü' => "ue",
             'ß' => "ss",
             c if c.is_alphanumeric() => {
-                let lower = c.to_lowercase().to_string();
-                slug.push_str(&lower);
+                slug.push_str(&c.to_lowercase().to_string());
                 continue;
             }
             _ => "-",

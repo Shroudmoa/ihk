@@ -1,87 +1,62 @@
 # OSI
 
-## OSI-Modell – 7 Schichten (IHK)
+## In 30 Sekunden
 
-| Nr. | Schicht | Aufgabe | Protokolle / Beispiele | Geräte / Adressen |
+- 7 Schichten, von unten nach oben: **Physical, Data Link, Network, Transport, Session, Presentation, Application**.
+- Merksatz: *Please Do Not Throw Salami Pizza Away* – Schicht 1 bis 7.
+- Die Prüfung fragt fast immer: **„Ordne Gerät oder Protokoll einer Schicht zu“** oder **„was macht Schicht X“**.
+- Switch = Layer 2 (MAC), Router = Layer 3 (IP), Proxy = Layer 7.
+- TLS ist **keine** eigene OSI-Schicht – schreib „zwischen 4 und 7“, dann ist es nicht falsch.
+
+## Kernwissen
+
+| # | Schicht | Aufgabe | Beispiele | Geräte |
 |---:|---|---|---|---|
-| 7 | Anwendung | Stellt Netzwerkdienste für Anwendungen bereit. | HTTP(S), DNS, DHCP, SMTP, FTP | Proxy, Application Gateway |
-| 6 | Darstellung | Datenformate, Zeichencodierung, Kompression und ggf. Verschlüsselung. | JPEG, PNG, UTF-8, JSON, TLS* | – |
-| 5 | Sitzung | Verwaltet Sitzungen: Aufbau, Aufrechterhaltung und Beendigung. | RPC, NetBIOS, Sitzungsfunktionen von Anwendungen | – |
-| 4 | Transport | Ende-zu-Ende-Transport, Ports, Segmentierung und ggf. Zuverlässigkeit. | TCP, UDP | TCP-/UDP-Ports |
-| 3 | Vermittlung | Logische Adressierung und Routing zwischen Netzwerken. | IPv4, IPv6, ICMP, IPsec | Router, IP-Adresse |
-| 2 | Sicherung | Übertragung innerhalb eines lokalen Netzes, Frames und MAC-Adressierung; Fehlererkennung. | Ethernet, WLAN (MAC), PPP | Switch, MAC-Adresse |
-| 1 | Bitübertragung | Überträgt Bits als elektrische, optische oder Funksignale. | Ethernet-PHY, WLAN-PHY | Kabel, Glasfaser, Funk, Repeater |
+| 7 | Anwendung | Dienste für Programme | HTTP, DNS, SMTP, DHCP | Proxy, Gateway |
+| 6 | Darstellung | Format, Zeichen, Kompression, Verschlüsselung | UTF-8, JPEG, TLS* | – |
+| 5 | Sitzung | Sitzungen aufbauen, halten, beenden | RPC, NetBIOS | – |
+| 4 | Transport | Ende-zu-Ende, Ports, Segmentierung | TCP, UDP | – |
+| 3 | Vermittlung | logische Adressen, Routing | IPv4, IPv6, ICMP | Router |
+| 2 | Sicherung | Frames im lokalen Netz, MAC, Fehlererkennung | Ethernet, WLAN | Switch, Bridge |
+| 1 | Bitübertragung | Bits als Signal übertragen | Kupfer, Glasfaser, Funk | Repeater, Hub |
 
-*TLS wird im OSI-Modell nicht eindeutig einer einzelnen Schicht zugeordnet; häufig wird es zwischen Schicht 4 und 7 eingeordnet.
-
-## Prüfungserklärungen in 3 Sätzen
-
-**1. Bitübertragungsschicht**
-- Überträgt Bits als elektrische Signale, Lichtimpulse oder Funkwellen.
-- Definiert unter anderem Signalpegel, Frequenzen und Übertragungsmedien.
-- Beispiele: Kupferkabel, Glasfaser und WLAN-Funk.
-
-**2. Sicherungsschicht**
-- Überträgt Frames innerhalb eines lokalen Netzsegments.
-- MAC-Adressen identifizieren Netzwerkschnittstellen; Prüfsummen erkennen Übertragungsfehler.
-- Beispiele: Ethernet, WLAN und Switches.
-
-**3. Vermittlungsschicht**
-- Adressiert Datenpakete logisch und vermittelt sie zwischen Netzwerken.
-- IP-Adressen identifizieren Quell- und Zieladressen; Router leiten Pakete weiter.
-- Beispiele: IPv4, IPv6 und ICMP.
-
-**4. Transportschicht**
-- Ermöglicht die Kommunikation zwischen Anwendungen über Portnummern.
-- TCP bietet unter anderem zuverlässige, geordnete Übertragung; UDP bietet verbindungslosen Transport ohne Zustellgarantie.
-- Beispiele: TCP 443 für HTTPS, UDP 53 für DNS.
-
-**5. Sitzungsschicht**
-- Verwaltet logische Kommunikationssitzungen zwischen Anwendungen.
-- Unterstützt je nach Protokoll den Aufbau, die Steuerung und die Beendigung einer Sitzung.
-- Sitzungsfunktionen können auch in höheren Protokollen implementiert sein.
-
-**6. Darstellungsschicht**
-- Definiert, wie Anwendungsdaten codiert und strukturiert werden.
-- Formate wie JPEG, PNG und JSON ermöglichen die Interpretation der Daten.
-- Kompression und Verschlüsselung werden dem Modell häufig hier zugeordnet, liegen praktisch aber nicht immer auf dieser Schicht.
-
-**7. Anwendungsschicht**
-- Stellt Netzwerkdienste für Anwendungen bereit.
-- HTTP(S) dient der Webkommunikation, DNS der Namensauflösung und SMTP dem E-Mail-Versand.
-- DHCP konfiguriert IP-Parameter; FTP überträgt Dateien.
-
-## Wichtige Korrekturen
-
-- **MAC-Adressen machen die Übertragung nicht automatisch sicher.** Sie dienen der Adressierung innerhalb eines lokalen Netzsegments.
-- **TCP garantiert keine fehlerfreie Gesamtanwendung.** Es gewährleistet zuverlässige, geordnete Byteübertragung zwischen TCP-Endpunkten, sofern die Verbindung erfolgreich bleibt.
-- **UDP ist nicht automatisch schneller.** Es hat weniger Transportmechanismen, aber die tatsächliche Geschwindigkeit hängt vom Anwendungsfall ab.
-- **DNS, DHCP und HTTP gehören zur Anwendungsschicht**, auch wenn sie UDP oder TCP verwenden.
-- **Sitzungen sind nicht ausschließlich Schicht 5.** Moderne Protokolle verteilen Sitzungsfunktionen oft auf mehrere Schichten.
-- **JSON ist ein Datenformat, kein Netzwerkprotokoll.** PNG und JPEG sind Bildformate; UTF-8 ist eine Zeichencodierung.
-
-## Merkhilfe
-
-| Schicht | Leitfrage |
+**OSI vs. TCP/IP (kommt gern als Vergleich)**
+| OSI | TCP/IP |
 |---|---|
-| 7 Anwendung | Welcher Netzwerkdienst wird benötigt? |
-| 6 Darstellung | Wie sind die Daten codiert? |
-| 5 Sitzung | Wie wird die Sitzung verwaltet? |
-| 4 Transport | Welcher Prozess empfängt die Daten? |
-| 3 Vermittlung | In welches Netzwerk muss das Paket? |
-| 2 Sicherung | Welches Gerät im lokalen Netz ist das Ziel? |
-| 1 Bitübertragung | Wie werden die Bits physisch übertragen? |
+| 1 + 2 | Netzwerkzugriff |
+| 3 | Internet |
+| 4 | Transport |
+| 5 + 6 + 7 | Anwendung |
 
-**Datenkapselung beim Senden:**
+**Einordnung üben**
+| Aussage | Schicht |
+|---|---|
+| „Switch lernt MAC-Adressen“ | 2 |
+| „Router wählt den nächsten Hop“ | 3 |
+| „TCP segmentiert und nummeriert“ | 4 |
+| „Proxy terminiert TLS und prüft HTTP“ | 7 |
+| „Hub verteilt Signale an alle Ports“ | 1 |
 
-Anwendungsdaten → TCP-Segment/UDP-Datagramm → IP-Paket → Ethernet-Frame → Bits
+## Prüfungsfrage
 
-**Wichtige Adressen:** MAC = Schicht 2, IP = Schicht 3, Port = Schicht 4.
+**Frage:** Ein Paket geht vom Client über einen Switch und einen Router zum Webserver. Auf welchen Schichten arbeiten die Geräte? Begründe.
 
-## Siehe auch
+**Musterantwort:** Der Switch arbeitet auf Schicht 2 und leitet Frames anhand seiner MAC-Adresstabelle weiter, ohne die IP-Adresse zu verändern. Der Router arbeitet auf Schicht 3, liest die Ziel-IP und wählt anhand der Routingtabelle den nächsten Hop. Dabei wird die Layer-2-Adresse pro Strecke neu geschrieben, die IP-Adresse bleibt Ende-zu-Ende erhalten.
 
-- [MAC](mac.md) – Schicht 2: Adressierung
-- [Netzwerktypen](netzwerktypen.md) – Einsatz von Schicht 1–3
-- [Proxy](proxy.md) – Schicht 7: Application Gateway
-- [Firewall](firewall.md) – Paketfilter (3/4) bis Layer 7
+## Falle
 
+- „TLS ist Schicht 6“ – strittig, also besser „zwischen 4 und 7“ schreiben.
+- Hub und Switch verwechseln: Hub = Schicht 1, Switch = Schicht 2.
+- „Router arbeitet auf Schicht 2, weil er MAC-Adressen umschreibt“ → nein, das Umschreiben ist nur die neue Frameadresse.
+- Schicht 5 und 7 vertauschen: DNS und DHCP sind Anwendung, nicht Sitzung.
+
+## Merksatz
+
+**Please Do Not Throw Salami Pizza Away** – und dazu: **Switch = 2, Router = 3, Proxy = 7.**
+
+## Verwandt
+
+- [MAC](mac.md) – Schicht 2 konkret
+- [IPv4](ipv4.md) – Schicht 3 konkret
+- [Proxy](proxy.md) – Schicht 7 konkret
+- [Firewall](firewall.md) – welcher Typ auf welcher Schicht filtert

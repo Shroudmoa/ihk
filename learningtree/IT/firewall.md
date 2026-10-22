@@ -1,66 +1,61 @@
 # Firewall
 
-## Firewall-Typen und Funktionsweisen (IHK)
+## In 30 Sekunden
 
-Eine **Firewall** kontrolliert Netzwerkverkehr anhand definierter Sicherheitsregeln. Sie schützt Systeme und Netzwerke, bietet aber keinen vollständigen Schutz gegen Phishing, Social Engineering, Malware über Wechseldatenträger oder bereits kompromittierte Systeme.
+- Eine Firewall erlaubt oder verbietet Verkehr nach Regeln – sie ist **kein Rundumschutz**.
+- **Paketfilter** (Layer 3/4) sieht IP, Port, Protokoll. **Stateful** merkt sich Verbindungen. **NGFW** schaut bis Layer 7.
+- Regeln werden **von oben nach unten** gelesen, die erste passende gewinnt, unten steht **deny all**.
+- Zonen: Internet → DMZ (Web/Mail) → LAN. Gäste nie ins interne LAN.
+- Phishing, USB-Sticks und bereits infizierte Clients fängt keine Firewall.
 
-| Firewall-Typ | Funktionsweise | OSI-Schicht | Vorteile / Grenzen |
+## Kernwissen
+
+| Typ | Schicht | Erkennt | Grenze |
 |---|---|---|---|
-| Paketfilter-Firewall | Prüft IP-Adressen, Protokolle und Ports einzelner Pakete. | 3/4 | Schnell, aber keine tiefe Inhaltsanalyse. |
-| Stateful Firewall | Verfolgt den Zustand von Verbindungen und prüft, ob Pakete zu einer erlaubten Sitzung gehören. | 3/4 | Erkennt ungültige oder unerwartete Verbindungspakete; analysiert nicht automatisch den Anwendungsinhalt. |
-| Proxy-Firewall / Application-Level Gateway | Vermittelt zwischen Client und Server und prüft Anwendungsprotokolle. | 7 | Detaillierte Kontrolle; zusätzlicher Verarbeitungsaufwand. |
-| Application Firewall | Kontrolliert anwendungsspezifische Kommunikation anhand definierter Regeln. | Häufig 7 | Erkennt unerlaubte Anwendungsaktionen; Schutz hängt von Regeln und Protokollunterstützung ab. |
-| WAF (Web Application Firewall) | Analysiert HTTP(S)-Anfragen an Webanwendungen. | 7 | Schutz gegen bestimmte SQL-Injection- und XSS-Angriffe; kein vollständiger Ersatz für sichere Programmierung. |
-| NGFW (Next-Generation Firewall) | Kombiniert Stateful Inspection mit Anwendungserkennung, Deep Packet Inspection und häufig IDS/IPS. | 3–7, je nach Funktion | Erweiterte Erkennung; höhere Kosten und Konfigurationsaufwand. |
-| Host-/Personal Firewall | Kontrolliert ein- und ausgehenden Verkehr direkt auf einem Endgerät. | 3–7, je nach Funktion | Schützt einzelne Hosts auch außerhalb des Firmennetzes; kein Schutz vor allen lokalen Angriffen. |
-| Netzwerk-Firewall | Kontrolliert zentral den Verkehr zwischen Netzwerken, z. B. LAN und Internet. | Abhängig vom Firewall-Typ | Schützt mehrere Systeme; Fehlkonfigurationen können ganze Netzbereiche gefährden. |
+| Paketfilter | 3/4 | IP, Port, Protokoll | kein Zusammenhang zwischen Paketen |
+| Stateful (SPI) | 3/4 | Verbindungszustand | Inhalt bleibt unsichtbar |
+| Proxy / ALG | 7 | Anwendungsprotokoll | Aufwand, möglicher Flaschenhals |
+| WAF | 7 | HTTP-Inhalte | kein Ersatz für sichere Programmierung |
+| NGFW | 3–7 | App-Erkennung, IDS/IPS | teuer, komplex |
+| Host-Firewall | 3–7 | lokal pro Gerät | schützt nicht das Netz |
 
-## IHK-Prüfungswissen
+**Regel lesen und schreiben**
+`Quelle → Ziel | Port | Protokoll | Aktion`
 
-### Paketfilter vs. Stateful Firewall
+| # | Quelle | Ziel | Port | Aktion |
+|---:|---|---|---|---|
+| 1 | LAN `192.168.1.0/24` | any | 443 | allow |
+| 2 | any | Webserver | 443 | allow |
+| 3 | Gast `192.168.9.0/24` | LAN | any | deny |
+| 4 | any | any | any | deny |
 
-- **Paketfilter:** Entscheidet anhand einzelner Paketmerkmale, z. B. Quell-IP, Ziel-IP, TCP und Port 443.
-- **Stateful:** Berücksichtigt zusätzlich den Zustand der Verbindung und die zugehörigen Sitzungsinformationen.
-- **Beispiel:** Eine Stateful Firewall lässt Antwortpakete einer erlaubten Verbindung zu, ohne jede Antwortverbindung separat freigeben zu müssen.
+Regel 1–3 sind Beispiele, Regel 4 ist die implizite Grundhaltung: **alles andere ist verboten**.
 
-### WAF vs. NGFW
+**Zonen und Richtung**
+- Internet → DMZ: nur die Dienste, die veröffentlicht werden sollen (443, 25 …).
+- DMZ → LAN: möglichst gar nichts, sonst nur einzeln begründet.
+- LAN → Internet: meist erlaubt, aber mit Egress-Filter.
 
-- **WAF:** Spezialisierter Schutz für Webanwendungen, insbesondere gegen Angriffe auf HTTP(S)-Anfragen.
-- **NGFW:** Breiterer Netzwerkschutz mit Anwendungsidentifikation, Inhaltsanalyse und häufig IPS.
-- **Abgrenzung:** Eine WAF ersetzt keine Netzwerk-Firewall; beide können sich ergänzen.
+## Prüfungsfrage
 
-### Typische Firewall-Regeln
+**Frage:** Warum reicht eine Stateful Firewall nicht, um den Datenabfluss eines kompromittierten Clients zu verhindern?
 
-| Regel | Wirkung |
-|---|---|
-| TCP 443 erlauben | HTTPS-Verbindungen zulassen |
-| TCP 22 aus dem Internet blockieren | SSH-Zugriff von extern verhindern |
-| Eingehenden Verkehr standardmäßig blockieren | Nicht ausdrücklich erlaubte Verbindungen verwerfen |
-| Nur erforderliche Ports freigeben | Angriffsfläche reduzieren |
-| Ausgehenden Verkehr kontrollieren | Verbindungen kompromittierter Systeme einschränken |
+**Musterantwort:** Die Stateful Firewall prüft nur IP-Adresse, Port und Verbindungszustand. Der Client baut eine erlaubte Verbindung nach außen auf, zum Beispiel HTTPS auf Port 443; den Inhalt sieht die Firewall nicht. Gegen Datenabfluss braucht man Layer-7-Prüfung über NGFW oder Proxy, Egress-Filterung und Endpoint-Schutz.
 
-### Grenzen einer Firewall
+## Falle
 
-- Phishing und Social Engineering werden nicht zuverlässig verhindert.
-- Malware kann über USB oder andere lokale Medien eingeschleust werden.
-- Bereits kompromittierte interne Systeme können erlaubte Verbindungen missbrauchen.
-- Verschlüsselter Verkehr ist ohne geeignete Inspektion nur eingeschränkt inhaltlich prüfbar.
-- Fehlkonfigurationen und unbekannte Schwachstellen können Schutzmaßnahmen umgehen.
+- „Die Firewall schützt vor Viren und Phishing“ → falsch, dafür sind Endpoint-Schutz und Mailfilter zuständig.
+- Eine `allow any → any`-Regel oben → alles darunter ist wirkungslos.
+- NAT mit Firewall verwechseln: NAT übersetzt Adressen, es filtert nicht.
+- Stateful mit „prüft Inhalte“ erklären → tut es nicht.
 
-### Verknüpfung mit anderen IHK-Themen
+## Merksatz
 
-- **OSI-Modell:** Paketfilter typischerweise Layer 3/4; WAF typischerweise Layer 7.
-- **Netzwerkgeräte:** Router verbinden Netze; Firewalls kontrollieren den Verkehr; Switches verbinden Geräte innerhalb eines LANs.
-- **VPN/IPsec:** Schützt die Kommunikation zwischen Standorten oder Endpunkten, ersetzt aber keine Firewall-Regeln.
-- **DSGVO Art. 32:** Firewalls können Bestandteil angemessener technischer und organisatorischer Maßnahmen (TOM) sein.
-- **Schutzziele:** Firewalls unterstützen Vertraulichkeit, Integrität und Verfügbarkeit, garantieren diese aber nicht.
+**„Oben gewinnt, unten deny.“** Regeln immer von speziell nach allgemein sortieren.
 
-**Merksatz:** Eine Firewall kontrolliert Netzwerkverkehr. Sie ersetzt weder Endgeräteschutz noch sichere Software, Benutzeraufklärung oder ein funktionierendes Backup-Konzept.
+## Verwandt
 
-## Siehe auch
-
-- [Proxy](proxy.md) – Application-Level Gateway
+- [Proxy](proxy.md) – Application-Level Gateway und Reverse Proxy
 - [Netzwerktypen](netzwerktypen.md) – LAN, WAN und Segmentierung
 - [hackers-can](hackers-can.md) – welche Angriffe abgewehrt werden
 - [OSI](osi.md) – Zuordnung der Firewall-Typen zu Schichten
-

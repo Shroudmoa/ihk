@@ -153,7 +153,7 @@ Der Bootloader lädt den Betriebssystem-Kernel und gegebenenfalls eine initiale 
 Der Kernel verwaltet Ressourcen und stellt kontrollierte Schnittstellen für Anwendungen bereit.
 Partitionen strukturieren den Datenträger; Dateisysteme organisieren die darauf gespeicherten Daten.
 
-## Siehe auch
+## Verwandt
 
 - [CPU](cpu.md) – Zusammenspiel mit der CPU
 - [VM-Container-Server](vm-container-server.md) – Kernel im Container

@@ -1,31 +1,47 @@
-# IHK Prüfung
+# IHK AP2 – Lernunterlagen
 
-Alle Infos werden als eigenes Thema abgelegt:
+Zwei Lerntrees, ein Thema pro Datei:
 
-- `learningtree/IT/<titel>.md`
-- `learningtree/Wirtschaft/<titel>.md`
+- [`learningtree/IT.md`](learningtree/IT.md) – 29 Themen in 7 Kategorien
+- [`learningtree/Wirtschaft.md`](learningtree/Wirtschaft.md) – 4 Themen
 
-`learningtree/IT.md` und `learningtree/Wirtschaft.md` sind nur die Übersicht
-mit Links auf die Themen. Keine Nummerierung bei Dateien oder Lektionen.
+Jedes Thema hat die gleiche Form – du liest nie durch Textwüsten:
+
+```
+## In 30 Sekunden   das Wichtigste, max. 5 Punkte
+## Kernwissen       Tabellen und Rechenwege
+## Prüfungsfrage    echte Aufgabe + Musterantwort
+## Falle            der Fehler, der Punkte kostet
+## Merksatz         Eselsbrücke
+## Verwandt         Links zu den Nachbarthemen
+```
 
 ## inputer
 
-Rust-Tool. Jede Eingabe landet als Roh-Text in `archive/rawinfos/` und als
-strukturierter Eintrag in `archive/jsonformat/`, daraus werden die
-Themen-Dateien unter `learningtree/` gebaut.
+Rust-Tool unter `inputer/`. Es speichert jede Eingabe in
+`archive/jsonformat/` und `archive/rawinfos/` und baut daraus
+`learningtree/`.
 
 ```
 cd inputer
-cargo run            # neue Eingabe: Fach, Titel, Text (Ende: ACATS), Kategorie
-cargo run -- build   # archive/jsonformat/ -> learningtree/ (alles neu bauen)
+cargo run            # neue Eingabe: Fach, Titel, Kategorie, Ein-Satz, Text
+cargo run -- build   # archive/jsonformat/ -> learningtree/
+cargo run -- check   # doppelte Titel, tote Links, fehlende Ein-Sätze, Waisen
 ```
 
-Die Kategorie ist optional (einfach Enter drücken). Sie gruppiert das Thema
-im Index `IT.md`/`Wirtschaft.md` unter eine Überschrift.
+- Text endet mit **ACATS** in einer eigenen Zeile.
+- Die Kategorie wird aus einem festen Menü gewählt, nicht getippt.
+- Bei jedem `add` wird die Themendatei sofort angelegt und im Index verlinkt.
 
-Bei jedem `cargo run` wird die Themen-Datei direkt angelegt und in
-`IT.md`/`Wirtschaft.md` verlinkt. `build` ist nur zum Neu-Bauen da, wenn
-du die JSON-Dateien manuell geändert hast.
+Die Dateien in `learningtree/` sind **generiert**. Nicht dort editieren –
+sonst ist die Änderung beim nächsten Build weg. Quelle ist das JSON.
 
-Die Dateien unter `learningtree/` sind generiert — dort nicht manuell
-editieren, sondern nur über `cargo run` (add) und `cargo run -- build`.
+## Ordner
+
+| Pfad | Bedeutung |
+|---|---|
+| `learningtree/` | generierte Lerntrees (nur lesen) |
+| `archive/jsonformat/` | Quelle: strukturierte Einträge (Änderungen hier) |
+| `archive/rawinfos/` | Roh-Log aller Eingaben, wird nur angehängt |
+| `archive/APT2/` | Kursfolien und Übungslinks |
+| `archive/analyses/` | alte V1/V2/V3-Sammlungen (Archiv) |

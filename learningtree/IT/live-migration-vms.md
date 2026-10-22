@@ -177,7 +177,7 @@ Live Migration verschiebt eine laufende VM zwischen kompatiblen Hosts, indem RAM
 - [Microsoft Learn – Live Migration ohne Failover Clustering](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/use-live-migration-without-failover-clustering-to-move-a-virtual-machine)
 - [Broadcom – CPU-Kompatibilität bei VMware vMotion](https://knowledge.broadcom.com/external/article/316536/migration-to-a-different-processor.html)
 
-## Siehe auch
+## Verwandt
 
 - [Hypervisor-Typen](hypervisor-typen.md) – Typ-1-Hypervisoren im Rechenzentrum
 - [VM-Container-Server](vm-container-server.md) – VM vs. Container

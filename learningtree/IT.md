@@ -1,50 +1,67 @@
 # IT
 
-## Sicherheit & Datenschutz
+> 29 Themen in 7 Kategorien.
 
-- [DSGVO--TOM](IT/dsgvo-tom.md)
-- [Schutzziele](IT/schutzziele.md)
-- [hackers-can](IT/hackers-can.md)
+## Grundlagen & Hardware (5)
 
-## Netzwerk
+| Thema | In einem Satz |
+|---|---|
+| [CPU](IT/cpu.md) | Kerne, Threads, Takt, Cache – warum GHz allein nichts aussagt. |
+| [USB-SSD-HDD](IT/usb-ssd-hdd.md) | Schnittstellen, Geschwindigkeit und Einsatz von HDD, SSD und NVMe. |
+| [Bit-Byte](IT/bit-byte.md) | Bit, Byte, KB vs. KiB – die Umrechnungsfalle in Aufgaben. |
+| [Speicherhirachie](IT/speicherhirachie.md) | Register bis Band: Geschwindigkeit, Kosten, Flüchtigkeit. |
+| [chmod](IT/chmod.md) | rwx, Oktalzahlen und die 755/644-Frage. |
 
-- [OSI](IT/osi.md)
-- [MAC](IT/mac.md)
-- [Netzwerktypen](IT/netzwerktypen.md)
-- [Firewall](IT/firewall.md)
-- [IPv6](IT/ipv6.md)
-- [Proxy](IT/proxy.md)
+## Netzwerk (7)
 
-## Cloud
+| Thema | In einem Satz |
+|---|---|
+| [OSI](IT/osi.md) | Die 7 Schichten und wo Switch, Router und Proxy hingehören. |
+| [MAC](IT/mac.md) | 48 Bit, OUI, ARP – und warum MAC-Filter keine Sicherheit sind. |
+| [Netzwerktypen](IT/netzwerktypen.md) | PAN bis GAN und welche Risiken pro Größe dazukommen. |
+| [Firewall](IT/firewall.md) | Regelwerke lesen und schreiben, Stateful vs. NGFW, DMZ. |
+| [IPv6](IT/ipv6.md) | 128 Bit, SLAAC, NDP – und was du von IPv4 nicht übernehmen darfst. |
+| [Proxy](IT/proxy.md) | Forward, Reverse und Port Forwarding in einer Tabelle. |
+| [IPv4](IT/ipv4.md) | Subnetting, CIDR und die 2-Host-Regel – kommt in jeder GA2. |
 
-- [Cloud_computing](IT/cloud-computing.md)
+## Sicherheit & Datenschutz (4)
 
-## Virtualisierung & Server
+| Thema | In einem Satz |
+|---|---|
+| [DSGVO & TOM](IT/dsgvo-tom.md) | Rechtsgrundlagen, Betroffenenrechte und die TOM, die die Prüfung sehen will. |
+| [Schutzziele](IT/schutzziele.md) | Vertraulichkeit, Integrität, Verfügbarkeit – und die zwei, die alle vergessen. |
+| [hackers-can](IT/hackers-can.md) | Die Angriffe aus den Prüfungsszenarien, jeweils mit Gegenmaßnahme. |
+| [Symmetrische-und-Asymmetrische](IT/symmetrische-und-asymmetrische.md) | Wann symmetrisch, wann asymmetrisch – und warum TLS beides nutzt. |
 
-- [VM-Container-Server](IT/vm-container-server.md)
-- [Hypervisor-Typen](IT/hypervisor-typen.md)
-- [BIOS/UEFI-Kernel](IT/bios-uefi-kernel.md)
-- [Live-Migration-VMs](IT/live-migration-vms.md)
+## Virtualisierung & Server (4)
 
-## Hardware & Storage
+| Thema | In einem Satz |
+|---|---|
+| [VM-Container-Server](IT/vm-container-server.md) | Bare Metal, VM, Container: Isolation, Dichte, Startzeit. |
+| [Hypervisor-Typen](IT/hypervisor-typen.md) | Typ 1 vs. Typ 2 und wann welcher in der Aufgabe passt. |
+| [BIOS/UEFI-Kernel](IT/bios-uefi-kernel.md) | Bootkette, Kernel Space vs. User Space, System Calls. |
+| [Live-Migration-VMs](IT/live-migration-vms.md) | VMs ohne Ausfall verschieben: Ablauf, Voraussetzungen, Grenzen. |
 
-- [Snapshots-Backups](IT/snapshots-backups.md)
-- [RAID](IT/raid.md)
-- [CPU](IT/cpu.md)
+## Storage & Backup (3)
 
-## Allgemein
+| Thema | In einem Satz |
+|---|---|
+| [Snapshots-Backups](IT/snapshots-backups.md) | 3-2-1-1-0, Backup-Arten und warum Snapshots kein Backup sind. |
+| [RAID](IT/raid.md) | Level, nutzbare Kapazität und Ausfalltoleranz – inklusive Rechenweg. |
+| [DAS-NAS-SAN](IT/das-nas-san.md) | Block, Datei, Objekt – wer was nutzt und wo der Unterschied Punkte bringt. |
 
-- [Symmetrische-und-Asymmetrische](IT/symmetrische-und-asymmetrische.md)
-- [Abkürzungen](IT/abkuerzungen.md)
-- [CAPEX-OPEX](IT/capex-opex.md)
-- [IPv4](IT/ipv4.md)
-- [SLA](IT/sla.md)
-- [Skalierbarkeit-Elastizität](IT/skalierbarkeit-elastizitaet.md)
-- [USB-SSD-HDD](IT/usb-ssd-hdd.md)
-- [Bit-Byte](IT/bit-byte.md)
-- [Speicherhirachie](IT/speicherhirachie.md)
-- [DAS-NAS-SAN](IT/das-nas-san.md)
+## Cloud & Wirtschaftlichkeit (4)
 
-## ls
+| Thema | In einem Satz |
+|---|---|
+| [Cloud_computing](IT/cloud-computing.md) | IaaS bis SaaS, Skalierung und die Kostenfalle Lock-in. |
+| [CAPEX-OPEX](IT/capex-opex.md) | Investition vs. Betriebskosten – die Rechnung hinter Cloud-Entscheidungen. |
+| [SLA](IT/sla.md) | Verfügbarkeit in Prozent, Reaktionszeit und was ein SLA nicht verspricht. |
+| [Skalierbarkeit-Elastizität](IT/skalierbarkeit-elastizitaet.md) | Vertikal vs. horizontal – und was elastisch wirklich heißt. |
 
-- [Fachbegriffe](IT/fachbegriffe.md)
+## Referenz (2)
+
+| Thema | In einem Satz |
+|---|---|
+| [Abkürzungen](IT/abkuerzungen.md) | Nachschlagen, nicht lernen: die Abkürzungen der Prüfung. |
+| [Fachbegriffe](IT/fachbegriffe.md) | Slang und Architektur-Begriffe, die in Aufgaben vorkommen. |

@@ -63,7 +63,7 @@ Verbindlichkeit - Eine Handlung darf später nicht glaubhaft abgestritten werden
 - Authentizität: Ist der Kommunikationspartner echt?
 - Verbindlichkeit: Kann eine Handlung glaubhaft abgestritten werden?
 
-## Siehe auch
+## Verwandt
 
 - [DSGVO--TOM](dsgvo-tom.md) – TOM nach Art. 32 DSGVO
 - [hackers-can](hackers-can.md) – Bedrohungen: DoS, Phishing, MitM

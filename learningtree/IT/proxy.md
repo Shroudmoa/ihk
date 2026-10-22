@@ -101,7 +101,7 @@ Der Router übersetzt beziehungsweise leitet eingehende Verbindungen anhand eine
 
 **Prüfungssatz:** Ein Forward Proxy vermittelt Client-Anfragen, ein Reverse Proxy vermittelt Server-Anfragen und Port Forwarding leitet eingehende Verbindungen anhand einer NAT-Regel an einen internen Dienst weiter.
 
-## Siehe auch
+## Verwandt
 
 - [Firewall](firewall.md) – Abgrenzung Proxy vs. Firewall
 - [OSI](osi.md) – Schicht 7: Anwendungsprotokolle

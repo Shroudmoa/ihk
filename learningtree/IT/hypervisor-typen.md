@@ -35,7 +35,7 @@ Läuft als Anwendung auf einem Host-Betriebssystem. Hardwarezugriffe erfolgen ü
 
 **Wichtig:** Typ 1 ist nicht automatisch stabiler oder sicherer. Entscheidend sind Konfiguration, Updates, Hardware und Betrieb.
 
-## Siehe auch
+## Verwandt
 
 - [VM-Container-Server](vm-container-server.md) – Vergleich Bare Metal, VM, Container
 - [Live-Migration-VMs](live-migration-vms.md) – Migration zwischen Hosts

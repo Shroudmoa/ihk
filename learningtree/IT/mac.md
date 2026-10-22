@@ -36,7 +36,7 @@ Eine **MAC-Adresse (Media Access Control Address)** ist eine Layer-2-Adresse des
 
 **Merksatz:** MAC = lokale Zustellung im Layer-2-Netz; IP = logische Adressierung zwischen Netzwerken.
 
-## Siehe auch
+## Verwandt
 
 - [OSI](osi.md) – Einordnung in Schicht 2
 - [Netzwerktypen](netzwerktypen.md) – Adressierung im lokalen Netz

@@ -83,7 +83,7 @@ Ein Client erhält über DNS einen A- und einen AAAA-Record. Er verwendet Dual S
 
 **Merksatz:** Dual Stack = IPv4 und IPv6 parallel; A = IPv4; AAAA = IPv6; DHCPv6 = optionale zentrale IPv6-Konfiguration; SLAAC = automatische IPv6-Konfiguration.
 
-## Siehe auch
+## Verwandt
 
 - [MAC](mac.md) – Link-Layer-Adressen im Nachbarverfahren
 - [Netzwerktypen](netzwerktypen.md) – Einsatzbereich und Adressierung

@@ -69,7 +69,7 @@ NaaS = Netzwerk
 
 **IHK-Merksatz:** Cloud-Dienste reduzieren den eigenen Betriebsaufwand, erhöhen aber häufig die Abhängigkeit vom Anbieter und erfordern weiterhin Sicherheits- und Datenschutzmaßnahmen.
 
-## Siehe auch
+## Verwandt
 
 - [VM-Container-Server](vm-container-server.md) – Abstraktionsebenen IaaS bis SaaS
 - [Hypervisor-Typen](hypervisor-typen.md) – Basis der Virtualisierung

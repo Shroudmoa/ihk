@@ -260,7 +260,7 @@ Die CPU führt Maschinenbefehle aus; ihre Leistung hängt unter anderem von Takt
 Die Speicherhierarchie aus Registern, Cache und RAM reduziert Zugriffszeiten und versorgt die CPU mit Daten.  
 GPUs optimieren stark parallele Berechnungen, während CPUs vielseitige Aufgaben und die Programmsteuerung übernehmen.
 
-## Siehe auch
+## Verwandt
 
 - [BIOS/UEFI-Kernel](bios-uefi-kernel.md) – Kernel tasks und System Calls
 - [VM-Container-Server](vm-container-server.md) – Kerne und Ressourcen für VMs

@@ -70,7 +70,7 @@ Snapshots ermöglichen kurzfristige Rollbacks, sind aber kein Ersatz für unabh�
 Backups schützen Daten durch separate Sicherungskopien und ermöglichen die Wiederherstellung nach Ausfällen oder Datenverlust.
 Die 3-2-1-1-0-Regel kombiniert mehrere Kopien, unterschiedliche Medien, externe und offline beziehungsweise unveränderbare Sicherungen sowie überprüfte Wiederherstellbarkeit.
 
-## Siehe auch
+## Verwandt
 
 - [RAID](raid.md) – RAID ist kein Backup
 - [Live-Migration-VMs](live-migration-vms.md) – Alternative zum Herunterfahren
