@@ -1,6 +1,6 @@
 # IT
 
-> 29 Themen in 7 Kategorien.
+> 30 Themen in 7 Kategorien.
 
 ## Grundlagen & Hardware (5)
 
@@ -12,7 +12,7 @@
 | [Speicherhirachie](IT/speicherhirachie.md) | Register bis Band: Geschwindigkeit, Kosten, Flüchtigkeit. |
 | [chmod](IT/chmod.md) | rwx, Oktalzahlen und die 755/644-Frage. |
 
-## Netzwerk (7)
+## Netzwerk (8)
 
 | Thema | In einem Satz |
 |---|---|
@@ -23,6 +23,7 @@
 | [IPv6](IT/ipv6.md) | 128 Bit, SLAAC, NDP – und was du von IPv4 nicht übernehmen darfst. |
 | [Proxy](IT/proxy.md) | Forward, Reverse und Port Forwarding in einer Tabelle. |
 | [IPv4](IT/ipv4.md) | Subnetting, CIDR und die 2-Host-Regel – kommt in jeder GA2. |
+| [Active-Directory](IT/active-directory.md) | – |
 
 ## Sicherheit & Datenschutz (4)
 
