@@ -1,8 +1,8 @@
 # IT
 
-> 36 Themen in 7 Kategorien.
+> 43 Themen in 7 Kategorien.
 
-## Grundlagen & Hardware (5)
+## Grundlagen & Hardware (6)
 
 | Thema | In einem Satz |
 |---|---|
@@ -11,6 +11,7 @@
 | [Bit-Byte](IT/bit-byte.md) | Bit, Byte, KB vs. KiB – die Umrechnungsfalle in Aufgaben. |
 | [Speicherhirachie](IT/speicherhirachie.md) | Register bis Band: Geschwindigkeit, Kosten, Flüchtigkeit. |
 | [chmod](IT/chmod.md) | rwx, Oktalzahlen und die 755/644-Frage. |
+| [HA-Hochverfügbarkeit](IT/ha-hochverfuegbarkeit.md) | – |
 
 ## Netzwerk (8)
 
@@ -60,7 +61,7 @@
 | [SLA](IT/sla.md) | Verfügbarkeit in Prozent, Reaktionszeit und was ein SLA nicht verspricht. |
 | [Skalierbarkeit-Elastizität](IT/skalierbarkeit-elastizitaet.md) | Vertikal vs. horizontal – und was elastisch wirklich heißt. |
 
-## Referenz (8)
+## Referenz (14)
 
 | Thema | In einem Satz |
 |---|---|
@@ -72,3 +73,9 @@
 | [Projektstruckturplan-PSP](IT/projektstruckturplan-psp.md) | – |
 | [Aufwandsschätzung](IT/aufwandsschaetzung.md) | – |
 | [PERT](IT/pert.md) | – |
+| [Ressourcenplan](IT/ressourcenplan.md) | – |
+| [Soll-Ist-Vergleich](IT/soll-ist-vergleich.md) | – |
+| [Amortisation](IT/amortisation.md) | – |
+| [TCO](IT/tco.md) | – |
+| [BEP](IT/bep.md) | – |
+| [Stundensatz-(intern)](IT/stundensatz-intern.md) | – |
