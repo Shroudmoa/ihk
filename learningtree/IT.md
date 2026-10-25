@@ -1,6 +1,6 @@
 # IT
 
-> 30 Themen in 7 Kategorien.
+> 36 Themen in 7 Kategorien.
 
 ## Grundlagen & Hardware (5)
 
@@ -60,9 +60,15 @@
 | [SLA](IT/sla.md) | Verfügbarkeit in Prozent, Reaktionszeit und was ein SLA nicht verspricht. |
 | [Skalierbarkeit-Elastizität](IT/skalierbarkeit-elastizitaet.md) | Vertikal vs. horizontal – und was elastisch wirklich heißt. |
 
-## Referenz (2)
+## Referenz (8)
 
 | Thema | In einem Satz |
 |---|---|
 | [Abkürzungen](IT/abkuerzungen.md) | Nachschlagen, nicht lernen: die Abkürzungen der Prüfung. |
 | [Fachbegriffe](IT/fachbegriffe.md) | Slang und Architektur-Begriffe, die in Aufgaben vorkommen. |
+| [AOB](IT/aob.md) | – |
+| [Netzplan](IT/netzplan.md) | – |
+| [Gantt-Diagramm](IT/gantt-diagramm.md) | – |
+| [Projektstruckturplan-PSP](IT/projektstruckturplan-psp.md) | – |
+| [Aufwandsschätzung](IT/aufwandsschaetzung.md) | – |
+| [PERT](IT/pert.md) | – |
