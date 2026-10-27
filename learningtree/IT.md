@@ -1,8 +1,8 @@
 # IT
 
-> 43 Themen in 7 Kategorien.
+> 52 Themen in 7 Kategorien.
 
-## Grundlagen & Hardware (6)
+## Grundlagen & Hardware (8)
 
 | Thema | In einem Satz |
 |---|---|
@@ -12,8 +12,10 @@
 | [Speicherhirachie](IT/speicherhirachie.md) | Register bis Band: Geschwindigkeit, Kosten, Flüchtigkeit. |
 | [chmod](IT/chmod.md) | rwx, Oktalzahlen und die 755/644-Frage. |
 | [HA-Hochverfügbarkeit](IT/ha-hochverfuegbarkeit.md) | – |
+| [LDAP](IT/ldap.md) | # LDAP – Lightweight Directory Access Protocol |
+| [BIOS-UEFI](IT/bios-uefi.md) | – |
 
-## Netzwerk (8)
+## Netzwerk (10)
 
 | Thema | In einem Satz |
 |---|---|
@@ -25,8 +27,10 @@
 | [Proxy](IT/proxy.md) | Forward, Reverse und Port Forwarding in einer Tabelle. |
 | [IPv4](IT/ipv4.md) | Subnetting, CIDR und die 2-Host-Regel – kommt in jeder GA2. |
 | [Active-Directory](IT/active-directory.md) | – |
+| [RBAC](IT/rbac.md) | – |
+| [Ports](IT/ports.md) | – |
 
-## Sicherheit & Datenschutz (4)
+## Sicherheit & Datenschutz (9)
 
 | Thema | In einem Satz |
 |---|---|
@@ -34,6 +38,11 @@
 | [Schutzziele](IT/schutzziele.md) | Vertraulichkeit, Integrität, Verfügbarkeit – und die zwei, die alle vergessen. |
 | [hackers-can](IT/hackers-can.md) | Die Angriffe aus den Prüfungsszenarien, jeweils mit Gegenmaßnahme. |
 | [Symmetrische-und-Asymmetrische](IT/symmetrische-und-asymmetrische.md) | Wann symmetrisch, wann asymmetrisch – und warum TLS beides nutzt. |
+| [least_privlage](IT/least-privlage.md) | – |
+| [Authentifizierung-Autoritisierung-MFA](IT/authentifizierung-autoritisierung-mfa.md) | – |
+| [OS-Härtung](IT/os-haertung.md) | – |
+| [Patchmanagment-TU-SU-PU](IT/patchmanagment-tu-su-pu.md) | – |
+| [AAA-SIEM](IT/aaa-siem.md) | AAA-Server und SIEM-konzept |
 
 ## Virtualisierung & Server (4)
 

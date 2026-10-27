@@ -5,16 +5,6 @@ Zwei Lerntrees, ein Thema pro Datei:
 - [`learningtree/IT.md`](learningtree/IT.md) – 29 Themen in 7 Kategorien
 - [`learningtree/Wirtschaft.md`](learningtree/Wirtschaft.md) – 4 Themen
 
-Jedes Thema hat die gleiche Form – du liest nie durch Textwüsten:
-
-```
-## In 30 Sekunden   das Wichtigste, max. 5 Punkte
-## Kernwissen       Tabellen und Rechenwege
-## Prüfungsfrage    echte Aufgabe + Musterantwort
-## Falle            der Fehler, der Punkte kostet
-## Merksatz         Eselsbrücke
-## Verwandt         Links zu den Nachbarthemen
-```
 
 ## inputer
 

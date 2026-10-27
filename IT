@@ -1,0 +1,29 @@
+Domain => Benutzer Passworter Computer GPOs
+Forest 
+tree
+Domain
+-----------
+OUs-- containetrs für Abteilungen um objekte besser zu gruppieren
+
+Benutzer indentit
+Gruppen Berechtigung containetrs
+OUs Strucktur und Delegierung
+
+OUs sind reine Verwaltungsstruckturen in einer Domain und dienen dazu die GPOs bessert in einem Domain zu zuweisen 
+OUs können auf benutzer und Computer angewendet werden 
+--------
+GPos sidn hierachisch vererbrt Domain nach untern auf OU --- überschreiben ist möglich
+
+2 Gruppen 
+Security und distrobution Groups 
+Security=> um berechtigung zu vergeben 
+Verteilung => ausschließlich für die Kommunikation -- mails und so
+--------------
+Zugriffsliste -- ACL
+sicherheits gruppe wird in dieser liste auf eine Datei oder einen Ordner oder Anwendung eingetragen und dann alle Mitglieder von dieser Gruppe bekommenn die Berechtigung
+
+Gruppe selber können sogar Gruppe erhalten (Nesting) 
+Gültigkeitbereich (scoope)
+Globale im Forest und eigenen Domain gültig
+Domänenlokale nur in eigennen für Berechtigung, in anderen Domains können erhalten werden aber
+Universelle Gruppen -- Foresweit können Mitglieder bekommen
