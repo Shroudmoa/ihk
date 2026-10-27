@@ -15,7 +15,7 @@
 | [LDAP](IT/ldap.md) | # LDAP – Lightweight Directory Access Protocol |
 | [BIOS-UEFI](IT/bios-uefi.md) | – |
 
-## Netzwerk (10)
+## Netzwerk (13)
 
 | Thema | In einem Satz |
 |---|---|
@@ -26,11 +26,15 @@
 | [IPv6](IT/ipv6.md) | 128 Bit, SLAAC, NDP – und was du von IPv4 nicht übernehmen darfst. |
 | [Proxy](IT/proxy.md) | Forward, Reverse und Port Forwarding in einer Tabelle. |
 | [IPv4](IT/ipv4.md) | Subnetting, CIDR und die 2-Host-Regel – kommt in jeder GA2. |
+| [VLAN](IT/vlan.md) | Broadcast-Domänen trennen, Access/Trunk, 802.1Q und VLAN-Hopping. |
+| [NAT & PAT](IT/nat-pat.md) | Viele private IPs auf eine öffentliche IP – NAT vs PAT im Prüfungsstil. |
+| [DHCP](IT/dhcp.md) | Automatische IP-Vergabe, DORA, Lease, Reservierung. |
+| [DNS](IT/dns.md) | Namensauflösung, A/AAAA/CNAME/MX, Forward/Reverse, Rekursion. |
 | [Active-Directory](IT/active-directory.md) | – |
 | [RBAC](IT/rbac.md) | – |
 | [Ports](IT/ports.md) | – |
 
-## Sicherheit & Datenschutz (9)
+## Sicherheit & Datenschutz (11)
 
 | Thema | In einem Satz |
 |---|---|
@@ -38,20 +42,24 @@
 | [Schutzziele](IT/schutzziele.md) | Vertraulichkeit, Integrität, Verfügbarkeit – und die zwei, die alle vergessen. |
 | [hackers-can](IT/hackers-can.md) | Die Angriffe aus den Prüfungsszenarien, jeweils mit Gegenmaßnahme. |
 | [Symmetrische-und-Asymmetrische](IT/symmetrische-und-asymmetrische.md) | Wann symmetrisch, wann asymmetrisch – und warum TLS beides nutzt. |
-| [least_privlage](IT/least-privlage.md) | – |
-| [Authentifizierung-Autoritisierung-MFA](IT/authentifizierung-autoritisierung-mfa.md) | – |
-| [OS-Härtung](IT/os-haertung.md) | – |
-| [Patchmanagment-TU-SU-PU](IT/patchmanagment-tu-su-pu.md) | – |
-| [AAA-SIEM](IT/aaa-siem.md) | AAA-Server und SIEM-konzept |
+| [Least Privilege](IT/least-privlage.md) | Need-to-know & Minimalprinzip – das simpelste Mittel gegen Überrechte. |
+| [Authentifizierung-Autoritisierung-MFA](IT/authentifizierung-autoritisierung-mfa.md) | Wer bist du? Was darfst du? Was fehlt noch? Authentisierung vs Autorisierung. |
+| [AAA-SIEM](IT/aaa-siem.md) | Authentication, Authorization, Accounting & Security Information and Event Management. |
+| [OS-Härtung](IT/os-haertung.md) | Systeme abhärten, unnötige Dienste weg, Rechte minimal halten. |
+| [Patchmanagment-TU-SU-PU](IT/patchmanagment-tu-su-pu.md) | Patches, Updates & Upgrades strukturiert einspielen. |
+| [IDS-IPS](IT/ids-ips.md) | IDS erkennt, IPS blockiert – Unterschied & Einsatz. |
+| [PKI-Zertifikate](IT/pki-zertifikate.md) | CA, Zertifikate, Public/Private Key, Vertrauen in der Prüfung. |
 
-## Virtualisierung & Server (4)
+## Virtualisierung & Server (5)
 
 | Thema | In einem Satz |
 |---|---|
 | [VM-Container-Server](IT/vm-container-server.md) | Bare Metal, VM, Container: Isolation, Dichte, Startzeit. |
 | [Hypervisor-Typen](IT/hypervisor-typen.md) | Typ 1 vs. Typ 2 und wann welcher in der Aufgabe passt. |
 | [BIOS/UEFI-Kernel](IT/bios-uefi-kernel.md) | Bootkette, Kernel Space vs. User Space, System Calls. |
+| [BIOS-UEFI](IT/bios-uefi.md) | Unterschied BIOS vs UEFI, Boot, Secure Boot kurz. |
 | [Live-Migration-VMs](IT/live-migration-vms.md) | VMs ohne Ausfall verschieben: Ablauf, Voraussetzungen, Grenzen. |
+| [GPO](IT/gpo.md) | Gruppenrichtlinien zentral verteilen, Vererbung, Priorität. |
 
 ## Storage & Backup (3)
 
