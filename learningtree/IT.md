@@ -77,21 +77,23 @@
 | [SLA](IT/sla.md) | Verfügbarkeit in Prozent, Reaktionszeit und was ein SLA nicht verspricht. |
 | [Skalierbarkeit-Elastizität](IT/skalierbarkeit-elastizitaet.md) | Vertikal vs. horizontal – und was elastisch wirklich heißt. |
 
-## Referenz (14)
+## Referenz - Projektmanagement, Programmierung, UML & Wirtschaft (16)
 
-| Thema | In einem Satz |
-|---|---|
-| [Abkürzungen](IT/abkuerzungen.md) | Nachschlagen, nicht lernen: die Abkürzungen der Prüfung. |
-| [Fachbegriffe](IT/fachbegriffe.md) | Slang und Architektur-Begriffe, die in Aufgaben vorkommen. |
-| [AOB](IT/aob.md) | – |
-| [Netzplan](IT/netzplan.md) | – |
-| [Gantt-Diagramm](IT/gantt-diagramm.md) | – |
-| [Projektstruckturplan-PSP](IT/projektstruckturplan-psp.md) | – |
-| [Aufwandsschätzung](IT/aufwandsschaetzung.md) | – |
-| [PERT](IT/pert.md) | – |
-| [Ressourcenplan](IT/ressourcenplan.md) | – |
-| [Soll-Ist-Vergleich](IT/soll-ist-vergleich.md) | – |
-| [Amortisation](IT/amortisation.md) | – |
-| [TCO](IT/tco.md) | – |
-| [BEP](IT/bep.md) | – |
-| [Stundensatz-(intern)](IT/stundensatz-intern.md) | – |
+| Thema | In einem Satz | Verknüpfung |
+|---|---|---|
+| [Abkürzungen](IT/abkuerzungen.md) | Nachschlagen, nicht lernen: die Abkürzungen der Prüfung. | Alle Themen |
+| [Fachbegriffe](IT/fachbegriffe.md) | Slang und Architektur-Begriffe, die in Aufgaben vorkommen. | Alle Themen |
+| [Pseudocode](IT/Pseudocode/readme.md) | Prüfungsvorbereitung für Pseudocode/C#-Aufgaben (Arrays, Schleifen, Fehlersuche). | [Analyse Prüfungen - Programmierung](IT/analyse-der-exams/04_Programmierung_Grundlagen.md) |
+| [UML](IT/UML/readme.md) | UML-Diagramme für AP2 - Klassendiagramm, Use-Case, Aktivitätsdiagramm, Sequenzdiagramm. | [Analyse Prüfungen - Datenmodellierung/SQL/UML](IT/analyse-der-exams/L14_Datenmodellierung_SQL_UML.md) |
+| [AOB](IT/aob.md) | Aufwandsorientierte Budgetierung. | [Aufwandsschätzung](IT/aufwandsschaetzung.md), [Ressourcenplan](IT/ressourcenplan.md) |
+| [Netzplan](IT/netzplan.md) | Vorgangspfeil-Netzplan, kritischer Pfad. | [PERT](IT/pert.md), [Gantt-Diagramm](IT/gantt-diagramm.md) |
+| [Gantt-Diagramm](IT/gantt-diagramm.md) | Balkendiagramm zur Terminplanung. | [Netzplan](IT/netzplan.md), [Ressourcenplan](IT/ressourcenplan.md) |
+| [Projektstruckturplan-PSP](IT/projektstruckturplan-psp.md) | Arbeitspakete, Gliederungstiefe. | [Aufwandsschätzung](IT/aufwandsschaetzung.md), [Netzplan](IT/netzplan.md) |
+| [Aufwandsschätzung](IT/aufwandsschaetzung.md) | Schätzverfahren für Projekte. | [PERT](IT/pert.md), [Projektstruckturplan-PSP](IT/projektstruckturplan-psp.md), [AOB](IT/aob.md) |
+| [PERT](IT/pert.md) | Program Evaluation Review Technique – Drei-Zeiten-Methode. | [Netzplan](IT/netzplan.md), [Aufwandsschätzung](IT/aufwandsschaetzung.md) |
+| [Ressourcenplan](IT/ressourcenplan.md) | Personelle und materielle Ressourcen. | [Gantt-Diagramm](IT/gantt-diagramm.md), [AOB](IT/aob.md) |
+| [Soll-Ist-Vergleich](IT/soll-ist-vergleich.md) | Abweichungsanalyse im Projektcontrolling. | [Ressourcenplan](IT/ressourcenplan.md), [Amortisation](IT/amortisation.md) |
+| [Amortisation](IT/amortisation.md) | Amortisationszeit einer Investition. | [CAPEX-OPEX](IT/capex-opex.md), [TCO](IT/tco.md), [BEP](IT/bep.md) |
+| [TCO](IT/tco.md) | Total Cost of Ownership – Gesamtkosten über Lebenszyklus. | [CAPEX-OPEX](IT/capex-opex.md), [Cloud_computing](IT/cloud-computing.md), [Amortisation](IT/amortisation.md) |
+| [BEP](IT/bep.md) | Break-Even-Point – Gewinnschwelle. | [Amortisation](IT/amortisation.md), [TCO](IT/tco.md) |
+| [Stundensatz-(intern)](IT/stundensatz-intern.md) | Kalkulation interner Stundensätze. | [CAPEX-OPEX](IT/capex-opex.md), [Aufwandsschätzung](IT/aufwandsschaetzung.md) |
