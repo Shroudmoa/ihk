@@ -1,0 +1,11 @@
+
+Use-Case-Diagramm :
+was ein und wie ein system macht
+Blick vvon auß0en --- gemeinsame grundlage für Fachbereicvh und Entwicklung und test
+Einsatz ;:> Anforderunganalyse und Abgrenzung des Scoopes
+
+Elemente =)>> 
+Akteuer => Stichmächen -- eine Rolle - außer halb des Systemes -- auch exterene systeme
+Use case  -- Ellipse mit Namen - z.b Urlaub beantragen -- 
+systemgrenze recgrecj nut den SSysr3enmbaneb oben Scope wird sichtbar -- was gehört zu dem Projekt
+Beziehungen Asoziationen und Generalisierungen + include Beziehung oder exlude <<Steryitypen>> 

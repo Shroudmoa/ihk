@@ -1,15 +1,46 @@
-DSB => Datenschutzbeauftragten 
-bestimmte Unternehmen sind nach der DSGVO verpflichtet einen DSB zu bennen
----
-für öffentliche Stellen immer
-für private Unternehmen wenn midestens 20 Personen ständig mit der Automatisiertn Verarbeitung PD beschäftigtzt sind (oder wenn D sensibel)
+UML
+--------------Strukturdiagramme--------------------
+Klassendiagramm
+Objektdiagramm
+Komponentendiagramm
+Kompositionsstrukturdiagramm
+Paketdiagramm
+Verteilungsdiagramm
+Profildiagramm
 
-DBS überwacht die Einhaltung von TOMs und berät die Unternehmenleistung und MA
-ist APA für Aufsichtbehörden
-Führt das Verzeichnis der Verarbeitungstätigen.
+----------------------Verhaltensdiagramme---------------------------
+Anwendungsfalldiagramm (Use-Case-Diagramm)
+Aktivitätsdiagramm
+Zustandsdiagramm
+Sequenzdiagramm
+Kommunikationsdiagramm
+Zeitverlaufsdiagramm<F11>
+Interaktionsübersichtsdiagramm
 
-DBS ist unabhägik und hat besonderte Kündigungsschutz -- wird nicht benachteiligt 
+what we need
+--------------Strukturdiagramme--------------------
+Klassendiagramm
+----------------------Verhaltensdiagramme---------------------------
+Anwendungsfalldiagramm (Use-Case-Diagramm)
+Aktivitätsdiagramm
+Sequenzdiagramm
 
-----
 
-Dateleckage und Datenpannen
+Use-Case-Diagramm :
+was ein und wie ein system macht
+Blick vvon auß0en --- gemeinsame grundlage für Fachbereicvh und Entwicklung und test
+Einsatz ;:> Anforderunganalyse und Abgrenzung des Scoopes
+
+Elemente =)>> 
+Akteuer => Stichmächen -- eine Rolle - außer halb des Systemes -- auch exterene systeme
+Use case  -- Ellipse mit Namen - z.b Urlaub beantragen -- 
+systemgrenze recgrecj nut den SSysr3enmbaneb oben Scope wird sichtbar -- was gehört zu dem Projekt
+Beziehungen Asoziationen und Generalisierungen + include Beziehung oder exlude <<Steryitypen>> 
+-------
+
+
+
+
+
+
+
