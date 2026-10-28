@@ -1,29 +1,17 @@
-Domain => Benutzer Passworter Computer GPOs
-Forest 
-tree
-Domain
------------
-OUs-- containetrs für Abteilungen um objekte besser zu gruppieren
+Physischer Zugriff auf Datenträger...
+Festplatte kann gestohlen werden --- Lösung ? FP verschlüsselung
+man braucht Verschlüsselkey.. egal wo die SSD angeschlossen wird
+beim lesen wird alles automatisch entschlüsselt und beim write verschlüsselt
+Data at rest
+hier ist die Frage immer, wie und wo wird die Verschlüsselungkey aufbewahrt. 
 
-Benutzer indentit
-Gruppen Berechtigung containetrs
-OUs Strucktur und Delegierung
-
-OUs sind reine Verwaltungsstruckturen in einer Domain und dienen dazu die GPOs bessert in einem Domain zu zuweisen 
-OUs können auf benutzer und Computer angewendet werden 
---------
-GPos sidn hierachisch vererbrt Domain nach untern auf OU --- überschreiben ist möglich
-
-2 Gruppen 
-Security und distrobution Groups 
-Security=> um berechtigung zu vergeben 
-Verteilung => ausschließlich für die Kommunikation -- mails und so
+hier kommt TPM Trusted platform module ins Spiel. ein Sicherheitschip auf dem Motherboard selber-- für kryptografische Verschlüsselung key speichern.. verlässt den Chip nie.
+-- TPM kann auch den Systemzustand checken (Boot Änderungen) oder auch vertrauenswürdig oder nicht.
 --------------
-Zugriffsliste -- ACL
-sicherheits gruppe wird in dieser liste auf eine Datei oder einen Ordner oder Anwendung eingetragen und dann alle Mitglieder von dieser Gruppe bekommenn die Berechtigung
+Bitlocker  Von microsoft
+besser als TPM
+Systemlaufvwerk wird verschlüsselt und auch weitere Laufwerke optional -- arbeitet eng mit tpm
+das ist aber nur WISSEN Faktor...
+für besitzt Faktor kann man sogar USB Schlüssel oder TOTP interpritieren wenn sogar TPM nicht verfügbar ist (PIN geht auch)
+Bitlocker hat auch ein  wiederherstellungskey --- in AD gespeichert oder password manager für den Fall dass TPM ausfällt oder Hardware gewächselt ist
 
-Gruppe selber können sogar Gruppe erhalten (Nesting) 
-Gültigkeitbereich (scoope)
-Globale im Forest und eigenen Domain gültig
-Domänenlokale nur in eigennen für Berechtigung, in anderen Domains können erhalten werden aber
-Universelle Gruppen -- Foresweit können Mitglieder bekommen
