@@ -52,6 +52,9 @@
 
 ## Verwandt
 
-- [Snapshots-Backups](snapshots-backups.md) – warum RAID kein Backup ersetzt
-- [Schutzziele](schutzziele.md) – Verfügbarkeit als Schutzziel
+- [Snapshots-Backups](snapshots-backups.md) – warum RAID kein Backup ersetzt (Verfügbarkeit ≠ Datensicherung)
+- [Schutzziele](schutzziele.md) – Verfügbarkeit als Schutzziel (neben Vertraulichkeit & Integrität)
+- [HA-Hochverfügbarkeit](ha-hochverfuegbarkeit.md) – RAID als Komponente für Hochverfügbarkeit
 - [DAS-NAS-SAN](das-nas-san.md) – wo das Array im Speichernetz hängt
+- [Speicherhirachie](speicherhirachie.md) – Einordnung im Speicherkonzept
+- [USB-SSD-HDD](usb-ssd-hdd.md) – zugrundeliegende Speichermedien

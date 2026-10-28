@@ -56,7 +56,11 @@
 
 ## Verwandt
 
-- [MAC](mac.md) – Schicht 2 konkret
-- [IPv4](ipv4.md) – Schicht 3 konkret
-- [Proxy](proxy.md) – Schicht 7 konkret
-- [Firewall](firewall.md) – welcher Typ auf welcher Schicht filtert
+- [MAC](mac.md) – Schicht 2 konkret (Frames, Switching)
+- [IPv4](ipv4.md) – Schicht 3 konkret (Routing, IP-Adressen)
+- [IPv6](ipv6.md) – Schicht 3, 128-Bit Adressierung
+- [Ports](ports.md) – Schicht 4 (TCP/UDP)
+- [Proxy](proxy.md) – Schicht 7 konkret (Anwendungsproxy)
+- [Firewall](firewall.md) – Paketsfilterung auf verschiedenen Schichten (Stateful L3/4, NGFW bis L7)
+- [VLAN](vlan.md) – Layer 2 Segmentierung
+- [NAT/PAT](nat-pat.md) – Adressübersetzung meist auf Schicht 3/4

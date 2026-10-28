@@ -59,3 +59,6 @@ Regel 1–3 sind Beispiele, Regel 4 ist die implizite Grundhaltung: **alles ande
 - [Netzwerktypen](netzwerktypen.md) – LAN, WAN und Segmentierung
 - [hackers-can](hackers-can.md) – welche Angriffe abgewehrt werden
 - [OSI](osi.md) – Zuordnung der Firewall-Typen zu Schichten
+- [Ports](ports.md) – welche Ports gefiltert werden
+- [IPv4](ipv4.md) – IP-Filterung
+- [VLAN](vlan.md) – Netzsegmentierung mit Firewalls

@@ -171,3 +171,10 @@ LDAP ist daher nicht automatisch ein vollständiges Berechtigungsmanagement für
 - LDAP kann Benutzer- und Gruppeninformationen liefern, ersetzt aber nicht automatisch alle Authentifizierungs- und Berechtigungsmechanismen.
 - TCP 389 ist der typische LDAP-Port; TCP 636 wird für LDAPS verwendet.
 - Für vertrauliche Daten sollte LDAP durch TLS abgesichert werden.
+
+## Verwandt
+- [Active-Directory](active-directory.md) – Microsoft-Verzeichnisdienst mit LDAP-Unterstützung
+- [Authentifizierung-Autoritisierung-MFA](authentifizierung-autoritisierung-mfa.md) – Identitätsprüfung
+- [RBAC](rbac.md) – Rollenbasierte Berechtigungen
+- [Kerberos](kerberos.md) – Authentifizierungsprotokoll in AD-Umgebungen
+- [GPO](gpo.md) – Gruppenrichtlinien über Active Directory
