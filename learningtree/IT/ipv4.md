@@ -66,11 +66,7 @@
 
 ## Verwandt
 
-- [IPv6](ipv6.md) – 128 Bit, SLAAC, kein Broadcast (direkter Nachfolger)
-- [MAC](mac.md) – die Schicht darunter (ARP)
-- [OSI](osi.md) – Einordnung auf Schicht 3
+- [IPv6](ipv6.md) – 128 Bit, SLAAC, kein Broadcast
+- [MAC](mac.md) – die Schicht darunter
 - [Netzwerktypen](netzwerktypen.md) – wo Subnetze eingesetzt werden
-- [NAT/PAT](nat-pat.md) – Adressübersetzung für private Adressen
-- [VLAN](vlan.md) – logische Segmentierung
-- [Firewall](firewall.md) – Filterung nach IP/Port
-- [Ports](ports.md) – Transportprotokolle und Dienste
+- [OSI](osi.md) – Einordnung auf Schicht 3

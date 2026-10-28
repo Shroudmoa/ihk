@@ -7,8 +7,7 @@
 - **TOM** (Art. 32) sind technische und organisatorische Maßnahmen – die Prüfung will konkrete Beispiele, keine Floskeln.
 - Betroffenenrechte: Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch.
 - Datenschutzverletzung mit Risiko: Meldung an die Aufsichtsbehörde **innerhalb von 72 Stunden**.
-- Ziele sind freier Datenverkehr innerhalb der europaischen Binnenmakrts und Schutzp Personenbezogener Daten
- 
+
 ## Kernwissen
 
 **Rechtsgrundlagen nach Art. 6**
