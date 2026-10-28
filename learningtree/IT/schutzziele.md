@@ -1,9 +1,17 @@
 # Schutzziele
 
 Vertraulichkeit 🔒 – Nur berechtigte Personen dürfen die Daten sehen.
+
+
 Integrität 🛡 – Daten dürfen nicht unbemerkt verändert oder manipuliert werden.
+
+
 Verfügbarkeit ⚡️ – Daten und Systeme müssen zugänglich sein, wenn sie gebraucht werden.
+
+
 Authentizität 👤 – Es muss sichergestellt sein, dass jemand/das System wirklich derjenige ist, für den es sich ausgibt.
+
+
 Verbindlichkeit - Eine Handlung darf später nicht glaubhaft abgestritten werden.
 
 ## Schutzziele der Informationssicherheit (IHK)
