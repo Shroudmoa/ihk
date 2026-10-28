@@ -1,6 +1,6 @@
 # IT
 
-> 53 Themen in 7 Kategorien.
+> 56 Themen in 7 Kategorien.
 
 ## Grundlagen & Hardware (8)
 
@@ -30,7 +30,7 @@
 | [RBAC](IT/rbac.md) | – |
 | [Ports](IT/ports.md) | – |
 
-## Sicherheit & Datenschutz (10)
+## Sicherheit & Datenschutz (13)
 
 | Thema | In einem Satz |
 |---|---|
@@ -44,6 +44,9 @@
 | [Patchmanagment-TU-SU-PU](IT/patchmanagment-tu-su-pu.md) | – |
 | [AAA-SIEM](IT/aaa-siem.md) | AAA-Server und SIEM-konzept |
 | [Bitlocker](IT/bitlocker.md) | TPM-Verschlüsselung von Festplatten |
+| [Hash](IT/hash.md) | – |
+| [PKI](IT/pki.md) | PKI-TLS-CAs |
+| [PGP](IT/pgp.md) | – |
 
 ## Virtualisierung & Server (4)
 
