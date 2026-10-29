@@ -1,5 +1,11 @@
 # IHK AP2 – Lernunterlagen
 
+
+Es wird empgohlen glow zu verwenden, um die markdownlernblätter in Terminal zu lesen und bearbeiten.
+
+- https://github.com/charmbracelet/glow
+
+
 Zwei Lerntrees, ein Thema pro Datei:
 
 - [`learningtree/IT.md`](learningtree/IT.md) – 29 Themen in 7 Kategorien
