@@ -1,6 +1,4 @@
-
-
-    Fachinformatiker/-in (Systemintegration) (Teil 2) ab 07.09.2026, Kurs B [ID: 5966]
+Fachinformatiker/-in (Systemintegration) (Teil 2) ab 07.09.2026, Kurs B [ID: 5966]
     7. September - 13. September
     Lösungen (alle 10)
 
@@ -244,4 +242,5 @@ Lösungen - 13. Prozessmodellierung mit BPMN (10)
     https://heikomohr.training/exercise/b288ae
     https://heikomohr.training/exercise/d1abcd
     https://heikomohr.training/exercise/205b40
+
 
