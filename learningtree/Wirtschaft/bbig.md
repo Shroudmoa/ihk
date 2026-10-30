@@ -1,13 +1,12 @@
 # BBiG
 
-# BBiG – Berufsbildungsgesetz
 ## IHK AP2 – Alles Wichtige zur Berufsausbildung
 
 Das **Berufsbildungsgesetz (BBiG)** regelt in Deutschland wichtige Grundlagen der beruflichen Ausbildung: den Ausbildungsvertrag, die Rechte und Pflichten von Azubis und Ausbildungsbetrieben, die Ausbildungsvergütung, die Probezeit, die Kündigung und den Abschluss der Ausbildung.
 
 **Offizielle Gesetzesquelle:** https://www.gesetze-im-internet.de/bbig_2005/
 
-Für die IHK-Prüfung sind vor allem die §§ 4–5, 8, 10–23 und 27–36 wichtig. Die folgende Zusammenfassung erklärt die wichtigsten Regeln in verständlicher Form. <Cite refs={["turn207713search0","turn207713search1"]} />
+Für die IHK-Prüfung sind vor allem die §§ 4–5, 8, 10–23 und 27–36 wichtig. Die folgende Zusammenfassung erklärt die wichtigsten Regeln in verständlicher Form.
 
 ---
 
@@ -160,11 +159,11 @@ Bei einer planmäßigen Blockunterrichtswoche von mindestens 25 Stunden an minde
 
 Der Betrieb muss Azubis für die Teilnahme an Prüfungen freistellen. Die Freistellung für den unmittelbar vorausgehenden Arbeitstag gilt für die schriftliche Abschlussprüfung.
 
-**Wichtig:** Die konkreten Regeln zur Arbeitszeit und zum Jugendschutz können zusätzlich vom Arbeitszeitgesetz, Jugendarbeitsschutzgesetz und weiteren Vorschriften abhängen. <Cite refs={["turn207713search3","turn207713search6"]} />
+**Wichtig:** Die konkreten Regeln zur Arbeitszeit und zum Jugendschutz können zusätzlich vom Arbeitszeitgesetz, Jugendarbeitsschutzgesetz und weiteren Vorschriften abhängen.
+
 
 ---
 
-```markdown
 ## 8. Ausbildungsnachweis / Berichtsheft
 
 Der Ausbildungsnachweis dokumentiert, welche Tätigkeiten und Ausbildungsinhalte vermittelt bzw. bearbeitet wurden.
@@ -351,7 +350,6 @@ Die Eintragung des Ausbildungsverhältnisses erfolgt durch die zuständige Stell
 
 ---
 
-```markdown
 ## 17. Abschlussprüfung – §§ 37–50 BBiG
 
 Die Abschlussprüfung soll feststellen, ob der Azubi die erforderliche berufliche Handlungsfähigkeit erworben hat.
@@ -490,6 +488,22 @@ Die wichtigsten Punkte, die du erklären können solltest:
 9. **Zeugnis:** muss bei Beendigung der Ausbildung ausgestellt werden.
 10. **Weiterarbeit:** ohne ausdrückliche Vereinbarung kann ein unbefristetes Arbeitsverhältnis entstehen.
 
+## 3-Zeiler für die Prüfung
+
+**Frage:** Wann endet das Ausbildungsverhältnis, wenn die Abschlussprüfung vor dem vertraglichen Ende bestanden wird?
+
+**Antwort:** Mit der Bekanntgabe des positiven Prüfungsergebnisses durch den Prüfungsausschuss, nicht erst mit dem vertraglichen Enddatum. Bei Nichtbestehen kann der Azubi die Verlängerung bis zur nächsten Wiederholungsprüfung verlangen, höchstens um ein Jahr. Nach der Probezeit ist eine ordentliche Kündigung nur aus wichtigem Grund möglich.
+
+## Prüfungsfallen
+
+- Probezeit 1–4 Monate, nicht 6 Monate wie im Arbeitsverhältnis.
+- Ausbildungsvertrag: Textform vor Beginn; mündliche Absprachen allein genügen dem Nachweisgesetz nicht.
+- Berichtsheft ist Zulassungsvoraussetzung; wer es nicht führt, riskiert die Nichtzulassung.
+- JArbSchG gilt nur für Jugendliche unter 18; volljährige Azubis fallen unter das ArbZG.
+- § 21 Abs. 2 BBiG: Ende mit Bekanntgabe des Prüfungsergebnisses, nicht mit dem Vertragsende.
+- Ausbildungsvergütung ist keine Belohnung; sie muss angemessen und jährlich steigend sein.
+- Keine ordentliche Kündigung nach der Probezeit; wichtiger Grund und Schriftform sind nötig.
+
 ## Offizielle Quellen
 
 - BBiG: https://www.gesetze-im-internet.de/bbig_2005/
@@ -497,3 +511,11 @@ Die wichtigsten Punkte, die du erklären können solltest:
 - § 22 BBiG – Kündigung: https://www.gesetze-im-internet.de/bbig_2005/__22.html
 - § 16 BBiG – Zeugnis: https://www.gesetze-im-internet.de/bbig_2005/__16.html
 - Mindestausbildungsvergütung 2026: https://www.gesetze-im-internet.de/bbimindvergfbek_2026/----.html
+
+## Verwandt
+
+- [JArbSchG](jarbschg.md) – Arbeitszeit und Urlaub Jugendlicher
+- [IHK & Ausbilder-Eignung](ihk-ausbilder-eignung.md) – zuständige Stelle und AEVO
+- [Arbeitszeugnis](arbeitszeugnis.md) – Zeugnis nach § 16 BBiG
+- [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Beendigung des Arbeitsverhältnisses
+- [Europass, Fortbildung & Umschulung](europass-fortbildung-umschulung.md) – nach der Ausbildung
