@@ -21,13 +21,15 @@ CPU (Kerne/Threads/Cache) → Speicherhierarchie (Register → Cache → RAM →
 ## 3) Netzwerkgrundlagen
 ```text
 OSI-Modell (7 Schichten)
-    ├─ L1: Hub/Repeater
+    ├─ L1: Hub/Repeater/Kabel
     ├─ L2: Switch/MAC/ARP/VLAN
-    ├─ L3: Router/IPv4/IPv6/NAT
+    ├─ L3: Router/IPv4/IPv6/NAT/Routing
     ├─ L4: TCP/UDP/Ports
-    └─ L7: HTTP/DNS/Proxy/Firewall (NGFW)
+    └─ L7: HTTP/DNS/DHCP/Proxy/Firewall (NGFW)
+
+Ergänzung: Subnetting → DHCP/DNS → Routing → Load Balancer
 ```
-- [OSI](IT/osi.md) | [MAC](IT/mac.md) | [IPv4](IT/ipv4.md) | [IPv6](IT/ipv6.md) | [Ports](IT/ports.md) | [Firewall](IT/firewall.md) | [Proxy](IT/proxy.md) | [VLAN](IT/vlan.md)
+- [OSI](IT/osi.md) | [MAC](IT/mac.md) | [IPv4](IT/ipv4.md) | [IPv6](IT/ipv6.md) | [Subnetting IPv4 & IPv6](IT/subnetting-ipv4-ipv6.md) | [DHCP](IT/dhcp.md) | [DNS](IT/dns.md) | [Ports](IT/ports.md) | [Routing](IT/routing.md) | [Switches und VLANs](IT/switches-und-vlans.md) | [Firewall](IT/firewall.md) | [Proxy](IT/proxy.md) | [Load Balancer](IT/load-balancer.md) | [WLAN](IT/wlan.md) | [VPN](IT/vpn.md) | [Netzwerkanalyse und Troubleshooting](IT/netzwerkanalyse-und-troubleshooting.md)
 
 ## 4) Zugriff, Identität & Berechtigungen
 ```text
@@ -57,28 +59,33 @@ Symmetrisch (schnell) + Asymmetrisch (Schlüsselverteilung)
 ```text
 Speicher (DAS/NAS/SAN) + RAID → Verfügbarkeit
                             ↓
-                          HA (Cluster/Failover/Loadbalancer)
+                          HA (Cluster/Failover/Load Balancer)
+                            ↓
+                    USV (VFD/VI/VFI) + Redundanz
                             ↓
                     Backup (3-2-1-1-0) ≠ Snapshots
                             ↓
                           DR (RTO/RPO)
 ```
-**Wichtiger Grundsatz:** RAID = Ausfallsicherheit, Backup = Datensicherung!
-- [DAS-NAS-SAN](IT/das-nas-san.md) | [RAID](IT/raid.md) | [Snapshots-Backups](IT/snapshots-backups.md) | [HA-Hochverfügbarkeit](IT/ha-hochverfuegbarkeit.md) | [SLA](IT/sla.md)
+**Wichtiger Grundsatz:** RAID = Ausfallsicherheit, Backup = Datensicherung!  
+**Merksatz:** RTO = Zeit bis Wiederherstellung | RPO = maximaler Datenverlust
+- [DAS-NAS-SAN](IT/das-nas-san.md) | [RAID](IT/raid.md) | [Snapshots-Backups](IT/snapshots-backups.md) | [HA-Hochverfügbarkeit](IT/ha-hochverfuegbarkeit.md) | [Cluster](IT/cluster.md) | [Load Balancer](IT/load-balancer.md) | [SLA](IT/sla.md) | [DDoS](IT/ddos.md)
 
 ## 7) Virtualisierung, Cloud & Wirtschaftlichkeit
 ```text
-Bare Metal → Hypervisor (Typ1/Typ2) → VM
+Bare Metal → Hypervisor (Typ 1/Typ 2) → VM
                 ↓                        ↓
               Container                Live-Migration
                 ↓
-               Cloud (IaaS/PaaS/SaaS)
+               Cloud (IaaS/PaaS/SaaS/FaaS/CaaS)
                 ↓
-           Skalierbar/Elastisch
+           Skalierbar / Elastisch (Scale-Up/Out + Auto-Scaling)
                 ↓
-           CAPEX/OPEX, TCO, Amortisation, SLA
+           Deployment (Blue-Green) + Load Balancing
+                ↓
+           CAPEX/OPEX, TCO, Amortisation, BEP, SLA
 ```
-- [VM-Container-Server](IT/vm-container-server.md) | [Hypervisor-Typen](IT/hypervisor-typen.md) | [Live-Migration-VMs](IT/live-migration-vms.md) | [Cloud_computing](IT/cloud-computing.md) | [Skalierbarkeit-Elastizität](IT/skalierbarkeit-elastizitaet.md) | [CAPEX-OPEX](IT/capex-opex.md) | [TCO](IT/tco.md) | [Amortisation](IT/amortisation.md)
+- [Virtualisierung](IT/virtualisierung.md) | [VM-Container-Server](IT/vm-container-server.md) | [Hypervisor-Typen](IT/hypervisor-typen.md) | [Live-Migration-VMs](IT/live-migration-vms.md) | [Cloud_computing](IT/cloud-computing.md) | [Skalierbarkeit-Elastizität](IT/skalierbarkeit-elastizitaet.md) | [Load Balancer](IT/load-balancer.md) | [Blue-Green Deployment](IT/blue-green-deployment.md) | [CAPEX-OPEX](IT/capex-opex.md) | [TCO](IT/tco.md) | [Amortisation](IT/amortisation.md) | [BEP](IT/bep.md) | [SLA](IT/sla.md)
 
 ## 8) Projektmanagement
 ```text
@@ -93,13 +100,21 @@ Controlling: Soll-Ist, Amortisation, BEP
 - [Projektstruckturplan-PSP](IT/projektstruckturplan-psp.md) | [Netzplan](IT/netzplan.md) | [PERT](IT/pert.md) | [Gantt-Diagramm](IT/gantt-diagramm.md) | [Ressourcenplan](IT/ressourcenplan.md) | [Aufwandsschätzung](IT/aufwandsschaetzung.md)
 
 ## Schnelle Prüfungsfallen
-- **RAID vs Backup:** Niemals gleichsetzen!
-- **Hub vs Switch:** Hub=L1, Switch=L2
-- **Router vs Switch:** Router=L3 (IP), Switch=L2 (MAC)
-- **2^Hostbits-2:** Netz- & Broadcast nicht mitzählen
+
+- **RAID vs Backup:** Niemals gleichsetzen! RAID = Verfügbarkeit, Backup = Datensicherung
+- **Hub vs Switch:** Hub = L1 (Broadcast an alle), Switch = L2 (gezieltes Forwarding)
+- **Router vs Switch:** Router = L3 (IP), Switch = L2 (MAC)
+- **2^Hostbits - 2:** Netz- & Broadcastadresse nicht mitzählen
 - **GHz vs Leistung:** IPC + Kerne + Cache sind entscheidend
 - **NAT filtert nicht:** NAT übersetzt Adressen, Firewall filtert
-- **TLS ist keine OSI-Schicht:** Liegt zwischen 4 und 7
-- **Privates IPv4:** 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 (172.32+ ist NICHT privat)
-- **Authentifizierung vs Autorisierung:** Wer bin ich? vs. Was darf ich?
-- **VM vs Container:** VM virtualisiert Hardware, Container virtualisiert OS
+- **TLS ist keine OSI-Schicht:** Liegt zwischen Transport (L4) und Anwendung (L7)
+- **Privates IPv4:** 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 (172.32+ ist **NICHT** privat)
+- **Authentifizierung vs Autorisierung:** *Wer bin ich?* vs. *Was darf ich?*
+- **VM vs Container:** VM virtualisiert Hardware (Hypervisor), Container virtualisiert OS (Container-Engine)
+- **RTO vs RPO:** RTO = Zeit bis Wiederherstellung, RPO = maximaler Datenverlust
+- **Scale-Up vs Scale-Out:** Vertikal (größer) vs. Horizontal (mehr)
+- **Blue-Green:** Blue = live, Green = neue Version, Umschaltung via Load Balancer
+- **Selective Wipe vs Full Wipe:** Nur Business-Container vs. gesamtes Gerät
+- **DDoS greift Verfügbarkeit an:** Primär **Availability** aus CIA
+- **Online-USV (VFI)** hat nahezu keine Umschaltzeit
+- **Hypervisor Typ 1 vs 2:** Typ 1 direkt auf Hardware (Produktiv), Typ 2 auf Host-OS (Test/Dev)

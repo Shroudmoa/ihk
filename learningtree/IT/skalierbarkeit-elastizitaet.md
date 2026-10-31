@@ -1,53 +1,61 @@
-# Skalierbarkeit-Elastizität
-
-# Skalierbarkeit und Elastizität – IHK AP2
+# Skalierbarkeit & Elastizität
 
 ## Skalierbarkeit (Scalability)
 
-Skalierbarkeit beschreibt, wie gut ein IT-System steigende oder sinkende Last bewältigen kann, indem Ressourcen angepasst werden.
+**Skalierbarkeit** beschreibt die Fähigkeit eines IT-Systems, bei steigender Last mehr Leistung bereitzustellen, indem Ressourcen angepasst werden.
 
-## Vertikale Skalierung vs. horizontale Skalierung
+## Vertikale vs. horizontale Skalierung
 
-| Merkmal | Vertikal – Scale Up / Down | Horizontal – Scale Out / In |
+| Merkmal | **Vertikal – Scale Up / Scale Down** | **Horizontal – Scale Out / Scale In** |
 |---|---|---|
-| Prinzip | Ressourcen eines Servers erweitern oder reduzieren | Server hinzufügen oder entfernen |
-| Beispiel | Mehr RAM, stärkere CPU | Einen weiteren Webserver bereitstellen |
-| Hardware | Oft Upgrade bestehender Hardware | Zusätzliche Server oder Instanzen |
-| Downtime | Bei physischen Upgrades häufig nötig | Häufig ohne vollständige Downtime möglich |
-| Grenze | Durch maximale Hardwarekapazität begrenzt | Durch Architektur und Infrastruktur begrenzt |
-| Komplexität | Meist einfacher | Höher, z. B. Verteilung und Synchronisation |
-| Kosten | Teure leistungsfähige Einzelhardware möglich | Mehrere kleinere Instanzen; zusätzlicher Betriebsaufwand |
-| Ausfallsicherheit | Einzelserver kann Single Point of Failure sein | Mehrere Instanzen können Ausfälle abfangen |
+| **Prinzip** | Ressourcen eines bestehenden Servers erweitern/reduzieren (CPU, RAM) | Hinzufügen oder Entfernen weiterer Server/Instanzen |
+| **Beispiel** | Mehr RAM oder stärkere CPU einbauen/zuweisen | Zusätzlichen Webserver zum Pool hinzufügen |
+| **Hardwaregrenze** | Durch maximale Hardwarekapazität begrenzt | Theoretisch nahezu unbegrenzt |
+| **Downtime** | Häufig nötig (bes. bei physischer Aufrüstung) | Meist ohne vollständige Downtime möglich |
+| **Komplexität** | Geringer | Höher (Lastverteilung, Sessions, Datenabgleich) |
+| **Ausfallsicherheit** | Höheres Risiko eines **SPOF** (Single Point of Failure) | Höhere Ausfallsicherheit durch Verteilung |
+| **Einsatz** | Kleinere Erweiterungen, monolithische Systeme | Hochverfügbare, verteilte Systeme |
 
-### Vertikal skalieren – Scale Up
+## Scale Up vs. Scale Out im Detail
 
-Ein Server bekommt mehr CPU-Leistung, RAM oder schnelleren Speicher.
+- **Scale Up (vertikal):** „Stärkerer Server“ – mehr Leistung pro Einheit
+- **Scale Down (vertikal):** Ressourcen reduzieren
+- **Scale Out (horizontal):** „Mehr Server“ – Lastverteilung über mehrere Einheiten
+- **Scale In (horizontal):** Überflüssige Instanzen entfernen
 
-- **Physisch:** Hardwaretausch oder RAM-Erweiterung kann Abschaltung und Wartungsfenster erfordern.
-- **Virtualisiert:** CPU- und RAM-Zuweisungen lassen sich häufig schnell anpassen. Je nach Hypervisor, Gastbetriebssystem und Änderung kann trotzdem ein Neustart nötig sein.
-- **Grenze:** Ein einzelner Server kann nicht unbegrenzt wachsen.
-
-### Horizontal skalieren – Scale Out
-
-Zusätzliche Server oder virtuelle Maschinen übernehmen einen Teil der Last.
-
-- Ein Load Balancer verteilt Anfragen auf mehrere Server.
-- Fällt eine Instanz aus, können andere weiterarbeiten, sofern die Architektur entsprechend ausgelegt ist.
-- Anwendungen müssen häufig für mehrere Instanzen ausgelegt sein. Sessions, Datenbanken und gemeinsam genutzte Dateien müssen berücksichtigt werden.
-
-**Scale In** bedeutet, Instanzen zu entfernen, wenn weniger Leistung benötigt wird.
+Für horizontales Skalieren wird meist ein **[Load Balancer](load-balancer.md)** eingesetzt.
 
 ## Elastizität (Elasticity)
 
-Elastizität beschreibt, wie dynamisch Ressourcen an den aktuellen Bedarf angepasst werden – nach oben und nach unten.
+**Elastizität** geht über die Skalierbarkeit hinaus: Das System passt Ressourcen **automatisch und bedarfsgerecht** an – dynamisch nach oben und unten.
 
-**Beispiel:** Ein Onlineshop benötigt während einer Verkaufsaktion zehn Server statt zwei. Nach dem Ende der Aktion werden die zusätzlichen Instanzen wieder entfernt.
+**Beispiel:** Ein Onlineshop skaliert während eines Black Fridays automatisch auf 20 Webserver hoch und fährt nach Ende der Aktion wieder auf 2 Server herunter.
 
-| Skalierbarkeit | Elastizität |
-|---|---|
-| System kann mit steigender Last umgehen | Ressourcen passen sich dynamisch an die Last an |
-| Kann manuell oder automatisch erfolgen | Häufig automatisiert und bedarfsabhängig |
-| Fokus: Wachstum und Kapazität | Fokus: flexible Anpassung nach oben und unten |
+## Unterschied Skalierbarkeit vs. Elastizität
+
+| Kriterium | **Skalierbarkeit** | **Elastizität** |
+|---|---|---|
+| **Charakter** | Potenzial zur Leistungssteigerung | Dynamische, automatische Anpassung an aktuellen Bedarf |
+| **Steuerung** | Meist manuell oder geplant | Meist automatisch (Auto-Scaling) |
+| **Zeitrahmen** | Langfristig (Wachstum) | Kurzfristig (Lastspitzen/-täler) |
+| **Richtung** | Fokus auf Vergrößern | Fokus auf **hoch und runter** skalieren |
+| **Cloud-Bezug** | Allgemeines Konzept | Typisch für Public Cloud (Pay-per-Use) |
+
+## IHK-Merksätze
+
+- **Scale-Up = vertikal (größer)** | **Scale-Out = horizontal (mehr)**
+- **Elastisch = wächst und schrumpft automatisch**
+- **Horizontale Skalierung + Load Balancer = hohe Verfügbarkeit & Ausfallsicherheit**
+- **Nur elastisch heißt:** Ressourcen werden bei Nichtbedarf **wieder freigegeben** (Kostenersparnis)
+
+## Verwandt
+
+- [Load Balancer](load-balancer.md) – unverzichtbar für Scale-Out
+- [Cloud Computing](cloud-computing.md) – Elastizität als Kernmerkmal
+- [HA-Hochverfügbarkeit](ha-hochverfuegbarkeit.md)
+- [Virtualisierung](virtualisierung.md)
+- [Hypervisor-Typen](hypervisor-typen.md)
+
 
 **Merksatz:** Skalierbarkeit ist die Fähigkeit zu wachsen. Elastizität ist die dynamische Anpassung an den tatsächlichen Bedarf.
 

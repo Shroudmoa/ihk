@@ -1,38 +1,55 @@
-# VM-Container-Server
+# VM, Container, Server – Vergleich
 
 ## In 30 Sekunden
 
-- **Bare Metal** = OS direkt auf der Hardware: maximale Leistung, schlechte Auslastung.
-- **VM** = eigener Kernel pro Gast, Hypervisor dazwischen: starke Isolation, mehr Overhead.
-- **Container** = teilen den Host-Kernel: leicht, schnell, aber schwächere Isolation.
-- 20 VMs = 20 Gastbetriebssysteme und 20 Kernel. 20 Container = 1 Kernel und 20 Prozesse.
-- Die Prüfungsfrage ist fast immer: **„Was passt für Szenario X und warum?“**
+- **Bare Metal** = OS direkt auf Hardware → maximale Leistung, schlechte Auslastung
+- **VM** = Hypervisor virtualisiert Hardware, jedes VM hat **eigenes Gast-OS** → starke Isolation
+- **Container** = Container-Engine virtualisiert OS, teilen sich **Host-OS-Kernel** → leicht & schnell
+- 20 VMs = 20 Gastbetriebssysteme + 20 Kernel | 20 Container = **1 Kernel + 20 isolierte Prozesse**
 
-## Kernwissen
+## Kernvergleich
 
-| Kriterium | Bare Metal | VM | Container |
+| Kriterium | **Bare Metal** | **VM (Virtual Machine)** | **Container** |
 |---|---|---|---|
-| Isolation | physisch getrennt | stark, eigener Kernel | prozessbasiert |
-| Startzeit | Minuten | Sekunden bis Minuten | Millisekunden bis Sekunden |
-| Overhead | keiner | Hypervisor + Gast-OS | minimal |
-| Dichte | 1 Dienst pro Host | wenige bis viele | sehr viele |
-| Betriebssystem | ein OS | beliebig gemischt | Host-Kernel nötig |
-| Typischer Einsatz | DB, Storage, Latenz | AD, Legacy, Mischbetrieb | Microservices, CI/CD |
+| **Virtualisierung** | Keine | Hardware-Virtualisierung (Hypervisor) | OS-Virtualisierung (Container-Runtime) |
+| **Betriebssystem** | Direkt installiert | Eigenes Gast-OS pro VM | Teilt sich Host-OS-Kernel |
+| **Isolation** | Physisch/keine Virtualisierung | **Sehr stark** (eigener Kernel) | Gut (Namespaces/cgroups), schwächer als VM |
+| **Startzeit** | Minuten | Sekunden – Minuten | **Millisekunden – Sekunden** |
+| **Größe** | Vollständiges System | GB-Bereich (inkl. Gast-OS) | **MB-Bereich** (App + Abhängigkeiten) |
+| **Ressourcenverbrauch** | Sehr hoch pro Dienst | Hoch (pro Gast-OS) | **Sehr gering** |
+| **Dichte** | Gering (meist 1 Hauptdienst) | Mittel-Hoch | **Sehr hoch** |
+| **Portabilität** | Gering | Gut | **Sehr gut** (Image-basiert) |
+| **Mischbetrieb verschiedener OS** | Nein | **Ja** (Linux/Windows parallel) | **Nein** (gleicher Kernel wie Host) |
+| **Typischer Einsatz** | Datenbanken, Storage, latenzkritisch | AD, Legacy-Apps, gemischte Umgebungen | Microservices, CI/CD, Cloud-native Apps |
 
-**Entscheidungslogik für die Prüfung**
-1. Anderer Kernel oder volle Isolation nötig? → **VM**.
-2. Viele gleiche, kurzlebige Dienste und schnelles Deployment? → **Container**.
-3. Maximale I/O-Leistung oder Spezialhardware? → **Bare Metal**.
+## Entscheidungslogik für die Prüfung
 
-**Wichtig:** Container sind **keine** kleinen VMs. Ohne zusätzliche Maßnahmen wie Namespaces, cgroups, seccomp und Rootless ist die Isolation schwächer. Ein Kernel-Bug betrifft alle Container gleichzeitig.
+1. **Anderes Betriebssystem oder maximale Isolation nötig?** → **VM**
+2. **Viele identische, kurzlebige Dienste, schnell & ressourcenschonend?** → **Container**
+3. **Maximale I/O-Leistung, Direktzugriff auf Hardware?** → **Bare Metal**
+4. **Verschiedene Kernel notwendig?** → **Nur VM** (Container unmöglich)
 
-**Mischbetrieb:** Container in VMs ist üblich – du bekommst die Dichte der Container und die Isolation der VM.
+## Wichtige Punkte
+
+- **Container sind keine kleinen VMs.** Der größte Unterschied: gemeinsamer Kernel vs. eigener Kernel
+- **Kernel-Bug:** Trifft bei Containern potentiell **alle** Container auf diesem Host
+- **Mischbetrieb ist üblich:** **Container in VMs** kombinieren hohe Dichte mit starker Isolation
+- **Hypervisor vs. Container-Engine:** Hypervisor virtualisiert Hardware, Container-Engine virtualisiert das Betriebssystem
 
 ## Prüfungsfrage
 
-**Frage:** Ein Kunde will 20 Instanzen einer Alpine-basierten Webanwendung möglichst platzsparend und schnell skalierbar betreiben. Empfiehl eine Technik und begründe.
+**Frage:** Ein Unternehmen will 20 Instanzen einer Webanwendung möglichst platzsparend und schnell skalierbar betreiben. Welches Verfahren ist am geeignetsten und warum?
 
-**Musterantwort:** Container, weil alle Instanzen denselben Kernel nutzen und nur die Anwendung samt Bibliotheken mitbringen. 20 VMs würden 20 Gastbetriebssysteme und 20 Kernel benötigen, also deutlich mehr RAM, Storage und Startzeit. Für stärkere Isolation kann man die Container in VMs betreiben.
+**Musterantwort:** **Container**, da alle Instanzen den gleichen Host-OS-Kernel nutzen und nur Anwendung + Bibliotheken im Image enthalten. Dadurch verbrauchen sie deutlich weniger RAM/Storage als VMs, lassen sich in Sekunden starten und sehr dicht betreiben. Für erhöhte Isolation kann man sie zusätzlich in virtuellen Maschinen laufen lassen.
+
+## Verwandt
+
+- [Hypervisor-Typen](hypervisor-typen.md)
+- [Virtualisierung](virtualisierung.md)
+- [Live-Migration-VMs](live-migration-vms.md)
+- [Skalierbarkeit-Elastizität](skalierbarkeit-elastizitaet.md)
+- [Cloud Computing](cloud-computing.md)
+
 
 ## Falle
 

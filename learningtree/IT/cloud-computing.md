@@ -1,30 +1,62 @@
-# Cloud_computing
+# Cloud Computing
 
-## Cloud-Computing-Servicemodelle (IHK)
+## Cloud-Servicemodelle (IaaS, PaaS, SaaS)
 
-| Modell | Bedeutung | Anbieter verwaltet | Kunde verwaltet | Beispiel |
+| Modell | Bedeutung | Anbieter verwaltet | Kunde verwaltet | Beispiele |
 |---|---|---|---|---|
-| IaaS | Infrastructure as a Service | Hardware, Netzwerk, Virtualisierung | Betriebssystem, Anwendungen, Daten | AWS EC2, Azure VMs |
-| PaaS | Platform as a Service | Infrastruktur, Betriebssystem, Laufzeitumgebung | Anwendungen, Daten | Google App Engine |
-| SaaS | Software as a Service | Gesamte Anwendung und Infrastruktur | Nutzung, Einstellungen, Daten | Microsoft 365 |
-| FaaS | Function as a Service | Infrastruktur, Laufzeit, Skalierung | Funktionen, Code | AWS Lambda |
-| CaaS | Container as a Service | Container-Plattform, je nach Anbieter Infrastruktur | Container-Images, Anwendungen | Amazon ECS |
-| DBaaS | Database as a Service | Datenbankbetrieb, Patches, Infrastruktur | Daten, Abfragen, Zugriffsrechte | Amazon RDS |
-| STaaS | Storage as a Service | Speicherinfrastruktur und Verfügbarkeit | Daten, Zugriffsrechte, Aufbewahrung | Amazon S3 |
-| NaaS | Network as a Service | Netzwerkdienste und Netzwerkressourcen | Konfiguration, Richtlinien, Nutzung | Cloud-VPN, SD-WAN-Dienste |
+| **IaaS (Infrastructure as a Service)** | Virtuelle Infrastruktur mieten | Hardware, Netz, Storage, Virtualisierung | Betriebssystem, Middleware, Anwendungen, Daten | AWS EC2, Microsoft Azure VMs, Google Compute Engine |
+| **PaaS (Platform as a Service)** | Entwicklungsplattform mieten | Infrastruktur, OS, Runtime, Middleware | Anwendungen & Daten | Heroku, Google App Engine, Microsoft Azure App Service |
+| **SaaS (Software as a Service)** | Fertige Software mieten/nutzen | Komplett inkl. Anwendung & Updates | Nur Nutzung, User & Einstellungen | Microsoft 365, Google Workspace, Salesforce, Dropbox |
 
-### IHK-Prüfungswissen
+**Merksatz:** Je höher die Abstraktion, desto weniger verwaltet der Kunde selbst.
 
-**Grundprinzip:** Je höher die Abstraktion, desto weniger Infrastruktur muss der Kunde selbst verwalten.
+## Weitere Cloud-Servicemodelle
 
-- **IaaS:** Maximale Kontrolle, aber hoher Administrationsaufwand.
-- **PaaS:** Fokus auf Entwicklung statt Serververwaltung.
-- **SaaS:** Fertige Software über Browser oder Client nutzen.
-- **FaaS:** Einzelne Funktionen ereignisgesteuert ausführen; häufig nutzungsabhängige Abrechnung.
-- **CaaS:** Container bereitstellen und verwalten; nicht mit Contact Center as a Service verwechseln.
-- **DBaaS:** Datenbankadministration teilweise an den Anbieter auslagern.
-- **STaaS:** Speicher flexibel bereitstellen; z. B. Objektspeicher oder Dateispeicher.
-- **NaaS:** Netzwerkfunktionen als Dienst beziehen.
+| Modell | Bedeutung | Erklärung | Beispiel |
+|---|---|---|---|
+| **FaaS (Function as a Service)** | Funktionsbasierte Ausführung | Ereignisgesteuert, Code wird nur bei Aufruf ausgeführt, nutzungsabhängig | AWS Lambda, Azure Functions |
+| **CaaS (Container as a Service)** | Container-Plattform als Dienst | Verwaltung & Orchestrierung von Containern, Kunde deployt Container-Images | Amazon ECS, Google Cloud Run |
+| **DBaaS (Database as a Service)** | Datenbank als Dienst | Anbieter kümmert sich um Patches, Backup, Hochverfügbarkeit | Amazon RDS, Azure SQL Database |
+| **STaaS (Storage as a Service)** | Speicher als Dienst | Flexibler Speicher über das Netz (meist Objektspeicher) | Amazon S3, Azure Blob Storage |
+| **NaaS (Network as a Service)** | Netzwerkinfrastruktur als Dienst | Virtuelle Netzwerke, Firewalls, VPN etc. als Dienst bezogen | Cloud-VPN, SD-WAN-Dienste |
+
+## Bereitstellungsmodelle
+
+| Modell | Beschreibung | Vor-/Nachteile |
+|---|---|---|
+| **Public Cloud** | Geteilte Infrastruktur für viele Kunden (Multi-Tenancy) | + Skalierbar, kostengünstig, elastisch / – Weniger Kontrolle, Datenschutz |
+| **Private Cloud** | Exklusiv für ein Unternehmen (Single-Tenancy) | + Höchste Kontrolle & Sicherheit / – Teurer, Eigenbetrieb |
+| **Hybrid Cloud** | Kombination Public + Private Cloud | + Flexibel, sensible Daten privat, Peaks in Public / – Komplexer |
+| **Community Cloud** | Gemeinsames Nutzung für Organisationen mit gleichen Anforderungen | + Geteilte Kosten, gemeinsames Ziel / – Weniger verbreitet |
+
+## Cloud vs. On-Premises
+
+| Kriterium | **On-Premises** | **Cloud** |
+|---|---|---|
+| **Investition** | Hoch (**CAPEX**) | Vorwiegend (**OPEX**), Pay-per-Use |
+| **Verantwortung** | Vollständig | Geteilt nach Servicemodell |
+| **Skalierbarkeit/Elastizität** | Eingeschränkt | Sehr hoch & automatisch |
+| **Verfügbarkeit** | Eigenverantwortung | Hoch durch Anbieter-Redundanz |
+| **Datensouveränität** | Vollständig | Standortabhängig (DSGVO beachten) |
+
+## IHK-Merksätze
+
+- **IaaS = Infrastruktur** | **PaaS = Plattform** | **SaaS = Software**
+- **CAPEX → OPEX** = typisches Cloud-Argument
+- **FaaS = ereignisgesteuert & verbrauchsabhängig**
+- **CaaS ≠ Contact Center as a Service** (häufige Verwechslungsfalle)
+- **Multi-Tenancy (Public) vs. Single-Tenancy (Private)**
+
+## Verwandt
+
+- [Virtualisierung](virtualisierung.md)
+- [Hypervisor-Typen](hypervisor-typen.md)
+- [VM-Container-Server](vm-container-server.md)
+- [Skalierbarkeit-Elastizität](skalierbarkeit-elastizitaet.md)
+- [CAPEX-OPEX](capex-opex.md)
+- [TCO](tco.md)
+- [HA-Hochverfügbarkeit](ha-hochverfuegbarkeit.md)
+
 
 ### Vor- und Nachteile
 
