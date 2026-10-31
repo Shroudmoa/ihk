@@ -20,7 +20,8 @@
 **Kündigungsfristen (§ 622 BGB)**
 | Beschäftigung | Frist |
 |---|---|
-| Probezeit / unter 2 Jahre | 4 Wochen zum 15. oder Monatsende |
+| Probezeit | 2 Wochen |
+| unter 2 Jahre | 4 Wochen zum 15. oder Monatsende |
 | 2 Jahre | 1 Monat zum Monatsende |
 | 5 Jahre | 2 Monate |
 | 8 Jahre | 3 Monate |
@@ -32,13 +33,19 @@
 
 **Kündigungsschutz:** Gilt nach 6 Monaten Betriebszugehörigkeit und in Betrieben mit mehr als 10 Arbeitnehmern. Kleinbetriebe fallen unter die Ausnahme.
 
+## 3-Zeiler für die Prüfung
+
+**Frage:** Ist eine betriebsbedingte Kündigung wirksam, wenn der Arbeitgeber keine Sozialauswahl durchführt?
+
+**Antwort:** Nein. Die Kündigung ist sozial nicht gerechtfertigt, weil der Arbeitgeber die vergleichbaren Arbeitnehmer nach Betriebszugehörigkeit, Alter, Unterhaltspflichten und Schwerbehinderung vergleichen muss. Der Arbeitnehmer kann innerhalb von drei Wochen Kündigungsschutzklage erheben.
+
 ## Prüfungsfrage
 
 **Frage:** Ein Unternehmen verlagert eine Abteilung ins Ausland. Darf allen Mitarbeitern betriebsbedingt gekündigt werden? Begründe.
 
 **Musterantwort:** Nur wenn ein dringendes betriebliches Erfordernis nachweisbar ist, keine Weiterbeschäftigungsmöglichkeit besteht, die Sozialauswahl korrekt durchgeführt und der Betriebsrat angehört wurde. Die Kündigung muss schriftlich zugehen und die Frist nach § 622 BGB einhalten. Sonst ist sie unwirksam, und der Arbeitnehmer kann innerhalb von 3 Wochen klagen.
 
-## Falle
+## Prüfungsfallen
 
 - Sozialauswahl vergessen → Kündigung unwirksam.
 - Betriebsrat nicht angehört → unwirksam, auch wenn der Grund stimmt.
@@ -54,3 +61,6 @@
 
 - [BBiG](bbig.md) – Ausbildungsvertrag und Probezeit
 - [Gericht](gericht.md) – Arbeitsgericht und Instanzen
+- [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Arten, Form und Klagefrist
+- [Sozialauswahl](sozialauswahl.md) – Auswahlkriterien im Detail
+- [Betriebsrat & JAV](betriebsrat-jav.md) – Anhörung nach § 102 BetrVG

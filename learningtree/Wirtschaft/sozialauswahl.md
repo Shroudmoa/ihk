@@ -30,3 +30,23 @@
 ### Zusatz (IHK-Prüfungsfalle)
 
 Wenn in einer Aufgabe „Sozialauswahl" steht: **Nicht** nach Leistung sortieren. Der schlechteste Mitarbeiter ist nicht automatisch der Kündigungskandidat. Der **sozial schutzbedürftigste** fliegt zuerst – es sei denn, er ist Leistungsträger und die Ausnahme ist begründet.
+
+## 3-Zeiler für die Prüfung
+
+**Frage:** Darf der Arbeitgeber bei einer betriebsbedingten Kündigung den leistungsschwächsten Mitarbeiter entlassen?
+
+**Antwort:** Nein, entscheidend ist die Sozialauswahl unter vergleichbaren Arbeitnehmern. Zu entlassen ist der sozial am wenigsten schutzbedürftige, nicht automatisch der leistungsschwächste. Leistungsträger können nur bei berechtigtem betrieblichem Interesse ausgenommen werden.
+
+## Prüfungsfallen
+
+- Sozialauswahl nicht mit einer Leistungsbeurteilung verwechseln.
+- Nur vergleichbare Arbeitnehmer einbeziehen; unterschiedliche Vergütungsgruppen sind meist nicht vergleichbar.
+- Der Betriebsrat wird angehört, muss aber nicht zustimmen.
+- Die Kündigungsschutzklage muss innerhalb von drei Wochen erhoben werden.
+
+## Verwandt
+
+- [Betriebsbedingte Kündigung](betriebsbedingte-kuendigung.md) – Voraussetzungen und Fristen
+- [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Kündigungsarten und Klagefrist
+- [Betriebsrat & JAV](betriebsrat-jav.md) – Mitbestimmung und Anhörung
+- [AGG & Diversity](agg-diversity.md) – Diskriminierungsschutz
