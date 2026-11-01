@@ -54,7 +54,7 @@ LIMIT 3;
 ## 2. UML - Pseudocode 
 
 Aktivitäts digramm
-
+```mermaid
 flowchart TD
     Start([Start]) --> pruefen[prüfeNAS-1]
     
@@ -71,7 +71,7 @@ flowchart TD
     move1 --> Ende
     move2 --> Ende
     move3 --> Ende
-
+```
 
 
 Bubblesort-Alg.
