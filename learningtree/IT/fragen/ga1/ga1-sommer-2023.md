@@ -1,4 +1,3 @@
-```markdown
 ## 1. Aufgabe (Server & Security)
 
 ### a) Serverkonfiguration (4 Bereiche, 2 Einstellungen)
@@ -13,7 +12,12 @@
 - **Verteilung:** Der Public Key wird frei verteilt; der Private Key bleibt geheim.
 - **Verschlüsselung:** Sender verschlüsselt Nachricht mit dem Public Key des Empfängers. Nur der Empfänger kann mit seinem Private Key entschlüsseln.
 - **Analogie OSI Layer 6:** Ähnlich wie ein Briefkasten – Einwurfschlitz (public) für alle, Öffnung (private) nur mit Schlüssel.
-- **Nachteil:** Langsam, daher nur für Schlüsselaustausch (hybrid) oder Signaturen.
+
+### bb) Asymmetrische Verschlüsselung – im Vergleich zu Symmetrichen
+
+- **Nachteil:** Langsam/Rechenintensive -- Aufwengierer Verwaltung -- Man braucht 2 Keys für die Kommunikation, daher nur für Schlüsselaustausch (hybrid) oder Signaturen.
+
+
 
 ### c) Server mit öffentlich bestätigtem Zertifikat absichern (4 Schritte)
 - **Schritt 1 – Keypair erzeugen:** Server generiert privaten Schlüssel und CSR (Certificate Signing Request) mit öffentlichem Schlüssel und FQDN.

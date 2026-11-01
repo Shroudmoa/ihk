@@ -76,7 +76,23 @@ flowchart TD
 
 Bubblesort-Alg.
 
+```bash
+// Zeile 1-4 (gegeben)
+int[] werte = { 30, 24, 12, 50, 11, 49, 11 };
+int temp;
+int len = werte.Length;
 
+for (int p = 0; p <= len - 2; p++) {     // äußere Schleife
+    for (int i = 0; i < len - 1 - p; i++) { // Zeile 5: innere Schleife
+        if (werte[i] > werte[i + 1]) {      // Zeile 6: Vergleich
+            temp = werte[i];                // Zeile 7: Tausch
+            werte[i] = werte[i + 1];        // Zeile 8: Tausch
+            werte[i + 1] = temp;            // Zeile 9: Tausch
+        }
+    }                                       // Zeile 10: Ende Vergleich und Tausch
+}                                           // Zeile 11: Ende innere Schleife
+                                            // Zeile 12: Ende äußere Schleife
+```
 ---
 
 ## 3. Aufgabe (WLAN & Webcams)
@@ -85,6 +101,8 @@ Bubblesort-Alg.
 *   **Flexibilität/Mobilität:** Keine Verkabelung nötig; einfache Positionsänderung der Kameras (OSI Layer 1 Unabhängigkeit).
 *   **Kosteneffizienz:** Keine Verlegung von Netzwerkkabeln (Material- und Arbeitskosten).
 *   **Skalierbarkeit:** Schnelles Hinzufügen neuer Geräte ohne physische Ports am Switch.
+*   **Multi-Zuweisung:** Einfachere Zuweisung an AP/Server.
+
 
 ### ba) Webcam-Auswahl
 *   **24h Außenüberwachung mit Publikum:** **Neocam BVR** oder **SecretAV-NBX**. Begründung: **Infrarot-Nachtsicht** (24h) und **Vandalismusschutz** (Publikum). Neocam hat bessere Auflösung, SecretAV hat WPA3. Entscheidung: **Neocam BVR** (Full HD + IR + Vandalismus).

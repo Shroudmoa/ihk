@@ -18,6 +18,23 @@
 | Rechtliche Pflicht (lit. c) | Gesetz verlangt es | Rechnungsaufbewahrung |
 | Berechtigtes Interesse (lit. f) | Abwägung nötig | Videoüberwachung |
 
+# DSGVO – Kernpunkte
+
+**Löschfristen**
+*   **Pflicht:** Löschung, sobald Rechtsgrundlage entfällt (Widerruf) oder Zweck erfüllt ist.
+*   **Art. 17 DSGVO:** „Recht auf Vergessenwerden“.
+*   **Planung:** Lebenszyklus im Verarbeitungsverzeichnis festhalten und Fristen definieren.
+
+**Persönlichkeitsrechte (Bild/Video)**
+*   **Opt-in:** Aktive Einwilligung (elektronisch, Papier oder konkludent) zwingend erforderlich.
+*   **Transparenz:** Klare Datenschutzerklärung und Hinweise auf Überwachung.
+
+**Zweckbindung**
+*   **Definition:** Verarbeitung nur zur Erfüllung rechtlicher Pflichten oder des festgelegten Zwecks.
+*   **Datenminimierung:** Nur notwendige Daten erheben.
+*   **Löschung:** Nach Zweckerreichung sofortige Löschpflicht.
+
+
 **Die TOM, die in der Prüfung zählen**
 | Maßnahme | Konkret |
 |---|---|
