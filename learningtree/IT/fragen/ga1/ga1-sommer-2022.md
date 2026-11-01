@@ -24,7 +24,7 @@
 
 ---
 
-## 2. Aufgabe (Datenbank & SQL)
+## (Datenbank & SQL)
 
 ### ba) Kardinalitäten (ERM)
 *   **Windpark (1) -> Windrad (N):** Ein Windpark hat viele Windräder. Ein Windrad gehört zu genau einem Windpark (Fremdschlüssel IDWindpark).
@@ -49,6 +49,33 @@ ORDER BY TagesErzeugung DESC
 LIMIT 3;
 ```
 *   `ORDER BY ... DESC` sortiert absteigend (höchste Leistung zuerst). `LIMIT 3` schneidet die Top 3 ab. (Alternativ: `TOP 3` je nach DBMS).
+
+---
+## 2. UML - Pseudocode 
+
+Aktivitäts digramm
+
+flowchart TD
+    Start([Start]) --> pruefen[prüfeNAS-1]
+    
+    pruefen --> check1{Belegung > 40 % und < 60 %}
+    check1 -- Ja --> move1[Verschiebe alle Dateien mit Zugriffsdatum älter als 120 Tage nach NAS-2]
+    check1 -- Nein --> check2{Belegung > 60 % und < 80 %}
+    
+    check2 -- Ja --> move2[Verschiebe alle Dateien mit Zugriffsdatum älter als 60 Tage nach NAS-2]
+    check2 -- Nein --> check3{Belegung > 80 %}
+    
+    check3 -- Ja --> move3[Verschiebe alle Dateien mit Zugriffsdatum älter als 7 Tage und größer als 100 MiB nach NAS-2]
+    check3 -- Nein --> Ende([Ende])
+    
+    move1 --> Ende
+    move2 --> Ende
+    move3 --> Ende
+
+
+
+Bubblesort-Alg.
+
 
 ---
 
