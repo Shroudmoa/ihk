@@ -1,63 +1,77 @@
 # Wirtschaftssektoren & Arbeitsteilung
 
-> **Wirtschaftssektoren = primär, sekundär, tertiär.** **Arbeitsteilung = Zerlegung von Arbeit** innerbetrieblich, zwischenbetrieblich oder international.
+## In 30 Sekunden
 
-## Drei Sektoren
+- **Primärer Sektor** = Urproduktion: Land- und Forstwirtschaft, Fischerei, Bergbau/Rohstoffgewinnung (Winzer, Gärtner, Tagebau).
+- **Sekundärer Sektor** = Verarbeitung: Industrie, Handwerk, Energie, Bau (Bäcker, Schreiner, Laptop- oder Akkuhersteller).
+- **Tertiärer Sektor** = Dienstleistungen: **Handel**, Banken, Versicherungen, Logistik/Spedition, Beratung, **Softwareentwicklung**, IT-Services.
+- Strukturwandel: Deutschland ist eine **Dienstleistungsgesellschaft** (rund 3/4 der Erwerbstätigen im tertiären Sektor).
+- Arbeitsteilung: **betrieblich** (innerhalb eines Unternehmens), **zwischenbetrieblich** (Outsourcing, Zulieferer, Supply Chain), **international** (Globalisierung).
 
-| Sektor | Inhalt | Beispiele |
-|---|---|---|
-| **primär** | Urproduktion, Rohstoffe, Landwirtschaft | Landwirt, Winzer, Bergbau, Fischerei, Forst |
-| **sekundär** | Verarbeitung, Produktion, Handwerk | Bäcker, Schreiner, Laptop-Hersteller, Akku-Fertigung |
-| **tertiär** | Dienstleistungen, Handel, IT-Services | Beratung, Bank, Spedition, Softwareentwicklung, Handel |
+## Kernwissen
 
-**Prüfungsfallen:**
-- „Kauf und Verkauf von Monitoren“ = tertiär (Handel), nicht sekundär.
-- „Erstellung von Sicherheitssoftware“ = tertiär (Dienstleistung), nicht sekundär.
-- „Bäcker backt Brot“ = sekundär (Verarbeitung).
-- „Gärtner baut Rosen an“ = primär.
+### Die drei Sektoren
 
-## Betriebliche Arbeitsteilung
+| Sektor | Inhalt | Beispiele aus Prüfungen | Anteil Erwerbstätige DE (ca.) |
+|---|---|---|---:|
+| **primär** | Gewinnung von Naturerzeugnissen und Rohstoffen | Winzer erntet Trauben, Gärtner baut Rosen an, Rohstoffförderung im Tagebau | ~1 % |
+| **sekundär** | Be- und Verarbeitung, Herstellung | Computerhersteller produziert Laptops, Bäcker backt Brot, Schreiner baut Tisch, Akku- und Ladegerätebau | ~24 % |
+| **tertiär** | Dienstleistungen aller Art | Fachinformatiker berät Kunden, Erstellung von Sicherheitssoftware, Kauf und Verkauf von Monitoren (Handel), Bankkaufmann bearbeitet Kredit, Spediteur, Lagerlogistik, Import, Handelsvertretung | ~75 % |
 
-- Zerlegung eines Prozesses in Teilprozesse.
-- Mehrere Arbeitskräfte spezialisieren sich.
-- Vorteile: höhere Produktivität, kürzere Einarbeitung, Qualitätssteigerung.
-- Nachteile: Monotonie, Abhängigkeiten, Koordinationsaufwand.
+Manche Modelle nennen einen **quartären Sektor** (Information und Wissen: IT, Forschung, Beratung) – in der IHK-Prüfung gehört IT-Dienstleistung zum **tertiären** Sektor.
 
-## Zwischenbetriebliche Arbeitsteilung
+**Strukturwandel (Drei-Sektoren-Hypothese, Fourastié):** Mit steigendem Wohlstand verlagert sich die Beschäftigung vom primären über den sekundären in den tertiären Sektor (Tertiarisierung) – Ursachen: Produktivitätsfortschritt in Landwirtschaft und Industrie, steigende Nachfrage nach Dienstleistungen, Digitalisierung.
 
-- Ausgliederung an andere Unternehmen (Outsourcing).
-- Zulieferer, Supply Chain, Montage aus externen Komponenten.
-- Vorteile: Kosten, Spezialisierung, Flexibilität.
-- Nachteile: Abhängigkeit, Qualitätsrisiko, Logistikkosten.
+### Weitere Einteilung von Betrieben
 
-## Internationale Arbeitsteilung / Globalisierung
+| Merkmal | Ausprägungen |
+|---|---|
+| Ziel | **erwerbswirtschaftlich** (Gewinn) – **gemeinwirtschaftlich** (Bedarfsdeckung, nicht gewinnorientiert) – genossenschaftlich |
+| Rechtsform | **Personengesellschaft** (GbR, OHG, KG) – Kapitalgesellschaft (GmbH, AG) |
+| Eigentümer | privat – öffentlich – gemischtwirtschaftlich |
 
-- Länder spezialisieren sich auf Produkte, in denen sie komparative Vorteile haben.
-- Fördernd: Freihandel, Zollsenkung, Kapitalmobilität, Technologietransfer, Containerisierung.
-- Hemmend: Zölle, Quoten, Sanktionen, Protektionismus, Transportkosten.
-- **Nicht** überall gleiche Standards: Umwelt, Arbeitsschutz, Löhne.
-- Keine allgemeine Arbeitnehmerfreizügigkeit weltweit – grundsätzlich im EU-/EWR-Raum und mit der Schweiz.
+Beispiel (Sommer 2023/2026): Eine AG ist **erwerbswirtschaftlich**, **keine** Personengesellschaft und **keine** GbR.
 
-**Prüfungsfalle:** Globalisierung führt nicht automatisch zu besseren Umweltstandards. Produktion wandert oft dorthin, wo Standards niedriger sind.
+### Arbeitsteilung
 
-## 3-Zeiler für die Prüfung
+| Art | Bedeutung | Beispiele | Vor-/Nachteile |
+|---|---|---|---|
+| **Berufsbildung/Berufsspaltung** | gesellschaftliche Spezialisierung in Berufe | Fachinformatiker Systemintegration vs. Anwendungsentwicklung | |
+| **betriebliche (innerbetriebliche)** | Zerlegung eines Prozesses in Teilprozesse für mehrere Arbeitskräfte/Abteilungen | drei spezialisierte Informatiker für Netzwerk, Server, Client einstellen; Fließbandfertigung | + Produktivität, Spezialisierung, kurze Einarbeitung; − Monotonie, Abhängigkeit, Koordinationsaufwand |
+| **zwischenbetriebliche** | Spezialisierung von Unternehmen, Leistungen werden **von anderen Unternehmen** bezogen | Bildschirme aus China beziehen, Ausgliederung des Rechenzentrums (Outsourcing), Montage aus externen Komponenten, **Supply Chain** | + Kosten, Fokus aufs Kerngeschäft; − Abhängigkeit, Lieferkettenrisiko |
+| **internationale** | Länder spezialisieren sich auf Produkte mit Kosten- bzw. komparativen Vorteilen | Chipfertigung in Taiwan, Softwareentwicklung in Indien | siehe Globalisierung |
 
-**Frage:** Ist ein Softwareentwickler im tertiären Sektor?
+**Keine Arbeitsteilung:** Filiale schließen, Software ohne Smartphones anbieten, Frauenquote einführen.
 
-**Antwort:** Ja, Softwareentwicklung ist eine Dienstleistung und damit tertiär. Der sekundäre Sektor umfasst die materielle Produktion und Verarbeitung. Der primäre Sektor gewinnt Rohstoffe.
+## Prüfungsfrage
 
-## Prüfungsfallen
+**Frage (Zuordnung):** Ordnen Sie den Tätigkeiten den Sektor zu (1 = primär, 2 = sekundär, 3 = tertiär).
+a) Ein Computerhersteller produziert Laptops.
+b) Rohstoffe werden im Tagebau gefördert.
+c) Ein Softwarehaus erstellt Sicherheitssoftware.
+d) Ein Händler kauft und verkauft Monitore.
+e) Ein Fachinformatiker berät Kunden.
 
-- Handel ist tertiär, auch wenn Waren verkauft werden.
-- Produktion von Hardware ist sekundär; Support/Consulting tertiär.
-- Supply Chain = zwischenbetrieblich, nicht betrieblich.
-- Filialschließung ist keine Arbeitsteilung.
-- Globalisierung ≠ weltweit gleiche Löhne/Standards.
+**Musterantwort:** a) **2**, b) **1**, c) **3**, d) **3**, e) **3**. Software ist eine Dienstleistung (tertiär), auch wenn ein „Produkt“ entsteht; Handel ist immer tertiär, auch mit materieller Ware.
+
+## Falle
+
+- **Handel** ist tertiär – auch wenn Waren materiell sind.
+- **Softwareentwicklung** ist tertiär, **Hardwareproduktion** sekundär.
+- Bäcker und Schreiner (Handwerk) sind sekundär, nicht primär.
+- Supply Chain und Outsourcing = **zwischenbetriebliche** Arbeitsteilung.
+- Gemeinwirtschaftlich = nicht gewinnorientiert, erwerbswirtschaftlich = gewinnorientiert.
+
+## Merksatz
+
+**„Holen (primär) – Herstellen (sekundär) – Helfen und Handeln (tertiär).“**
 
 ## Verwandt
 
-- [Marktformen & Preisbildung](marktformen-preisbildung.md) – Wettbewerb und Handel
-- [Unternehmensverbindungen & Kartellrecht](unternehmensverbindungen-kartellrecht.md) – Konzerne und Supply Chains
-- [Konjunktur & Wirtschaftspolitik](konjunktur-wirtschaftspolitik.md) – Sektorstruktur
-- [Soziale Marktwirtschaft & Sozialstaat](soziale-marktwirtschaft-sozialstaat.md) – Ordnungspolitik
-- [Umwelt & Nachhaltigkeit](umwelt-nachhaltigkeit.md) – globale Standards
+- [Globalisierung & EU-Binnenmarkt](globalisierung-eu-binnenmarkt.md) – internationale Arbeitsteilung
+- [Leitungssysteme & Organisation](leitungssysteme-organisation.md) – Arbeitsteilung im Betrieb
+- [Wirtschaftliche Grundbegriffe](wirtschaftliche-grundbegriffe.md) – Güter, Produktionsfaktoren
+- [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Personen- vs. Kapitalgesellschaft
+- [Lektion 26 – Sektoren, Konjunktur, Marktformen](../IT/analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md)
+- [Lektion 21 – Unternehmensorganisation](../IT/analyse-der-exams/L21_Unternehmensorganisation.md)
+- Echte Aufgaben: [Sommer 2022](fragen/Sommer-2022.md) (17), [Sommer 2023](fragen/Sommer-2023.md) (21, 27), [Sommer 2025](fragen/Sommer-2025.md) (1), [Winter 2025](fragen/Winter-2025.md) (22), [Sommer 2026](fragen/Sommer-2026.md) (26–27)
