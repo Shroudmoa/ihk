@@ -34,7 +34,7 @@ In der GA2-Prüfung (Analyse und Entwicklung von Netzwerken) stehen oft die Kern
 
 ### SNMP (Simple Network Management Protocol) (2021W)
 - **`snmpget`:** Befehl zur Abfrage eines einzelnen OID-Werts von einem Gerät.
-- **OID-Struktur:** OID (Object Identifier) identifiziert verwaltete Objekte im MIB (Management Information Base). Beispiel: `1.3.6.1.2.1.1.1` = System-Name (sysDescr).
+- **OID-Struktur:** OID (Object Identifier) identifiziert verwaltete Objekte im MIB (Management Information Base). Beispiel: `1.3.6.1.2.1.1.1` = Systembeschreibung (sysDescr); `1.3.6.1.2.1.1.5` = System-Name (sysName).
 - **Trap-Mechanismus:** Das Netzwerkgerät sendet proaktiv ein "Trap", wenn ein Ereignis eintritt (z. B. "Gemeinschafts-Spannung verloren", "Fans aus"). Das ist aktiver als das periodische "Polling" (nachfragen).
 - **Community-String:** Art "Passwort" für SNMP-Zugriff (oft "public" oder "private" – sollte geändert werden!).
 - **Get vs. Get-next:** Iterative OID-Auflösung entlang des Baums.

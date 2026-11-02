@@ -1,80 +1,95 @@
-# Unternehmensgründung & Businessplan
+# Unternehmensgründung, Businessplan & Standortwahl
 
-> **Existenzgründung = Aufbau einer selbstständigen Existenz.** Prüfungsrelevant: Businessplan, Standort, Finanzierung, Rechtsform, Risiken.
+## In 30 Sekunden
 
-## Gründungsphasen
+- Selbstständigkeit bedeutet Chancen, aber ein **großes finanzielles Risiko** – kein garantierter Verdienst, keine automatische Sozialversicherung.
+- Der **Businessplan** ist das zentrale Planungsdokument: Geschäftsidee, Markt- und Wettbewerbsanalyse, Marketing, Organisation, Rechtsform, **Finanzplan**, **strategische Ziele**, Chancen und Risiken.
+- Er wird **vom Gründer** erstellt – nicht von der IHK ausgestellt, nicht im Handelsregister hinterlegt und nicht nur für Kapitalgesellschaften oder Kredite gebraucht.
+- Anmeldungen: **Gewerbeamt** (Gewerbeanmeldung) → automatisch Finanzamt, IHK, Berufsgenossenschaft; ggf. **Handelsregister** (Notar/Amtsgericht).
+- **Standortfaktoren:** Absatzmarkt, Konkurrenz, Arbeitskräfte, Verkehrsanbindung, Miete/Pacht, Gewerbesteuer-Hebesatz, behördliche Auflagen, Förderung – **nicht** die Umsatzsteuer (bundesweit gleich).
 
-1. **Geschäftsidee** und Marktanalyse.
-2. **Businessplan** erstellen.
-3. **Rechtsform** wählen.
-4. **Finanzierung** sichern.
-5. **Anmeldungen:** Gewerbe, Finanzamt, IHK, Berufsgenossenschaft, ggf. Handelsregister.
-6. **Start** und Controlling.
+## Kernwissen
 
-## Businessplan
+### Gründungsschritte
 
-Bestandteile:
-- Geschäftsidee und Alleinstellung.
-- Gründer/Team und Qualifikation.
-- Markt- und Wettbewerbsanalyse.
-- Marketing und Vertrieb.
-- Rechtsform und Organisation.
-- **Finanzplan:** Umsatz, Kosten, Gewinn, Liquidität, Kapitalbedarf.
-- Risiken und Szenarien.
+1. **Geschäftsidee** prüfen, Markt- und Kundenwünsche analysieren, Fachkenntnisse sicherstellen (durchschnittliche Kenntnisse reichen nicht).
+2. **Businessplan** schreiben, Beratung (IHK, Gründungszentren, Steuerberater).
+3. **Rechtsform** wählen (Haftung, Kapital, Kosten).
+4. **Finanzierung** sichern (Eigenkapital, Bank, KfW, Förderprogramme, ggf. Gründungszuschuss der Arbeitsagentur).
+5. **Anmeldungen:**
+   - **Gewerbeanmeldung** beim Gewerbeamt (§ 14 GewO) – Freiberufler (z. B. freie IT-Berater mit akademischer Qualifikation, je nach Tätigkeit) melden sich nur beim Finanzamt.
+   - **Finanzamt:** Fragebogen zur steuerlichen Erfassung, Steuernummer, ggf. USt-IdNr.
+   - **IHK:** Pflichtmitgliedschaft entsteht automatisch.
+   - **Berufsgenossenschaft:** innerhalb einer Woche, wenn Mitarbeiter beschäftigt werden; Betriebsnummer bei der Bundesagentur.
+   - **Handelsregister:** Pflicht für Kaufleute und Kapitalgesellschaften (Anmeldung über Notar).
+6. **Versicherungen:** Krankenversicherung ist **Pflicht** (GKV freiwillig oder PKV); Renten- und Arbeitslosenversicherung meist freiwillig; Betriebshaftpflicht empfehlenswert.
 
-**Wichtig:** Der Businessplan wird nicht von der IHK ausgestellt und nicht ins Handelsregister eingetragen. Er ist nicht nur für Kapitalgesellschaften oder Darlehen nötig, sondern auch für Förderung, Bank und eigene Planung.
+**Ist-Kaufmann:** Eine bestimmte Rechtsform (GmbH) ist nicht nötig; die IHK verlangt keinen Qualifikationsnachweis; es gibt keine Einkommensteuerbefreiung im ersten Jahr.
 
-## Standortwahl
+### Businessplan – Gliederung
 
-| Faktor | Bedeutung |
+| Abschnitt | Inhalt |
 |---|---|
-| Absatzmarkt | Kundennähe, Kaufkraft |
-| Arbeitsmarkt | Fachkräfte, Löhne |
-| Verkehr | Autobahn, Bahn, Flughafen, Logistik |
-| Kosten | Miete, Energie, Steuern, Abgaben |
-| Infrastruktur | Internet, Gewerbegebiet, Behörden |
-| Wettbewerb | Anzahl und Größe der Konkurrenten |
-| rechtliche Auflagen | Bau, Umwelt, Gewerbe |
+| Executive Summary | Kurzfassung auf 1–2 Seiten |
+| Geschäftsidee | Produkt/Dienstleistung, Kundennutzen, Alleinstellungsmerkmal (USP) |
+| Gründerperson/Team | Qualifikation, Erfahrung |
+| Markt und Wettbewerb | Zielgruppe, Marktvolumen, Konkurrenten, Standort |
+| Marketing und Vertrieb | Preis, Vertriebswege, Werbung |
+| Organisation und Rechtsform | Mitarbeiter, Aufbau, Rechtsform |
+| **Finanzplan** | Kapitalbedarf, Finanzierung, Umsatz- und Rentabilitätsvorschau, Liquiditätsplan |
+| Chancen und Risiken | SWOT-Analyse, Szenarien |
+| **Ziele/Strategie** | Meilensteine für 3–5 Jahre |
 
-**Nicht entscheidend:** bundesweite Umsatzsteuersätze – die sind gleich.
+**Adressaten:** Gründer selbst (Steuerung), Banken, Investoren, Förderstellen, Arbeitsagentur (Gründungszuschuss).
 
-## Finanzierung
+### Standortfaktoren
 
-| Art | Beispiele |
+| Faktor | Beispiele |
 |---|---|
-| Eigenkapital | Ersparnisse, Beteiligung, Crowdinvesting |
-| Fremdkapital | Bankdarlehen, KfW, Lieferantenkredit |
-| Förderung/Beratung | BAFA, KfW, Landesprogramme; IHK-Beratung (keine Finanzierung) |
-| Sicherheiten | Bürgschaft, Grundschuld, Lebensversicherung |
+| absatzorientiert | Kundennähe, Kaufkraft, **Anzahl und Größe der Konkurrenzbetriebe** |
+| arbeitsorientiert | Verfügbarkeit von Fachkräften, Lohnniveau |
+| verkehrsorientiert | **Verkehrsanbindung** (Autobahn, ÖPNV, Glasfaser) |
+| kostenorientiert | **Miete/Pacht**, Grundstückspreise, Energie, Gewerbesteuer-**Hebesatz** der Gemeinde |
+| staatlich/rechtlich | **behördliche Auflagen**, Bebauungsplan, Umweltauflagen, Fördergebiete |
+| weiche Faktoren | Image, Freizeitwert, Schulen |
 
-**Prüfungsfalle:** Eigenkapital ist nicht „geschenktes Geld“, sondern Haftungskapital. Eine gute Idee ersetzt keine Liquiditätsplanung.
+Die **Umsatzsteuer** (19 %/7 %) ist bundesweit gleich und deshalb **kein** Standortfaktor im Inland.
 
-## Risiken
+### Steuerliche Eckdaten für Gründer (Stand 2026)
 
-- Finanzielles Risiko: Haftung, fehlende Liquidität.
-- Marktrisiko: Nachfrage geringer als geplant.
-- Persönliches Risiko: Einkommen, Arbeitszeit, Krankheit.
-- Sozialversicherung: Selbstständige müssen sich selbst krankenversichern; nicht automatisch arbeitslosenversichert.
-- Kein garantierter Gewinn.
+- **Kleinunternehmerregelung** (§ 19 UStG): keine Umsatzsteuer, wenn Vorjahresumsatz ≤ **25.000 €** und laufendes Jahr ≤ **100.000 €** (seit 2025).
+- **Gewerbesteuer** (Gemeinde): Freibetrag 24.500 € Gewerbeertrag für Einzelunternehmen und Personengesellschaften.
+- Einkommensteuer-Vorauszahlungen, Umsatzsteuer-Voranmeldung.
 
-## 3-Zeiler für die Prüfung
+## Prüfungsfrage
 
-**Frage:** Reicht ein Businessplan nur für die Bank?
+**Frage (Multiple Choice):** Welche Aussage zum Businessplan trifft zu?
 
-**Antwort:** Nein, der Businessplan ist das zentrale Planungs- und Steuerungsinstrument des Gründers. Er dient auch der IHK-Beratung, Förderstellen und der eigenen Risikokontrolle. Finanzplan und Marktanalyse sind Pflichtbestandteile.
+1. Der Businessplan wird von der IHK ausgestellt.
+2. Er wird im Handelsregister hinterlegt.
+3. Er ist nur für Kapitalgesellschaften erforderlich.
+4. Er ist nur bei einer Darlehensaufnahme notwendig.
+5. In ihm werden Unternehmensidee, Finanzkonzept und strategische Ziele festgelegt.
 
-## Prüfungsfallen
+**Musterantwort:** **5.** Der Gründer erstellt den Businessplan selbst; er dient der eigenen Planung und Steuerung und überzeugt Banken, Investoren und Förderstellen – unabhängig von der Rechtsform.
 
-- IHK stellt keinen Businessplan aus.
-- Businessplan ist nicht nur für GmbH/AG.
-- Standortfaktor Umsatzsteuer ist irrelevant (bundesweit gleich).
-- Selbstständige sind nicht automatisch sozialversichert.
-- Ist-Kaufmann: Die Eintragung ins HR wirkt deklaratorisch, nicht konstitutiv; GmbH/AG entstehen erst mit Eintragung.
+## Falle
+
+- IHK **berät**, stellt aber keinen Businessplan aus und finanziert nicht.
+- Existenzgründer sind **nicht automatisch sozialversichert** – sie müssen sich selbst kümmern (KV-Pflicht!).
+- Umsatzsteuersätze sind kein Standortfaktor; der Gewerbesteuer-Hebesatz schon.
+- Ein guter Verdienst ist nicht garantiert.
+- Ist-Kaufmann: Eintragung ins HR wirkt **deklaratorisch**; die GmbH entsteht erst mit Eintragung (konstitutiv).
+
+## Merksatz
+
+**„Idee – Plan – Rechtsform – Geld – Anmeldung: Der Businessplan ist der Kompass des Gründers, nicht ein Formular der IHK.“**
 
 ## Verwandt
 
-- [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Wahl der Rechtsform
-- [Unternehmensziele & Zielkonflikte](unternehmensziele-zielkonflikte.md) – Rentabilität
-- [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – Wirtschaftlichkeit
-- [Marktformen & Preisbildung](marktformen-preisbildung.md) – Marktanalyse
+- [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Wahl der Rechtsform, Kaufmannsbegriff
+- [BEP – Break-Even-Point](bep.md) – ab welcher Menge lohnt sich das Geschäft?
+- [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – Rentabilitätsvorschau
 - [Sozialversicherung](sozialversicherung.md) – Absicherung Selbstständiger
+- [Arbeitslosenversicherung & Grundsicherung](arbeitslosenversicherung-grundsicherung.md) – Gründungszuschuss
+- Echte Aufgaben: [Winter 2022](fragen/Winter-2022.md) (23–24), [Sommer 2023](fragen/Sommer-2023.md) (14), [Winter 2023](fragen/Winter-2023.md) (22), [Sommer 2024](fragen/Sommer-2024.md) (19)
