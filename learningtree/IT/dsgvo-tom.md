@@ -35,6 +35,26 @@
 *   **Löschung:** Nach Zweckerreichung sofortige Löschpflicht.
 
 
+# Datenschutzkonzept (DSGVO)
+
+Ein Datenschutzkonzept ist das interne Regelwerk und die Dokumentation eines Unternehmens zur Einhaltung der DSGVO. Es dient dem Nachweis der gesetzeskonformen Datenverarbeitung gegenüber Aufsichtsbehörden.
+
+## Inhaltliche Anforderungen (4 Punkte für die IHK)
+
+Nenne vier der folgenden Punkte:
+
+1.  **Verzeichnis von Verarbeitungstätigkeiten (VVT):** Dokumentation, welche personenbezogenen Daten zu welchem Zweck, wo und von wem verarbeitet werden.
+2.  **Technische und Organisatorische Maßnahmen (TOM):** Nachweis der Datensicherheit (z.B. Zutritts-, Zugangs- und Zugriffskontrolle, Verschlüsselung).
+3.  **Löschkonzept:** Genaue Definition von Fristen und Prozessen zur Vernichtung personenbezogener Daten (Recht auf Vergessenwerden).
+4.  **Datenschutz-Folgenabschätzung (DSFA):** Risikobewertung für Verarbeitungen mit hohem Risiko für die Rechte und Freiheiten natürlicher Personen.
+5.  **Betroffenenrechte:** Prozesse zur Bearbeitung von Auskunfts-, Berichtigungs-, Lösch- und Widerspruchsanfragen.
+6.  **Auftragsverarbeitung (AVV):** Liste und Verträge mit externen Dienstleistern (z.B. Cloud-Anbieter), die Zugriff auf Daten haben.
+7.  **Notfall- / Data-Breach-Konzept:** Vorgehen bei Datenschutzverletzungen (Meldepflichten an die Aufsichtsbehörde).
+8.  **Schulungskonzept:** Nachweis der regelmäßigen Sensibilisierung und Schulung der Mitarbeiter.
+9.  **Verantwortliche Stelle** für den Datenschutz in der Firma (Nennung der Beauftragten)
+
+
+
 **Die TOM, die in der Prüfung zählen**
 | Maßnahme | Konkret |
 |---|---|
@@ -76,3 +96,42 @@
 - [Schutzziele](schutzziele.md) – Vertraulichkeit, Integrität, Verfügbarkeit
 - [hackers-can](hackers-can.md) – typische Angriffe auf diese Schutzziele
 - [Symmetrische-und-Asymmetrische](symmetrische-und-asymmetrische.md) – Verschlüsselung als TOM
+
+
+
+
+
+
+-------------------
+
+# Zutrittskontrolle (DSGVO / TOM)
+
+**Definition:** Physische Maßnahmen, die sicherstellen, dass nur befugte Personen Zutritt zu Bereichen haben, in denen personenbezogene Daten verarbeitet werden (z.B. Rechenzentrum, Serverraum, Aktenschränke).
+
+## Maßnahmen & konkrete Umsetzung
+
+| Maßnahme | Konkrete Umsetzung (Technisch / Organisatorisch) |
+| :--- | :--- |
+| **Bauliche Sicherung** | Stahltüren, vergitterte Fenster, geschlossene Wände, Sicherheitsschlösser. |
+| **Zugangskontrolle (Wer?)** | Elektronische Zutrittskarten (RFID), Fingerabdruckscanner, PIN-Codes, Schlüsselverwaltung. |
+| **Protokollierung** | Elektronisches Zutrittsprotokoll (Wer war wann wo?), Videoüberwachung im Eingangsbereich, manuelles Wachbuch. |
+| **Besucherregelung** | Besucherausweise, Begleitpflicht durch Mitarbeiter, getrennte Wartebereiche. |
+| **Alarmanlagen** | Einbruchmeldeanlagen (EMA), Bewegungsmelder, Türkontaktschalter. |
+| **Personelle Maßnahmen** | Zuverlässigkeitsprüfung des Sicherheitspersonals, klare Dienstanweisungen. |
+
+## IHK-Merksatz
+> „Zutrittskontrolle = Wer kommt ins Gebäude/den Raum? Es geht um die physische Absicherung der Räumlichkeiten, in denen Daten verarbeitet werden oder Datenträger lagern.“
+
+
+---
+# Rechtsgrundlagen der DSGVO (Art. 6)
+*Eine Einwilligung ist nicht immer nötig. Es muss nur eine passende Rechtsgrundlage geben.*
+
+| Rechtsgrundlage | Erklärung | Praxisbeispiel |
+| :--- | :--- | :--- |
+| **1. Vertragserfüllung** (Art. 6 Abs. 1 lit. b) | Verarbeitung ist nötig, um einen Vertrag mit der Person zu erfüllen oder vorzubereiten. | Ein Online-Shop speichert die Lieferadresse, um das bestellte Paket zu verschicken. Ein Bankhaus speichert Kontodaten für Überweisungen. |
+| **2. Rechtliche Verpflichtung** (Art. 6 Abs. 1 lit. c) | Verarbeitung ist gesetzlich vorgeschrieben. | Ein Bankhaus muss Kundendaten für 10 Jahre aufbewahren (Geldwäschegesetz, HGB). Ein Arbeitgeber muss Löhne an das Finanzamt melden. |
+| **3. Berechtigtes Interesse** (Art. 6 Abs. 1 lit. f) | Verarbeitung dient einem legitimen Interesse des Verantwortlichen, sofern die Rechte der Person nicht überwiegen. | Videoüberwachung zur Diebstahlprävention im Laden. Speicherung der IP-Adresse im Webserver-Log zur Abwehr von Hackerangriffen. |
+| **4. Schutz lebenswichtiger Interessen** (Art. 6 Abs. 1 lit. d) | Verarbeitung ist nötig, um das Leben einer Person zu schützen. | Ein bewusstloser Patient im Krankenhaus bekommt eine Notfallbehandlung; sein Allergiedatensatz wird abgerufen, obwohl keine Einwilligung vorliegt. |
+| **5. Öffentliches Interesse** (Art. 6 Abs. 1 lit. e) | Verarbeitung dient der Wahrnehmung einer öffentlichen Aufgabe. | Eine Meldebehörde verarbeitet Daten für das Melderegister. Eine Schule verarbeitet Schülerdaten für die Zeugniserstellung. |
+| **6. Einwilligung** (Art. 6 Abs. 1 lit. a) | Die Person hat freiwillig, informiert und eindeutig zugestimmt. | Ein Newsletter-Abo per Double-Opt-In. Eine Fotoaufnahme für die Firmenwebsite (Opt-in). |

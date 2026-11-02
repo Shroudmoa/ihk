@@ -58,7 +58,7 @@
 - [HA-Hochverfügbarkeit](ha-hochverfuegbarkeit.md)
 
 
-### Vor- und Nachteile
+### Vor- und Nachteile Cloud
 
 | Vorteile | Nachteile |
 |---|---|
