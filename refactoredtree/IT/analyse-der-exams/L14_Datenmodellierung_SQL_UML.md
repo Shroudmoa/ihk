@@ -132,7 +132,7 @@ Unterscheidung **statische Sicht** vs. **dynamische Sicht**:
 
 ⚠️ **Aktivitätsdiagramme** werden in der AP2 oft als **Zeichenaufgabe** verlangt – Symbole beherrschen: Startknoten, Aktivität (Rundrechteck), Entscheidung (Raute mit [Bedingung]), Swimlane (horizontale/vertikale Trennung nach Rolle).
 
-**Klassendiagramm:** Klasse = Rechteck mit 3 Bereichen (Klassenname / Attribute / Methoden). Vererbung = gepunktete Linie mit leerer Dreiecksspitze, Assoziation = durchgezogene Linie.
+**Klassendiagramm:** Klasse = Rechteck mit 3 Bereichen (Klassenname / Attribute / Methoden). Vererbung = durchgezogene Linie mit leerer Dreiecksspitze (gestrichelt + leeres Dreieck = Interface-Realisierung), Assoziation = durchgezogene Linie.
 
 ## 5. Übungsaufgabe (im Prüfungsstil, selbst erstellt)
 

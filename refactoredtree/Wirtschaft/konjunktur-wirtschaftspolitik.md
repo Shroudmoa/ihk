@@ -1,75 +1,102 @@
 # Konjunktur & Wirtschaftspolitik
 
-> **Konjunktur = schwankende gesamtwirtschaftliche Aktivität.** Vier Phasen: Aufschwung, Boom, Rezession, Depression. Prüfungsrelevant: Indikatoren und staatliche Maßnahmen.
+## In 30 Sekunden
 
-## Phasen
+- **Konjunktur** = wellenförmige Schwankung der gesamtwirtschaftlichen Aktivität (gemessen am realen **BIP**).
+- Phasen: **Aufschwung (Expansion) → Boom (Hochkonjunktur) → Abschwung/Rezession → Depression (Tiefstand)** → Aufschwung; dazwischen ggf. **Stagnation** (Wachstum ≈ 0).
+- **Rezession:** BIP sinkt, Arbeitslosigkeit steigt, Kapazitätsauslastung, Investitionen und Nachfrage sinken, **Lagerbestände steigen**.
+- Gegensteuern (antizyklisch): **expansive Fiskalpolitik** (Staatsinvestitionen ↑, Steuern ↓, Transfers ↑) oder **expansive Geldpolitik** der EZB (Leitzins ↓).
+- Steuererhöhungen, Leitzinserhöhungen, Kürzungen von Kinder- oder Arbeitslosengeld **dämpfen** die Konjunktur.
+- **Magisches Viereck** (StWG 1967): Preisniveaustabilität, hoher Beschäftigungsstand, außenwirtschaftliches Gleichgewicht, stetiges und angemessenes Wachstum.
 
-| Phase | BIP | Arbeitslosigkeit | Preise | Kapazität |
+## Kernwissen
+
+### Konjunkturphasen
+
+| Merkmal | Aufschwung | Boom | Rezession | Depression |
 |---|---|---|---|---|
-| **Aufschwung** | steigt | sinkt | steigen langsam | steigt |
-| **Boom** | stark steigt | sehr niedrig | steigen stark | ausgelastet/überlastet |
-| **Rezession** | sinkt | steigt | stagnieren/sinken | sinkt |
-| **Depression** | stark sinkt | hoch | sinken | sehr niedrig |
+| BIP (real) | steigt | steigt stark, Wachstum flacht am Ende ab | **sinkt** | stark gesunken, Tiefpunkt |
+| Arbeitslosigkeit | sinkt | sehr niedrig | **steigt** | hoch |
+| Preise/Inflation | steigen leicht | steigen stark | stagnieren/sinken | sinken (Deflationsgefahr) |
+| Kapazitätsauslastung | steigt | voll/überlastet | **sinkt** | sehr niedrig |
+| Investitionen | steigen | hoch | **sinken** | sehr niedrig |
+| Lagerbestände | sinken | niedrig | **steigen** | hoch |
+| Löhne/Lohnsumme | steigen | steigen stark | stagnieren/sinken | sinken |
+| Zinsen | steigen | hoch | sinken | niedrig |
+| Stimmung | optimistisch | euphorisch | pessimistisch | sehr pessimistisch |
 
-**Merke:** Rezession = mindestens zwei Quartale sinkendes BIP (gängige Definition); IHK erkennt sie oft an „BIP sinkt, Arbeitslosigkeit steigt“.
+**Faustregel:** Technische Rezession = zwei Quartale in Folge sinkendes BIP. In IHK-Aufgaben: „BIP −1,0 %, Inflation 2,2 %, Arbeitslosigkeit steigt“ → **Rezession**.
 
-## Indikatoren
+### Konjunkturindikatoren
 
-- **Frühindikatoren:** Auftragseingänge, ifo-Geschäftsklima, Aktienkurse, Baugenehmigungen.
-- **Präsenzindikatoren:** BIP, Produktion, Umsatz.
-- **Spätindikatoren:** Arbeitslosigkeit, Insolvenzen, Lagerbestände.
+| Art | Beispiele |
+|---|---|
+| **Frühindikatoren** | Auftragseingänge, ifo-Geschäftsklimaindex, Baugenehmigungen, Aktienkurse, Einkaufsmanagerindex |
+| **Präsenzindikatoren** | BIP, Industrieproduktion, Kapazitätsauslastung, Einzelhandelsumsatz |
+| **Spätindikatoren** | Arbeitslosenquote, Preisentwicklung, Insolvenzen, Steuereinnahmen |
 
-**Prüfungsfalle:** Steigende Lagerbestände sind ein Rezessionssignal, weil die Produktion nicht abgesetzt wird. Steigende Investitionen sprechen gegen Rezession.
+### Wirtschaftspolitik
 
-## Staatliche Maßnahmen
+| Politik | Träger | expansiv (Konjunktur beleben) | restriktiv (Boom/Inflation dämpfen) |
+|---|---|---|---|
+| **Fiskalpolitik** | Staat (Bund, Länder, Gemeinden) | Staatsausgaben und **staatliche Investitionen erhöhen**, Steuern senken, Abschreibungen verbessern, Transfers erhöhen | Ausgaben kürzen, Steuern erhöhen, Rücklagen bilden |
+| **Geldpolitik** | **Europäische Zentralbank (EZB)** – unabhängig, Ziel Preisstabilität (Inflation **2 %** mittelfristig) | **Leitzins senken**, Anleihekäufe → Kredite billiger | **Leitzins erhöhen** → Kredite teurer, Inflation sinkt |
+| Angebotspolitik | Staat | Bürokratieabbau, Steuersenkungen für Unternehmen, Bildung, Forschung | – |
 
-### Fiskalpolitik
-- **Expansiv:** Staatsausgaben erhöhen, Steuern senken, Kindergeld erhöhen → Nachfrage steigt.
-- **Restriktiv:** Ausgaben senken, Steuern erhöhen → Nachfrage sinkt.
-- **Automatische Stabilisatoren:** Arbeitslosengeld, Steuerprogression.
+- **Antizyklische** Politik (Keynes): gegen den Konjunkturzyklus handeln – in der Rezession Geld ausgeben (Deficit Spending), im Boom sparen.
+- **Automatische Stabilisatoren:** Arbeitslosengeld und progressive Steuer wirken ohne Beschluss dämpfend bzw. stützend.
 
-### Geldpolitik (EZB)
-- **Expansiv:** Leitzins senken → Kredite billiger → Investitionen steigen.
-- **Restriktiv:** Leitzins erhöhen → Kredite teurer → Inflation dämpfen.
+### Magisches Viereck und Erweiterungen
 
-**Prüfungsfalle:** Leitzins erhöhen belebt die Konjunktur **nicht**, sondern dämpft sie. Steuererhöhung dämpft den Konsum.
+1. **Preisniveaustabilität** (Inflation ≈ 2 %, gemessen mit dem Verbraucherpreisindex)
+2. **hoher Beschäftigungsstand** (niedrige Arbeitslosenquote)
+3. **außenwirtschaftliches Gleichgewicht** (ausgeglichene Leistungsbilanz)
+4. **stetiges und angemessenes Wirtschaftswachstum** (reales BIP)
 
-## Magisches Viereck
+Erweitert zum **magischen Sechseck**: + **Umweltschutz** + **gerechte Einkommens- und Vermögensverteilung**.
+„Magisch“, weil sich nicht alle Ziele gleichzeitig erreichen lassen (z. B. Vollbeschäftigung ↔ Preisstabilität, Wachstum ↔ Umweltschutz).
 
-1. Preisniveaustabilität.
-2. hoher Beschäftigungsstand.
-3. außenwirtschaftliches Gleichgewicht.
-4. angemessenes Wachstum.
+### Inflation und Kaufkraft
 
-Zielkonflikte: Vollbeschäftigung kann Inflation treiben; Wachstum kann Umwelt belasten.
+| Art | Ursache |
+|---|---|
+| Nachfrageinflation | Nachfrage > Angebot (Boom, Staatsausgaben) |
+| Kosteninflation | höhere Löhne, Energie-, Rohstoffpreise |
+| importierte Inflation | steigende Importpreise, schwacher Euro |
+| Geldmengeninflation | Geldmenge wächst schneller als die Gütermenge |
 
-## Inflation
+Folgen: Kaufkraft und **Realeinkommen sinken**, Sparer verlieren, Schuldner gewinnen. **Deflation** = sinkendes Preisniveau, gefährlich wegen Kaufzurückhaltung.
 
-- **Nachfrageinflation:** Nachfrage > Angebot.
-- **Kosteninflation:** Löhne, Energie, Rohstoffe steigen.
-- **Importierte Inflation:** teure Importe.
-- **Geldentwertung:** Kaufkraft sinkt; Reallohn kann trotz Nominallohnerhöhung sinken.
+## Prüfungsfrage
 
-**Beispiel:** Nominallohn +3 %, Inflation 4 % → Reallohn −1 %.
+**Frage (Multiple Choice):** Welche staatliche Maßnahme ist in einer Rezession geeignet, die Konjunktur zu beleben?
 
-## 3-Zeiler für die Prüfung
+1. Erhöhung der Mehrwertsteuer
+2. Erhöhung der Leitzinsen
+3. Kürzung des Kindergeldes
+4. Erhöhung der staatlichen Investitionen in Infrastruktur
+5. Kürzung des Arbeitslosengeldes
 
-**Frage:** BIP sinkt, Arbeitslosigkeit steigt, Preise stagnieren. Welche Phase?
+**Musterantwort:** **4.** Staatliche Investitionen erhöhen direkt die gesamtwirtschaftliche Nachfrage (expansive Fiskalpolitik). Steuererhöhungen und Transferkürzungen senken den Konsum; Leitzinserhöhungen verteuern Kredite und dämpfen Investitionen – außerdem entscheidet über Leitzinsen die EZB, nicht der Staat.
 
-**Antwort:** Es handelt sich um eine Rezession. Die gesamtwirtschaftliche Produktion geht zurück, die Arbeitslosigkeit steigt. Der Staat kann mit expansiver Fiskalpolitik gegensteuern.
+## Falle
 
-## Prüfungsfallen
+- Leitzins **erhöhen** = restriktiv (dämpft), Leitzins senken = expansiv.
+- Steigende **Lagerbestände** sind ein Rezessions-, kein Boom-Merkmal.
+- In der Rezession steigen weder Investitionen noch BIP noch Lohnsumme; stark steigende Verbraucherpreise sprechen eher für Boom/Inflation.
+- Über den Leitzins entscheidet die **EZB**, nicht die Bundesregierung oder die Bundesbank allein.
+- Depression ≠ Rezession: Depression ist der Tiefpunkt nach längerer Rezession.
 
-- Boom ≠ Rezession: Im Boom steigen Preise und Beschäftigung.
-- Leitzins erhöhen = restriktiv.
-- Steuersenkung = expansiv.
-- Reallohn = Nominallohn minus Inflation.
-- Lagerbestände steigen in der Rezession.
+## Merksatz
+
+**„Rezession: Produktion runter, Arbeitslose rauf, Lager voll – der Staat gibt Geld aus, die EZB senkt den Zins.“**
 
 ## Verwandt
 
-- [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – BIP und Kennzahlen
-- [Marktformen & Preisbildung](marktformen-preisbildung.md) – Angebot/Nachfrage
-- [Soziale Marktwirtschaft & Sozialstaat](soziale-marktwirtschaft-sozialstaat.md) – Staatseingriffe
-- [Wirtschaftssektoren & Arbeitsteilung](wirtschaftssektoren-arbeitsteilung.md) – Strukturwandel
-- [Unternehmensziele & Zielkonflikte](unternehmensziele-zielkonflikte.md) – magisches Viereck
+- [Soziale Marktwirtschaft & Sozialstaat](soziale-marktwirtschaft-sozialstaat.md) – Rolle des Staates
+- [Marktformen & Preisbildung](marktformen-preisbildung.md) – Angebot und Nachfrage
+- [Lohn, Steuern & Gehaltsabrechnung](lohn-steuern-gehaltsabrechnung.md) – Real- und Nominaleinkommen
+- [Globalisierung & EU-Binnenmarkt](globalisierung-eu-binnenmarkt.md) – Außenwirtschaft, Euro
+- [Unternehmensziele & Zielkonflikte](unternehmensziele-zielkonflikte.md) – betriebliche vs. gesamtwirtschaftliche Ziele
+- [Lektion 26 – Sektoren, Konjunktur, Marktformen](../IT/analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md)
+- Echte Aufgaben: [Sommer 2023](fragen/Sommer-2023.md) (26), [Winter 2024](fragen/Winter-2024.md) (15), [Sommer 2025](fragen/Sommer-2025.md) (4–6), [Winter 2025](fragen/Winter-2025.md) (5)

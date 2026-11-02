@@ -265,7 +265,7 @@ Wenn du diese Geschichte einmal komplett durchgearbeitet hast, hast du alle Lern
 | [Fachbegriffe](IT/FiSi-Administrator/fachbegriffe.md) | Slang und Architektur-Begriffe, die in Aufgaben vorkommen. | Alle Themen |
 | [Pseudocode](IT/UML-Code-SQL/Pseudocode/readme.md) | Prüfungsvorbereitung für Pseudocode/C#-Aufgaben (Arrays, Schleifen, Fehlersuche). | [Analyse Prüfungen - Programmierung](IT/analyse-der-exams/04_Programmierung_Grundlagen.md) |
 | [UML](IT/UML-Code-SQL/UML/readme.md) | UML-Diagramme für AP2 - Klassendiagramm, Use-Case, Aktivitätsdiagramm, Sequenzdiagramm. | [Analyse Prüfungen - Datenmodellierung/SQL/UML](IT/analyse-der-exams/L14_Datenmodellierung_SQL_UML.md) |
-| [AOB](IT/Management/aob.md) | Aufwandsorientierte Budgetierung. | [Aufwandsschätzung](IT/Management/aufwandsschaetzung.md), [Ressourcenplan](IT/Management/ressourcenplan.md) |
+| [AOB](IT/Management/aob.md) | Anordnungsbeziehungen (NF, AF, EF, AE) zwischen Vorgängen im Netzplan. | [Aufwandsschätzung](IT/Management/aufwandsschaetzung.md), [Ressourcenplan](IT/Management/ressourcenplan.md) |
 | [Netzplan](IT/Management/netzplan.md) | Vorgangspfeil-Netzplan, kritischer Pfad. | [PERT](IT/Management/pert.md), [Gantt-Diagramm](IT/Management/gantt-diagramm.md) |
 | [Gantt-Diagramm](IT/Management/gantt-diagramm.md) | Balkendiagramm zur Terminplanung. | [Netzplan](IT/Management/netzplan.md), [Ressourcenplan](IT/Management/ressourcenplan.md) |
 | [Projektstruckturplan-PSP](IT/Management/projektstrukturplan-psp.md) | Arbeitspakete, Gliederungstiefe. | [Aufwandsschätzung](IT/Management/aufwandsschaetzung.md), [Netzplan](IT/Management/netzplan.md) |
