@@ -2,11 +2,20 @@
 
 > Dynamisches UML-Diagramm zur Darstellung der zeitlichen Reihenfolge von Nachrichten zwischen Objekten
 
-## Zweck
+## In 30 Sekunden
+
+- Das **Sequenzdiagramm** ist ein **dynamisches** Interaktionsdiagramm: Es zeigt, **welche Nachrichten** Objekte **in welcher zeitlichen Reihenfolge** austauschen.
+- **Lebenslinien** (Objekt oben, gestrichelte Linie nach unten), **Aktivierungsbalken**, **Nachrichten** als Pfeile; die Zeit läuft **von oben nach unten**.
+- **Synchron** (gefüllte Pfeilspitze, Sender wartet), **asynchron** (offene Spitze, Sender wartet nicht), **Antwort** (gestrichelt).
+- Kombinierte Fragmente: **alt** (Alternative), **opt** (optional), **loop** (Schleife), **par** (parallel).
+
+## Kernwissen
+
+### Zweck
 
 Das **Sequenzdiagramm** zeigt, **wer** mit **wem** in welcher **Reihenfolge** kommuniziert, um einen bestimmten Ablauf abzuwickeln. Fokus liegt auf dem **Nachrichtenaustausch über die Zeit**.
 
-## Grundelemente
+### Grundelemente
 
 | Element | Darstellung | Beschreibung |
 |---|---|---|
@@ -18,7 +27,7 @@ Das **Sequenzdiagramm** zeigt, **wer** mit **wem** in welcher **Reihenfolge** ko
 | **Antwortnachricht** | Gestrichelter Pfeil | Rückgabe/Wert (optional) |
 | **Zeitlicher Verlauf** | Von oben nach unten | Oben = früher, unten = später |
 
-## Nachrichtentypen im Überblick
+### Nachrichtentypen im Überblick
 
 | Typ | Symbol | Bedeutung |
 |---|---|---|
@@ -27,7 +36,7 @@ Das **Sequenzdiagramm** zeigt, **wer** mit **wem** in welcher **Reihenfolge** ko
 | **Rückantwort** | `┈┈┈>` (gestrichelt) | Antwort auf synchrone Nachricht |
 | **Selbstnachricht** | Pfeil zum gleichen Objekt | Objekt ruft eigene Methode auf |
 
-## Beispiel: "Login-Vorgang"
+### Beispiel: "Login-Vorgang"
 
 ```
 Kunde        Login-Seite      Authentifizierung   Datenbank
@@ -49,9 +58,9 @@ Kunde        Login-Seite      Authentifizierung   Datenbank
 4. Antwort geht zurück
 5. Kunde erhält Bestätigung/Ablehnung
 
-## Alternativen & Schleifen
+### Alternativen & Schleifen
 
-### Alternative (alt)
+#### Alternative (alt)
 Wird für **"Entweder-Oder"** genutzt (if/else)
 
 ```
@@ -62,7 +71,7 @@ else [Login fehlgeschlagen]
 end
 ```
 
-### Schleife (loop)
+#### Schleife (loop)
 Für wiederholte Abläufe
 
 ```
@@ -71,7 +80,7 @@ loop [für jeden Artikel]
 end
 ```
 
-### Option (opt)
+#### Option (opt)
 Für **optionalen** Ablauf
 
 ```
@@ -80,7 +89,7 @@ opt [Kunde hat Gutschein]
 end
 ```
 
-## Sequenzdiagramm vs. Aktivitätsdiagramm
+### Sequenzdiagramm vs. Aktivitätsdiagramm
 
 | Kriterium | **Sequenzdiagramm** | **Aktivitätsdiagramm** |
 |---|---|---|
@@ -90,7 +99,7 @@ end
 | **Nachrichten** | Expliziter Nachrichtenaustausch | Weniger detailliert bzgl. Aufrufe |
 | **Nutzung** | Oft bei Use-Cases zur Verfeinerung | Oft für Geschäftsprozesse |
 
-## Prüfungsrelevante Aspekte
+### Prüfungsrelevante Aspekte
 
 - **Zeitverlauf:** Von **oben nach unten** lesen
 - **Lebenslinien:** Nur beteiligte Objekte darstellen
@@ -98,12 +107,12 @@ end
 - **Antworten:** Nur zeichnen, wenn relevant für den Ablauf
 - **Kombination:** Häufig in Verbindung mit Use-Cases gefragt
 
-## Prüfungsaufgabe (Muster)
+## Prüfungsfrage
 
 > Zeichnen Sie ein Sequenzdiagramm für den Vorgang "Kunde bestellt Artikel online":
 > Kunde → Webshop → Warenkorb → Bestellsystem → Zahlungssystem
 
-**Lösungsschritte:**
+**Musterantwort:**
 1. Kunde klickt "Artikel bestellen"
 2. Webshop prüft Verfügbarkeit
 3. Warenkorb wird aktualisiert
@@ -111,7 +120,7 @@ end
 5. Zahlungssystem führt Zahlung durch
 6. Bestätigung an Kunde
 
-## Checkliste
+### Checkliste
 
 - [ ] **Alle Beteiligten** als Lebenslinien vorhanden
 - [ ] **Zeitliche Reihenfolge** korrekt (oben → unten)
@@ -120,13 +129,21 @@ end
 - [ ] **Antwortnachrichten** nur wo nötig
 - [ ] **Klarer Fokus** auf den geforderten Ablauf
 
-## Merksätze
+## Falle
+
+- **Zeit horizontal lesen:** Die Zeitachse ist vertikal.
+- **Synchron und asynchron vertauschen:** gefüllte Spitze = synchron (wartet).
+- **Unbeteiligte Objekte zeichnen** oder Antworten für jede Nachricht erzwingen.
+- **Sequenz- mit Aktivitätsdiagramm verwechseln:** Das Sequenzdiagramm zeigt Nachrichten zwischen Objekten, nicht die Zuständigkeit für Arbeitsschritte.
+
+## Merksatz
 
 - **"Wer redet mit wem, wann?"** - Das ist die Kernfrage des Sequenzdiagramms
 - **Vertikale Achse = Zeit** - Nie horizontal!
 - **Lebenslinie = Existenz** - Objekt ist während des Ablaufs beteiligt
 
-## Weiterführend
+## Verwandt
+
 - [Klassendiagramm](Klassendiagramm.md)
 - [Anwendungsfalldiagramm-Use-Case-Diagramm](Anwendungsfalldiagramm-Use-Case-Diagramm.md)
 - [Aktivitätsdiagramm](Aktivitaetsdiagramm.md)

@@ -1,65 +1,77 @@
-# Unternehmensziele & Zielkonflikte
+# Unternehmensziele & Zielbeziehungen
 
-> **Unternehmensziele sind ökonomisch, ökologisch oder sozial.** Sie können sich ergänzen, widersprechen oder unabhängig sein. Prüfungsrelevant: Zielarten, Zielbeziehungen, magisches Viereck.
+## In 30 Sekunden
 
-## Zielarten
+- Unternehmensziele werden in **ökonomische**, **ökologische** und **soziale** Ziele eingeteilt (Nachhaltigkeitsdreieck).
+- Ökonomisch: Gewinn, Umsatz, Rentabilität, Marktanteil, Kostensenkung, Kundenzufriedenheit (als Mittel zum Umsatz).
+- Ökologisch: CO₂ senken, Energie und Rohstoffe sparen, Recycling, zertifizierte umweltfreundliche Lieferanten.
+- Sozial: Arbeitsplatzsicherheit, faire Löhne, Gewinnbeteiligung, Chancengleichheit, Diversity, Betriebskindergarten, Fairtrade.
+- Zielbeziehungen: **komplementär** (fördern sich), **konkurrierend** (Zielkonflikt), **indifferent** (unabhängig).
+- Klassischer Zielkonflikt: **Personalkosten senken ↔ Arbeitsplätze sichern**.
+
+## Kernwissen
+
+### Zielarten
 
 | Kategorie | Beispiele |
 |---|---|
-| **Ökonomisch** | Gewinn, Umsatz, Rentabilität, Marktanteil, Kosten senken, Produktivität |
-| **Ökologisch** | CO₂ senken, Recycling, Energie sparen, schadstoffarme Produktion |
-| **Sozial** | Mitarbeiterzufriedenheit, faire Löhne, Chancengleichheit, Weiterbildung, Betriebskindergarten |
+| **ökonomisch** | Gewinnmaximierung, Umsatzsteigerung, Rentabilität, Liquidität, Marktanteil, Kostensenkung, Produktivität, Kundenzufriedenheit, Gewinn für Investitionen |
+| **ökologisch** | CO₂-Emissionen senken (z. B. durch Photovoltaik), Abfall vermeiden, Ressourcen schonen, umweltschonende Technik, Bezug von zertifizierten Lieferanten, Verpackungsabfälle sammeln |
+| **sozial** | Arbeitsplatzsicherheit, Mitarbeiterzufriedenheit, Weiterbildung, Chancengleichheit, Diversity- und Compliance-Regeln, Beteiligung am Unternehmenserfolg, Betriebskindergarten, fair gehandelte Produkte, Gesundheitsförderung |
 
-**Merke:** „Kundenzufriedenheit“ ist meist ökonomisch, „Mitarbeiterzufriedenheit“ sozial. „Fairtrade-Produkte“ sozial, „Blauer Engel“ ökologisch.
+Weitere Einteilungen: **Sachziele** (was wird produziert) vs. **Formalziele** (Gewinn, Rentabilität); **Ober-, Zwischen-, Unterziele**; **kurz-, mittel-, langfristig**; **quantitativ** (messbar) vs. **qualitativ**. Gute Ziele sind **SMART**: spezifisch, messbar, attraktiv/akzeptiert, realistisch, terminiert.
 
-## Zielbeziehungen
+**Gewinnbeteiligung zur Motivation** ordnet der IHK-Schlüssel (Sommer 2025) als **ökonomisch** ein, weil sie Produktivität steigern soll; die Beteiligung am Unternehmenserfolg als solche gilt als **soziales** Ziel (Winter 2024). Entscheidend ist der in der Aufgabe genannte **Zweck**.
 
-| Beziehung | Bedeutung | Beispiel |
+### Zielbeziehungen
+
+| Beziehung | Bedeutung | Beispiele |
 |---|---|---|
-| **komplementär** | Ziele fördern sich gegenseitig | Kundenzufriedenheit + Mitarbeiterqualifikation |
-| **konkurrierend (Zielkonflikt)** | Ziele widersprechen sich | Personalkosten senken + Arbeitsplätze sichern |
-| **indifferent** | Ziele berühren sich nicht | gutes Arbeitsklima + Recycling |
+| **komplementär** (Zielharmonie) | Erreichen von Ziel A fördert Ziel B | Mitarbeiterqualifikation ↔ Kundenzufriedenheit; Bezugskosten senken ↔ Gewinn steigern |
+| **konkurrierend** (Zielkonflikt) | Ziel A beeinträchtigt Ziel B | Personalkosten senken ↔ Arbeitsplätze sichern; günstiger Einkauf ↔ Gütesiegel/Umweltqualität; Mitarbeiterzufriedenheit ↔ Ausgaben vermeiden; hohe Umweltinvestitionen ↔ kurzfristiger Gewinn |
+| **indifferent** (Zielneutralität) | keine gegenseitige Beeinflussung | gutes Arbeitsklima ↔ Recycling; E-Mobilität ↔ Papierreduktion |
 
-**Prüfungsfalle:** „Hohe Investitionen für Umweltschutz“ ist ein Zielkonflikt, keine Zielharmonie. „Gewinnbeteiligung zur Motivation“ kann sozial wirken, ist aber oft ökonomisch motiviert; entscheidend ist das verfolgte Ziel.
+Bei Zielkonflikten muss die Unternehmensleitung **Prioritäten** setzen (Zielhierarchie) oder Kompromisse finden.
 
-## Magisches Viereck / Sechseck
+### Stakeholder vs. Shareholder
 
-Stabilitätsgesetz (§ 1 StWG):
-1. Preisniveaustabilität.
-2. hoher Beschäftigungsstand.
-3. außenwirtschaftliches Gleichgewicht.
-4. stetiges, angemessenes Wirtschaftswachstum.
+- **Shareholder-Value:** Ausrichtung auf die Interessen der Eigentümer (Gewinn, Dividende, Unternehmenswert) – typisch für die AG.
+- **Stakeholder-Ansatz:** Berücksichtigung aller Anspruchsgruppen – Mitarbeiter (Lohn, Sicherheit), Kunden (Qualität, Preis), Lieferanten (Zahlung), Staat (Steuern, Gesetze), Gesellschaft/Umwelt (Nachhaltigkeit).
+- Interessenkonflikte zwischen Stakeholdern sind typisch (Mitarbeiter wollen höhere Löhne, Eigentümer höheren Gewinn).
 
-Erweitert um:
-5. Umweltschutz.
-6. gerechte Einkommensverteilung.
+### Gesamtwirtschaftliche Ziele (Abgrenzung)
 
-**„Magisch“** = alle Ziele gleichzeitig sind schwer erreichbar; es gibt Zielkonflikte.
+Das **magische Viereck** (StWG 1967: Preisniveaustabilität, hoher Beschäftigungsstand, außenwirtschaftliches Gleichgewicht, stetiges Wachstum) sind Ziele des **Staates**, keine Unternehmensziele → siehe Konjunktur.
 
-## Stakeholder vs. Shareholder
+## Prüfungsfrage
 
-- **Shareholder-Ansatz:** Gewinn für Eigentümer/Aktionäre.
-- **Stakeholder-Ansatz:** Interessen von Mitarbeitern, Kunden, Lieferanten, Staat, Umwelt.
-- Nachhaltigkeit = **Triple Bottom Line**: ökonomisch, ökologisch, sozial.
+**Frage (Zuordnung):** Ordnen Sie zu: (1) komplementär, (2) konkurrierend, (3) indifferent.
+a) Mitarbeiterzufriedenheit erhöhen und Ausgaben vermeiden
+b) möglichst preisgünstig einkaufen und nur Produkte mit Gütesiegel beziehen
+c) gutes Arbeitsklima und Recycling von Verpackungen
+d) Kundenzufriedenheit steigern und Mitarbeiter besser qualifizieren
+e) Bezugskosten minimieren und Gewinn maximieren
 
-## 3-Zeiler für die Prüfung
+**Musterantwort:** a) **2**, b) **2**, c) **3**, d) **1**, e) **1**.
 
-**Frage:** Sind „Personalkosten senken“ und „Arbeitsplätze sichern“ komplementär?
+## Falle
 
-**Antwort:** Nein, sie sind konkurrierend. Kostensenkung kann Personalabbau bedeuten und gefährdet Arbeitsplätze. Ein Zielkonflikt entsteht, wenn beide Ziele gleichzeitig verfolgt werden. Das Unternehmen muss gewichten.
+- Gewinnmaximierung ist **ökonomisch**, nicht sozial; Kundenzufriedenheit gilt in der Regel als **ökonomisch**.
+- „Größere Verbrenner-Firmenwagen“ ist kein ökologisches Ziel – es ist ökologisch negativ.
+- Investitionen in Produktionsanlagen sind nicht automatisch ökologisch.
+- Hohe Umweltinvestitionen sind eher ein **Zielkonflikt** mit dem Gewinn als Zielharmonie.
+- Indifferent ≠ komplementär: Ziele, die nichts miteinander zu tun haben, sind indifferent.
+- Soziale Marktwirtschaft ist kein Unternehmensziel, sondern die Wirtschaftsordnung.
 
-## Prüfungsfallen
+## Merksatz
 
-- Gewinnmaximierung ist ökonomisch, nicht sozial.
-- Umweltschutzinvestitionen sind oft Zielkonflikt, nicht automatisch Harmonie.
-- „CO₂ senken“ ist ökologisch, „Umsatz steigern“ ökonomisch.
-- Indifferent ≠ komplementär.
-- Soziale Marktwirtschaft ist kein Unternehmensziel, sondern Wirtschaftsordnung.
+**„Hilft A dem B – komplementär. Schadet A dem B – Konflikt. Ist es egal – indifferent.“**
 
 ## Verwandt
 
-- [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – Wirtschaftlichkeit und Rentabilität
-- [Unternehmensgründung & Businessplan](unternehmensgruendung-businessplan.md) – Zielplanung
-- [Umwelt & Nachhaltigkeit](umwelt-nachhaltigkeit.md) – ökologische Ziele
-- [Soziale Marktwirtschaft & Sozialstaat](soziale-marktwirtschaft-sozialstaat.md) – Ordnungsrahmen
+- [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – Rentabilität, Wirtschaftlichkeit
+- [Umwelt & Nachhaltigkeit](umwelt-nachhaltigkeit.md) – ökologische Ziele, Triple Bottom Line
+- [AGG & Diversity](agg-diversity.md) – Diversity als soziales Ziel
 - [Konjunktur & Wirtschaftspolitik](konjunktur-wirtschaftspolitik.md) – magisches Viereck
+- [Lektion 26 – Sektoren, Konjunktur, Marktformen](../IT/analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md)
+- Echte Aufgaben: [Winter 2024](fragen/Winter-2024.md) (18–19, 23), [Sommer 2025](fragen/Sommer-2025.md) (7), [Winter 2025](fragen/Winter-2025.md) (6), [Sommer 2026](fragen/Sommer-2026.md) (17, 23)

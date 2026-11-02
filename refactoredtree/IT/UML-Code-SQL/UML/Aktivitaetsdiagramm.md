@@ -2,11 +2,20 @@
 
 > Dynamisches UML-Diagramm zur Modellierung von Abläufen, Geschäftsprozessen und Arbeitsflüssen
 
-## Zweck
+## In 30 Sekunden
+
+- Das **Aktivitätsdiagramm** ist ein **dynamisches** UML-Diagramm und zeigt den **Ablauf** von Aktionen – ähnlich einem Flussdiagramm.
+- Elemente: **Startknoten** (●), **Aktion** (abgerundetes Rechteck), **Entscheidung/Zusammenführung** (◇ mit `[Bedingung]`), **Gabelung/Vereinigung** (Balken für Parallelität), **Endknoten** (◉).
+- **Swimlanes** (Partitionen) zeigen, wer für welche Aktion zuständig ist.
+- Geprüft: **2022S** – Aktivitätsdiagramm zur regelbasierten Verschiebung von Dateien von NAS-1 nach NAS-2 vervollständigen (14 Punkte).
+
+## Kernwissen
+
+### Zweck
 
 Das **Aktivitätsdiagramm** zeigt den **Ablauf** von Aktivitäten. Es ist besonders gut für Geschäftsprozesse, Algorithmen oder Use-Cases geeignet. In der IHK wird es **sehr häufig als Zeichenaufgabe** verlangt!
 
-## Grundelemente
+### Grundelemente
 
 | Symbol | Name | Beschreibung |
 |---|---|---|
@@ -16,7 +25,7 @@ Das **Aktivitätsdiagramm** zeigt den **Ablauf** von Aktivitäten. Es ist besond
 | ───► | **Fluss/Übergang** | Richtung des Ablaufs |
 | ◉ (Kreis mit Punkt) | **Endknoten** | Ende des Ablaufs |
 
-## Swimlanes (Verantwortlichkeitsbereiche)
+### Swimlanes (Verantwortlichkeitsbereiche)
 
 **Swimlanes** trennen den Ablauf nach Zuständigkeiten (Personen, Rollen, Abteilungen oder Systeme).
 
@@ -36,14 +45,14 @@ Das **Aktivitätsdiagramm** zeigt den **Ablauf** von Aktivitäten. Es ist besond
 
 **Nutzen:** Sofort ersichtlich, wer was wann macht.
 
-## Fork & Join (parallele Abläufe)
+### Fork & Join (parallele Abläufe)
 
 - **Fork (Gabelung):** Ein Fluss wird in mehrere parallele Flüsse aufgeteilt
 - **Join (Zusammenführung):** Parallele Flüsse werden wieder synchronisiert
 
 Dargestellt als **dicker Balken**.
 
-## Beispiel: "Urlaub beantragen" (mit Swimlanes)
+### Beispiel: "Urlaub beantragen" (mit Swimlanes)
 
 ```
 ┌─────────────┬─────────────┬─────────────┐
@@ -70,13 +79,13 @@ Dargestellt als **dicker Balken**.
 └─────────────┴─────────────┴─────────────┘
 ```
 
-## Entscheidungsregeln
+### Entscheidungsregeln
 
 - **Entscheidungsknoten:** Hat immer **genau eine eingehende** und **mindestens zwei ausgehende** Kanten
 - **Bedingungen in eckigen Klammern:** `[Genehmigt]`, `[Verfügbar == ja]`
 - **Gegensätzliche Bedingungen:** Verwende `[Ja]` / `[Nein]` oder `[Wahr]` / `[Falsch]`
 
-## Unterschiede zu anderen Diagrammen
+### Unterschiede zu anderen Diagrammen
 
 | Diagramm | Fokus |
 |---|---|
@@ -84,19 +93,19 @@ Dargestellt als **dicker Balken**.
 | **Sequenzdiagramm** | **Interaktion/Kommunikation** - "Wer sendet welche Nachricht wann?" |
 | **Use-Case-Diagramm** | **Funktionalität** - "Was kann der Nutzer tun?" |
 
-## Typische Prüfungsaufgaben
+### Typische Prüfungsaufgaben
 
 1. **Vervollständigen:** Fehlende Symbole/Bedingungen ergänzen
 2. **Zeichnen:** Ablauf aus Textbeschreibung erstellen
 3. **Fehlersuche:** Fehler im Aktivitätsdiagramm finden
 4. **Swimlanes zuordnen:** Zuständigkeiten korrekt einteilen
 
-## Prüfungsaufgabe (Muster)
+## Prüfungsfrage
 
 > Erstellen Sie ein Aktivitätsdiagramm für den Vorgang "Artikel bestellen": 
 > Kunde legt Artikel in Warenkorb → Prüfe ob Warenkorb leer → Falls leer Abbruch, sonst zur Kasse → Zahlung durchführen → Bestellung bestätigen.
 
-**Lösung:**
+**Musterantwort:**
 
 1. Start ●
 2. Artikel in Warenkorb legen
@@ -108,7 +117,7 @@ Dargestellt als **dicker Balken**.
 6. Bestellung bestätigen
 7. Ende ◉
 
-## Checkliste für Aktivitätsdiagramme
+### Checkliste für Aktivitätsdiagramme
 
 - [ ] **Startknoten** vorhanden
 - [ ] **Aktivitäten** kurz und prägnant formuliert (Substantiv+Verb oder Infinitiv)
@@ -117,13 +126,22 @@ Dargestellt als **dicker Balken**.
 - [ ] **Swimlanes** falls Zuständigkeiten gefragt sind
 - [ ] **Logische Reihenfolge** korrekt
 
-## Merksätze
+## Falle
+
+- **Bedingungen ohne eckige Klammern** oder nur ein Ausgang an der Raute: Jede Entscheidung braucht beschriftete, sich ausschließende Ausgänge (`[ja]`/`[nein]`).
+- **Überlappende Bedingungen** wie `> 40 %` und `> 60 %` ohne Obergrenze – in 2022S waren die Bereiche 40–60, 60–80 und über 80 % sauber zu trennen.
+- **Kein Endknoten** auf einem Pfad oder mehrere Startknoten.
+- **Gabelung (Parallelität) mit Entscheidung verwechseln:** Der Balken startet alle Pfade gleichzeitig, die Raute wählt einen.
+- **Aktivitätsdiagramm mit Zustandsdiagramm verwechseln:** Aktionen sind Tätigkeiten, keine Zustände.
+
+## Merksatz
 
 - **Aktivitätsdiagramm = Flussdiagramm light** - Ähnelt Ablaufdiagrammen, aber UML-konform
 - **Entscheidung = Ja/Nein-Frage** - Immer zwei oder mehr Ausgänge
 - **Swimlane = Wer ist dran?** - Sehr häufig in IHK-Aufgaben
 
-## Weiterführend
+## Verwandt
+
 - [Klassendiagramm](Klassendiagramm.md)
 - [Anwendungsfalldiagramm-Use-Case-Diagramm](Anwendungsfalldiagramm-Use-Case-Diagramm.md)
 - [Sequenzdiagramm](Sequenzdiagramm.md)

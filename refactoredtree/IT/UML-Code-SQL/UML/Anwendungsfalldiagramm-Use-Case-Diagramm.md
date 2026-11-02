@@ -1,18 +1,28 @@
 # Anwendungsfalldiagramm / Use-Case-Diagramm
 
-> Statisches UML-Diagramm zur Darstellung von funktionalen Anforderungen aus Sicht des Anwenders
+> UML-Verhaltensdiagramm zur Darstellung von funktionalen Anforderungen aus Sicht des Anwenders
 
-## Zweck
+## In 30 Sekunden
+
+- Das **Use-Case-Diagramm** zeigt, **welche Funktionen** (Use Cases) ein System **für welche Akteure** bereitstellt – aus Sicht der Anwender, ohne internen Ablauf.
+- Elemente: **Akteur** (Strichmännchen, Person oder externes System), **Use Case** (Ellipse), **Systemgrenze** (Rechteck), **Assoziation** (Linie).
+- Beziehungen: **`<<include>>`** (wird immer mit ausgeführt), **`<<extend>>`** (optional unter Bedingung), **Generalisierung** (Spezialisierung von Akteuren oder Use Cases).
+- In UML 2 zählt es zu den **Verhaltensdiagrammen**, bildet aber keinen zeitlichen Ablauf ab; viele Lehrbücher nennen es deshalb "statisch".
+- Einsatz: Anforderungsanalyse, Lastenheft, Grundlage für Testfälle.
+
+## Kernwissen
+
+### Zweck
 
 Das **Use-Case-Diagramm** zeigt, welche Funktionen (Use Cases) ein System für welche Benutzer (Akteure) bietet. Es wird vor allem in der **Anforderungsanalyse** eingesetzt und dient als gemeinsame Basis zwischen Fachbereich, Entwicklung und Test.
 
-## Blickwinkel
+### Blickwinkel
 
 - **Außenperspektive:** Betrachtet das System von außen, nicht den internen Aufbau
 - **Benutzerorientiert:** Was kann der Nutzer mit dem System tun?
 - **Abgrenzung:** Zeigt klar, was zum System gehört und was nicht
 
-## Elemente
+### Elemente
 
 | Element | Darstellung | Beschreibung |
 |---|---|---|
@@ -21,9 +31,9 @@ Das **Use-Case-Diagramm** zeigt, welche Funktionen (Use Cases) ein System für w
 | **Systemgrenze** | Rechteck | Trennt System von seiner Umgebung. Alles innerhalb gehört zum Projekt/Scope. |
 | **Assoziation** | Durchgezogene Linie | Verbindet Akteur mit Use Case (Nutzung) |
 
-## Beziehungen zwischen Use Cases
+### Beziehungen zwischen Use Cases
 
-### 1. `<<include>>` - "wird immer ausgeführt"
+#### 1. `<<include>>` - "wird immer ausgeführt"
 Der Basis-Use-Case **ruft** den inkludierten Use-Case **unbedingt** auf.
 
 **Darstellung:** Gestrichelte Linie mit Pfeil zum inkludierten Use Case, beschriftet mit `<<include>>`
@@ -31,7 +41,7 @@ Der Basis-Use-Case **ruft** den inkludierten Use-Case **unbedingt** auf.
 **Beispiel:** "Buchung abschließen" *include* "Zahlung durchführen"
 - Ohne Zahlung kann keine Buchung abgeschlossen werden
 
-### 2. `<<extend>>` - "wird optional ausgeführt"
+#### 2. `<<extend>>` - "wird optional ausgeführt"
 Der erweiternde Use-Case wird **nur unter bestimmten Bedingungen** ausgeführt.
 
 **Darstellung:** Gestrichelte Linie mit Pfeil zum Basis-Use-Case, beschriftet mit `<<extend>>`
@@ -39,12 +49,12 @@ Der erweiternde Use-Case wird **nur unter bestimmten Bedingungen** ausgeführt.
 **Beispiel:** "Kunde einloggen" *extend* "Passwort vergessen"
 - Nur wenn der Nutzer "Passwort vergessen" klickt, wird dieser Use Case ausgeführt
 
-### 3. Generalisierung
+#### 3. Generalisierung
 Akteure oder Use Cases können vererbt werden.
 
 **Beispiel:** "Mitarbeiter" kann Generalisierung von "Vorgesetzter" sein (Vorgesetzter hat alle Rechte des Mitarbeiters plus zusätzliche).
 
-## Beispiel: Online-Shop
+### Beispiel: Online-Shop
 
 ```
 ┌─────────────────────────────────────────┐
@@ -66,7 +76,7 @@ Akteure oder Use Cases können vererbt werden.
        Kunde Gast               Kunde
 ```
 
-## Unterschied include vs. extend
+### Unterschied include vs. extend
 
 | Kriterium | `<<include>>` | `<<extend>>` |
 |---|---|---|
@@ -75,28 +85,36 @@ Akteure oder Use Cases können vererbt werden.
 | **Frage** | "Wird das IMMER benötigt?" | "Ist das nur in Sonderfällen?" |
 | **Beispiel** | Anmeldung *include* Authentifizierung | Einkaufen *extend* Gutschein einlösen |
 
-## Einsatz in der Prüfung
+### Einsatz in der Prüfung
 
 - **Anforderungsanalyse:** Funktionen für Benutzer erfassen
 - **Systemabgrenzung:** Klären, was im Scope liegt
 - **Kommunikation:** Zwischen Fachbereich und IT-Team
 - **Testfallbasis:** Jeder Use Case kann Grundlage für Testfälle sein
 
-## Prüfungsaufgabe (Muster)
+## Prüfungsfrage
 
 > Zeichnen/Stichwortartig beschreiben Sie ein Use-Case-Diagramm für einen Bibliotheksausleihvorgang. Akteure: Leser, Bibliothekar.
 
-**Lösungsideen:**
+**Musterantwort:**
 - **Akteur Leser:** "Medium suchen", "Medium ausleihen", "Medium zurückgeben"
 - **Akteur Bibliothekar:** "Medium erfassen", "Benutzer verwalten", "Ausleihe verwalten"
 - **include:** "Medium ausleihen" *include* "Benutzerauthentifizierung"
 - **extend:** "Medium ausleihen" *extend* "Gebühr erheben" (bei verspäteter Vormerkung etc.)
 
+## Falle
+
+- **Pfeilrichtung bei include/extend:** `include` zeigt vom Basis-Use-Case zum eingebundenen, `extend` vom erweiternden zum Basis-Use-Case.
+- **Abläufe einzeichnen:** Reihenfolgen gehören ins Aktivitäts- oder Sequenzdiagramm.
+- **Akteur innerhalb der Systemgrenze:** Akteure stehen immer außerhalb.
+- **Use Cases zu fein:** "Button klicken" ist kein Use Case, "Medium ausleihen" schon.
+
 ## Merksatz
 
 **"Use Case = Was, nicht Wie"** - Beschreibt die Funktionalität, nicht die technische Umsetzung.
 
-## Weiterführend
+## Verwandt
+
 - [Klassendiagramm](Klassendiagramm.md)
 - [Aktivitätsdiagramm](Aktivitaetsdiagramm.md)
 - [Sequenzdiagramm](Sequenzdiagramm.md)
