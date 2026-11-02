@@ -124,6 +124,7 @@
 - **Umrechnung:** 1.634 MiB × 8 = 13.072 Mibit (Megabit).
 - **Dauer:** 13.072 Mbit / 16 Mbit/s = 817 s.
 - **In Minuten:** 817 / 60 ≈ 13,62 → **14 Minuten** (aufgerundet).
+- **Exakt mit Binärpräfix:** 1.634 MiB = 1.634 × 1.048.576 Byte ≈ 1.713,4 MB → × 8 ≈ 13.707 Mbit → / 16 Mbit/s ≈ **857 s ≈ 14,3 min**. Die vereinfachte Rechnung oben setzt MiB = MB; in der Prüfung den gewählten Weg kurz angeben. Siehe [Übertragungszeit & Datenrate](../../../FiSi-Administrator/OSI-IP-mac-bit-byte/uebertragungszeit-datenrate.md).
 
 ### ba) Spamfilter-Kriterien (3)
 - **Betreff-/Header-Analyse:** Verdächtige Keywords („Rechnung“, „dringend“), fehlende/gefälschte Header (`Received`-Kette).

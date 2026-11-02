@@ -34,8 +34,8 @@
 - **RAID 6:** Netto = (N − 2) × 2 TiB. Hot-Spare = 1 zusätzliche Platte.
 - **Rechnung:** (N − 2) × 2 ≥ 13 → N − 2 ≥ 6,5 → N ≥ 8,5 → N = 9 Daten-/Parity-Platten.
 - **Zuzüglich Hot-Spare:** 9 + 1 = **10 Festplatten**.
-- **Architektur:** Zwei Arrays à 8 Platten; 10 Platten passen nicht in ein Array → Aufteilung: 5+5 oder 6+4. Netto: (5−2)×2 + (5−2)×2 = 12 TiB (zu wenig). Besser: 6+4 → (6−2)×2 + (4−2)×2 = 8 + 4 = 12 TiB (zu wenig). 7+3 → (7−2)×2 + (3−2)×2 = 10 + 2 = 12 TiB. 8+2 → (8−2)×2 + (2−2)×2 = 12 + 0 = 12 TiB.
-- **Korrektur:** 13 TiB netto benötigt → bei zwei Arrays à 8 Platten max. Netto = 2 × (8−2) × 2 = 24 TiB möglich. Für 13 TiB: Array 1 mit 8 Platten (Netto 12 TiB) + Array 2 mit 5 Platten (Netto 6 TiB) = 18 TiB netto. Hot-Spare: 1 Platte pro Array → 8 + 5 + 1 + 1 = **15 Platten**. Oder ein Array mit 14 Platten: (14−2)×2 = 24 TiB, +1 Hot-Spare = **15 Platten**. Maximal 8 pro Array → 2 Arrays: 8 + 7 = 15 Platten (Netto: 12 + 10 = 22 TiB), +1 Hot-Spare = **16 Platten**. Da max. 8 pro Array: Array 1 = 8 Platten (Netto 12 TiB), Array 2 = 5 Platten (Netto 6 TiB) → 13 TiB gedeckt. Hot-Spare: 1 pro Array → 8+1 + 5+1 = **15 Platten**.
+- **Ergebnis:** Ein RAID-6-Verbund aus 9 Platten liefert (9 − 2) × 2 = 14 TiB ≥ 13 TiB; dazu 1 Hot-Spare → **10 Festplatten**.
+- **Hinweis:** Gibt die Aufgabe eine Obergrenze an Platten pro Verbund oder Gehäuse vor, muss auf mehrere RAID-6-Verbünde aufgeteilt werden – dann kostet **jeder** Verbund 2 Paritätsplatten extra. Rechenweg siehe [RAID](../../../FiSi-Administrator/Server/raid.md).
 
 ### da) Archivierung – Speicherbedarf 10 Jahre
 - **Pro Monat:** 30 GiB; Kompression 60% → 30 × 0,60 = **18 GiB/Monat** effektiv (60% Einsparung) oder 30 × 0,40 = 12 GiB (falls 60% verbleiben). Aufgabe: "mit einer Komprimierungsrate von 60% gepackt" → **60% Einsparung** → 30 × 0,40 = 12 GiB/Monat.
@@ -107,7 +107,7 @@ AND Kunde.PLZ LIKE '8%';
 | Verfahren | Erläuterung |
 |---|---|
 | **Vollbackup** | Sichert alle Daten; setzt Archivbit aller Dateien zurück. Höchster Speicherbedarf, längste Dauer, einfachster Restore (1 Band). |
-| **Differenzielles Backup** | Sichert alle Änderungen seit dem letzten Vollbackup; setzt Archivbit zurück. Speicherbedarf wächst täglich; Restore = Voll + letztes Diff. |
+| **Differenzielles Backup** | Sichert alle Änderungen seit dem letzten Vollbackup; setzt das Archivbit **nicht** zurück (nur Voll und Inkrementell tun das). Speicherbedarf wächst täglich; Restore = Voll + letztes Diff. |
 | **Inkrementelles Backup** | Sichert nur Änderungen seit dem letzten Backup (Voll oder Inkrement); setzt Archivbit zurück. Geringster Speicherbedarf; Restore = Voll + alle Inkremente (lange Kette). |
 | **Klonen** | 1:1-Kopie eines Datenträgers/Volumes; kein Archivbit-Konzept. Hoher Speicherbedarf; schneller Restore (Image). |
 
