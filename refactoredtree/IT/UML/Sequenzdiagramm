@@ -1,0 +1,132 @@
+# Sequenzdiagramm
+
+> Dynamisches UML-Diagramm zur Darstellung der zeitlichen Reihenfolge von Nachrichten zwischen Objekten
+
+## Zweck
+
+Das **Sequenzdiagramm** zeigt, **wer** mit **wem** in welcher **Reihenfolge** kommuniziert, um einen bestimmten Ablauf abzuwickeln. Fokus liegt auf dem **Nachrichtenaustausch über die Zeit**.
+
+## Grundelemente
+
+| Element | Darstellung | Beschreibung |
+|---|---|---|
+| **Objekt/Lebenslinie** | Rechteck oben + gestrichelte vertikale Linie | Teilnehmer der Interaktion (Akteur, Objekt, Komponente) |
+| **Aktivierung (Ausführungszeit)** | Dünnes Rechteck auf Lebenslinie | Zeigt, wann das Objekt aktiv arbeitet |
+| **Nachricht** | Pfeil zwischen Lebenslinien | Aufruf/Funktion oder Information |
+| **Synchrone Nachricht** | Durchgehender Pfeil mit gefüllter Spitze | Wartet auf Antwort (z.B. Funktionsaufruf) |
+| **Asynchrone Nachricht** | Durchgehender Pfeil mit offener Spitze | Sendet Nachricht, wartet nicht auf Antwort |
+| **Antwortnachricht** | Gestrichelter Pfeil | Rückgabe/Wert (optional) |
+| **Zeitlicher Verlauf** | Von oben nach unten | Oben = früher, unten = später |
+
+## Nachrichtentypen im Überblick
+
+| Typ | Symbol | Bedeutung |
+|---|---|---|
+| **Synchrone Nachricht** | `───►` (gefüllte Spitze) | Sender wartet auf Antwort des Empfängers |
+| **Asynchrone Nachricht** | `───>` (offene Spitze) | Sender sendet und fährt sofort fort |
+| **Rückantwort** | `┈┈┈>` (gestrichelt) | Antwort auf synchrone Nachricht |
+| **Selbstnachricht** | Pfeil zum gleichen Objekt | Objekt ruft eigene Methode auf |
+
+## Beispiel: "Login-Vorgang"
+
+```
+Kunde        Login-Seite      Authentifizierung   Datenbank
+  │                │                    │                │
+  │──Login-Daten──►│                    │                │
+  │                │──prüfeLogin()───►│                │
+  │                │                    │──SQL-Abfrage──►│
+  │                │                    │◄──Benutzerdaten┤
+  │                │                    │                │
+  │                │◄──validiert?──────│                │
+  │◄──Login ok/feh.┤                    │                │
+  │                │                    │                │
+```
+
+**Ablauf:**
+1. Kunde sendet Login-Daten an Login-Seite
+2. Login-Seite ruft Authentifizierung auf
+3. Authentifizierung prüft in Datenbank
+4. Antwort geht zurück
+5. Kunde erhält Bestätigung/Ablehnung
+
+## Alternativen & Schleifen
+
+### Alternative (alt)
+Wird für **"Entweder-Oder"** genutzt (if/else)
+
+```
+alt [Login erfolgreich]
+    ──> Zeige Startseite
+else [Login fehlgeschlagen]
+    ──> Zeige Fehlermeldung
+end
+```
+
+### Schleife (loop)
+Für wiederholte Abläufe
+
+```
+loop [für jeden Artikel]
+    ──> Artikel prüfen
+end
+```
+
+### Option (opt)
+Für **optionalen** Ablauf
+
+```
+opt [Kunde hat Gutschein]
+    ──> Gutschein anwenden
+end
+```
+
+## Sequenzdiagramm vs. Aktivitätsdiagramm
+
+| Kriterium | **Sequenzdiagramm** | **Aktivitätsdiagramm** |
+|---|---|---|
+| **Fokus** | **Wer kommuniziert mit wem?** | **Welcher Ablauf findet statt?** |
+| **Zeitdarstellung** | Vertikal (oben nach unten = Zeit) | Vertikal oder horizontal, zeigt Ablauf |
+| **Objekte/Rollen** | Zeigt konkrete Objekte/Komponenten | Zeigt Aktivitäten und Zuständigkeiten |
+| **Nachrichten** | Expliziter Nachrichtenaustausch | Weniger detailliert bzgl. Aufrufe |
+| **Nutzung** | Oft bei Use-Cases zur Verfeinerung | Oft für Geschäftsprozesse |
+
+## Prüfungsrelevante Aspekte
+
+- **Zeitverlauf:** Von **oben nach unten** lesen
+- **Lebenslinien:** Nur beteiligte Objekte darstellen
+- **Nachrichten:** Klare, nachvollziehbare Benennung
+- **Antworten:** Nur zeichnen, wenn relevant für den Ablauf
+- **Kombination:** Häufig in Verbindung mit Use-Cases gefragt
+
+## Prüfungsaufgabe (Muster)
+
+> Zeichnen Sie ein Sequenzdiagramm für den Vorgang "Kunde bestellt Artikel online":
+> Kunde → Webshop → Warenkorb → Bestellsystem → Zahlungssystem
+
+**Lösungsschritte:**
+1. Kunde klickt "Artikel bestellen"
+2. Webshop prüft Verfügbarkeit
+3. Warenkorb wird aktualisiert
+4. Bestellsystem erstellt Bestellung
+5. Zahlungssystem führt Zahlung durch
+6. Bestätigung an Kunde
+
+## Checkliste
+
+- [ ] **Alle Beteiligten** als Lebenslinien vorhanden
+- [ ] **Zeitliche Reihenfolge** korrekt (oben → unten)
+- [ ] **Nachrichten** sinnvoll benannt
+- [ ] **Synchrone/asynchrone** Unterscheidung falls verlangt
+- [ ] **Antwortnachrichten** nur wo nötig
+- [ ] **Klarer Fokus** auf den geforderten Ablauf
+
+## Merksätze
+
+- **"Wer redet mit wem, wann?"** - Das ist die Kernfrage des Sequenzdiagramms
+- **Vertikale Achse = Zeit** - Nie horizontal!
+- **Lebenslinie = Existenz** - Objekt ist während des Ablaufs beteiligt
+
+## Weiterführend
+- [Klassendiagramm](Klassendiagram.md)
+- [Anwendungsfalldiagramm-Use-Case-Diagramm](Anwendungsfalldiagramm-Use-Case-Diagramm.md)
+- [Aktivitätsdiagramm](Aktivitätsdiagramm.md)
