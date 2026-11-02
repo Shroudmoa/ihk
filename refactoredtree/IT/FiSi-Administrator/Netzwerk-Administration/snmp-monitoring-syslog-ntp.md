@@ -1,5 +1,7 @@
 # SNMP, Monitoring, Syslog & NTP
 
+> **Abgrenzung:** Dieses Blatt erklärt die **Protokolle** (SNMP, Syslog, NTP). Welche Messgrößen und Schwellwerte sinnvoll sind und wie man Engpässe findet → [Monitoring](../Server/monitoring.md).
+
 ## In 30 Sekunden
 
 - **SNMP** fragt Werte von Netzwerkgeräten ab (CPU, Temperatur, Port-Status, Traffic): **Manager ↔ Agent**, Werte adressiert über **OIDs** aus der **MIB**; Ports **UDP 161** (Abfrage) und **UDP 162** (Traps).
@@ -117,6 +119,7 @@ Zentraler Syslog-Server (rsyslog, Graylog, ELK) bzw. **SIEM**: Logs manipulation
 
 ## Verwandt
 
+- [Monitoring](../Server/monitoring.md) – Messgrößen, Schwellwerte, Bottleneck-Analyse
 - [Netzwerkanalyse & Troubleshooting](netzwerkanalyse-und-troubleshooting.md) – Monitoring als Frühwarnsystem
 - [Ports](../OSI-IP-mac-bit-byte/ports.md) – 161/162, 514, 123
 - [AAA & SIEM](../Sicherheit/aaa-siem.md) – zentrale Log-Auswertung

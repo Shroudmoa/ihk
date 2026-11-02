@@ -1,5 +1,7 @@
 # Port-Security, 802.1X & RADIUS
 
+> **Abgrenzung:** Dieses Blatt zeigt die **Switch-/Netzwerk-Sicht** (Port-Konfiguration, Violation-Modi, DHCP-Snooping, DAI). Rollen, EAP-Methoden und RADIUS aus **Sicherheits-Sicht** → [Netzwerkzugangskontrolle: 802.1X & RADIUS](../Sicherheit/netzwerkzugang-802-1x-radius.md).
+
 ## In 30 Sekunden
 
 - Ziel: **Fremde Geräte an Netzwerkdosen** sollen keinen Zugang bekommen (GA2 Sommer 2022) und Angriffe im LAN (ARP-Poisoning, Rogue DHCP) sollen ins Leere laufen.
@@ -104,6 +106,7 @@ RADIUS sendet mit dem Accept Attribute (Tunnel-Type = VLAN, Tunnel-Private-Group
 
 ## Verwandt
 
+- [Netzwerkzugangskontrolle: 802.1X & RADIUS](../Sicherheit/netzwerkzugang-802-1x-radius.md) – dasselbe Thema aus Sicherheits-Sicht
 - [WLAN](wlan.md) – WPA2/WPA3-Enterprise nutzt 802.1X
 - [VLAN](vlan.md) – dynamische VLAN-Zuweisung
 - [ARP](../OSI-IP-mac-bit-byte/arp.md) – ARP-Poisoning und DAI

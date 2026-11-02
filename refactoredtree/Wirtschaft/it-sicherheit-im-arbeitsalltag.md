@@ -1,104 +1,102 @@
-# IT-Sicherheit im Arbeitsalltag
+# IT-Sicherheit & Datenschutz im Arbeitsalltag
 
-> **IT-Sicherheit ist Arbeitsschutz für Daten.** Prüfungsrelevant: Phishing erkennen, öffentliches WLAN, Passwörter, Updates, Backup und Meldewege.
+## In 30 Sekunden
 
-## Schutzziele
+- Schutzziele: **Vertraulichkeit, Integrität, Verfügbarkeit** (+ Authentizität, Verbindlichkeit). Eine **Kontrollsumme/Hash** sichert die **Integrität**.
+- **Phishing** erkennen: falscher Absender hinter dem Anzeigenamen, Zeitdruck/Drohung, Link auf fremde Domain, unerwarteter Anhang, Abfrage von Zugangsdaten. Richtig: **nicht klicken, nicht weiterleiten, IT-Abteilung informieren, löschen**.
+- Bekannte oder häufig besuchte Websites können **kompromittiert** sein; HTTPS heißt nur „verschlüsselt“, nicht „vertrauenswürdig“.
+- **Öffentliches WLAN:** Daten können mitgelesen werden → nur mit **VPN**; Mailprogramme verschlüsseln nicht automatisch.
+- Datenschutz am Arbeitsplatz: DSGVO/BDSG, **Clean Desk**, Bildschirmsperre, Least Privilege, Datenpannen sofort melden; Überwachungstechnik nur mit Betriebsrat (§ 87 Abs. 1 Nr. 6 BetrVG).
 
-| Ziel | Bedeutung | Verletzung |
-|---|---|---|
-| **Vertraulichkeit** | nur Berechtigte lesen Daten | Datenleck, fremder Zugriff |
-| **Integrität** | Daten sind unverändert und korrekt | Manipulation, Fälschung |
-| **Verfügbarkeit** | Systeme und Daten sind nutzbar | Ausfall, Ransomware |
-| **Authentizität** | Absender/Quelle ist echt | gefälschte E-Mail |
-| **Verbindlichkeit** | Handlung ist nachweisbar | abstreitbare Bestellung |
+## Kernwissen
 
-**Merke:** Sicherheit ist nicht nur „Passwort“. Auch Backup, Rechte und Notfallplan gehören dazu.
+### Schutzziele
 
-**Kontrollsumme/Hash:** Eine Prüfsumme erkennt Veränderungen und schützt die **Integrität**. Sie verschlüsselt nicht und schützt weder Vertraulichkeit noch Verfügbarkeit.
+| Ziel | Bedeutung | Maßnahme | Verletzung |
+|---|---|---|---|
+| **Vertraulichkeit** | nur Berechtigte sehen Daten | Verschlüsselung, Zugriffsrechte, VPN | Datenleck, Mitlesen im WLAN |
+| **Integrität** | Daten sind vollständig und unverändert | **Hash/Prüfsumme**, digitale Signatur, Versionierung | Manipulation |
+| **Verfügbarkeit** | Systeme und Daten nutzbar, wenn benötigt | Backup, RAID, USV, Redundanz | Ausfall, Ransomware, DDoS |
+| Authentizität | Absender/Quelle ist echt | Zertifikate, Signatur, MFA | gefälschte E-Mail |
+| Verbindlichkeit | Handlung nicht abstreitbar | Signatur, Protokollierung | abgestrittene Bestellung |
 
-## Phishing und Social Engineering
+Eine Kontrollsumme schützt **nicht** Vertraulichkeit, Verfügbarkeit, Lesbarkeit oder Verständlichkeit.
 
-**Phishing:** gefälschte Nachricht soll zur Preisgabe von Daten oder zur Ausführung einer Datei verleiten.
+### Phishing und Social Engineering
 
-Erkennungsmerkmale:
-- Absenderadresse stimmt nicht mit Anzeigename überein.
-- Druck, Frist, Drohung („Konto wird gesperrt“).
-- Rechtschreibfehler, ungewöhnliche Anrede.
-- Link führt zu fremder Domain; vor dem Klick prüfen.
-- unerwarteter Anhang (.zip, .exe, .html, Makro-Dokument).
-- Login-Seite fragt Passwort ab, obwohl man schon angemeldet ist.
+**Merkmale einer Phishing-Mail:**
+- Absenderadresse passt nicht zum Anzeigenamen; Tippfehler-Domains (paypa1.com)
+- Zeitdruck oder Drohung („Konto wird in 24 Std. gesperrt“)
+- Link führt auf eine fremde Domain (Mouse-over prüfen) und fordert **Zugangsdaten** an
+- unerwartete Anhänge (ZIP, EXE, Office mit Makros, HTML)
+- **nicht** immer schlecht gemacht: Phishing kann persönliche Anrede, Signatur, Logo und HTTPS-Seite haben
 
-**Richtig:** nicht klicken, nicht antworten, Anhang nicht öffnen, **IT/Melde­stelle informieren**, E-Mail löschen bzw. in Quarantäne verschieben.
+**Richtiges Verhalten:** Link nicht öffnen, keine Daten eingeben, nicht weiterleiten, nicht ausdrucken und archivieren → **IT-Abteilung/IT-Sicherheit benachrichtigen**, E-Mail löschen oder über den Melde-Button melden. Wurden Daten eingegeben: sofort Passwort ändern und melden.
 
-**Falsch:** Link öffnen „nur zum Prüfen“, Daten eingeben, Anhang an Kollegen weiterleiten, Absender mit „sieht echt aus“ entschuldigen.
+**Social Engineering:** Ausnutzen von Hilfsbereitschaft, Autorität, Neugier oder Zeitdruck – z. B. CEO-Fraud (gefälschte Zahlungsanweisung vom „Chef“), falscher Support-Anruf, liegengelassener USB-Stick (Baiting), Tailgating an der Zutrittstür.
 
-**Social Engineering:** Ausnutzung von Vertrauen, Autorität, Zeitdruck oder Hilfsbereitschaft. Auch Anrufe („CEO-Fraud“) und Besuche am Empfang gehören dazu.
+### Sicheres Surfen und mobiles Arbeiten
 
-## Passwörter und Anmeldung
+- Auch **bekannte** und vertrauenswürdige Seiten können manipuliert sein (Drive-by-Download, Malvertising) → Updates, Browser-Schutz, Werbeblocker.
+- **Öffentliches WLAN:** Betreiber kümmern sich oft nicht um Sicherheit, Daten können mitgelesen werden (Man-in-the-Middle, Evil Twin) → **Firmen-VPN** nutzen, automatische WLAN-Verbindung deaktivieren, kein Login ohne VPN; die Eingabe der E-Mail-Adresse im Hotspot-Portal macht das WLAN nicht sicher.
+- **Homeoffice:** Bildschirm vor Blicken schützen, Gerät sperren, keine Familienmitglieder an Firmengeräten, Ausdrucke sicher entsorgen.
 
-- Lang und einzigartig, mindestens 12–16 Zeichen, Passphrase.
-- **Kein** Passwort für mehrere Dienste.
-- Passwortmanager statt Zettel.
-- **2FA/MFA:** Wissen + Besitz (Token, App) oder Biometrie.
-- Passwort niemals per E-Mail oder Telefon weitergeben.
-- Bei Verdacht: sofort ändern, IT informieren.
+### Passwörter und Anmeldung
 
-**Prüfungsfalle:** Regelmäßiges Zwangswechseln ist heute nicht mehr pauschal empfohlen; entscheidend sind Länge, Einzigartigkeit und MFA. Ein starkes Passwort allein ersetzt keine MFA.
+- Lange Passphrasen (≥ 12–16 Zeichen), für jeden Dienst einzigartig, **Passwortmanager**.
+- **MFA/2FA** (Wissen + Besitz/Biometrie) für alle wichtigen Zugänge.
+- Passwörter nie per Mail/Telefon herausgeben – die echte IT fragt nicht danach.
+- Regelmäßiges Zwangswechseln empfiehlt das BSI nicht mehr pauschal – nur bei Verdacht auf Kompromittierung.
 
-## Öffentliches WLAN
+### Malware, Updates, Backup
 
-- Offene Netze sind nicht vertraulich; Mitlesen möglich.
-- **Kein** Online-Banking, keine Firmenzugänge, keine vertraulichen Daten.
-- Nur mit **VPN** des Unternehmens nutzen.
-- HTTPS prüfen, aber HTTPS schützt nicht vor falschem Netzbetreiber.
-- Automatische Verbindung zu offenen Netzen deaktivieren.
-- Keine unbekannten USB-Ladegeräte/Ports („Juice Jacking“).
+- Updates und Patches zeitnah installieren; Software nur aus freigegebenen Quellen; Makros deaktiviert lassen.
+- **Ransomware:** Gerät vom Netz trennen, **nicht zahlen**, IT informieren.
+- **3-2-1-Backup:** 3 Kopien, 2 Medien, 1 Kopie extern/offline; Wiederherstellung regelmäßig testen.
 
-## Updates und Schadsoftware
+### Datenschutz am Arbeitsplatz (DSGVO/BDSG)
 
-- Updates zeitnah installieren; Sicherheitsupdates nicht aufschieben.
-- Nur Software aus offiziellen Quellen.
-- Makros in Office-Dokumenten standardmäßig deaktivieren.
-- Ransomware: Dateien verschlüsselt, Erpressung; **nicht** zahlen, System isolieren, IT informieren.
-- Virenschutz und Firewall aktiv lassen.
+| Regel | Inhalt |
+|---|---|
+| Grundsätze (Art. 5 DSGVO) | Rechtmäßigkeit, Zweckbindung, **Datenminimierung**, Richtigkeit, Speicherbegrenzung, Integrität/Vertraulichkeit |
+| Beschäftigtendaten (§ 26 BDSG) | nur verarbeiten, was für das Arbeitsverhältnis erforderlich ist; Bewerberdaten nach Absage löschen (ca. 6 Monate wegen AGG-Fristen) |
+| Datenschutzbeauftragter | Pflicht ab **20 Personen**, die ständig personenbezogene Daten automatisiert verarbeiten (§ 38 BDSG) |
+| Datenpanne | intern sofort melden; Meldung an die Aufsichtsbehörde binnen **72 Stunden** (Art. 33 DSGVO) |
+| Überwachung | Videoüberwachung, Mitarbeiter-Tracking, Software mit Leistungskontrolle → **Mitbestimmung des Betriebsrats** und Datenschutzprüfung |
+| Alltag | Clean Desk, Bildschirmsperre (Win + L), keine Kundendaten auf privaten Sticks/Mail, Akten schreddern, **Verschwiegenheit** über Betriebs- und Kundendaten |
 
-## Backup
+## Prüfungsfrage
 
-**3-2-1-Regel:**
-- **3** Kopien der Daten,
-- **2** verschiedene Medien,
-- **1** Kopie an einem anderen Ort (offline/offsite).
+**Frage (Multiple Choice):** Ein Mitarbeiter erhält eine E-Mail seiner „Bank“ mit der Aufforderung, über einen Link seine Zugangsdaten zu bestätigen. Wie sollte er reagieren?
 
-Backup regelmäßig **testen**. Ein ungetestetes Backup ist kein Backup. Ransomware verschlüsselt auch angeschlossene Netzlaufwerke; daher Offline-Kopie.
+1. den Link öffnen und die Daten eingeben, um eine Sperrung zu vermeiden
+2. das Mailprogramm beenden und den Rechner neu starten
+3. die E-Mail an alle Kollegen weiterleiten, um sie zu warnen
+4. die E-Mail löschen und die IT-Abteilung benachrichtigen
+5. die E-Mail ausdrucken und archivieren
 
-## Datenschutz im Alltag
+**Musterantwort:** **4.** Es handelt sich um einen Phishing-Versuch. Die IT kann andere Empfänger schützen und den Absender sperren; Weiterleiten verbreitet die Gefahr, Neustart oder Ausdrucken lösen nichts.
 
-- Nur notwendige personenbezogene Daten verarbeiten.
-- Bildschirm sperren, Unterlagen wegräumen (Clean Desk).
-- Keine Kundendaten auf privaten USB-Sticks oder Privat-Mail.
-- Papier mit personenbezogenen Daten schreddern.
-- Zugriffsrechte nach **Least Privilege**.
-- Datenschutzvorfall melden; DSGVO-Fristen beachten.
+## Falle
 
-## 3-Zeiler für die Prüfung
+- HTTPS-Schloss ≠ seriöse Seite – auch Phishing-Seiten haben Zertifikate.
+- Phishing-Mails haben nicht immer Fehler; sie können eine korrekte Anrede und Signatur haben.
+- Hash/Kontrollsumme → **Integrität**, nicht Vertraulichkeit.
+- Öffentliches WLAN ohne VPN ist unsicher, auch mit Passwort im Portal.
+- Sicherheitsvorfälle **melden**, nicht selbst „lösen“ oder verschweigen.
 
-**Frage:** Ein Kollege erhält eine E-Mail „Ihr Konto wird gesperrt, jetzt Passwort bestätigen“. Was tun?
+## Merksatz
 
-**Antwort:** Es handelt sich um einen Phishing-Versuch. Link nicht öffnen, keine Daten eingeben und die IT bzw. den Sicherheitsbeauftragten informieren. Die E-Mail sollte gelöscht oder in Quarantäne verschoben werden.
-
-## Prüfungsfallen
-
-- HTTPS allein bedeutet nicht „vertrauenswürdige Seite“.
-- Öffentliches WLAN ohne VPN ist unsicher.
-- Backup ohne Test ist wertlos.
-- Bei Ransomware nicht zahlen und nicht neu starten.
-- Sicherheitsvorfall intern melden, nicht „selbst lösen“.
+**„Erst denken, dann klicken – im Zweifel die IT fragen.“**
 
 ## Verwandt
 
-- [Schutzziele (IT)](../IT/FiSi-Administrator/Sicherheit/schutzziele.md) – CIA und erweiterte Ziele
-- [Patchmanagement (IT)](../IT/FiSi-Administrator/Netzwerk-Administration/patchmanagement-tu-su-pu.md) – Updates
-- [Backup & Snapshots (IT)](../IT/FiSi-Administrator/Server/virtualisierung/snapshots-backups.md) – Sicherung
-- [MFA & Authentifizierung (IT)](../IT/FiSi-Administrator/Server/authentifizierung-autoritisierung-mfa.md) – 2FA
-- [DSGVO & TOM (IT)](../IT/Management/DSGVO/dsgvo-tom.md) – Datenschutz
 - [Urheberrecht & Compliance](urheberrecht-compliance.md) – Regeln im Betrieb
+- [Betriebsrat & JAV](betriebsrat-jav.md) – Mitbestimmung bei Überwachungstechnik
+- [Arbeitsschutz & Arbeitssicherheit](arbeitsschutz-arbeitssicherheit.md) – Bildschirmarbeit
+- [Schutzziele (IT)](../IT/FiSi-Administrator/Sicherheit/schutzziele.md)
+- [DSGVO & TOM (IT)](../IT/Management/DSGVO/dsgvo-tom.md)
+- [MFA & Authentifizierung (IT)](../IT/FiSi-Administrator/Server/authentifizierung-autoritisierung-mfa.md)
+- [Backup & Snapshots (IT)](../IT/FiSi-Administrator/Server/virtualisierung/snapshots-backups.md)
+- [Lektion 05 – Datenschutz & Informationssicherheit](../IT/analyse-der-exams/05_Datenschutz_Informationssicherheit.md)
+- Echte Aufgaben: [Winter 2021](fragen/Winter-2021.md) (25–30)

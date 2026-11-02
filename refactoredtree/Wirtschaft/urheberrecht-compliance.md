@@ -1,92 +1,92 @@
-# Urheberrecht & Compliance
+# Urheberrecht, Software im Arbeitsverhältnis & Compliance
 
-> **Urheberrecht schützt geistige Schöpfungen.** **Compliance heißt: Regeln einhalten.** Prüfungsrelevant: Software, Bilder, Musik, Lizenzen und die Frage „darf ich das nutzen?“.
+## In 30 Sekunden
 
-## Urheberrecht (UrhG)
+- Das **Urheberrecht** (UrhG) entsteht **automatisch** mit der Schöpfung eines Werks – ohne Anmeldung; geschützt sind auch **Computerprogramme** (§ 69a UrhG).
+- **Urheber** ist immer der Mensch, der das Werk geschaffen hat – auch der angestellte Programmierer.
+- Bei Software, die ein Arbeitnehmer **in Erfüllung seiner Aufgaben** schreibt, stehen alle **vermögensrechtlichen Befugnisse (Verwertungs-/Nutzungsrechte) dem Arbeitgeber** zu (§ 69b UrhG) – der Arbeitnehmer kann die Nutzung nicht verbieten, keine Erlösbeteiligung verlangen und den Quellcode nicht zurückhalten.
+- Schutzdauer: **70 Jahre nach dem Tod** des Urhebers (auch für Software).
+- **Compliance** = Einhaltung von Gesetzen, Regeln und internen Richtlinien, insbesondere **Verhinderung von Korruption**, Kartellverstößen und Datenschutzverletzungen.
 
-- Schutz automatisch mit der **Schöpfung**, keine Anmeldung nötig.
-- Geschützt: Sprache, Musik, Bilder, Film, Architektur, **Software** (§ 69a UrhG), Datenbanken.
-- Voraussetzung: **persönliche geistige Schöpfung**, individuelle Gestaltung. Reine Ideen, Fakten und amtliche Werke sind nicht geschützt.
-- Urheber ist immer eine natürliche Person; bei Arbeitnehmern im Dienstverhältnis liegen die **Nutzungsrechte** oft beim Arbeitgeber.
-- Schutzdauer: **70 Jahre nach dem Tod** des Urhebers (bei Software 50 Jahre nach Veröffentlichung, § 69a UrhG).
+## Kernwissen
 
-**Merke:** Urheberrecht schützt die **Gestaltung**, nicht die Idee. Ein Foto ist geschützt, die Tatsache „dort steht ein Baum“ nicht.
+### Urheberrecht – Grundlagen
 
-## Nutzungsrechte und Lizenzen
-
-| Begriff | Bedeutung |
+| Punkt | Regel |
 |---|---|
-| **Urheberpersönlichkeitsrecht** | Namensnennung, Schutz vor Entstellung; bleibt beim Urheber |
-| **Verwertungsrecht** | Vervielfältigen, Verbreiten, öffentlich zugänglich machen |
-| **einfaches Nutzungsrecht** | Nutzung erlaubt, Urheber kann weiteren vergeben |
-| **ausschließliches Nutzungsrecht** | nur der Lizenznehmer darf nutzen |
-| **Lizenz** | vertragliche Erlaubnis, oft mit Grenzen (Zeit, Raum, Zweck) |
+| geschützte Werke (§ 2) | Sprach-, Musik-, Bild-, Film-, Lichtbildwerke, Pläne, **Software**, Datenbanken |
+| Voraussetzung | persönliche geistige Schöpfung (bei Software: individuelle Leistung, keine Qualitätsanforderung) |
+| nicht geschützt | Ideen, Algorithmen als solche, Fakten, amtliche Werke (Gesetze, Urteile) |
+| Urheberpersönlichkeitsrecht | Namensnennung, Schutz vor Entstellung – nicht übertragbar |
+| Verwertungsrechte | Vervielfältigen, Verbreiten, öffentlich zugänglich machen, Bearbeiten |
+| Nutzungsrechte | einfach (neben anderen) oder ausschließlich (exklusiv), zeitlich/räumlich/inhaltlich beschränkbar |
+| Schutzdauer | **70 Jahre post mortem auctoris**; Lichtbilder ohne Werkcharakter 50 Jahre |
 
-**Softwarelizenzen:**
+### Software im Arbeitsverhältnis (§ 69b UrhG)
 
-- **Proprietär:** kommerziell, Quellcode geschlossen, Lizenz pro Nutzer/Gerät.
-- **Open Source:** Quellcode offen; Bedingungen je Lizenz.
-  - **MIT/Apache:** sehr frei, kommerzielle Nutzung erlaubt.
-  - **GPL:** Weitergabe abgeleiteter Werke nur unter GPL („Copyleft“).
-  - **Creative Commons:** vor allem für Inhalte gedacht, nicht für Software; Varianten mit/ohne Namensnennung, kommerziell, Bearbeitung.
-
-**Prüfungsfalle:** „Kostenlos im Internet“ ≠ „frei nutzbar“. Ohne Lizenz gilt das gesetzliche Urheberrecht; die private Nutzung ist eng begrenzt, die betriebliche fast nie erlaubt.
-
-## Zitatrecht und Ausnahmen
-
-- **Zitatrecht (§ 51 UrhG):** fremde Inhalte in eigenem Werk zitieren, Quelle und Urheber nennen, nur so viel wie nötig.
-- **Privatkopie (§ 53 UrhG):** Vervielfältigung zum privaten Gebrauch, nicht für Betrieb und nicht für öffentliche Zugänglichmachung.
-- **Unterricht/Wissenschaft:** begrenzte Nutzung, nicht pauschal für Firmenschulungen.
-- **Panoramafreiheit:** Fotos von öffentlich sichtbaren Werken im öffentlichen Raum.
-- **Amtliche Werke:** Gesetze, Verordnungen, Gerichtsentscheidungen sind gemeinfrei.
-
-**Nicht erlaubt:** Foto aus Google Images im Firmenflyer, Musik in Erklärvideo ohne Lizenz, Software-Crack, Screenshot eines urheberrechtlich geschützten Werks als eigenes Produkt.
-
-## Folgen von Verstößen
-
-- **Unterlassung** und **Schadensersatz**.
-- **Abmahnung** mit Kosten.
-- Strafrecht bei gewerbsmäßiger Verletzung.
-- Betrieblich: Reputationsschaden, Vertragsstrafe, Kündigung bei schwerem Verstoß.
-
-## Compliance
-
-**Compliance = Einhaltung von Gesetzen, Regeln und internen Richtlinien.** Sie umfasst mehr als Urheberrecht:
-
-| Bereich | Beispiel |
+| Frage | Antwort |
 |---|---|
-| Kartellrecht | keine Preisabsprachen |
-| Korruption | keine unzulässigen Vorteile, keine Schmiergelder |
-| Datenschutz | DSGVO, Zugriffsrechte |
-| Arbeitsrecht | Arbeitszeit, Gleichbehandlung |
-| Umwelt | Abfall, Emissionen, Lieferkette |
-| Steuern | korrekte Rechnungen, keine Scheingeschäfte |
-| IT-Sicherheit | Passwortregeln, Meldepflichten |
+| Wer ist Urheber? | der **Arbeitnehmer** (Programmierer) |
+| Wer darf das Programm verwerten? | der **Arbeitgeber** – ausschließlich, ohne zusätzliche Vergütung |
+| Kann der AN die Nutzung verbieten? | nein |
+| Anspruch auf Beteiligung am Erlös? | nein (abgegolten durch das Gehalt; Ausnahme nur bei auffälligem Missverhältnis) |
+| Herausgabe des Quelltextes verweigern? | nein |
+| Haftet der AN persönlich für Programmfehler gegenüber Kunden? | nein – Vertragspartner ist der Arbeitgeber (innerbetrieblich gelten die Grundsätze der Arbeitnehmerhaftung) |
+| Freizeitprojekt ohne Bezug zu den Aufgaben? | Rechte bleiben beim AN (Vorsicht bei Nutzung von Firmenressourcen) |
 
-**Instrumente:** Verhaltenskodex, Schulungen, Compliance-Beauftragter, Hinweisgebersystem, Kontrollen, Sanktionen.
+### Lizenzen
 
-**Whistleblowing:** Hinweisgeberschutzgesetz schützt Personen, die Verstöße melden. Vergeltung ist unzulässig.
+- **Proprietär:** Nutzung nur nach Lizenzvertrag (pro Nutzer, Gerät, Kern, Abo).
+- **Open Source:** Quellcode offen, Bedingungen je Lizenz – **MIT/Apache** (permissiv, kommerziell nutzbar, Hinweis behalten), **GPL** (Copyleft: abgeleitete Software bei Weitergabe ebenfalls unter GPL), **Creative Commons** für Inhalte (BY, SA, NC, ND).
+- „Kostenlos im Internet“ ≠ „frei nutzbar“: ohne Lizenz keine betriebliche Nutzung von Bildern, Musik, Schriften, Code.
+- Ausnahmen: **Zitatrecht** (§ 51, mit Quelle, nur im nötigen Umfang), **Privatkopie** (§ 53, nicht betrieblich), amtliche Werke.
+- Folgen von Verstößen: Abmahnung, Unterlassung, Schadensersatz, ggf. Strafbarkeit (§ 106 UrhG), arbeitsrechtliche Konsequenzen (z. B. Software-Crack im Betrieb).
 
-**Prüfungsfalle:** Compliance ist kein „Nice-to-have“ für große Konzerne. Auch kleine Betriebe müssen Regeln einhalten; die Haftung trifft die Geschäftsführung.
+### Compliance
 
-## 3-Zeiler für die Prüfung
+| Bereich | Beispiele |
+|---|---|
+| **Korruption** | keine Bestechung, keine unzulässigen Geschenke/Einladungen, Schmiergeldverbot |
+| Kartellrecht | keine Preis- oder Gebietsabsprachen mit Wettbewerbern |
+| Datenschutz | DSGVO-konforme Verarbeitung, Zugriffskonzepte |
+| Arbeitsrecht | Arbeitszeit, Mindestlohn, AGG |
+| Steuern/Geldwäsche | ordnungsgemäße Buchführung, keine Scheinrechnungen |
+| IT | Lizenzmanagement, Sicherheitsrichtlinien |
 
-**Frage:** Darf ein Betrieb ein Foto aus dem Internet auf seine Website stellen?
+**Instrumente:** Verhaltenskodex (Code of Conduct), Compliance-Beauftragter, Schulungen, Vier-Augen-Prinzip, interne Kontrollen, **Hinweisgebersystem**.
+**Hinweisgeberschutzgesetz (HinSchG, seit 2023):** Unternehmen ab **50 Beschäftigten** müssen eine interne Meldestelle einrichten; Hinweisgeber sind vor Repressalien geschützt.
 
-**Antwort:** Nur mit Erlaubnis des Urhebers oder einer passenden Lizenz. „Kostenlos sichtbar“ bedeutet nicht „frei nutzbar“. Ohne Lizenz drohen Abmahnung, Unterlassung und Schadensersatz.
+Abgrenzung der Begriffe aus Prüfungen: **Datenschutz** ist ein Teilgebiet, **Disruption** bezeichnet bahnbrechende Innovation, „Incidence“ und „Consilience“ sind keine Fachbegriffe für Regelkonformität.
 
-## Prüfungsfallen
+## Prüfungsfrage
 
-- Urheberrecht entsteht automatisch, keine Registrierung nötig.
-- Idee ≠ geschütztes Werk; die konkrete Gestaltung zählt.
-- Open Source ≠ bedingungslos; GPL verlangt Weitergabe unter GPL.
-- Privatkopie gilt nicht für Firmennutzung.
-- Zitat braucht Quellenangabe und nur den nötigen Umfang.
-- Compliance umfasst Kartell-, Datenschutz- und Arbeitsrecht, nicht nur Urheberrecht.
+**Frage (Multiple Choice):** Ein angestellter Fachinformatiker entwickelt im Auftrag seines Arbeitgebers ein Programm, das sehr erfolgreich verkauft wird. Welche Aussage ist richtig?
+
+1. Der Arbeitnehmer kann dem Arbeitgeber die weitere Nutzung verbieten.
+2. Der Arbeitnehmer hat Anspruch auf einen Anteil am Verkaufserlös.
+3. Der Arbeitnehmer ist Urheber, die Verwertungsrechte stehen aber dem Arbeitgeber zu.
+4. Der Arbeitnehmer haftet persönlich für Schäden, die Kunden durch Programmfehler entstehen.
+5. Der Arbeitnehmer darf die Herausgabe des Quelltextes verweigern.
+
+**Musterantwort:** **3.** Nach § 69b UrhG erhält der Arbeitgeber alle vermögensrechtlichen Befugnisse an Software, die in Erfüllung arbeitsvertraglicher Pflichten entsteht; das Urheberpersönlichkeitsrecht bleibt beim Arbeitnehmer.
+
+## Falle
+
+- Urheberrecht braucht **keine** Registrierung (anders als Patent, Marke, Design).
+- Software ist **nicht** nur 50 Jahre geschützt – es gelten die allgemeinen 70 Jahre nach dem Tod des Urhebers.
+- Urheber ≠ Rechteinhaber: Der Arbeitnehmer bleibt Urheber, verwerten darf der Arbeitgeber.
+- Open Source ≠ bedingungslos.
+- Compliance ist mehr als Datenschutz – Kern ist die Einhaltung von Regeln und die Korruptionsprävention.
+
+## Merksatz
+
+**„Geschaffen ist geschützt – im Job geschrieben, beim Chef verwertet.“**
 
 ## Verwandt
 
-- [IT-Sicherheit im Arbeitsalltag](it-sicherheit-im-arbeitsalltag.md) – Datenschutz und Sicherheitsregeln
-- [Datenschutz & TOM (IT)](../IT/Management/DSGVO/dsgvo-tom.md) – personenbezogene Daten
-- [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Haftung der Geschäftsführung
+- [IT-Sicherheit & Datenschutz im Arbeitsalltag](it-sicherheit-im-arbeitsalltag.md) – Datenschutz, Sicherheitsregeln
+- [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – Treue- und Verschwiegenheitspflicht
 - [Unternehmensverbindungen & Kartellrecht](unternehmensverbindungen-kartellrecht.md) – Kartell-Compliance
+- [Lektion 10 – Lizenzierung](../IT/analyse-der-exams/10_Lizenzierung.md)
+- [DSGVO & TOM (IT)](../IT/Management/DSGVO/dsgvo-tom.md)
+- Echte Aufgaben: [Winter 2021](fragen/Winter-2021.md) (23, 30)

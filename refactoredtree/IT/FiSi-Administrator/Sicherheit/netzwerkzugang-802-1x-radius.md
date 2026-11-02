@@ -1,5 +1,7 @@
 # Netzwerkzugangskontrolle: 802.1X, RADIUS und Port-Security
 
+> **Abgrenzung:** Dieses Blatt zeigt die **Sicherheits-Sicht** (Rollen, EAP-Methoden, RADIUS vs. PSK). Konfiguration am Switch-Port, Sticky-MAC, DHCP-Snooping und DAI → [Port-Security, 802.1X & RADIUS](../Netzwerk-Administration/port-security-8021x.md).
+
 ## In 30 Sekunden
 
 - **IEEE 802.1X** ist **portbasierte Zugangskontrolle**: Ein Gerät an einer Netzwerkdose oder im WLAN bekommt erst nach erfolgreicher Authentifizierung Zugang zum Netz.
@@ -64,6 +66,7 @@
 
 ## Verwandt
 
+- [Port-Security, 802.1X & RADIUS](../Netzwerk-Administration/port-security-8021x.md) – Switch-Konfiguration und weitere Port-Schutzfunktionen
 - [AAA und SIEM](aaa-siem.md) – Authentication, Authorization, Accounting
 - [PKI und Zertifikate](Verschluesselung/pki.md) – EAP-TLS
 - [LDAP](../Netzwerk-Administration/ldap.md) und [Active Directory](active-directory.md) – Benutzerquelle für RADIUS

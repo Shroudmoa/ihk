@@ -1,5 +1,7 @@
 # Monitoring (Server- und Netzwerküberwachung)
 
+> **Abgrenzung:** Dieses Blatt behandelt **was und wie** überwacht wird (Messgrößen, Schwellwerte, Engpässe). Die Protokolle im Detail (SNMP-Versionen, Syslog-Schweregrade, NTP) → [SNMP, Monitoring, Syslog & NTP](../Netzwerk-Administration/snmp-monitoring-syslog-ntp.md).
+
 ## In 30 Sekunden
 
 - Monitoring misst laufend Zustand und Leistung (CPU, RAM, Datenträger, Netz, Dienste, Temperatur, USV, Backups) und **alarmiert**, wenn ein **Schwellenwert** überschritten wird.
@@ -76,6 +78,7 @@
 
 ## Verwandt
 
+- [SNMP, Monitoring, Syslog & NTP](../Netzwerk-Administration/snmp-monitoring-syslog-ntp.md) – die Protokolle im Detail
 - [Verfügbarkeit & Kennzahlen](verfuegbarkeit-kennzahlen.md) – SMART, Badewannenkurve
 - [Skripte: PowerShell, Bash, CMD](skripte-powershell-bash-cmd.md) – Überwachung per Skript und Aufgabenplanung
 - [Linux-Grundlagen](linux-grundlagen.md) – Befehle zur Systemanalyse

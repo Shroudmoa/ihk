@@ -1,78 +1,91 @@
 # Soziale Marktwirtschaft & Sozialstaat
 
-> **Soziale Marktwirtschaft = Wettbewerb + sozialer Ausgleich.** Sie ist die Wirtschaftsordnung der Bundesrepublik, keine einzelne Maßnahme und kein Unternehmensziel.
+## In 30 Sekunden
 
-## Grundidee
+- **Soziale Marktwirtschaft** = Wirtschaftsordnung der Bundesrepublik: **freier Wettbewerb** auf Märkten + **sozialer Ausgleich** durch den Staat.
+- Gegenmodelle: **freie Marktwirtschaft** (Staat nur „Nachtwächter“) und **Zentralverwaltungs-/Planwirtschaft** (Staat plant Produktion und Preise, staatliches Eigentum an Produktionsmitteln).
+- Der Staat setzt den **Ordnungsrahmen** (Wettbewerbsschutz, Eigentum, Vertragsfreiheit) und **schützt die wirtschaftlich Schwächeren** – er fördert keine Monopole/Kartelle, setzt keine Preise fest und rettet nicht jedes Unternehmen.
+- **Sozialstaatsprinzip** (Art. 20 Abs. 1 GG): Sozialversicherung, Fürsorge (Grundsicherung, Sozialhilfe), Förderung (Kindergeld, Wohngeld, BAföG), Umverteilung (progressive Einkommensteuer).
+- Prüfungsfrage „entspricht dem Sozialstaatsprinzip?“ → z. B. **Wohngeld erhöhen**; nicht: Abschreibungen verbessern, Erbschaftsteuer-Freibeträge erhöhen, Zinsen steuerlich entlasten.
 
-- **Ordoliberalismus:** Der Staat schafft und sichert den Ordnungsrahmen (Wettbewerb, Eigentum, Vertragsfreiheit), greift aber nicht in jeden Preis ein.
-- **Soziale Komponente:** Der Staat korrigiert unerwünschte Marktergebnisse durch Umverteilung und soziale Sicherung.
-- **Väter:** Walter Eucken (Ordnungspolitik), Ludwig Erhard (Umsetzung), Alfred Müller-Armack (Begriff).
-- **Leitbild:** „Wohlstand für alle“ durch Leistung und Wettbewerb, abgefedert durch Sozialpolitik.
+## Kernwissen
 
-## Säulen
+### Wirtschaftsordnungen im Vergleich
 
-| Bereich | Instrument |
+| Merkmal | freie Marktwirtschaft | soziale Marktwirtschaft | Zentralverwaltungswirtschaft |
+|---|---|---|---|
+| Planung | dezentral durch Haushalte und Unternehmen | dezentral, Staat setzt Rahmen | zentral durch den Staat |
+| Preise | Markt (Angebot/Nachfrage) | Markt, Eingriffe nur ausnahmsweise | staatlich festgesetzt |
+| Eigentum an Produktionsmitteln | privat | privat, **sozialpflichtig** (Art. 14 GG) | staatlich/kollektiv |
+| Wettbewerb | frei, Gefahr der Konzentration | **staatlich geschützt** (Kartellrecht) | ausgeschaltet |
+| soziale Sicherung | privat | Sozialstaat | staatlich |
+
+**Väter:** Ludwig Erhard (Umsetzung, „Wohlstand für alle“), Alfred Müller-Armack (Begriff), Walter Eucken (Ordoliberalismus, Ordnungspolitik).
+
+### Rolle des Staates
+
+| Bereich | Instrumente |
 |---|---|
-| Wettbewerbsordnung | Kartellrecht, GWB, Bundeskartellamt, EU-Kommission |
-| Eigentumsordnung | Privateigentum mit sozialer Bindung (Art. 14 GG) |
-| Vertragsfreiheit | Arbeits-, Kauf-, Mietvertrag |
-| Soziale Sicherung | Kranken-, Pflege-, Renten-, Arbeitslosen-, Unfallversicherung |
-| Umverteilung | progressive Einkommensteuer, Kindergeld, Wohngeld, Grundsicherungsgeld |
-| Arbeitsrecht | Kündigungsschutz, Tarifautonomie, Mitbestimmung |
-| Bildung | öffentliche Schulen, Berufsausbildung, BAföG |
+| **Wettbewerbspolitik** | Kartellverbot, Fusionskontrolle, Missbrauchsaufsicht (Bundeskartellamt) |
+| **Sozialpolitik** | Sozialversicherung, Grundsicherung, Kündigungs- und Mutterschutz, Mindestlohn |
+| **Konjunkturpolitik** | Fiskalpolitik (StWG), Geldpolitik durch die unabhängige EZB |
+| **Strukturpolitik** | Förderung von Regionen und Branchen, Infrastruktur |
+| **Umweltpolitik** | Auflagen (BImSchG), CO₂-Preis/Emissionshandel, Förderprogramme |
+| **Verbraucherschutz** | Produktsicherheit, Widerrufsrecht, Preisangaben |
 
-## Sozialstaat
+Weitere Ordnungselemente: **Tarifautonomie**, **Mitbestimmung**, Gewerbe- und Berufsfreiheit, Vertragsfreiheit, Konsumfreiheit.
 
-- Rechtsgrundlage: **Art. 20 Abs. 1, Art. 28 GG** – Bundesrepublik ist ein sozialer Bundesstaat.
-- **Sozialversicherung:** fünf Zweige, Beiträge paritätisch (außer UV).
-- **Grundsicherung:** existenzsichernde Leistung, Bedürftigkeitsprüfung.
-- **Grundsicherungsgeld:** löste zum 1. Juli 2026 das 2023 eingeführte Bürgergeld ab; Regelsatz 563 € für Alleinstehende. Prüfungsrelevant ist das Prinzip: Sicherung des Existenzminimums, Förderung und Zumutbarkeit von Arbeit.
-- **Arbeitslosengeld I:** Versicherungsleistung, abhängig von Beitragszeit und vorherigem Entgelt.
-- **Kindergeld, Wohngeld, Elterngeld:** steuerfinanzierte Familienleistungen.
-- **Progressive Steuer:** höhere Einkommen zahlen einen höheren Grenzsteuersatz; das ist Umverteilung, keine Flat Tax.
+**Nicht** soziale Marktwirtschaft: zentrale staatliche Lenkung, ausschließlich staatliche Produktionsmittel, Mindest- und Höchstpreise für alle Waren, Berufsausbildung nur nach staatlichem Bedarfsplan, Ausschaltung des Wettbewerbs, Subventionierung aller insolvenzbedrohten Unternehmen.
 
-**Merke:** Sozialversicherung ist **Versicherung** (Beiträge, Gegenleistung), Fürsorge/Grundsicherung ist **steuerfinanziert** (Bedürftigkeitsprüfung). Beides ist Sozialstaat, aber nicht dasselbe.
+### Sozialstaat – drei Prinzipien
 
-## Markt und Staat
+| Prinzip | Merkmal | Beispiele | Finanzierung |
+|---|---|---|---|
+| **Versicherungsprinzip** | Leistung, weil Beiträge gezahlt wurden | Renten-, Kranken-, Pflege-, Arbeitslosen-, Unfallversicherung | Beiträge (+ Bundeszuschuss) |
+| **Versorgungsprinzip** | Leistung für besondere Opfer/Dienste für die Allgemeinheit | Beamtenpension, Kriegsopferversorgung, Kindergeld, Elterngeld | Steuern |
+| **Fürsorgeprinzip** | Leistung nach **Bedürftigkeit**, Nachrang (Subsidiarität) | **Grundsicherungsgeld** (bis 2026 Bürgergeld), Sozialhilfe, **Wohngeld**, BAföG | Steuern |
 
-| Staatsrolle | Beispiel |
-|---|---|
-| Ordnungspolitik | Kartellgesetze, Verbraucherschutz, Wettbewerbsaufsicht |
-| Konjunkturpolitik | expansive/restriktive Fiskalpolitik |
-| Strukturpolitik | Förderung von Regionen und Branchen |
-| Sozialpolitik | Rente, Gesundheit, Grundsicherung |
-| Umweltpolitik | Emissionshandel, Verbote, Förderung |
+Grundwerte: **Solidarität** (Starke helfen Schwachen), **Subsidiarität** (Hilfe zur Selbsthilfe; erst Eigenverantwortung, dann Familie, dann Staat), soziale Gerechtigkeit, Chancengleichheit.
 
-**Nicht sozial-marktwirtschaftlich:** Planwirtschaft mit staatlich festgelegten Preisen, vollständige Verstaatlichung, reiner Manchester-Kapitalismus ohne Sozialbindung.
+**Grundsicherungsgeld:** Mit der Reform „Neue Grundsicherung“ wurde 2026 das 2023 eingeführte Bürgergeld abgelöst; Regelsatz Alleinstehende 563 € (Stand 2026). Prinzip: Existenzminimum sichern, fördern und fordern (zumutbare Arbeit).
 
-## Zielkonflikte
+### Zielkonflikte
 
-- **Effizienz vs. Gerechtigkeit:** hohe Umverteilung kann Leistungsanreize senken.
-- **Sozialstaat vs. Wettbewerb:** zu viel Regulierung kann Märkte lähmen.
-- **Wachstum vs. Umwelt:** höhere Produktion belastet Ressourcen.
-- **Stabilität vs. Vollbeschäftigung:** magisches Viereck.
+- **Effizienz ↔ Gerechtigkeit:** hohe Umverteilung kann Leistungsanreize senken.
+- **Sozialstaat ↔ Finanzierbarkeit:** Sozialleistungen kosten Steuern bzw. Beiträge (Lohnnebenkosten).
+- **Wachstum ↔ Umwelt.**
+- **Demografischer Wandel** belastet Renten-, Kranken- und Pflegeversicherung.
 
-**Prüfungsfalle:** „Mehr Sozialleistungen“ ist keine kostenlose Lösung. Sie müssen über Steuern oder Beiträge finanziert werden und können andere Ziele beeinträchtigen.
+## Prüfungsfrage
 
-## 3-Zeiler für die Prüfung
+**Frage (Multiple Choice):** Welche Maßnahme entspricht am ehesten dem Sozialstaatsprinzip?
 
-**Frage:** Warum ist die soziale Marktwirtschaft keine Planwirtschaft?
+1. Erhöhung der Abschreibungssätze für Maschinen
+2. Erhöhung der Freibeträge bei der Erbschaftsteuer
+3. steuerliche Förderung von Kapitalgesellschaften
+4. Senkung der Steuer auf Zinserträge
+5. Erhöhung des Wohngeldes
 
-**Antwort:** Preise und Produktion werden grundsätzlich über Wettbewerb und Angebot/Nachfrage gesteuert. Der Staat setzt nur den Ordnungsrahmen und gleicht soziale Härten aus. Eine Planwirtschaft würde Produktion und Preise zentral vorgeben.
+**Musterantwort:** **5.** Wohngeld unterstützt einkommensschwache Haushalte bei den Wohnkosten und dient dem sozialen Ausgleich. 1 und 3 sind Wirtschaftsförderung, 2 und 4 begünstigen vor allem Vermögende bzw. den Kapitalmarkt.
 
-## Prüfungsfallen
+## Falle
 
 - Soziale Marktwirtschaft ist eine **Wirtschaftsordnung**, kein Unternehmensziel.
-- Sozialstaat ≠ Sozialversicherung; Grundsicherung ist steuerfinanziert.
-- Progressive Steuer ist Umverteilung, keine Sozialversicherung.
-- Kartellrecht schützt Wettbewerb, nicht einzelne Unternehmen.
-- Der Staat legt nicht alle Preise fest.
+- Der Staat setzt **keine** Mindest- und Höchstpreise für alle Waren und fördert keine Kartelle – vollständige Konkurrenz entsteht nicht per Gesetz.
+- Sozialversicherung (Beiträge) ≠ Fürsorge (Steuern, Bedürftigkeitsprüfung) – beides gehört zum Sozialstaat.
+- Kartellrecht schützt den **Wettbewerb**, nicht einzelne Unternehmen.
+- „Sozialer Ausgleich und solidarische Hilfe zur Chancengleichheit“ ist die typische richtige Antwort.
+
+## Merksatz
+
+**„So viel Markt wie möglich, so viel Staat wie nötig.“**
 
 ## Verwandt
 
+- [Sozialversicherung](sozialversicherung.md) – Versicherungsprinzip
+- [Arbeitslosenversicherung & Grundsicherung](arbeitslosenversicherung-grundsicherung.md) – Fürsorgeprinzip
 - [Konjunktur & Wirtschaftspolitik](konjunktur-wirtschaftspolitik.md) – Fiskal- und Geldpolitik
-- [Sozialversicherung](sozialversicherung.md) – fünf Säulen
-- [gKV](gkv.md) – Krankenversicherung
-- [Marktformen & Preisbildung](marktformen-preisbildung.md) – Wettbewerb
-- [Unternehmensverbindungen & Kartellrecht](unternehmensverbindungen-kartellrecht.md) – Kartellaufsicht
-- [Umwelt & Nachhaltigkeit](umwelt-nachhaltigkeit.md) – ökologische Grenzen
+- [Unternehmensverbindungen & Kartellrecht](unternehmensverbindungen-kartellrecht.md) – Wettbewerbsschutz
+- [Marktformen & Preisbildung](marktformen-preisbildung.md) – Preisbildung am Markt
+- [WiSo-Grundlagen (Lektion 11)](../IT/analyse-der-exams/11_WiSo_Grundlagen.md)
+- Echte Aufgaben: [Winter 2025](fragen/Winter-2025.md) (27), [Sommer 2026](fragen/Sommer-2026.md) (25, 30)
