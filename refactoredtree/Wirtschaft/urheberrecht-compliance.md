@@ -87,6 +87,6 @@
 ## Verwandt
 
 - [IT-Sicherheit im Arbeitsalltag](it-sicherheit-im-arbeitsalltag.md) – Datenschutz und Sicherheitsregeln
-- [Datenschutz & TOM (IT)](../IT/dsgvo-tom.md) – personenbezogene Daten
+- [Datenschutz & TOM (IT)](../IT/Management/DSGVO/dsgvo-tom.md) – personenbezogene Daten
 - [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Haftung der Geschäftsführung
 - [Unternehmensverbindungen & Kartellrecht](unternehmensverbindungen-kartellrecht.md) – Kartell-Compliance

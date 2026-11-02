@@ -97,6 +97,6 @@ Akteure oder Use Cases können vererbt werden.
 **"Use Case = Was, nicht Wie"** - Beschreibt die Funktionalität, nicht die technische Umsetzung.
 
 ## Weiterführend
-- [Klassendiagramm](Klassendiagram.md)
-- [Aktivitätsdiagramm](Aktivitätsdiagramm.md)
-- [Sequenzdiagramm](Sequenzdiagramm)
+- [Klassendiagramm](Klassendiagramm.md)
+- [Aktivitätsdiagramm](Aktivitaetsdiagramm.md)
+- [Sequenzdiagramm](Sequenzdiagramm.md)

@@ -18,7 +18,7 @@
 
 ## Verwandte Verzeichnisse
 - [`IT/analyse-der-exams/`](IT/analyse-der-exams/) - Analyse früherer Prüfungen
-- [`IT/fragen/`](IT/fragen/) - Übungsfragen
+- [`IT/fragen/`](IT/analyse-der-exams/fragen/) - Übungsfragen
 
 ## Tipps zum Lernen
 - **Von Grundlagen zu Spezialthemen:** CPU → Speicherhierarchie → Virtualisierung

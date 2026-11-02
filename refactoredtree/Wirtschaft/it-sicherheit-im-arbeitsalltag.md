@@ -96,9 +96,9 @@ Backup regelmäßig **testen**. Ein ungetestetes Backup ist kein Backup. Ransomw
 
 ## Verwandt
 
-- [Schutzziele (IT)](../IT/schutzziele.md) – CIA und erweiterte Ziele
-- [Patchmanagement (IT)](../IT/patchmanagment-tu-su-pu.md) – Updates
-- [Backup & Snapshots (IT)](../IT/snapshots-backups.md) – Sicherung
-- [MFA & Authentifizierung (IT)](../IT/authentifizierung-autoritisierung-mfa.md) – 2FA
-- [DSGVO & TOM (IT)](../IT/dsgvo-tom.md) – Datenschutz
+- [Schutzziele (IT)](../IT/FiSi-Administrator/Sicherheit/schutzziele.md) – CIA und erweiterte Ziele
+- [Patchmanagement (IT)](../IT/FiSi-Administrator/Netzwerk-Administration/patchmanagement-tu-su-pu.md) – Updates
+- [Backup & Snapshots (IT)](../IT/FiSi-Administrator/Server/virtualisierung/snapshots-backups.md) – Sicherung
+- [MFA & Authentifizierung (IT)](../IT/FiSi-Administrator/Server/authentifizierung-autoritisierung-mfa.md) – 2FA
+- [DSGVO & TOM (IT)](../IT/Management/DSGVO/dsgvo-tom.md) – Datenschutz
 - [Urheberrecht & Compliance](urheberrecht-compliance.md) – Regeln im Betrieb

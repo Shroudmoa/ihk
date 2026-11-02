@@ -57,6 +57,6 @@
 ## Verwandt
 
 - [Firewall](firewall.md) – Filterung vs Adressübersetzung
-- [IPv4](ipv4.md) – Private vs öffentliche Adressen
-- [Proxy](proxy.md) – Alternativer Weg zum Zugriff ins Internet
-- [Netzwerktypen](netzwerktypen.md) – WAN/LAN
+- [IPv4](../../OSI-IP-mac-bit-byte/ipv4.md) – Private vs öffentliche Adressen
+- [Proxy](../../Netzwerk-Administration/proxy.md) – Alternativer Weg zum Zugriff ins Internet
+- [Netzwerktypen](../../netzwerktypen.md) – WAN/LAN

@@ -68,5 +68,5 @@
 
 - [IPv6](ipv6.md) – 128 Bit, SLAAC, kein Broadcast
 - [MAC](mac.md) – die Schicht darunter
-- [Netzwerktypen](netzwerktypen.md) – wo Subnetze eingesetzt werden
+- [Netzwerktypen](../netzwerktypen.md) – wo Subnetze eingesetzt werden
 - [OSI](osi.md) – Einordnung auf Schicht 3

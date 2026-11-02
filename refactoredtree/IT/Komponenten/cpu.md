@@ -262,6 +262,6 @@ GPUs optimieren stark parallele Berechnungen, während CPUs vielseitige Aufgaben
 
 ## Verwandt
 
-- [BIOS/UEFI-Kernel](bios-uefi-kernel.md) – Kernel tasks und System Calls
-- [VM-Container-Server](vm-container-server.md) – Kerne und Ressourcen für VMs
+- [BIOS/UEFI-Kernel](../FiSi-Administrator/Server/bios-uefi-kernel.md) – Kernel tasks und System Calls
+- [VM-Container-Server](../FiSi-Administrator/Server/virtualisierung/vm-container-server.md) – Kerne und Ressourcen für VMs
 

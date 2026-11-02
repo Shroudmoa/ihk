@@ -76,4 +76,4 @@ Ungleichbehandlung ist ausnahmsweise zulässig, wenn:
 - [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – zulässige Fragen
 - [Betriebsrat & JAV](betriebsrat-jav.md) – Mitbestimmung
 - [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – diskriminierende Kündigung
-- [Datenschutz & TOM (IT)](../IT/dsgvo-tom.md) – Bewerberdaten
+- [Datenschutz & TOM (IT)](../IT/Management/DSGVO/dsgvo-tom.md) – Bewerberdaten

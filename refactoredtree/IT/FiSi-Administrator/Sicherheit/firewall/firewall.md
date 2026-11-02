@@ -55,7 +55,7 @@ Regel 1–3 sind Beispiele, Regel 4 ist die implizite Grundhaltung: **alles ande
 
 ## Verwandt
 
-- [Proxy](proxy.md) – Application-Level Gateway und Reverse Proxy
-- [Netzwerktypen](netzwerktypen.md) – LAN, WAN und Segmentierung
-- [hackers-can](hackers-can.md) – welche Angriffe abgewehrt werden
-- [OSI](osi.md) – Zuordnung der Firewall-Typen zu Schichten
+- [Proxy](../../Netzwerk-Administration/proxy.md) – Application-Level Gateway und Reverse Proxy
+- [Netzwerktypen](../../netzwerktypen.md) – LAN, WAN und Segmentierung
+- [hackers-can](../hacking/hackers-can.md) – welche Angriffe abgewehrt werden
+- [OSI](../../OSI-IP-mac-bit-byte/osi.md) – Zuordnung der Firewall-Typen zu Schichten

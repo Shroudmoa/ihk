@@ -86,6 +86,6 @@ Ein Client erhält über DNS einen A- und einen AAAA-Record. Er verwendet Dual S
 ## Verwandt
 
 - [MAC](mac.md) – Link-Layer-Adressen im Nachbarverfahren
-- [Netzwerktypen](netzwerktypen.md) – Einsatzbereich und Adressierung
+- [Netzwerktypen](../netzwerktypen.md) – Einsatzbereich und Adressierung
 - [OSI](osi.md) – Schicht 3: logische Adressierung
 

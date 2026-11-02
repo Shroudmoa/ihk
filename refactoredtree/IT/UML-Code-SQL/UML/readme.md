@@ -20,19 +20,19 @@ Laut Analyse der Prüfungen 2021-2026:
 
 | Diagramm | Typ | Wann nutzen? | Prüfungsrelevanz |
 |---|---|---|---|
-| **[Klassendiagramm](Klassendiagram.md)** | Statisch | Klassen, Attribute, Methoden, Vererbung, Beziehungen | ★★★★★ |
+| **[Klassendiagramm](Klassendiagramm.md)** | Statisch | Klassen, Attribute, Methoden, Vererbung, Beziehungen | ★★★★★ |
 | **[Anwendungsfalldiagramm/Use-Case-Diagramm](Anwendungsfalldiagramm-Use-Case-Diagramm.md)** | Statisch | Anforderungen, Akteure, Systemgrenze, Use Cases | ★★★★☆ |
-| **[Aktivitätsdiagramm](Aktivitätsdiagramm.md)** | Dynamisch | Geschäftsprozesse, Abläufe, Entscheidungen, Verantwortlichkeiten | ★★★★★ |
-| **[Sequenzdiagramm](Sequenzdiagramm)** | Dynamisch | Nachrichten zwischen Objekten über Zeitverlauf | ★★★★☆ |
+| **[Aktivitätsdiagramm](Aktivitaetsdiagramm.md)** | Dynamisch | Geschäftsprozesse, Abläufe, Entscheidungen, Verantwortlichkeiten | ★★★★★ |
+| **[Sequenzdiagramm](Sequenzdiagramm.md)** | Dynamisch | Nachrichten zwischen Objekten über Zeitverlauf | ★★★★☆ |
 
 ## Lernpfad
 
-1. **[Klassendiagramm](Klassendiagram.md)** - Grundlagen zu Klassen, Assoziation, Aggregation, Komposition, Vererbung
+1. **[Klassendiagramm](Klassendiagramm.md)** - Grundlagen zu Klassen, Assoziation, Aggregation, Komposition, Vererbung
 2. **[Anwendungsfalldiagramm/Use-Case-Diagramm](Anwendungsfalldiagramm-Use-Case-Diagramm.md)** - Anforderungen erfassen und visualisieren
-3. **[Aktivitätsdiagramm](Aktivitätsdiagramm.md)** - Abläufe modellieren (sehr häufig als Zeichenaufgabe)
-4. **[Sequenzdiagramm](Sequenzdiagramm)** - Interaktionen zwischen Objekten darstellen
+3. **[Aktivitätsdiagramm](Aktivitaetsdiagramm.md)** - Abläufe modellieren (sehr häufig als Zeichenaufgabe)
+4. **[Sequenzdiagramm](Sequenzdiagramm.md)** - Interaktionen zwischen Objekten darstellen
 
 ## Verknüpfung
 
-- [Datenmodellierung, SQL & UML (Analyse der Exams)](../analyse-der-exams/L14_Datenmodellierung_SQL_UML.md) - Echte Prüfungsfälle
+- [Datenmodellierung, SQL & UML (Analyse der Exams)](../../analyse-der-exams/L14_Datenmodellierung_SQL_UML.md) - Echte Prüfungsfälle
 - [Pseudocode](../Pseudocode/readme.md) - Objektorientierung im Code

@@ -58,5 +58,5 @@
 
 - [MAC](mac.md) – Schicht 2 konkret
 - [IPv4](ipv4.md) – Schicht 3 konkret
-- [Proxy](proxy.md) – Schicht 7 konkret
-- [Firewall](firewall.md) – welcher Typ auf welcher Schicht filtert
+- [Proxy](../Netzwerk-Administration/proxy.md) – Schicht 7 konkret
+- [Firewall](../Sicherheit/firewall/firewall.md) – welcher Typ auf welcher Schicht filtert

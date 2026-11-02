@@ -1,8 +1,7 @@
 # AP2 FiSi – Lernpfad & Struktur (Master-Index)
 
-Zentrale Übersicht über alle Lernunterlagen im Ordner `Tuts/`.
-Die Struktur folgt deiner `V1/List.md` (Themenliste aus den Altklausuren
-2021–2026) und ordnet **jedem 🔴/🟡-Thema eine Lektion** zu.
+Zentrale Übersicht über die Prüfungsanalyse. Die Themenliste stammt aus den
+Altklausuren 2021–2026 und ordnet **jedem 🔴/🟡-Thema eine Lektion** zu.
 
 **Legende:** 🔴 = fast jeder Termin · 🟡 = regelmäßig · 🟢 = vereinzelt
 **Status:** ✅ vorhanden · 🆕 neu ergänzt · ➡️ weiterführend
@@ -11,7 +10,7 @@ Die Struktur folgt deiner `V1/List.md` (Themenliste aus den Altklausuren
 
 ## So nutzt du den Lernpfad
 
-1. Lies zuerst `V1/00-ressourcen-und-guideline.md` (Leitfaden & Ressourcen).
+1. Lies zuerst den [Index](00_Index.md) (Prüfungsaufbau & Bearbeitungsregeln).
 2. Arbeite die Lektionen **nach Priorität** ab – zuerst alle 🔴-Themen.
 3. Jede Lektion hat einen **Selbstcheck** und eine **Übungsaufgabe** (Lösung
    per `<details>` aufklappbar). Altklausuren aus dem Repo (`*/GA*_SI_*.pdf`)
@@ -28,7 +27,7 @@ Die Struktur folgt deiner `V1/List.md` (Themenliste aus den Altklausuren
 | Speicher & Storage: RAID 0/1/5/6/10, Kapazität berechnen | 🔴 | [02_Speicher_Backup_RAID.md](02_Speicher_Backup_RAID.md) |
 | Backup-Strategien (Voll/Diff/Inkr, GVS, 3-2-1, D2D2T) + MTBF/MTTF | 🔴 | [L12_Backup_Strategien.md](L12_Backup_Strategien.md) 🆕 |
 | Virtualisierung (Hypervisor Typ 1/2, Container) | 🔴 | [L13_Virtualisierung.md](L13_Virtualisierung.md) 🆕 |
-| Verschlüsselung & Hashing (AES/RSA/MD5/SHA) | 🔴 | [V1/02-verschluesselung-hashing.md](../V1/02-verschluesselung-hashing.md) |
+| Verschlüsselung & Hashing (AES/RSA/MD5/SHA) | 🔴 | [L27_PKI_TLS_Verschluesselung_VPN.md](L27_PKI_TLS_Verschluesselung_VPN.md) |
 | Datenschutz & Informationssicherheit (DSGVO, TOM, Malware, Phishing) | 🔴 | [05_Datenschutz_Informationssicherheit.md](05_Datenschutz_Informationssicherheit.md) |
 | Verfügbarkeit & Ausfallsicherheit (CIA, USV, Cluster) | 🟡 | [03_Verfuegbarkeit_Ausfallsicherheit.md](03_Verfuegbarkeit_Ausfallsicherheit.md) |
 | Programmierung: Datentypen, Arrays, Struct, Bit-Bedarf | 🔴 | [04_Programmierung_Grundlagen.md](04_Programmierung_Grundlagen.md) |
@@ -39,7 +38,7 @@ Die Struktur folgt deiner `V1/List.md` (Themenliste aus den Altklausuren
 
 | Thema | Prio | Lektion |
 |-------|------|---------|
-| IPv4-Adressierung & Subnetting (inkl. VLSM) | 🔴 | [V1/01-subnetting-ipv4.md](../V1/01-subnetting-ipv4.md) |
+| IPv4-Adressierung & Subnetting (inkl. VLSM) | 🔴 | [06_IPv4_Adressierung_Routing.md](06_IPv4_Adressierung_Routing.md) |
 | IPv4 Routing, Broadcast, Unicast/Multicast, ARP, NAT | 🔴 | [06_IPv4_Adressierung_Routing.md](06_IPv4_Adressierung_Routing.md) |
 | IPv6 (Subnetting, SLAAC, DHCPv6) | 🟡 | [08_IPv6.md](08_IPv6.md) |
 | VLANs, Trunk/Access, Router-on-a-Stick, STP, LinkAgg, FHRP | 🔴 | [L15_VLAN_Routing.md](L15_VLAN_Routing.md) 🆕 |
@@ -53,8 +52,8 @@ Die Struktur folgt deiner `V1/List.md` (Themenliste aus den Altklausuren
 
 | Thema | Prio | Lektion |
 |-------|------|---------|
-| BBiG: Ausbildungsende, Weiterbeschäftigung (§21/§24) | 🔴 | [V1/03-wiso-arbeitsrecht.md](../V1/03-wiso-arbeitsrecht.md) |
-| Kündigungsfristen (§622 BGB, Probezeit) | 🔴 | [V1/03-wiso-arbeitsrecht.md](../V1/03-wiso-arbeitsrecht.md) |
+| BBiG: Ausbildungsende, Weiterbeschäftigung (§21/§24) | 🔴 | [BBiG](../../Wirtschaft/bbig.md) |
+| Kündigungsfristen (§622 BGB, Probezeit) | 🔴 | [BBiG](../../Wirtschaft/bbig.md) |
 | Sozialversicherung (5 Zweige, Beitragssatz) | 🔴 | [L19_Sozialversicherung.md](L19_Sozialversicherung.md) 🆕 |
 | Betriebsrat & Mitbestimmung (JAV, Betriebsvereinbarung) | 🔴 | [L20_Betriebsrat_Mitbestimmung.md](L20_Betriebsrat_Mitbestimmung.md) 🆕 |
 | Unternehmensorganisation (Leitungssysteme, Sektoren) | 🔴 | [L21_Unternehmensorganisation.md](L21_Unternehmensorganisation.md) 🆕 |
@@ -75,7 +74,7 @@ Die Struktur folgt deiner `V1/List.md` (Themenliste aus den Altklausuren
 
 ## Vollständigkeit
 
-Alle 🔴- und 🟡-Themen aus deiner `V1/List.md` sind jetzt durch eine Lektion
+Alle 🔴- und 🟡-Themen der Themenliste sind jetzt durch eine Lektion
 abgedeckt. Die 🟢-Randthemen finden sich komprimiert in
 `11_WiSo_Grundlagen.md` bzw. `00_Index.md`.
 

@@ -71,4 +71,4 @@
 - [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Beendigung
 - [Arbeitszeugnis](arbeitszeugnis.md) – Ansprüche bei Ende
 - [Tarifrecht & Betriebsvereinbarung](tarifrecht-betriebsvereinbarung.md) – kollektive Ebene
-- [Datenschutz & TOM (IT)](../IT/dsgvo-tom.md) – Bewerberdaten
+- [Datenschutz & TOM (IT)](../IT/Management/DSGVO/dsgvo-tom.md) – Bewerberdaten

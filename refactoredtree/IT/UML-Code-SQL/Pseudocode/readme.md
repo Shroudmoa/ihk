@@ -32,8 +32,8 @@ Diese Sammlung ist speziell für FiSi-Azubis konzipiert, um sich gezielt auf den
 
 ## Verknüpfung zu anderen Lerninhalten
 
-- [Analyse der Prüfungen - Programmierung](../analyse-der-exams/04_Programmierung_Grundlagen.md) - Echte Prüfungsfälle aus 2021-2026
-- [Lernpfad-Verbindungen](../../Lernpfad-Verbindungen.md) - Gesamtüberblick
+- [Analyse der Prüfungen - Programmierung](../../analyse-der-exams/04_Programmierung_Grundlagen.md) - Echte Prüfungsfälle aus 2021-2026
+- [IT-Lerntree](../../../IT.md) - Gesamtüberblick
 
 ## Lernplan (für 2-3 Tage vor Prüfung)
 

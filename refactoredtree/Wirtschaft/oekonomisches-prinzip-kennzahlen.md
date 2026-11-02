@@ -79,4 +79,4 @@ Beispiele:
 - [Marktformen & Preisbildung](marktformen-preisbildung.md) – Umsatz und Preis
 - [Unternehmensgründung & Businessplan](unternehmensgruendung-businessplan.md) – Finanzplan
 - [Konjunktur & Wirtschaftspolitik](konjunktur-wirtschaftspolitik.md) – gesamtwirtschaftliche Kennzahlen
-- [BEP (IT)](../IT/bep.md) – Break-Even-Point
+- [BEP (IT)](bep.md) – Break-Even-Point

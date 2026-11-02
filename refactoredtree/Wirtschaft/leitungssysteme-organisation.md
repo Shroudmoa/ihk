@@ -70,4 +70,4 @@
 - [Unternehmensgründung & Businessplan](unternehmensgruendung-businessplan.md) – Organisation aufbauen
 - [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – Stellen und Weisungsrecht
 - [Betriebsrat & JAV](betriebsrat-jav.md) – Mitbestimmung bei Organisation
-- [Projektstrukturplan (IT)](../IT/projektstruckturplan-psp.md) – Projektzerlegung
+- [Projektstrukturplan (IT)](../IT/Management/projektstrukturplan-psp.md) – Projektzerlegung

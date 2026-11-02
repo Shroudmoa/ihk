@@ -39,7 +39,7 @@ Eine **MAC-Adresse (Media Access Control Address)** ist eine Layer-2-Adresse des
 ## Verwandt
 
 - [OSI](osi.md) – Einordnung in Schicht 2
-- [Netzwerktypen](netzwerktypen.md) – Adressierung im lokalen Netz
+- [Netzwerktypen](../netzwerktypen.md) – Adressierung im lokalen Netz
 - [IPv6](ipv6.md) – Neighbor Discovery statt ARP
-- [hackers-can](hackers-can.md) – ARP Spoofing / MAC Spoofing
+- [hackers-can](../Sicherheit/hacking/hackers-can.md) – ARP Spoofing / MAC Spoofing
 

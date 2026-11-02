@@ -53,9 +53,9 @@
 
 ## Verwandt
 
-- [OSI](osi.md) – Schichtenmodell als Grundlage
-- [MAC](mac.md) – Adressierung im LAN
-- [Firewall](firewall.md) – Trennung zwischen Netzen
-- [Proxy](proxy.md) – kontrollierter Zugriff nach außen
-- [IPv6](ipv6.md) – Adressierung im WAN/LAN
+- [OSI](OSI-IP-mac-bit-byte/osi.md) – Schichtenmodell als Grundlage
+- [MAC](OSI-IP-mac-bit-byte/mac.md) – Adressierung im LAN
+- [Firewall](Sicherheit/firewall/firewall.md) – Trennung zwischen Netzen
+- [Proxy](Netzwerk-Administration/proxy.md) – kontrollierter Zugriff nach außen
+- [IPv6](OSI-IP-mac-bit-byte/ipv6.md) – Adressierung im WAN/LAN
 
