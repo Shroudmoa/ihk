@@ -152,8 +152,6 @@ Die Projektdauer auf diesem Pfad wird mit rund **20,3 Tagen** erwartet, die Stan
 
 **"Eins, vier, eins – geteilt durch sechs."** Streuung: Spannweite durch sechs; auf dem Pfad Varianzen addieren.
 
-## IHK-Merksatz (ausführlich)
-
 PERT (Program Evaluation and Review Technique) ist eine Projektmanagement-Methode zur Schätzung unsicherer Vorgangsdauern. Aus optimistischem, wahrscheinlichstem und pessimistischem Wert werden ein gewichteter Erwartungswert sowie eine geschätzte Standardabweichung berechnet. In Verbindung mit der Netzplantechnik kann PERT helfen, Projektdauern und Risiken kritischer Vorgänge besser einzuschätzen.
 
 ## Verwandt

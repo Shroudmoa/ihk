@@ -96,7 +96,7 @@ werden, während das aktuelle/letzte Band der Sohn-Rolle entspricht.
 | **MTBF** (Mean Time Between Failures) | mittlere Zeit **zwischen** Ausfällen | für **reparierbare** Systeme (Bauteil wird getauscht, läuft weiter) |
 | **MTTF** (Mean Time To Failure) | mittlere Zeit **bis zum** Ausfall | für **nicht reparierbare** Systeme (z. B. SSD-Lebensdauer) |
 
-Parallel geschaltete Komponenten: die Gesamt-MTBF **sinkt** (mehr Teile = mehr potenzielle Fehlerquellen). Näherung: `1 / λ_ges = 1/MTBF_1 + 1/MTBF_2 + …` (kurz wissen, keine tiefe Rechnung nötig).
+In **Reihe** geschaltete Komponenten ohne Redundanz (jede ist nötig): die Gesamt-MTBF **sinkt** (mehr Teile = mehr potenzielle Fehlerquellen). Parallel/redundant geschaltete Komponenten erhöhen dagegen die Verfügbarkeit – siehe [Verfügbarkeit & Kennzahlen](../FiSi-Administrator/Server/verfuegbarkeit-kennzahlen.md). Näherung: `1 / λ_ges = 1/MTBF_1 + 1/MTBF_2 + …` (kurz wissen, keine tiefe Rechnung nötig).
 
 **USV (Unterbrechungsfreie Stromversorgung):** überbrückt kurzzeitigen Stromausfall und gibt dem System Zeit für ein **geordnetes Herunterfahren** – verhindert Datenkorruption, ist aber kein Ersatz für langen Inselbetrieb (dafür Notstromaggregat).
 

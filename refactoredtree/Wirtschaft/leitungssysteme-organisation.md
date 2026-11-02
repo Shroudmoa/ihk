@@ -1,73 +1,91 @@
-# Leitungssysteme & Organisation
+# Leitungssysteme, Organisation & agiles Arbeiten
 
-> **Leitungssystem = Weg der Weisungen.** **Aufbauorganisation = Struktur**, **Ablauforganisation = Prozesse**. Prüfungsrelevant: Einlinien-, Mehrlinien-, Stab-Linien- und Matrixorganisation unterscheiden.
+## In 30 Sekunden
 
-## Aufbau- und Ablauforganisation
+- **Aufbauorganisation** = Struktur (Stellen, Abteilungen, Weisungswege); **Ablauforganisation** = Prozesse (Reihenfolge, Zeit, Ort).
+- **Einliniensystem:** jeder hat **genau einen** Vorgesetzten – klar, aber lange Dienstwege.
+- **Mehrliniensystem:** **mehrere** fachliche Vorgesetzte – kurze Wege, aber uneinheitliche Führung.
+- **Stab-Linien-System:** Linie + **Stabsstellen** (Rechtsabteilung, Controlling, Datenschutz), die **beraten, aber nicht weisungsbefugt** sind.
+- **Matrixorganisation:** zwei Weisungslinien (z. B. Funktion **und** Produkt/Projekt) – hohe Anforderungen an Teamfähigkeit und Kommunikation.
+- **Spartenorganisation (divisional):** Gliederung nach **Produkten**, Märkten oder Regionen.
+- **Agil** (Scrum, Kanban): Selbstorganisation, kurze Iterationen, Transparenz, schnelle Anpassung an Kundenwünsche.
 
-| Form | Frage | Ergebnis |
-|---|---|---|
-| **Aufbauorganisation** | Wer ist wofür zuständig? | Stellen, Abteilungen, Hierarchie |
-| **Ablauforganisation** | In welcher Reihenfolge? | Arbeitsprozesse, Schnittstellen |
+## Kernwissen
 
-**Stelle** = kleinste organisatorische Einheit, Aufgabenkompetenz für eine Person.
-**Instanz** = Stelle mit Weisungsbefugnis.
-**Stab** = unterstützt, berät, hat **keine** Weisungsbefugnis.
+### Grundbegriffe
 
-## Leitungssysteme
-
-| System | Prinzip | Vorteil | Nachteil |
-|---|---|---|---|
-| **Einlinien** | jeder Mitarbeiter hat **einen** Vorgesetzten | klare Zuständigkeit, einfache Kommunikation | Überlastung, lange Wege, wenig Spezialisierung |
-| **Mehrlinien** | mehrere fachliche Vorgesetzte | hohe Fachkompetenz, kurze Wege | Kompetenzüberschneidung, Konflikte, unklare Verantwortung |
-| **Stab-Linien** | Linie entscheidet, Stab berät | Entlastung der Leitung, Fachwissen | Stab ohne Entscheidungsmacht, Konfliktpotenzial |
-| **Matrix** | Projekt- und Linienverantwortung gleichzeitig | Flexibilität, Fach- und Projektwissen | Doppelunterstellung, Rollenkonflikte |
-| **Projektorganisation** | Projektleiter führt Team zeitlich begrenzt | Fokus, klare Projektziele | Loslösung aus Linie, Wiedereingliederung |
-
-**Prüfungsfalle:** Der Stab darf **keine** Weisungen erteilen. Im Mehrliniensystem hat ein Mitarbeiter mehrere Vorgesetzte – das ist kein Stab-Liniensystem.
-
-## Organisationsformen
-
-- **Funktional:** nach Tätigkeiten (Einkauf, Produktion, Vertrieb).
-- **Divisional:** nach Produkten, Märkten oder Regionen.
-- **Spartenorganisation:** eigene Sparten mit Ergebnisverantwortung.
-- **Holding:** Dachgesellschaft steuert Tochtergesellschaften.
-- **Lean Organization:** flache Hierarchie, wenig Stäbe, Eigenverantwortung.
-- **Agile Organisation:** selbstorganisierte Teams, kurze Zyklen, iterative Anpassung.
-
-**Merke:** Die Gliederung nach Produkten ist divisional, nicht funktional. Eine Holding ist keine Rechtsform, sondern eine Führungsstruktur.
-
-## Agiles Projektmanagement
-
-| Prinzip | Bedeutung |
+| Begriff | Bedeutung |
 |---|---|
-| iterative Entwicklung | kurze Sprints, Zwischenergebnisse |
-| Selbstorganisation | Team entscheidet über Aufgaben |
-| Kundenfeedback | früh und regelmäßig |
-| Transparenz | Board, Daily, Review |
-| Anpassung | Prioritäten ändern sich bewusst |
+| **Stelle** | kleinste organisatorische Einheit, Aufgabenbereich einer Person |
+| **Instanz** | Stelle mit **Leitungs- und Weisungsbefugnis** |
+| **Stabsstelle** | unterstützt und berät eine Instanz, **keine** Weisungsbefugnis gegenüber der Linie |
+| **Abteilung** | Zusammenfassung mehrerer Stellen unter einer Instanz |
+| **Leitungsspanne** | Anzahl der direkt unterstellten Mitarbeiter |
+| **Organigramm** | grafische Darstellung der Aufbauorganisation |
 
-**Scrum:** Product Owner (Prioritäten), Scrum Master (Prozess), Entwicklungsteam (Umsetzung). **Kanban:** kontinuierlicher Fluss, WIP-Limits.
+### Leitungssysteme
 
-**Prüfungsfalle:** Agil heißt nicht „ohne Plan“. Es heißt: Planung in kurzen Zyklen und Anpassung an neue Erkenntnisse.
+| System | Prinzip | Vorteile | Nachteile |
+|---|---|---|---|
+| **Einliniensystem** | Fayol: Einheit der Auftragserteilung, ein Vorgesetzter | klare Zuständigkeit und Verantwortung, einfache Kontrolle | lange Dienstwege, Überlastung der Spitze, starr |
+| **Mehrliniensystem** | Taylor: Funktionsmeister, mehrere Fachvorgesetzte | Spezialisierung, kurze Wege | Kompetenzkonflikte, widersprüchliche Weisungen, uneinheitliche Führung |
+| **Stab-Linien-System** | Einlinie + Stäbe | Entlastung der Instanzen durch Spezialwissen der Stäbe, Einheit der Leitung bleibt | Konflikte Stab–Linie, „Macht ohne Verantwortung“ des Stabs |
+| **Matrixorganisation** | Kreuzung von Funktions- und Objektlinie (Produkt/Projekt/Region) | Flexibilität, Kombination von Fach- und Produktwissen | Doppelunterstellung, hoher Abstimmungsaufwand, Machtkämpfe |
+| **Spartenorganisation** | Gliederung nach Produkten/Märkten, Sparten oft als Profitcenter | Marktnähe, klare Ergebnisverantwortung | Doppelarbeit in den Sparten, höherer Personalbedarf |
+| **Projektorganisation** | befristete Teams für ein Projekt (reine Projektorganisation, Einfluss-/Stabs-Projektorganisation, Matrix-Projektorganisation) | Fokus auf Projektziel | Rückkehr in die Linie, Ressourcenkonflikte |
 
-## 3-Zeiler für die Prüfung
+**Stabsstellen** gibt es auf **allen** Leitungsebenen, häufig direkt bei der Geschäftsführung (Recht, Controlling, Unternehmenskommunikation, Datenschutzbeauftragter, Nachhaltigkeitsmanagement). Fachabteilungen wie Fertigung, Vertrieb, Einkauf, Personal oder IT sind in der Regel **Linienstellen** und an die Weisungen der Geschäftsführung gebunden.
 
-**Frage:** Ein Mitarbeiter erhält Weisungen von Produktions- und Vertriebsleitung. Welches Leitungssystem?
+### Organigramm lesen – Prüfungstipps
 
-**Antwort:** Es handelt sich um ein Mehrliniensystem, weil mehrere Vorgesetzte fachliche Weisungsrechte haben. Vorteil ist die hohe Fachkompetenz, Nachteil die Gefahr widersprüchlicher Weisungen. Abhilfe schafft eine klare Kompetenzabgrenzung oder der Wechsel zum Einliniensystem.
+- Verbindungslinie von oben nach unten = Weisungsbeziehung.
+- Kästchen seitlich an der Linie (oft abgerundet oder gestrichelt) = **Stab**.
+- Hat eine Stelle zwei Linien von oben → Mehrlinien- oder Matrixsystem.
+- Wer **berät**, aber nicht anweist → Stab (z. B. Rechtsabteilung berät die Geschäftsleitung).
 
-## Prüfungsfallen
+### Arbeitsteilung im Betrieb
 
-- Stab hat Beratungs-, keine Weisungsfunktion.
-- Einlinien = ein Vorgesetzter, Mehrlinien = mehrere.
-- Matrix = Doppelunterstellung, nicht flache Hierarchie per se.
-- Aufbauorganisation ≠ Ablauforganisation.
-- Agil ≠ planlos; Sprints sind geplant.
+- **Betriebliche (innerbetriebliche) Arbeitsteilung:** ein Prozess wird in Teilprozesse für mehrere spezialisierte Mitarbeiter/Abteilungen zerlegt (Mengen- oder Artteilung).
+- **Zwischenbetriebliche Arbeitsteilung:** Teile der Leistung werden von **anderen Unternehmen** bezogen (Outsourcing, Zulieferer, Supply Chain).
+
+### Agiles Projektmanagement
+
+| Merkmal agil | Merkmal klassisch (Wasserfall) |
+|---|---|
+| iterativ in kurzen **Sprints** (1–4 Wochen) | Phasen nacheinander |
+| **Selbstorganisation** des Teams, Eigenverantwortung | Vorgesetzter gibt Lösung und Weg vor |
+| **Transparenz** (Board, Daily, Review) | Statusberichte |
+| hohe **Flexibilität**, zeitnahe Umsetzung neuer Kundenwünsche | Änderungen teuer (Change Request) |
+| enger Kundenkontakt, frühes Feedback | Abnahme am Ende |
+
+**Scrum-Rollen:** Product Owner (Prioritäten, Backlog), Scrum Master (Prozess, Hindernisse), Developers. **Events:** Sprint Planning, Daily Scrum, Sprint Review, Retrospektive. **Kanban:** kontinuierlicher Fluss, WIP-Limits, Board (To do – Doing – Done).
+
+## Prüfungsfrage
+
+**Frage (Zuordnung):** Ordnen Sie die Merkmale dem Leitungssystem zu: (1) Mehrliniensystem, (2) Matrixorganisation, (3) Stab-Linien-System.
+a) uneinheitliche Führung, aber kurze Dienstwege
+b) hohe Anforderungen an Teamfähigkeit und Kommunikationsbereitschaft
+c) Entlastung der Instanzen durch Spezialkenntnisse
+
+**Musterantwort:** a) **1**, b) **2**, c) **3**.
+
+## Falle
+
+- Der **Stab** erteilt **keine** Weisungen – die Rechtsabteilung berät nur.
+- Mehrlinien = mehrere Vorgesetzte (für dieselbe Stelle), Matrix = zwei Dimensionen (horizontal und vertikal).
+- Gliederung nach **Produkten** = Sparten-/divisionale Organisation, nach Tätigkeiten = funktionale Organisation.
+- Agil heißt nicht planlos – geplant wird in kurzen Zyklen; „Vorgesetzter gibt Lösung und Weg vor“ ist **nicht** agil.
+- Hoher Kommunikationsaufwand ist kein Vorteil des agilen Vorgehens, sondern eine Voraussetzung.
+
+## Merksatz
+
+**„Einer sagt an (Einlinie), viele sagen an (Mehrlinie), einer sagt an und einer berät (Stab-Linie), zwei sagen an über Kreuz (Matrix).“**
 
 ## Verwandt
 
+- [Wirtschaftssektoren & Arbeitsteilung](wirtschaftssektoren-arbeitsteilung.md) – betriebliche und zwischenbetriebliche Arbeitsteilung
 - [Unternehmensziele & Zielkonflikte](unternehmensziele-zielkonflikte.md) – Ziele und Steuerung
-- [Unternehmensgründung & Businessplan](unternehmensgruendung-businessplan.md) – Organisation aufbauen
-- [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – Stellen und Weisungsrecht
-- [Betriebsrat & JAV](betriebsrat-jav.md) – Mitbestimmung bei Organisation
-- [Projektstrukturplan (IT)](../IT/Management/projektstrukturplan-psp.md) – Projektzerlegung
+- [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Organe von GmbH und AG
+- [Projektstrukturplan (IT)](../IT/Management/projektstrukturplan-psp.md)
+- [Lektion 21 – Unternehmensorganisation](../IT/analyse-der-exams/L21_Unternehmensorganisation.md)
+- Echte Aufgaben: [Winter 2021](fragen/Winter-2021.md) (13), [Winter 2022](fragen/Winter-2022.md) (29–30), [Winter 2024](fragen/Winter-2024.md) (13–14), [Winter 2025](fragen/Winter-2025.md) (23–24)

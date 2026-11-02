@@ -5,7 +5,7 @@
 - Die Rechtsform entscheidet über **Haftung, Mindestkapital, Geschäftsführung, Gewinnverteilung und Register**.
 - **Personengesellschaften** (GbR, OHG, KG): mindestens ein Gesellschafter haftet **unbeschränkt mit Privatvermögen**, kein Mindestkapital.
 - **Kapitalgesellschaften** (GmbH, UG, AG): juristische Person, haftet nur mit dem **Gesellschaftsvermögen**; GmbH **25.000 €** Stammkapital, AG **50.000 €** Grundkapital.
-- **GmbH** (Prüfungsfavorit, 15 von 30 Aufgaben-Sets!): notarieller Vertrag, Eintragung in **HRB** (konstitutiv), ab 1 Gesellschafter, Gesellschafter dürfen Geschäftsführer sein, bei Gründung mind. **12.500 €** eingezahlt, Gewinn nach Geschäftsanteilen.
+- **GmbH** (Prüfungsfavorit – in jedem Termin von Winter 2021 bis Sommer 2026 gefragt): notarieller Vertrag, Eintragung in **HRB** (konstitutiv), ab 1 Gesellschafter, Gesellschafter dürfen Geschäftsführer sein, bei Gründung mind. **12.500 €** eingezahlt, Gewinn nach Geschäftsanteilen.
 - **Handelsregister** führt das **Amtsgericht**: Abteilung A = Einzelkaufleute und Personengesellschaften, Abteilung B = Kapitalgesellschaften.
 
 ## Kernwissen
