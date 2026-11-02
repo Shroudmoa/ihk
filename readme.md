@@ -1,5 +1,6 @@
 # IHK AP2 – Lernunterlagen
 
+Migration auf refactortree ist am Laufen!!
 
 Es wird empgohlen glow zu verwenden, um die markdownlernblätter in Terminal zu lesen und bearbeiten.
 
