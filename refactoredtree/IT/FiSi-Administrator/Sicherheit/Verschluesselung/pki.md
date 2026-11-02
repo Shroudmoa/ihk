@@ -1,17 +1,25 @@
-# PKI
+# PKI und Zertifikate
 
-# PKI / CA / TLS-Infrastruktur – IHK-Referenz
+## In 30 Sekunden
+
+- Eine **PKI** (Public-Key-Infrastruktur) bindet öffentliche Schlüssel über **X.509-Zertifikate** an Identitäten (Server, Personen, Geräte).
+- Die **CA** prüft die Identität des Antragstellers, **signiert** das Zertifikat und betreibt Sperrdienste (**CRL**, **OCSP**) – Prüfung 2026S.
+- Vertrauen entsteht über die **Chain of Trust**: Leaf-Zertifikat → Intermediate-CA → Root-CA im Trust Store.
+- Zertifikat einrichten (2023S): **beantragen (CSR) → privaten Schlüssel schützen → installieren → Zwischenzertifikate einbinden**.
+- Inhalte eines X.509-Zertifikats (2021W, 2023S): Inhaber (Subject/SAN), Aussteller, Gültigkeit, öffentlicher Schlüssel, Seriennummer, Verwendungszweck, Signatur der CA.
 
 ---
 
-## 1. Kryptografisches Fundament
+## Kernwissen
+
+### 1. Kryptografisches Fundament
 Asymmetrie: Ein Schlüsselpaar (Public Key `PK`, Private Key `SK`).
 `PK` verschlüsselt / verifiziert, `SK` entschlüsselt / signiert.
 **Voraussetzung für Vertrauen:** Authentizität des `PK`. Ohne Bindung an Identität ist `PK` wertlos (Man-in-the-Middle trivial).
 
 ---
 
-## 2. Zertifikat (X.509 v3) – Datenstruktur
+### 2. Zertifikat (X.509 v3) – Datenstruktur
 Bindet `PK` an Distinguished Name (DN: CN, O, OU, C, …).
 Felder (Auszug):
 | Feld | Inhalt | Relevanz |
@@ -27,7 +35,7 @@ Felder (Auszug):
 
 ---
 
-## 3. Certificate Authority (CA) – Rollen & Hierarchie
+### 3. Certificate Authority (CA) – Rollen & Hierarchie
 | Rolle | Aufgabe | Schlüsselmanagement |
 |-------|---------|---------------------|
 | **Root CA** | Trust Anchor, self-signed, offline | `SK_Root` in HSM, air-gapped, Lebenszeit 15–25 J. |
@@ -38,7 +46,7 @@ Felder (Auszug):
 
 ---
 
-## 4. Vertrauenskette (Chain of Trust) – Validation Algorithm
+### 4. Vertrauenskette (Chain of Trust) – Validation Algorithm
 1. **Trust Anchor** lokal im OS/Browser Root Store (ca. 150 Roots).
 2. **Chain Building:** Leaf → Intermediate(s) → Root (via Authority Key Identifier / Subject Key Identifier Matching).
 3. **Path Validation (RFC 5280):**
@@ -50,7 +58,7 @@ Felder (Auszug):
 
 ---
 
-## 5. TLS-Handshake (TLS 1.2 / 1.3) – PKI-Integration
+### 5. TLS-Handshake (TLS 1.2 / 1.3) – PKI-Integration
 | Schritt | Krypto | PKI-Bezug |
 |---------|--------|-----------|
 | **ClientHello** | – | Sendet Supported Groups, Signature Algorithms, `server_name` (SNI). |
@@ -63,7 +71,7 @@ Felder (Auszug):
 
 ---
 
-## 6. Widerruf & Lebenszyklus – DSGVO-Relevanz
+### 6. Widerruf & Lebenszyklus – DSGVO-Relevanz
 | Mechanismus | Port/Protokoll | Latency | DSGVO-Aspekt |
 |-------------|----------------|---------|--------------|
 | **CRL** | HTTP (80/443) | Hoch (volle Liste) | Art. 32 – Verfügbarkeit der Prüfdaten. |
@@ -75,7 +83,7 @@ Felder (Auszug):
 
 ---
 
-## 7. OSI-Modell Mapping
+### 7. OSI-Modell Mapping
 | Layer | PKI/TLS Bezug |
 |-------|---------------|
 | **L7 Application** | HTTPS, SMTPS, IMAPS, LDAPS – Protokolle nutzen TLS. |
@@ -88,7 +96,7 @@ Felder (Auszug):
 
 ---
 
-## 8. Key & Zertifikatsformate (Interoperabilität)
+### 8. Key & Zertifikatsformate (Interoperabilität)
 | Format | Kodierung | Inhalt | Typischer Use-Case |
 |--------|-----------|--------|-------------------|
 | **PEM** | Base64 + Header/Footer (`-----BEGIN CERTIFICATE-----`) | Cert, Key, Chain, CSR | Linux/Apache/Nginx, OpenSSL CLI. |
@@ -103,7 +111,7 @@ Felder (Auszug):
 openssl req -newkey rsa:4096 -nodes -keyout server.key -out server.csr -subj "/CN=example.de/O=Firma/OU=IT/C=DE"
 
 # Self-Signed (nur Lab!)
-openssl x509 -req -in server.csr -signkey server.key -out server.crt -days 365 -sha256 -extfile <(echo "subjectAltName=DNS:example.de,DNS:www.example.de\nkeyUsage=digitalSignature,keyEncipherment\nextendedKeyUsage=serverAuth")
+openssl x509 -req -in server.csr -signkey server.key -out server.crt -days 365 -sha256 -extfile <(printf "subjectAltName=DNS:example.de,DNS:www.example.de\nkeyUsage=digitalSignature,keyEncipherment\nextendedKeyUsage=serverAuth\n")
 
 # PKCS#12 Export
 openssl pkcs12 -export -inkey server.key -in server.crt -certfile chain.crt -out server.pfx -passout pass:Geheim123
@@ -114,12 +122,12 @@ openssl verify -CAfile rootCA.crt -untrusted intermediate.crt server.crt
 
 ---
 
-## 9. Häufige Prüfungsfallen (Savage Checklist)
+### 9. Häufige Fehler in der Praxis
 1. **Root CA im Vertrauensspeicher ≠ Sicherheit.** Wenn `SK_Root` kompromittiert → komplette PKI wertlos.
 2. **Fehlende SAN (Subject Alternative Name).** Chrome/Edge lehnen CN-only Certs ab (seit 2017).
 3. **KeyUsage / EKU Mismatch.** Server-Zert ohne `serverAuth` EKU = Validierungsfehler.
 4. **Incomplete Chain.** Server sendet nur Leaf → Client kann nicht zum Root bauen → `certificate_unknown`.
-5. **OCSP Stapling nicht konfiguriert.** Client leakht Metadaten an CA, Latenz, DSGVO-Verstoß (Art. 25).
+5. **OCSP Stapling nicht konfiguriert.** Jeder Client fragt selbst bei der CA nach – mehr Latenz und Metadaten (welche Seite wurde aufgerufen) landen beim OCSP-Responder.
 6. **Algorithmen-Schwäche.** SHA-1, RSA < 2048 Bit, ECDSA P-256 nur mit RFC 8422 Kurven. BSI TR-02102-1 beachten.
 7. **Private Key auf Webserver lesbar (world-readable).** `chmod 600`, User separation, ideal HSM / TPM / Cloud KMS.
 8. **Wildcard (*.domain.de) auf Public-Suffix (z. B. *.de).** Verboten (CA/B Forum Baseline Requirements).
@@ -128,18 +136,18 @@ openssl verify -CAfile rootCA.crt -untrusted intermediate.crt server.crt
 
 ---
 
-## 10. DSGVO & Compliance Mapping
+### 10. DSGVO & Compliance Mapping
 | Anforderung | Technische Umsetzung PKI |
 |-------------|--------------------------|
 | **Art. 5(1)(f) Integrität & Vertraulichkeit** | TLS 1.2+ mit AEAD (GCM/ChaCha20-Poly1305), Forward Secrecy (ECDHE). |
 | **Art. 25 Privacy by Design** | OCSP Stapling, Certificate Transparency Monitoring, Minimale Cert-Lifetime (90 Tage via ACME). |
 | **Art. 32 Sicherheit der Verarbeitung** | HSM für CA/Leaf Keys, Key Rotation Policy, Revocation Process < 24h. |
-| **Art. 33/34 Meldung Verletzungen** | CT-Log Alerting → unverzügliche Revocation → Neubestellung. |
-| **Art. 28 Auftragsverarbeitung** | Externe CA = Auftragsverarbeiter → AV-Vertrag, Audit-Recht (WebTrust/ETSI EN 319 411). |
+| **Art. 33/34 Meldung Verletzungen** | Kompromittierter privater Schlüssel: Zertifikat sofort sperren, neu ausstellen und prüfen, ob personenbezogene Daten betroffen sind (dann ggf. Meldung binnen 72 h). |
+| **Art. 28 Auftragsverarbeitung** | Nur relevant, wenn ein Dienstleister die PKI im Auftrag betreibt (Managed PKI) und dabei personenbezogene Daten verarbeitet; Prüfmaßstab für CAs sind Audits nach WebTrust bzw. ETSI EN 319 411. |
 
 ---
 
-## 11. Kurze Definitionsliste für 3-Zeilen-Antworten
+### 11. Kurze Definitionsliste für 3-Zeilen-Antworten
 - **PKI:** Hierarchisches System aus CAs, RAs, Verzeichnissen und Policies zur Ausstellung, Verteilung, Validierung und Widerruf von X.509-Zertifikaten.
 - **Vertrauensanker (Trust Anchor):** Selbstsigniertes Root-CA-Zertifikat, das implizit vertraut wird (im OS/Browser Root Store).
 - **Chain of Trust:** Kryptografische Verkettung Leaf → Intermediate(s) → Root, validiert durch Signaturen, Zeit, Revocation, Policy.
@@ -148,6 +156,29 @@ openssl verify -CAfile rootCA.crt -untrusted intermediate.crt server.crt
 - **HSM (Hardware Security Module):** FIPS 140-2/3 Level 3+ Gerät für Schlüsselerzeugung, -speicherung und Signieroperationen; Export von `SK` unmöglich.
 - **ACME (RFC 8555):** Automatisiertes Protokoll (HTTP-01, DNS-01, TLS-ALPN-01) für Zertifikat-Lifecycle-Management (Certbot, Windows ACME).
 
----
+## Prüfungsfrage
 
-acasts
+**Frage:** Ein Webserver soll ein öffentlich vertrauenswürdiges Zertifikat erhalten. Beschreiben Sie vier Schritte und nennen Sie zwei Aufgaben der Zertifizierungsstelle.
+
+**Musterantwort:** Zuerst wird auf dem Server ein Schlüsselpaar erzeugt und mit einem Certificate Signing Request (CSR) bei einer öffentlichen CA beantragt. Der private Schlüssel wird geschützt gespeichert (restriktive Dateirechte, ggf. HSM). Nach der Ausstellung wird das Zertifikat auf dem Server installiert und die Zwischenzertifikate der CA werden eingebunden, damit Clients die Kette bis zur Root-CA prüfen können. Die CA prüft vor der Ausstellung die Identität bzw. die Domain-Inhaberschaft und signiert das Zertifikat mit ihrem privaten Schlüssel; zudem stellt sie Sperrinformationen über CRL oder OCSP bereit.
+
+## Falle
+
+- Den **privaten** Schlüssel an die CA schicken → falsch, die CA bekommt nur den CSR mit dem öffentlichen Schlüssel.
+- „Selbstsigniert ist genauso sicher“ → verschlüsselt zwar, aber kein Dritter bestätigt die Identität; Browser warnen.
+- Zwischenzertifikate vergessen → Kettenfehler auf manchen Clients.
+- Ein gesperrtes Zertifikat ist nicht automatisch abgelaufen – geprüft werden muss **Gültigkeit und Sperrstatus**.
+
+## Merksatz
+
+**„Die CA bürgt mit ihrer Signatur – vertraut wird der Root im eigenen Speicher.“**
+
+## Verwandt
+
+- [TLS und HTTPS](tls-https.md) – Handshake und Zertifikatsprüfung
+- [Digitale Signatur](digitale-signatur.md)
+- [Symmetrische und asymmetrische Verschlüsselung](symmetrische-und-asymmetrische.md)
+- [Hash](hash.md) – warum MD5/SHA-1 für Zertifikate gebrochen sind
+- [PGP](pgp.md) – Web of Trust als Alternative zur CA
+- [802.1X und RADIUS](../netzwerkzugang-802-1x-radius.md) – EAP-TLS mit Client-Zertifikaten
+- [Lektion 27 PKI, TLS, VPN](../../../analyse-der-exams/L27_PKI_TLS_Verschluesselung_VPN.md)

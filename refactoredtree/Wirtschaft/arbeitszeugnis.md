@@ -1,68 +1,77 @@
 # Arbeitszeugnis
 
-> **Arbeitszeugnis = gesetzlicher Anspruch bei Beendigung.** Es gibt **einfaches** und **qualifiziertes** Zeugnis. Maßstab: wahr, wohlwollend, vollständig.
+## In 30 Sekunden
 
-## Rechtsgrundlagen
+- Anspruch bei Beendigung: Arbeitnehmer **§ 109 GewO** (allgemein § 630 BGB), Auszubildende **§ 16 BBiG**.
+- **Einfaches Zeugnis:** Art und Dauer der Tätigkeit (Azubi: zusätzlich Ziel und erworbene Fertigkeiten, Kenntnisse, Fähigkeiten).
+- **Qualifiziertes Zeugnis:** zusätzlich **Leistung und Verhalten** – auf **Verlangen** des Arbeitnehmers, nicht nach Ermessen des Arbeitgebers und nicht nur bei guten Leistungen.
+- Grundsätze: **wahr, wohlwollend, vollständig, klar**; schriftlich auf Papier mit Unterschrift, **elektronische Form ausgeschlossen**.
+- Streit über das Zeugnis → **Arbeitsgericht**.
 
-| Person | Anspruch |
-|---|---|
-| Arbeitnehmer | § 630 BGB |
-| Azubi | § 16 BBiG |
-| Form | Schriftform, Original, Unterschrift |
+## Kernwissen
 
-## Einfaches vs. qualifiziertes Zeugnis
+### Arten
 
-| Inhalt | Einfaches | Qualifiziertes |
+| Zeugnis | Inhalt | Wann? |
 |---|---|---|
-| Art der Tätigkeit/Ausbildung | ja | ja |
-| Dauer | ja | ja |
-| Ausbildungsziel | nur Azubi | nur Azubi |
-| erworbene Kenntnisse/Fähigkeiten | nur Azubi | ja |
-| Verhalten | nein | ja |
-| Leistung | nein | ja |
+| **einfaches** | Personalien (Name; Geburtsdatum nur mit Zustimmung), Art und Dauer der Tätigkeit | Standard, wenn nichts verlangt wird |
+| **qualifiziertes** | + Leistungsbeurteilung (Fachwissen, Arbeitsweise, Erfolg) + Verhaltensbeurteilung (gegenüber Vorgesetzten, Kollegen, Kunden) | auf Verlangen |
+| **Zwischenzeugnis** | wie qualifiziert, im Präsens | bei triftigem Grund (Vorgesetztenwechsel, Versetzung, Elternzeit, Bewerbung) |
+| **Ausbildungszeugnis** (§ 16 BBiG) | Art, Dauer, Ziel der Ausbildung, erworbene berufliche Fertigkeiten, Kenntnisse und Fähigkeiten; auf Verlangen Verhalten und Leistung | bei Ende der Ausbildung, auch wenn übernommen wird |
 
-**Wichtig:** Das qualifizierte Zeugnis wird **auf Verlangen** des Arbeitnehmers ausgestellt, nicht nach Ermessen des Arbeitgebers. Es ist nicht nur bei guten Leistungen zu geben.
+**Nicht hinein:** Krankheiten, Betriebsratstätigkeit, Gewerkschaft, Religion, Privatleben (privates Auftreten), Kündigungsgrund (nur auf Wunsch), Abmahnungen. Wohnort, Geburtsort und Geburtsdatum sind **nicht zwingend**.
 
-**Einfaches Zeugnis:** Bei Arbeitnehmern enthält es nur Art und Dauer der Tätigkeit; bei Azubis zusätzlich Ausbildungsziel und erworbene Fertigkeiten/Kenntnisse (§ 16 BBiG).
-
-## Zeugnissprache
+### Zeugnissprache (Notenschlüssel)
 
 | Formulierung | Note |
 |---|---|
-| „stets zu unserer vollsten Zufriedenheit“ | sehr gut |
-| „stets zu unserer vollen Zufriedenheit“ | gut |
-| „zu unserer vollen Zufriedenheit“ | befriedigend |
-| „zu unserer Zufriedenheit“ | ausreichend |
-| „hat sich bemüht“ | mangelhaft |
-| „im Großen und Ganzen“ | ausreichend/mangelhaft |
+| „stets zu unserer **vollsten** Zufriedenheit“ | 1 – sehr gut |
+| „stets zu unserer **vollen** Zufriedenheit“ | 2 – gut |
+| „zu unserer **vollen** Zufriedenheit“ | 3 – befriedigend |
+| „zu unserer Zufriedenheit“ | 4 – ausreichend |
+| „im Großen und Ganzen zu unserer Zufriedenheit“ | 5 – mangelhaft |
+| „hat sich bemüht …“ | 6 – ungenügend (in manchen Schlüsseln 5) |
 
-**Regeln:** Keine Geheimcodes, keine falschen Tatsachen, keine unnötigen Privatdaten (Geburtsdatum, Familienstand, Wohnort). Der Schlusssatz soll das Ausscheiden bedauern und Zukunftswünsche enthalten; er ist kein Leistungsmerkmal.
+Hinweis: Der IHK-Schlüssel Winter 2022 bewertet „zu unserer Zufriedenheit“ als befriedigend und „im Großen und Ganzen“ als ausreichend – in der Prüfung die Antwortoptionen genau lesen; die oben stehende Skala ist die verbreitete Standardskala.
 
-## Inhalt und Grenzen
+**Schlussformel** (Dank, Bedauern, Zukunftswünsche) ist üblich, aber nach BAG **kein Anspruch** und kein Qualifikationsmerkmal. Geheimcodes sind unzulässig (§ 109 Abs. 2 GewO).
 
-- Wahrheit: Zeugnis muss zutreffend sein.
-- Wohlwollen: keine unnötige negative Formulierung, die berufliches Fortkommen erschwert.
-- Vollständigkeit: alle wesentlichen Tätigkeiten und Leistungen.
-- Keine Angaben zu Krankheit, Gewerkschaft, Religion, Privatleben.
-- Azubi-Zeugnis: Art, Dauer, Ziel, erworbene Fertigkeiten; auf Verlangen Verhalten/Leistung.
+### Ansprüche und Fristen
 
-## 3-Zeiler für die Prüfung
+- Ausstellung bei Beendigung (spätestens mit Ablauf der Kündigungsfrist); Holschuld beim Arbeitgeber.
+- Anspruch verjährt nach **3 Jahren** (§ 195 BGB), kann aber durch **tarifliche Ausschlussfristen** früher verfallen oder verwirkt werden.
+- **Beweislast:** Für eine bessere Note als „befriedigend“ der Arbeitnehmer, für eine schlechtere der Arbeitgeber (BAG).
+- Klage auf Berichtigung oder Ausstellung beim **Arbeitsgericht**.
 
-**Frage:** Darf der Arbeitgeber das qualifizierte Zeugnis verweigern, weil die Leistung nur ausreichend war?
+## Prüfungsfrage
 
-**Antwort:** Nein, das qualifizierte Zeugnis ist auf Verlangen auszustellen. Es muss die Leistung wahr und wohlwollend beurteilen. Eine schlechte Note ist kein Grund, die Ausstellung zu verweigern.
+**Frage (Multiple Choice):** Wodurch wird ein Arbeitszeugnis zu einem qualifizierten Zeugnis?
 
-## Prüfungsfallen
+1. durch die Angabe von Geburtsdatum und Geburtsort
+2. durch die Angabe des Wohnortes
+3. durch die Angabe der Ausbildungsdauer
+4. durch eine Beurteilung von Leistung und Verhalten
+5. durch gute Wünsche für die Zukunft
+
+**Musterantwort:** **4.** Art und Dauer stehen schon im einfachen Zeugnis; Personaldaten und Zukunftswünsche sind keine Qualifikationsmerkmale. Das qualifizierte Zeugnis muss auf Verlangen des Arbeitnehmers ausgestellt werden.
+
+## Falle
 
 - Einfaches Zeugnis enthält **keine** Leistungsbeurteilung.
-- Qualifiziertes Zeugnis: Verhalten **und** Leistung.
-- Geburtsdatum/Geburtsort sind nicht zwingend.
-- „Zukunftswunsch“ ist kein Qualifikationsmerkmal.
-- Zeugnisanspruch verjährt regelmäßig nach drei Jahren (§ 195 BGB); Verwirkung nur bei besonderen Umständen. Klage vor dem Arbeitsgericht.
+- Qualifiziertes Zeugnis gibt es **auf Verlangen**, auch bei schlechter Leistung.
+- „Vollste“ ist sprachlich falsch, im Zeugnis aber die Bestnote.
+- „stets“ macht den Unterschied zwischen 2 und 3.
+- Zuständig ist das **Arbeitsgericht**, nicht Amts- oder Sozialgericht.
+- Ein Zeugnis per E-Mail genügt nicht.
+
+## Merksatz
+
+**„Einfach sagt WAS und WIE LANGE, qualifiziert sagt WIE GUT – und zwar wenn ich es verlange.“**
 
 ## Verwandt
 
-- [BBiG](bbig.md) – § 16 BBiG, Ausbildungszeugnis
+- [BBiG](bbig.md) – § 16 Ausbildungszeugnis
 - [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Beendigung
 - [Gericht](gericht.md) – Arbeitsgericht
-- [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – Arbeitsverhältnis
+- [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – Bewerbungsunterlagen
+- Echte Aufgaben: [Sommer 2022](fragen/Sommer-2022.md) (9), [Winter 2022](fragen/Winter-2022.md) (11), [Sommer 2025](fragen/Sommer-2025.md) (19)

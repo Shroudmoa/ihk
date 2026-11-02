@@ -1,99 +1,105 @@
-# Tarifrecht & Betriebsvereinbarung
+# Tarifvertrag & Betriebsvereinbarung
 
-> **Tarifvertrag = Vertrag zwischen Gewerkschaft und Arbeitgeber(verband).** **Betriebsvereinbarung = Vertrag zwischen Arbeitgeber und Betriebsrat.** Beides ist Kollektivarbeitsrecht, aber auf verschiedenen Ebenen.
+## In 30 Sekunden
 
-## Tarifautonomie
+- **Tarifvertrag** = schriftlicher Vertrag zwischen **Gewerkschaft** und **Arbeitgeberverband** (Flächen-/Verbandstarif) oder **einzelnem Arbeitgeber** (Haus-/Firmentarif); Grundlage **Tarifvertragsgesetz (TVG)** und **Tarifautonomie** (Art. 9 Abs. 3 GG).
+- Er gilt **unmittelbar und zwingend** für Tarifgebundene (Mitglieder); per **Allgemeinverbindlicherklärung** (BMAS) für die ganze Branche.
+- Er ist **verbindlich**, keine Empfehlung; er setzt **Mindest**bedingungen – Abweichungen nur zugunsten der AN (**Günstigkeitsprinzip**).
+- **Friedenspflicht:** Während der Laufzeit keine Arbeitskämpfe über geregelte Inhalte.
+- **Manteltarif** = Rahmenbedingungen (Arbeitszeit, Urlaub, Kündigungsfristen), **Lohn-/Gehaltstarif** = Geldbeträge und Gruppen.
+- **Betriebsvereinbarung** = Vertrag zwischen **Arbeitgeber und Betriebsrat** für alle AN des Betriebs – darf Tarifinhalte nicht verschlechtern oder ersetzen (§ 77 Abs. 3 BetrVG).
 
-- Grundlage: **Art. 9 Abs. 3 GG** (Koalitionsfreiheit).
-- Tarifpartner regeln Löhne und Arbeitsbedingungen **ohne Staat**.
-- Staat kann Tarifverträge für allgemeinverbindlich erklären (§ 5 TVG).
-- Tarifvertrag gilt nur für Mitglieder der Tarifparteien; Allgemeinverbindlichkeit erstreckt ihn auf die Branche.
+## Kernwissen
 
-## Tarifvertragsarten
+### Grundbegriffe
 
-| Art | Inhalt |
+| Begriff | Bedeutung |
 |---|---|
-| **Manteltarifvertrag** | Arbeitszeit, Urlaub, Kündigungsfristen, Sonderurlaub, Zuschläge |
-| **Lohn-/Gehaltstarifvertrag** | konkrete Löhne/Gehälter, Eingruppierung, Ecklohn |
-| **Rahmentarifvertrag** | allgemeine Grundsätze, z. B. Ausbildungsvergütung |
-| **Haustarifvertrag** | nur ein Unternehmen |
-| **Flächentarifvertrag** | eine Branche/Region |
+| **Koalitionsfreiheit** (Art. 9 Abs. 3 GG) | Recht, Gewerkschaften und Arbeitgeberverbände zu bilden, ihnen beizutreten oder fernzubleiben |
+| **Tarifautonomie** | Tarifparteien regeln Löhne und Arbeitsbedingungen **selbstständig ohne Staat** |
+| **Tariffähigkeit** (§ 2 TVG) | Gewerkschaften, Arbeitgeberverbände und einzelne Arbeitgeber – **nicht** Betriebsrat, IHK, Ministerium, Berufsgenossenschaft, Bundesagentur |
+| **Tarifbindung** (§ 3 TVG) | Mitglieder der vertragschließenden Parteien; der AG-Verband bindet seine Mitgliedsunternehmen zwingend |
+| **Unmittelbare und zwingende Wirkung** (§ 4 Abs. 1) | Tarifnormen gelten wie Gesetz im Arbeitsverhältnis |
+| **Günstigkeitsprinzip** (§ 4 Abs. 3) | abweichende Abmachungen nur, wenn **günstiger** für AN oder per **Öffnungsklausel** erlaubt |
+| **Nachwirkung** (§ 4 Abs. 5) | nach Ablauf gelten die Normen weiter, bis eine neue Abmachung sie ersetzt |
+| **Allgemeinverbindlicherklärung** (§ 5) | BMAS erstreckt den TV auf alle AG und AN der Branche (auf Antrag, im öffentlichen Interesse, mit Tarifausschuss) |
+| **Friedenspflicht** | relativ: keine Kampfmaßnahmen über geregelte Inhalte während der Laufzeit |
+| **Öffnungsklausel** | TV erlaubt Abweichungen auf betrieblicher Ebene (z. B. Arbeitszeit, Sonderzahlungen) |
 
-**Prüfungsfalle:** Urlaubstage, Arbeitszeit und Kündigungsfristen stehen im **Manteltarifvertrag**. Konkrete Gehaltssätze stehen im **Gehaltstarifvertrag**.
+In der Praxis wenden viele nicht tarifgebundene Arbeitgeber den Tarif über **Bezugnahmeklauseln** im Arbeitsvertrag an – Nicht-Mitglieder werden dann wie Mitglieder behandelt.
 
-## Günstigkeitsprinzip (§ 4 Abs. 3 TVG)
+### Tarifvertragsarten
 
-- Abweichungen vom Tarifvertrag sind nur **zugunsten** des Arbeitnehmers zulässig.
-- Höherer Lohn, mehr Urlaub, kürzere Arbeitszeit = okay.
-- Schlechtere Bedingungen = unwirksam.
-- Betriebsvereinbarungen können Tarifrecht nicht verschlechtern.
+| Art | Inhalt | Laufzeit |
+|---|---|---|
+| **Manteltarifvertrag** (Rahmentarif) | Arbeitszeit, Urlaub, Sonderurlaub, Kündigungsfristen, Zuschläge, Freistellung (z. B. für Prüfertätigkeit), Probezeit | lang (mehrere Jahre) |
+| **Entgeltrahmentarifvertrag** | Definition der Lohn-/Gehaltsgruppen, Eingruppierungsmerkmale | lang |
+| **Lohn- und Gehaltstarifvertrag** (Entgelttarif) | konkrete Beträge je Gruppe, **Ecklohn**, Ausbildungsvergütungen | kurz (12–24 Monate) |
+| **Flächen-/Verbandstarifvertrag** | Branche + Region | |
+| **Haus-/Firmentarifvertrag** | ein einzelnes Unternehmen (z. B. VW) | |
 
-## Friedenspflicht
+### Ablauf einer Tarifrunde (vereinfacht)
 
-- Während der Laufzeit eines Tarifvertrags sind **Arbeitskämpfe unzulässig**.
-- Streik erst nach Kündigung des Tarifvertrags und Scheitern der Verhandlungen.
-- **Urabstimmung:** mindestens 75 % der Gewerkschaftsmitglieder für Streik.
-- Arbeitgeber können mit **Aussperrung** reagieren.
-- Schlichtung: neutraler Schlichter; das Ergebnis ist oft eine Empfehlung und nur bindend, wenn beide Seiten dem Schlichtungsverfahren zugestimmt haben.
+1. **Kündigung** des bestehenden (Gehalts-)Tarifvertrags durch eine Partei, Forderung der Gewerkschaft
+2. **Tarifverhandlungen** (nach Ablauf der Friedenspflicht ggf. **Warnstreiks**)
+3. **Scheitern** der Verhandlungen wird erklärt
+4. ggf. **Schlichtung** (neutraler Schlichter, **Schlichterspruch = Empfehlung**)
+5. Wird der Spruch abgelehnt: **Urabstimmung** (meist ≥ 75 % der Mitglieder)
+6. **Streik** – Arbeitgeber können mit **Aussperrung** antworten
+7. neue Verhandlungen, **Einigung**
+8. **zweite Urabstimmung** (meist ≥ 25 % Zustimmung genügen)
+9. **Abschluss** des neuen Tarifvertrags → neue Friedenspflicht
 
-## Betriebsvereinbarung
+Je nach Aufgabe steht die Schlichtung vor der Urabstimmung oder es wird ohne Schlichtung gestreikt – die Reihenfolge Kündigung → Verhandlung → Scheitern → … → Abschluss ist immer gleich.
 
-- Parteien: **Arbeitgeber + Betriebsrat**.
-- Gilt für alle Arbeitnehmer des Betriebs, auch Nicht-Gewerkschaftsmitglieder.
-- Schriftform, Bekanntmachung, Kündigung möglich.
-- Regelungsbereiche: Arbeitszeit, Pausen, Urlaubsplan, Gesundheitsschutz, Sozialleistungen, technische Überwachung.
-- **Nicht** regelbar: Tariflohn, Tarifurlaub, Dinge, die gesetzlich zwingend sind.
+### Betriebsvereinbarung (§ 77 BetrVG)
+
+- **Parteien:** Arbeitgeber (Geschäftsleitung) + Betriebsrat; schriftlich, im Betrieb bekannt zu machen.
+- **Wirkung:** unmittelbar und zwingend für **alle AN des Betriebs**, auch Nicht-Gewerkschaftsmitglieder; nicht für leitende Angestellte.
+- **Kündigung:** mit 3 Monaten Frist (wenn nichts anderes vereinbart); erzwingbare BV wirkt nach.
+- **Typische Inhalte:** Pausenregelung, Beginn/Ende der Arbeitszeit, Urlaubsplan, Gleitzeit, Homeoffice/mobile Arbeit, Kameraüberwachung, Kantine, Rauchverbot.
+- **Nicht regelbar:** Entgelthöhe nach Gehaltsgruppen, tarifliche Urlaubstage reduzieren (Tarifvorbehalt), Verstöße gegen Gesetze (z. B. 11 Std. tägliche Arbeitszeit, kürzere Entgeltfortzahlung als 6 Wochen).
 
 | Vergleich | Tarifvertrag | Betriebsvereinbarung |
 |---|---|---|
-| Parteien | Gewerkschaft + Arbeitgeber(verband) | Betriebsrat + Arbeitgeber |
-| Ebene | Branche/Unternehmen | Betrieb |
-| Geltung | Mitglieder, ggf. allgemeinverbindlich | alle Beschäftigten |
-| Inhalt | Lohn, Arbeitszeit, Urlaub | betriebliche Umsetzung |
-| Arbeitskampf | Streik/Aussperrung möglich | nicht möglich |
+| Parteien | Gewerkschaft + AG-Verband/AG | Betriebsrat + Arbeitgeber |
+| Rechtsgrundlage | TVG | BetrVG |
+| Ebene | Branche/Region/Unternehmen | Betrieb |
+| Geltung | Tarifgebundene, ggf. allgemeinverbindlich | alle AN des Betriebs |
+| Inhalt | Entgelt, Arbeitszeit, Urlaub | betriebliche Umsetzung, soziale Angelegenheiten |
+| Konfliktlösung | Arbeitskampf (Streik/Aussperrung) | Einigungsstelle – **kein** Streik |
 
-## Änderung von Tarifverträgen
+## Prüfungsfrage
 
-- Änderung durch **neuen Tarifvertrag** nach Ablauf oder Kündigung des alten.
-- **Öffnungsklauseln** erlauben betriebliche Abweichungen, meist nur zugunsten der Beschäftigten.
-- **Günstigkeitsprinzip:** Verschlechterungen sind unwirksam, Verbesserungen zulässig.
-- **Allgemeinverbindlichkeit:** Der Staat kann einen Tarifvertrag auf die ganze Branche erstrecken.
-- Während der Laufzeit gilt die **Friedenspflicht**; Änderungen werden verhandelt, nicht erkämpft.
+**Frage (Multiple Choice, 2 richtige):** Welche Regelungen können durch eine Betriebsvereinbarung getroffen werden?
 
-## Rechtsquellen und Rangordnung
+1. eine neue Pausenregelung
+2. die Reduzierung der tariflichen Urlaubstage von 30 auf 28
+3. die Höhe der Arbeitsentgelte nach Gehaltsgruppen
+4. die Aufstellung des Urlaubsplans
+5. die Erhöhung der täglichen Arbeitszeit auf elf Stunden
+6. die Dauer der Entgeltfortzahlung im Krankheitsfall
 
-| Ebene | Beispiel | Wirkung |
-|---|---|---|
-| EU-Recht | DSGVO, AEUV | Vorrang vor nationalem Recht |
-| Grundgesetz | Art. 9 GG Tarifautonomie | höchste nationale Norm |
-| Bundesgesetz | BGB, BBiG, BetrVG, JArbSchG | zwingend, abdingbar nur zugunsten |
-| Rechtsverordnung | ArbStättV, GefStoffV | konkretisiert Gesetze |
-| Tarifvertrag | Mantel-, Gehaltstarif | gilt für Tarifgebundene |
-| Betriebsvereinbarung | Arbeitszeit, Urlaubsplan | gilt für alle im Betrieb |
-| Arbeitsvertrag | Lohn, Aufgaben | Individualrecht |
-| Weisung | konkrete Aufgabe | nur im Rahmen der Verträge |
+**Musterantwort:** **1 und 4** (soziale Angelegenheiten nach § 87 BetrVG). 2 und 3 sind tariflich geregelt (Tarifvorbehalt), 5 verstößt gegen das ArbZG, 6 ist gesetzlich (EFZG) zwingend geregelt.
 
-**Grundsatz:** Niedrigere Ebene darf höherrangiges Recht nicht verschlechtern. Abweichungen sind nur zugunsten des Arbeitnehmers zulässig (Günstigkeitsprinzip).
+## Falle
 
-**Prüfungsfalle:** BBiG regelt die Berufsausbildung, JArbSchG den Jugendarbeitsschutz, BetrVG die Mitbestimmung, BGB allgemeine Verträge. Diese Zuordnung wird oft als „Rechtsquellen“ abgefragt.
+- Tarifvertrag ist **verbindlich**, keine Empfehlung; er legt **Mindest**löhne, keine Höchstgrenzen fest.
+- Der Staat (Ministerium, Schlichter) genehmigt keine Tarifverträge; Laufzeit ist nicht gesetzlich begrenzt.
+- **Allgemeinverbindlich** = alle AG und AN der Branche in Deutschland – nicht „in allen EU-Ländern“.
+- Haustarifvertrag gilt nur für **ein** Unternehmen.
+- Kündigungsfristen, Arbeitszeit, Sonderurlaub → **Mantel**tarif; Gehaltssätze, Ecklohn → **Gehalts**tarif.
+- Ein Tarifvertrag schließt weitere Betriebsvereinbarungen nicht aus – nur deren Inhalt ist begrenzt.
 
-## 3-Zeiler für die Prüfung
+## Merksatz
 
-**Frage:** Darf eine Betriebsvereinbarung den Tarifurlaub von 30 auf 28 Tage senken?
-
-**Antwort:** Nein, das verstößt gegen das Günstigkeitsprinzip und die Tarifbindung. Betriebsvereinbarungen dürfen Tarifrecht nicht verschlechtern. Zulässig wäre eine Regelung zur zeitlichen Lage des Urlaubs, nicht zu seiner Höhe.
-
-## Prüfungsfallen
-
-- Tarifvertrag ist **keine** Empfehlung, sondern verbindlich.
-- Betriebsvereinbarung wird **nicht** mit der Gewerkschaft geschlossen.
-- Friedenspflicht gilt nur während der Laufzeit.
-- Allgemeinverbindlichkeit = Ausdehnung auf alle, nicht automatisch für alle EU-Länder.
-- Streik ist kein zwingender Bestandteil jeder Tarifverhandlung.
+**„Tarif macht die Gewerkschaft, Betriebsvereinbarung der Betriebsrat. Mantel = Rahmen, Gehalt = Geld. Schlechter als Tarif geht nicht.“**
 
 ## Verwandt
 
-- [Betriebsrat & JAV](betriebsrat-jav.md) – Mitbestimmung und Betriebsversammlung
-- [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – Individualarbeitsrecht
-- [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Fristen und Form
-- [Sozialversicherung](sozialversicherung.md) – Tariflohn und Beitragsbemessung
+- [Gewerkschaften & Arbeitskampf](gewerkschaften-arbeitskampf.md) – Streik, Aussperrung, Urabstimmung
+- [Rechtsquellen & Günstigkeitsprinzip](rechtsquellen-arbeitsrecht.md) – Rangfolge Gesetz – Tarif – BV – Vertrag
+- [Betriebsrat & JAV](betriebsrat-jav.md) – Mitbestimmung, § 87 BetrVG
+- [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – Einzelarbeitsvertrag
+- [Lektion 20 – Betriebsrat & Mitbestimmung](../IT/analyse-der-exams/L20_Betriebsrat_Mitbestimmung.md)
+- Echte Aufgaben: [Winter 2021](fragen/Winter-2021.md) (4, 6–7), [Sommer 2022](fragen/Sommer-2022.md) (12–14), [Sommer 2024](fragen/Sommer-2024.md) (5, 24–25), [Winter 2024](fragen/Winter-2024.md) (7–9)

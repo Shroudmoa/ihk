@@ -20,6 +20,17 @@
 | 2 | Sicherung | Frames im lokalen Netz, MAC, Fehlererkennung | Ethernet, WLAN | Switch, Bridge |
 | 1 | Bitübertragung | Bits als Signal übertragen | Kupfer, Glasfaser, Funk | Repeater, Hub |
 
+**Kapselung – wie die Dateneinheit (PDU) je Schicht heißt**
+| Schicht | PDU | Adresse / Kennung |
+|---|---|---|
+| 5–7 | Daten | – |
+| 4 | Segment (TCP) / Datagramm (UDP) | Port |
+| 3 | Paket | IP-Adresse |
+| 2 | Frame (Rahmen) | MAC-Adresse |
+| 1 | Bits | – |
+
+Beim Senden wird von oben nach unten je Schicht ein Header hinzugefügt (Encapsulation), beim Empfänger von unten nach oben wieder entfernt.
+
 **OSI vs. TCP/IP (kommt gern als Vergleich)**
 | OSI | TCP/IP |
 |---|---|
@@ -56,7 +67,12 @@
 
 ## Verwandt
 
+- [Netzwerkgeräte](../Netzwerk-Administration/netzwerkgeraete.md) – Hub, Switch, Router, L3-Switch je Schicht
+- [Verkabelung](../Netzwerk-Administration/verkabelung-kupfer-lwl.md) – Schicht 1 konkret
 - [MAC](mac.md) – Schicht 2 konkret
 - [IPv4](ipv4.md) – Schicht 3 konkret
+- [TCP vs. UDP](tcp-udp.md) – Schicht 4 konkret
+- [Ports](ports.md) – Adressierung auf Schicht 4
 - [Proxy](../Netzwerk-Administration/proxy.md) – Schicht 7 konkret
 - [Firewall](../Sicherheit/firewall/firewall.md) – welcher Typ auf welcher Schicht filtert
+- [Netzwerkanalyse & Troubleshooting](../Netzwerk-Administration/netzwerkanalyse-und-troubleshooting.md) – Fehlersuche entlang der Schichten

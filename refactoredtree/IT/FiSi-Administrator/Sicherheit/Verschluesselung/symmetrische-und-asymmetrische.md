@@ -1,8 +1,16 @@
-# Symmetrische-und-Asymmetrische
-
 # Symmetrische und asymmetrische Verschlüsselung
 
-## Symmetrische Verschlüsselung
+## In 30 Sekunden
+
+- **Symmetrisch:** ein gemeinsamer geheimer Schlüssel, **schnell**, Problem ist der sichere **Schlüsselaustausch** – Beispiel **AES**.
+- **Asymmetrisch:** Schlüsselpaar aus **öffentlichem** und **privatem** Schlüssel, **langsam**, löst den Schlüsselaustausch – Beispiel **RSA**, ECC.
+- In der Praxis **Hybridverfahren**: asymmetrisch für Schlüsselaustausch und Signatur, symmetrisch für die Daten (TLS, PGP, S/MIME, VPN).
+- Bewertung aus der Prüfung (2021W, 2023W): **DES/3DES unsicher**, **AES-256 empfohlen**, **RSA nicht für Datenträger**, MD5/SHA-256 sind **Hashes**, keine Verschlüsselung.
+- Mindestlängen nach BSI TR-02102: AES ≥ 128 Bit, RSA ≥ 3000 Bit für neue Systeme.
+
+## Kernwissen
+
+### Symmetrische Verschlüsselung
 
 Bei der symmetrischen Verschlüsselung verwenden Sender und Empfänger **denselben geheimen Schlüssel** zum Ver- und Entschlüsseln.
 
@@ -77,6 +85,41 @@ Moderne TLS-Verbindungen verwenden häufig **ephemeren Diffie-Hellman-Schlüssel
 | Beispiele | AES, ChaCha20 | RSA, ECC |
 | Typische Nutzung | Verschlüsselung großer Datenmengen | Schlüsselaustausch, Signaturen, Authentifizierung |
 
-## IHK-Merksatz
+## Bewertung gängiger Verfahren (Prüfungstabelle)
+
+| Verfahren | Art | Bewertung |
+|---|---|---|
+| DES | symmetrisch, 56 Bit | unsicher, per Brute Force gebrochen |
+| 3DES | symmetrisch | veraltet, nicht mehr einsetzen |
+| AES-128 | symmetrisch | sicher, Standard |
+| AES-256 | symmetrisch | sicher, empfohlen für sensible Daten und Datenträger (BitLocker, LUKS) |
+| RSA | asymmetrisch | geeignet für Schlüsselaustausch und Signatur, zu langsam für Massendaten |
+| MD5 | Hash | gebrochen, keine Verschlüsselung |
+| SHA-256 | Hash | sicher, aber keine Verschlüsselung (nicht umkehrbar) |
+
+## Prüfungsfrage
+
+**Frage:** Externe Festplatten mit Kundendaten sollen verschlüsselt werden. Bewerten Sie DES, AES und RSA für diesen Zweck.
+
+**Musterantwort:** DES ist mit nur 56 Bit Schlüssellänge per Brute Force angreifbar und daher ungeeignet. AES ist ein modernes symmetrisches Verfahren, schnell und oft hardwarebeschleunigt; AES-256 ist für die Verschlüsselung großer Datenmengen auf Datenträgern sehr gut geeignet. RSA ist asymmetrisch und für große Datenmengen viel zu langsam; es eignet sich nur, um etwa den AES-Schlüssel zu schützen oder auszutauschen. Empfehlung: AES-256.
+
+## Falle
+
+- Bei asymmetrischer Verschlüsselung mit dem **eigenen** öffentlichen Schlüssel verschlüsseln → richtig ist der öffentliche Schlüssel des **Empfängers**.
+- SHA-256 als Verschlüsselungsverfahren einordnen.
+- „Asymmetrisch ist immer sicherer“ → nicht sicherer, sondern anders: Sicherheit hängt von Schlüssellänge und Einsatz ab.
+
+## Merksatz
 
 Symmetrische Verschlüsselung ist schnell, benötigt aber einen gemeinsamen geheimen Schlüssel. Asymmetrische Kryptografie verwendet ein öffentliches und ein privates Schlüsselpaar und vereinfacht den Schlüsselaustausch, benötigt aber eine vertrauenswürdige Zuordnung des Public Keys zur Identität. In der Praxis kombinieren Protokolle wie TLS beide Ansätze.
+
+## Verwandt
+
+- [TLS und HTTPS](tls-https.md) – Hybridverfahren in der Praxis
+- [PKI und Zertifikate](pki.md) – Vertrauen in den öffentlichen Schlüssel
+- [Digitale Signatur](digitale-signatur.md)
+- [Hash](hash.md)
+- [PGP](pgp.md)
+- [BitLocker](../../Server/bitlocker.md) – AES für Datenträger
+- [Lektion 27 PKI, TLS, VPN](../../../analyse-der-exams/L27_PKI_TLS_Verschluesselung_VPN.md)
+- [Lektion 05 Datenschutz und Informationssicherheit](../../../analyse-der-exams/05_Datenschutz_Informationssicherheit.md)

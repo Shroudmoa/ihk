@@ -1,80 +1,83 @@
-# JArbSchG
+# JArbSchG – Jugendarbeitsschutz
 
-> **JArbSchG = Jugendarbeitsschutzgesetz.** Gilt für Beschäftigte **unter 18**, nicht für volljährige Azubis. Prüfungsrelevant: Arbeitszeit, Pausen, Urlaub, Untersuchungen, Verbote.
+## In 30 Sekunden
 
-## Geltungsbereich
+- Gilt für **Jugendliche (15 bis unter 18)** – nicht für volljährige Azubis (für die gelten ArbZG und BUrlG).
+- Höchstens **8 Std./Tag, 40 Std./Woche, 5 Tage/Woche**, nur zwischen **6 und 20 Uhr**.
+- Pausen: **30 min** bei mehr als 4,5 bis 6 Std., **60 min** bei mehr als 6 Std.; spätestens nach **4,5 Std.** Pause.
+- **12 Std.** Freizeit zwischen zwei Arbeitstagen.
+- Urlaub nach Alter am **1. Januar**: unter 16 → 30, unter 17 → 27, unter 18 → **25 Werktage**.
+- **Erstuntersuchung** vor Beginn (höchstens 14 Monate alt), **Nachuntersuchung** nach einem Jahr.
 
-| Person | Gesetz |
-|---|---|
-| unter 18 | JArbSchG + BBiG |
-| 18+ Azubi | BBiG, ArbZG, BUrlG |
-| Kind unter 15 | JArbSchG, nur leichte Arbeiten mit Ausnahmen |
+## Kernwissen
 
-**Merke:** „Jugendlicher“ ist jeder, der 15, aber noch nicht 18 ist. Wer zu Beginn des Kalenderjahres 17 ist, ist Jugendlicher.
+### Arbeitszeit und Ruhe
 
-## Arbeitszeit und Ruhepausen (JArbSchG)
+| Regel | § | Inhalt |
+|---|---|---|
+| Arbeitszeit | 8 | max. 8 Std./Tag, 40 Std./Woche; 8,5 Std., wenn an anderen Tagen derselben Woche weniger als 8 Std. gearbeitet wird |
+| Berufsschule | 9 | Freistellung; vor Unterricht ab 9 Uhr keine Beschäftigung; **ein** Berufsschultag/Woche mit > 5 Std. à 45 min = 8 Std. angerechnet, danach keine Arbeit; Blockwoche ≥ 25 Std. an 5 Tagen = 40 Std. |
+| Prüfungen | 10 | Freistellung für Prüfungen und den Arbeitstag unmittelbar vor der schriftlichen Abschlussprüfung |
+| Ruhepausen | 11 | > 4,5–6 Std. → 30 min, > 6 Std. → 60 min; Pausen mind. 15 min; frühestens 1 Std. nach Beginn, spätestens 1 Std. vor Ende; **nicht länger als 4,5 Std. ohne Pause** |
+| Schichtzeit | 12 | max. 10 Std. (Arbeitszeit + Pausen) |
+| Tägliche Freizeit | 13 | mind. **12 Std.** ununterbrochen |
+| Nachtruhe | 14 | **20–6 Uhr** keine Beschäftigung; Ausnahmen für über 16-Jährige z. B. Gastgewerbe bis 22 Uhr, mehrschichtige Betriebe bis 23 Uhr, Bäckereien ab 5 Uhr |
+| Fünf-Tage-Woche | 15 | 2 Ruhetage pro Woche, **möglichst** aufeinanderfolgend (müssen aber nicht) |
+| Samstag/Sonntag/Feiertag | 16–18 | grundsätzlich frei; Ausnahmen z. B. Gastgewerbe, Krankenhäuser, Verkauf, Sport |
 
-- Maximal **8 Stunden/Tag** und **40 Stunden/Woche**.
-- Nur an **5 Tagen/Woche** beschäftigt.
-- Regelarbeitszeit **6:00–20:00 Uhr**.
-- **12 Stunden** ununterbrochene Ruhezeit zwischen zwei Arbeitstagen.
-- Samstag/Sonntag grundsätzlich frei; Ausnahmen z. B. Gastgewerbe, Pflege, Landwirtschaft.
-- Berufsschule: Freistellung; vor einem vor 9 Uhr beginnenden Unterricht keine Beschäftigung; an einem Berufsschultag mit mehr als 5 Unterrichtsstunden (einmal pro Woche) keine Beschäftigung; in Blockwochen mit mindestens 25 Stunden an mindestens 5 Tagen keine Beschäftigung, aber Anrechnung auf die Arbeitszeit.
-
-### Ruhepausen (§ 11 JArbSchG)
-
-| Arbeitszeit | Mindestpause |
-|---|---|
-| 4,5 bis 6 Stunden | 30 Minuten |
-| mehr als 6 Stunden | 60 Minuten |
-
-Die Pause muss **spätestens nach 4,5 Stunden** beginnen. Prüfungsfalle: 8 Stunden Arbeit mit Pause erst nach 5 Stunden = Verstoß.
-
-## Urlaub (§ 19 JArbSchG)
+### Urlaub (§ 19)
 
 | Alter zu Beginn des Kalenderjahres | Mindesturlaub |
 |---|---|
-| noch nicht 16 | 30 Werktage |
-| noch nicht 17 | 27 Werktage |
-| noch nicht 18 | 25 Werktage |
+| noch nicht 16 Jahre | 30 Werktage |
+| noch nicht 17 Jahre | 27 Werktage |
+| noch nicht 18 Jahre | 25 Werktage |
 
-**Wichtig:** Maßgeblich ist das Alter am **1. Januar**, nicht der Geburtstag im Laufe des Jahres. Wer am 1. Januar 17 ist, hat mindestens **25 Werktage** – nicht 27.
+- Werktage = Montag bis Samstag; bei 5-Tage-Woche umrechnen (× 5/6).
+- Urlaub soll Berufsschülern **in den Berufsschulferien** gegeben werden.
+- Günstigerer Tarif- oder Arbeitsvertrag geht vor (Günstigkeitsprinzip).
 
-**Prüfungsfalle:** Ein Tarifvertrag kann mehr Urlaub geben (Günstigkeitsprinzip). Ein 17-Jähriger mit 30 Tagen Tarifurlaub hat 30, nicht 25 + 5 obendrauf.
+**Beispiel (Winter 2024):** Herr Monion ist am 1.1.2025 17 Jahre alt → mindestens 25 Werktage; er erhält 30 Werktage → 5 Werktage mehr als gesetzlich vorgeschrieben.
 
-## Ärztliche Untersuchungen (§§ 32–33 JArbSchG)
+### Gesundheitliche Betreuung (§§ 32–46)
 
-- **Erstuntersuchung** vor Beginn der Beschäftigung; darf höchstens 14 Monate zurückliegen.
-- **Erste Nachuntersuchung** nach einem Jahr; weitere jährlich, solange Jugendlicher.
-- Bescheinigung dem Betrieb vorlegen; sonst keine Beschäftigung.
-- Die Kosten der Untersuchungen trägt das Land, nicht der Azubi oder der Betrieb (§ 44 JArbSchG).
+- **Erstuntersuchung** innerhalb der letzten **14 Monate** vor Beschäftigungsbeginn; ohne Bescheinigung keine Beschäftigung (§ 32).
+- **Erste Nachuntersuchung** ein Jahr nach Aufnahme der Beschäftigung; legt der Jugendliche sie 14 Monate nach Beginn nicht vor → Beschäftigungsverbot (§ 33).
+- Weitere Nachuntersuchungen jährlich möglich (freiwillig).
+- Kosten trägt das **Land**; Freistellung ohne Entgeltausfall.
 
-## Verbote (§§ 22–26 JArbSchG)
+### Beschäftigungsverbote und Schutz (§§ 22–31)
 
-Verboten sind u. a.:
-- Akkord- und tempoabhängige Arbeiten.
-- Arbeiten mit Gefahrstoffen, Strahlen, Lärm über Grenzwerten, Hitze/Kälte.
-- Arbeiten über die körperliche Leistungsfähigkeit hinaus.
-- Beschäftigung im Bergbau unter Tage (Ausnahmen).
-- Nachtarbeit 20:00–6:00, Wochenend- und Feiertagsarbeit (eng begrenzte Ausnahmen).
+- Keine gefährlichen Arbeiten (Gefahrstoffe, Strahlen, Unfallgefahren, die Jugendliche nicht erkennen), keine Arbeit über die Leistungsfähigkeit hinaus.
+- Keine **Akkord- und tempoabhängige Arbeit**.
+- Gefährdungsbeurteilung vor Beginn (§ 28a), **Unterweisung mindestens halbjährlich** (§ 29).
+- Keine Züchtigung, keine Abgabe von Alkohol und Tabak an Jugendliche unter 16 bzw. Branntwein unter 18 (§ 31).
+- **Zweck:** Schutz vor Überforderung, Gesundheitsgefahren und Entwicklungsstörungen.
 
-## 3-Zeiler für die Prüfung
+## Prüfungsfrage
 
-**Frage:** Darf ein 17-jähriger Azubi regelmäßig bis 21 Uhr arbeiten?
+**Frage (Fallaufgabe):** Die 17-jährige Auszubildende Lea arbeitet am Freitag von 9:00 bis 17:30 Uhr; ihre einzige Pause (60 min) beginnt um 14:00 Uhr. Beurteilen Sie die Regelung.
 
-**Antwort:** Nein, das JArbSchG erlaubt grundsätzlich nur Beschäftigung zwischen 6 und 20 Uhr. Ausnahmen sind eng begrenzt und nur für bestimmte Branchen zulässig. Regelmäßige Arbeit bis 21 Uhr verstößt gegen § 8 JArbSchG und ist eine Ordnungswidrigkeit.
+**Musterantwort:** Arbeitszeit 8,5 Std. minus 1 Std. Pause = 7,5 Std. – zulässig. Die Pausendauer von 60 min ist ausreichend, aber die Pause beginnt erst 5 Stunden nach Arbeitsbeginn. Nach § 11 Abs. 2 JArbSchG dürfen Jugendliche **nicht länger als 4,5 Stunden ohne Pause** beschäftigt werden. Die Pause muss spätestens um 13:30 Uhr beginnen – die Regelung verstößt gegen das JArbSchG.
 
-## Prüfungsfallen
+## Falle
 
-- JArbSchG gilt **nicht** für volljährige Azubis.
-- 40 Stunden/Woche, nicht 48.
-- Pause nach 4,5 Stunden, nicht nach 6.
-- Urlaub nach Alter am **Jahresanfang**.
-- 25/27/30 Werktage sind **Werktage**, nicht Arbeitstage bei 5-Tage-Woche.
+- Das JArbSchG gilt **nicht** für volljährige Azubis; maßgeblich ist das tatsächliche Alter am Arbeitstag – für den **Urlaub** aber das Alter am **1. Januar**.
+- Wer am 1. Januar 17 ist, hat **25** Werktage, nicht 27. (Der Lösungsschlüssel Sommer 2022, Aufg. 5, nennt hier 27 – nach § 19 falsch; das Endergebnis „30 Tage laut Tarif“ stimmt trotzdem.)
+- 40 Std./Woche (JArbSchG) vs. 48 Std./Woche (ArbZG).
+- Pause nach **4,5** Std. (JArbSchG) vs. mehr als 6 Std. (ArbZG).
+- Ruhezeit **12** Std. (JArbSchG) vs. 11 Std. (ArbZG).
+- Zwei Tage Freistellung vor der Prüfung stehen **nicht** im Gesetz – nur der Arbeitstag vor der schriftlichen Abschlussprüfung.
+- Das Jugend**schutz**gesetz (Kino, Alkohol in der Öffentlichkeit) ist ein anderes Gesetz.
+
+## Merksatz
+
+**„8 – 40 – 5 – 6 bis 20 – 4,5 – 12: Stunden, Woche, Tage, Uhrzeit, Pause, Ruhe.“**
 
 ## Verwandt
 
-- [BBiG](bbig.md) – Ausbildungsvertrag, Probezeit, Kündigung
+- [BBiG](bbig.md) – Ausbildungsvertrag, Freistellung (§ 15)
 - [Arbeitszeit, Pausen & Urlaub](arbeitszeit-pausen-urlaub.md) – ArbZG und BUrlG für Erwachsene
-- [Arbeitsschutz & Arbeitssicherheit](arbeitsschutz-arbeitssicherheit.md) – Unterweisung und Gefährdungsbeurteilung
-- [IHK & Ausbilder-Eignung](ihk-ausbilder-eignung.md) – zuständige Stelle und Prüfungszulassung
+- [Arbeitsschutz & Arbeitssicherheit](arbeitsschutz-arbeitssicherheit.md) – Gefährdungsbeurteilung, Unterweisung
+- [Betriebsrat & JAV](betriebsrat-jav.md) – Interessenvertretung der Jugendlichen
+- Echte Aufgaben: [Sommer 2022](fragen/Sommer-2022.md) (3–5), [Winter 2023](fragen/Winter-2023.md) (11), [Winter 2025](fragen/Winter-2025.md) (11)

@@ -189,3 +189,10 @@ for (int i = 1; i < 4; i++) {
 | 3 | 7 | 9 | 7 (7>9? nein, 7>5? ja) |
 
 **Weiter:** [04_Praxistests_Musterloesungen.md](04_Praxistests_Musterloesungen.md)
+
+## Verwandt
+
+- [Algorithmen: Sortieren, Suchen, Rekursion](algorithmen-sortieren-suchen-rekursion.md) – Bubblesort, lineare und binäre Suche
+- [Fehlerarten & Exceptions](fehlerarten-exceptions.md) – Syntax-, Semantik-, Laufzeitfehler, try/catch
+- [Softwaretest: White-Box & Black-Box](softwaretest-white-black-box.md) – Schreibtischtest als Testverfahren
+- [Lektion 4: Programmierung](../../analyse-der-exams/04_Programmierung_Grundlagen.md)

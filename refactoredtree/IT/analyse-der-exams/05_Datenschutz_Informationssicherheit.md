@@ -133,8 +133,9 @@ Schlüsselaustausch/Signatur, nicht für große Datenmengen verwendet.
 - Dokumentation des Vorfalls
 - Interne Maßnahmen (Schulung etc.)
 
-**Meldefrist (2021W):** Datenpannen müssen binnen **72 Stunden** sowohl an
-die **zuständige Behörde** als auch an die **Betroffenen** gemeldet werden.
+**Meldefrist (2021W):** Datenpannen müssen binnen **72 Stunden** an die
+**zuständige Aufsichtsbehörde** gemeldet werden (Art. 33 DSGVO). Die **Betroffenen**
+werden nur bei **hohem Risiko** informiert – dann **unverzüglich** (Art. 34 DSGVO).
 Dieses Thema kam auch 2024S vor; **2025S** wurden dazu **3 Kriterien**
 abgefragt (wann/wie/an wen eine Datenpanne zu melden ist).
 

@@ -1,6 +1,16 @@
 # LDAP
 
-## Was ist LDAP?
+## In 30 Sekunden
+
+- **LDAP** (Lightweight Directory Access Protocol) ist ein **Protokoll**, um Verzeichnisdienste abzufragen und zu ändern – z. B. Active Directory oder OpenLDAP.
+- Das Verzeichnis ist ein **Baum** (DIT); jeder Eintrag hat einen eindeutigen **Distinguished Name**, z. B. `CN=Max Muster,OU=Vertrieb,DC=firma,DC=de`.
+- Ports: **389** (LDAP, mit StartTLS absicherbar), **636** (LDAPS), **3268/3269** (Global Catalog im AD).
+- Typische Nutzung: Linux-Server, Drucker, VPN-Gateways, RADIUS-Server oder Webanwendungen fragen Benutzer und Gruppen zentral ab.
+- LDAP liefert **Verzeichnisinformationen**, die Anmeldung im AD erledigt meist **Kerberos**.
+
+## Kernwissen
+
+### Was ist LDAP?
 
 LDAP steht für **Lightweight Directory Access Protocol**. Es ist ein Netzwerkprotokoll, mit dem Clients auf Verzeichnisdienste zugreifen können, um Informationen zu suchen, auszulesen und – abhängig von den Berechtigungen – zu verändern.
 
@@ -12,7 +22,7 @@ Ein Verzeichnisdienst speichert strukturierte Informationen über Objekte, beisp
 
 LDAP ist ein **Protokoll**, kein eigenständiger Verzeichnisdienst und kein Betriebssystem.
 
-## LDAP vs. Active Directory vs. OpenLDAP
+### LDAP vs. Active Directory vs. OpenLDAP
 
 | Begriff | Bedeutung |
 |---|---|
@@ -25,7 +35,7 @@ LDAP ist ein **Protokoll**, kein eigenständiger Verzeichnisdienst und kein Betr
 
 Linux-Systeme, Anwendungen und viele Netzwerkdrucker können LDAP verwenden, um Benutzerinformationen aus einem Active Directory oder einem anderen LDAP-Verzeichnis abzurufen. Ob das funktioniert, hängt von der jeweiligen Anwendung und ihrer Konfiguration ab.
 
-## Hierarchischer Aufbau: DIT
+### Hierarchischer Aufbau: DIT
 
 LDAP-Verzeichnisse sind typischerweise hierarchisch aufgebaut. Diese Struktur heißt **DIT – Directory Information Tree**.
 
@@ -54,7 +64,7 @@ Die wichtigsten Begriffe:
 
 Die genaue Objektstruktur hängt vom Verzeichnis und seinem Schema ab. Benutzer und Gruppen sind nicht zwingend immer unter einer Organisationseinheit angeordnet.
 
-## Distinguished Name (DN)
+### Distinguished Name (DN)
 
 Der **Distinguished Name** identifiziert einen Eintrag eindeutig innerhalb des Verzeichnisses. Er besteht aus einer Folge von Attributen, die den Eintrag bis zur Wurzel des Verzeichnisses einordnen.
 
@@ -73,7 +83,7 @@ Ein DN ist vergleichbar mit einem vollständigen Pfad zu einem Objekt. Er ist je
 
 **RDN – Relative Distinguished Name:** Der erste Bestandteil eines DN ist in diesem Beispiel `cn=Max Mustermann`. Er identifiziert den Eintrag relativ zu seinem übergeordneten Eintrag.
 
-## Wie funktioniert LDAP?
+### Wie funktioniert LDAP?
 
 Typischer Ablauf:
 
@@ -94,7 +104,7 @@ Wichtige Operationen:
 
 Ob ein Client Einträge ändern oder löschen darf, hängt von den Berechtigungen des Verzeichnisdienstes ab.
 
-## Ports und Sicherheit
+### Ports und Sicherheit
 
 | Port | Verwendung |
 |---|---|
@@ -115,7 +125,7 @@ Weitere Sicherheitsmaßnahmen:
 - Protokollierung und Überwachung
 - Schutz von Benutzerpasswörtern und Verzeichnisdaten
 
-## Praxisbeispiel: Linux und Netzwerkdrucker
+### Praxisbeispiel: Linux und Netzwerkdrucker
 
 Ein Unternehmen verwendet Microsoft Active Directory für seine Benutzerkonten.
 
@@ -140,7 +150,7 @@ Dieser Filter sucht in Active Directory nach einem passenden Benutzerobjekt mit 
 
 **Achtung:** Eine LDAP-Suche nach einem Benutzer ist nicht automatisch eine vollständige Authentifizierung. Anwendungen können LDAP für die Benutzerprüfung verwenden; andere Authentifizierungsverfahren wie Kerberos erfüllen zusätzliche Aufgaben.
 
-## LDAP und Berechtigungen
+### LDAP und Berechtigungen
 
 LDAP kann Informationen zu Benutzern und Gruppen bereitstellen. Ob ein Benutzer tatsächlich auf eine Datei, Anwendung oder Ressource zugreifen darf, entscheidet jedoch die jeweilige Anwendung beziehungsweise das zugrunde liegende Berechtigungssystem.
 
@@ -151,7 +161,7 @@ Beispiel:
 
 LDAP ist daher nicht automatisch ein vollständiges Berechtigungsmanagement für alle Systeme.
 
-## Vorteile und Nachteile
+### Vorteile und Nachteile
 
 | Vorteile | Nachteile |
 |---|---|
@@ -161,7 +171,7 @@ LDAP ist daher nicht automatisch ein vollständiges Berechtigungsmanagement für
 | Von vielen Betriebssystemen und Anwendungen unterstützt | Ohne TLS können Daten gefährdet sein |
 | Kann Benutzer- und Gruppeninformationen zentral bereitstellen | Nicht jede Anwendung unterstützt LDAP direkt |
 
-## IHK-Merksätze
+### Kurz gemerkt
 
 - LDAP ist ein Protokoll für den Zugriff auf Verzeichnisdienste.
 - DIT bezeichnet die hierarchische Struktur eines Verzeichnisses.
@@ -171,3 +181,31 @@ LDAP ist daher nicht automatisch ein vollständiges Berechtigungsmanagement für
 - LDAP kann Benutzer- und Gruppeninformationen liefern, ersetzt aber nicht automatisch alle Authentifizierungs- und Berechtigungsmechanismen.
 - TCP 389 ist der typische LDAP-Port; TCP 636 wird für LDAPS verwendet.
 - Für vertrauliche Daten sollte LDAP durch TLS abgesichert werden.
+
+## Prüfungsfrage
+
+**Frage:** Ein Netzwerkdrucker soll Benutzer gegen das Active Directory prüfen und Scans an deren E-Mail-Adresse senden. Erläutern Sie die Rolle von LDAP und nennen Sie eine Sicherheitsmaßnahme für diese Verbindung.
+
+**Musterantwort:** Der Drucker fragt über LDAP das Verzeichnis des Active Directory ab, findet so das Benutzerobjekt und liest Attribute wie die E-Mail-Adresse oder Gruppenmitgliedschaften aus; für die Anmeldung kann er eine LDAP-Bindung mit den Zugangsdaten des Benutzers durchführen. Damit Zugangsdaten und Verzeichnisdaten nicht im Klartext übertragen werden, muss die Verbindung per LDAPS auf Port 636 oder per StartTLS auf Port 389 verschlüsselt werden. Zusätzlich sollte der Drucker ein eigenes Dienstkonto mit reinen Leserechten verwenden.
+
+## Falle
+
+- LDAP mit Active Directory gleichsetzen.
+- Port 636 und 389 vertauschen – **636 ist LDAPS**.
+- Unverschlüsselten „Simple Bind“ über 389 ohne TLS einsetzen → Passwort im Klartext.
+- Dem Dienstkonto für LDAP-Abfragen Domänen-Admin-Rechte geben → Verstoß gegen Least Privilege.
+
+## Merksatz
+
+**„LDAP fragt das Telefonbuch, Kerberos prüft den Ausweis.“**
+
+## Verwandt
+
+- [Active Directory](../Sicherheit/active-directory.md)
+- [Kerberos](kerberos.md)
+- [RBAC](rbac.md)
+- [GPO](gpo.md)
+- [AAA und SIEM](../Sicherheit/aaa-siem.md)
+- [802.1X und RADIUS](../Sicherheit/netzwerkzugang-802-1x-radius.md)
+- [TLS und HTTPS](../Sicherheit/Verschluesselung/tls-https.md)
+- [Ports](../OSI-IP-mac-bit-byte/ports.md)

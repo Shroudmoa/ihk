@@ -1,161 +1,103 @@
-# BIOS/UEFI-Kernel
+# Bootprozess, Kernel, Partitionen und GRUB
 
-# BIOS/UEFI, Kernel und Speicherbereiche
+## In 30 Sekunden
 
-## Bootprozess
+- Bootkette: **Firmware (UEFI/BIOS) → Bootloader (GRUB, Windows Boot Manager) → Kernel (+ initramfs) → Init-System (systemd) → Dienste → Anmeldung**.
+- Der **Kernel** verwaltet CPU, RAM, Geräte, Dateisysteme und Rechte. Er läuft im privilegierten **Kernel Space**, Anwendungen laufen im **User Space** und rufen ihn über **System Calls** auf.
+- **GRUB** ist der verbreitete Linux-Bootloader: Bootmenü, Auswahl von Kernel oder Betriebssystem, lädt Kernel und initramfs. Konfiguration in `/boot/grub/grub.cfg`, erzeugt aus `/etc/default/grub`.
+- Typische Linux-Partitionen: EFI-Systempartition, `/boot`, `/`, `swap`, `/home`.
+- Firmware-Härtung und Secure Boot stehen in [BIOS/UEFI – Firmware und Härtung](bios-uefi.md).
+- Geprüft: GRUB-Funktion und Fehler „file not found“ 2026S.
 
-UEFI/BIOS → Bootloader → Kernel → Systemdienste → Anwendungen
+## Kernwissen
 
-### BIOS / UEFI
-Firmware, die beim Einschalten startet und die Hardware für den Betriebssystemstart vorbereitet.
+### Bootablauf im Detail
 
-- POST: Prüft grundlegende Hardwarefunktionen.
-- Initialisiert Hardware und wählt ein Bootmedium.
-- Startet den Bootloader.
+| Schritt | BIOS/MBR | UEFI/GPT |
+|---|---|---|
+| 1. Firmware | POST, Hardware-Initialisierung | POST, Hardware-Initialisierung, Secure-Boot-Prüfung |
+| 2. Bootloader finden | Bootcode im MBR (erster Sektor) | `.efi`-Datei auf der EFI-Systempartition (z. B. `\EFI\ubuntu\shimx64.efi`) |
+| 3. Bootloader | GRUB / Windows Boot Manager | GRUB (über shim) / Windows Boot Manager |
+| 4. Kernel | wird mit initramfs in den RAM geladen | ebenso |
+| 5. Init | systemd startet Dienste (Linux) bzw. Windows-Sitzungsmanager | ebenso |
 
-**BIOS** ist die ältere Firmware-Technologie; **UEFI** ist der moderne Nachfolger.
+**initramfs:** kleines Start-Dateisystem im RAM mit Treibern (z. B. für RAID, LVM, verschlüsselte Platten), damit der Kernel die echte Root-Partition einhängen kann.
 
 ### Kernel
-Zentraler Bestandteil des Betriebssystems. Verwaltet Hardware-Ressourcen und stellt Anwendungen kontrollierte Schnittstellen bereit.
 
-- CPU-Zeit und Prozessverwaltung
-- RAM und virtueller Speicher
-- Dateisysteme
-- Netzwerk und Gerätezugriff
-- Gerätetreiber und Berechtigungen
-
-### Kernel Space
-Privilegierter Speicher- und Ausführungsbereich des Kernels. Fehler im Kernel können das gesamte System beeinträchtigen.
-
-### User Space
-Hier laufen normale Anwendungen und viele Systemdienste. Direkter Zugriff auf geschützten Kernel-Speicher ist nicht erlaubt.
-
-**System Calls:** Kontrollierte Schnittstelle, über die Anwendungen Kernel-Funktionen anfordern, z. B. Dateien öffnen oder Netzwerkdaten senden.
-
-## Kernel-Architekturen
+| Aufgabe | Beispiel |
+|---|---|
+| Prozessverwaltung | Prozesse starten, beenden, CPU-Zeit verteilen (Scheduler) |
+| Speicherverwaltung | RAM zuweisen, virtueller Speicher, Prozesse voneinander isolieren |
+| Geräteverwaltung | Treiber, Hardwarezugriffe koordinieren |
+| Dateisysteme | Dateioperationen, Zugriffsrechte |
+| Netzwerk | TCP/IP-Stack |
 
 | Betriebssystem | Kernel | Architektur |
 |---|---|---|
-| Linux | Linux-Kernel | Monolithisch, modular |
+| Linux | Linux-Kernel | monolithisch, modular (ladbare Module) |
 | Windows | Windows NT | Hybrid |
-| macOS | XNU | Hybrid, Mach + BSD |
-| FreeBSD | FreeBSD-Kernel | Monolithisch, modular |
+| macOS | XNU | Hybrid (Mach + BSD) |
+| FreeBSD | FreeBSD-Kernel | monolithisch, modular |
 
-## IHK-Merksätze
+- **Kernel Space:** privilegierter Bereich. Ein Fehler hier kann das ganze System anhalten (Kernel Panic, Bluescreen).
+- **User Space:** normale Anwendungen mit begrenzten Rechten. Sie fordern Kernel-Funktionen per **System Call** an (z. B. Datei öffnen, Netzwerkdaten senden). Unter Windows rufen Anwendungen die Windows-API auf, die intern die NT-Systemdienste nutzt.
+- Container teilen sich den Kernel des Hosts → [Container & Docker](virtualisierung/container-docker.md).
 
-- **Kernel ≠ Kernel Space:** Kernel = Betriebssystemkern; Kernel Space = privilegierter Ausführungsbereich.
-- **User Space:** Begrenzte Rechte; Kernel-Funktionen werden über System Calls angefordert.
-- **UEFI/BIOS:** Firmware, die vor dem Betriebssystem ausgeführt wird.
-- **System Call:** Kontrollierter Übergang vom User Space in den Kernel Space.
-
-## 3-Zeilen-IHK-Antwort
-
-UEFI initialisiert die Hardware und startet den Bootloader, der den Kernel lädt.
-Der Kernel läuft im privilegierten Kernel Space und verwaltet Ressourcen wie CPU, RAM und Geräte.
-Anwendungen laufen im User Space und greifen über System Calls kontrolliert auf Kernel-Funktionen zu.
-
-
-# Kernel, Partitionen und Bootloader – Teil 2
-
-## Kernel: Linux vs. Windows
-
-Der Kernel verwaltet CPU, RAM, Prozesse, Geräte, Dateisysteme und Zugriffsrechte. Er vermittelt zwischen Hardware und Anwendungen.
-
-| Konzept | Linux | Windows |
-|---|---|---|
-| Kernel | Linux-Kernel | Windows NT Kernel |
-| Architektur | Monolithisch, modular | Hybrid |
-| Treiber | Kernel- oder User-Space möglich | Kernel- und User-Mode-Treiber |
-| System Calls | Linux-System-Call-Schnittstelle | Windows-API/NT-Systemdienste |
-| Konfiguration | Häufig Textdateien | Registry, Dienste und Systemtools |
-| Kernel-Module | Ladbare Kernel-Module | Kernel-Treiber und andere Kernel-Komponenten |
-
-**Wichtig:** Die Windows API ist nicht dasselbe wie ein System Call. Anwendungen nutzen APIs, die bei Bedarf Kernel-Funktionen aufrufen.
-
-### Was macht der Kernel konkret?
-
-- **Prozessverwaltung:** Prozesse starten, beenden und CPU-Zeit verteilen.
-- **Speicherverwaltung:** RAM zuweisen, virtuellen Speicher verwalten und Prozesse isolieren.
-- **Geräteverwaltung:** Treiber und Hardwarezugriffe koordinieren.
-- **Dateisysteme:** Dateioperationen und Zugriffsrechte bereitstellen.
-- **Netzwerk:** Netzwerkprotokolle und Kommunikation unterstützen.
-
-## Partitionen und Dateisysteme
-
-Eine Partition ist ein logisch abgegrenzter Bereich eines Datenträgers. Ein Dateisystem organisiert darin Dateien und Verzeichnisse.
-
-**Beispiele:** Linux verwendet häufig ext4 oder XFS, Windows meist NTFS.
-
-### Typische Linux-Partitionen
+### Partitionen
 
 | Mountpoint / Bereich | Funktion |
 |---|---|
-| `/boot` | Kernel-Dateien und weitere Dateien für den Bootvorgang |
-| `/` (Root) | Wurzel des Linux-Dateisystems; enthält das Betriebssystem |
-| `swap` | Auslagerungsbereich für Speicherseiten; kann Partition oder Datei sein |
-| `/home` | Benutzerdaten und persönliche Konfigurationen |
-| EFI-Systempartition (ESP) | Bootloader-Dateien für UEFI-Systeme |
+| EFI-Systempartition (ESP) | Bootloader-Dateien für UEFI, FAT32, ca. 100–500 MB |
+| `/boot` | Kernel, initramfs, GRUB-Dateien |
+| `/` (Root) | Wurzel des Dateisystems, Betriebssystem |
+| `swap` | Auslagerungsbereich (Partition oder Datei) |
+| `/home` | Benutzerdaten |
 
-**Wichtig:** `/` ist nicht dasselbe wie `/root`. `/` ist das Wurzelverzeichnis; `/root` ist das Home-Verzeichnis des Administrators `root`.
+`/` ist nicht `/root`: `/root` ist das Home-Verzeichnis des Benutzers root. Nicht jede Installation hat ein separates `/boot` oder eine Swap-Partition.
 
-Nicht jede Linux-Installation benötigt eine separate `/boot`- oder Swap-Partition. Bei UEFI-Systemen wird üblicherweise eine EFI-Systempartition benötigt.
-
-### Wie macht Windows das?
-
-Windows verwendet ebenfalls Partitionen, aber andere Bezeichnungen und Strukturen:
-
-- **EFI-Systempartition:** Enthält UEFI-Bootdateien.
-- **C:**:** Üblicherweise die Windows-Systempartition.
-- **Recovery-Partition:** Enthält Wiederherstellungswerkzeuge.
-- **System-reservierte Partition:** Kann bei BIOS/MBR-Systemen Bootdateien enthalten.
-- **Auslagerungsdatei (`pagefile.sys`):** Dient als virtueller Speicher; normalerweise keine separate Swap-Partition.
-
-## Bootloader
-
-Ein Bootloader startet den Betriebssystem-Kernel oder übergibt die Kontrolle an einen weiteren Bootloader.
+**Windows:** EFI-Systempartition, MSR (reserviert), **C:** als Systempartition, Wiederherstellungspartition (WinRE). Statt Swap-Partition wird die Auslagerungsdatei `pagefile.sys` verwendet.
 
 ### GRUB
 
-**GRUB (GRand Unified Bootloader)** ist ein verbreiteter Bootloader für Linux.
+- Zeigt ein Menü (mehrere Kernel, Recovery-Modus, Dual-Boot mit Windows).
+- Findet den Kernel über Datenträger, Partition und Pfad, z. B. `(hd0,gpt2)/vmlinuz`, heute meist über die **UUID** des Dateisystems.
+- Konfiguration nie direkt in `grub.cfg` bearbeiten: Einstellungen in `/etc/default/grub` und `/etc/grub.d/`, danach `update-grub` (Debian/Ubuntu) bzw. `grub2-mkconfig -o /boot/grub2/grub.cfg` (RHEL).
+- Andere Bootloader: Windows Boot Manager, systemd-boot, U-Boot (Embedded).
 
-- Zeigt ein Bootmenü für mehrere Betriebssysteme oder Kernel.
-- Lädt den Linux-Kernel und gegebenenfalls eine initiale RAM-Disk (`initramfs`).
-- Ermöglicht die Auswahl verschiedener Kernel oder Recovery-Einträge.
+### GRUB-Fehler „file not found“ / `grub rescue>` (2026S)
 
-### Andere Bootloader
+**Ursachen:** GRUB findet seine Dateien oder den Kernel nicht, etwa weil Partitionen verschoben oder neu angelegt wurden (geänderte UUID), `/boot` beschädigt oder voll ist, ein Update abgebrochen wurde oder `grub.cfg` auf einen falschen Pfad zeigt.
 
-| Bootloader | Typischer Einsatz |
-|---|---|
-| Windows Boot Manager | Windows-Systeme |
-| systemd-boot | Linux-Systeme mit UEFI |
-| U-Boot | Embedded-Systeme |
-| Apple Bootprozess | macOS auf Apple-Hardware |
+**Behebung:**
+1. In der Rescue-Konsole: `ls` zeigt Partitionen. Dann `set root=(hd0,gpt2)`, `set prefix=(hd0,gpt2)/boot/grub`, `insmod normal`, `normal` → System starten.
+2. Dauerhaft: `grub-install` (auf den richtigen Datenträger bzw. die ESP) und `update-grub` ausführen.
+3. Startet nichts mehr: von einem Live-System booten, Root-Partition mounten, per `chroot` wechseln und Schritt 2 ausführen.
 
-### BIOS vs. UEFI: Bootvorgang
+## Prüfungsfrage
 
-**BIOS/MBR:** Firmware → Bootcode im MBR → Bootloader → Kernel.
+**Frage:** Nach einer Änderung an den Partitionen startet ein Linux-Server nicht mehr. GRUB meldet „error: file not found“. Erläutern Sie Funktion von GRUB, eine mögliche Ursache und das Vorgehen zur Behebung.
 
-**UEFI:** Firmware → EFI-Anwendung auf der EFI-Systempartition → Bootloader → Kernel.
+**Musterantwort:** GRUB ist der Bootloader. Er wird von der Firmware gestartet, zeigt ein Bootmenü und lädt den gewählten Linux-Kernel samt initramfs in den Arbeitsspeicher. Danach übergibt er die Kontrolle an den Kernel. Durch die Änderung der Partitionen stimmen vermutlich Partitionsnummer oder UUID in der GRUB-Konfiguration nicht mehr. GRUB findet deshalb seine Moduldateien oder den Kernel nicht. Zur Behebung bootet man ein Live-System, hängt die Root- und Boot-Partition ein, wechselt per chroot in das installierte System und führt `grub-install` sowie `update-grub` aus. Damit wird GRUB neu installiert und die Konfiguration mit den aktuellen UUIDs neu erzeugt.
 
-Bei Linux lädt GRUB häufig zusätzlich `initramfs`, das benötigte Treiber und Werkzeuge für den frühen Systemstart enthält.
+## Falle
 
-## IHK-Merksätze
+- Bootloader und Kernel gleichsetzen. GRUB **lädt** den Kernel, er ist kein Teil des Betriebssystemkerns.
+- `grub.cfg` von Hand ändern. Beim nächsten Update wird sie überschrieben.
+- Swap als Ersatz für fehlenden RAM verkaufen. Auslagern ist um Größenordnungen langsamer.
+- Kernel und Kernel Space gleichsetzen. Das eine ist die Software, das andere der privilegierte Ausführungsbereich.
+- Nach einem Wechsel BIOS ↔ UEFI erwarten, dass der alte Bootloader weiter funktioniert.
 
-- **Partition:** Logische Aufteilung eines Datenträgers.
-- **Dateisystem:** Organisiert Dateien und Verzeichnisse.
-- **Bootloader:** Lädt den Kernel oder übergibt die Kontrolle an ihn.
-- **Swap/Pagefile:** Unterstützt virtuellen Speicher, ersetzt aber keinen ausreichend dimensionierten RAM.
-- **GRUB:** Häufiger Linux-Bootloader; Windows verwendet normalerweise den Windows Boot Manager.
+## Merksatz
 
-## 3-Zeilen-IHK-Antwort
-
-Der Bootloader lädt den Betriebssystem-Kernel und gegebenenfalls eine initiale RAM-Disk.
-Der Kernel verwaltet Ressourcen und stellt kontrollierte Schnittstellen für Anwendungen bereit.
-Partitionen strukturieren den Datenträger; Dateisysteme organisieren die darauf gespeicherten Daten.
+**„Firmware weckt, GRUB lädt, Kernel herrscht, systemd startet den Rest.“**
 
 ## Verwandt
 
+- [BIOS/UEFI – Firmware und Härtung](bios-uefi.md) – Secure Boot, Setup-Passwort
+- [Linux-Grundlagen](linux-grundlagen.md) – Verzeichnisse und Befehle
+- [Dateisysteme](../../Komponenten/Storage/dateisysteme.md) – MBR/GPT, ext4, NTFS
 - [CPU](../../Komponenten/cpu.md) – Zusammenspiel mit der CPU
 - [VM-Container-Server](virtualisierung/vm-container-server.md) – Kernel im Container
 - [Hypervisor-Typen](virtualisierung/hypervisor-typen.md) – Firmware unter der Virtualisierung
-
+- [Lektion L28 GA1 Praxisthemen](../../analyse-der-exams/L28_GA1_Sonstiges_Praxisthemen.md)

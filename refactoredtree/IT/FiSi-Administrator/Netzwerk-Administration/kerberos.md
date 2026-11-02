@@ -46,6 +46,7 @@ Im Kerberos gibt es einen zentralen **KDC (Key Distribution Center)**. Dieser be
 ## Falle
 
 - **Port 88 vergessen** – Kerberos läuft über TCP/UDP **88**, nicht über 389
+- **Uhrzeit vergessen** – Kerberos-Tickets enthalten Zeitstempel; weicht die Uhr des Clients um mehr als 5 Minuten (Standard) ab, schlägt die Anmeldung fehl. Deshalb ist der PDC-Emulator die Zeitquelle der Domäne
 - **Kerberos ≠ LDAP** – LDAP liefert Verzeichnisinformationen, Kerberos dient der **Authentifizierung**
 - **TGT wird nicht zum Zielserver geschickt** – Nur das **Service-Ticket** geht zum eigentlichen Dienst
 - **„Kerberos verschlüsselt alles“** – Kerberos authentifiziert, ob Daten danach verschlüsselt werden hängt vom Dienst ab
@@ -59,4 +60,7 @@ Im Kerberos gibt es einen zentralen **KDC (Key Distribution Center)**. Dieser be
 - [LDAP](ldap.md) – Verzeichniszugriff
 - [Authentifizierung-Autoritisierung-MFA](../Server/authentifizierung-autoritisierung-mfa.md) – Grundlagen der Authentifizierung
 - [RBAC](rbac.md) – Berechtigungen nach Rolle
-- [PKI-Zertifikate](../Sicherheit/Verschluesselung/pki.md) – Kryptografie-Grundlagen
+- [PKI und Zertifikate](../Sicherheit/Verschluesselung/pki.md) – Kryptografie-Grundlagen
+- [Active Directory](../Sicherheit/active-directory.md) – KDC auf jedem Domain Controller
+- [AAA und SIEM](../Sicherheit/aaa-siem.md)
+- [Symmetrische und asymmetrische Verschlüsselung](../Sicherheit/Verschluesselung/symmetrische-und-asymmetrische.md)

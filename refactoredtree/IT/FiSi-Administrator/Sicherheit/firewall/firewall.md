@@ -1,5 +1,7 @@
 # Firewall
 
+> Abgrenzung: Dieses Blatt behandelt **Regelwerke** (lesen, bewerten, schreiben) und Zonen. Die **Firewall-Generationen** (Paketfilter, SPI, Proxy, NGFW) und das Zusammenspiel mit IDS/IPS und Virenschutz stehen in [Firewall-Generationen und Sicherheitskonzepte](firewalls-alle-generationen-sicherheitskonzepte-antivirus.md).
+
 ## In 30 Sekunden
 
 - Eine Firewall erlaubt oder verbietet Verkehr nach Regeln – sie ist **kein Rundumschutz**.
@@ -31,6 +33,10 @@
 
 Regel 1–3 sind Beispiele, Regel 4 ist die implizite Grundhaltung: **alles andere ist verboten**.
 
+**Auswertung:** Firewalls prüfen **top-down, first match** – die erste passende Regel entscheidet, danach wird nicht weitergesucht. Spezielle Regeln gehören deshalb nach oben.
+
+**Richtung und Schnittstelle (Prüfung 2026S GA2):** Regeln gelten je Schnittstelle und Richtung. Bei einer SPI-Firewall reicht für „LAN darf ins Internet surfen“ eine ausgehende Regel (LAN → any, TCP 80/443); die Antworten lässt die State Table automatisch zurück. Eingehend am WAN-Port bleibt dann alles gesperrt.
+
 **Zonen und Richtung**
 - Internet → DMZ: nur die Dienste, die veröffentlicht werden sollen (443, 25 …).
 - DMZ → LAN: möglichst gar nichts, sonst nur einzeln begründet.
@@ -55,7 +61,12 @@ Regel 1–3 sind Beispiele, Regel 4 ist die implizite Grundhaltung: **alles ande
 
 ## Verwandt
 
+- [Firewall-Generationen und Sicherheitskonzepte](firewalls-alle-generationen-sicherheitskonzepte-antivirus.md) – Paketfilter, SPI, Proxy, NGFW
+- [DMZ und Sicherheitszonen](dmz-sicherheitszonen.md) – Server richtig platzieren
+- [IDS und IPS](ids-ips.md) – Angriffe erkennen und blockieren
+- [NAT und PAT](nat-pat.md) – Adressübersetzung
+- [Lektion 16 Firewall](../../../analyse-der-exams/L16_Firewall.md) – Regelaufgaben aus der Prüfung
 - [Proxy](../../Netzwerk-Administration/proxy.md) – Application-Level Gateway und Reverse Proxy
 - [Netzwerktypen](../../netzwerktypen.md) – LAN, WAN und Segmentierung
-- [hackers-can](../hacking/hackers-can.md) – welche Angriffe abgewehrt werden
+- [Angriffsarten](../hacking/hackers-can.md) – welche Angriffe abgewehrt werden
 - [OSI](../../OSI-IP-mac-bit-byte/osi.md) – Zuordnung der Firewall-Typen zu Schichten

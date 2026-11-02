@@ -5,7 +5,7 @@
 - **NAT (Network Address Translation)** = Übersetzung von privaten zu öffentlichen IP-Adressen
 - **PAT (Port Address Translation)** = NAT mit Portnummern. Auch bekannt als **NAT Overload**
 - Ermöglicht vielen Clients die Nutzung **einer einzigen öffentlichen IP**
-- Findet meist am **Router/Firewall**
+- Findet meist am **Router bzw. an der Firewall** statt
 - **Private IPs** (RFC 1918) sind ohne NAT nicht direkt aus dem Internet erreichbar
 
 ## Kernwissen
@@ -55,6 +55,10 @@
 **„NAT = Adressen tauschen. PAT = Adressen + Ports tauschen.“**
 
 ## Verwandt
+
+- [DMZ und Sicherheitszonen](dmz-sicherheitszonen.md) – Port-Forwarding auf DMZ-Server
+- [TLS und HTTPS](../Verschluesselung/tls-https.md) – warum NAT trotz TLS funktioniert
+- [Lektion 06 IPv4 und NAT](../../../analyse-der-exams/06_IPv4_Adressierung_Routing.md)
 
 - [Firewall](firewall.md) – Filterung vs Adressübersetzung
 - [IPv4](../../OSI-IP-mac-bit-byte/ipv4.md) – Private vs öffentliche Adressen

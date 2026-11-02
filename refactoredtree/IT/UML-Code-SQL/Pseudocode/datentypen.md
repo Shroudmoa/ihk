@@ -1,63 +1,96 @@
 # Datentypen in der Programmierung
 
-Datentypen legen fest, welche Art von Daten eine Variable speichern kann (z.B. Zahlen, Text) und wie viel Speicherplatz dafür reserviert wird.
+## In 30 Sekunden
 
-## 1. Ganzzahlen (Integer)
-*   **Eigenschaft:** Speichern positive und negative ganze Zahlen (keine Kommastellen).
-*   **Berechnung (IHK-Wissen):**
-    *   **Unsigned (ohne Vorzeichen):** \(0\) bis \((2^n - 1)\).
-    *   **Signed (mit Vorzeichen):** \(-2^{(n-1)}\) bis \((2^{(n-1)} - 1)\). Ein Bit wird für das Vorzeichen (0 = positiv, 1 = negativ) geopfert.
+- Ein **Datentyp** legt fest, welche Werte eine Variable aufnehmen kann, wie viel Speicher sie belegt und welche Operationen erlaubt sind.
+- Wertebereich bei n Bit: **ohne Vorzeichen 0 bis 2ⁿ − 1**, **mit Vorzeichen −2ⁿ⁻¹ bis 2ⁿ⁻¹ − 1**.
+- `int` (32 Bit): **−2.147.483.648 bis 2.147.483.647** – 2024S wörtlich abgefragt.
+- `byte` (C#, 8 Bit, ohne Vorzeichen): 0 bis 255 – passt für Prozentwerte wie CPU-Last.
+- Geld nie in `float`/`double`, sondern `decimal` (Programm) bzw. `DECIMAL(p,s)` (SQL).
+- 2021W: Reicht `int` für 16 TiB in KiB? Nein, 17.179.869.184 > 2.147.483.647 → `long` (64 Bit).
 
-| Datentyp | Größe | Wertebereich (mit Vorzeichen) | Wertebereich (ohne Vorzeichen) |
-| :--- | :--- | :--- | :--- |
-| **byte** | 8 Bit | -128 bis 127 | 0 bis 255 |
-| **short** | 16 Bit | -32.768 bis 32.767 | 0 bis 65.535 |
-| **int** | 32 Bit | -2.147.483.648 bis 2.147.483.647 | 0 bis 4.294.967.295 |
-| **long** | 64 Bit | ca. ±9,2 Trillionen | 0 bis ca. 18,4 Trillionen |
+## Kernwissen
 
-## 2. Gleitkommazahlen (Floating Point)
-*   **Eigenschaft:** Speichern Zahlen mit Nachkommastellen (z.B. 3,14).
-*   **Prüfungsfalle:** Gleitkommazahlen sind **nicht exakt** (Rundungsfehler durch IEEE-754). Für Geldbeträge niemals `float` oder `double` nutzen!
+### Ganzzahlen (C#-Bezeichnungen, wie in der Prüfungsanlage)
 
-| Datentyp | Größe | Präzision | Einsatzgebiet |
-| :--- | :--- | :--- | :--- |
-| **float** | 32 Bit | ca. 7 Dezimalstellen | Grafik, Physik (ungenau) |
-| **double** | 64 Bit | ca. 15-17 Dezimalstellen | Wissenschaftliche Berechnungen |
-| **decimal** | 128 Bit | 28-29 Dezimalstellen | **Finanzen / Geld (exakt)** |
+| Typ | Bit | Vorzeichen | Wertebereich |
+|---|---:|---|---|
+| `byte` | 8 | nein | 0 … 255 |
+| `sbyte` | 8 | ja | −128 … 127 |
+| `short` | 16 | ja | −32.768 … 32.767 |
+| `ushort` | 16 | nein | 0 … 65.535 |
+| `int` | 32 | ja | −2.147.483.648 … 2.147.483.647 |
+| `uint` | 32 | nein | 0 … 4.294.967.295 |
+| `long` | 64 | ja | ca. −9,22 · 10¹⁸ … 9,22 · 10¹⁸ |
+| `ulong` | 64 | nein | 0 … ca. 1,84 · 10¹⁹ |
 
-## 3. Wahrheitswerte (Boolean)
-*   **Datentyp:** `bool`
-*   **Eigenschaft:** Nur zwei Zustände: `true` (wahr / 1) oder `false` (falsch / 0).
-*   **Größe:** Theoretisch 1 Bit, in der Praxis (C#/Java) meist 1 Byte (8 Bit).
+In Java ist `byte` dagegen **vorzeichenbehaftet** (−128 … 127). In der IHK-Anlage gilt die C#-Variante.
 
-## 4. Zeichen (Character)
-*   **Datentyp:** `char`
-*   **Eigenschaft:** Ein einzelnes Zeichen (Buchstabe, Ziffer, Symbol).
-*   **Größe:** 16 Bit (UTF-16 in Java/C#) oder 8 Bit (ASCII in C/C++).
-*   **Hintergrund:** Wird intern als Zahl gespeichert (z.B. 'A' = 65 im ASCII).
+### Gleitkomma und Dezimal
 
-## 5. Komplexe Datentypen (Referenzdatentypen)
-*   **Eigenschaft:** Speichern nicht den Wert selbst, sondern eine **Speicheradresse (Referenz)** auf ein Objekt.
-*   **Beispiele:**
-    *   `String`: Zeichenkette (z.B. "Hallo").
-    *   `Array`: Sammlung von Elementen desselben Typs (z.B. `int[] zahlen = {1, 2, 3};`).
-    *   `Objekt`: Instanz einer Klasse (z.B. `Kunde` mit Name und Adresse).
+| Typ | Bit | Genauigkeit | Einsatz |
+|---|---:|---|---|
+| `float` | 32 | ca. 7 Stellen | Grafik, Sensorwerte |
+| `double` | 64 | ca. 15–16 Stellen | technische Berechnungen, Mittelwerte |
+| `decimal` | 128 | 28–29 Stellen, dezimal exakt | **Geldbeträge** |
 
-## 6. IHK-Prüfungsfallen & Merksätze
-*   **`int`-Wertebereich auswendig können:** -2.147.483.648 bis +2.147.483.647.
-*   **„byte statt int“:** Immer mit **Speicheroptimierung** argumentieren (75% Ersparnis). Zudem kann `byte` (unsigned) keine negativen Werte speichern, was bei Prozentwerten (CPU-Last, Fortschritt) ideal ist.
-*   **Geld nie mit `float` / `double`:** Immer `decimal` nutzen.
-*   **Datentyp-Größe:** 8 Bit = 1 Byte. 1024 Byte = 1 KiB (nicht 1000!).
+`0.1 + 0.2` ergibt bei `double` `0.30000000000000004`, weil 0,1 binär nicht exakt darstellbar ist (IEEE 754).
 
+### Weitere Typen
 
+| Typ | Inhalt | Hinweis |
+|---|---|---|
+| `bool` | `true` / `false` | belegt praktisch 1 Byte |
+| `char` | ein Zeichen, z. B. `'A'` | C#: 16 Bit (UTF-16); `'A'` = 65 |
+| `string` | Zeichenkette, z. B. `"Hallo"` | Referenztyp |
+| `DateTime` | Datum und Uhrzeit | in 2021W, 2022W, 2024S verwendet |
+| Array `int[]` | mehrere Werte gleichen Typs | Index ab 0, feste Länge |
+| `struct` | eigener zusammengesetzter Werttyp | z. B. `diskBelegung { int wert; DateTime datum; }` |
 
+**Werttyp vs. Referenztyp:** Werttypen (`int`, `bool`, `struct`) speichern den Wert direkt; Referenztypen (`string`, Arrays, Objekte) speichern einen Verweis auf den Speicherbereich. Eine Zuweisung kopiert beim Werttyp den Wert, beim Referenztyp nur den Verweis.
 
-# IHK-Aufgabe: Datentypen (int & byte)
+### Typumwandlung (Cast)
 
-## ba) Wertebereich für den Datentyp „int“
-*   **Wertebereich:** **−2.147.483.648 bis +2.147.483.647**
-*   **Begründung:** Ein `int` ist eine 32-Bit-Ganzzahl mit Vorzeichen. \(2^{32} = 4.294.967.296\) Zustände. Aufgeteilt auf positive und negative Zahlen (inkl. Null) ergibt das die obigen Grenzen.
+```csharp
+int summe = 115, anzahl = 4;
+double falsch  = summe / anzahl;           // 28.0  (ganzzahlige Division zuerst)
+double richtig = (double)summe / anzahl;   // 28.75
 
-## bb) Grund für den Datentyp „byte“ statt „int“ für max und max2
-*   **Speicheroptimierung:** Ein `byte` belegt nur **8 Bit** (1 Byte) im Arbeitsspeicher, ein `int` hingegen **32 Bit** (4 Byte). Durch die Wahl von `byte` wird der Speicherverbrauch um 75 % reduziert.
-*   *Hinweis für die Prüfung:* Ein `byte` kann Werte von 0 bis 255 speichern. Da eine CPU-Auslastung (in Prozent) niemals über 100 liegen kann, ist ein `byte` vollkommen ausreichend und verhindert zudem negative Werte (da ohne Vorzeichen).
+int x = 300;
+byte b = (byte)x;                          // 44 – Überlauf: 300 − 256
+int zahl = int.Parse("42");                // Text → Zahl, FormatException bei "abc"
+```
+
+### Bitbedarf berechnen
+
+Benötigte Bit für N verschiedene Werte: kleinstes n mit **2ⁿ ≥ N**.
+
+- 100 Prozentwerte (0–100 = 101 Werte): 2⁷ = 128 ≥ 101 → **7 Bit**, praktisch `byte`.
+- 16 TiB in KiB = 16 · 2³⁰ = 2³⁴ = 17.179.869.184 → braucht 35 Bit (ohne Vorzeichen) → `int` reicht nicht, `long` nötig.
+
+## Prüfungsfrage
+
+**Frage (angelehnt an 2024S):** Geben Sie den Wertebereich des Datentyps `int` an. Begründen Sie, warum für die Variablen `max` und `max2`, die CPU-Auslastungen in Prozent speichern, `byte` statt `int` verwendet wird.
+
+**Musterantwort:** `int` ist eine 32-Bit-Ganzzahl mit Vorzeichen, Wertebereich **−2.147.483.648 bis 2.147.483.647** (2³² = 4.294.967.296 Werte). Für CPU-Auslastungen genügt `byte`: Der Wertebereich 0 bis 255 deckt 0 bis 100 % vollständig ab, `byte` belegt nur 1 statt 4 Byte (75 % weniger Speicher) und kann keine negativen Werte aufnehmen, die bei einer Auslastung fachlich unsinnig wären.
+
+## Falle
+
+- **byte in Java vs. C#:** In C# 0 … 255, in Java −128 … 127.
+- **Summen in `byte`:** 24 Prozentwerte summiert ergeben bis 2.400 – Überlauf. Die Summe gehört in `int`.
+- **Ganzzahldivision:** `int / int` schneidet Nachkommastellen ab, auch wenn das Ergebnis in `double` gespeichert wird.
+- **PLZ als Zahl:** `01234` verliert die führende Null – als `string` speichern.
+- **KiB vs. KB:** 1 KiB = 1.024 Byte, 1 KB = 1.000 Byte.
+- **Geld als `double`:** Rundungsfehler. `decimal` verwenden.
+
+## Merksatz
+
+**"Zwei hoch Bits minus eins"** ist das Maximum ohne Vorzeichen; mit Vorzeichen halbiert sich der Bereich. `int` ≈ ±2,1 Milliarden.
+
+## Verwandt
+
+- [Grundlagen & Syntax](01_Grundlagen_Syntax.md) – Variablen, Arrays, Casts
+- [Fehlerarten & Exceptions](fehlerarten-exceptions.md) – Overflow, FormatException
+- [DDL, DML, DCL](../sql/ddl-dml.md) – SQL-Datentypen (2022W)
+- [Bit & Byte](../../FiSi-Administrator/OSI-IP-mac-bit-byte/bit-byte.md) – Einheiten und Umrechnung
+- [Lektion 4: Programmierung](../../analyse-der-exams/04_Programmierung_Grundlagen.md) – Wertebereich `int` (2024S), Bitbedarf (2021W)

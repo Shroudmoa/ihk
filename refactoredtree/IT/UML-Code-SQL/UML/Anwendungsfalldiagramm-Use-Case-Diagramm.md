@@ -100,3 +100,6 @@ Akteure oder Use Cases können vererbt werden.
 - [Klassendiagramm](Klassendiagramm.md)
 - [Aktivitätsdiagramm](Aktivitaetsdiagramm.md)
 - [Sequenzdiagramm](Sequenzdiagramm.md)
+- [Zustandsdiagramm](zustandsdiagramm.md)
+- [UML-Übersicht](readme.md)
+- [Lektion 14: Datenmodellierung, SQL & UML](../../analyse-der-exams/L14_Datenmodellierung_SQL_UML.md)

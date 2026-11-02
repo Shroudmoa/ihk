@@ -135,3 +135,10 @@ Fragen:
 3. Wertebereich 0-100 passt in byte (0-255), speichersparender und verhindert negative Werte
 
 **Weiter:** [02_Arrays_Mittelwert_Max.md](02_Arrays_Mittelwert_Max.md)
+
+## Verwandt
+
+- [Datentypen](datentypen.md) – Wertebereiche und Speicherbedarf
+- [Struktogramm & PAP](struktogramm-pap.md) – Kontrollstrukturen grafisch
+- [OOP-Grundlagen](oop-grundlagen.md)
+- [Lektion 4: Programmierung](../../analyse-der-exams/04_Programmierung_Grundlagen.md)

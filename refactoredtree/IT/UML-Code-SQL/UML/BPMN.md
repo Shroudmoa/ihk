@@ -139,3 +139,9 @@ Zur verständlichen, standardisierten Dokumentation, Analyse, Optimierung und ge
 - **Sequenzfluss = Reihenfolge innerhalb eines Pools.**
 - **Nachrichtenfluss = Kommunikation zwischen Pools.**
 - BPMN schafft eine gemeinsame Sprache zwischen Fachbereich, IT und Management.
+
+## Verwandt
+
+- [Aktivitätsdiagramm](Aktivitaetsdiagramm.md) – UML-Gegenstück zu BPMN
+- [UML-Übersicht](readme.md)
+- [ITIL: Incident, Problem, Change](../../Management/itil-incident-problem-change.md) – typische IT-Prozesse zum Modellieren

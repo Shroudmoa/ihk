@@ -96,21 +96,6 @@ for (int i = 1; i < arr.Length; i++) {
     if (arr[i] > max) {
         max2 = max;
         max = arr[i];
-    } else if (arr[i > max2] == false) // Trickfrage? Oder normal
-        // besser normal
-    }
-}
-```
-
-Vereinfacht korrekter Code für Test:
-```csharp
-int[] arr = new int[] { 5, 12, 3, 12, 8 };
-int max = 5;
-int max2 = 0;
-for (int i = 1; i < 5; i++) {
-    if (arr[i] > max) {
-        max2 = max;
-        max = arr[i];
     } else if (arr[i] > max2) {
         max2 = arr[i];
     }
@@ -127,7 +112,7 @@ for (int i = 1; i < 5; i++) {
 | 3 | 12 | `12 > 12` false, `12 > 5` true | 12 | 12 |
 | 4 | 8 | `8 > 12` false, `8 > 12` false | 12 | 12 |
 
-**Ergebnis:** max = 12, max2 = 12
+**Ergebnis:** max = 12, max2 = 12. Der doppelte Höchstwert landet in `max2`, weil die Bedingung `arr[i] != max` fehlt (vergleiche Test 2).
 
 ## Test 5: Bubblesort verstehen
 
@@ -136,7 +121,7 @@ Was macht folgender Ausschnitt? Welche Elemente sind nach dem ersten Durchlauf r
 
 ```csharp
 for (int i = 0; i < zahlen.Length - 1; i++) {
-    for (int j = 0; j < zahlen.Length - tag 1 - i; j++) {
+    for (int j = 0; j < zahlen.Length - 1 - i; j++) {
         if (zahlen[j] > zahlen[j + 1]) {
             int temp = zahlen[j];
             zahlen[j] = zahlen[j + 1];
@@ -153,7 +138,7 @@ for (int i = 0; i < zahlen.Length - 1; i++) {
 
 ## Test 6: Datentypen
 
-**Auffrage:**
+**Aufgabe:**
 Für eine CPU-Auslastung in Prozent (0-100) soll ein Datentyp gewählt werden.
 a) Warum ist `byte` besser als `int`?
 b) Reicht `int` für den Wertbereich auch?
@@ -162,7 +147,7 @@ c) Welches Problem könnte bei der Wahl von `byte` entstehen?
 **Musterlösung:**
 a) `byte` ist speichersparender (1 Byte statt 4 Bytes) und deckt den benötigten Wertebereich (0-255) vollständig ab.
 b) Ja, `int` reicht auch, ist aber unnötig groß für diesen Zweck.
-c) Falls versehentlich negative Werte eingegeben werden, kann `byte` diese nicht darstellen. Außerdem ist der Wertebereich zwar ausreichend, aber man muss auf keine negativen Werte bedacht sein. Sinnvoller ist `byte` hier aber trotzdem, da keine negativen Werte auftreten sollen.
+c) **Überlauf und Rechenfehler:** Ein `byte` kann nur 0 bis 255 speichern. Werden Werte summiert (z. B. 24 Stundenwerte für einen Mittelwert), passt die Summe schnell nicht mehr in ein `byte` – die Summenvariable muss deshalb `int` sein. Außerdem liefert in C# `byte + byte` ein `int`, das Zurückschreiben in ein `byte` braucht einen expliziten Cast. Negative Werte (z. B. Differenzen) sind mit `byte` nicht darstellbar.
 
 ## Prüftipps für Pseudocode
 
@@ -173,7 +158,7 @@ c) Falls versehentlich negative Werte eingegeben werden, kann `byte` diese nicht
 - **Zuweisung vs Vergleich:** `=` vs `==`
 
 ### Bei Fehlersuche
-- **Genau benennen:** "Zeile X: Statt `max2` wird `max` zugewingwiesen"
+- **Genau benennen:** "Zeile X: Statt `max2` wird `max` zugewiesen"
 - **Ursache erklären:** Kurz und knackig, warum das falsch ist
 - **Korrektur angeben:** Die korrekte Zeile schreiben
 
@@ -193,3 +178,9 @@ c) Falls versehentlich negative Werte eingegeben werden, kann `byte` diese nicht
 - [ ] Habe ich Fehler klar lokalisiert und begründet?
 
 **Zurück zur Übersicht:** [00_Einleitung.md](00_Einleitung.md)
+
+## Verwandt
+
+- [Pseudocode-Übersicht](readme.md)
+- [Softwaretest: White-Box & Black-Box](softwaretest-white-black-box.md)
+- [Lektion 4: Programmierung](../../analyse-der-exams/04_Programmierung_Grundlagen.md)

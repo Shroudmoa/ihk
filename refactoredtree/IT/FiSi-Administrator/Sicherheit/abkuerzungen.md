@@ -1,6 +1,6 @@
-# Abkürzungen
-
 # IT-Abkürzungen – IHK AP2
+
+> Nachschlagetabelle. Die Themen selbst stehen in den verlinkten Lernblättern unter [Verwandt](#verwandt).
 
 ## Netzwerke und Protokolle
 
@@ -72,6 +72,27 @@
 | EDR | Endpoint Detection and Response | Erkennt und untersucht Sicherheitsvorfälle auf Endgeräten. |
 | SIEM | Security Information and Event Management | Sammelt und analysiert Sicherheitsereignisse zentral. |
 | Zero Trust | Zero Trust Security Model | Zugriffe werden konsequent geprüft; Vertrauen allein aufgrund des Netzwerkstandorts reicht nicht. |
+| DMZ | Demilitarisierte Zone | Netzsegment für von außen erreichbare Server zwischen Internet und LAN. |
+| SPI | Stateful Packet Inspection | Firewall, die den Verbindungszustand mitverfolgt. |
+| NGFW | Next Generation Firewall | Firewall mit Anwendungserkennung, IPS und TLS-Inspection (bis OSI 7). |
+| WAF | Web Application Firewall | Schützt Webanwendungen z. B. vor SQL-Injection und XSS. |
+| UTM | Unified Threat Management | Sicherheitsgerät, das Firewall, VPN, Virenschutz und Filter bündelt. |
+| RADIUS | Remote Authentication Dial-In User Service | AAA-Protokoll für Netzzugang (UDP 1812/1813). |
+| EAP | Extensible Authentication Protocol | Authentifizierungsrahmen bei 802.1X und WPA-Enterprise. |
+| AAA | Authentication, Authorization, Accounting | Wer bist du, was darfst du, was hast du getan. |
+| CRL | Certificate Revocation List | Sperrliste widerrufener Zertifikate. |
+| OCSP | Online Certificate Status Protocol | Online-Abfrage des Sperrstatus eines Zertifikats. |
+| S/MIME | Secure/Multipurpose Internet Mail Extensions | E-Mail-Verschlüsselung und -Signatur mit X.509-Zertifikaten. |
+| SPF / DKIM / DMARC | Sender Policy Framework / DomainKeys Identified Mail / Domain-based Message Authentication, Reporting and Conformance | DNS-basierte Verfahren gegen gefälschte E-Mail-Absender. |
+| CVE / CVSS | Common Vulnerabilities and Exposures / Common Vulnerability Scoring System | Kennung bzw. Schweregrad (0–10) bekannter Schwachstellen. |
+| ISMS | Informationssicherheits-Managementsystem | Organisatorischer Rahmen für Informationssicherheit (ISO 27001, BSI IT-Grundschutz). |
+| BSI | Bundesamt für Sicherheit in der Informationstechnik | Deutsche Cyber-Sicherheitsbehörde, Herausgeber des IT-Grundschutzes. |
+| ISB | Informationssicherheitsbeauftragter | Verantwortlich für die Informationssicherheit im Unternehmen. |
+| KRITIS | Kritische Infrastrukturen | Einrichtungen wie Energie, Wasser, Gesundheit mit besonderen Sicherheitspflichten. |
+| NIS2 | Network and Information Security Directive 2 | EU-Richtlinie mit Sicherheits- und Meldepflichten für viele Unternehmen. |
+| LAPS | Local Administrator Password Solution | Eindeutige, rotierende lokale Admin-Passwörter je Windows-Gerät. |
+| TOTP | Time-based One-Time Password | Zeitbasierter Einmalcode, z. B. aus einer Authenticator-App. |
+| FIDO2 | Fast Identity Online 2 | Standard für phishing-resistente Anmeldung mit Hardware-Token oder Passkey. |
 
 ## Betriebssysteme, Server und Virtualisierung
 
@@ -133,6 +154,8 @@
 | VVT | Verzeichnis von Verarbeitungstätigkeiten | Dokumentiert Verarbeitungstätigkeiten personenbezogener Daten. |
 | DSFA | Datenschutz-Folgenabschätzung | Bewertung der Risiken einer Verarbeitung mit voraussichtlich hohem Risiko. |
 | Betroffenenrechte | Rechte betroffener Personen | Dazu zählen z. B. Auskunft, Berichtigung und Löschung, jeweils unter den gesetzlichen Voraussetzungen. |
+| SCC | Standard Contractual Clauses | Standardvertragsklauseln der EU-Kommission für Datenübermittlungen in Drittländer. |
+| BfDI | Bundesbeauftragte(r) für den Datenschutz und die Informationsfreiheit | Datenschutz-Aufsichtsbehörde des Bundes; für Unternehmen meist die Landesbehörde zuständig. |
 
 ## Hardware, Daten und Leistung
 
@@ -209,3 +232,12 @@
 - **IaaS vs. PaaS vs. SaaS:** Infrastruktur, Entwicklungsplattform, fertige Anwendung.
 - **RAM vs. SSD:** RAM ist flüchtiger Arbeitsspeicher; SSD ist nichtflüchtiger Massenspeicher.
 - **Public Key vs. Private Key:** Der Public Key darf veröffentlicht werden; der Private Key muss geheim bleiben.
+
+## Verwandt
+
+- [Schutzziele](schutzziele.md)
+- [Firewall-Generationen und Sicherheitskonzepte](firewall/firewalls-alle-generationen-sicherheitskonzepte-antivirus.md)
+- [PKI und Zertifikate](Verschluesselung/pki.md)
+- [ISMS und IT-Grundschutz](isms-bsi-grundschutz.md)
+- [TOM nach DSGVO](../../Management/DSGVO/toms.md)
+- [Ports](../OSI-IP-mac-bit-byte/ports.md)

@@ -1,61 +1,85 @@
-# Netzwerktypen
+# Netzwerktypen und Topologien
 
-## Netzwerktypen nach geografischer Ausdehnung (IHK)
+## In 30 Sekunden
 
-| Typ | Vollständiger Name | Ausdehnung | Verbindung / Beispiel | Typische Sicherheitsrisiken |
+- Nach **Ausdehnung**: **PAN** (persönlicher Nahbereich) → **LAN** (Gebäude) → **CAN** (Campus) → **MAN** (Stadt) → **WAN** (Länder) → **GAN** (weltweit).
+- Nach **Topologie**: heute fast immer **(erweiterter) Stern** im LAN, **Mesh** im WAN/Backbone; Bus und Ring sind historisch.
+- Typische Technik: PAN = Bluetooth, LAN = Ethernet/WLAN, CAN = Glasfaser + VLANs, WAN = MPLS, SD-WAN, Site-to-Site-VPN.
+- Die Netzgröße bestimmt **nicht** automatisch die Angriffsart – entscheidend sind Architektur, Protokolle und Konfiguration.
+- Prüfungsbezug meist indirekt: Standortkopplung (VPN, WAN-Anschluss), Gebäudevernetzung (LWL), Segmentierung (VLAN, DMZ).
+
+## Kernwissen
+
+### Netzwerktypen nach Ausdehnung
+
+| Typ | Name | Ausdehnung | Verbindung / Beispiel | Typische Risiken |
 |---|---|---|---|---|
-| PAN | Personal Area Network | Persönlicher Nahbereich | Bluetooth, USB-Tethering | Bluetooth-Hijacking, Bluejacking, unbefugtes Pairing |
-| LAN | Local Area Network | Raum, Gebäude oder Gelände | Ethernet, WLAN, Switch | ARP Spoofing, MAC Spoofing, Rogue DHCP, Sniffing |
-| CAN | Campus Area Network | Mehrere Gebäude eines Standorts | Glasfaser zwischen Gebäuden, VLANs | VLAN Hopping, unbefugter Netzwerkzugriff, Malware-Ausbreitung |
-| MAN | Metropolitan Area Network | Stadt oder Ballungsraum | Metro-Ethernet, Glasfaser, Provider-Netze | DDoS, Routing-Angriffe, Abhören unverschlüsselter Daten |
-| WAN | Wide Area Network | Länder und Kontinente | MPLS, SD-WAN, Site-to-Site-VPN | DDoS, MitM, VPN-Angriffe, Routing-Manipulation |
-| GAN | Global Area Network | Weltweite Vernetzung | Globale Unternehmensnetze, Satellitenverbindungen | DDoS, kompromittierte Endpunkte, globale Spionageangriffe |
+| PAN | Personal Area Network | wenige Meter | Bluetooth, USB-Tethering | unbefugtes Pairing, Bluejacking |
+| LAN | Local Area Network | Raum, Gebäude | Ethernet, WLAN, Switches | ARP-Spoofing, Rogue DHCP, Sniffing |
+| CAN | Campus Area Network | mehrere Gebäude eines Geländes | Glasfaser zwischen Gebäuden, VLANs | VLAN-Hopping, Ausbreitung von Malware |
+| MAN | Metropolitan Area Network | Stadt, Region | Metro-Ethernet, Provider-Glasfaser | Abhören unverschlüsselter Strecken, DDoS |
+| WAN | Wide Area Network | Länder, Kontinente | MPLS, SD-WAN, Site-to-Site-VPN, Internet | MitM, Routing-Manipulation, DDoS |
+| GAN | Global Area Network | weltweit | globale Unternehmensnetze, Satellit | kompromittierte Endpunkte, Spionage |
 
-## IHK-Prüfungswissen
+### Topologien
 
-- **PAN:** Verbindet persönliche Geräte über kurze Distanzen. Bluetooth sollte nur bei Bedarf aktiviert und unbekanntes Pairing abgelehnt werden.
-- **LAN:** Verbindet Geräte innerhalb eines lokalen Netzes. VLANs segmentieren das Netz; Firewalls und 802.1X kontrollieren Zugriffe.
-- **CAN:** Verbindet mehrere LANs auf einem Campus. VLANs, ACLs und Netzsegmentierung begrenzen die Ausbreitung von Angriffen.
-- **MAN:** Verbindet Standorte innerhalb einer Stadt oder Region. Verschlüsselung und Provider-Sicherheitsmechanismen schützen die Datenübertragung.
-- **WAN:** Verbindet geografisch entfernte Netzwerke. Site-to-Site-VPNs mit IPsec schützen die Kommunikation über öffentliche Netze.
-- **GAN:** Ermöglicht globale Vernetzung. Zentrale Sicherheitsrichtlinien, MFA, Monitoring und Zero-Trust-Konzepte reduzieren Risiken.
+| Topologie | Aufbau | Vorteil | Nachteil |
+|---|---|---|---|
+| **Stern** | alle Geräte an einem zentralen Switch | einfache Fehlersuche, Ausfall eines Kabels betrifft nur ein Gerät | zentraler Switch = Single Point of Failure |
+| Erweiterter Stern / Baum | Core → Distribution → Access | skalierbar, strukturiert | Redundanz muss geplant werden (STP, LACP) |
+| Bus | gemeinsame Leitung (Koax) | wenig Kabel | ein Fehler legt alles lahm – veraltet |
+| Ring | jeder mit zwei Nachbarn | deterministisch | Unterbrechung ohne Redundanzring = Ausfall |
+| **Vermascht (Mesh)** | mehrere Wege zwischen Knoten | hohe Ausfallsicherheit | teuer, komplex (Routing nötig) – WAN, Internet, WLAN-Mesh |
 
-## Verbindungsarten und Protokolle
+### Verbindungsarten
 
 | Technologie | Zweck | Typischer Bezug |
 |---|---|---|
-| Bluetooth | Kurzstreckenkommunikation | PAN |
-| Ethernet (IEEE 802.3) | Kabelgebundenes LAN | LAN/CAN |
-| WLAN (IEEE 802.11) | Drahtloses LAN | LAN |
-| Glasfaser | Hohe Bandbreite über größere Distanzen | CAN/MAN/WAN |
-| MPLS | Provider-basiertes Weiterleiten von Datenverkehr | WAN |
-| IPsec VPN | Verschlüsselter Tunnel über IP-Netze | WAN |
-| SD-WAN | Zentrale, softwarebasierte Steuerung von WAN-Verbindungen | WAN/GAN |
+| Bluetooth | Kurzstrecke | PAN |
+| Ethernet (IEEE 802.3) | kabelgebundenes LAN | LAN/CAN |
+| WLAN (IEEE 802.11) | drahtloses LAN | LAN |
+| Glasfaser | hohe Bandbreite, große Distanz | CAN/MAN/WAN |
+| MPLS | Provider-Netz mit Label-Switching, QoS | WAN |
+| IPsec-VPN | verschlüsselter Tunnel über das Internet | WAN |
+| SD-WAN | softwaregesteuerte Nutzung mehrerer WAN-Leitungen | WAN/GAN |
 
-## Typische Angriffe und Schutzmaßnahmen
+### Angriffe und Schutzmaßnahmen
 
-| Angriff | Betroffene Ebene / Bereich | Schutzmaßnahme |
+| Angriff | Bereich | Schutz |
 |---|---|---|
-| Bluejacking | PAN / Bluetooth | Unbekannte Anfragen ablehnen, Sichtbarkeit deaktivieren |
-| ARP Spoofing | LAN / OSI 2 | Dynamic ARP Inspection, DHCP Snooping |
-| Rogue Access Point | WLAN / LAN | WPA3, 802.1X, Rogue-AP-Erkennung |
-| VLAN Hopping | LAN/CAN / OSI 2 | Switchports korrekt konfigurieren, ungenutzte Ports deaktivieren |
-| Man-in-the-Middle | LAN/WAN | TLS, Zertifikatsprüfung, IPsec VPN |
-| DDoS | LAN/MAN/WAN/GAN | DDoS-Schutz, Rate Limiting, Traffic-Filterung |
-| Routing-Manipulation | MAN/WAN/GAN | Routing-Filter, sichere Protokollkonfiguration, Monitoring |
+| Bluejacking | PAN | Sichtbarkeit aus, unbekannte Anfragen ablehnen |
+| ARP-Spoofing | LAN, Schicht 2 | Dynamic ARP Inspection, DHCP-Snooping |
+| Rogue Access Point | WLAN | WPA3/802.1X, Rogue-AP-Erkennung am Controller |
+| VLAN-Hopping | LAN/CAN | Trunks gezielt, natives VLAN ungenutzt, ungenutzte Ports aus |
+| Man-in-the-Middle | LAN/WAN | TLS mit Zertifikatsprüfung, IPsec |
+| DDoS | MAN/WAN/GAN | DDoS-Schutz des Providers, Rate Limiting |
+| Routing-Manipulation | WAN | Routing-Filter, Authentifizierung der Routing-Protokolle, Monitoring |
 
-## IHK-Merksätze
+## Prüfungsfrage
 
-- **PAN bis GAN:** Die geografische Reichweite nimmt grundsätzlich zu.
-- **VPN:** Schützt die Vertraulichkeit und Integrität der Datenübertragung, sofern korrekt konfiguriert.
-- **VLAN:** Trennt Broadcast-Domänen, ist aber allein keine vollständige Sicherheitsmaßnahme.
-- **Wichtig:** Die Netzwerkgröße bestimmt nicht automatisch die Angriffsart. Angriffe hängen von Architektur, Protokollen und Sicherheitskonfiguration ab.
+**Frage:** Ein Unternehmen hat eine Zentrale mit drei Gebäuden auf einem Gelände und zwei Filialen in anderen Städten. Ordnen Sie die Vernetzung den Netzwerktypen zu und schlagen Sie jeweils eine geeignete Übertragungstechnik vor.
+
+**Musterantwort:** Die Vernetzung innerhalb eines Gebäudes ist ein **LAN** (Ethernet mit Switches in Sterntopologie, WLAN). Die drei Gebäude auf dem Gelände bilden zusammen ein **CAN**; sie werden über **Glasfaser** (Singlemode) miteinander verbunden, da Kupfer auf 100 m begrenzt ist und LWL galvanisch trennt. Die Filialen in anderen Städten werden über ein **WAN** angebunden, z. B. per **Site-to-Site-VPN (IPsec)** über Internetanschlüsse oder per MPLS bzw. SD-WAN des Providers.
+
+## Falle
+
+- CAN und MAN verwechseln: **Campus** = ein Gelände eines Betreibers, **Metropolitan** = Stadtgebiet.
+- „VLAN macht das Netz sicher“ → VLAN segmentiert, Sicherheit entsteht erst durch Regeln am Übergang.
+- Stern als ausfallsicher bezeichnen → der zentrale Switch ist ein Single Point of Failure.
+- Internet als „GAN des Unternehmens“ bezeichnen → das Internet ist ein öffentliches WAN; ein GAN ist ein weltweites Netz eines Betreibers/Unternehmens.
+
+## Merksatz
+
+**„Person – Local – Campus – Metropolitan – Wide – Global: von der Hosentasche bis um die Welt.“**
 
 ## Verwandt
 
 - [OSI](OSI-IP-mac-bit-byte/osi.md) – Schichtenmodell als Grundlage
-- [MAC](OSI-IP-mac-bit-byte/mac.md) – Adressierung im LAN
+- [Netzwerkgeräte](Netzwerk-Administration/netzwerkgeraete.md) – was in welchem Netz steht
+- [Verkabelung](Netzwerk-Administration/verkabelung-kupfer-lwl.md) – Kupfer im LAN, Glasfaser im CAN
+- [WAN-Anschlussarten](Netzwerk-Administration/wan-anschlussarten.md) – DSL, Kabel, Glasfaser, LTE
+- [VLAN](Netzwerk-Administration/vlan.md) – Segmentierung im LAN/CAN
+- [VPN](../nice-to-know/VPN/readme.md) – Standortkopplung im WAN
 - [Firewall](Sicherheit/firewall/firewall.md) – Trennung zwischen Netzen
 - [Proxy](Netzwerk-Administration/proxy.md) – kontrollierter Zugriff nach außen
-- [IPv6](OSI-IP-mac-bit-byte/ipv6.md) – Adressierung im WAN/LAN
-
+- [IPv6](OSI-IP-mac-bit-byte/ipv6.md) – Adressierung im LAN/WAN

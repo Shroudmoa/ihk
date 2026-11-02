@@ -127,20 +127,23 @@ for (int i = 1; i < arr.Length; i++) {
 | 3 | 12 | 12 > 12? nein; 12 > 5? ja | 12 | 12 |
 | 4 | 8 | 8 > 12? nein; 8 > 12? nein | 12 | 12 |
 
+**Achtung:** Ohne die Zusatzbedingung `&& arr[i] != max` übernimmt `max2` den doppelten Höchstwert (12). Ob das gewollt ist, steht in der Aufgabenstellung ("zweithöchster **Wert**" vs. "zweithöchster **Eintrag**").
+
 **Tipp:** Fang immer beim Startwert an und geh Zeile für Zeile durch den Code.
 
 ## Übungsaufgaben
 
 ### Aufgabe 2a: Mittelwert
-Gegeben: `{15, 25, 35, 45}`
-Berechne den Mittelwert. Welche Codezeile fehlt für eine korrekte Kommazahl?
+Gegeben: `{15, 25, 35, 40}`
+Berechne den Mittelwert. Was ist an der letzten Zeile falsch?
 ```csharp
+int[] werte = new int[] { 15, 25, 35, 40 };
 int summe = 0;
 for (int i = 0; i < werte.Length; i++) summe += werte[i];
 double mw = summe / werte.Length; // Fehlerhaft?
 ```
 
-**Lösung:** `double mw = (double)summe / werte.Length;`
+**Lösung:** Summe = 115, korrekter Mittelwert = 115 / 4 = **28,75**. `summe / werte.Length` ist eine **ganzzahlige Division** (int / int) und liefert 28; erst danach wird in `double` umgewandelt (28,0). Korrekt: `double mw = (double)summe / werte.Length;`
 
 ### Aufgabe 2b: Fehlersuche
 Finde den Fehler:
@@ -157,6 +160,12 @@ for (int i = 0; i < werte.Length; i++) { // Start bei 0 statt 1
 }
 ```
 
-**Lösung:** Schleife startet bei `i = 0` statt `i = 1`. Wenn `werte[0]` bereits `max` ist, wird beim ersten Durchlauf verglichen - das kann zu unerwarteten Ergebnissen führen, aber vor allem unnötig. Besser ab Index 1 starten. Problematischer wird's wenn der alte `max2`-Wert verloren geht. Meistens wird gefordert: "Starte die Schleife ab Index 1, da max bereits werte[0] ist."
+**Lösung:** Die Schleife startet bei `i = 0`, obwohl `max` bereits mit `werte[0]` initialisiert ist. Im ersten Durchlauf ist `werte[0] > max` falsch (gleich), aber `werte[0] > max2` (also > 0) wahr – dadurch wird `max2 = werte[0]`, also derselbe Wert wie `max`. Ist `werte[0]` das Maximum, bleibt `max2` falsch. Beispiel `{50, 10, 30}`: Ergebnis max = 50, max2 = 50 statt 30. **Korrektur:** Schleife bei `i = 1` starten (oder `max = 0` setzen, wenn nur positive Werte vorkommen).
 
 **Weiter:** [03_Schleifen_Fehlersuche.md](03_Schleifen_Fehlersuche.md)
+
+## Verwandt
+
+- [Algorithmen: Sortieren, Suchen, Rekursion](algorithmen-sortieren-suchen-rekursion.md)
+- [Fehlerarten & Exceptions](fehlerarten-exceptions.md) – DivideByZero bei leerem Array
+- [Lektion 4: Programmierung](../../analyse-der-exams/04_Programmierung_Grundlagen.md) – Mittelwert in 8 von 10 Jahrgängen

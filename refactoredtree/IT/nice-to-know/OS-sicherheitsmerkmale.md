@@ -1,80 +1,64 @@
-# Betriebssystem-Sicherheitsmerkmale
+# Betriebssystem-Sicherheitsmerkmale und Härtung
 
-## Die 3 wichtigsten Merkmale für die Tabelle
+> Abgrenzung: Dieses Blatt sammelt **eingebaute Sicherheitsfunktionen** der Betriebssysteme und eine Härtungs-Checkliste für Prüfungsantworten. Das ausführliche Härtungsblatt ist [OS-Härtung](../FiSi-Administrator/Server/os-haertung.md).
 
-| Sicherheitsmerkmal | Erläuterung |
-| :--- | :--- |
-| **Benutzerkontensteuerung (UAC / Rechteverwaltung)** | Vergabe von Lese-/Schreibrechten basierend auf Benutzerrollen (RBAC). Verhindert, dass normale Nutzer Systemänderungen vornehmen oder sensible Daten anderer Nutzer einsehen. |
-| **Verschlüsselung (Festplatten-/Dateisystem-Ebene)** | Verschlüsselung von Datenträgern (Data-at-Rest). Schützt Daten bei physischem Diebstahl des Servers oder der Festplatten (z.B. BitLocker, LUKS). |
-| **Zentrale Protokollierung (Auditing/Logging)** | Aufzeichnung von Systemereignissen, Anmeldeversuchen und Änderungen. Ermöglicht die forensische Nachverfolgung von Sicherheitsvorfällen und die Erkennung von Angriffen. |
+## In 30 Sekunden
 
-*(Alternative Merkmale falls du variieren willst: Selinux/AppArmor (Zugriffskontrolle), Windows Defender/ClamAV (Malwareschutz), Secure Boot (Manipulationsschutz beim Start).)*
+- Prüfung 2022S GA1: **Sicherheitsmerkmale eines Betriebssystems** nennen – z. B. Benutzer- und Rechteverwaltung (UAC/sudo), Festplattenverschlüsselung (BitLocker/LUKS), Virenschutz, Firewall, Updates, Protokollierung.
+- Prüfung 2022S, 2023S, 2025S, 2026S: **Härtungsmaßnahmen** – unnötige Dienste abschalten, Standardkonten umbenennen/deaktivieren, Secure Boot, BIOS/UEFI-Passwort, Least Privilege, Updates.
+- Grundidee der Härtung: **Angriffsfläche verkleinern** – was nicht läuft, kann nicht angegriffen werden.
+- Härtung ist ein **Prozess**: nach Updates und Änderungen erneut prüfen.
 
----
+## Kernwissen
 
-## Realistische OS-Beispiele (für Prüfungs-Kontext)
+**Eingebaute Sicherheitsmerkmale**
 
-### 1. Windows Server (2022 / 2025)
-*   **UAC (User Account Control):** Verhindert, dass Anwendungen ohne explizite Administratorbestätigung Systemänderungen vornehmen.
-*   **BitLocker:** Vollverschlüsselung der System- und Datenfestplatten (TPM-Chip nötig).
-*   **Windows Defender:** Integrierter Virenscanner und Echtzeitschutz.
-*   **Windows Firewall:** Eingehende und ausgehende Regelüberwachung.
-*   **SMB-Signing:** Verhindert Man-in-the-Middle-Angriffe auf Netzwerkfreigaben (wichtig für Fileserver).
-*   **Active Directory (AD):** Zentrale Benutzer- und Rechteverwaltung für ganze Domänen.
+| Merkmal | Windows | Linux | macOS | Schützt vor |
+|---|---|---|---|---|
+| Rechteverwaltung | UAC, NTFS-Rechte, AD-Gruppen | Benutzer/Gruppen, `chmod`/`chown`, `sudo` | Benutzerkonten, Admin-Bestätigung | Systemänderungen durch normale Benutzer/Malware |
+| Datenträgerverschlüsselung | **BitLocker** (mit TPM) | **LUKS** | FileVault | Datendiebstahl bei Verlust/Diebstahl (Data at Rest) |
+| Zwangszugriffskontrolle | – (AppLocker/WDAC als Anwendungssteuerung) | **SELinux, AppArmor** | SIP (System Integrity Protection) | kompromittierte Dienste greifen nicht über ihre Grenzen |
+| Malwareschutz | Microsoft Defender | z. B. ClamAV, EDR-Agenten | XProtect, Gatekeeper | Schadsoftware |
+| Firewall | Windows Defender Firewall | nftables/iptables, ufw, firewalld | Application Firewall | unerwünschte Verbindungen |
+| Updates | Windows Update/WSUS | Paketverwaltung (apt, dnf) | Softwareupdate | bekannte Lücken |
+| Protokollierung | Ereignisanzeige, Überwachungsrichtlinien | journald, auditd, syslog | Unified Logging | Nachvollziehbarkeit, Angriffserkennung |
+| Startschutz | **Secure Boot**, Measured Boot mit TPM | Secure Boot | Secure Boot (Apple-Chips) | manipulierte Bootloader/Rootkits |
+| Netzwerkfreigaben | SMB-Signing, SMBv1 abschalten | – | – | Man-in-the-Middle auf Freigaben |
 
-### 2. Linux (Ubuntu Server / Debian / RHEL)
-*   **Rechteverwaltung (chmod / chown):** Strikte Trennung von Root-Rechten und normalen User-Rechten (sudo).
-*   **LUKS:** Standard-Verschlüsselung für Linux-Festplatten.
-*   **SELinux / AppArmor:** Mandatory Access Control (MAC). Selbst wenn ein Dienst gehackt wird, kann er nicht auf Dateien außerhalb seiner Sandbox zugreifen.
-*   **iptables / nftables / ufw:** Integrierte Paketfilter (Firewall) im Kernel (Netfilter).
-*   **Auditd:** System-Audit-Daemon zur Protokollierung von Systemaufrufen und sicherheitsrelevanten Ereignissen.
+**Härtungs-Checkliste (Prüfung 2023S, gegliedert)**
 
-### 3. macOS (wenn der Fileserver ein Mac ist)
-*   **FileVault:** Festplattenverschlüsselung.
-*   **XProtect / Gatekeeper:** Integrierte Malware-Erkennung und Blockierung nicht-signierter Software.
-*   **SIP (System Integrity Protection):** Verhindert, dass selbst der Root-User bestimmte Systemdateien ändert.
+| Bereich | Maßnahmen |
+|---|---|
+| Hardware/Firmware | **UEFI/BIOS-Passwort**, **Secure Boot** aktivieren, Bootreihenfolge festlegen (kein Start von USB), ungenutzte Schnittstellen deaktivieren, TPM aktivieren |
+| Installation/Konfiguration | nur benötigte Rollen und Software installieren, Updates einspielen und automatisieren, getrennte System- und Datenpartitionen, Servernamen ohne Rückschluss auf Funktion |
+| Dienste | **nicht benötigte Dienste und Ports abschalten**, unsichere Protokolle ersetzen (Telnet → SSH, FTP → SFTP, SMBv1 aus), Autostart prüfen, Skriptausführung einschränken |
+| Konten und Anmeldung | **Standardkonten umbenennen oder deaktivieren**, Standardpasswörter ändern, starke Passwortrichtlinie, **MFA**, Kontosperre, Anmeldezeiten einschränken, Fernzugriff nur über VPN bzw. definierte IPs |
+| Administration | **Least Privilege**, getrennte Admin-Konten, Rechte auf Verzeichnisse und Systemeinstellungen eng vergeben, **Protokollierung** aktivieren und zentral sammeln |
+| Netzwerk | Host-Firewall mit Whitelisting (alles verboten, was nicht erlaubt ist), Management-Zugriff nur aus dem Admin-Netz |
 
+## Prüfungsfrage
 
+**Frage:** Nennen Sie vier Maßnahmen, um einen neu installierten Windows-Server zu härten, und begründen Sie zwei davon.
 
+**Musterantwort:** Erstens werden nicht benötigte Dienste und Rollen deaktiviert, weil jeder laufende Dienst eine mögliche Angriffsfläche bietet. Zweitens wird das Standardkonto Administrator umbenannt bzw. deaktiviert und durch persönliche Admin-Konten mit starken Passwörtern und MFA ersetzt, weil Angreifer den Namen kennen und gezielt Passwörter dafür ausprobieren. Drittens werden alle aktuellen Updates eingespielt und regelmäßig über WSUS verteilt. Viertens werden Secure Boot aktiviert und ein UEFI-Passwort gesetzt, damit weder manipulierte Bootloader starten noch Unbefugte die Bootreihenfolge ändern können.
 
-----------------------------
-## 2023 Sommer wurde verlangt 
+## Falle
 
+- „Antivirus installieren“ als einzige Härtungsmaßnahme → Härtung heißt vor allem **reduzieren und einschränken**.
+- Secure Boot mit BIOS-Passwort verwechseln: Secure Boot prüft **Signaturen** des Bootloaders, das Passwort schützt die **Einstellungen**.
+- Standardkonto nur umbenennen, aber mit Standardpasswort lassen.
 
-# IHK-Perspektive: Sicherheitsmaßnahmen auf einem Betriebssystem
-## 0. Server Hardware 
+## Merksatz
 
-*   Reihnfolge von boot
-*   Secure-boot
-+   Adminpassword auf UEFI
+**„Was nicht läuft, kann nicht angegriffen werden – abschalten, umbenennen, einschränken, aktualisieren.“**
 
+## Verwandt
 
-
-## 1. Grundlegende Betriebssysteminstallation und -konfiguration
-*   Servernamen anonymisieren (keine Rückschlüsse auf Zweck/Standort).
-*   System-Updates planen und automatisieren.
-*   Default-Konten umbenennen oder deaktivieren (z.B. "Administrator").
-*   Firewall-Regeln einschränken (Whitelisting statt Blacklisting).
-*   Partitionieren und Formatieren der Datenträger (getrennte System-/Datenpartitionen).
-
-## 2. Dienste / Features des Servers
-*   Nicht benötigte Dienste deaktivieren (Reduktion der Angriffsfläche).
-*   Auto-Start-Programme selektieren und deaktivieren.
-*   Nur sichere Programme zulassen und installieren.
-*   Unsichere Protokolle abschalten (z.B. Telnet, FTP, SMBv1).
-*   Sperren von bestimmten Skripten (z.B. PowerShell/Shell-Skripte einschränken).
-
-## 3. Anmelden am Server
-*   Sichere Passwortregeln festlegen (Länge, Komplexität, Ablauf).
-*   Anmeldezeiten einschränken (z.B. nur zu Geschäftszeiten).
-*   Anmelden nur mit 2FA/MFA zulassen (Zwei-Faktor-Authentifizierung).
-*   Remote-Verwaltung / -Zugriff einschränken (z.B. per VPN oder IP-Whitelist).
-
-## 4. Administrieren des Servers
-*   Berechtigungen vergeben für:
-    *   Ändern von Systemeinstellungen
-    *   Installieren von Anwendungen
-    *   Zugriff auf Verzeichnisse
-    *   Zugriff auf Systemressourcen
-    *   Systemeinstellungen sichern
-*   Logs maximale Einstellungen aufzeichnen lassen (Auditing/Logging).
+- [OS-Härtung](../FiSi-Administrator/Server/os-haertung.md)
+- [BIOS und UEFI](../FiSi-Administrator/Server/bios-uefi.md)
+- [BitLocker](../FiSi-Administrator/Server/bitlocker.md)
+- [Least Privilege](../FiSi-Administrator/Sicherheit/least-privilege.md)
+- [Patchmanagement](../FiSi-Administrator/Netzwerk-Administration/patchmanagement-tu-su-pu.md)
+- [Malware und Ransomware](../FiSi-Administrator/Sicherheit/hacking/malware-ransomware.md)
+- [Zugriffskontrollmodelle](access-control.md) – MAC mit SELinux
+- [Lektion 28 GA1-Praxisthemen (OS-Härtung)](../analyse-der-exams/L28_GA1_Sonstiges_Praxisthemen.md)

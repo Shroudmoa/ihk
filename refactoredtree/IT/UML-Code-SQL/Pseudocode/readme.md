@@ -12,6 +12,17 @@ Diese Sammlung ist speziell für FiSi-Azubis konzipiert, um sich gezielt auf den
 | [03_Schleifen_Fehlersuche.md](03_Schleifen_Fehlersuche.md) | Bubblesort, Schreibtischtest, Fehlersuche | ★★★★★ |
 | [04_Praxistests_Musterloesungen.md](04_Praxistests_Musterloesungen.md) | Originalnahe Übungstests mit Lösungen | ★★★★★ |
 
+## Vertiefende Lernblätter
+
+| Datei | Thema | Priorität |
+|---|---|---|
+| [datentypen.md](datentypen.md) | Wertebereiche, `int` vs. `byte`, Casts, Bitbedarf | ★★★★★ |
+| [fehlerarten-exceptions.md](fehlerarten-exceptions.md) | Syntax-, Semantik-, Laufzeitfehler, Exceptions, try/catch | ★★★★★ |
+| [algorithmen-sortieren-suchen-rekursion.md](algorithmen-sortieren-suchen-rekursion.md) | Bubblesort, Selectionsort, lineare/binäre Suche, Rekursion | ★★★★☆ |
+| [oop-grundlagen.md](oop-grundlagen.md) | Klasse, Objekt, Kapselung, Vererbung, Polymorphie, Aggregation/Komposition | ★★★★☆ |
+| [struktogramm-pap.md](struktogramm-pap.md) | Struktogramm, Programmablaufplan, Vorteile von Pseudocode | ★★★☆☆ |
+| [softwaretest-white-black-box.md](softwaretest-white-black-box.md) | Black-Box, White-Box, Grenzwertanalyse, Teststufen | ★★★★☆ |
+
 ## Top 5 für die Prüfung
 
 1. **Mittelwert berechnen** - Kommt in fast jedem Jahrgang vor
@@ -34,6 +45,8 @@ Diese Sammlung ist speziell für FiSi-Azubis konzipiert, um sich gezielt auf den
 
 - [Analyse der Prüfungen - Programmierung](../../analyse-der-exams/04_Programmierung_Grundlagen.md) - Echte Prüfungsfälle aus 2021-2026
 - [IT-Lerntree](../../../IT.md) - Gesamtüberblick
+- [UML-Übersicht](../UML/readme.md) - Klassendiagramm, Aktivitätsdiagramm, Zustandsdiagramm
+- [SQL-Übersicht](../sql/readme.md) - Datenbanken und Datenformate
 
 ## Lernplan (für 2-3 Tage vor Prüfung)
 

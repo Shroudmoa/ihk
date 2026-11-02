@@ -7,7 +7,9 @@
 - **Container** = Container-Engine virtualisiert OS, teilen sich **Host-OS-Kernel** → leicht & schnell
 - 20 VMs = 20 Gastbetriebssysteme + 20 Kernel | 20 Container = **1 Kernel + 20 isolierte Prozesse**
 
-## Kernvergleich
+## Kernwissen
+
+### Kernvergleich
 
 | Kriterium | **Bare Metal** | **VM (Virtual Machine)** | **Container** |
 |---|---|---|---|
@@ -22,14 +24,14 @@
 | **Mischbetrieb verschiedener OS** | Nein | **Ja** (Linux/Windows parallel) | **Nein** (gleicher Kernel wie Host) |
 | **Typischer Einsatz** | Datenbanken, Storage, latenzkritisch | AD, Legacy-Apps, gemischte Umgebungen | Microservices, CI/CD, Cloud-native Apps |
 
-## Entscheidungslogik für die Prüfung
+### Entscheidungslogik für die Prüfung
 
 1. **Anderes Betriebssystem oder maximale Isolation nötig?** → **VM**
 2. **Viele identische, kurzlebige Dienste, schnell & ressourcenschonend?** → **Container**
 3. **Maximale I/O-Leistung, Direktzugriff auf Hardware?** → **Bare Metal**
 4. **Verschiedene Kernel notwendig?** → **Nur VM** (Container unmöglich)
 
-## Wichtige Punkte
+### Wichtige Punkte
 
 - **Container sind keine kleinen VMs.** Der größte Unterschied: gemeinsamer Kernel vs. eigener Kernel
 - **Kernel-Bug:** Trifft bei Containern potentiell **alle** Container auf diesem Host
@@ -41,15 +43,6 @@
 **Frage:** Ein Unternehmen will 20 Instanzen einer Webanwendung möglichst platzsparend und schnell skalierbar betreiben. Welches Verfahren ist am geeignetsten und warum?
 
 **Musterantwort:** **Container**, da alle Instanzen den gleichen Host-OS-Kernel nutzen und nur Anwendung + Bibliotheken im Image enthalten. Dadurch verbrauchen sie deutlich weniger RAM/Storage als VMs, lassen sich in Sekunden starten und sehr dicht betreiben. Für erhöhte Isolation kann man sie zusätzlich in virtuellen Maschinen laufen lassen.
-
-## Verwandt
-
-- [Hypervisor-Typen](hypervisor-typen.md)
-- [Virtualisierung](virtualisierung.md)
-- [Live-Migration-VMs](live-migration-vms.md)
-- [Skalierbarkeit-Elastizität](skalierbarkeit-elastizitaet.md)
-- [Cloud Computing](../Cloud/cloud-computing.md)
-
 
 ## Falle
 
@@ -68,3 +61,8 @@
 - [Live-Migration-VMs](live-migration-vms.md) – laufende VMs verschieben
 - [BIOS/UEFI-Kernel](../bios-uefi-kernel.md) – Kernel und User Space
 - [Snapshots-Backups](snapshots-backups.md) – Sicherung von VMs
+- [Container & Docker](container-docker.md) – Images, Dockerfile, Orchestrierung
+- [Virtualisierung](virtualisierung.md)
+- [Skalierbarkeit-Elastizität](skalierbarkeit-elastizitaet.md)
+- [Cloud Computing](../Cloud/cloud-computing.md)
+- [Lektion L13 Virtualisierung](../../../analyse-der-exams/L13_Virtualisierung.md)

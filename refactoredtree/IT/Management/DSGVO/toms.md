@@ -1,90 +1,86 @@
-# TOMs
+# TOM – technische und organisatorische Maßnahmen
 
-# TOM – Technische und organisatorische Maßnahmen
+> Abgrenzung: Dieses Blatt ist das **Detailblatt zu den TOM** (Art. 32 DSGVO) mit Kontrollarten und Zuordnungsaufgaben. Den DSGVO-Überblick und das Datenschutzkonzept findest du in [DSGVO-Grundlagen und Datenschutzkonzept](dsgvo-tom.md).
 
 ## In 30 Sekunden
 
-- **TOM nach Art. 32 DSGVO:** Maßnahmen zum Schutz personenbezogener Daten vor Verlust, Missbrauch, unbefugtem Zugriff und Veränderung.
-- Unternehmen müssen ein angemessenes Schutzniveau gewährleisten. Maßgeblich sind Risiko, Schutzbedarf, Stand der Technik und Umsetzungskosten.
-- **Technische TOM:** z. B. Verschlüsselung, Firewall, Zugriffskontrolle und Backups.
-- **Organisatorische TOM:** z. B. Schulungen, Berechtigungskonzepte, Sicherheitsrichtlinien und Notfallpläne.
-- TOM sind kein einmaliges Projekt. Sie müssen regelmäßig überprüft, bewertet und bei Bedarf angepasst werden.
+- **TOM** sind die Maßnahmen, mit denen personenbezogene Daten **sicher** verarbeitet werden – Pflicht nach **Art. 32 DSGVO**.
+- Maßstab: **Risiko**, **Stand der Technik**, Implementierungskosten, Art und Zweck der Verarbeitung – „angemessen“, nicht „maximal“.
+- **Technisch** = Technik (Verschlüsselung, MFA, Backup, Firewall), **organisatorisch** = Regeln und Abläufe (Schulung, Berechtigungskonzept, Besucherregelung, Notfallplan).
+- In der Prüfung zählt die **Zuordnung zu den Kontrollarten**: Zutritt (Gebäude) – Zugang (System) – Zugriff (Daten) – Weitergabe – Eingabe – Auftrag – Verfügbarkeit – Trennung (2022W, 2024S).
+- TOM müssen **regelmäßig überprüft** und angepasst werden (Art. 32 Abs. 1 lit. d).
 
-## 1. Die 8 Kontrollarten
+## Kernwissen
 
-| Kontrollart | Zweck und konkrete Beispiele |
+**Was Art. 32 DSGVO ausdrücklich nennt**
+- Pseudonymisierung und Verschlüsselung
+- dauerhafte Vertraulichkeit, Integrität, Verfügbarkeit und **Belastbarkeit** der Systeme
+- rasche **Wiederherstellbarkeit** nach einem Zwischenfall
+- Verfahren zur **regelmäßigen Überprüfung** der Wirksamkeit
+
+**Die acht Kontrollarten (prüfungsübliche Gliederung)**
+
+| Kontrollart | Leitfrage | Technische Beispiele | Organisatorische Beispiele |
+|---|---|---|---|
+| **Zutrittskontrolle** | Wer kommt **in den Raum/das Gebäude**? | RFID-Karte, Biometrie an der Tür, Alarmanlage, Videoüberwachung, Sicherheitsschloss | Besucherregelung mit Begleitung, Schlüsselverwaltung, Wachdienst |
+| **Zugangskontrolle** | Wer kann sich **am System anmelden**? | Passwort + **MFA**, Kontosperre, automatische Bildschirmsperre, 802.1X | Passwortrichtlinie, Verfahren für neue/ausscheidende Mitarbeiter |
+| **Zugriffskontrolle** | Wer darf **welche Daten** lesen/ändern? | Rollen und ACL, Verschlüsselung von Datenträgern, Protokollierung von Zugriffen | Berechtigungskonzept nach **Least Privilege/Need-to-know**, Rezertifizierung |
+| **Weitergabekontrolle** | Wie sind Daten **bei Übertragung und Transport** geschützt? | **TLS, VPN**, verschlüsselte E-Mail (S/MIME), verschlüsselte USB-Sticks | Regeln für Datenträgertransport, Versandprotokoll |
+| **Eingabekontrolle** | Wer hat **was wann geändert**? | Audit-Logs, Änderungsprotokolle, Zeitstempel | Vier-Augen-Prinzip, Aufbewahrung der Protokolle |
+| **Auftragskontrolle** | Halten **Dienstleister** sich an Weisungen? | – | **AVV nach Art. 28**, Auswahl nach Zertifizierungen, Kontrollen/Audits |
+| **Verfügbarkeitskontrolle** | Sind Daten gegen **Verlust und Ausfall** geschützt? | Backup (3-2-1), RAID, USV, Virenschutz, Brandmelder, Klimatisierung | Backup- und Notfallkonzept, **Restore-Tests** |
+| **Trennungskontrolle** | Werden Daten **zweckgetrennt** verarbeitet? | Mandantentrennung, getrennte Datenbanken, Test- und Produktivsystem getrennt | Berechtigungen je Zweck, Verbot von Echtdaten im Test |
+
+**Zuordnungsaufgabe aus der Prüfung (2024S GA1)**
+
+| Situation | Kontrollart |
 |---|---|
-| **Zutrittskontrolle** | Unbefugte vom Gebäude und Serverraum fernhalten: Schließsystem, Chipkarte, Besucherliste |
-| **Zugangskontrolle** | Unbefugte Systemanmeldungen verhindern: MFA, sichere Passwörter, Account-Sperre |
-| **Zugriffskontrolle** | Datenzugriffe auf Berechtigte begrenzen: RBAC, ACL, Least Privilege |
-| **Weitergabekontrolle** | Unbefugte Übertragung verhindern: TLS, VPN, verschlüsselte Datenträger |
-| **Eingabekontrolle** | Änderungen nachvollziehbar machen: Audit-Logs, Zeitstempel, Vier-Augen-Prinzip |
-| **Auftragskontrolle** | Auftragsverarbeiter kontrollieren: AVV, Weisungen, Nachweise und Audits |
-| **Verfügbarkeitskontrolle** | Daten und Systeme verfügbar halten: Backups, USV, RAID, Notfallkonzept |
-| **Trennungskontrolle** | Daten und Verarbeitungszwecke trennen: Mandantentrennung, getrennte Test- und Produktivsysteme |
+| RFID-Karte für das Gebäude | **Zutrittskontrolle** |
+| biometrische Anmeldung am PC | **Zugangskontrolle** |
+| Berechtigungskonzept auf Dateiebene | **Zugriffskontrolle** |
+| Verschlüsselung der Notebook-Festplatte | **Zugriffskontrolle** (Daten bei Diebstahl unlesbar); beim Transport von Datenträgern auch Weitergabekontrolle |
+| Alarmanlage außerhalb der Geschäftszeit | **Zutrittskontrolle** |
+| E-Mails per TLS übertragen | **Weitergabekontrolle** |
+| Änderungsprotokoll in der Kundendatenbank | **Eingabekontrolle** |
+| tägliches Backup auf ein Offline-Medium | **Verfügbarkeitskontrolle** |
 
-**Prüfungsfalle:** RAID ist kein Backup. RAID erhöht die Ausfallsicherheit bei bestimmten Festplattenfehlern, schützt aber nicht zuverlässig vor versehentlichem Löschen, Malware oder Brand.
+**Zutrittskontrolle im Detail (Serverraum)**
+- bauliche Sicherung: Stahltür, keine Fenster bzw. gesicherte Fenster, Sicherheitsschloss
+- elektronische Zutrittskontrolle mit Karte oder PIN, möglichst mit **Protokollierung**
+- Einbruchmeldeanlage, Türkontakte, Videoüberwachung des Eingangs (Datenschutzhinweis!)
+- Besucher nur in Begleitung, Besucherbuch, Ausweispflicht
+- Brandschutz und Klimatisierung gehören zur **Verfügbarkeitskontrolle**
 
-## 2. Technische vs. organisatorische TOM
+**TOM zum Schutz von E-Mails (2024W GA1, nenne 6):** TLS-Transportverschlüsselung, S/MIME oder PGP Ende-zu-Ende, SPF/DKIM/DMARC, Spam-/Phishing-Filter mit Sandbox, Virenscanner und Anhangsfilter, MFA für Postfachzugriff, Backup/Archivierung, Awareness-Schulungen.
 
-| Technische Maßnahmen | Organisatorische Maßnahmen |
-|---|---|
-| Verschlüsselung at rest und in transit | Datenschutz- und Security-Schulungen |
-| Firewall, IDS/IPS | Sicherheitsrichtlinien und Verantwortlichkeiten |
-| MFA und ACL | Rollen- und Berechtigungskonzept |
-| Pseudonymisierung | Verfahren für Datenschutzverletzungen |
-| Backup-Software und USV | Backup- und Wiederherstellungskonzept |
-| Protokollierung und Monitoring | Regelmäßige Berechtigungsprüfungen |
-| Endpoint Protection | Notfallplan und Incident-Response-Prozess |
+**Grundsätze für gute TOM:** Defense in Depth (mehrere Schichten), Least Privilege, Stand der Technik, Wirksamkeit testen (Restore-Tests, Pentests), Dokumentation als Nachweis (Rechenschaftspflicht).
 
-**Wichtig:** Viele Maßnahmen sind technisch und organisatorisch zugleich. Eine Backup-Software ist technisch; die festgelegten Sicherungsintervalle, Verantwortlichkeiten und Wiederherstellungstests sind organisatorische Bestandteile.
+## Prüfungsfrage
 
-## 3. Grundsätze für die Umsetzung
+**Frage:** Ein Unternehmen speichert Kundendaten auf einem Server im eigenen Serverraum. Nennen Sie je eine Maßnahme zur Zutrittskontrolle, Zugangskontrolle und Zugriffskontrolle und ordnen Sie sie als technisch oder organisatorisch ein.
 
-- **Stand der Technik:** Maßnahmen müssen dem aktuellen Risiko und dem technischen Entwicklungsstand angemessen sein. Veraltete Maßnahmen können unzureichend sein.
-- **Least Privilege:** Benutzer erhalten nur die Rechte, die sie für ihre Aufgaben benötigen.
-- **Need-to-know:** Datenzugriff nur bei tatsächlichem dienstlichem Bedarf.
-- **Defense in Depth:** Mehrere unabhängige Schutzschichten kombinieren, z. B. Firewall, MFA, Verschlüsselung und Monitoring.
-- **Regelmäßige Überprüfung:** Berechtigungen, Logs, Backups und Sicherheitskonfigurationen kontrollieren.
-- **Wirksamkeit testen:** Backups durch Restore-Tests überprüfen; bloße Erfolgsmeldungen reichen nicht.
-- **Risikoangemessenheit:** Schutzmaßnahmen nach Eintrittswahrscheinlichkeit und möglichem Schadensausmaß auswählen.
+**Musterantwort:** Zutrittskontrolle: Der Serverraum wird mit einer elektronischen Schließanlage mit RFID-Karte und Zutrittsprotokoll gesichert – technisch; ergänzend regelt eine Besucherordnung die Begleitpflicht – organisatorisch. Zugangskontrolle: Die Anmeldung am Server erfordert ein starkes Passwort und einen zweiten Faktor (MFA) – technisch. Zugriffskontrolle: Ein Berechtigungskonzept legt fest, dass nur der Vertrieb Kundendaten lesen und ändern darf; umgesetzt wird es über AD-Gruppen und Dateisystemrechte – organisatorisch geplant, technisch umgesetzt.
 
-## 4. Schutzziele und DSGVO
+## Falle
 
-| Schutzziel | Passende TOM |
-|---|---|
-| Vertraulichkeit | Verschlüsselung, MFA, Zugriffskontrolle |
-| Integrität | Hashes, digitale Signaturen, Änderungsprotokolle |
-| Verfügbarkeit | Backups, USV, redundante Systeme |
-| Belastbarkeit | Redundanz, Monitoring, Notfallkonzept |
-| Wiederherstellbarkeit | Restore-Tests, Disaster-Recovery-Plan |
+- **Zutritt, Zugang, Zugriff** verwechseln: Zutritt = Raum, Zugang = System, Zugriff = Daten.
+- Nur technische Maßnahmen nennen, wenn „technisch **und** organisatorisch“ gefragt ist.
+- „RAID ist unsere Backup-Lösung“ → RAID schützt nicht vor Löschen, Malware oder Brand.
+- Die acht Kontrollarten als Gesetzestext ausgeben: Sie stammen aus dem alten BDSG (Anlage zu § 9 a. F.) und sind heute eine **Gliederungshilfe**; Art. 32 DSGVO formuliert die Ziele (Vertraulichkeit, Integrität, Verfügbarkeit, Belastbarkeit, Wiederherstellbarkeit, Überprüfung).
 
-Rechtsgrundlagen:
-- **Art. 5 DSGVO:** Grundsätze wie Datenminimierung, Integrität und Vertraulichkeit.
-- **Art. 25 DSGVO:** Datenschutz durch Technikgestaltung und datenschutzfreundliche Voreinstellungen.
-- **Art. 32 DSGVO:** Sicherheit der Verarbeitung und angemessene TOM.
-- **Art. 33 DSGVO:** Meldung bestimmter Datenschutzverletzungen an die Aufsichtsbehörde innerhalb von 72 Stunden nach Bekanntwerden.
-- **Art. 28 DSGVO:** Auftragsverarbeitung und AVV.
+## Merksatz
 
-## 5. Prüfungsfrage mit Musterantwort
+**„Zutritt zum Raum, Zugang zum System, Zugriff auf die Daten.“**
 
-**Frage:** Ein Unternehmen speichert Kundendaten in einer Cloud. Nenne drei geeignete TOM und erkläre ihren Zweck.
+## Verwandt
 
-**Musterantwort:**
-
-1. Verschlüsselung schützt Kundendaten vor unbefugter Kenntnisnahme bei Speicherung und Übertragung.
-2. MFA und rollenbasierte Zugriffskontrolle verhindern unbefugte Anmeldungen und begrenzen Datenzugriffe.
-3. Regelmäßige Backups mit Restore-Tests ermöglichen die Wiederherstellung nach Datenverlust oder Systemausfällen.
-
-## 6. Verwandte IHK-AP2-Themen
-
-- **BSI IT-Grundschutz:** systematisches Sicherheitsmanagement und Risikoanalyse.
-- **BDSG:** nationale Ergänzungen zur DSGVO.
-- **BfDI und Landesdatenschutzbehörden:** Datenschutzaufsicht; die zuständige Behörde hängt vom Verantwortlichen und Sachverhalt ab.
-- **BSI:** Bundesamt für Sicherheit in der Informationstechnik; Empfehlungen und Standards zur IT-Sicherheit.
-- **AVV / DPA:** Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.
-- **ISO 27001 / ISMS:** systematisches Management der Informationssicherheit.
-- **IAM, RBAC, ACL:** Identitäts-, Rollen- und Zugriffskontrollmanagement.
-- **Backup, RAID, USV, Disaster Recovery:** Verfügbarkeit und Wiederherstellbarkeit.
-- **Incident Response:** Erkennen, Eindämmen, Analysieren und Beheben von Sicherheitsvorfällen.
-- **OSI-Modell:** TLS schützt die Datenübertragung kryptografisch; Firewalls filtern Netzwerkverkehr abhängig von Typ und Konfiguration auf unterschiedlichen Ebenen.
+- [DSGVO-Grundlagen und Datenschutzkonzept](dsgvo-tom.md)
+- [Auftragsverarbeitung (AVV)](auftragsverarbeitung-avv.md) – Auftragskontrolle
+- [Anonymisierung und Pseudonymisierung](anonymisierung-pseudonymisierung.md)
+- [Schutzziele](../../FiSi-Administrator/Sicherheit/schutzziele.md)
+- [Least Privilege](../../FiSi-Administrator/Sicherheit/least-privilege.md)
+- [MFA](../../FiSi-Administrator/Sicherheit/MFA.md)
+- [E-Mail-Sicherheit](../../FiSi-Administrator/Sicherheit/email-sicherheit.md)
+- [ISMS und IT-Grundschutz](../../FiSi-Administrator/Sicherheit/isms-bsi-grundschutz.md)
+- [Sichere Datenlöschung](../../FiSi-Administrator/Sicherheit/datentraeger-entsorgung.md)
+- [Lektion 05 Datenschutz und Informationssicherheit](../../analyse-der-exams/05_Datenschutz_Informationssicherheit.md)

@@ -1,91 +1,115 @@
 # IPv6
 
-## IPv6 – Adressvergabe und Neighbor Discovery (IHK)
+## In 30 Sekunden
 
-IPv6-Adressen besitzen **128 Bit** und werden hexadezimal dargestellt, z. B. `2001:db8::10`.
+- IPv6 hat **128 Bit**, geschrieben als **8 Gruppen à 4 Hexziffern** (je 16 Bit), getrennt durch Doppelpunkte.
+- **Kürzen:** führende Nullen pro Gruppe weglassen, **eine** zusammenhängende Nullfolge durch `::` ersetzen – nur einmal pro Adresse.
+- Typischer Aufbau: **/48 oder /56 vom Provider → /64 pro Subnetz → 64 Bit Interface-ID**.
+- Adresstypen erkennen: `2000::/3` global, `fe80::/10` link-local, `fc00::/7` (`fd..`) Unique Local, `ff00::/8` Multicast.
+- **Kein Broadcast, kein ARP** – stattdessen Multicast und **NDP** (ICMPv6). Autokonfiguration per SLAAC/DHCPv6.
 
-### Wie erhält ein Gerät eine IPv6-Adresse?
+## Kernwissen
 
-| Verfahren | Funktionsweise | Vorteile | Nachteile |
-|---|---|---|---|
-| SLAAC | Host erstellt seine Adresse anhand von Router Advertisements (RA). | Automatisch, kein DHCPv6-Server erforderlich. | Weniger zentrale Kontrolle über Adressen. |
-| DHCPv6 Stateful | DHCPv6-Server weist IPv6-Adressen und Optionen zu. | Zentrale Verwaltung, Reservierungen und Protokollierung möglich. | Server und Konfiguration erforderlich. |
-| DHCPv6 Stateless | Host erzeugt seine Adresse per SLAAC; DHCPv6 liefert zusätzliche Parameter. | Zentrale Verteilung zusätzlicher Optionen. | Adressvergabe bleibt dezentral. |
-| Manuell | Administrator konfiguriert die IPv6-Adresse. | Volle Kontrolle, geeignet für statische Systeme. | Verwaltungsaufwand, Fehlergefahr bei großen Netzen. |
+### Notation und Kürzungsregeln
 
-### Ist DHCPv6 besser?
-
-**Nicht grundsätzlich.** Es hängt von den Anforderungen ab.
-
-- **DHCPv6 Stateful:** Sinnvoll, wenn zentrale Adressverwaltung, Reservierungen und Protokollierung wichtig sind.
-- **SLAAC:** Sinnvoll, wenn Geräte sich automatisch und ohne DHCPv6-Server konfigurieren sollen.
-- **Kombination:** SLAAC und DHCPv6 können gemeinsam eingesetzt werden.
-
-**Wichtig für die IHK:**
-- DHCPv6 weist normalerweise **kein Standardgateway** zu. Dieses wird über Router Advertisements bekannt gegeben.
-- DNS-Server können über DHCPv6 oder über Router Advertisements (RDNSS) bekannt gegeben werden.
-- DHCPv6-Reservierungen und Protokollierung hängen von Server und Konfiguration ab.
-
-### IPv6: ARP vs. NDP
-
-IPv6 verwendet **kein ARP**. Stattdessen übernimmt **Neighbor Discovery Protocol (NDP)** auf Basis von ICMPv6 unter anderem folgende Aufgaben:
-
-| Funktion | Protokoll / Mechanismus |
+| Regel | Beispiel |
 |---|---|
-| Nachbarn und deren Link-Layer-Adressen ermitteln | Neighbor Solicitation (NS) / Neighbor Advertisement (NA) |
-| Router finden | Router Solicitation (RS) / Router Advertisement (RA) |
-| Erreichbarkeit von Nachbarn prüfen | NDP Neighbor Unreachability Detection |
-| IPv6-Duplikate erkennen | Duplicate Address Detection (DAD) |
+| Volle Schreibweise | `2001:0db8:0000:0000:0000:ff00:0042:8329` |
+| 1. Führende Nullen je Gruppe weglassen | `2001:db8:0:0:0:ff00:42:8329` |
+| 2. Längste Folge von Null-Gruppen → `::` (nur **einmal**) | `2001:db8::ff00:42:8329` |
+| Kleinbuchstaben empfohlen (RFC 5952) | `2001:DB8::1` = `2001:db8::1` |
+| Präfix mit `/` | `2001:db8:cafe::/48` |
+| In URLs eckige Klammern | `https://[2001:db8::10]:8443/` |
 
-### IHK-Merksätze
+**Expandieren (Rückweg) – Schritt für Schritt:** `2001:db8:a::1`
+1. Gruppen zählen: `2001`, `db8`, `a`, `1` = 4 Gruppen → `::` ersetzt 8 − 4 = **4** Null-Gruppen.
+2. Auffüllen: `2001:0db8:000a:0000:0000:0000:0000:0001`.
 
-- IPv6 = 128 Bit; IPv4 = 32 Bit.
-- SLAAC = automatische Adressbildung über Router Advertisements.
-- Stateful DHCPv6 = Server weist Adressen zu.
-- NDP ersetzt ARP-Funktionen bei IPv6.
-- **Sicherheitsbezug:** Rogue Router Advertisements können Clients auf einen falschen Router lenken. Schutz bieten beispielsweise RA Guard und korrekt konfigurierte Switches.
+**Ungültig:** `2001::db8::1` (zwei `::`), `2001:db8:0:0:0:0:0:0:1` (9 Gruppen), `2001:db8::g1` (`g` ist kein Hex).
 
+**Hinweis zu RFC 5952:** Bei zwei gleich langen Nullfolgen wird die **erste** gekürzt; eine **einzelne** Null-Gruppe soll als `0` stehen bleiben (`2001:db8:0:1::1`).
 
-## Dual Stack (IPv4 und IPv6) – IHK
+### Adresstypen
 
-**Definition:** Dual Stack bedeutet, dass IPv4 und IPv6 parallel auf demselben Host oder Netzwerk betrieben werden.
+| Präfix | Typ | Erkennen | Zweck |
+|---|---|---|---|
+| `2000::/3` | Global Unicast (GUA) | beginnt mit `2` oder `3` | weltweit routbar (z. B. `2003:…` Telekom) |
+| `fe80::/10` | Link-Local | `fe80::…` | nur im Segment, jedes Interface hat eine; Gateway-Adresse in RAs |
+| `fc00::/7` (praktisch `fd00::/8`) | Unique Local (ULA) | `fd…` | intern, nicht im Internet routbar (≈ RFC 1918) |
+| `ff00::/8` | Multicast | `ff…` | `ff02::1` alle Knoten, `ff02::2` alle Router |
+| `::1/128` | Loopback | `::1` | localhost |
+| `::/128` | unspezifiziert | `::` | „noch keine Adresse“ (z. B. bei DAD) |
+| `2001:db8::/32` | Dokumentation | `2001:db8:…` | Beispiele in Prüfungen |
+| `2002::/16` | 6to4 (Übergangstechnik) | `2002:…` | IPv6 über IPv4 getunnelt |
 
-### Funktionsweise
+### Aufbau einer globalen Adresse
 
-- **IPv4:** 32 Bit, z. B. `192.168.1.10`
-- **IPv6:** 128 Bit, z. B. `2001:db8::10`
-- **DNS A-Record:** Liefert eine IPv4-Adresse.
-- **DNS AAAA-Record:** Liefert eine IPv6-Adresse.
-- **Happy Eyeballs (RFC 8305):** Ermöglicht Clients, IPv4 und IPv6 zeitnah auszuprobieren und eine funktionierende Verbindung mit geringer Verzögerung zu bevorzugen.
+```
+2001:0db8:cafe : 0012 : 0211:22ff:fe33:4455
+|-- 48 Bit ---| |16 Bit| |------ 64 Bit ------|
+ Global Routing   Subnet     Interface-ID
+ Prefix (Provider) ID      (EUI-64 oder zufällig)
+```
+- **/48:** typische Zuteilung an Unternehmen → 2^16 = 65.536 /64-Netze.
+- **/56:** typische Zuteilung an Privat-/Kleinkunden → 256 /64-Netze.
+- **/64:** ein LAN-Segment; Pflicht für SLAAC.
 
-### DHCPv6 vs. SLAAC
+### IPv4 vs. IPv6
 
-| Verfahren | Funktion | Vorteil |
+| Merkmal | IPv4 | IPv6 |
 |---|---|---|
-| DHCPv6 | Verteilt IPv6-Adressen und/oder weitere Konfigurationsparameter. | Zentrale Verwaltung und Protokollierung durch den DHCPv6-Server. |
-| SLAAC | Hosts bilden IPv6-Adressen anhand von Router Advertisements. | Automatische Konfiguration ohne DHCPv6-Server. |
+| Adresslänge | 32 Bit | 128 Bit |
+| Schreibweise | dezimal, Punkte | hexadezimal, Doppelpunkte |
+| Broadcast | ja | **nein** (Multicast stattdessen) |
+| MAC-Auflösung | ARP | NDP (ICMPv6) |
+| Autokonfiguration | DHCP / APIPA | SLAAC, DHCPv6 |
+| NAT | üblich | grundsätzlich nicht nötig |
+| Header | variabel, mit Checksumme | feste 40 Byte, ohne Checksumme, TTL heißt **Hop Limit** |
+| DNS-Record | A | AAAA |
 
-**Wichtig:** DHCPv6 ersetzt bei IPv6 nicht die Router Advertisements. Das Standardgateway wird normalerweise über Router Advertisements bekannt gegeben.
+### Vorteile von IPv6 (nenne 3)
 
-### Vorteile
-- Kompatibilität mit IPv4- und IPv6-Diensten.
-- Schrittweise IPv6-Migration ohne sofortige Abschaltung von IPv4.
-- Happy Eyeballs reduziert Verzögerungen bei Problemen mit einem Protokoll.
+- Riesiger Adressraum → Ende-zu-Ende-Erreichbarkeit ohne NAT.
+- Autokonfiguration (SLAAC) → weniger Verwaltungsaufwand.
+- Vereinfachter Header, hierarchische Präfixe → effizienteres Routing.
+- Kein Broadcast → weniger Last im Segment.
+- IPsec ist Teil der Spezifikation (Nutzung bleibt optional).
 
-### Nachteile
-- Doppelte Konfiguration und Fehleranalyse.
-- Zusätzliche Firewall- und Monitoring-Regeln erforderlich.
-- IPv6 kann unbeabsichtigt Sicherheitsregeln umgehen, wenn nur IPv4 abgesichert wird.
+### Dual Stack
 
-### IHK-Prüfungsbeispiel
+**Dual Stack** = IPv4 und IPv6 parallel auf denselben Hosts und Netzen (GA2 Sommer 2026). Ein Client bekommt A- und AAAA-Record und bevorzugt meist IPv6; **Happy Eyeballs** (RFC 8305) probiert beide Wege fast gleichzeitig und nimmt den schnelleren.
 
-Ein Client erhält über DNS einen A- und einen AAAA-Record. Er verwendet Dual Stack und kann den Server über IPv4 oder IPv6 erreichen. Happy Eyeballs reduziert Verzögerungen, indem beide Verbindungswege zeitnah berücksichtigt werden.
+**Sicherheitsfalle Dual Stack (GA2 Sommer 2023):** Proxy- und Firewallregeln nur für IPv4 → der Client umgeht sie über einen **IPv6-Breakout** (im `tracert` an IPv6-Hops erkennbar). Lösung: Regeln und Proxy auch für IPv6, oder IPv6 gezielt sperren.
 
-**Merksatz:** Dual Stack = IPv4 und IPv6 parallel; A = IPv4; AAAA = IPv6; DHCPv6 = optionale zentrale IPv6-Konfiguration; SLAAC = automatische IPv6-Konfiguration.
+## Prüfungsfrage
+
+**Frage (angelehnt an GA2 Sommer 2022):** Ordnen Sie die Adressen zu (Global Unicast, Link-Local, Unique Local, Multicast) und kürzen Sie die erste maximal: `2001:0db8:0000:0042:0000:0000:0000:0001`, `fe80::4257:a46c:5622:bb4`, `fdbf:1a2b:3c4d::10`, `ff02::2`.
+
+**Musterantwort:**
+- `2001:0db8:0000:0042:0000:0000:0000:0001` → **Global Unicast** (Bereich `2000::/3`; `2001:db8::/32` ist das Dokumentationspräfix). Gekürzt: **`2001:db8:0:42::1`** (die längere Nullfolge hinten wird zu `::`, die einzelne Null-Gruppe bleibt `0`).
+- `fe80::4257:a46c:5622:bb4` → **Link-Local**, nur im eigenen Segment gültig.
+- `fdbf:1a2b:3c4d::10` → **Unique Local**, intern, nicht im Internet routbar.
+- `ff02::2` → **Multicast** an alle Router im Segment.
+
+## Falle
+
+- `::` **zweimal** verwenden → Adresse ist nicht mehr eindeutig.
+- Nullen **am Ende** einer Gruppe weglassen (`db80` → `db8`) → falsch, nur **führende** Nullen dürfen weg.
+- `fd…`-Adressen als Link-Local bezeichnen → das sind **Unique Local** Adressen; Link-Local beginnt mit `fe80`.
+- „IPv6 hat Broadcast an `ff:ff…`“ → nein, IPv6 nutzt Multicast (`ff02::1`).
+- Bei Subnetting Netz- und Broadcastadresse abziehen → bei IPv6 nicht.
+- Firewall nur für IPv4 pflegen → IPv6 umgeht die Regeln.
+
+## Merksatz
+
+**„Acht Gruppen, vier Hex, Nullen vorne weg, Doppelpunkt-Doppelpunkt nur einmal.“** – `2` global, `fe80` lokal, `fd` intern, `ff` Multicast.
 
 ## Verwandt
 
-- [MAC](mac.md) – Link-Layer-Adressen im Nachbarverfahren
-- [Netzwerktypen](../netzwerktypen.md) – Einsatzbereich und Adressierung
-- [OSI](osi.md) – Schicht 3: logische Adressierung
-
+- [IPv6 SLAAC & DHCPv6](ipv6-slaac-dhcpv6.md) – Autokonfiguration, NDP, EUI-64
+- [Subnetting IPv4 & IPv6](subnetting-ipv4-ipv6.md) – /48 → /50, /56 → /64 rechnen
+- [IPv4](ipv4.md) – Vergleich 32 Bit
+- [DNS](dns.md) – AAAA-Record
+- [MAC](mac.md) – Grundlage für EUI-64
+- [Firewall](../Sicherheit/firewall/firewall.md) – Regeln auch für IPv6
+- [Lektion 08 – IPv6](../../analyse-der-exams/08_IPv6.md)

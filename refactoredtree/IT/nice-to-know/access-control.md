@@ -1,40 +1,61 @@
-# Access Control (Zugriffskontrolle)
+# Zugriffskontrolle (Access Control)
 
-**Definition:** Der Prozess, der festlegt und durchsetzt, **wer** (Identität) **worauf** (Ressource) **wie** (Berechtigung) zugreifen darf.
+## In 30 Sekunden
 
-## 1. Die 3 Schritte der Zugriffskontrolle (AAA-Modell)
-Jeder Zugriff durchläuft diese drei Phasen:
-1.  **Authentifizierung (Wer bist du?):** Identitätsprüfung (z.B. Passwort, Fingerabdruck, Smartcard).
-2.  **Autorisierung (Was darfst du?):** Zuweisung von Rechten basierend auf der Identität (z.B. Rolle, Gruppe).
-3.  **Accounting / Auditing (Was hast du getan?):** Protokollierung der Zugriffe für die Nachvollziehbarkeit.
+- Zugriffskontrolle legt fest und setzt durch, **wer** (Identität) **worauf** (Ressource) **wie** (Recht) zugreifen darf.
+- Ablauf nach **AAA**: **Authentifizierung** (Wer bist du?) → **Autorisierung** (Was darfst du?) → **Accounting** (Was hast du getan?).
+- Modelle: **DAC** (Besitzer entscheidet), **MAC** (System nach Sicherheitsstufen), **RBAC** (Rolle entscheidet), **ABAC** (Attribute/Kontext entscheiden).
+- Umgesetzt wird das technisch über **ACLs** am Objekt (NTFS, Linux-Rechte, Router/Firewall).
+- Leitprinzipien: **Least Privilege**, **Need-to-know**, **Vier-Augen-Prinzip**, Funktionstrennung.
 
-## 2. Bekannte Begriffe & Modelle (IHK-Relevant)
+## Kernwissen
 
-### CAL (Client Access License)
-*   **Bedeutung:** Eine Lizenzgebühr, die Microsoft (und andere Hersteller) für den Zugriff auf Server-Dienste verlangt.
-*   **Unterscheidung:** Es gibt **User CALs** (pro Nutzer, egal von wie vielen Geräten er zugreift) und **Device CALs** (pro Gerät, egal wie viele Nutzer darauf arbeiten). 
-*   **Prüfungsrelevanz:** Bei der Planung von Server-Lizenzen muss berechnet werden, ob User- oder Device-CALs günstiger sind (z.B. Schichtbetrieb = Device CALs).
+**Zugriffskontrollmodelle**
 
-### RBAC (Role-Based Access Control)
-*   **Bedeutung:** Rollenbasiertes Zugriffskontrollmodell.
-*   **Funktion:** Rechte werden nicht einzelnen Personen zugewiesen, sondern **Rollen** (z.B. "Buchhalter", "Admin"). Nutzer werden diesen Rollen zugeordnet und erben automatisch die Rechte. Das ist der Standard in Unternehmen (z.B. Active Directory).
+| Modell | Wer entscheidet? | Merkmal | Beispiel |
+|---|---|---|---|
+| **DAC** – Discretionary Access Control (benutzerbestimmbar) | der **Besitzer** des Objekts | Besitzer kann Rechte weitergeben; flexibel, aber fehleranfällig | NTFS-Rechte, Linux `chmod` |
+| **MAC** – Mandatory Access Control (systembestimmt) | das **System** anhand von Sicherheitsstufen/Labels | Benutzer kann Rechte **nicht** weitergeben; sehr strikt | SELinux, AppArmor, Geheimhaltungsstufen (VS-NfD, geheim) |
+| **RBAC** – Role-Based Access Control | die **Rolle** im Unternehmen | Rechte an Rollen, Benutzer in Rollen; Standard in Unternehmen | AD-Sicherheitsgruppen, Rollen im ERP |
+| **ABAC** – Attribute-Based Access Control | **Regeln über Attribute** (Abteilung, Standort, Uhrzeit, Gerät) | sehr fein, kontextabhängig | Conditional Access: Zugriff nur von verwalteten Geräten |
 
-### ACL (Access Control List)
-*   **Bedeutung:** Zugriffskontrollliste.
-*   **Funktion:** Eine Liste, die an einem Objekt (Datei, Ordner, Router-Interface) hängt. Sie enthält Einträge (Regeln), wer was darf (z.B. "User Max: Read, Write", "User Gast: Deny").
-*   **Praxis:** Wird bei Windows-NTFS-Rechten und Firewall-Regeln genutzt.
+**ACL (Access Control List):** Liste von Einträgen an einem Objekt – wer welches Recht hat („Gruppe Vertrieb: Lesen, Schreiben“, „Gäste: Verweigern“). Gibt es bei Dateisystemen, aber auch als Paketfilter auf Routern und Firewalls. Ein explizites **Verweigern** hat bei NTFS Vorrang vor einem Erlauben.
 
-### MAC (Mandatory Access Control)
-*   **Bedeutung:** Zwingende Zugriffskontrolle.
-*   **Funktion:** Der Systemadministrator legt fest, wer was darf (z.B. Geheimhaltungsstufen: Öffentlich, Intern, Geheim). Der Nutzer kann diese Rechte **nicht** weitergeben. Sehr strikt (z.B. bei Linux SELinux).
+**Weitere Begriffe**
+- **Least Privilege:** nur die minimal nötigen Rechte.
+- **Need-to-know:** nur Zugriff auf Informationen, die man für die konkrete Aufgabe kennen muss.
+- **Vier-Augen-Prinzip:** kritische Aktionen (Überweisung, Löschen eines Servers) brauchen die Bestätigung einer zweiten Person.
+- **Funktionstrennung:** unvereinbare Aufgaben (Bestellung anlegen und freigeben) auf verschiedene Personen verteilen.
+- **SSO (Single Sign-On):** einmal anmelden, danach Zugriff auf mehrere Dienste ohne erneute Passworteingabe (z. B. Kerberos im AD).
+- **MFA:** Anmeldung mit mindestens zwei Faktoren verschiedener Kategorien.
 
-### DAC (Discretionary Access Control)
-*   **Bedeutung:** Diskrete / Eigenverantwortliche Zugriffskontrolle.
-*   **Funktion:** Der **Besitzer** einer Datei entscheidet, wer Zugriff bekommt. Er kann Rechte weitergeben. Standard bei Windows/Linux-Systemen.
+**Abgrenzung zu den TOM:** Zutrittskontrolle (Raum), Zugangskontrolle (System), **Zugriffskontrolle (Daten)** – dieses Blatt behandelt die Zugriffskontrolle im technischen Sinn.
 
-## 3. Weitere wichtige Fachbegriffe
-*   **Least Privilege (Minimalprinzip):** Ein Nutzer bekommt nur exakt die Rechte, die er für seine Arbeit zwingend benötigt. Nichts mehr.
-*   **Need-to-know-Prinzip:** Ein Nutzer erhält nur Zugriff auf Informationen, die er für seine konkrete Aufgabe wissen muss.
-*   **MFA (Multi-Faktor-Authentifizierung):** Zwei oder mehr Faktoren zur Anmeldung (z.B. Passwort + SMS-Code). Schützt vor Passwortdiebstahl.
-*   **SSO (Single Sign-On):** Einmal anmelden, für alle Dienste (z.B. Windows-Login gibt automatisch Zugriff auf E-Mail und Intranet).
-*   **Vier-Augen-Prinzip:** Eine kritische Aktion (z.B. Überweisung, Server-Löschung) erfordert die Bestätigung von zwei Personen.
+**Hinweis Lizenzierung:** **CAL** (Client Access License) ist kein Sicherheitsmodell, sondern eine **Lizenz** für den Zugriff auf Serverdienste (User-CAL pro Person, Device-CAL pro Gerät) – siehe [Lektion 10 Lizenzierung](../analyse-der-exams/10_Lizenzierung.md).
+
+## Prüfungsfrage
+
+**Frage:** Unterscheiden Sie DAC und RBAC und erläutern Sie, warum Unternehmen meist RBAC einsetzen.
+
+**Musterantwort:** Bei DAC entscheidet der Besitzer einer Datei selbst, wem er welche Rechte gibt, und kann diese auch weitergeben. Bei RBAC werden Rechte zentral an Rollen vergeben, die den Funktionen im Unternehmen entsprechen, und Benutzer erhalten ihre Rechte nur über die Rollenzugehörigkeit. Unternehmen setzen RBAC ein, weil die Rechtevergabe zentral gesteuert, übersichtlich und prüfbar bleibt: Bei einem Abteilungswechsel wird nur die Rolle geändert, und das Least-Privilege-Prinzip lässt sich besser durchsetzen als bei individuell vergebenen Besitzerrechten.
+
+## Falle
+
+- MAC (Mandatory Access Control) mit der **MAC-Adresse** verwechseln.
+- DAC als „diskret“ übersetzen – gemeint ist **benutzerbestimmbar** (nach Ermessen des Besitzers).
+- Authentifizierung und Autorisierung vertauschen: erst **wer**, dann **was**.
+- CAL als Zugriffskontrollmodell beschreiben.
+
+## Merksatz
+
+**„DAC: der Besitzer. MAC: das System. RBAC: die Rolle. ABAC: der Kontext.“**
+
+## Verwandt
+
+- [RBAC](../FiSi-Administrator/Netzwerk-Administration/rbac.md)
+- [Least Privilege](../FiSi-Administrator/Sicherheit/least-privilege.md)
+- [AAA und SIEM](../FiSi-Administrator/Sicherheit/aaa-siem.md)
+- [MFA](../FiSi-Administrator/Sicherheit/MFA.md)
+- [Authentifizierung und Autorisierung](../FiSi-Administrator/Server/authentifizierung-autoritisierung-mfa.md)
+- [chmod](../FiSi-Administrator/chmod.md)
+- [TOM](../Management/DSGVO/toms.md)

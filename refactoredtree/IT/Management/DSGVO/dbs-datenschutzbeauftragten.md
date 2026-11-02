@@ -1,5 +1,3 @@
-# DBS-Datenschutzbeauftragten
-
 # DSB – Datenschutzbeauftragter
 
 ## In 30 Sekunden
@@ -10,7 +8,9 @@
 - Weitere Benennungspflichten bestehen z. B. bei bestimmten risikoreichen Verarbeitungen oder wenn eine Datenschutz-Folgenabschätzung erforderlich ist.
 - Der DSB arbeitet fachlich weisungsfrei, darf wegen seiner Tätigkeit nicht benachteiligt werden und genießt besonderen Kündigungsschutz nach den gesetzlichen Voraussetzungen.
 
-## Aufgaben des DSB
+## Kernwissen
+
+### Aufgaben des DSB (Art. 39)
 
 | Aufgabe | Konkret |
 |---|---|
@@ -24,7 +24,7 @@
 
 **Prüfungsfalle:** Der DSB ist nicht automatisch für das Führen des Verzeichnisses der Verarbeitungstätigkeiten verantwortlich. Die Verantwortung liegt grundsätzlich beim Verantwortlichen bzw. Auftragsverarbeiter.
 
-## Voraussetzungen zur Benennung
+### Voraussetzungen zur Benennung (Art. 37 DSGVO, § 38 BDSG)
 
 | Organisation | Regel |
 |---|---|
@@ -35,28 +35,42 @@
 
 **Wichtig:** Die Verarbeitung sensibler Daten allein löst nicht automatisch in jedem Fall eine DSB-Pflicht aus. Entscheidend sind die gesetzlichen Voraussetzungen.
 
-## Unabhängigkeit und Kündigungsschutz
+### Interner oder externer DSB
+
+- **Intern:** eigener Mitarbeiter mit Fachkunde; kennt die Abläufe, genießt Kündigungsschutz, darf aber nicht gleichzeitig IT-Leiter, Geschäftsführer oder Personalchef sein (Interessenkonflikt – er würde sich selbst kontrollieren).
+- **Extern:** beauftragter Dienstleister; Fachwissen eingekauft, keine Interessenkonflikte im Haus, Kosten pro Monat statt Gehalt.
+- Die Kontaktdaten des DSB sind zu **veröffentlichen** und der **Aufsichtsbehörde mitzuteilen** (Art. 37 Abs. 7).
+
+### Unabhängigkeit und Kündigungsschutz
 
 - **Weisungsfreiheit:** Der DSB darf bei der Erfüllung seiner Datenschutzaufgaben keine fachlichen Weisungen erhalten.
 - **Keine Interessenkonflikte:** Er darf nicht gleichzeitig Aufgaben übernehmen, bei denen er seine eigene Tätigkeit datenschutzrechtlich kontrollieren müsste.
 - **Benachteiligungsverbot:** Wegen der Erfüllung seiner Aufgaben darf er nicht benachteiligt werden.
-- **Kündigungsschutz:** Für interne DSB gelten besondere gesetzliche Schutzvorschriften, insbesondere § 6 Abs. 4 und § 38 Abs. 2 BDSG.
+- **Kündigungsschutz:** Ein interner, verpflichtend benannter DSB kann nur aus wichtigem Grund gekündigt werden, auch noch ein Jahr nach Ende der Tätigkeit (§ 38 Abs. 2 i. V. m. § 6 Abs. 4 BDSG).
 
-## Prüfungsfrage mit Musterantwort
+## Prüfungsfrage
 
 **Frage:** Nenne drei Aufgaben des Datenschutzbeauftragten und erkläre seine Stellung im Unternehmen.
 
-**Musterantwort:**
+**Musterantwort:** Der DSB überwacht die Einhaltung der DSGVO, berät die Geschäftsleitung und Beschäftigte und unterstützt bei der Bewertung von Datenschutzrisiken. Er ist fachlich weisungsfrei und arbeitet mit der zuständigen Aufsichtsbehörde zusammen. Die Verantwortung für die rechtmäßige Datenverarbeitung bleibt beim Unternehmen.
 
-Der DSB überwacht die Einhaltung der DSGVO, berät die Geschäftsleitung und Beschäftigte und unterstützt bei der Bewertung von Datenschutzrisiken. Er ist fachlich weisungsfrei und arbeitet mit der zuständigen Aufsichtsbehörde zusammen. Die Verantwortung für die rechtmäßige Datenverarbeitung bleibt beim Unternehmen.
+## Falle
 
-## Verwandte IHK-AP2-Themen
+- DSB und **Aufsichtsbehörde** verwechseln: der DSB ist intern (oder beauftragt), die Behörde ist staatlich.
+- „Der DSB ist für den Datenschutz verantwortlich und haftet“ → verantwortlich bleibt die **Geschäftsleitung**, der DSB berät und überwacht.
+- Den IT-Leiter zum DSB machen → Interessenkonflikt.
+- DSB und Informationssicherheitsbeauftragten (ISB) gleichsetzen – der ISB kümmert sich um **alle** Informationen, der DSB um **personenbezogene** Daten.
 
-- **DSGVO Art. 37–39:** Benennung, Stellung und Aufgaben des DSB.
-- **§ 38 BDSG:** Zusätzliche Benennungspflichten in Deutschland.
-- **TOM, Art. 32 DSGVO:** Sicherheitsmaßnahmen zum Schutz personenbezogener Daten.
-- **AVV, Art. 28 DSGVO:** Auftragsverarbeitung durch externe Dienstleister.
-- **Verzeichnis der Verarbeitungstätigkeiten, Art. 30 DSGVO:** Dokumentation der Datenverarbeitungen.
-- **Datenschutz-Folgenabschätzung, Art. 35 DSGVO:** Bewertung hoher Datenschutzrisiken.
-- **Aufsichtsbehörden:** BfDI und zuständige Landesdatenschutzbehörden.
-- **Informationssicherheit:** Vertraulichkeit, Integrität und Verfügbarkeit.
+## Merksatz
+
+**„Der DSB berät und kontrolliert – entscheiden und haften muss die Leitung.“**
+
+## Verwandt
+
+- [DSGVO-Grundlagen und Datenschutzkonzept](dsgvo-tom.md)
+- [TOM](toms.md)
+- [Betroffenenrechte](betroffenenrechte.md)
+- [Auftragsverarbeitung (AVV)](auftragsverarbeitung-avv.md)
+- [Datenpanne und SCC](scc-datenpanne.md)
+- [ISMS und IT-Grundschutz](../../FiSi-Administrator/Sicherheit/isms-bsi-grundschutz.md) – Rolle des ISB
+- [Lektion 05 Datenschutz und Informationssicherheit](../../analyse-der-exams/05_Datenschutz_Informationssicherheit.md)

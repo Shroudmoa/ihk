@@ -1,107 +1,126 @@
 # Ports
 
-## Wichtige Ports zum Auswendiglernen
+## In 30 Sekunden
 
-| Port | Protokoll / Dienst |
-|---:|---|
-| 20/21 | FTP-Datenübertragung / FTP-Steuerung, klassischer FTP-Modus |
-| 22 | SSH, SFTP |
-| 25 | SMTP-Serverkommunikation, häufig zwischen Mailservern |
-| 53 | DNS über UDP oder TCP |
-| 67/68 | DHCPv4-Server / DHCPv4-Client |
-| 80 | HTTP |
-| 110 | POP3 |
-| 123 | NTP |
-| 143 | IMAP |
-| 161/162 | SNMP-Abfragen / SNMP-Traps |
-| 389 | LDAP |
-| 443 | HTTPS |
-| 445 | SMB |
-| 465 | SMTP über implizites TLS, üblich für Mail-Submission |
-| 587 | SMTP Message Submission |
-| 636 | LDAPS |
-| 993 | IMAP über implizites TLS |
-| 995 | POP3 über implizites TLS |
-| 1433 | Microsoft SQL Server, Standardport |
-| 3306 | MySQL, Standardport |
-| 3389 | RDP |
-| 5432 | PostgreSQL, Standardport |
-| 5900 | VNC, häufig verwendeter Standardport |
+- Ein **Port** (16 Bit, 0–65535) adressiert auf **Schicht 4** die Anwendung auf einem Host; **Socket = IP + Protokoll + Port**.
+- Bereiche: **0–1023 Well-Known**, **1024–49151 Registered**, **49152–65535 dynamisch/ephemeral** (Quellports der Clients).
+- In fast jeder GA2 müssen Ports in **Firewallregeln** oder **Portweiterleitungen** eingetragen werden (Web 80/443, Mail 25/465/587/993, VPN 500/4500/1194).
+- Immer auch das **Transportprotokoll** angeben: DNS UDP/TCP 53, DHCP UDP 67/68, SNMP UDP 161/162.
+- Protokolle **ohne Port**: ICMP (Protokoll 1), ESP (50), AH (51), ARP (gar kein IP).
 
+## Kernwissen
 
-## Weiterführende Ports (Registriert / Spezialisiert)
+### Pflichtliste (prüfungsrelevant)
 
-| Port | Protokoll / Dienst | Typical Use (IHK-relevant) |
-|------|-------------------|----------------------------|
-| 23   | Telnet            | Legacy-Remotezugriff (sicherheitskritisch) |
-| 88   | Kerberos          | Authentifizierung in AD-Umgebungen |
-| 135  | RPC               | Microsoft-DCOM / Anmelde-Dienste |
-| 137/138/139 | NetBIOS | Windows-Netzwerkb_define, Filesharing |
-| 161  | SNMP (v2/v3)      | Netzwerkmanagement (DSGVO-konforme Protokollierung) |
-| 179  | BGP               | Internet-Routing |
-| 389  | LDAP (cleartext)  | Directory‑Services (unsicher) |
-| 443  | HTTPS (variiert)   | Webdienstarbeit |
-| 502  | Modbus TCP        | Industrielle Steuerungssysteme (SCADA) |
-| 514  | Syslog / rsyslog  | Ereignisprotokollierung (DSGVO-Audit-Trail) |
-| 623  | IPMI / Solace     | Out-of-Band-Serververwaltung |
-| 873  | rsync            | Verteilte Dateisynchronisation |
-| 902  | VMware‑Tools      | VM-Verwaltung |
-| 1080 | SOCKS5 Proxy      | Anonymisierung & Bypass |
-| 1161 | SNMPv5 (Experimentell) | Neue Management-Protokolle |
-| 1701 | L2TP              | VPN-Zustandaufrechterhaltung |
-| 1723 | PPTP              | Legacy-VPN (veraltet) |
-| 2049 | NFS              | Netzwerk-Dateisystemfreigabe |
-| 3124 | UPnP‑Control      | UPnP-Fernsteuerung (Portweiterleitung) |
-| 4500 | IPsec NAT‑T       | VPN-Verschlüsselung (Strongswan, LibreSwan) |
-| 5060/5061 | SIP / SIPS   | VoIP-Anrufe |
-| 5900 | VNC (SSL-Variante 5901) | Remote-Desktop |
-| 6379 | Redis DB          | In-Memory-Datenbank |
-| 6081 | VXLAN             | Software-definiertes Netzwerk (SDN) |
-| 8080 | HTTP‑ALT          | Webanwendungen hinter NAT |
-| 8443 | HTTPS‑ALT         | Webanwendungen hinter Proxy |
-| 9200 | Elasticsearch    | Volltextsuche / Logging (ELK-Stack) |
-| 9300 | ES-Cluster-Intern | Interner Knotenkommunikation |
-| 27017| MongoDB           | NoSQL-Datenbank |
-| 11211| Memcached         | Caching-Service (speichert sensible Daten) |
-| 21726| Windows Update    | Lokaler WSUS-Client (IPv6) |
-| 4444 | RemoteShell (Metasploit) | Penetrationstests (wichtig für IHK-Prüfungen) |
+| Port | Proto | Dienst | Hinweis |
+|---:|---|---|---|
+| 20 / 21 | TCP | FTP Daten / Steuerung | unverschlüsselt |
+| 22 | TCP | SSH, SFTP, SCP | sichere Fernwartung |
+| 23 | TCP | Telnet | unverschlüsselt – nur noch zum Port-Test |
+| 25 | TCP | SMTP (Server ↔ Server) | eingehende Mail |
+| 53 | UDP/TCP | DNS | TCP für Zonentransfer, große Antworten |
+| 67 / 68 | UDP | DHCPv4 Server / Client | |
+| 69 | UDP | TFTP | PXE-Boot, Firmware |
+| 80 | TCP | HTTP | |
+| 88 | TCP/UDP | Kerberos | AD-Anmeldung |
+| 110 | TCP | POP3 | |
+| 123 | UDP | NTP | Zeitsynchronisation |
+| 143 | TCP | IMAP | mit STARTTLS möglich |
+| 161 / 162 | UDP | SNMP Abfrage / Trap | |
+| 389 | TCP/UDP | LDAP | |
+| 443 | TCP (UDP bei QUIC) | HTTPS | auch SSL-VPN |
+| 445 | TCP | SMB | Dateifreigaben |
+| 465 | TCP | SMTPS (implizites TLS) | Mail-Einlieferung |
+| 500 | UDP | IKE (IPsec) | |
+| 514 | UDP | Syslog | TLS-Variante: TCP 6514 |
+| 546 / 547 | UDP | DHCPv6 Client / Server | |
+| 587 | TCP | SMTP Submission (STARTTLS) | Mail-Client → Server |
+| 636 | TCP | LDAPS | |
+| 853 | TCP | DNS over TLS | |
+| 993 | TCP | IMAPS | |
+| 995 | TCP | POP3S | |
+| 1194 | UDP (TCP) | OpenVPN | |
+| 1433 | TCP | Microsoft SQL Server | |
+| 1812 / 1813 | UDP | RADIUS Auth / Accounting | 802.1X, WPA-Enterprise |
+| 1883 / 8883 | TCP | MQTT / MQTT über TLS | IoT |
+| 3128 | TCP | Squid-Proxy | |
+| 3306 | TCP | MySQL / MariaDB | |
+| 3389 | TCP/UDP | RDP | nie direkt ins Internet |
+| 4500 | UDP | IPsec NAT-Traversal | |
+| 5060 / 5061 | UDP/TCP / TCP | SIP / SIP über TLS | VoIP-Signalisierung |
+| 5432 | TCP | PostgreSQL | |
+| 5900 | TCP | VNC | |
+| 8080 / 8443 | TCP | HTTP/HTTPS alternativ | Proxy, Admin-Oberflächen |
+| 51820 | UDP | WireGuard | Standard, frei wählbar |
 
----
+### Mail-Ports sortiert (GA2 2021W, 2022W, 2024S, 2025S)
 
-## Statistik / „Wie viele Ports?“
+| Zweck | Klartext / STARTTLS | implizites TLS |
+|---|---|---|
+| Server ↔ Server (MTA) | 25 | – |
+| Client → Server (Senden) | 587 | 465 |
+| Abrufen IMAP | 143 | 993 |
+| Abrufen POP3 | 110 | 995 |
 
-- **TCP-Bereich:** 0–65535 (65 536 Werte)
-- **UDP-Bereich:** 0–65535 (gleich)
-- **WKP (0–1023):** 1024 Ports, davon ~16 für Application-Ausstuben relevant für die IHK-Ausbildung (die obige WKP-Tabelle enthält die wichtigsten).
-- **Registrierte Ports (1024–49151):** 48 128 Ports – alles, was hier erscheint, ist für spezialisierte Dienste „registriert“.
-- **Dynamische/Private Ports (49152–65535):** 16 384 Ports – werden vom Betriebssystem automatisch zugewiesen, nicht zum Auswendiglernen geeignet.
+**STARTTLS** = Verbindung startet im Klartext und wird per Befehl auf TLS umgeschaltet (z. B. IMAP 143). **Implizites TLS** = TLS ab dem ersten Byte (993, 465).
 
-**Ziel für die IHK-Prüfung:** Beherrschen Sie die ~16 WKP + die wichtigsten registrierten Ports (≈30 insgesamt). Alles, was darüber hinausgeht, ist „Referenzwissen“ für Firewallregeln, DSGVO-konforme Protokollierung (z. B. Syslog/514) und basierte Modellüberlegungen (Layer 3/4).
+### Quell- und Zielport
 
----
+- Der **Server** lauscht auf einem festen **Zielport** (z. B. 443).
+- Der **Client** wählt einen zufälligen **Quellport** aus dem dynamischen Bereich (z. B. 51515).
+- Bei **PAT** ersetzt der Router Quell-IP **und** Quellport (z. B. 10.0.0.1:45123 → 31.101.17.41:50001) – so ordnet er Antworten wieder zu (GA2 Winter 2025).
+- In Firewallregeln ist der **Quellport** daher fast immer `any`.
 
-## DSGVO & IHK-„Double-Take“
+### Ports ohne Port – IP-Protokollnummern
 
-- **Syslog (Port 514)**: Protokolliert Netzwerkereignisse, Pflicht für DSGVO-Audit-Trails.
-- **SNMP (161/162)**: Überwachung von Geräten – Speicherung von Community-String und Türnummern muss verschlüsselt werden (SNMPv3) oder ist DSGVO-konform.
-- **NFS (2049) / SMB (445)**: Dateiserverfreigaben – Zugriffskontrolle, Verschlüsselung (SMB‑3, NFSv4 Kerberos) erforderlich, um „personenbezogene Daten“ zu schützen.
+| Protokoll | Nummer | Bemerkung |
+|---|---:|---|
+| ICMP | 1 | Ping, Traceroute – Firewall erlaubt/sperrt „ICMP“, nicht einen Port |
+| TCP | 6 | |
+| UDP | 17 | |
+| ESP | 50 | IPsec-Nutzdaten; hat keine Ports → hinter NAT nötig: **NAT-T über UDP 4500** (GA2 Sommer 2023) |
+| AH | 51 | IPsec-Authentifizierung, nicht NAT-fähig |
 
----
+### Port testen
 
-## Technische Pflege ( OSI‑Modell )
+| Befehl | Zweck |
+|---|---|
+| `Test-NetConnection server -Port 443` | PowerShell: TCP-Port erreichbar? |
+| `telnet server 25` | Banner eines TCP-Dienstes lesen (z. B. IMAP CAPABILITY, 2024S) |
+| `nc -vz server 22` | Linux netcat |
+| `netstat -ano` / `ss -tulpn` | eigene offene Ports und Prozesse anzeigen |
+| `nmap -sS server` | Portscan (nur mit Erlaubnis!) |
 
-| OSI‑Schicht | Relevant für die von Ihnen gelernten Ports |
-|-----------|--------------------------------------|
-| Layer 1 (PHY) | Keine direkte Portzuordnung |
-| Layer 2 (DL)  | VLAN/802.1Q, MAC-Bindings (z. B. Port 23, 445) |
-| Layer 3 (IP)  | Routing, NAT (Portweiterleitung für 443, 587, 993) |
-| Layer 4 (TCP/UDP) | **Alle Ports** – Transportprotokolle; Portnummern identifizieren den Endpunkt der Anwendung. |
-| Layer 5 (Session) | Kerberos (88), L2TP (1701), PPTP (1723) |
-| Layer 6 (Presentation) | SSL/TLS‑verschlüsselte Ports (443, 636, 993, 995) |
-| Layer 7 (Application) | FTP, SMTP, DNS, LDAP, HTTP, RDP, VNC, SQL, MongoDB usw. |
+## Prüfungsfrage
 
-**Faustregel:** Wenn Sie einen Port für die IHK kennen, notieren Sie den OSI‑Layer, den er repräsentiert – das zeigt Ihnen, welches Sicherheitsniveau (z. B. TLS am Presentation‑Layer) erforderlich ist.
+**Frage (angelehnt an GA2 Winter 2021 / Sommer 2024):** Der Webserver `10.10.0.10` und der Mailserver `10.10.0.11` in der DMZ sollen aus dem Internet erreichbar sein. Die Mitarbeiter sollen Mails nur verschlüsselt senden und abrufen. Nennen Sie die nötigen Portweiterleitungen mit Protokoll.
 
----
+**Musterantwort:**
+- Web: TCP **443** → `10.10.0.10:443` (optional TCP 80 nur für die Weiterleitung auf HTTPS).
+- Mail-Empfang von fremden Servern: TCP **25** → `10.10.0.11:25`.
+- Mail-Versand durch Mitarbeiter: TCP **465** (implizites TLS) oder **587** (STARTTLS) → `10.10.0.11`.
+- Mail-Abruf: TCP **993** (IMAPS) → `10.10.0.11:993`.
+Alle übrigen eingehenden Verbindungen werden verworfen.
 
-**Zusammenfassung (savage):** Wenn Sie denken, Sie müssen sich alle 65 535 Ports merken – Sie verschwenden Zeit. Konzentrieren Sie sich auf die 16 wichtigsten WKP + 30 registrierte Ports, die in den IHK-Prüfungen auftreten werden. Alles andere ist Referenzwissen für die Sicherheitspolitiken (DSGVO, Netzwerküberwachung) und das Protokoll-Design auf Layer 4. Wenn Sie zusätzliche Ports benötigen, die nicht in der obigen Liste stehen, fügen Sie sie einfach zur „Weiterführende Ports“-Tabelle hinzu und ordnen Sie sie dem entsprechenden OSI‑Layer und der DSGVO-bezogenen Einschränkung zu.
+## Falle
+
+- Protokoll vergessen: „Port 53“ allein reicht nicht – **UDP und TCP 53**.
+- DHCP-Ports vertauschen: **Server 67, Client 68**.
+- SNMP-Trap auf 161 → Traps gehen an **162**.
+- ICMP oder ESP einen Port zuordnen → beide haben **keine** Ports.
+- Telnet als Fernwartung empfehlen → unverschlüsselt; **SSH 22** verwenden.
+- RDP 3389 oder SMB 445 ins Internet freigeben → klassisches Einfallstor, nur über VPN.
+
+## Merksatz
+
+**„22 sicher rein, 25 Mail rein, 53 Namen, 80 offen, 443 sicher, 993 Postfach sicher.“** Und: immer TCP oder UDP dazuschreiben.
+
+## Verwandt
+
+- [TCP vs. UDP](tcp-udp.md) – Transportprotokolle hinter den Ports
+- [Firewall](../Sicherheit/firewall/firewall.md) – Regeln mit Ports formulieren
+- [NAT & PAT](../Sicherheit/firewall/nat-pat.md) – Portweiterleitung und PAT
+- [Proxy](../Netzwerk-Administration/proxy.md) – Squid 3128, Reverse Proxy 443
+- [E-Mail-Authentifizierung](../../nice-to-know/email-auth.md) – SPF, DKIM, DMARC
+- [VPN](../../nice-to-know/VPN/readme.md) – Ports von IPsec, OpenVPN, WireGuard
+- [Lektion 16 – Firewall](../../analyse-der-exams/L16_Firewall.md)

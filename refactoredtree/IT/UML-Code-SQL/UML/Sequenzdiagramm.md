@@ -130,3 +130,6 @@ end
 - [Klassendiagramm](Klassendiagramm.md)
 - [Anwendungsfalldiagramm-Use-Case-Diagramm](Anwendungsfalldiagramm-Use-Case-Diagramm.md)
 - [Aktivitätsdiagramm](Aktivitaetsdiagramm.md)
+- [Zustandsdiagramm](zustandsdiagramm.md)
+- [UML-Übersicht](readme.md)
+- [Lektion 14: Datenmodellierung, SQL & UML](../../analyse-der-exams/L14_Datenmodellierung_SQL_UML.md)

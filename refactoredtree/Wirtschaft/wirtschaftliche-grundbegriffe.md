@@ -1,80 +1,106 @@
-# Wirtschaftliche Grundbegriffe
+# Wirtschaftliche Grundbegriffe: Bedürfnisse, Güter, Produktionsfaktoren
 
-> **Wirtschaft beginnt bei knappen Gütern.** Bedürfnisse werden zu Bedarf, Bedarf mit Kaufkraft wird Nachfrage. Prüfungsrelevant: Güterarten sauber unterscheiden und den Zweck entscheiden lassen.
+## In 30 Sekunden
 
-## Bedürfnis, Bedarf, Nachfrage
+- **Wirtschaften** heißt: knappe Güter planvoll einsetzen, um Bedürfnisse zu befriedigen.
+- Kette: **Bedürfnis** (Mangelgefühl) → **Bedarf** (konkretes Gut) → **Nachfrage** (Bedarf + Kaufkraft am Markt).
+- Bedürfnisse nach Dringlichkeit: **Existenz-, Kultur-, Luxusbedürfnisse**; nach Träger: **Individual- und Kollektivbedürfnisse**.
+- Güter: frei vs. wirtschaftlich, Sach- vs. Dienstleistung/Recht, Konsum- vs. Produktionsgut, Gebrauchs- vs. Verbrauchsgut, Substitutions- vs. Komplementärgut.
+- **Die Zweckbestimmung entscheidet**: Derselbe Laptop ist privat ein Konsumgut, im Betrieb ein Produktions-/Investitionsgut.
+- Produktionsfaktoren: VWL = **Arbeit, Boden, Kapital** (+ Wissen); BWL = **Arbeitsleistung, Betriebsmittel, Werkstoffe** + dispositiver Faktor (Leitung).
+
+## Kernwissen
+
+### Bedürfnis, Bedarf, Nachfrage
 
 | Begriff | Bedeutung | Beispiel |
 |---|---|---|
-| **Bedürfnis** | Mangelgefühl, noch unkonkret | Hunger |
-| **Bedarf** | Konkretes Bedürfnis nach einem Gut | „Ich brauche ein Brötchen“ |
-| **Nachfrage** | Bedarf **plus Kaufkraft** am Markt | „Ich kaufe das Brötchen für 0,80 €“ |
+| **Bedürfnis** | Mangelgefühl, noch unkonkret, unbegrenzt | „Ich habe Hunger.“ |
+| **Bedarf** | Bedürfnis richtet sich auf ein konkretes Gut | „Ich brauche ein Brötchen.“ |
+| **Nachfrage** | Bedarf **plus Kaufkraft**, am Markt wirksam | „Ich kaufe das Brötchen für 0,80 €.“ |
 
-**Merke:** Ohne Kaufkraft entsteht kein Markt. Bedarf ist nicht automatisch Nachfrage.
+Ohne Kaufkraft entsteht keine Nachfrage – Bedarf ist nicht automatisch Nachfrage.
 
-## Bedürfnisarten
+### Bedürfnisarten
 
-| Art | Definition | Beispiel |
-|---|---|---|
-| **Existenzbedürfnisse** | überlebensnotwendig | Nahrung, Wohnung, Kleidung |
-| **Kulturbedürfnisse** | gesellschaftliche Teilhabe | Bildung, Mobilität, Kommunikation |
-| **Luxusbedürfnisse** | verzichtbar, Prestige | Luxusauto, exotische Reise |
-| **Individualbedürfnisse** | jeder befriedigt für sich | Essen, Kleidung |
-| **Kollektivbedürfnisse** | nur gemeinsam befriedigbar | Straßen, Polizei, Schulen |
+| Einteilung | Art | Definition | Beispiel |
+|---|---|---|---|
+| Dringlichkeit | **Existenzbedürfnis** | überlebensnotwendig | Nahrung, Kleidung, Wohnung |
+| | **Kulturbedürfnis** | gesellschaftliche/kulturelle Teilhabe | Bildung, Smartphone, Mobilität |
+| | **Luxusbedürfnis** | verzichtbar, Prestige | Sportwagen, Malediven-Urlaub |
+| Träger | **Individualbedürfnis** | jeder befriedigt es für sich | Essen, Kleidung |
+| | **Kollektivbedürfnis** | nur gemeinsam befriedigbar | Straßen, Polizei, Schulen |
+| Bewusstsein | offen / latent | bewusst / noch nicht bewusst (Werbung weckt latente Bedürfnisse) | neues Gadget |
 
-Kollektivbedürfnisse werden typischerweise über Steuern finanziert.
+Kollektivbedürfnisse werden meist vom Staat über Steuern befriedigt. Die Grenze zwischen Kultur- und Luxusbedürfnis verschiebt sich mit dem Wohlstand (Smartphone war früher Luxus).
 
-## Güterarten
+**Maslow-Pyramide** (von unten nach oben): Grund-/physiologische Bedürfnisse → Sicherheit → soziale Bedürfnisse → Wertschätzung → Selbstverwirklichung.
+
+### Güterarten
 
 | Gegensatzpaar | Bedeutung | Beispiele |
 |---|---|---|
-| **freie vs. wirtschaftliche Güter** | unbegrenzt und kostenlos vs. knapp und mit Preis | Luft vs. Brot |
-| **Konsum- vs. Produktionsgüter** | unmittelbare Bedürfnisbefriedigung vs. Herstellung anderer Güter | Fernseher vs. CNC-Maschine |
-| **Gebrauchs- vs. Verbrauchsgüter** | mehrfach nutzbar vs. einmalig verbraucht | Auto vs. Benzin |
-| **materielle vs. immaterielle Güter** | körperlich vs. Dienstleistung/Recht | Tisch vs. Beratung, Lizenz |
-| **Substitutions- vs. Komplementärgüter** | ersetzen sich vs. ergänzen sich | Butter/Margarine vs. Drucker/Patrone |
+| **freie vs. wirtschaftliche Güter** | unbegrenzt, kostenlos vs. knapp, mit Preis | Luft, Sonnenlicht vs. Brot, Laptop |
+| **materielle vs. immaterielle Güter** | Sachgut vs. Dienstleistung/Recht | Tisch vs. Beratung, Softwarelizenz, Patent |
+| **Konsum- vs. Produktionsgüter** | unmittelbare Bedürfnisbefriedigung vs. Herstellung anderer Güter | Fernseher vs. CNC-Maschine, Rohstoff |
+| **Gebrauchs- vs. Verbrauchsgüter** | mehrfach nutzbar vs. beim Gebrauch verbraucht | Auto, Server vs. Benzin, Toner |
+| **Investitionsgut** | Produktionsgut, das ein Betrieb langfristig nutzt (Anlagevermögen) | Firmenwagen, Server, Maschine |
+| **Substitutions- vs. Komplementärgüter** | ersetzen sich vs. ergänzen sich | Butter/Margarine, Tee/Kaffee vs. Drucker/Patrone, Auto/Benzin |
+| **homogene vs. heterogene Güter** | gleichartig (keine Präferenz) vs. unterscheidbar (Marke, Qualität) | Strom, Heizöl vs. Smartphones |
 
-**Wichtig:** Die **Zweckbestimmung** entscheidet. Ein Pkw ist Konsumgut, wenn eine Familie ihn privat nutzt; er ist Investitionsgut, wenn ein Betrieb ihn für Geschäftsfahrten kauft. Derselbe Gegenstand kann also unterschiedlich eingeordnet werden.
+**Zweckbestimmung:** Ein Pkw ist Konsumgut, wenn eine Familie ihn privat nutzt; er ist Produktions-/Investitionsgut, wenn ein Betrieb ihn für Kundenfahrten kauft.
 
-**Prüfungsfalle:** Ein Produktionsgut ist nicht automatisch ein Investitionsgut – Investitionsgut wird es durch die betriebliche Verwendung. Eine privat gekaufte Nähmaschine ist Konsumgut, im Betrieb Produktions-/Investitionsgut.
+### Produktionsfaktoren
 
-## Wirtschaftskreislauf
+| Sicht | Faktoren | Entgelt |
+|---|---|---|
+| **Volkswirtschaftlich** | Arbeit, Boden (Natur, Rohstoffe, Standort), Kapital (Maschinen, Gebäude – „Realkapital“), oft zusätzlich Wissen/Bildung | Lohn, Pacht/Miete, Zins |
+| **Betriebswirtschaftlich** | ausführende Arbeit, Betriebsmittel, Werkstoffe + **dispositiver Faktor** (Planung, Leitung, Kontrolle) | – |
 
-- **Private Haushalte** bieten Arbeit und Kapital an, erhalten Löhne, Zinsen, Transferleistungen und konsumieren.
-- **Unternehmen** produzieren Güter, zahlen Löhne/Steuern und investieren.
-- **Staat** erhebt Steuern, bietet öffentliche Güter und verteilt um.
-- **Banken** vermitteln Kapital.
-- **Ausland** kommt über Importe/Exporte hinzu.
+**Substitution:** Ein Faktor kann einen anderen teilweise ersetzen, z. B. Kapital statt Arbeit durch Automatisierung oder Self-Service-Portale (Rationalisierung).
 
-**Einfacher Kreislauf:** Haushalte → Arbeitskraft → Unternehmen → Lohn → Haushalte → Konsum → Unternehmen.
-**Erweiterter Kreislauf:** zusätzlich Staat, Banken, Ausland.
+### Wirtschaftskreislauf
 
-## Käufermarkt und Verkäufermarkt
+- **Einfacher Kreislauf:** Haushalte stellen Unternehmen Arbeit zur Verfügung und erhalten Einkommen; mit dem Einkommen kaufen sie Konsumgüter (Güterstrom und Geldstrom laufen gegenläufig).
+- **Erweiterter Kreislauf:** zusätzlich **Staat** (Steuern, Transfers, Subventionen), **Banken** (Sparen, Kredite, Investitionen) und **Ausland** (Export, Import).
+
+### Käufermarkt und Verkäufermarkt
 
 | Merkmal | Käufermarkt | Verkäufermarkt |
 |---|---|---|
-| Angebot/Nachfrage | Angebot > Nachfrage | Nachfrage > Angebot |
-| Macht | Käufer | Verkäufer |
-| Preis | sinkt, Rabatte | steigt, kaum Rabatt |
-| Beispiel | viele Wohnungen, wenige Käufer | Wohnungsmangel |
+| Lage | Angebot > Nachfrage | Nachfrage > Angebot |
+| Marktmacht | Käufer | Verkäufer |
+| Preis | Tendenz sinkend, Rabatte | Tendenz steigend, kaum Rabatte |
+| Beispiel | Unterhaltungselektronik im Überangebot | Wohnungen in Großstädten, IT-Fachkräfte |
 
-## 3-Zeiler für die Prüfung
+## Prüfungsfrage
 
-**Frage:** Ist ein Firmenwagen ein Konsumgut?
+**Frage (Multiple Choice):** Ein IT-Systemhaus kauft einen Laptop, den ein Techniker ausschließlich für Kundeneinsätze nutzt. Welche Aussage trifft zu?
 
-**Antwort:** Nein, bei betrieblicher Nutzung ist er ein Produktions- bzw. Investitionsgut. Entscheidend ist die Zweckbestimmung durch den Käufer. Privat genutzt wäre derselbe Wagen ein Konsumgut.
+1. Es ist ein Konsumgut, weil ein Laptop immer ein Konsumgut ist.
+2. Es ist ein freies Gut, weil es steuerlich abgeschrieben wird.
+3. Es ist ein Produktions- bzw. Investitionsgut, weil es der betrieblichen Leistungserstellung dient.
+4. Es ist ein Verbrauchsgut, weil es nach drei Jahren ersetzt wird.
+5. Es ist ein Komplementärgut zum Firmenwagen.
 
-## Prüfungsfallen
+**Musterantwort:** **3.** Entscheidend ist die Zweckbestimmung: Der Laptop dient der Erstellung von Dienstleistungen für Kunden und wird mehrjährig genutzt – er ist ein (Gebrauchs-)Produktionsgut bzw. Investitionsgut. Privat gekauft wäre derselbe Laptop ein Konsumgut.
 
-- Bedürfnis ≠ Bedarf ≠ Nachfrage.
-- Freie Güter haben keinen Preis, wirtschaftliche Güter sind knapp.
-- Handel mit Waren ist tertiär, auch wenn die Ware materiell ist.
-- Substitutionsgüter konkurrieren, Komplementärgüter ergänzen sich.
-- Der Zweck, nicht die Beschaffenheit, entscheidet über Konsum-/Investitionsgut.
+## Falle
+
+- Bedürfnis ≠ Bedarf ≠ Nachfrage – erst die Kaufkraft macht Bedarf zur Nachfrage.
+- Freie Güter haben keinen Preis; sobald etwas knapp ist (z. B. Trinkwasser aus der Leitung), ist es wirtschaftlich.
+- Nicht die Beschaffenheit, sondern der **Verwendungszweck** entscheidet über Konsum- oder Investitionsgut.
+- Software und Lizenzen sind **immaterielle** Güter, obwohl man sie „besitzt“.
+- Substitutionsgüter konkurrieren (Preis von A steigt → Nachfrage nach B steigt), Komplementärgüter werden gemeinsam nachgefragt (Druckerpreis sinkt → mehr Patronen).
+
+## Merksatz
+
+**„Bedürfnis fühlt, Bedarf weiß, Nachfrage zahlt – und der Zweck macht das Gut.“**
 
 ## Verwandt
 
-- [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – Knappheit und Wirtschaftlichkeit
-- [Marktformen & Preisbildung](marktformen-preisbildung.md) – Angebot, Nachfrage, Gleichgewicht
-- [Wirtschaftssektoren & Arbeitsteilung](wirtschaftssektoren-arbeitsteilung.md) – Güterproduktion und Dienstleistungen
-- [Soziale Marktwirtschaft & Sozialstaat](soziale-marktwirtschaft-sozialstaat.md) – Kollektivbedürfnisse und Staat
+- [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – Knappheit, Minimal-/Maximalprinzip
+- [Marktformen & Preisbildung](marktformen-preisbildung.md) – Angebot, Nachfrage, Gleichgewichtspreis
+- [Wirtschaftssektoren & Arbeitsteilung](wirtschaftssektoren-arbeitsteilung.md) – wer welche Güter produziert
+- [Soziale Marktwirtschaft & Sozialstaat](soziale-marktwirtschaft-sozialstaat.md) – Staat und Kollektivbedürfnisse
+- [Lektion 26 – Sektoren, Konjunktur, Marktformen](../IT/analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md)

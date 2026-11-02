@@ -1,8 +1,16 @@
-# Hash
+# Hash, Salt und HMAC
 
-# Hashing und verwandte Themen – IHK AP2
+## In 30 Sekunden
 
-## 1. Was ist ein Hash?
+- Eine **Hashfunktion** erzeugt aus beliebigen Daten einen Wert fester Länge – **nicht umkehrbar**, kein Schlüssel, keine Verschlüsselung.
+- Einsatz: **Integritätsprüfung** (Download, Zertifikate, Signaturen) und **Passwortspeicherung**.
+- **MD5 und SHA-1 sind gebrochen** (Kollisionen), **SHA-256** und SHA-3 sind aktueller Stand (Prüfung 2021W).
+- Passwörter nie mit schnellem Hash speichern, sondern mit **langsamem Passwort-Hash** (Argon2, bcrypt, scrypt, PBKDF2) und individuellem **Salt**.
+- **HMAC** = Hash mit gemeinsamem Geheimnis, **digitale Signatur** = Hash mit privatem Schlüssel.
+
+## Kernwissen
+
+### 1. Was ist ein Hash?
 
 Eine **Hashfunktion** wandelt Daten beliebiger Länge in einen Hashwert fester Länge um.
 
@@ -24,7 +32,7 @@ Bereits eine kleine Änderung der Eingabe erzeugt normalerweise einen völlig an
 
 **Wichtig:** Hashing ist keine Verschlüsselung. Ein Hash besitzt keinen Schlüssel, mit dem man ihn einfach entschlüsseln kann.
 
-## 2. Hashing vs. Verschlüsselung vs. Encoding
+### 2. Hashing vs. Verschlüsselung vs. Encoding
 
 | Verfahren | Umkehrbar? | Schlüssel? | Zweck | Beispiel |
 |---|---|---|---|---|
@@ -33,7 +41,7 @@ Bereits eine kleine Änderung der Eingabe erzeugt normalerweise einen völlig an
 | Asymmetrische Verschlüsselung | Ja, mit passendem Schlüssel | Ja, Schlüsselpaar | Vertrauliche Kommunikation | RSA-OAEP |
 | Encoding | Ja, ohne Geheimnis | Nein | Daten in anderes Format umwandeln | Base64 |
 
-### Beispiele
+#### Beispiele
 
 **Hashing:**
 ```text
@@ -53,7 +61,7 @@ Hallo → Base64 → SGFsbG8=
 
 Base64 ist keine Verschlüsselung und bietet keinen Schutz vor unbefugtem Lesen.
 
-## 3. Hashing und Integrität
+### 3. Hashing und Integrität
 
 Ein Hash kann verwendet werden, um festzustellen, ob sich Daten verändert haben.
 
@@ -67,11 +75,11 @@ Beispiel:
 
 Für einen vertrauenswürdigen Herkunftsnachweis eignen sich beispielsweise digitale Signaturen.
 
-## 4. Hashing bei Passwörtern
+### 4. Hashing bei Passwörtern
 
 Passwörter sollten nicht im Klartext in einer Datenbank gespeichert werden.
 
-### Sicherer Ablauf
+#### Sicherer Ablauf
 
 Bei der Registrierung:
 
@@ -97,7 +105,7 @@ Ergebnis vergleichen
 
 Das ursprüngliche Passwort muss dafür nicht wiederhergestellt werden.
 
-### Warum nicht einfach SHA-256?
+#### Warum nicht einfach SHA-256?
 
 SHA-256 ist für viele allgemeine Hash-Anwendungen geeignet, aber für die Passwortspeicherung allein ungeeignet.
 
@@ -116,9 +124,9 @@ Die Parameter müssen passend konfiguriert werden. Die konkrete Wahl hängt von 
 
 Quelle: [OWASP – Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 
-## 5. Salt und Pepper
+### 5. Salt und Pepper
 
-### Salt
+#### Salt
 
 Ein **Salt** ist ein zufälliger Wert, der beim Passwort-Hashing zusätzlich verwendet wird.
 
@@ -138,7 +146,7 @@ Eigenschaften:
 
 Haben zwei Benutzer dasselbe Passwort, entstehen mit unterschiedlichen Salts normalerweise unterschiedliche Hashwerte.
 
-### Pepper
+#### Pepper
 
 Ein **Pepper** ist ein zusätzliches Geheimnis, das nicht zusammen mit den Passwort-Hashes in der Datenbank gespeichert wird.
 
@@ -151,18 +159,18 @@ Ein **Pepper** ist ein zusätzliches Geheimnis, das nicht zusammen mit den Passw
 
 Ein Pepper kann zusätzlichen Schutz bieten, wenn nur die Passwortdatenbank kompromittiert wird. Er ersetzt weder Salt noch ein geeignetes Passwort-Hashing-Verfahren.
 
-## 6. Typische Angriffe auf Passwort-Hashes
+### 6. Typische Angriffe auf Passwort-Hashes
 
-### Brute Force
+#### Brute Force
 Alle möglichen Passwortkombinationen werden ausprobiert.
 
-### Wörterbuchangriff
+#### Wörterbuchangriff
 Häufige Passwörter und bekannte Passwortmuster werden ausprobiert.
 
-### Rainbow Tables
+#### Rainbow Tables
 Vorberechnete Zuordnungen von Eingaben zu Hashwerten werden verwendet. Individuelle Salts erschweren diese Angriffe erheblich.
 
-### Credential Stuffing
+#### Credential Stuffing
 Gestohlene Zugangsdaten werden bei anderen Diensten ausprobiert. Das funktioniert besonders häufig, wenn Passwörter wiederverwendet werden.
 
 **Schutzmaßnahmen:**
@@ -173,7 +181,7 @@ Gestohlene Zugangsdaten werden bei anderen Diensten ausprobiert. Das funktionier
 - Rate-Limiting gegen automatisierte Login-Versuche.
 - Keine Passwort-Wiederverwendung.
 
-## 7. Hashfunktionen und wichtige Algorithmen
+### 7. Hashfunktionen und wichtige Algorithmen
 
 | Algorithmus | Hashlänge | Bewertung / Einsatz |
 |---|---:|---|
@@ -186,7 +194,7 @@ Gestohlene Zugangsdaten werden bei anderen Diensten ausprobiert. Das funktionier
 
 **Achtung:** Die Hashlänge allein entscheidet nicht über die Sicherheit. Für Passwortspeicherung ist beispielsweise Argon2id geeigneter als ein einzelner schneller SHA-256-Aufruf.
 
-## 8. HMAC – Hash mit geheimem Schlüssel
+### 8. HMAC – Hash mit geheimem Schlüssel
 
 **HMAC** steht für *Hash-based Message Authentication Code*.
 
@@ -212,7 +220,7 @@ Der Empfänger berechnet den HMAC mit demselben geheimen Schlüssel und vergleic
 
 HMAC ist keine Verschlüsselung: Die Nachricht bleibt lesbar, sofern sie nicht zusätzlich verschlüsselt wird.
 
-## 9. Digitale Signatur
+### 9. Digitale Signatur
 
 Eine digitale Signatur ermöglicht es, die Herkunft und Integrität von Daten zu prüfen.
 
@@ -230,7 +238,7 @@ Eigenschaften:
 
 Eine digitale Signatur verschlüsselt die Nachricht nicht automatisch.
 
-## 10. Hash, HMAC und digitale Signatur im Vergleich
+### 10. Hash, HMAC und digitale Signatur im Vergleich
 
 | Merkmal | Hash | HMAC | Digitale Signatur |
 |---|---|---|---|
@@ -240,7 +248,7 @@ Eine digitale Signatur verschlüsselt die Nachricht nicht automatisch.
 | Verschlüsselung | Nein | Nein | Nein |
 | Beispiel | SHA-256 | HMAC-SHA-256 | RSA-PSS, ECDSA |
 
-## 11. Typische IHK-Prüfungsfallen
+### 11. Typische IHK-Prüfungsfallen
 
 - Hashing ist keine Verschlüsselung.
 - Base64 ist Encoding, keine Verschlüsselung.
@@ -252,6 +260,18 @@ Eine digitale Signatur verschlüsselt die Nachricht nicht automatisch.
 - Digitale Signaturen verwenden ein asymmetrisches Schlüsselpaar.
 - Hashing ist nicht automatisch sicher: Algorithmus und Einsatzzweck müssen passen.
 
+## Prüfungsfrage
+
+**Frage:** Erklären Sie, warum Passwörter nicht im Klartext oder als einfacher SHA-256-Hash gespeichert werden sollten, und beschreiben Sie die Aufgabe eines Salts.
+
+**Musterantwort:** Im Klartext gespeicherte Passwörter sind bei einem Datenbankdiebstahl sofort nutzbar. Ein einfacher SHA-256-Hash ist sehr schnell berechenbar, sodass Angreifer mit Wörterbüchern und Grafikkarten Milliarden Kandidaten pro Sekunde testen können; gleiche Passwörter ergeben zudem gleiche Hashes. Ein Salt ist ein zufälliger, pro Benutzer unterschiedlicher Wert, der vor dem Hashen an das Passwort angehängt wird: Gleiche Passwörter erhalten dadurch unterschiedliche Hashes und vorberechnete Rainbow Tables werden nutzlos. Zusätzlich verwendet man langsame Verfahren wie Argon2 oder bcrypt.
+
+## Falle
+
+- „SHA-256 ist eine Verschlüsselung“ → nein, Hashfunktion.
+- Salt geheim halten wollen → Salt darf neben dem Hash stehen; geheim ist der **Pepper**.
+- MD5 als „sicher genug für Passwörter“ bezeichnen → gebrochen und viel zu schnell.
+
 ## Merksatz
 
 **Hash = Fingerabdruck von Daten.  
@@ -260,3 +280,12 @@ Pepper = zusätzliches Geheimnis.
 HMAC = Integrität und Authentizitätsprüfung mit gemeinsamem Schlüssel.  
 Digitale Signatur = Integrität und Herkunftsnachweis mit asymmetrischen Schlüsseln.  
 Verschlüsselung = Vertraulichkeit durch Schlüssel.**
+
+## Verwandt
+
+- [Passwortrichtlinien](../passwortrichtlinien.md) – Länge, Sperre, Passwortmanager
+- [Digitale Signatur](digitale-signatur.md)
+- [PKI und Zertifikate](pki.md)
+- [Symmetrische und asymmetrische Verschlüsselung](symmetrische-und-asymmetrische.md)
+- [Schutzziele](../schutzziele.md) – Integrität
+- [Lektion 27 PKI, TLS, VPN](../../../analyse-der-exams/L27_PKI_TLS_Verschluesselung_VPN.md)

@@ -2,65 +2,70 @@
 
 ## In 30 Sekunden
 
-- Betriebsbedingt heißt: **dringendes betriebliches Erfordernis**, nicht das Verhalten des Arbeitnehmers.
-- Der Arbeitgeber muss die **Sozialauswahl** treffen: Dauer, Alter, Unterhaltspflichten, Schwerbehinderung.
-- Kündigung braucht **Schriftform**, Zugang und die Anhörung des Betriebsrats.
-- Fristen nach § 622 BGB: 4 Wochen zum 15. oder Monatsende, danach steigend mit der Betriebszugehörigkeit.
-- Kündigungsschutzklage: **3 Wochen** nach Zugang der Kündigung.
+- Betriebsbedingt heißt: Der Arbeitsplatz fällt aus **dringenden betrieblichen Erfordernissen** weg – nicht wegen Person oder Verhalten des Arbeitnehmers.
+- Typische Auslöser: Auftragsmangel, Umsatz-/Gewinnrückgang, Rationalisierung, Outsourcing, Standort- oder Abteilungsschließung.
+- Prüfschema: **Grund → keine Weiterbeschäftigung → Sozialauswahl → Betriebsrat angehört → Schriftform → Frist**.
+- Bei größeren Entlassungen: **Massenentlassungsanzeige** bei der Agentur für Arbeit (§ 17 KSchG) und ggf. **Interessenausgleich/Sozialplan** (§§ 111 f. BetrVG).
+- Abfindung ist **kein** gesetzlicher Automatismus – nur bei § 1a KSchG (Angebot + kein Klageverfahren), Sozialplan oder Vergleich.
 
 ## Kernwissen
 
-**Voraussetzungen für wirksame Kündigung**
-1. Dringendes betriebliches Erfordernis, z. B. Auftragsmangel oder Rationalisierung.
-2. Keine Weiterbeschäftigungsmöglichkeit auf einem freien Arbeitsplatz.
-3. Sozialauswahl korrekt durchgeführt.
-4. Betriebsrat angehört.
-5. Schriftform mit Originalunterschrift und Zugang.
+### Voraussetzungen (§ 1 Abs. 2 und 3 KSchG)
 
-**Kündigungsfristen (§ 622 BGB)**
-| Beschäftigung | Frist |
+1. **Unternehmerische Entscheidung**, die zum dauerhaften Wegfall des Arbeitsplatzes führt (gerichtlich nur auf Willkür überprüfbar).
+2. **Dringlichkeit:** Keine milderen Mittel (Abbau von Überstunden, Kurzarbeit, Versetzung).
+3. **Keine Weiterbeschäftigung** auf einem freien vergleichbaren Arbeitsplatz im Unternehmen, auch nicht nach zumutbarer Umschulung.
+4. **Sozialauswahl** unter vergleichbaren Arbeitnehmern: Betriebszugehörigkeit, Lebensalter, Unterhaltspflichten, Schwerbehinderung.
+5. **Anhörung des Betriebsrats** (§ 102 BetrVG).
+6. **Schriftform** und Zugang (§ 623 BGB), Einhaltung der Frist nach § 622 BGB bzw. Tarifvertrag.
+7. **Sonderkündigungsschutz** beachten (Schwangere, Schwerbehinderte, Betriebsrat …).
+
+### Massenentlassung und Betriebsänderung
+
+| Instrument | Wann? | Inhalt |
+|---|---|---|
+| **Massenentlassungsanzeige** (§ 17 KSchG) | innerhalb von 30 Tagen z. B. > 5 AN in Betrieben mit 21–59 AN, ≥ 10 % oder > 25 AN bei 60–499 AN, ≥ 30 AN ab 500 AN | Anzeige bei der Agentur für Arbeit **vor** Ausspruch; Konsultation des Betriebsrats; sonst Kündigung unwirksam |
+| **Interessenausgleich** (§ 112 BetrVG) | Betriebsänderung in Unternehmen > 20 AN | **ob, wann, wie** der Betriebsänderung; nicht erzwingbar |
+| **Sozialplan** (§ 112 BetrVG) | wie oben | Ausgleich wirtschaftlicher Nachteile (Abfindungen, Transfergesellschaft); **erzwingbar** über die Einigungsstelle |
+
+### Kündigungsfristen (§ 622 BGB, AG-Kündigung)
+
+| Betriebszugehörigkeit | Frist (zum Monatsende) |
 |---|---|
-| Probezeit | 2 Wochen |
 | unter 2 Jahre | 4 Wochen zum 15. oder Monatsende |
-| 2 Jahre | 1 Monat zum Monatsende |
-| 5 Jahre | 2 Monate |
-| 8 Jahre | 3 Monate |
-| 10 Jahre | 4 Monate |
-| 12 Jahre | 5 Monate |
-| 15 Jahre | 6 Monate |
+| 2 / 5 / 8 / 10 Jahre | 1 / 2 / 3 / 4 Monate |
+| 12 / 15 / 20 Jahre | 5 / 6 / 7 Monate |
 
-**Abfindung:** Nach § 1a KSchG 0,5 Monatsgehälter pro Beschäftigungsjahr – aber nur, wenn der Arbeitnehmer nicht klagt und die Klagefrist verstreicht.
+### Abfindung nach § 1a KSchG
 
-**Kündigungsschutz:** Gilt nach 6 Monaten Betriebszugehörigkeit und in Betrieben mit mehr als 10 Arbeitnehmern. Kleinbetriebe fallen unter die Ausnahme.
-
-## 3-Zeiler für die Prüfung
-
-**Frage:** Ist eine betriebsbedingte Kündigung wirksam, wenn der Arbeitgeber keine Sozialauswahl durchführt?
-
-**Antwort:** Nein. Die Kündigung ist sozial nicht gerechtfertigt, weil der Arbeitgeber die vergleichbaren Arbeitnehmer nach Betriebszugehörigkeit, Alter, Unterhaltspflichten und Schwerbehinderung vergleichen muss. Der Arbeitnehmer kann innerhalb von drei Wochen Kündigungsschutzklage erheben.
+- Arbeitgeber stützt die Kündigung auf betriebliche Gründe und weist im Schreiben darauf hin, dass der AN bei Verstreichenlassen der Klagefrist eine Abfindung beanspruchen kann.
+- Höhe: **0,5 Monatsverdienste je Beschäftigungsjahr** (Rest > 6 Monate wird aufgerundet).
+- Klagt der AN, entfällt dieser Anspruch.
 
 ## Prüfungsfrage
 
-**Frage:** Ein Unternehmen verlagert eine Abteilung ins Ausland. Darf allen Mitarbeitern betriebsbedingt gekündigt werden? Begründe.
+**Frage:** Ein Unternehmen verlagert seine IT-Abteilung ins Ausland. Unter welchen Voraussetzungen darf den betroffenen Mitarbeitern betriebsbedingt gekündigt werden?
 
-**Musterantwort:** Nur wenn ein dringendes betriebliches Erfordernis nachweisbar ist, keine Weiterbeschäftigungsmöglichkeit besteht, die Sozialauswahl korrekt durchgeführt und der Betriebsrat angehört wurde. Die Kündigung muss schriftlich zugehen und die Frist nach § 622 BGB einhalten. Sonst ist sie unwirksam, und der Arbeitnehmer kann innerhalb von 3 Wochen klagen.
+**Musterantwort:** Die Verlagerung ist eine unternehmerische Entscheidung, die zum Wegfall der Arbeitsplätze führt. Die Kündigung ist nur wirksam, wenn keine Weiterbeschäftigung auf freien Arbeitsplätzen im Unternehmen möglich ist, bei teilweiser Verlagerung eine korrekte Sozialauswahl stattfindet, der Betriebsrat angehört wurde, Sonderkündigungsschutz beachtet wird und die Kündigung schriftlich mit der Frist des § 622 BGB zugeht. Bei vielen Betroffenen sind die Massenentlassungsanzeige und Verhandlungen über Interessenausgleich und Sozialplan nötig. Die Arbeitnehmer können innerhalb von 3 Wochen Kündigungsschutzklage erheben.
 
-## Prüfungsfallen
+## Falle
 
-- Sozialauswahl vergessen → Kündigung unwirksam.
+- Sozialauswahl vergessen → Kündigung sozial ungerechtfertigt.
 - Betriebsrat nicht angehört → unwirksam, auch wenn der Grund stimmt.
-- „Mündliche Kündigung reicht“ → nein, Schriftform.
-- Abfindung als Pflicht ansehen → nur bei Klageverzicht nach § 1a KSchG.
-- Kündigungsfrist und Klagefrist verwechseln: 3 Wochen ist die Klagefrist, nicht die Kündigungsfrist.
+- Abfindung ist **keine** gesetzliche Pflicht bei jeder Kündigung.
+- 3 Wochen ist die **Klage**frist, nicht die Kündigungsfrist.
+- Mangelndes Fachwissen ist **personen**bedingt, Trunkenheit oder Beleidigung **verhaltens**bedingt – nicht betriebsbedingt.
+- Der Zeitablauf eines befristeten Vertrags ist **keine** Kündigung.
 
 ## Merksatz
 
-**„Grund, Auswahl, Anhörung, Form, Frist“** – fehlt eins, kippt die Kündigung.
+**„Grund, Auswahl, Anhörung, Form, Frist – fehlt eins, kippt die Kündigung.“**
 
 ## Verwandt
 
-- [BBiG](bbig.md) – Ausbildungsvertrag und Probezeit
+- [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Arten, Form, Klagefrist
+- [Sozialauswahl](sozialauswahl.md) – Kriterien im Detail
+- [Besonderer Kündigungsschutz](besonderer-kuendigungsschutz.md) – wer nicht ordentlich kündbar ist
+- [Betriebsrat & JAV](betriebsrat-jav.md) – Anhörung, Interessenausgleich, Sozialplan
 - [Gericht](gericht.md) – Arbeitsgericht und Instanzen
-- [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Arten, Form und Klagefrist
-- [Sozialauswahl](sozialauswahl.md) – Auswahlkriterien im Detail
-- [Betriebsrat & JAV](betriebsrat-jav.md) – Anhörung nach § 102 BetrVG
+- Echte Aufgaben: [Winter 2024](fragen/Winter-2024.md) (20), [Winter 2022](fragen/Winter-2022.md) (10)

@@ -47,3 +47,10 @@
 - **Variable vor Verwendung initialisieren:** Häufiger Fehler
 
 **Weiter:** [01_Grundlagen_Syntax.md](01_Grundlagen_Syntax.md) → Einstieg in Syntax & Datentypen
+
+## Verwandt
+
+- [Pseudocode-Übersicht](readme.md)
+- [Struktogramm & PAP](struktogramm-pap.md) – grafische Alternative zu Pseudocode
+- [Fehlerarten & Exceptions](fehlerarten-exceptions.md)
+- [Lektion 4: Programmierung](../../analyse-der-exams/04_Programmierung_Grundlagen.md) – echte Prüfungsfälle 2021–2026

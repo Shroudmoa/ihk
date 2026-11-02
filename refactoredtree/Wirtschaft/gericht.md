@@ -1,71 +1,77 @@
-# Gericht
+# Gerichtsbarkeit: Welches Gericht ist zuständig?
 
-> **Welches Gericht? Entscheidend sind Rechtsweg und Streitgegenstand, nicht die Höhe des Streitwerts.** Fünf Fachgerichtsbarkeiten plus Verfassungsgericht.
+## In 30 Sekunden
 
-## Übersicht
+- Entscheidend ist der **Rechtsweg** (Art des Streits), nicht die Höhe des Streits.
+- **Arbeitsgericht:** Arbeitnehmer/Azubi gegen Arbeitgeber (Kündigung, Lohn, Zeugnis, Abmahnung) und Streit um Betriebsratsrechte.
+- **Sozialgericht:** Streit mit **Sozialversicherungsträgern** (Krankenkasse, Rentenversicherung, **Berufsgenossenschaft**, Agentur für Arbeit, Jobcenter).
+- **Finanzgericht:** Steuern und Zölle; **Verwaltungsgericht:** sonstiges öffentliches Recht (Gewerbe, Baurecht, Schule).
+- **Ordentliche Gerichte** (Amts-, Land-, Oberlandesgericht, BGH): Zivilsachen (Kaufvertrag, Miete) und Strafsachen; das **Amtsgericht** führt auch das Handelsregister.
 
-| Gerichtsbarkeit | Zuständig für | Erste Instanz | Typischer Fall |
+## Kernwissen
+
+### Gerichtsbarkeiten und Instanzen
+
+| Gerichtsbarkeit | Zuständig für | Instanzen | Vorverfahren |
 |---|---|---|---|
-| Ordentlich | Zivil- und Strafsachen | Amtsgericht / Landgericht | Kaufvertrag, Miete, Schadensersatz |
-| Arbeits | Arbeitnehmer vs. Arbeitgeber | Arbeitsgericht | Kündigung, Lohn, Zeugnis |
-| Verwaltungs | Bürger vs. Staat (allgemein) | Verwaltungsgericht | Baugenehmigung, Gewerbe, Beamte |
-| Sozial | Sozialversicherung | Sozialgericht | Rente, Krankengeld, Reha, BG |
-| Finanz | Steuern und Zölle | Finanzgericht | Steuerbescheid, Zoll |
-| Verfassung | Grundgesetz | BVerfG | Grundrechtsverletzung |
+| **Ordentliche** | Zivilrecht (Verträge, Schadensersatz, Miete, Familie, Erbe), Strafrecht | Amtsgericht → Landgericht → Oberlandesgericht → **BGH** | – |
+| **Arbeit** | Streit aus Arbeits- und Ausbildungsverhältnis, Betriebsverfassung, Tarifverträge | Arbeitsgericht → Landesarbeitsgericht → **BAG** (Erfurt) | Ausbildung: ggf. **Schlichtungsausschuss** der IHK |
+| **Sozial** | Kranken-, Pflege-, Renten-, Unfall-, Arbeitslosenversicherung, Grundsicherung, Elterngeld, Schwerbehindertenrecht | Sozialgericht → Landessozialgericht → **BSG** (Kassel) | **Widerspruch** beim Träger |
+| **Verwaltung** | übriges öffentliches Recht: Gewerbeerlaubnis, Baugenehmigung, Schulrecht, Ausländerrecht, Beamte | VG → OVG/VGH → **BVerwG** | meist Widerspruch |
+| **Finanz** | Steuerbescheide, Zölle, Kindergeld (steuerlich) | Finanzgericht → **BFH** (nur 2 Instanzen) | **Einspruch** beim Finanzamt |
+| **Verfassung** | Grundrechtsverletzungen, Verfassungsfragen | **BVerfG** (Karlsruhe) | Rechtsweg erschöpft |
 
-## Arbeitsgericht
+**Ordentliche Gerichte – Streitwert:** Seit 1.1.2026 ist das Amtsgericht in Zivilsachen bis **10.000 €** zuständig (vorher 5.000 €), darüber das Landgericht; Miet- und Familiensachen immer Amtsgericht.
 
-- Streit zwischen Arbeitnehmer und Arbeitgeber.
-- Kündigung, Abfindung, Lohn, Zeugnis, Betriebsrat.
-- Besetzung: Einzelrichter oder Kammer (1 Berufsrichter + 2 ehrenamtliche Beisitzer).
-- **Klagefrist Kündigung: 3 Wochen** ab Zugang.
-- Instanzen: ArbG → LAG → BAG.
-- In Kündigungssachen werden in erster Instanz keine Gerichtskosten erhoben; die Anwaltskosten trägt jede Partei selbst.
+### Arbeitsgericht – Besonderheiten
 
-## Sozialgericht
+- Besetzung der Kammer: **1 Berufsrichter + 2 ehrenamtliche Richter** (je einer aus Arbeitgeber- und Arbeitnehmerkreisen).
+- **Kündigungsschutzklage binnen 3 Wochen** nach Zugang (§ 4 KSchG); AGG-Klage binnen 3 Monaten nach schriftlicher Geltendmachung.
+- Erster Termin ist eine **Güteverhandlung** (Einigungsversuch, oft Vergleich mit Abfindung).
+- In der 1. Instanz trägt **jede Partei ihre Anwaltskosten selbst**, auch wenn sie gewinnt; keine Anwaltspflicht; Vertretung auch durch **Gewerkschaft** (Rechtsschutz für Mitglieder) oder Arbeitgeberverband.
 
-- Streit mit Sozialversicherungsträgern: Krankenkasse, Rentenversicherung, Berufsgenossenschaft, Agentur für Arbeit.
-- **Vorverfahren:** Widerspruch bei der Behörde; erst danach Klage.
-- Instanzen: SG → LSG → BSG.
-- Reha-Kosten nach Arbeitsunfall → Sozialgericht, nicht Arbeitsgericht.
+### Typische Zuordnungen aus Prüfungen
 
-## Verwaltungsgericht
+| Fall | Gericht |
+|---|---|
+| Klage auf besseres Arbeitszeugnis | Arbeitsgericht |
+| Kündigungsschutzklage | Arbeitsgericht |
+| BG lehnt Anerkennung eines Arbeitsunfalls / Reha ab | **Sozialgericht** |
+| Krankenkasse verweigert Krankengeld | Sozialgericht |
+| Streit über Einkommensteuerbescheid | Finanzgericht |
+| Gewerbeamt untersagt das Gewerbe | Verwaltungsgericht |
+| Kunde zahlt die gelieferte Hardware nicht (8.000 €) | Amtsgericht |
+| Schadensersatz über 10.000 € | Landgericht |
 
-- Öffentlich-rechtliche Streitigkeiten außer Sozial- und Finanzrecht.
-- Gewerbeerlaubnis, Baurecht, Umweltrecht, Ausländerrecht, Beamtenrecht.
-- Vor Klage meist Widerspruch.
-- Instanzen: VG → OVG → BVerwG.
+## Prüfungsfrage
 
-## Finanzgericht
+**Frage (Multiple Choice):** Die Berufsgenossenschaft lehnt die Übernahme von Reha-Kosten nach einem Arbeitsunfall ab. Welches Gericht ist nach erfolglosem Widerspruch zuständig?
 
-- Steuerbescheide, Zölle, Abgaben.
-- Vor Klage: Einspruch beim Finanzamt.
-- Instanzen: FG → BFH.
+1. Arbeitsgericht
+2. Amtsgericht
+3. Verwaltungsgericht
+4. Sozialgericht
+5. Familiengericht
 
-## Ordentliche Gerichte
+**Musterantwort:** **4. Sozialgericht.** Die Berufsgenossenschaft ist Träger der gesetzlichen Unfallversicherung; Bescheide von Sozialversicherungsträgern werden vor den Sozialgerichten angefochten. Das Arbeitsgericht wäre nur für Streit zwischen Arbeitnehmer und Arbeitgeber zuständig.
 
-- Zivil: Amtsgericht bis 10.000 € Streitwert, darüber Landgericht; Miete, Familie, Erbrecht.
-- Strafsachen: Amtsgericht/Landgericht.
-- Handelsregister: Amtsgericht.
-- Instanzen: AG → LG → OLG → BGH.
+## Falle
 
-## 3-Zeiler für die Prüfung
+- Sozialversicherung → **Sozial**gericht, nicht Verwaltungs- oder Arbeitsgericht.
+- Arbeitsunfall: Streit mit dem **Arbeitgeber** → Arbeitsgericht; Streit mit der **BG** → Sozialgericht.
+- Steuern → Finanzgericht (nur zwei Instanzen).
+- Handelsregister → **Amtsgericht**, nicht IHK.
+- Das Arbeitsgericht gehört **nicht** zur ordentlichen Gerichtsbarkeit.
 
-**Frage:** Ein Azubi klagt auf ein besseres Arbeitszeugnis. Welches Gericht?
+## Merksatz
 
-**Antwort:** Das Arbeitsgericht ist zuständig, weil es eine arbeitsrechtliche Streitigkeit zwischen Arbeitnehmer und Arbeitgeber ist. Die Klage ist beim örtlich zuständigen ArbG einzureichen. Eine vorherige Widerspruchsbehörde gibt es hier nicht.
-
-## Prüfungsfallen
-
-- Sozialversicherung → Sozialgericht, nicht Verwaltungsgericht.
-- Kündigung → Arbeitsgericht, 3 Wochen Klagefrist.
-- Steuer → Finanzgericht, nicht Amtsgericht.
-- Handelsregister → Amtsgericht, nicht IHK.
-- Arbeitsgericht ist keine Instanz der ordentlichen Gerichtsbarkeit.
+**„Chef → Arbeitsgericht, Kasse → Sozialgericht, Finanzamt → Finanzgericht, Behörde → Verwaltungsgericht, alle anderen → Amts-/Landgericht.“**
 
 ## Verwandt
 
 - [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Klagefrist
 - [Arbeitszeugnis](arbeitszeugnis.md) – Zeugnisklage
-- [Arbeitsunfall & Unfallversicherung](arbeitsunfall-unfallversicherung.md) – Sozialgericht
-- [Betriebsrat & JAV](betriebsrat-jav.md) – Arbeitsgericht und Betriebsrat
+- [Arbeitsunfall & Unfallversicherung](arbeitsunfall-unfallversicherung.md) – Bescheide der BG
+- [IHK & Ausbilder-Eignung](ihk-ausbilder-eignung.md) – Schlichtungsausschuss
+- [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Registergericht
+- Echte Aufgaben: [Sommer 2023](fragen/Sommer-2023.md) (20), [Sommer 2024](fragen/Sommer-2024.md) (7), [Sommer 2026](fragen/Sommer-2026.md) (Rechtsstreit Sozialversicherungsträger)

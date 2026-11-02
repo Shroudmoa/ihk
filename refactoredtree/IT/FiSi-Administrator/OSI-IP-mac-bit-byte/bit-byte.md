@@ -1,99 +1,86 @@
-# Bit-Byte
+# Bit, Byte, GB und GiB
 
-# Bit, Byte, GB, GiB und Datenraten – IHK AP2
+## In 30 Sekunden
 
-## Bit und Byte
+- **1 Byte = 8 Bit.** Kleines `b` = Bit, großes `B` = Byte → `Mbit/s` ≠ `MB/s` (Faktor 8).
+- **Dezimal (SI):** kB, MB, GB, TB = 10^3, 10^6, 10^9, 10^12 – Hersteller von Festplatten und **alle Datenraten**.
+- **Binär (IEC):** KiB, MiB, GiB, TiB = 2^10, 2^20, 2^30, 2^40 – Anzeige vieler Betriebssysteme, RAM.
+- 1 GiB ≈ 1,074 GB; eine „1-TB-Platte“ zeigt Windows als ca. **931 GB** (eigentlich GiB) an.
+- Bit-Bedarf: mit n Bit lassen sich **2^n** Zustände darstellen (wichtig für Subnetting und Datentypen).
 
-| Einheit | Bedeutung |
-|---|---|
-| bit (`b`) | Kleinste digitale Informationseinheit: `0` oder `1` |
-| Byte (`B`) | 8 Bit |
-| Kilobit (`kbit`) | 1.000 Bit |
-| Kilobyte (`kB`) | 1.000 Byte |
-| Megabyte (`MB`) | 1.000.000 Byte |
-| Gigabyte (`GB`) | 1.000.000.000 Byte |
-| Terabyte (`TB`) | 1.000.000.000.000 Byte |
+## Kernwissen
 
-**Groß- und Kleinschreibung ist wichtig:**
-- `b` = Bit
-- `B` = Byte
-- `Mbit/s` = Megabit pro Sekunde
-- `MB/s` = Megabyte pro Sekunde
-
-## GB vs. GiB – dezimal vs. binär
-
-Hersteller verwenden für Speicherkapazitäten üblicherweise das Dezimalsystem. Betriebssysteme zeigen Speichergrößen teilweise in binären Einheiten an.
+### Einheiten
 
 | Dezimal | Wert | Binär | Wert |
 |---|---:|---|---:|
 | 1 kB | 1.000 Byte | 1 KiB | 1.024 Byte |
 | 1 MB | 1.000.000 Byte | 1 MiB | 1.048.576 Byte |
 | 1 GB | 1.000.000.000 Byte | 1 GiB | 1.073.741.824 Byte |
-| 1 TB | 1.000.000.000.000 Byte | 1 TiB | 1.099.511.627.776 Byte |
+| 1 TB | 10^12 Byte | 1 TiB | 1.099.511.627.776 Byte |
 
-**Merke:**
-- `GB` = Gigabyte, dezimal: \(10^9\) Byte
-- `GiB` = Gibibyte, binär: \(2^{30}\) Byte
-- `1 GiB ≈ 1,074 GB`
-- `1 GB ≈ 0,931 GiB`
+**Abweichung wächst mit der Größe:** KiB/kB = 2,4 %, MiB/MB = 4,9 %, GiB/GB = 7,4 %, TiB/TB = 10,0 %.
 
-### Beispiel: Warum zeigt eine 1-TB-Festplatte weniger an?
+### Umrechnen
 
-Herstellerangabe: `1 TB = 1.000.000.000.000 Byte`
+| Gesucht | Rechnung |
+|---|---|
+| Bit → Byte | ÷ 8 |
+| Byte → Bit | × 8 |
+| GB → GiB | ÷ 1,073741824 |
+| GiB → GB | × 1,073741824 |
+| TB → TiB | ÷ 1,099511627776 |
 
-Umrechnung in TiB:
+**Beispiel: Warum zeigt eine 4-TB-Platte weniger an?**
+4 × 10^12 Byte ÷ 2^40 = 3,638 TiB → Windows zeigt „3,63 TB“ (meint TiB). Nichts ist verloren, nur die Einheit ist anders; zusätzlich belegt das Dateisystem etwas Platz.
 
-\[
-\frac{1.000.000.000.000}{2^{40}}
-\approx 0{,}9095\ \text{TiB}
-\]
+### Datenrate → Durchsatz
 
-Die Kapazität ist nicht verschwunden. Die Anzeige verwendet eine andere Einheit. Zusätzlich können Dateisysteme und Formatierung etwas Speicherplatz belegen.
-
-## Datenrate umrechnen
-
-Netzwerkgeschwindigkeiten werden häufig in Bit/s angegeben, Speicherdurchsatz dagegen in Byte/s.
-
-**Grundregel: 8 Bit = 1 Byte**
-
-| Datenrate | Theoretischer Durchsatz |
+| Leitung | theoretisch |
 |---|---:|
 | 8 Mbit/s | 1 MB/s |
 | 100 Mbit/s | 12,5 MB/s |
 | 1 Gbit/s | 125 MB/s |
 | 2,5 Gbit/s | 312,5 MB/s |
-| 10 Gbit/s | 1.250 MB/s = 1,25 GB/s |
+| 10 Gbit/s | 1.250 MB/s |
 
-Das sind theoretische Werte ohne Protokoll-Overhead. In der Praxis ist der Durchsatz meist niedriger.
+Praktisch weniger wegen Protokoll-Overhead (Ethernet, IP, TCP) – grob 5–10 %.
 
-### Beispiel: Downloadzeit
+### Wie viele Bit brauche ich? (2^n ≥ Anzahl)
 
-Datei: `2 GB`  
-Verbindung: `100 Mbit/s`
+| Bedarf | Bit | Beispiel |
+|---|---:|---|
+| 2 Zustände | 1 | an/aus |
+| 256 Werte | 8 | ein Oktett, 0–255 |
+| 4.094 VLANs | 12 | 802.1Q-VLAN-ID (2^12 = 4.096, 0 und 4095 reserviert) |
+| 65.536 Werte | 16 | Portnummer, IPv6-Gruppe |
+| 4,3 Mrd. | 32 | IPv4-Adressraum |
 
-1. `2 GB = 16.000 Mbit`
-2. `Zeit = Datenmenge ÷ Datenrate`
-3. `16.000 Mbit ÷ 100 Mbit/s = 160 Sekunden`
+### Hexadezimal
 
-**Ergebnis:** Theoretisch 2 Minuten und 40 Sekunden. In der Praxis dauert es wegen Overhead und schwankender Verbindung länger.
+Eine Hexziffer = **4 Bit** (Nibble), zwei Hexziffern = 1 Byte. `F` = 1111, `FF` = 255. Daher: MAC 48 Bit = 12 Hexziffern, IPv6-Gruppe 16 Bit = 4 Hexziffern.
 
-## Wichtige Formeln
+## Prüfungsfrage
 
-| Gesucht | Formel |
-|---|---|
-| Bit in Byte | Bit ÷ 8 |
-| Byte in Bit | Byte × 8 |
-| Übertragungszeit | Datenmenge in Bit ÷ Datenrate in Bit/s |
-| Datenmenge | Datenrate × Zeit |
-| Dezimal GB in GiB | GB ÷ 1,073741824 |
-| Binär GiB in GB | GiB × 1,073741824 |
+**Frage:** Ein Kunde reklamiert, dass sein neues NAS mit 4 × 8 TB im RAID 5 nur „21,8 TB“ anzeigt statt 24 TB. Erklären Sie die Differenz rechnerisch.
 
-Bei Übertragungszeit-Aufgaben müssen Datenmenge und Datenrate in kompatiblen Einheiten stehen.
+**Musterantwort:** RAID 5 mit 4 × 8 TB ergibt (4 − 1) × 8 TB = 24 TB = 24 × 10^12 Byte. Das NAS zeigt binäre Einheiten an: 24 × 10^12 ÷ 2^40 ≈ **21,83 TiB**. Die Kapazität fehlt also nicht; der Hersteller rechnet dezimal (TB), das System binär (TiB). Zusätzlich verringern Dateisystem-Metadaten den nutzbaren Platz geringfügig.
 
-## IHK-Fallen
+## Falle
 
-- `MB/s` ist achtmal so groß wie der Zahlenwert in `Mbit/s`, wenn dieselbe Datenrate gemeint ist.
-- `1 GB` sind dezimal 1.000.000.000 Byte, `1 GiB` sind 1.073.741.824 Byte.
-- `1 Gbit/s` bedeutet nicht `1 GB/s`.
-- Eine Leitung mit 100 Mbit/s lädt theoretisch höchstens 12,5 MB pro Sekunde.
-- Herstellerkapazität und Betriebssystemanzeige können sich durch unterschiedliche Einheiten unterscheiden.
+- `MB/s` und `Mbit/s` gleichsetzen → Faktor 8 falsch.
+- Datenraten binär rechnen (1 Mbit/s = 1.048.576 bit/s) → **falsch**, Datenraten sind immer dezimal.
+- GiB-Werte als „Verlust durch Formatierung“ erklären → die Hauptursache ist die **Einheit**.
+- Die Abweichung als konstant 2,4 % annehmen → sie steigt mit jeder Stufe.
+
+## Merksatz
+
+**„Klein-b ist Bit, Groß-B ist Byte – i heißt binär.“**
+
+## Verwandt
+
+- [Übertragungszeit & Datenrate](uebertragungszeit-datenrate.md) – Rechenaufgaben mit Overhead
+- [Subnetting](subnetting-ipv4-ipv6.md) – Zweierpotenzen in Aktion
+- [RAID](../Server/raid.md) – Kapazitäten berechnen
+- [Auflösung & Speicherbedarf](../../nice-to-know/aufloesung-speicherbedarf.md) – Bild-/Videogrößen
+- [Datentypen](../../UML-Code-SQL/Pseudocode/datentypen.md) – Bit-Bedarf von Datentypen

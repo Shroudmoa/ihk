@@ -126,3 +126,8 @@ Ein Kunde kann 0 oder mehr Rechnungen haben, jede Rechnung gehört zu genau eine
 - [Aktivitätsdiagramm](Aktivitaetsdiagramm.md)
 - [Anwendungsfalldiagramm-Use-Case-Diagramm](Anwendungsfalldiagramm-Use-Case-Diagramm.md)
 - [Sequenzdiagramm](Sequenzdiagramm.md)
+- [Zustandsdiagramm](zustandsdiagramm.md)
+- [UML-Übersicht](readme.md)
+- [Lektion 14: Datenmodellierung, SQL & UML](../../analyse-der-exams/L14_Datenmodellierung_SQL_UML.md)
+- [ER-Modell & Kardinalitäten](../sql/er-modell-kardinalitaeten.md) – Multiplizitäten im Datenmodell
+- [OOP-Grundlagen](../Pseudocode/oop-grundlagen.md) – Kapselung und Vererbung im Code

@@ -127,3 +127,7 @@ Dargestellt als **dicker Balken**.
 - [Klassendiagramm](Klassendiagramm.md)
 - [Anwendungsfalldiagramm-Use-Case-Diagramm](Anwendungsfalldiagramm-Use-Case-Diagramm.md)
 - [Sequenzdiagramm](Sequenzdiagramm.md)
+- [Zustandsdiagramm](zustandsdiagramm.md)
+- [UML-Übersicht](readme.md)
+- [Lektion 14: Datenmodellierung, SQL & UML](../../analyse-der-exams/L14_Datenmodellierung_SQL_UML.md)
+- [Struktogramm & PAP](../Pseudocode/struktogramm-pap.md) – Abläufe ohne UML

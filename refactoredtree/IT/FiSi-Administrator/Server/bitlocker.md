@@ -1,124 +1,83 @@
-# Bitlocker
+# BitLocker und Datenträgerverschlüsselung (TPM)
 
-### 1. Data‑at‑Rest (DAR) Grundlagen
-- **Definition** – AES‑XTS‑128 / AES‑GCM auf Blockgeräteebene.
-- **Zweck** – Selbst wenn SSD/HD entnommen wird, sind die Inhalte ohne Schlüssel unlesbar.
-- **Wichtigster Punkt** – Der Schlüssel darf niemals auf der Storage selbst verbleiben (DSGVO Art. 32).
+## In 30 Sekunden
 
-### 2. TPM (Trusted Platform Module) – Hardware Root of Trust
-- **Definition** – TPM 2.0-Chip auf dem Mainboard, physisch mit dem System verknüpft.
-- **Key‑Binding** – Verschlüsselungsschlüssel werden niemals den Chip verlassen; sie werden mit `TPM2_Seal` verknüpft.
-- **Boot‑Integrity** – PCR (Platform Configuration Registers) messen Bootloader, Firmware, Kernel → bei Manipulation verweigert TPM Schlüsselfreigabe.
+- **Data at Rest:** Gespeicherte Daten werden verschlüsselt. Wer Notebook, Festplatte oder USB-Stick stiehlt, kann ohne Schlüssel nichts lesen.
+- **BitLocker** ist die Vollverschlüsselung von Windows (Pro/Enterprise/Server) mit **AES-XTS 128 oder 256 Bit**. **BitLocker To Go** verschlüsselt Wechseldatenträger.
+- Der Schlüssel liegt geschützt im **TPM 2.0**. Das TPM gibt ihn nur frei, wenn der Bootvorgang unverändert ist (**Measured Boot**, PCR-Werte).
+- Schutzstufen: **TPM only** (bequem), **TPM + PIN** (Pre-Boot-Authentifizierung, empfohlen für Notebooks), **TPM + USB-Schlüssel**.
+- Ohne gesicherten **Wiederherstellungsschlüssel** (48 Ziffern in AD/Entra ID) sind die Daten bei einem Defekt verloren.
+- Linux-Gegenstück: **LUKS** (dm-crypt), macOS: **FileVault**.
+- Geprüft: OS-Sicherheitsmerkmale 2022S, Schutz bei Notebook-Diebstahl 2024S, Verschlüsselung externer Datenträger (AES vs. DES vs. RSA) 2023W.
 
-> **Drei‑Zeilen‑Explanationsstil**
-> 1️⃣ TPM speichert einen Schlüssel, der mit der Hardware verknüpft ist. 2️⃣ Es überprüft den Bootvorgang und verweigert Zugriff, wenn sich etwas geändert hat. 3️⃣ Ohne TPM gibt es keinen Hardware-basierten Schutz gegen Datenklau.
+## Kernwissen
 
-**Pros**
-- Schlüsselspeicherung ist hardwareverifiziert.
-- Gemessener Bootvorgang (Vertrauenswürdigkeitsprüfung).
+### Bausteine
 
-**Cons**
-- Portabilitätsprobleme: Wechsel der Hardware → TPM kann einen wichtigen Schlüssel verlieren.
-- Kein Alleingangslösung; benötigt OS-weiten Support (BitLocker, LUKS).
+| Baustein | Aufgabe |
+|---|---|
+| **Volume Master Key (VMK)** / **Full Volume Encryption Key (FVEK)** | der eigentliche Datenschlüssel (FVEK) wird vom VMK geschützt, der VMK von den Schutzmechanismen (Protektoren) |
+| **TPM 2.0** | Hardware-Chip (oder Firmware-TPM), speichert Schlüssel versiegelt, misst Firmware, Bootloader und Konfiguration in PCR-Registern |
+| **Protektoren** | TPM, TPM + PIN, TPM + USB, Passwort (Datenlaufwerke), Wiederherstellungsschlüssel |
+| **Secure Boot** | stellt sicher, dass nur signierter Bootcode läuft → [BIOS/UEFI](bios-uefi.md) |
+| **Wiederherstellungsschlüssel** | 48-stelliger Notfallschlüssel, wird bei geänderter Hardware/Firmware, vergessener PIN oder Plattenumzug abgefragt |
 
-### 3. BitLocker – Microsofts Lösung
-- **Definition** – AES‑128/256‑XTS‑Verschlüsselung für Windows-System- und-Volume-Verschlüsselung.
-- **Integration** – BitLocker kann TPM 2.0 als „Key‑Verbindungs“-Mechanismuse verwenden (`TPM‑Only`, `TPM‑Pin`, `TPM‑USB`).
-- **Recovery** – Wiederherstellungs‑Schlüssel in Azure AD, AD‑Userrichtlinie oder einem Passwort‑Manager gespeichert.
+### Ablauf beim Start
 
-> **Drei‑Zeilen‑Explanationsstil**
-> 1️⃣ BitLocker verschlüsselt die gesamte Festplatte und umfasst Systemdateien. 2️⃣ Es arbeitet mit TPM zusammen, um den Chiffrierschlüssel auf dem Chip zu speichern; Fallback: Passwort/USB/Recovery-Schlüssel. 3️⃣ Es erfüllt DSGVO-„Verschlüsselungs“-Anforderungen, wenn der Wiederherstellungs-Schlüssel sicher aufbewahrt wird.
+1. UEFI und Bootloader werden gemessen, die Messwerte landen in den PCRs des TPM.
+2. Stimmen die Werte mit dem Zustand beim Versiegeln überein (und ist ggf. die PIN korrekt), gibt das TPM den VMK frei.
+3. Windows entschlüsselt das Volume transparent im laufenden Betrieb.
+4. Wurde etwas manipuliert (anderer Bootloader, Platte in fremdem Rechner), verweigert das TPM die Freigabe → Wiederherstellungsschlüssel nötig.
 
-**Pros**
-- Ein-Klick‑Integration für Windows‑Desktops/Laptops.
-- Einfache Verwaltung über Group Policy / Azure AD.
+### Vergleich der Lösungen
 
-**Cons**
-- Windows-zentriert; unsupported auf Linux/macOS.
-- Nur eine „Besitz“-Faktor; ohne TPM ist die Sicherheit ein reines Passwort (Schwachpunkt).
+| Lösung | Plattform | Besonderheit |
+|---|---|---|
+| **BitLocker** | Windows Pro/Enterprise/Server | TPM-Integration, zentrale Verwaltung per GPO/Intune, Schlüssel-Backup in AD/Entra ID |
+| **Geräteverschlüsselung** | Windows Home (unterstützte Geräte) | vereinfachte BitLocker-Variante |
+| **LUKS** | Linux | Standard für Vollverschlüsselung, TPM-Bindung z. B. mit `systemd-cryptenroll` |
+| **FileVault** | macOS | Schlüssel in der Secure Enclave |
+| **VeraCrypt** | plattformübergreifend | Open Source, Container und Partitionen |
+| **Self-Encrypting Drive (SED)** | Hardware | Laufwerk verschlüsselt selbst (Opal), Vertrauen in die Firmware nötig |
 
-### 4. OS‑unabhängige Alternativen
-| Lösung | Plattform | Verschlüsselung | Anbindung von Schlüsseln |
-|----------|----------|-----------|----------------|
-| **LUKS + dm‑crypt** | Linux | AES‑XTS‑128/256 | TPM (tpm2‑luksmapper), Passwort, Schlüsseldatei |
-| **FileVault** | macOS | AES‑128‑XTS | ICloud‑Keychain, TPM (optional über FileVault‑TPM) |
-| **VeraCrypt** | Cross‑platform | AES‑XTS, Serpent | Passwort, Schlüsseldatei, TPM (über `tcplay`) |
-| **Cryptsetup + LUKS2** | Linux | AES‑GCM‑256 (Option) | TPM, YubiKey, HSM |
+### Warum AES? (2023W)
 
-> **Drei‑Zeilen‑Explanationsstil**
-> 1️⃣ LUKS2 speichert einen Chiffrierschlüssel in einer Schlüsseldatei. 2️⃣ `tpm2‑luksmapper` bindet den Schlüssel an TPM, sodass der Schlüssel nie den Chip verlässt. 3️⃣ Die Verwendung von LUKS2 + TPM ist der Linux-Äquivalent von BitLocker + TPM.
+| Verfahren | Eignung für Datenträger |
+|---|---|
+| **AES-256** | symmetrisch, schnell, hardwarebeschleunigt (AES-NI), sicher → **erste Wahl** für große Datenmengen |
+| **DES** | 56-Bit-Schlüssel, per Brute Force gebrochen → **nicht geeignet** |
+| **RSA** | asymmetrisch, sehr langsam für große Datenmengen → nur für Schlüsselaustausch und Signaturen (hybride Verfahren) |
 
-**Pros**
-- Offen, unabhängig, aufwendigere Schlüsselverwaltung.
-- Portabel zwischen Distributionen, Container-Images.
+### Grenzen
 
-**Cons**
-- Einrichtung aufwendiger (`cryptsetup`, LUKS‑Header-Sicherung).
-- Geringere Unterstützung durch GUI (im Vergleich zu BitLocker).
+- Schützt nur, wenn das Gerät **ausgeschaltet** ist oder im Ruhezustand (Hibernate). Im laufenden, entsperrten Betrieb sind die Daten lesbar.
+- **TPM only** ohne PIN: Das Gerät startet bis zum Windows-Login automatisch. Bei hohem Schutzbedarf deshalb TPM + PIN.
+- Kein Schutz vor Malware oder Ransomware im laufenden System, kein Ersatz für Backup.
 
-### 5. Erweiterte Schlüsselmanagement-Hardware
-| Gerät | Typ | Hauptsicherheit |
-|--------|------|-----------------|
-| **Intel SGX** | CPU-Trust-Domain | Schlüsselspeicherung im Enklave-Speicher (nicht lesbar vom OS) |
-| **HSM (z. B. SafeNet)** | Extern, PCI‑e | Schlüsselerzeugung auf Chip, Audit-Protokolle (Syslog/514) |
-| **YubiKey 5 NFC / Nitrokey** | USB‑Key | TPM-ähnliche Schlüsselgenerierung, FIDO2 + OTP |
+## Prüfungsfrage
 
-> **Drei‑Zeilen‑Explanationsstil**
-> 1️⃣ SGX erstellt eine geschützte Enklave, die den Schlüssel physisch isoliert. 2️⃣ HSMs sind dedizierte Kryptoprozessoren mit strengen Compliance-Audit-Protokollen. 3️⃣ Hardware-Sicherheitsschlüssel bieten einen „Besitz“-Faktor, der viele TPM-Schwachstellen (Portabilität) abdeckt.
+**Frage:** Nennen Sie zwei Maßnahmen, die die Unternehmensdaten bei Diebstahl eines Notebooks schützen, und erläutern Sie die Rolle des TPM.
 
-### 6. Boot‑Integrity & Measured Boot (TPM + Secure‑Boot)
-- **Secure Boot (UEFI)** – Verhindert das Laden nicht signierter Bootloader (Schicht 3‑4).
-- **Measured Boot** – Jeder Schritt (Firmware → OS) füllt einen TPM‑PCR; Revisionsliste wird in SIEM (Syslog/514) gespeichert.
-- **Linux IMA/EVM** – Integritätsprüfung von geladenen Modulen (Linux‑only, auch mit TPM-PCRs).
+**Musterantwort:** Erstens wird die Festplatte vollständig mit BitLocker (AES-256) verschlüsselt, mit Pre-Boot-Authentifizierung per TPM und PIN. Ohne PIN und ohne das passende TPM sind die Daten auch nach Ausbau der Festplatte unlesbar. Zweitens wird das Notebook per Mobile Device Management verwaltet, sodass es bei Verlust gesperrt oder aus der Ferne gelöscht werden kann. Das TPM ist ein Sicherheitschip, der den Schlüssel zum Entschlüsseln geschützt speichert. Es gibt ihn nur frei, wenn der gemessene Bootvorgang unverändert ist und die PIN stimmt. So kann ein Angreifer die Platte weder in einem anderen Rechner noch mit einem manipulierten Bootloader öffnen.
 
-> **Drei‑Zeilen‑Explanationsstil**
-> 1️⃣ Secure Boot stellt sicher, dass nur Microsoft- oder OEM-Signierte einsteigen. 2️⃣ Gemessener Bootvorgang protokolliert Änderungen in TPM‑PCRs, die mit Syslog/514 exportiert werden können. 3️⃣ Integriert mit DSGVO-„Nachverfolgbarkeit“-Anforderungen.
+## Falle
 
-### 7. DSGVO-Konformität – Checkliste
-| Anforderung | Tech-Lösung | Überwachung (Port) |
-|-------------|---------------|-------------------|
-| Verschlüsselung bei Diebstahl | BitLocker/LUKS/TPM | – |
-| Schlüsselrotation | KMS (AWS/Azure) | HTTPS 443, SSH 22 |
-| Audit Trail | Syslog (514) / SIEM | Syslog UDP/TCP 514 |
-| Zugriffskontrolle | MFA (OTP, YubiKey) | Radius/TACACS+ (1812/1813) |
-| Datenlöschung | Cryptographic Erase (Schließung des Schlüssels) | Verwaltungsprotokoll (SNMP 161) |
+- BitLocker mit Secure Boot verwechseln. Secure Boot prüft Signaturen, BitLocker verschlüsselt.
+- Den Wiederherstellungsschlüssel auf dem verschlüsselten Laufwerk speichern.
+- Verschlüsselung als Schutz im laufenden Betrieb verkaufen.
+- RSA für die Verschlüsselung ganzer Datenträger vorschlagen.
+- Ein BIOS-Passwort als gleichwertig darstellen. Ausgebaut ist die Platte ohne Verschlüsselung lesbar.
 
-> **Drei‑Zeilen‑Explanationsstil**
-> 1️⃣ Verschlüsselung entspricht Art. 32 „Pseudonymisierung und Verschlüsselung“. 2️⃣ Schlüsselrotation und sichere Speicherung bieten „Rechenschaftspflicht“ (Rechenschaftspflicht). 3️⃣ Syslog/514-Protokollierung stellt sicher, dass jede Schlüsselverwendung aufgezeichnet wird (DSGVO Art. 5(2)).
+## Merksatz
 
-### 8. Netzwerkseitig – Ports & Protokolle für den sicheren Fernzugriff
-| Dienst | Port | Protokoll | Warum es für IHK relevant ist |
-|---------|------|----------|--------------------------|
-| SSH | 22 | TCP | Authentifizierte Remote-Administration, Schlüsselübertragung |
-| VPN (IPsec) | 500 / 4500 | UDP | Verschlüsselte Tunnel (Layer 3) |
-| WireGuard | 51820 | UDP | Leichtgewichtig, modernes VPN (IPsec-Äquivalent) |
-| TLS/HTTPS | 443 / 8443 | TCP | Webbasierte Verwaltung, Zertifikatsauthentifizierung |
-| Syslog | 514 | UDP/TCP | Zentrale Protokollierung (DSGVO-Audit-Trail) |
-| SNMP v3 | 161 / 162 | UDP | Netzwerküberwachung, nur mit Authentifizierung |
-| RDP | 3389 | TCP | Windows-Remote-Desktop (sicher mit NLA) |
-| SMB | 445 | TCP | Dateifreigabe (erfordert Verschlüsselung – SMB‑3) |
+**„AES verschlüsselt, das TPM bewacht den Schlüssel, die PIN öffnet die Tür, und der Recovery-Key liegt woanders.“**
 
-> **Drei‑Zeilen‑Explanationsstil**
-> 1️⃣ SSH verschlüsselt die Kommandozeile und Transport-Schlüssel (Port 22). 2️⃣ IPsec Tunnel (Ports 500/4500) sichern Layer‑3-Kommunikation für VPN. 3️⃣ Syslog (514) sichert DSGVO-konforme Protokollierung durch sichere Weiterleitung.
+## Verwandt
 
-### 9. OSI‑Mapping der oben genannten Sicherheitsmaßnahmen
-| Schicht | Haupttechnologie | Beispiel-Port |
-|-------|----------------|---------------|
-| 2 (Datenlink) | VLAN‑Tagging, MAC‑Filtering | – |
-| 3 (Netzwerk) | IPsec, WireGuard | 500/4500, 51820 |
-| 4 (Transport) | TCP/UDP-Firewall, NAT | 22, 443, 514 |
-| 5 (Session) | TLS/SSL | 443, 8443 |
-| 6 (Präsentation) | AES‑GCM‑Verschlüsselung (BitLocker/LUKS) | – |
-| 7 (Anwendung) | BitLocker-Dienst, LUKS-cryptsetup | – |
-
-> **Drei‑Zeilen‑Explanationsstil**
-> 1️⃣ Layer 2 begrenzt den broadcast‑Domänenbereich (VLAN). 2️⃣ Layer 3 leitet verschlüsselte Tunnel (IPsec) um. 3️⃣ Layer 6 kodiert Daten für die Speicherung (AES‑XTS), Layer 7 bietet den OS‑Dienst.
-
-### 10. Kurze Zusammenfassung für die IHK-Prüfung („Double‑Bird“)
-- **BitLocker + TPM** = Windows-native, hardwaregebundene Verschlüsselung (WKP 22 / 443 für Wiederherstellung).
-- **LUKS + tpm2‑luksmapper** = Linux‑äquivalent mit gleicher hardwarebasierter Schlüsselspeicherung.
-- **DSGVO** → Verschlüsselung + sichere Schlüsselspeicherung (Art. 32) + Audit-Protokolle über Syslog/514 (Art. 5/6).
-- **Netzwerksicherheit** → Verschlüsselter Remotezugriff (SSH 22, WireGuard 51820, TLS 443) und Überwachung (SNMP 161/162, Syslog 514).
-
-**Zusammenfassung:**
-Wenn ein Azubi fragt „Was verhindert Diebstahl von Daten von einem ausgeklemmten Laptop?“, antworten Sie: **Verschlüsselung (BitLocker/LUKS) + hardwarebasierter Schlüssel (TPM/HSM) + sicherer Fernzugriff (SSH/VPN) + auditierte Protokollierung (Syslog/514)**. Das umfasst alle IHK-bezogenen Themen in einem Satz.
+- [BIOS/UEFI – Firmware und Härtung](bios-uefi.md) – Secure Boot, TPM aktivieren
+- [OS-Härtung](os-haertung.md)
+- [Symmetrische und asymmetrische Verschlüsselung](../Sicherheit/Verschluesselung/symmetrische-und-asymmetrische.md)
+- [MDM & BYOD](../Netzwerk-Administration/mdm-byod.md) – Fernlöschung
+- [DSGVO-TOM](../../Management/DSGVO/dsgvo-tom.md) – Verschlüsselung als TOM (Art. 32)
+- [OS-Sicherheitsmerkmale](../../nice-to-know/OS-sicherheitsmerkmale.md)
+- [Lektion L27 PKI, TLS, Verschlüsselung](../../analyse-der-exams/L27_PKI_TLS_Verschluesselung_VPN.md)

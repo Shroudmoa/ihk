@@ -1,106 +1,78 @@
-# Skalierbarkeit & Elastizität
+# Skalierbarkeit und Elastizität
 
-## Skalierbarkeit (Scalability)
+## In 30 Sekunden
 
-**Skalierbarkeit** beschreibt die Fähigkeit eines IT-Systems, bei steigender Last mehr Leistung bereitzustellen, indem Ressourcen angepasst werden.
+- **Skalierbarkeit:** Ein System kann bei steigender Last durch zusätzliche Ressourcen mehr leisten.
+- **Vertikal (Scale-up):** **größerer** Server (mehr CPU, RAM). Einfach, aber begrenzt, oft mit Downtime, bleibt ein SPOF.
+- **Horizontal (Scale-out):** **mehr** Server hinter einem Load Balancer. Nahezu unbegrenzt und ausfallsicherer, aber komplexer.
+- **Elastizität:** Ressourcen werden **automatisch** nach Bedarf **hoch und wieder herunter** gefahren (Auto-Scaling). Typisch für die Cloud mit Pay-per-Use.
+- Geprüft: horizontale vs. vertikale Skalierung 2023S, Skalierbarkeit als Cloud-Vorteil 2021W/2024S.
 
-## Vertikale vs. horizontale Skalierung
+## Kernwissen
 
-| Merkmal | **Vertikal – Scale Up / Scale Down** | **Horizontal – Scale Out / Scale In** |
+### Vertikal vs. horizontal
+
+| Merkmal | **Vertikal – Scale-up / Scale-down** | **Horizontal – Scale-out / Scale-in** |
 |---|---|---|
-| **Prinzip** | Ressourcen eines bestehenden Servers erweitern/reduzieren (CPU, RAM) | Hinzufügen oder Entfernen weiterer Server/Instanzen |
-| **Beispiel** | Mehr RAM oder stärkere CPU einbauen/zuweisen | Zusätzlichen Webserver zum Pool hinzufügen |
-| **Hardwaregrenze** | Durch maximale Hardwarekapazität begrenzt | Theoretisch nahezu unbegrenzt |
-| **Downtime** | Häufig nötig (bes. bei physischer Aufrüstung) | Meist ohne vollständige Downtime möglich |
-| **Komplexität** | Geringer | Höher (Lastverteilung, Sessions, Datenabgleich) |
-| **Ausfallsicherheit** | Höheres Risiko eines **SPOF** (Single Point of Failure) | Höhere Ausfallsicherheit durch Verteilung |
-| **Einsatz** | Kleinere Erweiterungen, monolithische Systeme | Hochverfügbare, verteilte Systeme |
+| Prinzip | Ressourcen eines bestehenden Servers erweitern/reduzieren | weitere Server/Instanzen hinzufügen oder entfernen |
+| Beispiel | VM von 8 auf 16 vCPU und von 32 auf 64 GB RAM | zusätzlicher Webserver im Pool |
+| Grenze | maximale Hardware des Hosts | theoretisch nahezu unbegrenzt |
+| Downtime | häufig nötig (Neustart, Einbau) | meist ohne Unterbrechung |
+| Anwendung | keine Änderung nötig | muss verteilbar sein (zustandslos, Sessions zentral) |
+| Ausfallsicherheit | bleibt **SPOF** | höher durch Verteilung |
+| Komplexität | gering | höher (Load Balancer, Datenabgleich) |
+| Einsatz | Datenbank, monolithische Anwendung | Webserver, Microservices, Container |
 
-## Scale Up vs. Scale Out im Detail
+Für horizontales Skalieren wird ein [Load Balancer](../load-balancer.md) eingesetzt, der selbst redundant sein muss.
 
-- **Scale Up (vertikal):** „Stärkerer Server“ – mehr Leistung pro Einheit
-- **Scale Down (vertikal):** Ressourcen reduzieren
-- **Scale Out (horizontal):** „Mehr Server“ – Lastverteilung über mehrere Einheiten
-- **Scale In (horizontal):** Überflüssige Instanzen entfernen
+### Skalierbarkeit vs. Elastizität
 
-Für horizontales Skalieren wird meist ein **[Load Balancer](../load-balancer.md)** eingesetzt.
-
-## Elastizität (Elasticity)
-
-**Elastizität** geht über die Skalierbarkeit hinaus: Das System passt Ressourcen **automatisch und bedarfsgerecht** an – dynamisch nach oben und unten.
-
-**Beispiel:** Ein Onlineshop skaliert während eines Black Fridays automatisch auf 20 Webserver hoch und fährt nach Ende der Aktion wieder auf 2 Server herunter.
-
-## Unterschied Skalierbarkeit vs. Elastizität
-
-| Kriterium | **Skalierbarkeit** | **Elastizität** |
+| Kriterium | Skalierbarkeit | Elastizität |
 |---|---|---|
-| **Charakter** | Potenzial zur Leistungssteigerung | Dynamische, automatische Anpassung an aktuellen Bedarf |
-| **Steuerung** | Meist manuell oder geplant | Meist automatisch (Auto-Scaling) |
-| **Zeitrahmen** | Langfristig (Wachstum) | Kurzfristig (Lastspitzen/-täler) |
-| **Richtung** | Fokus auf Vergrößern | Fokus auf **hoch und runter** skalieren |
-| **Cloud-Bezug** | Allgemeines Konzept | Typisch für Public Cloud (Pay-per-Use) |
+| Charakter | **Fähigkeit** zu wachsen | **automatische** Anpassung an die aktuelle Last |
+| Steuerung | geplant, oft manuell | Regeln/Metriken (z. B. CPU > 70 % → +1 Instanz) |
+| Zeitrahmen | langfristiges Wachstum | kurzfristige Spitzen und Täler |
+| Richtung | vor allem nach oben | hoch **und** runter |
+| Kosteneffekt | Kapazität wird vorgehalten | ungenutzte Ressourcen werden freigegeben → Kosten sinken |
 
-## IHK-Merksätze
+**Beispiel:** Ein Onlineshop läuft normal mit 2 Webservern, am Black Friday skaliert er automatisch auf 20 und danach wieder zurück.
 
-- **Scale-Up = vertikal (größer)** | **Scale-Out = horizontal (mehr)**
-- **Elastisch = wächst und schrumpft automatisch**
-- **Horizontale Skalierung + Load Balancer = hohe Verfügbarkeit & Ausfallsicherheit**
-- **Nur elastisch heißt:** Ressourcen werden bei Nichtbedarf **wieder freigegeben** (Kostenersparnis)
+### Cloud ist nicht automatisch günstiger
+
+| Lastprofil | Konsequenz |
+|---|---|
+| dauerhaft hohe, gleichmäßige Last | eigene Hardware oder reservierte Instanzen oft günstiger |
+| stark schwankende Last | Elastizität spart Überkapazität |
+| schlechte Kostenkontrolle | vergessene Instanzen und Datenverkehr (Egress) treiben die Rechnung |
+| proprietäre Dienste | Vendor Lock-in, teure Migration |
+
+Entscheidend sind [TCO](../../../Management/tco.md), Lastprofil, Betriebsaufwand und Wechselkosten.
+
+## Prüfungsfrage
+
+**Frage:** Der Webshop stößt zu Spitzenzeiten an seine Grenzen. Erläutern Sie horizontale und vertikale Skalierung und empfehlen Sie eine Variante.
+
+**Musterantwort:** Bei der vertikalen Skalierung (Scale-up) erhält der bestehende Server mehr Ressourcen, etwa zusätzliche CPU-Kerne oder mehr Arbeitsspeicher. Das ist einfach umzusetzen und erfordert keine Änderung der Anwendung, stößt aber an die Grenzen der Hardware, erfordert oft einen Neustart, und der Server bleibt ein Single Point of Failure. Bei der horizontalen Skalierung (Scale-out) werden weitere Server-Instanzen hinzugefügt, und ein Load Balancer verteilt die Anfragen. Das ist nahezu beliebig erweiterbar und erhöht gleichzeitig die Ausfallsicherheit, setzt aber eine verteilbare Anwendung mit zentraler Sitzungsverwaltung voraus. Für einen Webshop mit Lastspitzen ist die horizontale Skalierung zu empfehlen, idealerweise elastisch per Auto-Scaling, damit zusätzliche Instanzen nach der Spitze wieder entfernt werden.
+
+## Falle
+
+- Vertikal und horizontal vertauschen: **up = größer**, **out = mehr**.
+- Skalierbarkeit und Elastizität gleichsetzen. Elastizität ist **automatisch und in beide Richtungen**.
+- Scale-out ohne Load Balancer oder mit lokal gespeicherten Sitzungen planen.
+- Behaupten, Scale-out ginge immer. Eine Anwendung, die nicht verteilt laufen kann, profitiert nicht.
+
+## Merksatz
+
+**„Up = dicker, Out = mehr, elastisch = atmet von selbst.“**
 
 ## Verwandt
 
-- [Load Balancer](../load-balancer.md) – unverzichtbar für Scale-Out
+- [Load Balancer](../load-balancer.md) – unverzichtbar für Scale-out
 - [Cloud Computing](../Cloud/cloud-computing.md) – Elastizität als Kernmerkmal
 - [HA-Hochverfügbarkeit](../ha-hochverfuegbarkeit.md)
+- [Cluster](../cluster.md)
+- [Container & Docker](container-docker.md) – schnelles horizontales Skalieren
 - [Virtualisierung](virtualisierung.md)
-- [Hypervisor-Typen](hypervisor-typen.md)
-
-
-**Merksatz:** Skalierbarkeit ist die Fähigkeit zu wachsen. Elastizität ist die dynamische Anpassung an den tatsächlichen Bedarf.
-
-## Cloud: schneller – aber zu welchem Preis?
-
-Cloud-Dienste können Ressourcen oft innerhalb von Minuten oder Sekunden bereitstellen. Das hängt vom Anbieter, Dienst und der Architektur ab.
-
-### Vorteile
-
-- Schnelle Bereitstellung ohne vorherigen Hardwarekauf.
-- Automatische Skalierung bei Lastspitzen.
-- Abrechnung häufig nutzungsabhängig (OPEX).
-- Weniger eigene Hardwarewartung, abhängig vom Cloud-Service-Modell.
-
-### Nachteile und Kosten
-
-- Laufende Kosten können bei dauerhaft hoher Auslastung erheblich sein.
-- Unbeachtete Ressourcen können weiter Kosten verursachen.
-- Datenübertragung aus der Cloud kann zusätzliche Gebühren verursachen.
-- Proprietäre Dienste können Vendor Lock-in erzeugen.
-- Abhängigkeit von Internetverbindung, Anbieter und dessen Verfügbarkeit.
-- Datenschutz und Compliance müssen geprüft werden, z. B. Auftragsverarbeitung und Drittlandtransfers nach DSGVO.
-
-### Kostenvergleich
-
-| Szenario | Typische Konsequenz |
-|---|---|
-| Dauerhaft hohe Last | Eigene oder reservierte Kapazität kann wirtschaftlich sein |
-| Stark schwankende Last | Elastische Cloud-Ressourcen können Kosten und Überkapazität reduzieren |
-| Schlechte Kostenkontrolle | Unbenutzte Instanzen und Datenverkehr erhöhen die Rechnung |
-| Abhängigkeit von proprietären Cloud-Diensten | Migration kann aufwendig und teuer werden |
-
-Cloud ist daher nicht automatisch günstiger. Entscheidend sind TCO, Lastprofil, Betriebsaufwand, Verfügbarkeit und mögliche Wechselkosten.
-
-## Load Balancer
-
-Ein Load Balancer verteilt eingehende Anfragen auf mehrere Backend-Server.
-
-**Typische Verfahren:**
-- **Round Robin:** Anfragen werden der Reihe nach verteilt.
-- **Least Connections:** Bevorzugt den Server mit den wenigsten aktiven Verbindungen.
-- **Health Checks:** Prüfen, ob ein Backend erreichbar ist; fehlerhafte Instanzen können aus der Verteilung genommen werden.
-
-Ein Load Balancer ermöglicht horizontale Skalierung, garantiert aber allein keine Hochverfügbarkeit. Er selbst muss ebenfalls gegen Ausfälle abgesichert sein.
-
-## IHK-Merksatz
-
-Vertikale Skalierung erweitert die Ressourcen eines einzelnen Systems (Scale Up), horizontale Skalierung fügt weitere Systeme hinzu (Scale Out). Elastizität beschreibt die dynamische Anpassung dieser Ressourcen an den Bedarf. Cloud-Dienste ermöglichen häufig eine schnelle Bereitstellung, verursachen aber nutzungsabhängige Kosten und können Abhängigkeiten vom Anbieter schaffen.
+- [Blue-Green-Deployment](../blue-green-deployment.md)
+- [TCO](../../../Management/tco.md)
+- [Lektion L28 GA1 Praxisthemen](../../../analyse-der-exams/L28_GA1_Sonstiges_Praxisthemen.md)
