@@ -1,10 +1,19 @@
-# USB-SSD-HDD
+# Datenträger, USB und Kabel (HDD, SSD, NVMe)
 
-# Speicher, USB, SSD, HDD und Kabel – IHK AP2
+## In 30 Sekunden
+
+- **HDD:** magnetisch, mechanisch, günstig pro TB, Zugriff in Millisekunden → Archiv, Backup, NAS.
+- **SSD:** Flash ohne bewegliche Teile, Zugriff in Mikrosekunden. **SATA-SSD** ca. 550 MB/s, **NVMe-SSD** über PCIe mehrere GB/s.
+- **M.2** ist ein Formfaktor, **NVMe** ein Protokoll, **SATA** eine Schnittstelle. Nicht jede M.2-SSD ist NVMe.
+- SSD-Lebensdauer: begrenzte Schreibzyklen → **TBW** bzw. **DWPD**. MTTF gilt für nicht reparierbare Teile.
+- Server: **SAS** (12 Gbit/s, Dual-Port, robust) und **Hot-Swap**-Schächte.
+- **Gbit/s ≠ GB/s:** durch 8 teilen (vor Overhead).
+
+## Kernwissen
 
 **Wichtig:** Gbit/s (Gigabit pro Sekunde) und GB/s (Gigabyte pro Sekunde) sind nicht dasselbe. 8 Gbit/s entsprechen theoretisch 1 GB/s, bevor Protokoll-Overhead berücksichtigt wird.
 
-## HDD – Hard Disk Drive
+### HDD – Hard Disk Drive
 
 Speichert Daten magnetisch auf rotierenden Scheiben. Günstig bei großen Speichermengen, aber langsamer und empfindlicher gegenüber Erschütterungen als SSDs.
 
@@ -19,7 +28,7 @@ Speichert Daten magnetisch auf rotierenden Scheiben. Günstig bei großen Speich
 - HDDs eignen sich für Archive, Backups und große Datenbestände.
 - Nachteile: mechanischer Verschleiß, Geräusche, höhere Latenz.
 
-## SSD – Solid State Drive
+### SSD – Solid State Drive
 
 Speichert Daten in Flash-Speicher ohne bewegliche Teile. Deutlich kürzere Zugriffszeiten als HDDs.
 
@@ -33,13 +42,13 @@ Speichert Daten in Flash-Speicher ohne bewegliche Teile. Deutlich kürzere Zugri
 
 Die Werte sind theoretische Richtwerte für die Schnittstelle, keine garantierten SSD-Transferraten. Die reale Geschwindigkeit hängt von SSD, Controller, Temperatur, Datenart und System ab.
 
-### SATA vs. NVMe
+#### SATA vs. NVMe
 
 - **SATA** ist eine Schnittstelle, die bei HDDs und SSDs eingesetzt wird.
 - **NVMe** ist ein für Flash-Speicher optimiertes Protokoll, das meist über PCIe angebunden ist.
 - Eine **M.2-SSD** beschreibt zunächst den Formfaktor. M.2 kann SATA oder NVMe/PCIe nutzen – nicht jede M.2-SSD ist NVMe.
 
-## HDD vs. SSD
+### HDD vs. SSD
 
 | Eigenschaft | HDD | SATA SSD | NVMe SSD |
 |---|---|---|---|
@@ -54,7 +63,7 @@ Die Werte sind theoretische Richtwerte für die Schnittstelle, keine garantierte
 
 ---
 
-## USB – Generationen und Geschwindigkeit
+### USB – Generationen und Geschwindigkeit
 
 USB (Universal Serial Bus) überträgt Daten und kann Geräte mit Strom versorgen. Die tatsächliche Geschwindigkeit hängt von Host, Gerät und Kabel ab.
 
@@ -75,7 +84,7 @@ Die Namen älterer USB-3.x-Versionen wurden mehrfach geändert. Für den Kauf is
 Quelle: [USB-IF – USB 3.2](https://www.usb.org/usb-32-0), [USB-IF – USB4](https://www.usb.org/usb4)
 
 ```markdown
-## USB-Stecker und Kabeltypen
+### USB-Stecker und Kabeltypen
 
 **Steckerform ≠ Übertragungsgeschwindigkeit.** USB-C beschreibt die Bauform des Steckers, nicht automatisch USB4 oder eine bestimmte Geschwindigkeit.
 
@@ -87,7 +96,7 @@ Quelle: [USB-IF – USB 3.2](https://www.usb.org/usb-32-0), [USB-IF – USB4](ht
 | Micro-USB | Sehr kleiner Anschluss | Ältere Smartphones, Geräte |
 | USB-C | Klein, beidseitig einsteckbar | Moderne Smartphones, Laptops, Docks, SSDs |
 
-### USB-C-Kabel: Worauf achten?
+#### USB-C-Kabel: Worauf achten?
 
 - **Datenrate:** z. B. 5, 10, 20, 40 oder 80 Gbit/s – abhängig von Kabel und Geräten.
 - **Ladeleistung:** Nicht jedes Kabel unterstützt dieselbe Stromstärke oder Leistung.
@@ -98,7 +107,7 @@ Quelle: [USB-IF – USB 3.2](https://www.usb.org/usb-32-0), [USB-IF – USB4](ht
 
 Ein Kabel kann äußerlich wie ein anderes aussehen und trotzdem eine deutlich geringere Datenrate unterstützen.
 
-## Thunderbolt
+### Thunderbolt
 
 Thunderbolt nutzt ebenfalls den USB-C-Stecker, bietet aber definierte Funktionen und Anforderungen je nach Generation. Es kann Daten, DisplayPort-Signale und PCIe über eine Verbindung transportieren.
 
@@ -114,7 +123,7 @@ Die Geschwindigkeit allein unterscheidet Thunderbolt 3 und 4 nicht. Thunderbolt 
 
 Quelle: [Intel – Thunderbolt-Technik](https://www.intel.de/content/www/de/de/architecture-and-technology/thunderbolt/overview.html)
 
-### Daisy Chaining
+#### Daisy Chaining
 
 **Daisy Chaining** bedeutet, mehrere Geräte in Reihe zu verbinden.
 
@@ -134,7 +143,7 @@ Beispiel:
 
 Quelle: [Intel – Thunderbolt 4 und USB-C](https://www.intel.com/content/www/us/en/architecture-and-technology/thunderbolt/thunderbolt-4-vs-usb-c.html)
 
-## Weitere wichtige Kabel und Schnittstellen
+### Weitere wichtige Kabel und Schnittstellen
 
 | Typ | Geschwindigkeit / Eigenschaft | Einsatz |
 |---|---|---|
@@ -151,7 +160,19 @@ Quelle: [Intel – Thunderbolt 4 und USB-C](https://www.intel.com/content/www/us
 
 **Achtung:** Bei Ethernet hängen die tatsächlich unterstützten Geschwindigkeiten von Kategorie, Länge, Installation und den Netzwerkports ab. Bei HDMI und DisplayPort sollte man die unterstützte Version bzw. zertifizierte Kabelklasse prüfen, nicht nur die Steckerform.
 
-## IHK-Merksätze
+### Serverplatten und Lebensdauer
+
+| Begriff | Bedeutung |
+|---|---|
+| **SAS** | Serial Attached SCSI, 12/24 Gbit/s, Dual-Port (zwei Controller-Pfade), für Dauerbetrieb |
+| **TBW** | Terabytes Written: garantierte Gesamtschreibmenge einer SSD, z. B. 600 TBW |
+| **DWPD** | Drive Writes Per Day: wie oft die volle Kapazität täglich über die Garantiezeit beschrieben werden darf |
+| **SMART** | Selbstdiagnose der Laufwerke (reallokierte Sektoren, Verschleiß) → Monitoring |
+| **Hot-Swap** | Tausch im laufenden Betrieb, Voraussetzung für RAID-Rebuild ohne Downtime |
+
+**Rechenweg DWPD → TBW:** 1,92-TB-SSD, 1 DWPD, 5 Jahre Garantie → 1,92 TB · 1 · 365 · 5 ≈ **3.504 TBW**.
+
+### IHK-Merksätze
 
 - **HDD vs. SSD:** HDD ist mechanisch; SSD nutzt Flash-Speicher.
 - **SATA vs. NVMe:** SATA ist eine Schnittstelle; NVMe ist ein Speicherprotokoll, das meist PCIe nutzt.
@@ -162,3 +183,30 @@ Quelle: [Intel – Thunderbolt 4 und USB-C](https://www.intel.com/content/www/us
 - **Daisy Chain vs. Hub:** Reihenschaltung gegenüber zentralem Verteiler.
 - **SATA-Datenkabel vs. SATA-Stromkabel:** Datenübertragung gegenüber Stromversorgung.
 - **Ethernet vs. Glasfaser:** Ethernet bezeichnet eine Netzwerktechnik; Glasfaser ist ein Übertragungsmedium, über das Ethernet laufen kann.
+
+## Prüfungsfrage
+
+**Frage:** Für einen neuen Datenbankserver stehen SATA-HDDs, SATA-SSDs und NVMe-SSDs zur Auswahl. Welche empfehlen Sie? Begründen Sie mit zwei Kriterien.
+
+**Musterantwort:** Empfohlen werden NVMe-SSDs. Erstens bieten sie die mit Abstand kürzesten Zugriffszeiten und die höchsten IOPS, was für die vielen kleinen, zufälligen Lese- und Schreibzugriffe einer Datenbank entscheidend ist. HDDs haben durch die Mechanik Zugriffszeiten im Millisekundenbereich. Zweitens sind sie direkt über PCIe angebunden und nicht durch die SATA-Schnittstelle mit ca. 600 MB/s begrenzt. Für Backups und Archive bleiben HDDs wegen des günstigen Preises pro TB sinnvoll.
+
+## Falle
+
+- M.2 mit NVMe gleichsetzen.
+- Gbit/s und GB/s verwechseln (Faktor 8).
+- USB-C als Geschwindigkeitsangabe verstehen. Es ist nur der Stecker.
+- Für Langzeitarchive SSDs ohne Strom jahrelang lagern. Flash kann Ladung verlieren, Band oder HDD sind dafür besser geeignet.
+
+## Merksatz
+
+**„HDD = viel und billig, SSD = schnell, NVMe = am schnellsten. M.2 sagt nur, wie sie aussieht.“**
+
+## Verwandt
+
+- [Speicherhierarchie](Storage/speicherhierarchie.md)
+- [DAS-NAS-SAN](Storage/das-nas-san.md)
+- [Dateisysteme](Storage/dateisysteme.md)
+- [RAID](../FiSi-Administrator/Server/raid.md)
+- [Server-Hardware](server-hardware.md)
+- [Verfügbarkeit & Kennzahlen](../FiSi-Administrator/Server/verfuegbarkeit-kennzahlen.md) – MTBF, MTTF, Badewannenkurve
+- [Bit-Byte](../FiSi-Administrator/OSI-IP-mac-bit-byte/bit-byte.md)

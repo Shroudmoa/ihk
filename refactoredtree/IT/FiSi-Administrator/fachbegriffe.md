@@ -1,6 +1,10 @@
-# Fachbegriffe
+# Fachbegriffe und IT-Slang
 
-# IT-Slang und Fachbegriffe – IHK AP2
+## In 30 Sekunden
+
+- Präzise Fachbegriffe sparen in Prüfungsantworten Sätze: „Single Point of Failure“ statt „wenn das eine Teil kaputtgeht, geht nichts mehr“.
+- Prüfungsrelevant sind vor allem Begriffe aus Betrieb und Verfügbarkeit: **SPOF, Bottleneck, Failover, Redundanz, MTTR, Rollback, Canary/Blue-Green, Configuration Drift, Least Privilege, Zero-Day**.
+- Begriff nennen **und** in einem Halbsatz erklären. Ein Begriff allein bringt selten volle Punkte.
 
 Begriffe, mit denen du technische Probleme, Softwarearchitektur und IT-Prozesse präzise beschreiben kannst. Die Definitionen orientieren sich an etablierten technischen Quellen; einige Begriffe werden in Teams unterschiedlich verwendet.
 
@@ -171,3 +175,12 @@ Quelle: [Martin Fowler – Canary Release](https://www.martinfowler.com/bliki/Ca
 | „Zu viele Warnungen verdecken die wichtigen Alarme.“ | Alert Fatigue |
 
 **Merksatz:** Fachbegriffe sind nur dann nützlich, wenn sie präzise verwendet werden. Bei Begriffen wie *MTTR*, *Zero-day* oder *MVP* sollte die konkrete Definition im jeweiligen Team oder Projekt geklärt sein.
+
+## Verwandt
+
+- [HA-Hochverfügbarkeit](Server/ha-hochverfuegbarkeit.md) – SPOF, Failover, Redundanz
+- [Verfügbarkeit & Kennzahlen](Server/verfuegbarkeit-kennzahlen.md) – MTBF, MTTR
+- [Monitoring](Server/monitoring.md) – Observability, Alert Fatigue
+- [Blue-Green-Deployment](Server/blue-green-deployment.md) – Canary, Rolling, Rollback
+- [Skalierbarkeit-Elastizität](Server/virtualisierung/skalierbarkeit-elastizitaet.md)
+- [Abkürzungen Sicherheit](Sicherheit/abkuerzungen.md)

@@ -1,14 +1,22 @@
-# CPU
+# CPU, GPU und Architektur
 
-# CPU, GPU, Architektur und Speicherhierarchie
+## In 30 Sekunden
 
-## CPU – Central Processing Unit
+- Die **CPU** führt Maschinenbefehle aus. Ihre Leistung hängt von **Takt**, **IPC** (Befehle pro Takt), **Kernen/Threads**, **Cache** und Speicheranbindung ab, nicht vom GHz-Wert allein.
+- **Kerne** arbeiten echt parallel, **Hyper-Threading/SMT** lässt einen Kern zwei Threads verwalten (kein voller zweiter Kern).
+- Architekturen: **x86-64** (Intel, AMD, CISC) und **ARM** (RISC, energieeffizient, Apple, Smartphones, zunehmend Server).
+- **GPU:** tausende einfache Kerne für stark parallele Aufgaben (Grafik, KI).
+- Serverauswahl: Datenbank → hoher Takt, Virtualisierung → viele Kerne (2025W). Lizenzen werden oft **pro Kern** berechnet.
+
+## Kernwissen
+
+### CPU – Central Processing Unit
 
 Die CPU ist der Hauptprozessor eines Computers. Sie führt Maschinenbefehle aus, berechnet Daten und steuert Abläufe im System.
 
 Eine CPU wird nicht nur anhand ihrer GHz bewertet. Entscheidend sind Architektur, Kernanzahl, Cache, Speicheranbindung, Energieverbrauch und der jeweilige Workload.
 
-## CPU-Aufbau
+### CPU-Aufbau
 
 - **Core (Kern):** Führt Befehle unabhängig von anderen Kernen aus.
 - **Thread:** Ausführungsstrang eines Programms. Ein Kern kann je nach Architektur mehrere Hardware-Threads unterstützen.
@@ -19,7 +27,7 @@ Eine CPU wird nicht nur anhand ihrer GHz bewertet. Entscheidend sind Architektur
 - **Cache:** Speichert häufig benötigte Daten nahe am Kern.
 - **MMU:** Übersetzt virtuelle in physische Speicheradressen und unterstützt den Speicherschutz.
 
-### Wie verarbeitet eine CPU Befehle?
+#### Wie verarbeitet eine CPU Befehle?
 
 Der typische Ablauf ist:
 
@@ -30,7 +38,7 @@ Der typische Ablauf ist:
 
 Moderne CPUs führen diese Schritte überlappend und teilweise außerhalb der ursprünglichen Programmreihenfolge aus (Pipelining, Superscalar Execution, Out-of-Order Execution).
 
-## CPU-Taktfrequenz
+### CPU-Taktfrequenz
 
 Die Taktfrequenz wird in Hertz angegeben. 1 GHz entspricht einer Milliarde Taktzyklen pro Sekunde.
 
@@ -50,7 +58,7 @@ CPU B hat die höhere Taktfrequenz, ist aber nicht automatisch schneller. CPU A 
 
 **IHK-Merksatz:** Mehr GHz bedeuten nicht automatisch mehr Leistung. Taktfrequenz, IPC, Parallelität und Workload bestimmen gemeinsam die Performance.
 
-## CPU-Kerne und Threads
+### CPU-Kerne und Threads
 
 | Konzept | Bedeutung |
 |---|---|
@@ -66,7 +74,7 @@ Beispiel: Eine CPU mit 8 Kernen und SMT kann 16 logische Prozessoren bereitstell
 - **Multi-Thread-Last:** Kann von mehr Kernen und effizienter Parallelisierung profitieren.
 - **IHK-Bezug:** CPU-Auslastung, Prozessverwaltung und CPU Contention bei virtuellen Maschinen.
 
-## CPU-Architekturen und Befehlssätze
+### CPU-Architekturen und Befehlssätze
 
 Architektur und Befehlssatz sind nicht dasselbe.
 
@@ -80,7 +88,7 @@ Architektur und Befehlssatz sind nicht dasselbe.
 | RISC-V | Embedded, Forschung, zunehmend weitere Systeme | RISC-V-basierte Prozessoren |
 | Power ISA | Spezialisierte Systeme und Server | IBM Power |
 
-### x86-64: Intel und AMD
+#### x86-64: Intel und AMD
 
 x86-64 ist eine 64-Bit-Erweiterung der x86-Architektur. Intel und AMD stellen kompatible Prozessoren her, unterscheiden sich aber bei Mikroarchitektur, Cache, Kernaufbau und Implementierung.
 
@@ -89,7 +97,7 @@ x86-64 ist eine 64-Bit-Erweiterung der x86-Architektur. Intel und AMD stellen ko
 - **AMD Ryzen:** PCs und Workstations.
 - **AMD EPYC:** Server und Rechenzentren.
 
-### ARM: Apple und andere Hersteller
+#### ARM: Apple und andere Hersteller
 
 ARM-basierte Prozessoren verwenden eine andere ISA als x86-64. ARM ist besonders in mobilen Geräten verbreitet, wird aber auch in Notebooks und Servern eingesetzt.
 
@@ -99,14 +107,14 @@ ARM-basierte Prozessoren verwenden eine andere ISA als x86-64. ARM ist besonders
 
 ARM bedeutet nicht automatisch schneller oder sparsamer. Das Ergebnis hängt von Mikroarchitektur, Fertigung, Leistungsbudget und Workload ab.
 
-### RISC und CISC
+#### RISC und CISC
 
 - **RISC:** Traditionell einfachere, regelmäßig strukturierte Befehle; beispielsweise ARM und RISC-V.
 - **CISC:** Umfangreicher Befehlssatz; beispielsweise x86.
 
 Moderne Prozessoren sind intern komplexer als diese vereinfachte Einteilung vermuten lässt. Moderne x86-CPUs zerlegen viele Befehle in interne Mikrooperationen.
 
-## Hybrid-CPUs
+### Hybrid-CPUs
 
 Einige Prozessoren kombinieren unterschiedliche Kerntypen.
 
@@ -117,7 +125,7 @@ Beispiel: Einige Intel-Core-Ultra- und Apple-Silicon-Prozessoren nutzen untersch
 
 Das Betriebssystem verteilt Threads anhand von Prioritäten, Auslastung und verfügbaren Informationen auf die Kerne.
 
-## CPU-Auswahl nach Einsatz
+### CPU-Auswahl nach Einsatz
 
 | Einsatz | Wichtige Kriterien |
 |---|---|
@@ -131,7 +139,7 @@ Das Betriebssystem verteilt Threads anhand von Prioritäten, Auslastung und verf
 
 
 
-## CPU-Speicherhierarchie
+### CPU-Speicherhierarchie
 
 Die CPU ist deutlich schneller als der Arbeitsspeicher (RAM). Caches reduzieren deshalb die Wartezeit beim Zugriff auf häufig benötigte Daten.
 
@@ -139,39 +147,39 @@ CPU-Register → L1-Cache → L2-Cache → L3-Cache → RAM → SSD/HDD
 
 Je weiter eine Ebene vom Rechenkern entfernt ist, desto größer und normalerweise langsamer ist sie. Die genaue Hierarchie hängt von der CPU ab. [Intel Cache-Dokumentation](https://www.intel.de/content/www/de/de/support/articles/000057727/processors.html) · [Arm Speicherhierarchie](https://learn.arm.com/learning-paths/servers-and-cloud-computing/performix-memory-access/how-to-0/)
 
-### Register
+#### Register
 
 Kleinster und schnellster Speicher direkt im CPU-Kern.
 
 - Speichert Operanden, Adressen und Zwischenergebnisse.
 - Wird direkt von Maschinenbefehlen verwendet.
 
-### L1-Cache
+#### L1-Cache
 
 - Sehr klein und extrem schnell.
 - Normalerweise direkt einem CPU-Kern zugeordnet.
 - Häufig getrennt in **L1 Data Cache** und **L1 Instruction Cache**.
 
-### L2-Cache
+#### L2-Cache
 
 - Größer als L1, aber langsamer.
 - Häufig pro Kern oder pro Kerngruppe organisiert.
 - Dient als weitere Cache-Ebene vor dem L3-Cache oder RAM.
 
-### L3-Cache
+#### L3-Cache
 
 - Häufig größer und von mehreren CPU-Kernen gemeinsam genutzt.
 - Reduziert Zugriffe auf den langsameren RAM.
 - Größe und Aufbau unterscheiden sich je nach Mikroarchitektur.
 
-### Cache Hit und Cache Miss
+#### Cache Hit und Cache Miss
 
 - **Cache Hit:** Die benötigten Daten liegen bereits im Cache.
 - **Cache Miss:** Die Daten müssen aus einer weiteren Speicherhierarchie geladen werden.
 
 **Beispiel:** Eine Schleife verarbeitet dieselben Daten mehrfach. Wenn diese im Cache bleiben, muss die CPU seltener auf den RAM zugreifen.
 
-### RAM – Arbeitsspeicher
+#### RAM – Arbeitsspeicher
 
 RAM speichert aktuell benötigte Programme und Daten.
 
@@ -181,7 +189,7 @@ RAM speichert aktuell benötigte Programme und Daten.
 
 **Wichtig:** Mehr RAM erhöht nicht automatisch die CPU-Leistung. Er verhindert aber, dass Speichermangel zu starkem Swapping führt.
 
-### Virtueller Speicher
+#### Virtueller Speicher
 
 Betriebssysteme verwenden virtuelle Adressen, um Prozesse voneinander zu isolieren und Speicher flexibel zu verwalten.
 
@@ -192,11 +200,11 @@ Betriebssysteme verwenden virtuelle Adressen, um Prozesse voneinander zu isolier
 
 **IHK-Verknüpfung:** Virtueller Speicher, Prozessisolation, Kernel Space und User Space.
 
-## GPU – Graphics Processing Unit
+### GPU – Graphics Processing Unit
 
 Eine GPU ist auf stark parallele Berechnungen ausgelegt. Während CPUs wenige leistungsfähige Kerne für vielseitige Aufgaben verwenden, besitzt eine GPU viele Recheneinheiten für zahlreiche parallele Operationen.
 
-### GPU-Typen
+#### GPU-Typen
 
 | Typ | Eigenschaften | Einsatz |
 |---|---|---|
@@ -204,7 +212,7 @@ Eine GPU ist auf stark parallele Berechnungen ausgelegt. Während CPUs wenige le
 | dGPU | Dedizierter Grafikprozessor, meist eigener VRAM | Gaming, Rendering, GPU-Berechnungen |
 | Compute-GPU | Auf parallele Berechnungen optimiert | KI, Simulationen, wissenschaftliche Berechnungen |
 
-### CPU vs. GPU
+#### CPU vs. GPU
 
 | Kriterium | CPU | GPU |
 |---|---|---|
@@ -213,7 +221,7 @@ Eine GPU ist auf stark parallele Berechnungen ausgelegt. Während CPUs wenige le
 | Typische Aufgaben | Betriebssystem, Anwendungen, Datenbanklogik | Grafik, Matrixberechnungen, KI |
 | Speicher | RAM über Speichercontroller | VRAM oder gemeinsam genutzter Speicher |
 
-### GPU-Speicher
+#### GPU-Speicher
 
 - **VRAM:** Dedizierter Grafikspeicher, beispielsweise GDDR6 oder GDDR7.
 - **HBM:** Speicher mit hoher Bandbreite, häufig bei Beschleunigern im Rechenzentrum.
@@ -221,31 +229,31 @@ Eine GPU ist auf stark parallele Berechnungen ausgelegt. Während CPUs wenige le
 
 **Beispiel:** Eine GPU verarbeitet viele Matrixoperationen parallel. Eine CPU übernimmt dagegen häufig Programmsteuerung, Betriebssystemaufgaben und die Koordination der Berechnung.
 
-## Weitere wichtige Begriffe
+### Weitere wichtige Begriffe
 
-### Speicherbandbreite
+#### Speicherbandbreite
 
 Datenmenge, die pro Sekunde übertragen werden kann. Angegeben beispielsweise in GB/s.
 
-### Latenz
+#### Latenz
 
 Zeit zwischen einer Anfrage und dem Beginn beziehungsweise Abschluss der Datenbereitstellung.
 
-### NUMA
+#### NUMA
 
 Bei Mehrsockelservern hängt die Speicherzugriffszeit davon ab, an welchem Prozessor der RAM angeschlossen ist. Lokaler Speicherzugriff ist normalerweise günstiger als entfernter Zugriff.
 
-### PCIe
+#### PCIe
 
 Schnittstelle zur Verbindung von Komponenten wie GPUs, NVMe-SSDs und Netzwerkkarten mit dem System.
 
-### SoC – System on a Chip
+#### SoC – System on a Chip
 
 Integriert mehrere Komponenten auf einem Chip beziehungsweise in einem Chip-Paket, beispielsweise CPU, GPU, Speichercontroller und Medienbeschleuniger.
 
 Beispiel: Apple Silicon kombiniert CPU- und GPU-Recheneinheiten mit weiteren Funktionen und einer gemeinsamen Speicherarchitektur.
 
-## IHK-Prüfungswissen
+### IHK-Prüfungswissen
 
 - **Mehr GHz ≠ automatisch mehr Leistung:** IPC und Mikroarchitektur beeinflussen die tatsächliche Rechenleistung.
 - **Mehr Kerne ≠ automatisch schneller:** Die Anwendung muss parallelisierbar sein.
@@ -254,14 +262,34 @@ Beispiel: Apple Silicon kombiniert CPU- und GPU-Recheneinheiten mit weiteren Fun
 - **CPU ≠ GPU:** CPU für vielseitige Verarbeitung, GPU für stark parallele Workloads.
 - **Bandbreite ≠ Latenz:** Bandbreite beschreibt Datenmenge pro Zeit, Latenz die Verzögerung eines Zugriffs.
 
-## 3-Zeilen-IHK-Antwort
+### 3-Zeilen-IHK-Antwort
 
 Die CPU führt Maschinenbefehle aus; ihre Leistung hängt unter anderem von Taktfrequenz, IPC, Kernanzahl und Cache ab.  
 Die Speicherhierarchie aus Registern, Cache und RAM reduziert Zugriffszeiten und versorgt die CPU mit Daten.  
 GPUs optimieren stark parallele Berechnungen, während CPUs vielseitige Aufgaben und die Programmsteuerung übernehmen.
 
+## Prüfungsfrage
+
+**Frage:** Für einen Datenbankserver stehen eine CPU mit 16 Kernen und 3,6 GHz sowie eine mit 64 Kernen und 2,2 GHz zur Auswahl. Welche empfehlen Sie, und was wäre für einen Virtualisierungshost die bessere Wahl?
+
+**Musterantwort:** Für den Datenbankserver ist die CPU mit 16 Kernen und 3,6 GHz zu empfehlen. Viele Datenbankabfragen laufen nur teilweise parallel und profitieren von hoher Einzelkernleistung. Außerdem werden Datenbanklizenzen häufig pro Kern abgerechnet, sodass weniger, schnellere Kerne Kosten sparen. Für einen Virtualisierungshost ist die CPU mit 64 Kernen besser. Viele VMs laufen gleichzeitig, und jede bekommt eigene vCPUs. Hier zählt die Anzahl der Kerne mehr als der Takt eines einzelnen Kerns.
+
+## Falle
+
+- Nur nach GHz vergleichen. Unterschiedliche Generationen haben unterschiedliche IPC.
+- Threads als vollwertige Kerne zählen.
+- Mehr Kerne für eine Anwendung empfehlen, die nur einen Thread nutzt.
+- Lizenzkosten pro Kern übersehen (Windows Server, Datenbanken).
+
+## Merksatz
+
+**„Takt für Einzelaufgaben, Kerne für viele Aufgaben, Cache gegen Wartezeit.“**
+
 ## Verwandt
 
 - [BIOS/UEFI-Kernel](../FiSi-Administrator/Server/bios-uefi-kernel.md) – Kernel tasks und System Calls
 - [VM-Container-Server](../FiSi-Administrator/Server/virtualisierung/vm-container-server.md) – Kerne und Ressourcen für VMs
-
+- [RAM](ram.md) – Arbeitsspeicher, DDR, ECC
+- [Server-Hardware](server-hardware.md) – Serverauswahl
+- [Speicherhierarchie](Storage/speicherhierarchie.md)
+- [Lizenzierung](../FiSi-Administrator/Server/lizenzierung.md) – Core-Lizenzen

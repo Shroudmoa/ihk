@@ -1,8 +1,15 @@
-# Live-Migration-VMs
+# Live-Migration von VMs
 
-# Live Migration – Laufende VMs ohne spürbare Unterbrechung verschieben
+## In 30 Sekunden
 
-## Was ist Live Migration?
+- **Live-Migration** verschiebt eine **laufende** VM ohne Herunterfahren auf einen anderen Host (vMotion, Hyper-V Live Migration, KVM). Der RAM wird im Hintergrund kopiert, nur das letzte Umschalten dauert Millisekunden.
+- Einsatz: **Wartung ohne Ausfall** (Host leer räumen, patchen), **Lastverteilung**, Hardwaretausch.
+- Voraussetzungen: kompatible CPUs (gleiche Familie oder Kompatibilitätsmodus), Zugriff auf den Speicher (Shared Storage oder zusätzliche Storage-Migration), schnelles eigenes Migrationsnetz, genug freie Ressourcen am Ziel.
+- **Live-Migration ≠ Failover:** Migration ist geplant und ohne Unterbrechung. Failover passiert nach einem Ausfall, die VM wird auf einem anderen Host **neu gestartet**.
+
+## Kernwissen
+
+### Was ist Live Migration?
 
 Live Migration ist das Verschieben einer **laufenden virtuellen Maschine (VM)** von einem physischen Host auf einen anderen, ohne das Gastbetriebssystem herunterzufahren. Der Arbeitsspeicher und der aktuelle Laufzeitzustand werden zum Zielhost übertragen. Dadurch bleibt ein Dienst normalerweise erreichbar; eine kurze Unterbrechung beim Umschalten kann trotzdem auftreten.
 
@@ -13,9 +20,9 @@ Live Migration ist das Verschieben einer **laufenden virtuellen Maschine (VM)** 
 
 Quelle: [Microsoft Learn – Live Migration Overview](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/live-migration-overview)
 
-## Real-Life-Anwendungen
+### Real-Life-Anwendungen
 
-### Wartung eines Servers ohne geplanten Dienstausfall
+#### Wartung eines Servers ohne geplanten Dienstausfall
 
 Ein Unternehmen betreibt auf Host A mehrere VMs:
 - eine VM für Active Directory und DNS
@@ -27,23 +34,23 @@ Host A benötigt ein Firmware-Update oder neue RAM-Module. Statt alle VMs herunt
 
 **Nutzen:** weniger geplante Ausfallzeit und flexiblere Wartungsfenster.
 
-### Lastverteilung im Rechenzentrum
+#### Lastverteilung im Rechenzentrum
 
 Host A ist stark ausgelastet, während Host B noch freie CPU- und RAM-Kapazität hat. Das Virtualisierungsmanagement verschiebt eine oder mehrere VMs auf Host B.
 
 **Nutzen:** bessere Ressourcenverteilung und weniger Engpässe. Eine Migration selbst benötigt allerdings CPU-, RAM- und Netzwerkressourcen.
 
-### Rechenzentrum erweitern oder umbauen
+#### Rechenzentrum erweitern oder umbauen
 
 Ein Unternehmen ersetzt ältere Hosts durch neue Server. VMs können – sofern die Kompatibilität und die Infrastruktur stimmen – auf die neuen Hosts verschoben werden, ohne jede Anwendung einzeln neu installieren zu müssen.
 
-### Cloud- und Hosting-Betrieb
+#### Cloud- und Hosting-Betrieb
 
 Cloud- und Hosting-Anbieter verwalten viele virtuelle Server auf einer gemeinsamen Infrastruktur. Migrationen helfen bei Wartung, Kapazitätsplanung und Lastverteilung. Ob eine konkrete Cloud-Plattform Live Migration anbietet, hängt vom jeweiligen Dienst ab.
 
 ---
 
-## Wie funktioniert Live Migration technisch?
+### Wie funktioniert Live Migration technisch?
 
 Ein Beispiel: Eine VM mit 16 GB RAM läuft auf Host A und soll auf Host B wechseln.
 
@@ -79,7 +86,7 @@ Ein Beispiel: Eine VM mit 16 GB RAM läuft auf Host A und soll auf Host B wechse
   </box>
 </box>
 
-### Was wird übertragen?
+#### Was wird übertragen?
 
 - **RAM:** laufender Speicherinhalt und Änderungen während der Übertragung.
 - **CPU-Zustand:** Register und Ausführungszustand der VM beim Umschalten.
@@ -88,7 +95,7 @@ Ein Beispiel: Eine VM mit 16 GB RAM läuft auf Host A und soll auf Host B wechse
 
 Wichtig: Bei einer reinen **Compute-/Live Migration** bleiben die virtuellen Festplatten häufig auf gemeinsamem Storage. Bei einer **Storage Migration** werden die virtuellen Festplatten zusätzlich an einen anderen Speicherort verschoben. Manche Plattformen können beides kombinieren.
 
-## Voraussetzungen
+### Voraussetzungen
 
 | Voraussetzung | Warum? |
 |---|---|
@@ -106,9 +113,9 @@ Nicht jede Umgebung braucht einen Cluster oder Shared Storage zwingend. Die gena
 
 Quelle: [Microsoft Learn – Voraussetzungen und Konfiguration](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/use-live-migration-without-failover-clustering-to-move-a-virtual-machine)
 
-## Shared Storage vs. lokaler Storage
+### Shared Storage vs. lokaler Storage
 
-### Shared Storage
+#### Shared Storage
 
 Beide Hosts greifen auf denselben zentralen Speicher zu, zum Beispiel über SAN, NAS oder einen passenden Cluster-Speicher.
 
@@ -116,7 +123,7 @@ Beide Hosts greifen auf denselben zentralen Speicher zu, zum Beispiel über SAN,
 - Die Migration betrifft vor allem RAM und Laufzeitzustand.
 - Der gemeinsame Speicher muss erreichbar und korrekt konfiguriert sein.
 
-### Lokaler Storage
+#### Lokaler Storage
 
 Die virtuellen Festplatten liegen direkt auf dem Quellhost. Wenn der Zielhost keinen Zugriff darauf hat, müssen die VM-Dateien ebenfalls übertragen werden.
 
@@ -124,7 +131,7 @@ Die virtuellen Festplatten liegen direkt auf dem Quellhost. Wenn der Zielhost ke
 - Ausreichende Bandbreite und freier Speicherplatz erforderlich.
 - Je nach Plattform wird dies als Storage Migration oder kombinierte Migration durchgeführt.
 
-## Wie lange dauert eine Live Migration?
+### Wie lange dauert eine Live Migration?
 
 Die Dauer hängt unter anderem ab von:
 - RAM-Größe der VM
@@ -137,7 +144,7 @@ Beispiel: Eine VM mit 16 GiB RAM benötigt bei idealen 10 Gbit/s für die reine 
 
 Eine hohe Änderungsrate im RAM kann die Migration verlangsamen, weil Speicherseiten wiederholt übertragen werden müssen.
 
-## Vorteile und Nachteile
+### Vorteile und Nachteile
 
 | Vorteile | Nachteile |
 |---|---|
@@ -147,7 +154,7 @@ Eine hohe Änderungsrate im RAM kann die Migration verlangsamen, weil Speicherse
 | Flexiblere Hardwarewechsel | Gemeinsamer Storage kann ein zentraler Engpass sein |
 | Kann mit Clustering und Hochverfügbarkeit kombiniert werden | Keine Garantie gegen jeden Ausfall |
 
-## Live Migration ist nicht dasselbe wie Failover
+### Live Migration ist nicht dasselbe wie Failover
 
 **Live Migration:** Ein Administrator oder das Management verschiebt eine noch laufende VM kontrolliert auf einen anderen Host.
 
@@ -157,7 +164,7 @@ Eine hohe Änderungsrate im RAM kann die Migration verlangsamen, weil Speicherse
 
 **Snapshot:** Ein gespeicherter VM-Zustand beziehungsweise eine Änderungsbasis. Ein Snapshot ist weder eine Live Migration noch automatisch ein Backup.
 
-## Sicherheit und Betrieb
+### Sicherheit und Betrieb
 
 - Migrationsverkehr sollte über ein dafür vorgesehenes, geschütztes Netzwerk geführt werden.
 - Authentifizierung und Berechtigungen müssen restriktiv konfiguriert sein.
@@ -167,9 +174,26 @@ Eine hohe Änderungsrate im RAM kann die Migration verlangsamen, weil Speicherse
 
 **DSGVO-Bezug:** Werden personenbezogene Daten übertragen, müssen Vertraulichkeit, Integrität und Verfügbarkeit angemessen geschützt werden. Dazu gehören passende Zugriffskontrollen und Sicherheitsmaßnahmen nach Art. 32 DSGVO. Live Migration allein erfüllt diese Anforderungen nicht automatisch.
 
-## IHK-Merksatz
+### Zusammenfassung
 
 Live Migration verschiebt eine laufende VM zwischen kompatiblen Hosts, indem RAM und Laufzeitzustand übertragen und die VM anschließend am Ziel fortgesetzt werden. Voraussetzungen sind unter anderem kompatible Hosts, ausreichende Ressourcen, eine sichere Netzwerkverbindung sowie passender Zugriff auf den virtuellen Speicher. Typische Einsatzfälle sind Serverwartung und Lastverteilung; im Gegensatz zum Failover erfolgt die Migration normalerweise geplant und kontrolliert.
+
+## Prüfungsfrage
+
+**Frage:** Ein Virtualisierungshost soll tagsüber neue Firmware erhalten, ohne dass die Anwender etwas bemerken. Beschreiben Sie das Vorgehen und zwei Voraussetzungen.
+
+**Musterantwort:** Der Host wird in den Wartungsmodus versetzt. Seine laufenden VMs werden per Live-Migration auf die anderen Hosts des Clusters verschoben: Der Arbeitsspeicher der VM wird im laufenden Betrieb über das Migrationsnetz kopiert, geänderte Seiten werden nachgeschickt, und zuletzt wird die VM kurz angehalten und auf dem Zielhost fortgesetzt. Danach kann der leere Host aktualisiert und neu gestartet werden. Voraussetzungen sind erstens kompatible Prozessoren auf Quell- und Zielhost, damit die VM dieselben CPU-Funktionen vorfindet. Zweitens müssen beide Hosts auf den Speicher der VM zugreifen können (Shared Storage) und über ausreichend freie CPU- und RAM-Ressourcen sowie ein schnelles Migrationsnetz verfügen.
+
+## Falle
+
+- Live-Migration als Schutz vor einem Host-Ausfall verkaufen. Fällt der Host plötzlich aus, gibt es nichts mehr zu migrieren, dann greift HA mit Neustart.
+- Live-Migration mit Snapshot oder Backup gleichsetzen.
+- Migrationsverkehr unverschlüsselt über das Produktivnetz schicken. Der RAM-Inhalt kann Passwörter enthalten.
+- CPU-Kompatibilität vergessen (Intel → AMD funktioniert nicht live).
+
+## Merksatz
+
+**„Live-Migration zieht um, während der Bewohner weiterarbeitet. Failover baut nach dem Brand neu auf.“**
 
 ## Quellen
 
@@ -182,4 +206,7 @@ Live Migration verschiebt eine laufende VM zwischen kompatiblen Hosts, indem RAM
 - [Hypervisor-Typen](hypervisor-typen.md) – Typ-1-Hypervisoren im Rechenzentrum
 - [VM-Container-Server](vm-container-server.md) – VM vs. Container
 - [Snapshots-Backups](snapshots-backups.md) – Rollback und Sicherung
+- [Cluster](../cluster.md) – Failover und N+1
+- [HA-Hochverfügbarkeit](../ha-hochverfuegbarkeit.md)
+- [Virtualisierung](virtualisierung.md)
 
