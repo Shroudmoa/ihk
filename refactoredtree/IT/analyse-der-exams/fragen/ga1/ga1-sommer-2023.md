@@ -143,4 +143,3 @@ SCHTASKS /Create /TN CPUMON /TR "d:\util\MONCPU.EXE" /SC DAILY /ST 16:10
 ---
 
 **Merksatz:** IHK-Prüfungen testen **Kausalität und Normen** – wer USV-Typen (VFI/VFD/VI), RAID-Parity und Backup-Kumulation nicht als Vokabeln parat hat, verliert Punkte an der Oberfläche. Lerne die Standards (Ports, RAID-Level, DSGVO, OSI) als **Hard-Facts**, nicht als Prosa.
-```

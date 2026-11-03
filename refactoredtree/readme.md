@@ -63,3 +63,10 @@ refactoredtree/
 2. **GA1 Systeme:** Hardware → RAID → Backup → Verfügbarkeit → Virtualisierung → Cloud → Sicherheit → DSGVO → Pseudocode/SQL → Wirtschaftlichkeit
 3. **WiSo:** BBiG → Arbeitsrecht → Sozialversicherung → Betriebsrat → Unternehmen → Volkswirtschaft
 4. **Simulation:** Ein kompletter Prüfungstermin pro Tag aus `fragen/`, Lücken über die Lernblätter schließen.
+
+## Version 1.0 (November 2026)
+
+- **Struktur:** Ordner- und Dateinamen sind Windows-sicher (keine `?`, `:` oder Umlaute), Duplikate sind zusammengeführt, und alle relativen Links sind geprüft (0 kaputte Links).
+- **Lernblätter:** 182 IT-Blätter und 46 WiSo-Blätter mit einheitlichem Aufbau. Rund 90 Blätter sind neu, unter anderem zu Backup, Verfügbarkeit, ARP, STP, VRRP, PoE, Verkabelung, DMZ, TLS, Zero Trust, ISMS, AVV, ER-Modell, Normalisierung, Vorgehensmodellen, ITIL, Pflegeversicherung, Gewerkschaften und Globalisierung.
+- **Fachliche Korrekturen:** Fehler in den Lernblättern, in der Prüfungsanalyse und in mehreren Lösungsschlüsseln sind korrigiert. Korrekturen an WiSo-Lösungsschlüsseln sind mit *(Korrigiert: …)* markiert.
+- **Stand der Zahlen:** Beitragssätze, Grenzwerte, Mindestlohn und Ähnliches gelten für 2026 (Grundsicherungsgeld ab 1.7.2026, Amtsgericht bis 10.000 €, Aktivrente). Jedes Blatt nennt seinen Stand.

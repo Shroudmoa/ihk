@@ -6,7 +6,7 @@
 - **Arbeitslosengeld (ALG I)** = Versicherungsleistung: **60 %** (mit Kind **67 %**) des pauschalierten Nettoentgelts der **letzten 12 Monate** – unabhängig von Vermögen und Bedürftigkeit.
 - Anspruch nach **12 Monaten** Versicherungspflicht innerhalb von **30 Monaten**; Dauer **6–12 Monate**, ab 50 Jahren bis **24 Monate**.
 - Arbeitsuchend melden **3 Monate** vor Ende bzw. binnen **3 Tagen** nach Kenntnis; Eigenkündigung ohne wichtigen Grund → **Sperrzeit 12 Wochen**.
-- **Grundsicherungsgeld** (SGB II, bis 2026 „Bürgergeld“, davor „Hartz IV“) = **steuerfinanzierte Fürsorge** für erwerbsfähige Bedürftige über das **Jobcenter** – mit Bedürftigkeits- und Vermögensprüfung; Regelsatz Alleinstehende **563 €** (Stand 2026).
+- **Grundsicherungsgeld** (SGB II, bis 30.06.2026 „Bürgergeld“, davor „Hartz IV“) = **steuerfinanzierte Fürsorge** für erwerbsfähige Bedürftige über das **Jobcenter** – mit Bedürftigkeits- und Vermögensprüfung; Regelsatz Alleinstehende **563 €** (Stand 2026).
 
 ## Kernwissen
 
@@ -51,7 +51,7 @@
 
 Weitere Fürsorgeleistungen: **Sozialhilfe** (SGB XII) bzw. Grundsicherung im Alter und bei Erwerbsminderung für **nicht** Erwerbsfähige, **Wohngeld**, **Kinderzuschlag**.
 
-**Hinweis zum Begriff:** Mit der Reform „Neue Grundsicherung“ (2026) wurde das Bürgergeld in **Grundsicherungsgeld** umbenannt und u. a. bei Pflichtverletzungen und Vermögensschonung verschärft. In Prüfungsaufgaben bis 2025 steht noch „Bürgergeld“ – gemeint ist dasselbe Prinzip.
+**Hinweis zum Begriff:** Mit der Reform „Neue Grundsicherung“ (Bundestag 5.3.2026, in Kraft 1.7.2026) wurde das Bürgergeld in **Grundsicherungsgeld** umbenannt und u. a. bei Pflichtverletzungen und Vermögensschonung verschärft. In Prüfungsaufgaben bis 2025 steht noch „Bürgergeld“ – gemeint ist dasselbe Prinzip.
 
 ## Prüfungsfrage
 

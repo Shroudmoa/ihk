@@ -1,4 +1,3 @@
-```markdown
 ## 1. Aufgabe (Speichersysteme & RAID)
 
 ### a) RAID-Controller Merkmale
@@ -161,5 +160,4 @@ for (int p = 0; p <= len - 2; p++) {     // äußere Schleife
 
 ---
 
-**Merksatz:** IHK-Aufgaben sind keine Rätselstunden, sondern Test der **Kausalitätskette** (Ursache -> Wirkung -> Technologie-Layer). Wer die OSI-Schichten und DSGVO-Grundsätze nicht parat hat, verliert Punkte an der Oberfläche. Lerne die **Ports, RAID-Level und Backup-Strategien** als Vokabeln, sonst wird das nichts mit dem Fachinformatiker.
-```
+**Merksatz:** IHK-Aufgaben sind keine Rätselstunden, sondern Test der **Kausalitätskette** (Ursache -> Wirkung -> Technologie-Layer). Wer die OSI-Schichten und DSGVO-Grundsätze nicht parat hat, verliert Punkte an der Oberfläche. Lerne die **Ports, RAID-Level und Backup-Strategien** als Vokabeln.

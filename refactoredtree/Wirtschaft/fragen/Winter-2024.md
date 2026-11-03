@@ -81,9 +81,9 @@
 
 ## 11. Aufgabe (JAV)
 
-- Die Amtszeit beträgt vier Jahre.
+- Die Amtszeit beträgt **zwei Jahre** (§ 64 BetrVG). *(Korrigiert: der ursprüngliche Schlüssel nannte vier Jahre – das ist die Amtszeit des Betriebsrats.)*
 - Das passive Wahlrecht endet nicht mit 18.
-- Das Mindestalter für das aktive Wahlrecht beträgt 16 Jahre.
+- Ein Mindestalter für das aktive Wahlrecht gibt es **nicht**: Wahlberechtigt sind alle Arbeitnehmer unter 18 und alle Azubis (§ 60 BetrVG). *(Korrigiert.)*
 - Das aktive Wahlrecht endet nicht mit 18.
 - Eine JAV kann nur gewählt werden, wenn ein Betriebsrat besteht.
 
@@ -92,7 +92,7 @@
 - Ein Betriebsratsmitglied darf nicht JAV-Mitglied sein.
 - Die deutsche Staatsangehörigkeit ist nicht erforderlich.
 - Die Kandidatur ist nicht auf das zweite Ausbildungsjahr beschränkt.
-- Das 25. Lebensjahr darf während der Amtszeit nicht überschritten werden.
+- Wer während der Amtszeit 25 wird, **bleibt** bis zum Ende der Amtszeit Mitglied (§ 64 Abs. 3 BetrVG); Azubis sind seit 2021 unabhängig vom Alter wählbar. *(Korrigiert.)* Siehe [Betriebsrat & JAV](../betriebsrat-jav.md).
 - Eine Mindestbetriebszugehörigkeit von drei Monaten ist nicht erforderlich.
 
 ## 13. Aufgabe (Leitungssystem)

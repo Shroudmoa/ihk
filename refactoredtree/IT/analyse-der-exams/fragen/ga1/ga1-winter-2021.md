@@ -1,4 +1,3 @@
-```markdown
 ## 1. Aufgabe (Cloud-Dienste)
 
 ### a) Cloud-Vorteile
@@ -123,4 +122,3 @@ SELECT COUNT(*) FROM tblDiskM WHERE Datum = '2021-11-21';
 ---
 
 **Merksatz:** IHK-Aufgaben sind **Kausalitätsketten** – wer Cloud-Servicemodelle (IaaS/PaaS/SaaS), RAID-Formeln, MTBF und DSGVO-Fristen (72h!) nicht als Hard-Facts sitzen hat, verliert Punkte an der Oberfläche. Lerne Standards als Vokabeln, nicht als Prosa.
-```

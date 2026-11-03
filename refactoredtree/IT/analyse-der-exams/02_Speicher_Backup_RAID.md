@@ -21,7 +21,7 @@ Sommer/Winter, 2025 Sommer/Winter u. a.)*
 > - **2024S:** 20 TiB netto, 4-TiB-Platten: RAID 10 = **10 Platten** (5×2),
 >   RAID 5 = **6 Platten** (5+1), RAID 6 = **7 Platten** (5+2).
 > - **2024W:** RAID 15 (verschachtelt), 4×2,5 TiB + 2×3,5 TiB-Platten:
->   netto = (6−4)×2,5 = **5 TiB**; RAID-05-Vergleich: **12,5 TiB**; **JBOD**
+>   netto = (6−4)×2,5 = **5 TiB**; Vergleich **RAID 5 über alle 6 Platten**: (6−1)×2,5 = **12,5 TiB** (laut IHK-Lösung); **JBOD**
 >   als redundanzlose Alternative genannt.
 > - **2025S:** RAID-6-Erweiterung von 80 auf 160 TiB (8-TiB-Platten):
 >   **10 zusätzliche Platten** (22 statt 12 gesamt); RAID-10-Vergleich bei
@@ -90,7 +90,6 @@ Audit-Protokoll vorhanden). Beispiel: Rechnungen nach HGB/AO.
 | **RAID 50** | 6 | Mehrere RAID-5-Verbünde gestriped | 1 Ausfall pro Teil-Array |
 | **RAID 60** | 8 | Mehrere RAID-6-Verbünde gestriped | 2 Ausfälle pro Teil-Array |
 | **RAID 15** | 6 | Verschachtelt: mehrere Spiegel + RAID-5-Parität | hohe Fehlertoleranz, hoher Plattenaufwand |
-| **RAID 05** | 6 | RAID-5-Verbünde gespiegelt | hohe Fehlertoleranz, hoher Plattenaufwand |
 | **JBOD** | 1 | "Just a Bunch Of Disks" – Platten einfach aneinandergehängt | **keine Redundanz**, keine Performancesteigerung |
 
 **Rechenaufgabe (2024S):** 20 TiB Netto, Platten à 4 TiB.
@@ -112,8 +111,8 @@ Audit-Protokoll vorhanden). Beispiel: Rechnungen nach HGB/AO.
   Für 160 TiB werden 20 Datenplatten benötigt → **10 zusätzliche Platten**,
   insgesamt **22 Platten** (statt 12).
 - **2024W (RAID 15, verschachtelt, 4×2,5 TiB + 2×3,5 TiB):**
-  netto = (6 − 4) × 2,5 TiB = **5 TiB**. Vergleich RAID 05 mit denselben
-  Platten: **12,5 TiB**. **JBOD** wurde als redundanzlose Alternative
+  netto = (6 − 4) × 2,5 TiB = **5 TiB**. Vergleich **RAID 5** über alle sechs
+  Platten (kleinste Platte 2,5 TiB zählt): 6 × 2,5 − 2,5 (Parität) = **12,5 TiB** (so die IHK-Lösung). **JBOD** wurde als redundanzlose Alternative
   genannt (kein Schutz bei Plattenausfall).
 
 ## Typische Prüfungsaufgabe

@@ -43,11 +43,11 @@ Weitere Ordnungselemente: **Tarifautonomie**, **Mitbestimmung**, Gewerbe- und Be
 |---|---|---|---|
 | **Versicherungsprinzip** | Leistung, weil Beiträge gezahlt wurden | Renten-, Kranken-, Pflege-, Arbeitslosen-, Unfallversicherung | Beiträge (+ Bundeszuschuss) |
 | **Versorgungsprinzip** | Leistung für besondere Opfer/Dienste für die Allgemeinheit | Beamtenpension, Kriegsopferversorgung, Kindergeld, Elterngeld | Steuern |
-| **Fürsorgeprinzip** | Leistung nach **Bedürftigkeit**, Nachrang (Subsidiarität) | **Grundsicherungsgeld** (bis 2026 Bürgergeld), Sozialhilfe, **Wohngeld**, BAföG | Steuern |
+| **Fürsorgeprinzip** | Leistung nach **Bedürftigkeit**, Nachrang (Subsidiarität) | **Grundsicherungsgeld** (bis 30.06.2026 Bürgergeld), Sozialhilfe, **Wohngeld**, BAföG | Steuern |
 
 Grundwerte: **Solidarität** (Starke helfen Schwachen), **Subsidiarität** (Hilfe zur Selbsthilfe; erst Eigenverantwortung, dann Familie, dann Staat), soziale Gerechtigkeit, Chancengleichheit.
 
-**Grundsicherungsgeld:** Mit der Reform „Neue Grundsicherung“ wurde 2026 das 2023 eingeführte Bürgergeld abgelöst; Regelsatz Alleinstehende 563 € (Stand 2026). Prinzip: Existenzminimum sichern, fördern und fordern (zumutbare Arbeit).
+**Grundsicherungsgeld:** Mit der Reform „Neue Grundsicherung“ wurde zum 1.7.2026 das 2023 eingeführte Bürgergeld abgelöst; Regelsatz Alleinstehende 563 € (Stand 2026). Prinzip: Existenzminimum sichern, fördern und fordern (zumutbare Arbeit).
 
 ### Zielkonflikte
 

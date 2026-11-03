@@ -33,7 +33,7 @@
 
 - Herr Witting vollendet am 4. April 2022 das 18. Lebensjahr.
 - Zu Beginn des Kalenderjahres 2022 war er 17 Jahre alt.
-- Nach JArbSchG stehen ihm 27 Werktage zu.
+- Nach JArbSchG (§ 19: am 1. Januar noch nicht 18) stehen ihm **25 Werktage** zu. *(Korrigiert: der ursprüngliche Schlüssel nannte 27 – das gilt erst für „noch nicht 17“.)*
 - Der Tarifvertrag gewährt 30 Arbeitstage (Fünftagewoche).
 - Der Tarifvertrag ist günstiger, daher gilt dieser.
 - Urlaubsanspruch: 30 Arbeitstage.
@@ -197,7 +197,9 @@
 - Piktogramm 2 zeigt das gleichzeitige Benutzen mehrerer Feuerlöscher.
 - Piktogramm 3 zeigt das Löschen von Tropf- und Fließbränden von unten.
 - Piktogramm 4 zeigt das Löschen von unten nach hinten.
-- Piktogramm 5 zeigt das Löschen in Windrichtung (unzutreffend, da gegen den Wind gelöscht werden sollte).
+- Piktogramm 5 zeigt das Löschen in Windrichtung – **das ist richtig** (Wind im Rücken, DGUV-Regel „Feuer in Windrichtung angreifen“). *(Korrigiert: der ursprüngliche Schlüssel nannte das fälschlich unzutreffend.)*
+
+> **Die DGUV-Regeln zum Löschen:** in Windrichtung angreifen · Flächenbrände von vorn nach hinten und von unten in die Glut · Tropf- und Fließbrände von oben nach unten · ausreichend Löscher gleichzeitig einsetzen · Rückzündung beachten, Brandstelle beobachten. Siehe [Arbeitsschutz & Arbeitssicherheit](../arbeitsschutz-arbeitssicherheit.md).
 
 ## 26. Aufgabe (Feuerlöscher-Bedienung)
 

@@ -1,4 +1,3 @@
-```markdown
 ## 1. Aufgabe (Datenbank-Infrastruktur)
 
 ### a) On-Premises vs. Public Cloud – Vorteile
@@ -168,4 +167,3 @@ if (avgUsedRam > 75)
 ---
 
 **Merksatz:** IHK-Aufgaben sind **Kausalitätsketten** – wer RAID-6-Formel `(N-2)*K`, Backup-Ketten (Voll→Diff→Inkr) und SQL-JOINs nicht als Hard-Facts sitzen hat, verliert Punkte an der Oberfläche. Lerne Standards als Vokabeln, nicht als Prosa.
-```

@@ -1,4 +1,3 @@
-```markdown
 ## 1. Aufgabe (SaaS & Private Cloud)
 
 ### a) SaaS – 3 Aspekte
@@ -123,4 +122,3 @@ else
 ---
 
 **Merksatz:** IHK-Aufgaben sind **Kausalitätsketten** – wer Linux-Rechte (rwx = 421), Backup-Ketten (Voll→Diff) und Krypto-Eignung (AES vs. DES vs. RSA) nicht als Hard-Facts sitzen hat, verliert Punkte an der Oberfläche. Lerne Standards als Vokabeln, nicht als Prosa.
-```

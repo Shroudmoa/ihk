@@ -83,7 +83,6 @@ Die Namen älterer USB-3.x-Versionen wurden mehrfach geändert. Für den Kauf is
 
 Quelle: [USB-IF – USB 3.2](https://www.usb.org/usb-32-0), [USB-IF – USB4](https://www.usb.org/usb4)
 
-```markdown
 ### USB-Stecker und Kabeltypen
 
 **Steckerform ≠ Übertragungsgeschwindigkeit.** USB-C beschreibt die Bauform des Steckers, nicht automatisch USB4 oder eine bestimmte Geschwindigkeit.

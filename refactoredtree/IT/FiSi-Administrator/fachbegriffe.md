@@ -58,7 +58,6 @@ Quellen: [Martin Fowler – Technical Debt](https://martinfowler.com/bliki/Techn
 
 Quelle: [AWS Well-Architected – Ausfälle in verteilten Systemen begrenzen](https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.question.REL_5.en.html).
 
-```markdown
 ## Betrieb und DevOps
 
 | Begriff | Bedeutung | Kurz erklärt |
