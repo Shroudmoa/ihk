@@ -30,28 +30,29 @@ Ein Betriebsrat wird gewählt in **privaten Unternehmen** (nicht im öffentliche
 | Arbeitsschutz | Mitbestimmung | zustimmungspflichtig |
 | Einführung IT/Monitoring | Mitbestimmung | zustimmungspflichtig |
 | Kündigung (einzeln) | **Anhörungsrecht** | BR muss gehört werden, sonst Kündigung evtl. unwirksam |
-| Betriebsübergang | Informationsrecht | |
+| Betriebsänderung (z. B. Massenentlassung) | Beratung, **Sozialplan** erzwingbar | §§ 111, 112 BetrVG |
 
 **Interessenvertretung:** Der BR vertritt die Belegschaft gegenüber dem Arbeitgeber – ohne Gewerkschaftszwang.
 
 ## 4. JAV – Jugend- und Auszubildendenvertretung
 
-- Eigene Vertretung für **Azubis und junge Arbeitnehmer unter 18** (bzw. unter 25 bei Ausbildung).
-- Mindestens 5 jugendliche Wahlberechtigte im Betrieb.
+- Eigene Vertretung für **Arbeitnehmer unter 18** und **Auszubildende unter 25** (§ 60 BetrVG).
+- Voraussetzung: in der Regel mindestens **5** solcher Beschäftigten **und** ein bestehender **Betriebsrat** – die JAV handelt über den Betriebsrat, nicht direkt gegenüber dem Arbeitgeber.
+- Amtszeit **2 Jahre**; wählbar sind Beschäftigte unter 25.
 - Eigene Rechte: z. B. Mitwirkung bei Berufsausbildung, Sprechstunden.
 
 ## 5. Betriebsvereinbarung
 
 - Schriftlicher Vertrag zwischen Arbeitgeber und BR.
 - Regelt **Ordnung und Verhalten im Betrieb** (z. B. Rauchverbot, Nutzung IT, Arbeitszeiten).
-- Gilt für **alle** Arbeitnehmer des Betriebs – wie Gesetz.
-- Darf nicht schlechter sein als Tarifvertrag (Günstigkeitsprinzip).
+- Gilt **unmittelbar und zwingend** für alle Arbeitnehmer des Betriebs (§ 77 Abs. 4 BetrVG).
+- **Tarifvorbehalt** (§ 77 Abs. 3): Was üblicherweise im Tarifvertrag geregelt ist (Lohnhöhe, Urlaubsdauer), darf nicht per Betriebsvereinbarung geregelt werden – außer der Tarifvertrag lässt es ausdrücklich zu (Öffnungsklausel).
 
 ## 6. Unterschied: Betriebsrat vs. Gewerkschaft
 
 | Merkmal | Betriebsrat | Gewerkschaft |
 |---------|-------------|--------------|
-| Ebene | Betrieb | Branchenübergreifend / tariflich |
+| Ebene | Betrieb | überbetrieblich, meist nach Branchen organisiert |
 | Mitgliedschaft | gewählt, für alle AN | freiwillig beigetreten |
 | Aufgabe | Mitbestimmung im Betrieb | Tarifverhandlungen (Lohn), Streik |
 | Gebunden? | nur an Betrieb | überbetrieblich |
@@ -75,6 +76,10 @@ Ein Betriebsrat wird gewählt in **privaten Unternehmen** (nicht im öffentliche
 Hinweis: Die Unfallversicherung (UV) taucht hier nicht als passende Instanz auf – sie ist ein SV-Zweig, kein Mitbestimmungsorgan.
 
 </details>
+
+## Lernblätter
+
+- [Betriebsrat, JAV & Betriebsversammlung](../Mitbestimmung/betriebsrat-jav.md) · [Tarifvertrag & Betriebsvereinbarung](../Mitbestimmung/tarifrecht-betriebsvereinbarung.md) · [Gewerkschaften & Arbeitskampf](../Mitbestimmung/gewerkschaften-arbeitskampf.md) · [Rechtsquellen & Günstigkeitsprinzip](../Recht/rechtsquellen-arbeitsrecht.md)
 
 ## Selbstcheck – kannst du das?
 

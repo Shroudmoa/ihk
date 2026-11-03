@@ -13,15 +13,15 @@ Unternehmen müssen Aufgaben, Weisungsrechte und Abläufe strukturieren. In der 
 | System | Prinzip | Vorteil | Nachteil |
 |--------|---------|---------|----------|
 | **Einlinien** | 1 Vorgesetzter, klare Weisungskette | Eindeutige Verantwortung | langsame Kommunikation |
-| **Mehrlinien** | Mitarbeiter hat mehrere fachliche Vorgesetzte | Fachliche Tiefe | Befehlswidrigkeit möglich |
-| **Stab-Linien** | Stabsstellen beraten die Linie (keine Weisung) | Entlastung der Leitung | Stab hat keine Macht |
-| **Matrix** | fachlich + disziplinarisch getrennt (Projekt + Abteilung) | flexibel, projektorientiert | doppelte Berichtspflicht |
+| **Mehrlinien** | Mitarbeiter hat mehrere fachliche Vorgesetzte | Spezialisierung, kurze Wege | widersprüchliche Weisungen, uneinheitliche Führung |
+| **Stab-Linien** | Stabsstellen beraten die Leitung (keine Weisung) | Entlastung der Instanzen durch Spezialwissen | Konflikte zwischen Stab und Linie |
+| **Matrix** | zwei Weisungslinien über Kreuz (Funktion + Produkt/Projekt) | flexibel, projektorientiert | Doppelunterstellung, hoher Abstimmungsaufwand |
 | **Spartenorganisation** | Gliederung nach Produkt/Markt/Region | Kundennähe | Doppelarbeit zwischen Sparten |
 
 ## 3. Stabsstelle vs. Linienstelle
 
 - **Linienstelle:** Weisungsbefugnis, operativ tätig, im Hierarchieweg (z. B. Abteilungsleiter IT).
-- **Stabsstelle:** Beratend, unterstützt die Leitung, **keine** Weisungsbefugnis gegenüber Linien (z. B. Personalabteilung, Rechtsstab, Controller).
+- **Stabsstelle:** Beratend, unterstützt die Leitung, **keine** Weisungsbefugnis gegenüber Linien (z. B. Rechtsabteilung, Controlling, Datenschutzbeauftragter). Personal, IT, Vertrieb und Fertigung sind in der Regel **Linie** (Winter 2024, Aufg. 14; Winter 2025, Aufg. 24).
 
 Beispiel: Der IT-Sicherheitsbeauftragte als Stab berät den Geschäftsführer, darf der Fachabteilung aber keine direkten Arbeitsanweisungen geben.
 
@@ -51,6 +51,11 @@ Frage: Welches Leitungssystem liegt (überwiegend) vor und welche Rolle spielt d
 - **Rechtsabteilung = Stabsstelle.** Sie berät die Geschäftsführung, hat aber keine Weisungsbefugnis gegenüber der Linie (Softwareentwicklung). Das ist das Stab-Linien-Prinzip als Ergänzung.
 
 </details>
+
+## Lernblätter
+
+- [Leitungssysteme, Organisation & agiles Arbeiten](../Unternehmen/leitungssysteme-organisation.md) · [Wirtschaftssektoren & Arbeitsteilung](../Volkswirtschaft/wirtschaftssektoren-arbeitsteilung.md) · [Rechtsformen & Handelsregister](../Unternehmen/rechtsformen-handelsregister.md)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (13), [Sommer 2022](../fragen/Sommer-2022.md) (21), [Winter 2023](../fragen/Winter-2023.md) (21), [Sommer 2024](../fragen/Sommer-2024.md) (21), [Winter 2024](../fragen/Winter-2024.md) (13–14), [Winter 2025](../fragen/Winter-2025.md) (23–24)
 
 ## Selbstcheck – kannst du das?
 

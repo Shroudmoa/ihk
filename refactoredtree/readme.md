@@ -76,6 +76,13 @@ refactoredtree/
 3. **WiSo:** BBiG → Arbeitsrecht → Sozialversicherung → Betriebsrat → Unternehmen → Volkswirtschaft
 4. **Simulation:** Ein kompletter Prüfungstermin pro Tag aus `fragen/`, Lücken über die Lernblätter schließen.
 
+## Version 1.1 (November 2026)
+
+- **Wirtschaft neu strukturiert:** 9 Themenordner wie bei IT, eigene [WiSo-Prüfungsanalyse](Wirtschaft/analyse-der-exams/README.md) mit Themen nach Häufigkeit.
+- **Lerngeschichte „Drei Jahre bei Nordlicht“** in [Wirtschaft.md](Wirtschaft.md): 11 Stationen von Ausbildungsvertrag bis Übernahme, verbunden mit der IT-Geschichte.
+- **6 neue WiSo-Blätter:** Abschlussprüfung, Pflichten & Haftung, Brandschutz & Erste Hilfe, Sicherheitszeichen, Bildschirmarbeitsplatz & Ergonomie, Steuern & Steuerarten – insgesamt 53 WiSo-Blätter.
+- **Weitere Korrekturen:** WiSo-Lektionen (L19–L26) fachlich überarbeitet, 9 weitere Lösungsschlüssel unter `Wirtschaft/fragen/` korrigiert bzw. präzisiert.
+
 ## Version 1.0 (November 2026)
 
 - **Struktur:** Ordner- und Dateinamen sind Windows-sicher (keine `?`, `:` oder Umlaute), Duplikate sind zusammengeführt, und alle relativen Links sind geprüft (0 kaputte Links).

@@ -74,4 +74,4 @@ e) Ein Fachinformatiker berät Kunden.
 - [Rechtsformen & Handelsregister](../Unternehmen/rechtsformen-handelsregister.md) – Personen- vs. Kapitalgesellschaft
 - [Lektion 26 – Sektoren, Konjunktur, Marktformen](../analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md)
 - [Lektion 21 – Unternehmensorganisation](../analyse-der-exams/L21_Unternehmensorganisation.md)
-- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (17), [Sommer 2023](../fragen/Sommer-2023.md) (21, 27), [Sommer 2025](../fragen/Sommer-2025.md) (1), [Winter 2025](../fragen/Winter-2025.md) (22), [Sommer 2026](../fragen/Sommer-2026.md) (26–27)
+- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (17), [Sommer 2023](../fragen/Sommer-2023.md) (21, 27), [Sommer 2024](../fragen/Sommer-2024.md) (9), [Sommer 2025](../fragen/Sommer-2025.md) (1), [Winter 2025](../fragen/Winter-2025.md) (22), [Sommer 2026](../fragen/Sommer-2026.md) (26–27)

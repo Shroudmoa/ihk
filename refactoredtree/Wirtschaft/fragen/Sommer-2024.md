@@ -216,7 +216,7 @@
 
 ## 28. Aufgabe (Brandschutzzeichen)
 
-- Das Schild zeigt einen Feuerwehrmotengang mit Schlauchanschluss.
+- Das Schild ist ein **Brandschutzzeichen** (rotes Quadrat) für eine Feuerlösch-Einrichtung mit Schlauchanschluss. *(Hinweis: Die Bezeichnung wurde bei der Übertragung verstümmelt und widerspricht der letzten Zeile – am Original-Aufgabensatz prüfen. Zeichenübersicht: [Sicherheitszeichen](../Arbeitsschutz-Umwelt/sicherheitszeichen.md).)*
 - Es ist kein Erste-Hilfe-Zeichen.
 - Es ist kein Sprinkler-Zeichen.
 - Es ist kein Fluchtwegzeichen.

@@ -67,6 +67,20 @@ Erweitert zum **magischen Sechseck**: + **Umweltschutz** + **gerechte Einkommens
 
 Folgen: Kaufkraft und **Realeinkommen sinken**, Sparer verlieren, Schuldner gewinnen. **Deflation** = sinkendes Preisniveau, gefährlich wegen Kaufzurückhaltung.
 
+**Inflationsrate berechnen:** Gemessen wird sie mit dem **Verbraucherpreisindex (VPI)** des Statistischen Bundesamts (Warenkorb, Basisjahr = 100).
+Inflationsrate = (VPI neu − VPI alt) / VPI alt × 100. Beispiel: VPI 120,0 → 122,4: 2,4 / 120,0 × 100 = **2,0 %**.
+**Realeinkommen:** Gehalt +3 %, Inflation 4 % → real ≈ −1 % (genau: 1,03 / 1,04 − 1 = −0,96 %) – vgl. Sommer 2023, Aufg. 9.
+
+### Geld und EZB
+
+| Punkt | Inhalt |
+|---|---|
+| **Funktionen des Geldes** | Tauschmittel, Wertaufbewahrungsmittel, Recheneinheit (Wertmaßstab) |
+| **EZB** (Frankfurt) | Zentralbank des Eurosystems, **unabhängig** von Regierungen; vorrangiges Ziel **Preisniveaustabilität** (Inflation mittelfristig **2 %**); die **Bundesbank** setzt die Beschlüsse in Deutschland um |
+| **Leitzinsen** | Zinsen, zu denen sich Geschäftsbanken bei der EZB Geld leihen bzw. anlegen (Hauptrefinanzierungssatz, Einlagesatz) – sie steuern die Kreditzinsen der Banken |
+| **Zins ↓** | Kredite billiger → mehr Investitionen und Konsum → Konjunktur ↑, Inflationsgefahr ↑ |
+| **Zins ↑** | Kredite teurer, Sparen attraktiver → Nachfrage ↓ → Inflation ↓ (so 2022/2023 gegen die hohe Inflation) |
+
 ## Prüfungsfrage
 
 **Frage (Multiple Choice):** Welche staatliche Maßnahme ist in einer Rezession geeignet, die Konjunktur zu beleben?
@@ -77,7 +91,7 @@ Folgen: Kaufkraft und **Realeinkommen sinken**, Sparer verlieren, Schuldner gewi
 4. Erhöhung der staatlichen Investitionen in Infrastruktur
 5. Kürzung des Arbeitslosengeldes
 
-**Musterantwort:** **4.** Staatliche Investitionen erhöhen direkt die gesamtwirtschaftliche Nachfrage (expansive Fiskalpolitik). Steuererhöhungen und Transferkürzungen senken den Konsum; Leitzinserhöhungen verteuern Kredite und dämpfen Investitionen – außerdem entscheidet über Leitzinsen die EZB, nicht der Staat.
+**Musterantwort:** **4** (vgl. Sommer 2025, Aufg. 6; Winter 2025, Aufg. 5). Staatliche Investitionen erhöhen direkt die gesamtwirtschaftliche Nachfrage (expansive Fiskalpolitik). Steuererhöhungen und Transferkürzungen senken den Konsum; Leitzinserhöhungen verteuern Kredite und dämpfen Investitionen – außerdem entscheidet über Leitzinsen die EZB, nicht der Staat.
 
 ## Falle
 
@@ -97,6 +111,7 @@ Folgen: Kaufkraft und **Realeinkommen sinken**, Sparer verlieren, Schuldner gewi
 - [Marktformen & Preisbildung](marktformen-preisbildung.md) – Angebot und Nachfrage
 - [Lohn, Steuern & Gehaltsabrechnung](../Sozialversicherung/lohn-steuern-gehaltsabrechnung.md) – Real- und Nominaleinkommen
 - [Globalisierung & EU-Binnenmarkt](globalisierung-eu-binnenmarkt.md) – Außenwirtschaft, Euro
+- [Steuern & Steuerarten](steuern-steuerarten.md) – Steuern als Instrument der Fiskalpolitik
 - [Unternehmensziele & Zielkonflikte](../Unternehmen/unternehmensziele-zielkonflikte.md) – betriebliche vs. gesamtwirtschaftliche Ziele
 - [Lektion 26 – Sektoren, Konjunktur, Marktformen](../analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md)
-- Echte Aufgaben: [Sommer 2023](../fragen/Sommer-2023.md) (26), [Winter 2024](../fragen/Winter-2024.md) (15), [Sommer 2025](../fragen/Sommer-2025.md) (4–6), [Winter 2025](../fragen/Winter-2025.md) (5)
+- Echte Aufgaben: [Sommer 2023](../fragen/Sommer-2023.md) (9, 26), [Winter 2024](../fragen/Winter-2024.md) (15), [Sommer 2025](../fragen/Sommer-2025.md) (4–6), [Winter 2025](../fragen/Winter-2025.md) (5)

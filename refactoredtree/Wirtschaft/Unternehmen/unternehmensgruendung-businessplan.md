@@ -90,6 +90,7 @@ Die **Umsatzsteuer** (19 %/7 %) ist bundesweit gleich und deshalb **kein** Stand
 - [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Wahl der Rechtsform, Kaufmannsbegriff
 - [BEP – Break-Even-Point](bep.md) – ab welcher Menge lohnt sich das Geschäft?
 - [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – Rentabilitätsvorschau
+- [Steuern & Steuerarten](../Volkswirtschaft/steuern-steuerarten.md) – Gewerbe-, Umsatz-, Einkommensteuer
 - [Sozialversicherung](../Sozialversicherung/sozialversicherung.md) – Absicherung Selbstständiger
 - [Arbeitslosenversicherung & Grundsicherung](../Sozialversicherung/arbeitslosenversicherung-grundsicherung.md) – Gründungszuschuss
 - Echte Aufgaben: [Winter 2022](../fragen/Winter-2022.md) (23–24), [Sommer 2023](../fragen/Sommer-2023.md) (14), [Winter 2023](../fragen/Winter-2023.md) (22), [Sommer 2024](../fragen/Sommer-2024.md) (19)

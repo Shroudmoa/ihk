@@ -46,7 +46,7 @@ Die Steuerklasse ändert die monatliche **Lohnsteuer**, nicht die Sozialabgaben 
 | UV | 0 % (nur AG) |
 | **Summe** | **≈ 21,15 %** (kinderlos ≈ 21,75 %) |
 
-### Gehaltsberechnung (Winter 2023)
+### Gehaltsberechnung (Winter 2023, Aufg. 4)
 
 | Position | Rechnung | Betrag |
 |---|---|---:|
@@ -62,7 +62,7 @@ Die Steuerklasse ändert die monatliche **Lohnsteuer**, nicht die Sozialabgaben 
 |---|---|
 | Gesetzlicher Mindestlohn (MiLoG) | 12,82 € (2025) → **13,90 €** (2026) → **14,60 €** (2027); Anpassung durch die Mindestlohnkommission, umgesetzt per Verordnung |
 | Ausnahmen | Azubis (→ Mindestausbildungsvergütung nach BBiG), Minderjährige ohne Berufsabschluss, Pflichtpraktika, freiwillige Praktika bis 3 Monate, Langzeitarbeitslose in den ersten 6 Monaten, Ehrenamt |
-| Minijob-Grenze | dynamisch: 10 Std. × Mindestlohn × 130 / 3 → **603 €** (2026) |
+| Minijob-Grenze | dynamisch: Mindestlohn × 130 / 3, aufgerundet (entspricht 10 Wochenstunden) → 13,90 × 130 / 3 = 602,33 → **603 €** (2026) |
 | Branchenmindestlöhne | per allgemeinverbindlichem Tarifvertrag/AEntG, oft höher |
 | Erhöhung des Mindestlohns | staatliche Entscheidung – **keine** Mitbestimmung des Betriebsrats |
 
@@ -94,6 +94,7 @@ Die Steuerklasse ändert die monatliche **Lohnsteuer**, nicht die Sozialabgaben 
 - Den RV-Anteil vom **Brutto inklusive Zuschlägen und Zulagen** berechnen, mit dem **halben** Satz (9,3 %).
 - Realeinkommen sinkt trotz Gehaltserhöhung, wenn die Inflation höher ist.
 - Mindestlohn gilt nicht für Auszubildende.
+- Azubis mit höchstens **325 €** Vergütung: Der Arbeitgeber trägt die Sozialversicherung **allein** (Geringverdienergrenze).
 
 ## Merksatz
 
@@ -107,5 +108,7 @@ Die Steuerklasse ändert die monatliche **Lohnsteuer**, nicht die Sozialabgaben 
 - [BBiG](../Ausbildung/bbig.md) – Mindestausbildungsvergütung
 - [Konjunktur & Wirtschaftspolitik](../Volkswirtschaft/konjunktur-wirtschaftspolitik.md) – Inflation
 - [Personalauswahl & Arbeitsvertrag](../Arbeitsrecht/personalauswahl-arbeitsvertrag.md) – Steuer-ID und Unterlagen
+- [Steuern & Steuerarten](../Volkswirtschaft/steuern-steuerarten.md) – direkte/indirekte Steuern, Einkommen-, Umsatz-, Gewerbesteuer
+- [Altersvorsorge & Rentenversicherung](altersvorsorge-rentenversicherung.md) – vermögenswirksame Leistungen
 - [Lektion 23 – Recht & Steuern](../analyse-der-exams/L23_WISO_Recht_Steuern.md)
 - Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (11), [Sommer 2023](../fragen/Sommer-2023.md) (9), [Winter 2023](../fragen/Winter-2023.md) (4)

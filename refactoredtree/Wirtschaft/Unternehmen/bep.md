@@ -53,7 +53,7 @@ Wertetabelle zum Beispiel unten (Kf = 50.000 €, kv = 15 €, p = 25 €):
 
 ### Rechenbeispiel
 
-Ein Systemhaus bietet Managed-Workplace-Pakete an: Preis 25 € pro Paket und Monat, variable Kosten 15 € (Lizenzen, Support-Anteil), Fixkosten 50.000 € pro Jahr.
+Nordlicht bietet Managed-Workplace-Pakete an (Station 7): Preis 25 € pro Paket und Monat, variable Kosten 15 € (Lizenzen, Support-Anteil), Fixkosten 50.000 € pro Jahr.
 
 - db = 25 − 15 = **10 €**
 - x_BEP = 50.000 / 10 = **5.000 Pakete** (Paketmonate) pro Jahr
@@ -99,4 +99,7 @@ c) G = 450 × 240 − 81.000 = 108.000 − 81.000 = **27.000 €**
 - [Ökonomisches Prinzip & Kennzahlen](oekonomisches-prinzip-kennzahlen.md) – Wirtschaftlichkeit, Rentabilität
 - [Unternehmensgründung & Businessplan](unternehmensgruendung-businessplan.md) – Rentabilitätsvorschau
 - [Unternehmensziele & Zielkonflikte](unternehmensziele-zielkonflikte.md) – Gewinn als ökonomisches Ziel
+- [Make or Buy, Kauf, Leasing, Miete (IT)](../../IT/Management/make-or-buy-kauf-leasing-miete.md) – kritische Menge in der Praxis
+- [Kostenvergleichsrechnung (IT)](../../IT/Management/kostenvergleichsrechnung.md)
 - [Lektion 22 – Kostenrechnung](../../IT/analyse-der-exams/L22_Kostenrechnung.md) – Kostenarten, Amortisation, Angebotsvergleich
+- Prüfungsbezug: in der WiSo bisher nicht gerechnet, aber Grundlage für GA1-Kalkulationen

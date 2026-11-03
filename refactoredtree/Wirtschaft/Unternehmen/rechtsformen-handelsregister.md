@@ -38,6 +38,16 @@
 | Gewinn | nach dem Verhältnis der **Geschäftsanteile** (§ 29 Abs. 3), wenn der Vertrag nichts anderes vorsieht |
 | Anteile | Übertragung nur notariell, **kein Börsenhandel** |
 
+### Gewinnverteilung (wenn der Vertrag nichts regelt)
+
+| Rechtsform | Regel |
+|---|---|
+| **GmbH** | nach **Geschäftsanteilen** (§ 29 Abs. 3 GmbHG) – z. B. 40 % Anteil → 40 % des Gewinns |
+| **AG** | Dividende je Aktie nach Beschluss der Hauptversammlung |
+| **GbR/OHG/KG** | seit dem MoPeG (1.1.2024) nach den vereinbarten **Beteiligungsverhältnissen**, hilfsweise nach dem Wert der vereinbarten Einlagen, zuletzt nach Köpfen; die frühere Regel „4 % auf die Einlage, Rest nach Köpfen“ ist abgeschafft, steht aber noch in älteren Büchern – in der Prüfung gilt, was die Aufgabe vorgibt |
+
+**Rechenweg (Sommer 2024, Aufg. 16):** Stammkapital 330.000 €, Simmer hält 132.000 € → 132.000 / 330.000 = 40 % → 87.450 € × 0,40 = **34.980 €**. Weitere Beispiele: [Kennzahlen](oekonomisches-prinzip-kennzahlen.md#gewinnverteilung).
+
 ### AG
 
 - Organe: **Vorstand** (leitet eigenverantwortlich), **Aufsichtsrat** (bestellt und kontrolliert den Vorstand), **Hauptversammlung** (Aktionäre: Gewinnverwendung, Satzung, Wahl der Aufsichtsratsmitglieder).
@@ -85,7 +95,7 @@
 - Nicht jeder Gesellschafter ist automatisch Geschäftsführer; Gesellschafter müssen auch nicht die Geschäftsführung übernehmen.
 - Das Stammkapital muss bei Gründung nicht vollständig eingezahlt sein (mind. 12.500 €), und die Einlagen müssen kein Vielfaches davon sein.
 - KG: Nur der **Komplementär** haftet unbeschränkt; Kommanditisten sind nicht zur Geschäftsführung verpflichtet; es gibt kein Mindestkapital.
-- Handelsregister: **Amtsgericht**, nicht IHK oder Arbeitsgericht.
+- Handelsregister: **Amtsgericht**, nicht IHK oder Arbeitsgericht. Wer Firmendaten, Stammkapital und Gesellschafter sucht, schaut ins **Handelsregister** – nicht ins Grundbuch oder in den internen Gesellschaftsvertrag (Sommer 2024, Aufg. 15).
 - Ist-Kaufmann: Eintragung **deklaratorisch** – der Lösungsschlüssel Winter 2022 (Aufg. 24) nennt sie konstitutiv; rechtlich korrekt ist deklaratorisch.
 
 ## Merksatz
@@ -100,4 +110,5 @@
 - [Rechts- und Geschäftsfähigkeit](../Recht/rechts-geschaeftsfaehigkeit.md) – juristische Personen
 - [Vollmachten: Prokura & Handlungsvollmacht (nice to know)](../nice-to-know/vollmachten-prokura-handlungsvollmacht.md)
 - [Lektion 23 – Recht & Steuern (Gesellschaftsformen)](../analyse-der-exams/L23_WISO_Recht_Steuern.md)
-- Echte Aufgaben: [Sommer 2023](../fragen/Sommer-2023.md) (13, 15, 21–23), [Winter 2023](../fragen/Winter-2023.md) (5, 15, 19), [Winter 2024](../fragen/Winter-2024.md) (21–22), [Winter 2025](../fragen/Winter-2025.md) (18–19)
+- [Steuern & Steuerarten](../Volkswirtschaft/steuern-steuerarten.md) – Körperschaft- und Gewerbesteuer
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (12), [Sommer 2022](../fragen/Sommer-2022.md) (18), [Winter 2022](../fragen/Winter-2022.md) (2, 24), [Sommer 2023](../fragen/Sommer-2023.md) (13, 15, 21–23), [Winter 2023](../fragen/Winter-2023.md) (5, 15, 19), [Sommer 2024](../fragen/Sommer-2024.md) (15–17), [Winter 2024](../fragen/Winter-2024.md) (21–22), [Sommer 2025](../fragen/Sommer-2025.md) (21–23), [Winter 2025](../fragen/Winter-2025.md) (18–19), [Sommer 2026](../fragen/Sommer-2026.md) (15)

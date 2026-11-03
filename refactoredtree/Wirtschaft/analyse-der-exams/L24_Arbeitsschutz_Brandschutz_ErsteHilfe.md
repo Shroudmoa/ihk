@@ -1,104 +1,78 @@
 # Lektion 24 – Arbeitsschutz, Brandschutz & Erste Hilfe
 
 **Bereich:** Wirtschafts- und Sozialkunde (WiSo)  
-**Relevanz:** Sehr hoch – in AP2 regelmäßig als Zuordnungs- und Erkennungsaufgabe (2-4 Fragen pro Jahrgang, oft in jedem Jahrgang enthalten)  
+**Relevanz:** Sehr hoch – in fast jedem Termin 2–4 Aufgaben (Sicherheitszeichen, Brandfall, Unterweisung, Sicherheitsbeauftragter, Erste Hilfe)  
 **Lernzeit:** ca. 2h
 
 ## 1. Warum das wichtig ist
 
-Arbeitsschutz und Brandschutz dienen der Sicherheit und Gesundheit der Beschäftigten. In der AP2-WiSo-Prüfung werden regelmäßig Fragen zu Kennzeichen, Verhalten im Brandfall und Erste-Hilfe-Maßnahmen gestellt. Viele Punkte sind „kostenlose Punkte“, wenn man die Grundlagen kennt.
+Arbeitsschutz und Brandschutz dienen der Sicherheit und Gesundheit der Beschäftigten. In der WiSo-Prüfung werden regelmäßig Kennzeichen, Verhalten im Brandfall, Erste-Hilfe-Maßnahmen und die Rollen im Arbeitsschutz abgefragt. Die Aufgaben wiederholen sich fast wörtlich – das sind sichere Punkte.
 
-## 2. Grundlagen: Sicherheitskennzeichen (Farbcode-System)
-
-Prüfungsrelevant: Zuordnung von Bild und Farbe sowie Bedeutung.
+## 2. Sicherheitszeichen (ASR A1.3, DIN EN ISO 7010)
 
 | Typ | Farbe | Form | Bedeutung | Beispiel |
 |-----|-------|------|-----------|----------|
-| **Verbotszeichen** | Rot | Rund mit diagonalem Streifen | Verbot, etwas nicht tun | „Feuerlöscher nicht benutzen“, „Zutritt verboten“ |
-| **Gebotszeichen** | Blau | Rund | Pflicht, bestimmte Maßnahme ergreifen | „Schutzbrille tragen“, „Hörschutz pflichtgemäß tragen“ |
-| **Warntzeichen** | Gelb | Ecktragend (dreieckig) | Auf Gefahr hinweisen | „Achtung Spannungsfreiheit“, „Gefahr rutschende Fläche“ |
-| **Rettungszeichen** | Grün | Rechteckig oder quadratisch | Fluchtweg, Rettungsstelle | „Notaus“, „Sammelplatz“, „Erste Hilfe“ |
-| **Brandschutzzeichen** | Rot | Viereckig oder rund | Feuerlöschgeräte, hydranten | „Feuerlöscher“, „Löschwasserleitung“ |
+| **Verbotszeichen** | Rot (Rand und Balken) auf Weiß | rund mit Querbalken | etwas ist verboten | Rauchen verboten, Zutritt für Unbefugte verboten, mit Wasser löschen verboten |
+| **Gebotszeichen** | Blau, Symbol weiß | rund | Pflicht, eine Maßnahme zu ergreifen | Schutzbrille tragen, Gehörschutz tragen, vor Öffnen Netzstecker ziehen |
+| **Warnzeichen** | Gelb, Rand und Symbol schwarz | Dreieck | Hinweis auf Gefahr | Warnung vor elektrischer Spannung, Laserstrahl, Rutschgefahr, Stolpergefahr |
+| **Rettungszeichen** | Grün, Symbol weiß | Rechteck oder Quadrat | Fluchtweg, Erste Hilfe | Notausgang mit Pfeil, Erste Hilfe (weißes Kreuz), Sammelstelle, Defibrillator |
+| **Brandschutzzeichen** | Rot, Symbol weiß | Rechteck oder Quadrat | Standort von Brandschutzeinrichtungen | Feuerlöscher, Löschschlauch, Brandmelder, Brandmeldetelefon |
 
-**Merksatz:** Rot = Verbot/Feuer, Blau = Gebot, Gelb = Warnung, Grün = Rettung.
+**Merksatz:** Rot rund = Verbot, Rot eckig = Brandschutz, Blau = Gebot, Gelb = Warnung, Grün = Rettung.
 
-## 3. Verhalten im Brandfall / Fluchtwegplanung
+## 3. Verhalten im Brandfall
 
-- **Frühzeitig Alarm ziehen** (nicht zögern!)
-- **Feuerlöscher nach PASS-Verfahren bedienen**:
-  - **P**ull (Ziehpinne ziehen)
-  - **A**im (Auf die Basis der Flamme zielen)
-  - **S**queeze (Hebel drücken)
-  - **S**weep (Über die Flamme hin- und herschwenken)
-- **Fluchtweg nutzen** – nicht warten, nicht elevator nutzen
-- **Sammelplatz aufsuchen** – Kopf zählen, niemandem hinterherlaufen
-- **Tür schließen** hinter sich (Rauch- und Hitzeeintritt verlangsamen)
+1. **Ruhe bewahren und melden:** Druckknopfmelder betätigen, Notruf **112** (Wo? Was? Wie viele Betroffene? Welche Verletzungen? Warten auf Rückfragen).
+2. **Warnen und retten:** Kollegen warnen, gefährdete Personen in Sicherheit bringen, **Türen schließen**, **keine Fenster öffnen**, **keinen Aufzug** benutzen.
+3. **Löschen:** nur ohne Eigengefährdung, mit geeignetem Löschmittel (Serverraum: CO₂; nie Wasser auf Geräte unter Spannung).
+4. **Sammelstelle** aufsuchen, Vollzähligkeit prüfen. Vorgesetzte oder Sicherheitsbeauftragte informiert man **nachrangig**.
 
-**Prüfungsfrage-Beispiel:** „In welcher Reihenfolge gehen Sie vor, wenn Sie einen Brand entdecken?“ → Alarm → Feuerwehr rufen → Fluchtweg → Sammelplatz → Ersthelfer koordinieren.
+**Feuerlöscher bedienen (Sommer 2022, Aufg. 26):** zum Gerät laufen → aus der Halterung nehmen → Sicherungsstift ziehen → Schlauch auf das Feuer richten → Betätigungshebel drücken.
+**Löschregeln (DGUV):** in Windrichtung löschen, Flächenbrände von vorn, Tropf- und Fließbrände von oben nach unten, mehrere Löscher gleichzeitig, Rückzündung beachten.
 
 ## 4. Erste Hilfe bei Verbrennungen
 
-- **Kühlung:** Die betroffene Stelle mindestens 10–15 Minuten mit lauwarmem Wasser kühlen (nicht eiswasser! – kann Schock auslösen).
-- **Verbandsmaterial:** Nur keimfreie Verbandspäckchen verwenden. **Öl, Salbe, Mehl oder andere Hausmittel niemals auftragen** (typischer Falsch-Distraktor in Prüfungen!).
-- **Schockvorbeugung:** Betroffene beruhigen, Beine leicht hochlagern wenn kein Kopf-/Halsverletzungsverdacht besteht.
-- **Kleidung:** Beschädigte oder am Verbrennungsort klebende Kleidung nicht abreißen lassen.
-- **Schwere Verbrennungen (≥ 2. Grad, großflächig):** Sofort Arzt/Notruf, lebensrettende Sofortmaßnahmen priorisieren.
+- **Kühlen:** kleinflächige Verbrennungen sofort etwa 10 Minuten mit **handwarmem** Wasser kühlen – kein Eiswasser; großflächige Verbrennungen nicht kühlen (Unterkühlung).
+- **Verbinden:** nur **keimfreies** Verbandmaterial (Verbandpäckchen, Brandwundenverbandtuch), locker auflegen.
+- **Niemals:** Öl, Salbe, Mehl, Puder, Hausmittel auftragen, Brandblasen öffnen, eingebrannte Kleidung abreißen.
+- **Notruf** bei großflächigen oder tiefen Verbrennungen, Betroffene warm halten und betreuen.
+- Jede Erste-Hilfe-Leistung ins **Verbandbuch** eintragen.
 
-**Wichtiger Prüfungs-Hinweis:** „Was gehört NICHT bei Verbrennungen getan?“ → Öl, Salbe, Mehl, Fett, Zahnpasta etc. Nur kühlen und keimfreies Verbandmaterial.
+## 5. Pflichten und Akteure
 
-## 5. Unfallverhütungsvorschriften
+- **Verantwortlich** ist der **Arbeitgeber** bzw. die Vorgesetzten (ArbSchG). Er erstellt die **Gefährdungsbeurteilung** und **unterweist** – bei Einstellung, bei Veränderungen und **mindestens jährlich** (Jugendliche halbjährlich). Bloßer Aushang oder Intranet reichen nicht.
+- **Unfallverhütungsvorschriften** (DGUV Vorschriften) erlässt die **Berufsgenossenschaft**; sie müssen im Betrieb zugänglich sein.
+- **Arbeitsschutzausschuss:** Pflicht bei **mehr als 20** Beschäftigten (§ 11 ASiG).
+- **Fachkraft für Arbeitssicherheit** und **Betriebsarzt** **beraten** den Arbeitgeber (ASiG).
+- **Sicherheitsbeauftragter** (§ 22 SGB VII, bei mehr als 20 Beschäftigten): vom Unternehmer unter Beteiligung des Betriebsrats **bestellt**, ehrenamtlich; **unterstützt** den Arbeitgeber, achtet auf Schutzeinrichtungen und PSA, meldet Mängel – trägt aber **keine** Verantwortung und hat **kein** Weisungsrecht.
 
-- **DGUV Vorschriften** sind die konkreten Unfallverhütungsvorschriften der Berufsgenossenschaften
-- **Informationspflicht des Arbeitgebers:** Der Arbeitgeber muss die Beschäftigten über Sicherheits- und Gesundheitsrisiken unterweisen
-- **Sicherheitsunterweisung:** Muss bei Eintritt, bei Änderung der Arbeitsstelle/Arbeitsmittel und in regelmäßigen Abständen erfolgen
-- **Arbeitsschutzausschuss:** Pflicht ab 20 Beschäftigten (in kleineren Betrieben der Arbeitgeber als Beauftragter)
+## 6. Übungsaufgabe (im Prüfungsstil, selbst erstellt)
 
-## 6. Sicherheitsbeauftragter / Arbeitsschutzbeauftragter
-
-- Wird im Betrieb gewählt (Arbeitnehmerseite) bzw. bestellt (Arbeitgeberseite)
-- **Aufgaben:** Berät den Arbeitgeber in allen Fragen des Arbeitsschutzes
-- **Hinweis:** Der Sicherheitsbeauftragte ist **nicht** für Entscheidungen verantwortlich – die Linie (Vorgesetzte/Arbeitgeber) bleibt immer verantwortlich
-- **Meldung von Mängeln:** Der Beauftragte muss Gefahren erkennen und diesen melden
-
-## 7. Übungsaufgabe (im Prüfungsstil, selbst erstellt)
-
-> Sicherheitszeichen müssen korrekt zugeordnet werden. Nenne zu jedem Bild die Art
-> (Verbots-, Gebots-, Warnt-, Rettungs- oder Brandschutzzeichen), die Farbe und die
-> Bedeutung in einem Satz.
+> **Welche zwei** Maßnahmen ergreifen Sie sofort, wenn im Büro ein Papierkorb brennt?
+> 1. Fenster öffnen, damit der Rauch abzieht · 2. Notruf absetzen bzw. Brandmelder betätigen · 3. zuerst den Sicherheitsbeauftragten suchen · 4. gefährdete Personen warnen und in Sicherheit bringen · 5. Wasser auf den brennenden Drucker daneben schütten
 
 <details><summary>Lösung (aufklappen)</summary>
 
-Beispiel-Lösungen (Variante kann variieren):
-
-1. **Rotes rundes Zeichen mit diagonalem weißen Streifen** → Verbotsignal
-   - Bedeutung: „Es ist verboten, den Bereich zu betreten/ die Aktion durchzuführen“ (z. B. „Zutritt nur für Befugte“)
-
-2. **Blaues rundes Zeichen** → Gebotsignal
-   - Bedeutung: „Es ist vorgeschrieben, diese Maßnahme zu ergreifen“ (z. B. „Sicherheitshelm tragen“)
-
-3. **Gelbes eckiges (dreieckiges) Warntafel** → Warntsignal
-   - Bedeutung: „Auf Gefahr hinweisen“ (z. B. „Achtung, rutschige Fläche“)
-
-4. **Grünes rechteckiges Schild** → Rettungssignal
-   - Bedeutung: „Fluchtweg oder Rettungsstelle kennzeichnen“ (z. B. „Notaus drücken“)
-
-5. **Rotes quadratisches Zeichen** → Brandschutzsignal
-   - Bedeutung: „Feuerlöschgerät oder hydranten kennzeichnen“ (z. B. „Feuerlöscher“)
+**2 und 4.** Melden und Retten haben Vorrang. Fenster öffnen facht das Feuer an (vgl. Winter 2022, Aufg. 25; Winter 2024, Aufg. 27; Sommer 2026, Aufg. 20), der Sicherheitsbeauftragte ist nachrangig, Wasser auf Elektrogeräte ist lebensgefährlich.
 
 </details>
 
+## Lernblätter
+
+- [Arbeitsschutz & Arbeitssicherheit](../Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md) · [Brandschutz & Erste Hilfe](../Arbeitsschutz-Umwelt/brandschutz-erste-hilfe.md) · [Sicherheitszeichen](../Arbeitsschutz-Umwelt/sicherheitszeichen.md) · [Bildschirmarbeitsplatz & Ergonomie](../Arbeitsschutz-Umwelt/bildschirmarbeitsplatz-ergonomie.md) · [Arbeitsunfall & Unfallversicherung](../Sozialversicherung/arbeitsunfall-unfallversicherung.md)
+
 ## Selbstcheck – kannst du das?
 
-- [ ] Ich kann die 5 Haupttypen Sicherheitskennzeichen (Verbots-, Gebots-, Warnt-, Rettungs-, Brandschutzzeichen) zuordnen.
-- [ ] Ich kenne die Farben der Kennzeichen (Rot, Blau, Gelb, Grün).
-- [ ] Ich kann die Form jedes Zeichentyps benennen (rund, eckig, dreieckig).
-- [ ] Ich weiß, wie ich bei Verbrennungen vorzugehe (kühlen, keimfreies Verbandmaterial, kein Öl/Salbe).
-- [ ] Ich kenne die richtige Reihenfolge bei Brandentdeckung (Alarm → Flucht → Sammelplatz).
-- [ ] Ich weiß, ab wann ein Arbeitsschutzausschuss Pflicht ist (ab 20 Beschäftigten).
-- [ ] Ich weiß, dass der Sicherheitsbeauftragte berät, aber nicht entscheidet.
+- [ ] Ich kann die 5 Arten von Sicherheitszeichen (Verbots-, Gebots-, Warn-, Rettungs-, Brandschutzzeichen) nach Farbe und Form zuordnen.
+- [ ] Ich weiß, dass Feuerlöscher und Brandmelder Brandschutzzeichen (rot) sind, Erste Hilfe und Sammelstelle Rettungszeichen (grün).
+- [ ] Ich kenne die Reihenfolge im Brandfall (Melden → Retten → Löschen → Sammelstelle) und weiß, dass Fenster geschlossen bleiben.
+- [ ] Ich kann einen Feuerlöscher in der richtigen Reihenfolge bedienen.
+- [ ] Ich weiß, wie ich bei Verbrennungen vorgehe (handwarm kühlen, keimfrei abdecken, kein Öl/Salbe).
+- [ ] Ich weiß, ab wann Arbeitsschutzausschuss und Sicherheitsbeauftragte Pflicht sind (mehr als 20 Beschäftigte).
+- [ ] Ich weiß, dass der Sicherheitsbeauftragte unterstützt, aber nicht verantwortlich ist.
 
 ## Weiterführende Ressourcen
 
-- DGUV Grundsatz DGS 309-017: Sicherheit und Gesundheitsschutz beim Arbeiten
-- IHK-Prüfungsaufgaben AP2 zu Arbeitsrecht und Arbeitsschutz
-- BfR: Erste Hilfe bei Unfällen und Vergiftungen
+- ASR A1.3 „Sicherheits- und Gesundheitsschutzkennzeichnung“, ASR A2.2 „Maßnahmen gegen Brände“
+- DGUV Vorschrift 1 „Grundsätze der Prävention“, DGUV Information 204-022 „Erste Hilfe im Betrieb“
+- Echte Termine: [Sommer 2022](../fragen/Sommer-2022.md), [Winter 2022](../fragen/Winter-2022.md), [Sommer 2024](../fragen/Sommer-2024.md), [Sommer 2025](../fragen/Sommer-2025.md), [Sommer 2026](../fragen/Sommer-2026.md)

@@ -66,7 +66,7 @@ Grundwerte: **Solidarität** (Starke helfen Schwachen), **Subsidiarität** (Hilf
 4. Senkung der Steuer auf Zinserträge
 5. Erhöhung des Wohngeldes
 
-**Musterantwort:** **5.** Wohngeld unterstützt einkommensschwache Haushalte bei den Wohnkosten und dient dem sozialen Ausgleich. 1 und 3 sind Wirtschaftsförderung, 2 und 4 begünstigen vor allem Vermögende bzw. den Kapitalmarkt.
+**Musterantwort:** **5** (Sommer 2026, Aufg. 30). Wohngeld unterstützt einkommensschwache Haushalte bei den Wohnkosten und dient dem sozialen Ausgleich. 1 und 3 sind Wirtschaftsförderung, 2 und 4 begünstigen vor allem Vermögende bzw. den Kapitalmarkt.
 
 ## Falle
 
@@ -87,5 +87,6 @@ Grundwerte: **Solidarität** (Starke helfen Schwachen), **Subsidiarität** (Hilf
 - [Konjunktur & Wirtschaftspolitik](konjunktur-wirtschaftspolitik.md) – Fiskal- und Geldpolitik
 - [Unternehmensverbindungen & Kartellrecht](../Unternehmen/unternehmensverbindungen-kartellrecht.md) – Wettbewerbsschutz
 - [Marktformen & Preisbildung](marktformen-preisbildung.md) – Preisbildung am Markt
+- [Steuern & Steuerarten](steuern-steuerarten.md) – progressive Einkommensteuer als Umverteilung
 - [WiSo-Grundlagen (Lektion 11)](../analyse-der-exams/11_WiSo_Grundlagen.md)
 - Echte Aufgaben: [Winter 2025](../fragen/Winter-2025.md) (27), [Sommer 2026](../fragen/Sommer-2026.md) (25, 30)

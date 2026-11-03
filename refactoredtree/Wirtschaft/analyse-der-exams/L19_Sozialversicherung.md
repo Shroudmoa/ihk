@@ -23,7 +23,7 @@ Ein Azubi/Fachinformatiker muss verstehen, wie sein eigenes Gehalt „nach unten
 | **Arbeitslosenversicherung (AV)** | Bundesagentur für Arbeit | Arbeitslosigkeit | ALG I, Weiterbildung |
 | **Unfallversicherung (UV)** | Berufsgenossenschaften | Arbeitsunfall/Wegeunfall | Heilbehandlung, Renten bei Unfall |
 
-**Wichtig:** Alle 5 sind *gesetzlich* und *Pflicht* für abhängig Beschäftigte.
+**Wichtig:** Alle 5 sind *gesetzlich* und *Pflicht* für abhängig Beschäftigte (KV/PV nur bis zur Versicherungspflichtgrenze).
 
 ## 3. Was gehört NICHT dazu
 
@@ -34,40 +34,43 @@ Folgende Versicherungen sind **privat/freiwillig** und zählen **nicht** zu den 
 - Rechtsschutzversicherung
 - Berufsunfähigkeitsversicherung (privat)
 
-## 4. Beitragssätze (aktuelle Rahmenwerte)
+## 4. Beitragssätze (Stand 2026)
 
 | Zweig | Gesamtsatz | Arbeitnehmer (AN) | Arbeitgeber (AG) |
 |-------|-----------|-------------------|------------------|
-| KV | ~14,6 % | ~7,3 % | ~7,3 % |
+| KV | 14,6 % + Zusatzbeitrag (Ø 2,9 %) | 7,3 % + ½ Zusatzbeitrag (Ø 8,75 %) | 7,3 % + ½ Zusatzbeitrag |
 | RV | 18,6 % | 9,3 % | 9,3 % |
-| AV | ~2,6 % | ~1,3 % | ~1,3 % |
-| PV | ~3,4 % | ~1,7 % (+ Zuschlag Kinderlose) | ~1,7 % |
-| UV | ~1,1 % (branchenabh.) | 0 % | ~1,1 % (trägt AG allein) |
+| AV | 2,6 % | 1,3 % | 1,3 % |
+| PV | 3,6 % | 1,8 % (kinderlos ab 23: **2,4 %**) | 1,8 % |
+| UV | je nach Gefahrklasse und Lohnsumme | **0 %** | trägt der AG **allein** |
 
-**Paritätisch** = AN und AG teilen sich den Beitrag je zur Hälfte (gilt für KV, RV, AV, PV). Bei der UV zahlt meist nur der AG.
+**Paritätisch** = AN und AG teilen sich den Beitrag je zur Hälfte (KV inkl. Zusatzbeitrag, RV, AV, PV). Die UV zahlt **immer** nur der AG.
 
-**Zuschlag Kinderlose (PV):** Ab 23 Jahren ohne Kinder zahlt der AN 0,35 % zusätzlich (allein).
+**Zuschlag Kinderlose (PV):** Ab 23 Jahren ohne Kinder zahlt der AN **0,6 %** zusätzlich (allein). Ältere Unterlagen mit 3,4 % bzw. 0,35 % sind veraltet.
 
-## 5. Beitragsbemessungsgrenze
+## 5. Beitragsbemessungsgrenze und Versicherungspflichtgrenze
 
-- Die **Beitragsbemessungsgrenze (BBG)** ist der Höchstbetrag des Bruttoentgelts, auf den Beiträge berechnet werden.
-- Wer mehr verdient, zahlt **nicht** mehr SV-Beitrag (nur Steuern greifen weiter).
-- Beispiel KV/PV (West, 2024): BBG ~4.837 €/Monat. RV/AV: ~7.450 €/Monat.
-- Darunter liegt ggf. die **Versicherungspflichtgrenze** (für KV ~66.600 €/Jahr = freiwillig ab darüber).
+- Die **Beitragsbemessungsgrenze (BBG)** ist der Höchstbetrag des Bruttoentgelts, auf den Beiträge berechnet werden. Wer mehr verdient, zahlt **nicht** mehr Beitrag, bleibt aber versichert.
+- **2026:** BBG KV/PV **5.812,50 €/Monat**, BBG RV/AV **8.450 €/Monat** (bundeseinheitlich).
+- Die **Versicherungspflichtgrenze** (JAEG) liegt **darüber**: **77.400 €/Jahr** (6.450 €/Monat). Erst wer sie überschreitet, darf in die private KV wechseln – er muss aber nicht.
 
 ## 6. Übungsaufgabe (im Prüfungsstil, selbst erstellt)
 
-Ein Arbeitnehmer hat ein **Bruttogehalt von 3.000 €**. Berechne den **Arbeitnehmer-Anteil** für Krankenversicherung und Rentenversicherung (mit paritätischen Sätzen).
+Ein Arbeitnehmer (28 Jahre, ein Kind) hat ein **Bruttogehalt von 3.000 €**, seine Krankenkasse erhebt 2,9 % Zusatzbeitrag. Berechne den **Arbeitnehmer-Anteil** für Kranken- und Rentenversicherung.
 
 <details><summary>Lösung (aufklappen)</summary>
 
-- KV AN-Anteil = 7,3 % von 3.000 € = **219,00 €**
-- RV AN-Anteil = 9,3 % von 3.000 € = **279,00 €**
-- Gesamt AN-Anteil KV + RV = **498,00 €**
+- KV: (14,6 % + 2,9 %) / 2 = 8,75 % → 3.000 € × 8,75 % = **262,50 €**
+- RV: 3.000 € × 9,3 % = **279,00 €**
+- Gesamt AN-Anteil KV + RV = **541,50 €**
 
-Hinweis: Da 3.000 € unter der BBG liegen, wird der volle Betrag bemessen. Der AG zahlt jeweils denselben Betrag (Parität).
+Hinweis: 3.000 € liegen unter beiden BBG, also wird der volle Betrag bemessen. Der AG zahlt jeweils denselben Betrag. Echte Varianten: Sommer 2026, Aufg. 9 (4.200 €, 2,4 % → 357,00 €) und Winter 2025, Aufg. 25 (3.500 €, 1,8 % → 287,00 €).
 
 </details>
+
+## Lernblätter
+
+- [Sozialversicherung – die fünf Zweige](../Sozialversicherung/sozialversicherung.md) · [GKV](../Sozialversicherung/gkv.md) · [Pflegeversicherung](../Sozialversicherung/pflegeversicherung.md) · [Rentenversicherung & Altersvorsorge](../Sozialversicherung/altersvorsorge-rentenversicherung.md) · [Arbeitslosenversicherung](../Sozialversicherung/arbeitslosenversicherung-grundsicherung.md) · [Unfallversicherung](../Sozialversicherung/arbeitsunfall-unfallversicherung.md) · [Lohn & Gehaltsabrechnung](../Sozialversicherung/lohn-steuern-gehaltsabrechnung.md)
 
 ## Selbstcheck – kannst du das?
 

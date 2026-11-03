@@ -195,7 +195,7 @@
 
 - Piktogramm 1 zeigt das Beobachten der Brandstelle.
 - Piktogramm 2 zeigt das gleichzeitige Benutzen mehrerer Feuerlöscher.
-- Piktogramm 3 zeigt das Löschen von Tropf- und Fließbränden von unten.
+- Piktogramm 3 zeigt das Löschen von Tropf- und Fließbränden – richtig ist **von oben nach unten** (DGUV).
 - Piktogramm 4 zeigt das Löschen von unten nach hinten.
 - Piktogramm 5 zeigt das Löschen in Windrichtung – **das ist richtig** (Wind im Rücken, DGUV-Regel „Feuer in Windrichtung angreifen“). *(Korrigiert: der ursprüngliche Schlüssel nannte das fälschlich unzutreffend.)*
 

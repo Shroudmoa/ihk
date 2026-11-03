@@ -6,14 +6,14 @@
 
 ## 1. Warum das wichtig ist
 
-Umweltschutz ist fester Bestandteil der sozialen Marktwirtschaft. In der AP2-Prüfung werden immer wieder Fragen zu Umweltzeichen, Prinzipien und betrieblichen Maßnahmen gestellt. Viele dieser Fragen erscheinen year-for-year identisch – daher lohnt sich hier schnelles Punktesammeln.
+Umweltschutz ist fester Bestandteil der sozialen Marktwirtschaft. In der AP2-Prüfung werden immer wieder Fragen zu Umweltzeichen, Prinzipien und betrieblichen Maßnahmen gestellt. Viele dieser Fragen erscheinen Jahr für Jahr fast identisch – daher lohnt sich hier schnelles Punktesammeln.
 
 ## 2. Umweltzeichen und -kennzeichnungen
 
-### Blauer Engel (in JEDEM Jahrgang geprüft: 2021W, 2023S, 2024W, 2025S, 2025W, 2026S)
+### Blauer Engel (in 5 von 10 Terminen geprüft: 2021W, 2023S, 2024W, 2025W, 2026S)
 
 - **Bedeutung:** „Ist aus schadstoffarmen Rohstoffen hergestellt und wird umweltschonend produziert“
-- **Wichtig zu wissen:** Es ist **kein** staatliches Subventionszeichen und garantiert **keinen** Bio-Anbau
+- **Wichtig zu wissen:** Es ist ein freiwilliges Umweltzeichen der Bundesregierung (Umweltbundesamt, RAL) – **kein** Subventionszeichen, **kein** Qualitäts-, Haltbarkeits- oder Sicherheitssiegel und **kein** Bio-Siegel
 - **Prüfungsfrage-Beispiel (original):** „Was bedeutet das Umweltzeichen „Blauer Engel“?“ → Antwort wie oben
 
 ### Verursacherprinzip
@@ -24,7 +24,8 @@ Umweltschutz ist fester Bestandteil der sozialen Marktwirtschaft. In der AP2-Pr�
 
 ### Weitere Zeichen (optional, je nach Jahrgang)
 
-- **EU-Ecolabel:** Umweltkennzeichnung der EU (ähnlich wie Blauer Engel, aber freiwilliger)
+- **EU-Ecolabel:** Umweltzeichen der EU (wie der Blaue Engel freiwillig)
+- **Recycling-Symbol** (drei Pfeile) = Recyclingkennzeichnung; **CE** = Konformitätszeichen; **Fairtrade** = fairer Handel (Sommer 2025, Aufg. 30)
 - **TÜV/GS-Zeichen:** Geprüfte Sicherheit (weniger umweltbezogen, mehr Produktsicherheit)
 
 ## 3. Gesetzliche Grundlagen und betriebliche Maßnahmen
@@ -34,28 +35,30 @@ Umweltschutz ist fester Bestandteil der sozialen Marktwirtschaft. In der AP2-Pr�
 - Wer Umweltschäden verursacht, muss die Kosten tragen
 - Grundlage für Betriebshaftung und Schadensersatz
 
-### Recycling und Kreislaufwirtschaftsgesetz (2022S)
+### Recycling und Kreislaufwirtschaftsgesetz (2022S, 2025S)
 
 - Betriebliche Pflicht zur trennungsgerechten Abfallentsorgung
-- Ziel: Wiederverwendung von Rohstoffen, Vermeidung von Deponie
+- Abfallhierarchie (§ 6 KrWG): **Vermeiden** > Wiederverwenden > Recyceln > energetisch verwerten > beseitigen
+- Elektroschrott gehört nicht in den Restmüll (ElektroG, durchgestrichene Mülltonne), Datenträger vorher löschen
 
 ### Verpackungsvermeidung (2021W, 2023S)
 
 - Reduzierung von Verpackungsmaterial
-- Nutzung von Wiederverpackungssystemen (z. z. B. Pfand)
+- Mehrweg statt Einweg (z. B. Pfand), Kleinpackungen vermeiden; Papier- oder Recyclingplastikverpackungen sind **nicht automatisch** umweltfreundlich (Sommer 2023, Aufg. 24)
 
-### Bundesimmissionsschutzgesetz (BImSchG) (2024W, 2025S, 2025W, 2026S)
+### Bundesimmissionsschutzgesetz (BImSchG) (2024W, 2025W, 2026S)
 
-- Regulierung von Emissionen (Lärm, Luftschadstoffe)
-- Genehmigungspflicht für bestimmte Anlagen (Heizungen, Klebeanlagen etc.)
-- Zum Thema: „Unter welchen Voraussetzungen darf eine Anlage betrieben werden?“
+- **Emissionen** = von einer Quelle ausgehende Luftverunreinigungen (Abgase, Staub), **Schall/Lärm**, Erschütterungen, Licht, Wärme, Strahlen (**Elektrosmog**) – vgl. Winter 2024, Aufg. 24; Winter 2025, Aufg. 29; Sommer 2026, Aufg. 21
+- **Immissionen** = Einwirkung beim Betroffenen
+- Genehmigungspflicht für bestimmte Anlagen; Vermeidung geht vor Verringerung, höhere Schornsteine verteilen Emissionen nur
 
-### Nachhaltige Maßnahmen im Betrieb (2023W, 2024S)
+### Nachhaltige Maßnahmen im Betrieb (2021W, 2023W, 2024S, 2025S)
 
 - **E-Mobilität:** Ladestationen für E-Firmenfahrzeuge, Bereitstellung von Ladesäulen
 - **LED-Beleuchtung:** Energieeinsparung gegenüber herkömmlichen Glühlampen
 - **Recyclingpapier:** Verwendung von Papier mit Recyclinganteil („Blauer Engel“ auch hier möglich)
 - **Energieaudit:** Ermittlung des Energieverbrauchs und Potenziale zur Reduktion
+- **Nicht nachhaltig:** Flugreisen statt Videokonferenz, Umstellung auf Diesel, Einwegplastik, Hochglanzpapier, billigster Einkauf ohne Blick auf die Herkunft
 
 ## 4. Übungsaufgabe (im Prüfungsstil, selbst erstellt)
 
@@ -63,7 +66,7 @@ Umweltschutz ist fester Bestandteil der sozialen Marktwirtschaft. In der AP2-Pr�
 
 <details><summary>Lösung (aufklappen)</summary>
 
-**Antwort:** Das Umweltzeichen „Blauer Engel“ kennzeichnet Produkte, die unter ökologischen Aspekten besonders vorteilhaft sind. Es besagt, dass das Produkt „aus schadstoffarmen Rohstoffen hergestellt und unter umweltschonenden Bedingungen produziert“ wurde. Es ist **kein** staatliches Subventionszeichen und garantiert **keinen** Bio-Anbau.
+**Antwort:** Das Umweltzeichen „Blauer Engel“ kennzeichnet Produkte, die unter ökologischen Aspekten besonders vorteilhaft sind. Es besagt, dass das Produkt „aus schadstoffarmen Rohstoffen hergestellt und unter umweltschonenden Bedingungen produziert“ wurde (bei Recyclingpapier: spart Rohstoffe). Es bescheinigt **keine** Haltbarkeit oder Sicherheit, ist **kein** Umweltpreis und **kein** Bio-Siegel.
 
 </details>
 
@@ -79,11 +82,15 @@ der Verursacher in Anspruch genommen werden.
 
 </details>
 
+## Lernblätter
+
+- [Umweltschutz & Nachhaltigkeit im Betrieb](../Arbeitsschutz-Umwelt/umwelt-nachhaltigkeit.md) · [Unternehmensziele & Zielbeziehungen](../Unternehmen/unternehmensziele-zielkonflikte.md) · [Datenträgerentsorgung (IT)](../../IT/FiSi-Administrator/Sicherheit/datentraeger-entsorgung.md) · [Energieeffizienz & Stromkosten (IT)](../../IT/FiSi-Administrator/Server/energieeffizienz-stromkosten.md)
+
 ## Selbstcheck – kannst du das?
 
 - [ ] Ich erkläre die Bedeutung des „Blauen Engel“-Umweltzeichens (und dass es KEINE Bio-Zertifizierung ist).
 - [ ] Ich benenne das Verursacherprinzip und dessen Grundidee.
-- [ ] Ich weiß, dass der Blaue Engel in **jedem** Jahrgang (2021W, 2023S, 2024W, 2025S, 2025W, 2026S) geprüft wurde.
+- [ ] Ich weiß, dass der Blaue Engel in der Hälfte der Termine (2021W, 2023S, 2024W, 2025W, 2026S) geprüft wurde.
 - [ ] Ich kann betriebliche Maßnahmen zum Umweltschutz nennen (E-Mobilität, LED, Recyclingpapier, Abfalltrennung).
 - [ ] Ich unterscheide Blauer Engel von EU-Ecolabel und GS-Zeichen.
 

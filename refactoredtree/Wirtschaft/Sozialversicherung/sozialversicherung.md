@@ -41,6 +41,9 @@ Arbeitgeber zahlen zusätzlich allein: **Umlagen U1** (Entgeltfortzahlung Kleinb
 - Brutto 10.000 €, RV: nur 8.450 € beitragspflichtig → 8.450 × 9,3 % = **785,85 €**.
 - Brutto 3.500 €, KV mit 1,8 % Zusatzbeitrag: (14,6 + 1,8) / 2 = 8,2 % → **287,00 €** (Winter 2025).
 - **AN-Abzüge gesamt** bei 3.500 €, Kasse mit 2,9 % Zusatzbeitrag, mit Kind: 8,75 + 1,8 + 9,3 + 1,3 = **21,15 % = 740,25 €**; kinderlos (PV 2,4 %): 21,75 % = 761,25 €.
+- **Nordlicht-Azubi** (17 Jahre, 1.100 € Vergütung, Kasse 2,9 %): KV 96,25 € + PV 19,80 € (unter 23: kein Zuschlag) + RV 102,30 € + AV 14,30 € = **232,65 €** (21,15 %); Lohnsteuer 0 € (unter dem Grundfreibetrag) → netto **867,35 €**.
+
+**Geringverdienergrenze:** Bei Azubis mit einer Vergütung bis **325 €** im Monat zahlt der **Arbeitgeber** den Gesamtbeitrag allein (§ 20 Abs. 3 SGB IV).
 
 ### Geringfügige Beschäftigung (Minijob)
 
@@ -86,5 +89,6 @@ Arbeitgeber zahlt Pauschalen (u. a. 13 % KV, 15 % RV, 2 % Pauschsteuer); der Min
 - [Arbeitslosenversicherung & Grundsicherung](arbeitslosenversicherung-grundsicherung.md) – ALG I, Grundsicherungsgeld
 - [Arbeitsunfall & Unfallversicherung](arbeitsunfall-unfallversicherung.md) – Berufsgenossenschaft
 - [Lohn, Steuern & Gehaltsabrechnung](lohn-steuern-gehaltsabrechnung.md) – Brutto-Netto
-- [Lektion 19 – Sozialversicherung](../analyse-der-exams/L19_Sozialversicherung.md) (Achtung: dort teils ältere Sätze)
-- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (15), [Winter 2022](../fragen/Winter-2022.md) (16), [Sommer 2023](../fragen/Sommer-2023.md) (6–8), [Sommer 2024](../fragen/Sommer-2024.md) (8)
+- [Lektion 19 – Sozialversicherung](../analyse-der-exams/L19_Sozialversicherung.md)
+- [Soziale Marktwirtschaft & Sozialstaat](../Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md) – Versicherungs-, Versorgungs-, Fürsorgeprinzip
+- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (15), [Winter 2022](../fragen/Winter-2022.md) (16), [Sommer 2023](../fragen/Sommer-2023.md) (6–8), [Sommer 2024](../fragen/Sommer-2024.md) (8), [Winter 2025](../fragen/Winter-2025.md) (25), [Sommer 2026](../fragen/Sommer-2026.md) (8–9)

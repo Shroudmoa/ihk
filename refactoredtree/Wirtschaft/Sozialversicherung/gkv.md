@@ -22,12 +22,12 @@
 
 ### Rechenweg
 
-**Beispiel 1 (Sommer 2026):** Brutto 4.200 €, Kasse mit 2,4 % Zusatzbeitrag.
+**Beispiel 1 (Sommer 2026, Aufg. 9):** Brutto 4.200 €, Kasse mit 2,4 % Zusatzbeitrag.
 1. Gesamt: 14,6 % + 2,4 % = **17,0 %**
 2. AN-Anteil: 17,0 % / 2 = **8,5 %**
 3. 4.200 € × 8,5 % = **357,00 €**
 
-**Beispiel 2 (Winter 2025):** Brutto 3.500 €, Zusatzbeitrag 1,8 % → 16,4 % / 2 = 8,2 % → **287,00 €**.
+**Beispiel 2 (Winter 2025, Aufg. 25):** Brutto 3.500 €, Zusatzbeitrag 1,8 % → 16,4 % / 2 = 8,2 % → **287,00 €**.
 
 **Beispiel 3 (über der BBG):** Brutto 7.000 €, Ø-Zusatzbeitrag 2026 → 5.812,50 € × 8,75 % = **508,59 €**.
 
@@ -91,4 +91,4 @@ Wer über die JAEG kommt, **muss nicht** in die PKV wechseln. **Krankenkassenwah
 - [Arbeitszeit, Pausen & Urlaub](../Arbeitsrecht/arbeitszeit-pausen-urlaub.md) – Entgeltfortzahlung
 - [Mutterschutz & Elternzeit](../Arbeitsrecht/mutterschutz-elternzeit.md) – Mutterschaftsgeld
 - [Lektion 19 – Sozialversicherung](../analyse-der-exams/L19_Sozialversicherung.md)
-- Echte Aufgaben: [Winter 2025](../fragen/Winter-2025.md) (25), [Sommer 2026](../fragen/Sommer-2026.md) (KV-Beitrag), [Sommer 2023](../fragen/Sommer-2023.md) (8)
+- Echte Aufgaben: [Winter 2025](../fragen/Winter-2025.md) (25), [Sommer 2026](../fragen/Sommer-2026.md) (9), [Sommer 2023](../fragen/Sommer-2023.md) (8)

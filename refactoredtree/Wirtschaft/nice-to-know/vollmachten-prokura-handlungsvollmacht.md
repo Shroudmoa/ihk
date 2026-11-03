@@ -27,9 +27,15 @@
 
 ## Prüfungsfrage
 
-**Frage:** Die Prokuristin einer GmbH verkauft ohne besondere Befugnis ein Betriebsgrundstück und unterschreibt anschließend die Jahresbilanz. Sind die Handlungen von ihrer Prokura gedeckt?
+**Frage (Multiple Choice, 2 richtige):** Die Prokuristin der Nordlicht Systemhaus GmbH hat eine Einzelprokura ohne besondere Befugnisse. Welche **zwei** Geschäfte darf sie **nicht** allein vornehmen?
 
-**Musterantwort:** Nein. Die Veräußerung von Grundstücken erfordert eine besondere, im Handelsregister eingetragene Befugnis (§ 49 Abs. 2 HGB). Die Bilanz müssen die Geschäftsführer unterschreiben – das ist ein höchstpersönliches Geschäft des Kaufmanns, das kein Prokurist übernehmen kann.
+1. einen Rahmenvertrag über 200 Server mit einem Großhändler abschließen
+2. ein Betriebsgrundstück verkaufen
+3. einen neuen Mitarbeiter einstellen
+4. die Jahresbilanz unterschreiben
+5. einen Kredit bei der Hausbank aufnehmen
+
+**Musterantwort:** **2 und 4.** Verträge, Einstellungen und Kredite deckt die Prokura (auch ungewöhnliche Geschäfte). Die Veräußerung von Grundstücken erfordert eine besondere, im Handelsregister eingetragene Befugnis (§ 49 Abs. 2 HGB). Die Bilanz müssen die Geschäftsführer unterschreiben – das ist ein höchstpersönliches Geschäft des Kaufmanns, das kein Prokurist übernehmen kann.
 
 ## Falle
 

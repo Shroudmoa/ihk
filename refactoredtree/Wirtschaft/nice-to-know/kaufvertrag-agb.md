@@ -28,9 +28,15 @@
 
 ## Prüfungsfrage
 
-**Frage:** Ein Unternehmen kauft bei einem Händler zehn Notebooks; drei haben nach vier Wochen defekte Displays. Welche Rechte hat das Unternehmen zuerst?
+**Frage (Multiple Choice, 2 richtige):** Nordlicht kauft bei einem Händler zehn Notebooks; drei haben nach vier Wochen defekte Displays. Welche **zwei** Aussagen treffen zu?
 
-**Musterantwort:** Zunächst **Nacherfüllung** – nach Wahl des Käufers Reparatur oder Lieferung mangelfreier Geräte (§ 439 BGB). Erst wenn die Nacherfüllung fehlschlägt oder verweigert wird, kann es zurücktreten, den Preis mindern oder Schadensersatz verlangen. Da beide Seiten Kaufleute sind (Handelskauf), muss der Mangel **unverzüglich gerügt** werden (§ 377 HGB).
+1. Nordlicht kann sofort vom Vertrag zurücktreten, ohne eine Frist zu setzen.
+2. Nordlicht verlangt zuerst Nacherfüllung: Reparatur oder Lieferung mangelfreier Geräte.
+3. Die gesetzliche Gewährleistung gilt nur, wenn der Händler eine Garantie gegeben hat.
+4. Als Kaufmann muss Nordlicht den Mangel unverzüglich rügen (§ 377 HGB).
+5. Die Gewährleistungsfrist beträgt sechs Monate.
+
+**Musterantwort:** **2 und 4.** Zunächst **Nacherfüllung** – nach Wahl des Käufers Reparatur oder Lieferung mangelfreier Geräte (§ 439 BGB). Erst wenn die Nacherfüllung fehlschlägt oder verweigert wird, kann es zurücktreten, den Preis mindern oder Schadensersatz verlangen. Da beide Seiten Kaufleute sind (Handelskauf), muss der Mangel **unverzüglich gerügt** werden (§ 377 HGB). Die Frist beträgt 2 Jahre (5 falsch); Gewährleistung gilt kraft Gesetzes, die Garantie ist freiwillig zusätzlich (3 falsch).
 
 ## Falle
 

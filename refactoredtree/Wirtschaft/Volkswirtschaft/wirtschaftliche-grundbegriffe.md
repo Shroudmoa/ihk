@@ -103,4 +103,6 @@ Kollektivbedürfnisse werden meist vom Staat über Steuern befriedigt. Die Grenz
 - [Marktformen & Preisbildung](marktformen-preisbildung.md) – Angebot, Nachfrage, Gleichgewichtspreis
 - [Wirtschaftssektoren & Arbeitsteilung](wirtschaftssektoren-arbeitsteilung.md) – wer welche Güter produziert
 - [Soziale Marktwirtschaft & Sozialstaat](soziale-marktwirtschaft-sozialstaat.md) – Staat und Kollektivbedürfnisse
+- [Lerneinheit: Bedürfnisse, Güter, Markt & Preis](../nice-to-know/LE.md) – ausführliche Übung
 - [Lektion 26 – Sektoren, Konjunktur, Marktformen](../analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md)
+- Prüfungsbezug: in den zehn Terminen 2021–2026 nicht direkt gefragt; Grundlage für Marktformen und Preisbildung (Winter 2024, Aufg. 16–17)

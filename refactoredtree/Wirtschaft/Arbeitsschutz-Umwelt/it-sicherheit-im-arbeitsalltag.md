@@ -93,7 +93,8 @@ Eine Kontrollsumme schützt **nicht** Vertraulichkeit, Verfügbarkeit, Lesbarkei
 
 - [Urheberrecht & Compliance](../Recht/urheberrecht-compliance.md) – Regeln im Betrieb
 - [Betriebsrat & JAV](../Mitbestimmung/betriebsrat-jav.md) – Mitbestimmung bei Überwachungstechnik
-- [Arbeitsschutz & Arbeitssicherheit](arbeitsschutz-arbeitssicherheit.md) – Bildschirmarbeit
+- [Bildschirmarbeitsplatz & Ergonomie](bildschirmarbeitsplatz-ergonomie.md) – Bildschirmarbeit, Homeoffice
+- [Datenträgerentsorgung (IT)](../../IT/FiSi-Administrator/Sicherheit/datentraeger-entsorgung.md) – Daten vor der Entsorgung löschen
 - [Schutzziele (IT)](../../IT/FiSi-Administrator/Sicherheit/schutzziele.md)
 - [DSGVO & TOM (IT)](../../IT/Management/DSGVO/dsgvo-tom.md)
 - [MFA & Authentifizierung (IT)](../../IT/FiSi-Administrator/Server/authentifizierung-autoritisierung-mfa.md)

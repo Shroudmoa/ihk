@@ -71,7 +71,7 @@
 
 ## Bei Schwangerschaft im Ausbildungsverhältnis gilt:
 
-- Für werdende Mütter gilt ein besonderer Kündigungsschutz ab dem Zeitpunkt der Mitteilung an den Arbeitgeber.
+- Für werdende Mütter gilt ein besonderer Kündigungsschutz **ab Beginn der Schwangerschaft**, wenn der Arbeitgeber davon weiß oder es innerhalb von **2 Wochen** nach Zugang der Kündigung erfährt (§ 17 MuSchG). *(Präzisiert: der ursprüngliche Schlüssel sagte „ab Mitteilung“.)*
 - Das Ausbildungsverhältnis endet nicht durch die Bekanntgabe des Geburtstermins oder die Geburt selbst.
 - Während der Schwangerschaft wird die Vergütung weitergezahlt; während der **Schutzfristen** erhält die Auszubildende **Mutterschaftsgeld** der Krankenkasse plus **Arbeitgeberzuschuss** – zusammen in Höhe des bisherigen Nettos. *(Präzisiert.)*
 - Die werdende Mutter muss kein Elterngeld als Lohnersatzleistung beantragen, um Ansprüche zu sichern.

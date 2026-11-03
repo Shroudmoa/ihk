@@ -23,11 +23,11 @@
 
 **Unfall** = zeitlich begrenztes, **von außen** auf den Körper einwirkendes Ereignis, das zu einem Gesundheitsschaden führt.
 
-### Ablauf nach einem Arbeitsunfall (Sommer 2026)
+### Ablauf nach einem Arbeitsunfall (Sommer 2026, Aufg. 6–7)
 
 1. **Erste Hilfe** durch Kollegen/Ersthelfer, Eintrag ins **Verbandbuch** (Aufbewahrung 5 Jahre).
-2. Bei Arbeitsunfähigkeit oder Behandlungsbedarf: **Durchgangsarzt (D-Arzt)** – ein von der BG zugelassener Unfallchirurg.
-3. **Unfallanzeige** des Unternehmers an die **Berufsgenossenschaft**: Pflicht, wenn Arbeitsunfähigkeit **mehr als 3 Kalendertage** oder Tod – **binnen 3 Tagen** nach Kenntnis (§ 193 SGB VII); Kopie an den Betriebsrat, Unterschrift von Betriebsrat und Fachkraft für Arbeitssicherheit; tödliche Unfälle und Massenunfälle sofort.
+2. Bei Arbeitsunfähigkeit oder Behandlungsbedarf: **Durchgangsarzt (D-Arzt)** – ein von der BG zugelassener Unfallchirurg/Orthopäde; die Behandlung rechnet er direkt mit der BG ab.
+3. **Unfallanzeige** des Unternehmers an die **Berufsgenossenschaft**: Pflicht, wenn Arbeitsunfähigkeit **mehr als 3 Kalendertage** oder Tod – **binnen 3 Tagen** nach Kenntnis (§ 193 SGB VII); die Anzeige ist vom **Betriebsrat mitzuunterzeichnen**, Fachkraft für Arbeitssicherheit und Betriebsarzt werden informiert; tödliche Unfälle und Massenunfälle sofort.
 4. **Heilbehandlung/Reha** (ambulant oder stationär) – Kosten trägt die BG **vollständig**.
 5. **Wiedereingliederung**, ggf. stufenweise, Leistungen zur Teilhabe (Umschulung).
 
@@ -65,7 +65,9 @@
 4. Ein Mitarbeiter erkrankt an einer Magenschleimhautentzündung.
 5. Eine Mitarbeiterin betreut ihr krankes Kind.
 
-**Musterantwort:** **1 und 3** (Arbeits- und Wegeunfall). Freizeitunfälle (2) sind nicht versichert; 4 und 5 sind keine Unfälle.
+**Musterantwort:** **1 und 3** (Arbeits- und Wegeunfall). Freizeitunfälle (2) sind nicht versichert; 4 und 5 sind keine Unfälle (vgl. Sommer 2024, Aufg. 11).
+
+**Nordlicht-Beispiel:** Du rutschst am ersten Tag auf dem direkten Heimweg mit dem Fahrrad aus (Station 2) – ein **Wegeunfall**. Du gehst zum D-Arzt, Nordlicht meldet den Unfall nur dann an die BG, wenn du mehr als drei Tage arbeitsunfähig bist; die Behandlung zahlt in jedem Fall die BG, nicht deine Krankenkasse.
 
 ## Falle
 
@@ -81,9 +83,10 @@
 
 ## Verwandt
 
-- [Arbeitsschutz & Arbeitssicherheit](../Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md) – Unterweisung, Sicherheitsbeauftragter, Erste Hilfe
+- [Arbeitsschutz & Arbeitssicherheit](../Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md) – Unterweisung, Sicherheitsbeauftragter
+- [Brandschutz & Erste Hilfe](../Arbeitsschutz-Umwelt/brandschutz-erste-hilfe.md) – Ersthelfer, Verbandbuch, Rettungskette
 - [Sozialversicherung](sozialversicherung.md) – fünf Zweige
 - [Gericht](../Recht/gericht.md) – Sozialgericht
 - [Arbeitszeit, Pausen & Urlaub](../Arbeitsrecht/arbeitszeit-pausen-urlaub.md) – Entgeltfortzahlung
 - [Lektion 24 – Arbeitsschutz, Brandschutz, Erste Hilfe](../analyse-der-exams/L24_Arbeitsschutz_Brandschutz_ErsteHilfe.md)
-- Echte Aufgaben: [Winter 2022](../fragen/Winter-2022.md) (18, 21–22), [Winter 2023](../fragen/Winter-2023.md) (28), [Sommer 2024](../fragen/Sommer-2024.md) (11–12), [Sommer 2026](../fragen/Sommer-2026.md) (Ablauf, Reha-Kosten)
+- Echte Aufgaben: [Winter 2022](../fragen/Winter-2022.md) (18, 21–22), [Winter 2023](../fragen/Winter-2023.md) (28), [Sommer 2024](../fragen/Sommer-2024.md) (11–12), [Sommer 2026](../fragen/Sommer-2026.md) (6–8)

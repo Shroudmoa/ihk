@@ -67,7 +67,17 @@ a) uneinheitliche Führung, aber kurze Dienstwege
 b) hohe Anforderungen an Teamfähigkeit und Kommunikationsbereitschaft
 c) Entlastung der Instanzen durch Spezialkenntnisse
 
-**Musterantwort:** a) **1**, b) **2**, c) **3**.
+**Musterantwort:** a) **1**, b) **2**, c) **3** (Winter 2021, Aufg. 13).
+
+**Frage (Multiple Choice, 2 richtige):** Welche **zwei** Aussagen zum Stab-Linien-System treffen zu?
+
+1. Die Rechtsabteilung als Stabsstelle erteilt der IT-Abteilung verbindliche Weisungen.
+2. Stabsstellen beraten und entlasten die Instanzen, ohne selbst Weisungen zu erteilen.
+3. Stabsstellen gibt es nur in der obersten Leitungsebene.
+4. Die Einheit der Leitung bleibt erhalten – jede Stelle hat weiterhin genau einen Vorgesetzten.
+5. Die IT-Abteilung ist immer eine Stabsstelle.
+
+**Musterantwort:** **2 und 4.** Stäbe haben keine Weisungsbefugnis (1 falsch), es gibt sie auf allen Leitungsebenen (3 falsch), und die IT ist in der Regel eine Linienabteilung (5 falsch). **Nordlicht:** Die Datenschutzbeauftragte berät die Geschäftsführung als Stab; sie kann der Technik nichts anordnen.
 
 ## Falle
 
@@ -76,6 +86,8 @@ c) Entlastung der Instanzen durch Spezialkenntnisse
 - Gliederung nach **Produkten** = Sparten-/divisionale Organisation, nach Tätigkeiten = funktionale Organisation.
 - Agil heißt nicht planlos – geplant wird in kurzen Zyklen; „Vorgesetzter gibt Lösung und Weg vor“ ist **nicht** agil.
 - Hoher Kommunikationsaufwand ist kein Vorteil des agilen Vorgehens, sondern eine Voraussetzung.
+- „Abteilungssystem“ (Gliederung nach Abteilungen/Funktionen) beschreibt die **Gliederung**, nicht die **Weisungswege** – in Zuordnungsaufgaben ist es meist der Lückenfüller.
+- IT, Personal, Fertigung und Vertrieb sind **Linie**, Rechtsabteilung und Controlling **Stab** (Winter 2024, Aufg. 14; Winter 2025, Aufg. 24).
 
 ## Merksatz
 
@@ -88,4 +100,4 @@ c) Entlastung der Instanzen durch Spezialkenntnisse
 - [Rechtsformen & Handelsregister](rechtsformen-handelsregister.md) – Organe von GmbH und AG
 - [Projektstrukturplan (IT)](../../IT/Management/projektstrukturplan-psp.md)
 - [Lektion 21 – Unternehmensorganisation](../analyse-der-exams/L21_Unternehmensorganisation.md)
-- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (13), [Winter 2022](../fragen/Winter-2022.md) (29–30), [Winter 2024](../fragen/Winter-2024.md) (13–14), [Winter 2025](../fragen/Winter-2025.md) (23–24)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (13), [Sommer 2022](../fragen/Sommer-2022.md) (21), [Winter 2022](../fragen/Winter-2022.md) (29–30), [Winter 2023](../fragen/Winter-2023.md) (21), [Sommer 2024](../fragen/Sommer-2024.md) (21), [Winter 2024](../fragen/Winter-2024.md) (13–14), [Winter 2025](../fragen/Winter-2025.md) (22–24), [Sommer 2026](../fragen/Sommer-2026.md) (26)

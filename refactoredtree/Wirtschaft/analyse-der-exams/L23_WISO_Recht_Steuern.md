@@ -1,17 +1,17 @@
 # Lektion 23 – Recht, Verträge & Steuern (WiSo)
 
 **Bereich:** Wirtschafts- und Sozialkunde (WiSo), Recht & AGG & Diversity  
-**Relevanz:** Hoch – AGG (Allgemeines Gleichbehandlungsgesetz), Diversity und Europass sind in AP2 sehr häufig (FAST JEDEM Jahrgang). Klassisches Kaufvertragsrecht/Gewährleitung kam in KEINEM der 20 analysierten Jahrgänge vor – hier keine Lernzeit investieren.
+**Relevanz:** Hoch – AGG (Allgemeines Gleichbehandlungsgesetz), Diversity und Europass sind in AP2 sehr häufig (FAST JEDEM Jahrgang). Klassisches Kaufvertragsrecht/Gewährleistung kam in KEINEM der 10 analysierten Termine vor – hier keine Lernzeit investieren.
 
-> **Wichtiger Hinweis:** In den 20 echten AP2-Prüfungen (2021–2026) kamen **keine** Aufgaben zu klassischem Kaufvertragsrecht (Mängelrechte, Gewährleistung) oder detaillierten Steuerberechnungen. Der examinierte Fokus liegt auf AGG/Diversity/Europass.  
+> **Wichtiger Hinweis:** In den 10 echten WiSo-Terminen (Winter 2021 – Sommer 2026) kamen **keine** Aufgaben zu klassischem Kaufvertragsrecht (Mängelrechte, Gewährleistung) oder detaillierten Steuerberechnungen. Der examinierte Fokus liegt auf AGG/Diversity/Europass.  
 **Lernzeit:** ca. 2h
 
 ## 1. Warum das wichtig ist
 
-Als Fachinformatiker schließt du Beschaffungsverträge, beurteilst
-Gewährleistungsansprüche und arbeitest in unterschiedlichen
-Unternehmensformen. Die AP2 prüft Haftung, Steuerarten und
-Vertragsunterschiede – oft als Zuordnungsaufgabe.
+Als Fachinformatiker arbeitest du in unterschiedlichen Unternehmensformen,
+bewirbst dich, stellst später selbst Leute ein und bekommst eine
+Gehaltsabrechnung. Die WiSo prüft AGG, Rechtsformen und Haftung sowie
+Grundbegriffe der Steuern – oft als Multiple Choice oder Zuordnung.
 
 ## 2. AGG (Allgemeines Gleichbehandlungsgesetz) – sehr häufig in AP2
 
@@ -28,9 +28,9 @@ Typische Aufgabenstellung: **Unzulässige Fragen im Bewerbungsgespräch erkennen
 
 ### Unzulässige Fragen im Bewerbungsgespräch (nenne 3)
 
-1. **Nach Heirat/Familienplanung:** „Planen Sie, bald Kinder zu bekommen?“ (Familienstand-Diskriminierung)
-2. **Partei-/Gewerkschaftszugehörigkeit:** „Welche politische Partei unterstützen Sie?“ (Parteiprozess)
-3. **Krankheit/Vermögen:** „Haben Sie chronische Erkrankungen?“ oder „Wie hoch ist Ihr Vermögen?“ (Behinderung/Vermögen)
+1. **Schwangerschaft/Familienplanung:** „Planen Sie, bald Kinder zu bekommen?“ (Benachteiligung wegen des **Geschlechts**)
+2. **Partei-, Gewerkschafts- oder Religionszugehörigkeit:** „Welcher Partei/Gewerkschaft gehören Sie an?“ (Weltanschauung bzw. Koalitionsfreiheit, Art. 9 GG)
+3. **Krankheit/Vermögen:** „Haben Sie chronische Erkrankungen?“ (ggf. Behinderung) oder „Wie hoch ist Ihr Vermögen?“ (Persönlichkeitsrecht) – erlaubt sind nur Fragen mit Bezug zur Tätigkeit
 
 ### Unzulässige Stellenanzeigen-Formulierungen
 
@@ -58,16 +58,18 @@ Ziel: Potenziale der Vielfalt im Unternehmen nutzen, um Innovationen zu fördern
 
 | Art | Getragen von | Beispiele |
 |-----|--------------|-----------|
-| **Direkte Steuern** | Steuerpflichtiger selbst | Einkommen-, Körperschaft-, Grundsteuer |
-| **Indirekte Steuern** | auf Dritte abwälzbar | Umsatzsteuer, Zölle |
+| **Direkte Steuern** | Steuerpflichtiger selbst | Einkommen-/Lohn-, Körperschaft-, Gewerbe-, Grundsteuer |
+| **Indirekte Steuern** | über den Preis auf den Verbraucher abgewälzt | Umsatzsteuer, Energiesteuer, Tabaksteuer, Zölle |
 
-**Lohnsteuerklassen (I–VI) – kurz:**
-- **I:** ledig, kein Kind
-- **II:** alleinstehend mit Kind (Entlastungsbetrag)
-- **III:** verheiratet, höheres Netto (oder IV kombiniert)
-- **IV:** verheiratet, z. B. mit III/V-Kombination
-- **V:** verheiratet, niedriger (Kombi mit III)
-- **VI:** 2. Arbeitsverhältnis
+**Lohnsteuerklassen (I–VI) – kurz (Winter 2021, Aufg. 11):**
+- **I:** ledig, geschieden, verwitwet (nicht alleinerziehend)
+- **II:** alleinerziehend (Entlastungsbetrag)
+- **III:** verheiratet, Partner mit dem **höheren** Einkommen (Partner in V)
+- **IV:** verheiratet, **ähnliches** Einkommen (beide IV)
+- **V:** verheiratet, Partner mit dem **geringeren** Einkommen (Kombi mit III)
+- **VI:** zweites und jedes weitere Arbeitsverhältnis
+
+Mehr: [Steuern & Steuerarten](../Volkswirtschaft/steuern-steuerarten.md) · [Lohn & Gehaltsabrechnung](../Sozialversicherung/lohn-steuern-gehaltsabrechnung.md)
 
 ## 4. Gesellschaftsformen & Haftung
 
@@ -77,18 +79,20 @@ Ziel: Potenziale der Vielfalt im Unternehmen nutzen, um Innovationen zu fördern
 | OHG | **unbeschränkt** | Kaufleute, mind. 2 Personen |
 | KG | Komplementär **voll**, Kommanditist **beschränkt** | Einlagegrenze |
 | GmbH | **beschränkt** (Stammkapital 25.000 €) | jur. Person |
-| UG (haftungsbeschränkt) | **beschränkt** (Mini-GmbH, 1 €) | Gewinn thesaurieren |
+| UG (haftungsbeschränkt) | **beschränkt** (Mini-GmbH, ab 1 €) | 25 % des Gewinns in die Rücklage |
 | AG | **beschränkt** (Grundkapital 50.000 €) | börsenfähig |
 
 **Kernunterscheidung:** *beschränkt* (nur Kapital/Einlage) vs. *unbeschränkt*
-(Privatvermögen haftet mit).
+(Privatvermögen haftet mit). Achtung: Die GmbH selbst haftet mit ihrem **gesamten**
+Gesellschaftsvermögen – beschränkt ist nur das Risiko der Gesellschafter.
+Mehr: [Rechtsformen & Handelsregister](../Unternehmen/rechtsformen-handelsregister.md)
 
 ## 5. Kartellrecht (kurz)
 
-- **Erlaubt:** Rationalisierungskartelle, wenn Effizienz ohne Preisabsprache.
-- **Anmelde-/verbots­pflichtig:** Preiskartelle zwischen Wettbewerbern sind
-  grundsätzlich verboten (§ 1 GWB).
-- **Freistellung:** bei Bagatellgrenzen (Umsatzschwellen) möglich.
+- **Verboten:** Preis-, Gebiets- und Quotenkartelle zwischen Wettbewerbern (§ 1 GWB, Art. 101 AEUV); Aufsicht: **Bundeskartellamt**.
+- **Freigestellt:** Vereinbarungen, die Effizienz bringen und Verbraucher beteiligen (§ 2 GWB, z. B. Normen- und Typenkartelle) sowie Mittelstandskartelle (§ 3 GWB).
+- Seit 2005 gibt es **keine Anmeldung** mehr (Legalausnahme) – die Unternehmen prüfen selbst.
+- Mehr: [Unternehmensverbindungen & Kartellrecht](../Unternehmen/unternehmensverbindungen-kartellrecht.md)
 
 ## 6. Übungsaufgabe (im Prüfungsstil, selbst erstellt)
 
@@ -101,7 +105,7 @@ Ziel: Potenziale der Vielfalt im Unternehmen nutzen, um Innovationen zu fördern
 1. **„Planen Sie, bald Kinder zu bekommen?“** ist **unzulässig** nach AGG (Diskriminierung wegen Familienplanung).
 2. **„Wir suchen einen jungen, dynamischen Teamplayer“** ist **unzulässig** nach AGG (implizite Altersdiskriminierung → „young“ = jung).
 3. Zugelassene Alternativen:
-   - Nach qualificationsbezogenen Fragen: „Haben Sie Erfahrung im Projektmanagement?“
+   - Nach qualifikationsbezogenen Fragen: „Haben Sie Erfahrung im Projektmanagement?“
    - Anzeige: „Wir suchen erfahrene Mitarbeitende für das Team“ (ohne Altersbezug).
 
 </details>
@@ -111,16 +115,16 @@ Ziel: Potenziale der Vielfalt im Unternehmen nutzen, um Innovationen zu fördern
 - [ ] Ich nenne die geschützten Merkmale nach AGG.
 - [ ] Ich erkenne unzulässige Fragen im Bewerbungsgespräch.
 - [ ] Ich erkenne unzulässige Formulierungen in Stellenanzeigen.
-- [ ] Ich unterscheide AGG-konforme von AGG-konforme Formulierungen.
+- [ ] Ich unterscheide AGG-konforme von diskriminierenden Formulierungen.
 - [ ] Ich weiß, dass Europass KEIN Ausweisersatz ist und KEINE Reisefreiheit ermöglicht.
 - [ ] Ich ordne Gesellschaftsformen nach Haftung (beschränkt/unbeschränkt).
-- [ ] Ich weiß: Kaufvertragsrecht/Gewährleistung kamen in keinem der 20 analysierten Jahrgänge als Hauptthema vor.
+- [ ] Ich weiß: Kaufvertragsrecht/Gewährleistung kamen in keinem der 10 analysierten Termine als Hauptthema vor.
 
 ## Weiterführende Ressourcen
 
-- IHK-Lösungs-PDFs im Ordner `*/WiSo/*` und `*/Loesungen/WISO_*`
+- Echte Termine: [Prüfungsanalyse](README.md) · Lernblätter: [AGG & Diversity](../Arbeitsrecht/agg-diversity.md), [Europass](../Ausbildung/europass-fortbildung-umschulung.md)
 - Allgemeines Gleichbehandlungsgesetz (AGG) im Wortlaut
-- BGB §§ 433 ff. (Kaufvertrag) – Hinweis: in AP2 geprüft, aber nicht als Hauptthema (s.o.)
+- BGB §§ 433 ff. (Kaufvertrag) – siehe [Kaufvertrag (nice to know)](../nice-to-know/kaufvertrag-agb.md); in der WiSo bisher nicht geprüft
 - Europass-Dokumentencenter
 - Charta der Vielfalt
 - IHK: Recht und Steuern im Berufsleben

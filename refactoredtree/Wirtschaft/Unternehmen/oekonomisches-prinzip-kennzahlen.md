@@ -49,6 +49,7 @@ Unsinnig ist „mit minimalem Aufwand maximalen Ertrag“ – beides gleichzeiti
 → Auftrag 3 ist am wirtschaftlichsten, obwohl Auftrag 1 den höchsten absoluten Gewinn (30.000 €) bringt.
 
 **Eigenkapitalrentabilität:**
+- Rechenweg: Gewinn ÷ Eigenkapital × 100 – auf die geforderte Nachkommastelle runden.
 - Winter 2022: 28.125 / 375.000 × 100 = **7,5 %**
 - Winter 2023: 3.140 / 40.000 × 100 = **7,85 %**
 - Sommer 2026: 24.860 / 220.000 × 100 = **11,3 %**
@@ -61,7 +62,7 @@ Unsinnig ist „mit minimalem Aufwand maximalen Ertrag“ – beides gleichzeiti
 |---|---|
 | **GmbH** | nach dem Verhältnis der **Geschäftsanteile** (§ 29 Abs. 3 GmbHG) |
 | **AG** | Dividende je Aktie nach Beschluss der Hauptversammlung |
-| **OHG/KG** | seit dem MoPeG (1.1.2024) nach den vereinbarten **Beteiligungsverhältnissen**, hilfsweise nach Kapitalanteilen; die alte „4 % auf die Einlage, Rest nach Köpfen“-Regel gilt nicht mehr (steht aber noch in älteren Büchern) |
+| **OHG/KG** | seit dem MoPeG (1.1.2024) nach den vereinbarten **Beteiligungsverhältnissen**, hilfsweise nach dem Wert der vereinbarten Einlagen, zuletzt nach Köpfen; die alte „4 % auf die Einlage, Rest nach Köpfen“-Regel gilt nicht mehr (steht aber noch in älteren Büchern) |
 | **GbR** | nach Beteiligungsverhältnis, hilfsweise zu gleichen Teilen (§ 709 Abs. 3 BGB) |
 
 **Beispiel GmbH (Sommer 2024):** Stammkapital 330.000 €, Simmer hält 132.000 € = 40 %; Gewinn 87.450 € → 87.450 × 0,40 = **34.980 €**.
@@ -84,7 +85,7 @@ Die Eigenkapitalrentabilität liegt über der Gesamtkapitalrentabilität, weil d
 - Eigenkapitalrentabilität: Gewinn / **Eigen**kapital, nicht / Gesamtkapital.
 - Bei der Gesamtkapitalrentabilität die Fremdkapitalzinsen **zum Gewinn addieren**.
 - Prozentuale Veränderung immer auf den **Ausgangswert** (alt) beziehen.
-- Umsatz ist kein Gewinn.
+- Umsatz ist kein Gewinn – Maßnahmen, die nur **Kosten** senken (Outsourcing, Lohnkosten), steigern den Umsatz nicht; Marketing für eigene Produkte schon (Sommer 2026, Aufg. 17).
 
 ## Merksatz
 
@@ -97,4 +98,4 @@ Die Eigenkapitalrentabilität liegt über der Gesamtkapitalrentabilität, weil d
 - [Unternehmensziele & Zielkonflikte](unternehmensziele-zielkonflikte.md) – ökonomische Ziele
 - [Unternehmensgründung & Businessplan](unternehmensgruendung-businessplan.md) – Rentabilitäts- und Finanzplan
 - [Lektion 22 – Kostenrechnung](../../IT/analyse-der-exams/L22_Kostenrechnung.md)
-- Echte Aufgaben: [Winter 2022](../fragen/Winter-2022.md) (Aufgabe 3), [Sommer 2023](../fragen/Sommer-2023.md) (Aufgabe 17), [Sommer 2026](../fragen/Sommer-2026.md) (Aufgabe 16)
+- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (19), [Winter 2022](../fragen/Winter-2022.md) (3), [Sommer 2023](../fragen/Sommer-2023.md) (17), [Winter 2023](../fragen/Winter-2023.md) (16, 20), [Sommer 2024](../fragen/Sommer-2024.md) (16, 20), [Sommer 2025](../fragen/Sommer-2025.md) (3, 23), [Sommer 2026](../fragen/Sommer-2026.md) (16–17)
