@@ -94,16 +94,22 @@ Ziel: Knappheit ausgleichen. Always: **Aufwand vs. Nutzen**.
 | **Steuern/Subventionen** | Höhere Steuern -> weniger Angebot; Subventionen -> mehr Angebot | - |
 | **Naturalbedingung/Tierseuchen etc.** | Landw. Angebot beeinflusst (z. B. Ernteausfall) | - |
 
+
+
+
+
 ### 3.3 Marktformen nach Anzahl der Teilnehmer
+
 | Marktform | Anbieter | Nachfrager | Wettbewerbsintensität | Beispiel |
-|---|---tag---|---|---tag---|---| --- |
+| :--- | :--- | :--- | :--- | :--- |
 | **Polypol** (vollständige Konkurrenz) | Sehr viele | Sehr viele | Sehr hoch (Preisnehmer) | Wochenmarkt Obst/Gemüse, Online-Handel vieler kleiner Anbieter |
 | **Monopol** | 1 | Viele | Gering (Preissteller) | Lokales Wasserversorgungsunternehmen (nat. Monopol), DB Netz streckenbezogen |
 | **Oligopol** | Wenige (3-5) | Viele | Mittel bis hoch (Oligopolwettbewerbe, teilweise Preisabsprachen verboten) | Mobilfunk, Tankstellenmarkt, Automarkt |
-| **Monopson** | Viele | 1 Nachfrager | Nachfrager ist Preissteller | Staat als einziger Käufer von Kampfflugzeugen; Bauaufträge bestimm genre |
+| **Monopson** | Viele | 1 Nachfrager | Nachfrager ist Preissteller | Staat als einziger Käufer von Kampfflugzeugen; Bauaufträge bestimmter Genre |
 | **Oligopson** | Viele | Wenige Nachfrager | Wenige Nachfrager setzen Preise | Milchbauern vs. wenige Molkereien, Fleischindustrie |
 | **Bilaterales Monopol** | 1 | 1 | Verhandlung und Verhandlungsmacht entscheidend | Sehr selten, Spezialanfertigung für einen Großkunden |
 | **Angebotsmonopol / Nachfragemonopol** | Kurzformen | - | - | Siehe oben |
+
 
 ### 3.4 Käufermarkt vs. Verkäufermarkt
 | Aspekt | **Käufermarkt** | **Verkäufermarkt** |
