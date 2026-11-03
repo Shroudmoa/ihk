@@ -1,4 +1,4 @@
-:## 1. Aufgabe (Wirtschaftssektoren)
+## 1. Aufgabe (Wirtschaftssektoren)
 
 - Spediteur ist tertiärer Sektor (Dienstleistung).
 - Lagerlogistik ist tertiärer Sektor.
