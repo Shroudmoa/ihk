@@ -85,5 +85,5 @@ Ein Dienstleister bietet die Installation für 85 €/h an. Intern kostet die St
 - [Make-or-Buy, Kauf, Leasing, Miete](make-or-buy-kauf-leasing-miete.md) – intern vs. extern
 - [Soll-Ist-Vergleich](soll-ist-vergleich.md) – geplante vs. tatsächliche Stunden
 - [TCO](tco.md) – Personalkosten im Lebenszyklus
-- [Sozialversicherung](../../Wirtschaft/sozialversicherung.md) – Arbeitgeberanteile
+- [Sozialversicherung](../../Wirtschaft/Sozialversicherung/sozialversicherung.md) – Arbeitgeberanteile
 - [Lektion 22: Kostenrechnung](../analyse-der-exams/L22_Kostenrechnung.md)

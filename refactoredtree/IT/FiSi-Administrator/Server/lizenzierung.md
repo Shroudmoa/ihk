@@ -92,4 +92,4 @@ Kleiner Server mit 1 CPU à 4 Kernen → trotzdem **16** Kern-Lizenzen (Minimum)
 - [CAPEX-OPEX](../../Management/capex-opex.md) – Kauf vs. Abo
 - [TCO](../../Management/tco.md) – Lizenzkosten über die Laufzeit
 - [Patchmanagement](../Netzwerk-Administration/patchmanagement-tu-su-pu.md) – Updates verteilen
-- [Urheberrecht & Compliance](../../../Wirtschaft/urheberrecht-compliance.md)
+- [Urheberrecht & Compliance](../../../Wirtschaft/Recht/urheberrecht-compliance.md)

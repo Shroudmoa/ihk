@@ -92,7 +92,7 @@
 - Ein Betriebsratsmitglied darf nicht JAV-Mitglied sein.
 - Die deutsche Staatsangehörigkeit ist nicht erforderlich.
 - Die Kandidatur ist nicht auf das zweite Ausbildungsjahr beschränkt.
-- Wer während der Amtszeit 25 wird, **bleibt** bis zum Ende der Amtszeit Mitglied (§ 64 Abs. 3 BetrVG); Azubis sind seit 2021 unabhängig vom Alter wählbar. *(Korrigiert.)* Siehe [Betriebsrat & JAV](../betriebsrat-jav.md).
+- Wer während der Amtszeit 25 wird, **bleibt** bis zum Ende der Amtszeit Mitglied (§ 64 Abs. 3 BetrVG); Azubis sind seit 2021 unabhängig vom Alter wählbar. *(Korrigiert.)* Siehe [Betriebsrat & JAV](../Mitbestimmung/betriebsrat-jav.md).
 - Eine Mindestbetriebszugehörigkeit von drei Monaten ist nicht erforderlich.
 
 ## 13. Aufgabe (Leitungssystem)

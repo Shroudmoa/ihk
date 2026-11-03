@@ -93,6 +93,6 @@ Rechtlicher Rahmen: Das **Energieeffizienzgesetz (EnEfG)** schreibt Rechenzentre
 - [Server-Hardware](../../Komponenten/server-hardware.md) – Netzteile, Komponentenauswahl
 - [TCO](../../Management/tco.md) – Betriebskosten über die Laufzeit
 - [Amortisation](../../Management/amortisation.md)
-- [Umwelt & Nachhaltigkeit](../../../Wirtschaft/umwelt-nachhaltigkeit.md)
+- [Umwelt & Nachhaltigkeit](../../../Wirtschaft/Arbeitsschutz-Umwelt/umwelt-nachhaltigkeit.md)
 - [Lektion L28 GA1 Praxisthemen](../../analyse-der-exams/L28_GA1_Sonstiges_Praxisthemen.md)
-- [Lektion L25 Umweltschutz](../../analyse-der-exams/L25_Umweltschutz_Nachhaltigkeit.md)
+- [Lektion L25 Umweltschutz](../../../Wirtschaft/analyse-der-exams/L25_Umweltschutz_Nachhaltigkeit.md)

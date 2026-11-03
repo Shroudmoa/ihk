@@ -97,4 +97,4 @@ Bei KI-Systemen zur Leistungs- oder Verhaltenskontrolle von Beschäftigten hat d
 - [DSGVO & TOM](DSGVO/dsgvo-tom.md) – Datenschutz beim KI-Einsatz
 - [AAA & SIEM](../FiSi-Administrator/Sicherheit/aaa-siem.md) – Anomalieerkennung
 - [Netzwerkanalyse & Troubleshooting](../FiSi-Administrator/Netzwerk-Administration/netzwerkanalyse-und-troubleshooting.md)
-- [Betriebsrat & JAV](../../Wirtschaft/betriebsrat-jav.md) – Mitbestimmung bei technischen Überwachungseinrichtungen
+- [Betriebsrat & JAV](../../Wirtschaft/Mitbestimmung/betriebsrat-jav.md) – Mitbestimmung bei technischen Überwachungseinrichtungen

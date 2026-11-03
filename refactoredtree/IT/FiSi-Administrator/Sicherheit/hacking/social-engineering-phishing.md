@@ -73,5 +73,5 @@
 - [MFA](../MFA.md) – warum gestohlene Passwörter dann nicht reichen
 - [Malware und Ransomware](malware-ransomware.md) – was ein Klick auslösen kann
 - [Angriffsarten im Überblick](hackers-can.md)
-- [IT-Sicherheit im Arbeitsalltag](../../../../Wirtschaft/it-sicherheit-im-arbeitsalltag.md)
+- [IT-Sicherheit im Arbeitsalltag](../../../../Wirtschaft/Arbeitsschutz-Umwelt/it-sicherheit-im-arbeitsalltag.md)
 - [Lektion 05 Datenschutz und Informationssicherheit](../../../analyse-der-exams/05_Datenschutz_Informationssicherheit.md)

@@ -102,5 +102,5 @@ Bei 50 Mitarbeitenden ist die Cloud-Lösung um 1.700 € pro Jahr günstiger. Pl
 - [Make-or-Buy, Kauf, Leasing, Miete](make-or-buy-kauf-leasing-miete.md)
 - [CAPEX-OPEX](capex-opex.md)
 - [Angebotsvergleich & Bezugskalkulation](angebotsvergleich-bezugskalkulation.md)
-- [Break-Even-Point](../../Wirtschaft/bep.md) – gleiche Logik mit Erlösen
+- [Break-Even-Point](../../Wirtschaft/Unternehmen/bep.md) – gleiche Logik mit Erlösen
 - [Lektion 22: Kostenrechnung](../analyse-der-exams/L22_Kostenrechnung.md) – Fixkosten, variable Kosten, Angebotsvergleich

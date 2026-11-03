@@ -114,4 +114,4 @@ Offizieller Projektstart: Ziele und Rahmenbedingungen vorstellen, Rollen klären
 - [Netzplan](netzplan.md) · [Gantt-Diagramm](gantt-diagramm.md) · [Ressourcenplan](ressourcenplan.md)
 - [Soll-Ist-Vergleich](soll-ist-vergleich.md) – Steuerung
 - [Abnahme, Übergabe & Dokumentation](abnahme-uebergabe-dokumentation.md) – Abschluss
-- [Leitungssysteme & Organisation](../../Wirtschaft/leitungssysteme-organisation.md) – Linien- und Matrixorganisation
+- [Leitungssysteme & Organisation](../../Wirtschaft/Unternehmen/leitungssysteme-organisation.md) – Linien- und Matrixorganisation

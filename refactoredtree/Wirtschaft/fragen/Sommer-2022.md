@@ -199,7 +199,7 @@
 - Piktogramm 4 zeigt das Löschen von unten nach hinten.
 - Piktogramm 5 zeigt das Löschen in Windrichtung – **das ist richtig** (Wind im Rücken, DGUV-Regel „Feuer in Windrichtung angreifen“). *(Korrigiert: der ursprüngliche Schlüssel nannte das fälschlich unzutreffend.)*
 
-> **Die DGUV-Regeln zum Löschen:** in Windrichtung angreifen · Flächenbrände von vorn nach hinten und von unten in die Glut · Tropf- und Fließbrände von oben nach unten · ausreichend Löscher gleichzeitig einsetzen · Rückzündung beachten, Brandstelle beobachten. Siehe [Arbeitsschutz & Arbeitssicherheit](../arbeitsschutz-arbeitssicherheit.md).
+> **Die DGUV-Regeln zum Löschen:** in Windrichtung angreifen · Flächenbrände von vorn nach hinten und von unten in die Glut · Tropf- und Fließbrände von oben nach unten · ausreichend Löscher gleichzeitig einsetzen · Rückzündung beachten, Brandstelle beobachten. Siehe [Arbeitsschutz & Arbeitssicherheit](../Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md).
 
 ## 26. Aufgabe (Feuerlöscher-Bedienung)
 

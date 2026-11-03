@@ -95,4 +95,4 @@ Skala jeweils 1 (gering) bis 5 (sehr hoch).
 - [ITIL: Incident, Problem, Change](itil-incident-problem-change.md) – Risiken im Change-Prozess bewerten
 - [Schutzziele](../FiSi-Administrator/Sicherheit/schutzziele.md) – IT-Risiken nach Vertraulichkeit, Integrität, Verfügbarkeit
 - [DSGVO & TOM](DSGVO/dsgvo-tom.md) – Datenschutzrisiken
-- [Betriebsrat & JAV](../../Wirtschaft/betriebsrat-jav.md) – Mitbestimmung als Stakeholder-Thema
+- [Betriebsrat & JAV](../../Wirtschaft/Mitbestimmung/betriebsrat-jav.md) – Mitbestimmung als Stakeholder-Thema

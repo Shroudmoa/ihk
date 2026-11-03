@@ -90,4 +90,4 @@ Eine Abnahme kann auch **stillschweigend** erfolgen (z. B. produktive Nutzung oh
 - [Soll-Ist-Vergleich](soll-ist-vergleich.md) – im Abschlussbericht
 - [Qualitätsmanagement](qualitaetsmanagement.md) – Lessons Learned, KVP
 - [Ticketsystem, SLA & Eskalation](ticketsystem-sla-eskalation.md) – Übergabe an den Support
-- [Lektion 23: Recht & Steuern](../analyse-der-exams/L23_WISO_Recht_Steuern.md) – Vertragsarten, Gewährleistung
+- [Lektion 23: Recht & Steuern](../../Wirtschaft/analyse-der-exams/L23_WISO_Recht_Steuern.md) – Vertragsarten, Gewährleistung

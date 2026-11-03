@@ -67,6 +67,6 @@
 - [Betroffenenrechte](betroffenenrechte.md)
 - [TOM](toms.md) – Integrität und Vertraulichkeit umsetzen
 - [Anonymisierung und Pseudonymisierung](anonymisierung-pseudonymisierung.md)
-- [Betriebsrat und JAV](../../../Wirtschaft/betriebsrat-jav.md) – Mitbestimmung bei Überwachung
+- [Betriebsrat und JAV](../../../Wirtschaft/Mitbestimmung/betriebsrat-jav.md) – Mitbestimmung bei Überwachung
 - [Lektion 05 Datenschutz und Informationssicherheit](../../analyse-der-exams/05_Datenschutz_Informationssicherheit.md)
 - [Lektion 28 GA1-Praxisthemen (Videoüberwachung)](../../analyse-der-exams/L28_GA1_Sonstiges_Praxisthemen.md)

@@ -103,6 +103,6 @@ Dynamische Alternative: **Kapitalwertmethode** (abgezinste Rückflüsse).
 - [Kostenvergleichsrechnung](kostenvergleichsrechnung.md) – Alternativen nach Kosten vergleichen
 - [Make-or-Buy, Kauf, Leasing, Miete](make-or-buy-kauf-leasing-miete.md)
 - [CAPEX-OPEX](capex-opex.md)
-- [Break-Even-Point](../../Wirtschaft/bep.md) – Gewinnschwelle über die Menge
-- [Ökonomisches Prinzip & Kennzahlen](../../Wirtschaft/oekonomisches-prinzip-kennzahlen.md) – Wirtschaftlichkeit, Rentabilität
+- [Break-Even-Point](../../Wirtschaft/Unternehmen/bep.md) – Gewinnschwelle über die Menge
+- [Ökonomisches Prinzip & Kennzahlen](../../Wirtschaft/Unternehmen/oekonomisches-prinzip-kennzahlen.md) – Wirtschaftlichkeit, Rentabilität
 - [Lektion 22: Kostenrechnung](../analyse-der-exams/L22_Kostenrechnung.md) – Prüfungsaufgaben zur Amortisation

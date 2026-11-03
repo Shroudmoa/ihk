@@ -84,5 +84,5 @@ Der Kauf bindet sofort 15.000 € Liquidität, belastet das Ergebnis aber nur mi
 - [Amortisation](amortisation.md)
 - [Cloud-Computing](../FiSi-Administrator/Server/Cloud/cloud-computing.md)
 - [SLA](../FiSi-Administrator/Server/Cloud/sla.md)
-- [Break-Even-Point](../../Wirtschaft/bep.md)
+- [Break-Even-Point](../../Wirtschaft/Unternehmen/bep.md)
 - [Lektion 1: Cloud Computing](../analyse-der-exams/01_Cloud_Computing.md)

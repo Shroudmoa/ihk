@@ -45,9 +45,9 @@
 
 ## Verwandt
 
-- [Rechts- und Geschäftsfähigkeit](../rechts-geschaeftsfaehigkeit.md) – wer Verträge schließen darf
-- [Rechtsquellen & Günstigkeitsprinzip](../rechtsquellen-arbeitsrecht.md) – welches Gesetz regelt was
-- [Gericht](../gericht.md) – Amts- und Landgericht für Kaufstreitigkeiten
-- [WiSo-Grundlagen (Lektion 11)](../../IT/analyse-der-exams/11_WiSo_Grundlagen.md) – warum Kaufrecht kaum geprüft wird
-- [Lektion 23 – Recht & Steuern](../../IT/analyse-der-exams/L23_WISO_Recht_Steuern.md)
+- [Rechts- und Geschäftsfähigkeit](../Recht/rechts-geschaeftsfaehigkeit.md) – wer Verträge schließen darf
+- [Rechtsquellen & Günstigkeitsprinzip](../Recht/rechtsquellen-arbeitsrecht.md) – welches Gesetz regelt was
+- [Gericht](../Recht/gericht.md) – Amts- und Landgericht für Kaufstreitigkeiten
+- [WiSo-Grundlagen (Lektion 11)](../analyse-der-exams/11_WiSo_Grundlagen.md) – warum Kaufrecht kaum geprüft wird
+- [Lektion 23 – Recht & Steuern](../analyse-der-exams/L23_WISO_Recht_Steuern.md)
 - Echte Aufgabe: [Sommer 2025](../fragen/Sommer-2025.md) (16 – AGB im BGB)

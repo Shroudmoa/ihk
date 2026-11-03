@@ -52,14 +52,14 @@ Altklausuren 2021–2026 und ordnet **jedem 🔴/🟡-Thema eine Lektion** zu.
 
 | Thema | Prio | Lektion |
 |-------|------|---------|
-| BBiG: Ausbildungsende, Weiterbeschäftigung (§21/§24) | 🔴 | [BBiG](../../Wirtschaft/bbig.md) |
-| Kündigungsfristen (§622 BGB, Probezeit) | 🔴 | [BBiG](../../Wirtschaft/bbig.md) |
-| Sozialversicherung (5 Zweige, Beitragssatz) | 🔴 | [L19_Sozialversicherung.md](L19_Sozialversicherung.md) 🆕 |
-| Betriebsrat & Mitbestimmung (JAV, Betriebsvereinbarung) | 🔴 | [L20_Betriebsrat_Mitbestimmung.md](L20_Betriebsrat_Mitbestimmung.md) 🆕 |
-| Unternehmensorganisation (Leitungssysteme, Sektoren) | 🔴 | [L21_Unternehmensorganisation.md](L21_Unternehmensorganisation.md) 🆕 |
+| BBiG: Ausbildungsende, Weiterbeschäftigung (§21/§24) | 🔴 | [BBiG](../../Wirtschaft/Ausbildung/bbig.md) |
+| Kündigungsfristen (§622 BGB, Probezeit) | 🔴 | [BBiG](../../Wirtschaft/Ausbildung/bbig.md) |
+| Sozialversicherung (5 Zweige, Beitragssatz) | 🔴 | [L19_Sozialversicherung.md](../../Wirtschaft/analyse-der-exams/L19_Sozialversicherung.md) 🆕 |
+| Betriebsrat & Mitbestimmung (JAV, Betriebsvereinbarung) | 🔴 | [L20_Betriebsrat_Mitbestimmung.md](../../Wirtschaft/analyse-der-exams/L20_Betriebsrat_Mitbestimmung.md) 🆕 |
+| Unternehmensorganisation (Leitungssysteme, Sektoren) | 🔴 | [L21_Unternehmensorganisation.md](../../Wirtschaft/analyse-der-exams/L21_Unternehmensorganisation.md) 🆕 |
 | Kosten- & Wirtschaftlichkeitsrechnung (DB, Amortisation) | 🔴 | [L22_Kostenrechnung.md](L22_Kostenrechnung.md) 🆕 |
-| Recht, Verträge & Steuern (Kaufrecht, Gesellschaftsformen) | 🟡 | [L23_WISO_Recht_Steuern.md](L23_WISO_Recht_Steuern.md) 🆕 |
-| WiSo-Überblick & weitere Randthemen | 🟢 | [11_WiSo_Grundlagen.md](11_WiSo_Grundlagen.md) |
+| Recht, Verträge & Steuern (Kaufrecht, Gesellschaftsformen) | 🟡 | [L23_WISO_Recht_Steuern.md](../../Wirtschaft/analyse-der-exams/L23_WISO_Recht_Steuern.md) 🆕 |
+| WiSo-Überblick & weitere Randthemen | 🟢 | [11_WiSo_Grundlagen.md](../../Wirtschaft/analyse-der-exams/11_WiSo_Grundlagen.md) |
 
 ---
 

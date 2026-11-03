@@ -116,4 +116,4 @@ Anbieter 1 ist um 96,40 € günstiger. Vor der Entscheidung sollten qualitative
 - [TCO](tco.md) – Gesamtkosten statt Einkaufspreis
 - [Make-or-Buy, Kauf, Leasing, Miete](make-or-buy-kauf-leasing-miete.md)
 - [Lektion 22: Kostenrechnung](../analyse-der-exams/L22_Kostenrechnung.md) – Angebote vergleichen
-- [Lektion 23: Recht & Steuern](../analyse-der-exams/L23_WISO_Recht_Steuern.md) – Kaufvertrag, Gewährleistung
+- [Lektion 23: Recht & Steuern](../../Wirtschaft/analyse-der-exams/L23_WISO_Recht_Steuern.md) – Kaufvertrag, Gewährleistung

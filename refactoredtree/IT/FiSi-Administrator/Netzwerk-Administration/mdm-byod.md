@@ -107,7 +107,7 @@ Wichtige Kriterien: unterstützte Plattformen (iOS, Android, Windows, macOS), Re
 - [OS-Härtung](../Server/os-haertung.md)
 - [Patchmanagement](patchmanagement-tu-su-pu.md) – Update vs. Upgrade
 - [DSGVO-Grundlagen](../../Management/DSGVO/dsgvo-tom.md)
-- [Betriebsrat und JAV](../../../Wirtschaft/betriebsrat-jav.md) – Betriebsvereinbarung
+- [Betriebsrat und JAV](../../../Wirtschaft/Mitbestimmung/betriebsrat-jav.md) – Betriebsvereinbarung
 - [VPN](../../nice-to-know/VPN/readme.md)
 - [Lektion 28 GA1-Praxisthemen (MDM)](../../analyse-der-exams/L28_GA1_Sonstiges_Praxisthemen.md)
 - [Lektion 10 Lizenzierung (CAL)](../../analyse-der-exams/10_Lizenzierung.md)

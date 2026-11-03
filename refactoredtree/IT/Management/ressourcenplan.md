@@ -76,4 +76,4 @@ Beispiel: 2 Administratoren, 20 Arbeitstage, 8 h, davon 50 % für das Projekt (R
 - [Gantt-Diagramm](gantt-diagramm.md) – parallele Vorgänge
 - [Stundensatz intern](stundensatz-intern.md) – Personalkosten
 - [Soll-Ist-Vergleich](soll-ist-vergleich.md) – Ressourcenverbrauch kontrollieren
-- [Arbeitszeit, Pausen, Urlaub](../../Wirtschaft/arbeitszeit-pausen-urlaub.md) – Grenzen für Überstunden
+- [Arbeitszeit, Pausen, Urlaub](../../Wirtschaft/Arbeitsrecht/arbeitszeit-pausen-urlaub.md) – Grenzen für Überstunden

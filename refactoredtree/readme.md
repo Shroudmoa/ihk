@@ -17,10 +17,11 @@ AP2 prüft **Anwendung**, nicht nur Wissen: Eine Ausgangssituation, daraus Teila
 | Datei | Wofür |
 |---|---|
 | [IT.md](IT.md) | IT-Lerntree: Lerngeschichte „Ein Server für Rheinblick“ + Themen-Tabellen (GA1 & GA2) |
-| [Wirtschaft.md](Wirtschaft.md) | WiSo-Lerntree nach Kategorien |
+| [Wirtschaft.md](Wirtschaft.md) | WiSo-Lerntree: Lerngeschichte „Drei Jahre bei Nordlicht“ + Themen-Tabellen |
 | [Prüfungsanalyse – Master-Index](IT/analyse-der-exams/README.md) | Welche Themen wie oft drankommen (🔴/🟡/🟢) + Lernplan |
 | [Prüfungsanalyse – Lektionen](IT/analyse-der-exams/00_Index.md) | Lektionen 01–L29 aus den Prüfungen 2021–2026 |
 | [GA1-/GA2-Fragen](IT/analyse-der-exams/fragen/) | Aufgaben der echten Termine Winter 2021 – Sommer 2026 |
+| [WiSo-Prüfungsanalyse](Wirtschaft/analyse-der-exams/README.md) | WiSo-Themen nach Häufigkeit + Lektionen + Lernplan |
 | [WiSo-Fragen](Wirtschaft/fragen/) | WiSo-Aufgaben der echten Termine |
 | [AP1-Grundlagen (LF1–LF6)](IT/nice-to-know/ap1/lf1.md) | Wiederholung Grundlagen aus Teil 1 |
 
@@ -41,8 +42,19 @@ refactoredtree/
 │   ├── Management/                   Projektmanagement, Wirtschaftlichkeit, DSGVO/
 │   ├── UML-Code-SQL/                 Pseudocode/, UML/, sql/
 │   ├── nice-to-know/                 VPN/, ap1/, Formate, Begriffe
-│   └── analyse-der-exams/            Prüfungsanalyse + fragen/ga1, fragen/ga2
-└── Wirtschaft/                       WiSo-Blätter + fragen/
+│   └── analyse-der-exams/            GA1/GA2-Prüfungsanalyse + fragen/ga1, fragen/ga2
+└── Wirtschaft/
+    ├── Ausbildung/                   BBiG, Ausbildungsordnung, IHK, JArbSchG, Fortbildung
+    ├── Arbeitsrecht/                 Arbeitsvertrag, Arbeitszeit, Mutterschutz, Kündigung, AGG, Zeugnis
+    ├── Mitbestimmung/                Betriebsrat & JAV, Tarifrecht, Gewerkschaften & Streik
+    ├── Sozialversicherung/           Die fünf Zweige, Lohnabrechnung, Altersvorsorge
+    ├── Unternehmen/                  Rechtsformen, Organisation, Ziele, Kennzahlen, Break-Even
+    ├── Recht/                        Rechtsquellen, Geschäftsfähigkeit, Gerichte, Urheberrecht
+    ├── Volkswirtschaft/              Grundbegriffe, Markt & Preis, Konjunktur, Globalisierung
+    ├── Arbeitsschutz-Umwelt/         Arbeits- & Brandschutz, Umwelt, IT-Sicherheit im Alltag
+    ├── nice-to-know/                 Kaufvertrag, Vollmachten, Lerneinheit LE
+    ├── analyse-der-exams/            WiSo-Prüfungsanalyse (Lektionen 11, L19–L26)
+    └── fragen/                       echte WiSo-Termine 2021–2026
 ```
 
 ## Aufbau jedes Lernblatts

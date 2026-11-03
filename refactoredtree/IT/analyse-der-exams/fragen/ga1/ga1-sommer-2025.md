@@ -97,7 +97,7 @@
 - **Nutzungsgrenzen:** Private Nutzung erlaubt/verboten; Kostenübernahme (z.B. Datenvolumen).
 - **MDM-Rechte:** Welche Aktionen darf das MDM ausführen (Wipe, Ortung, App-Installation)?
 - **Datenschutz/Überwachung:** Verbot der Leistungs-/Verhaltenskontrolle; Hinweis auf § 87 BetrVG (Mitbestimmung).
-- **Schulunag/Richtlinien** Beispiele sind Passwortrichtlinien
+- **Schulung/Richtlinien:** z. B. Passwortrichtlinien, Verhaltensregeln für mobile Geräte.
 - **Verhalten bei Verlust/Diebstahl:** Meldepflicht, Sperrung, selektives Wipe.
 - **Exit-Szenario:** Was passiert bei Ausscheiden des Mitarbeiters (Datenlöschung, Rückgabe)?
 

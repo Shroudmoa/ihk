@@ -44,7 +44,7 @@
 
 ## Verwandt
 
-- [Rechtsformen & Handelsregister](../rechtsformen-handelsregister.md) – Eintragungen, Kaufmannsbegriff
-- [Leitungssysteme & Organisation](../leitungssysteme-organisation.md) – Instanzen und Befugnisse
-- [Rechts- und Geschäftsfähigkeit](../rechts-geschaeftsfaehigkeit.md) – Vertretung juristischer Personen
-- [Lektion 23 – Recht & Steuern](../../IT/analyse-der-exams/L23_WISO_Recht_Steuern.md)
+- [Rechtsformen & Handelsregister](../Unternehmen/rechtsformen-handelsregister.md) – Eintragungen, Kaufmannsbegriff
+- [Leitungssysteme & Organisation](../Unternehmen/leitungssysteme-organisation.md) – Instanzen und Befugnisse
+- [Rechts- und Geschäftsfähigkeit](../Recht/rechts-geschaeftsfaehigkeit.md) – Vertretung juristischer Personen
+- [Lektion 23 – Recht & Steuern](../analyse-der-exams/L23_WISO_Recht_Steuern.md)

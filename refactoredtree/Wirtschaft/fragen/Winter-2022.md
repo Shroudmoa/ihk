@@ -185,7 +185,7 @@
 
 - Eine GmbH ist nicht zwingend erforderlich.
 - Die IHK verlangt keinen Nachweis der fachlichen Qualifikation.
-- Die Eintragung als Ist-Kaufmann hat nur **deklaratorische** (rechtsbekundende) Wirkung – Kaufmann ist er schon durch den Betrieb eines Handelsgewerbes (§ 1 HGB). *(Korrigiert: der ursprüngliche Schlüssel sagte konstitutiv.)* Siehe [Rechtsformen & Handelsregister](../rechtsformen-handelsregister.md).
+- Die Eintragung als Ist-Kaufmann hat nur **deklaratorische** (rechtsbekundende) Wirkung – Kaufmann ist er schon durch den Betrieb eines Handelsgewerbes (§ 1 HGB). *(Korrigiert: der ursprüngliche Schlüssel sagte konstitutiv.)* Siehe [Rechtsformen & Handelsregister](../Unternehmen/rechtsformen-handelsregister.md).
 - Eine Befreiung von der Einkommenssteuer im ersten Jahr gibt es nicht.
 - Ein selbstständiger Ist-Kaufmann benötigt eine Krankenversicherung.
 
