@@ -52,6 +52,8 @@
 - Ein neutraler **Schlichter** legt einen **Schlichterspruch** (Einigungsvorschlag) vor – bindend nur, wenn beide Seiten ihn annehmen bzw. das vorher vereinbart haben.
 - Während der Schlichtung gilt in der Regel Friedenspflicht.
 
+**Nordlicht-Beispiel (Station 5):** Der Entgelttarif läuft am 31. März aus, die Friedenspflicht endet. ver.di ruft im April zum **Warnstreik** auf, nach gescheiterten Verhandlungen und **Urabstimmung** zum Streik. Du darfst als Azubi mitstreiken; Ausbildungsvergütung gibt es für die Streiktage nicht, Streikgeld nur als Gewerkschaftsmitglied.
+
 ## Prüfungsfrage
 
 **Frage (Multiple Choice, 2 richtige):** Welche Aussagen zum Streik sind richtig?

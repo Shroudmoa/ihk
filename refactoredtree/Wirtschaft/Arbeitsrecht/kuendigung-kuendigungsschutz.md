@@ -54,6 +54,8 @@
 **Beispiel 1 (Winter 2023):** Zugang 06.05.2023, Grundfrist 4 Wochen → 03.06.2023 → nächster zulässiger Termin **15.06.2023**.
 **Beispiel 2 (Winter 2025):** Betriebszugehörigkeit seit 01.01.2012, AG kündigt am 11.12.2025 → 13 Jahre → Stufe „12 Jahre“ = 5 Monate zum Monatsende → **31.05.2026**.
 
+**Nordlicht-Beispiel (Station 8):** Ein Kollege ist seit 8 Jahren bei Nordlicht. Die Kündigung geht ihm am 20. März zu → 3 Monate zum Monatsende → Ende **30. Juni**. Kündigt er selbst, genügen 4 Wochen zum 15. oder Monatsende.
+
 ### Betriebsrat (§ 102 BetrVG)
 
 - Vor **jeder** Kündigung durch den AG anhören (auch in der Probezeit, auch fristlos) – Kündigung ohne Anhörung ist **unwirksam**, nachträgliche Anhörung heilt nicht.
@@ -108,4 +110,5 @@ d) Ein Mitarbeiter ist seit zwei Jahren ununterbrochen krank, eine Besserung ist
 - [Rechts- und Geschäftsfähigkeit](../Recht/rechts-geschaeftsfaehigkeit.md) – Minderjährige
 - [Gericht](../Recht/gericht.md) – Arbeitsgericht
 - [WiSo-Grundlagen (Lektion 11)](../analyse-der-exams/11_WiSo_Grundlagen.md)
-- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (3), [Winter 2023](../fragen/Winter-2023.md) (13–14, 27), [Winter 2025](../fragen/Winter-2025.md) (15)
+- [Pflichten & Haftung](pflichten-haftung.md) – Pflichtverletzung, Abmahnung
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (3), [Sommer 2022](../fragen/Sommer-2022.md) (7–8), [Winter 2022](../fragen/Winter-2022.md) (10), [Sommer 2023](../fragen/Sommer-2023.md) (18–19), [Winter 2023](../fragen/Winter-2023.md) (13–14, 27), [Sommer 2025](../fragen/Sommer-2025.md) (18), [Winter 2025](../fragen/Winter-2025.md) (15)

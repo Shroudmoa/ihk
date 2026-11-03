@@ -69,6 +69,8 @@ Je nach Aufgabe steht die Schlichtung vor der Urabstimmung oder es wird ohne Sch
 | Inhalt | Entgelt, Arbeitszeit, Urlaub | betriebliche Umsetzung, soziale Angelegenheiten |
 | Konfliktlösung | Arbeitskampf (Streik/Aussperrung) | Einigungsstelle – **kein** Streik |
 
+**Nordlicht-Beispiel (Station 5):** Nordlicht ist Mitglied im Arbeitgeberverband und an den IT-Tarifvertrag gebunden: 30 Urlaubstage und 38-Stunden-Woche stehen im **Manteltarif**, deine Ausbildungsvergütung im **Entgelttarif**. Die Regeln zu mobilem Arbeiten und BYOD vereinbart dagegen der Betriebsrat mit der Geschäftsführung in einer **Betriebsvereinbarung**.
+
 ## Prüfungsfrage
 
 **Frage (Multiple Choice, 2 richtige):** Welche Regelungen können durch eine Betriebsvereinbarung getroffen werden?
@@ -102,4 +104,4 @@ Je nach Aufgabe steht die Schlichtung vor der Urabstimmung oder es wird ohne Sch
 - [Betriebsrat & JAV](betriebsrat-jav.md) – Mitbestimmung, § 87 BetrVG
 - [Personalauswahl & Arbeitsvertrag](../Arbeitsrecht/personalauswahl-arbeitsvertrag.md) – Einzelarbeitsvertrag
 - [Lektion 20 – Betriebsrat & Mitbestimmung](../analyse-der-exams/L20_Betriebsrat_Mitbestimmung.md)
-- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (4, 6–7), [Sommer 2022](../fragen/Sommer-2022.md) (12–14), [Sommer 2024](../fragen/Sommer-2024.md) (5, 24–25), [Winter 2024](../fragen/Winter-2024.md) (7–9)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (4, 6–7), [Sommer 2022](../fragen/Sommer-2022.md) (12–14), [Winter 2023](../fragen/Winter-2023.md) (24–26), [Sommer 2024](../fragen/Sommer-2024.md) (5, 24–25), [Winter 2024](../fragen/Winter-2024.md) (7–9), [Sommer 2026](../fragen/Sommer-2026.md) (Tarifbindung)

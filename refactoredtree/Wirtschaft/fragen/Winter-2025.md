@@ -19,7 +19,7 @@
 - Probezeitkündigung ohne Frist ist zulässig, nicht mit vier Wochen.
 - Kündigung bei Berufswechsel nach der Probezeit ist zulässig.
 - Eine Entschädigung für die Ausbildung ist unzulässig.
-- Das Ausbildungsverhältnis endet mit Ablauf der Ausbildungszeit, auch bei früherer Prüfung.
+- Besteht der Azubi die Abschlussprüfung **vor** Ablauf der Ausbildungszeit, endet das Ausbildungsverhältnis bereits mit **Bekanntgabe des Ergebnisses** (§ 21 Abs. 2 BBiG). *(Korrigiert: der ursprüngliche Schlüssel sagte „mit Ablauf der Ausbildungszeit“.)*
 - Ein Zeugnis auf Wunsch ist Pflicht.
 - Ein unbefristeter Arbeitsvertrag am Tag nach der Prüfung ist keine Pflicht.
 

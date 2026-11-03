@@ -53,7 +53,7 @@ Eine unzulässige Klausel wird weder durch IHK-Zustimmung noch durch Einverstän
 - Keine Beschäftigung vor einem Berufsschulunterricht, der **vor 9 Uhr** beginnt (gilt seit 2020 auch für Volljährige).
 - Anrechnung: Berufsschultag mit > 5 Unterrichtsstunden à 45 min (einmal pro Woche) = durchschnittliche tägliche Ausbildungszeit; Blockwoche ≥ 25 Std. an ≥ 5 Tagen = durchschnittliche Wochenzeit.
 - Vergütung muss **angemessen** sein und **mindestens jährlich steigen**; Zahlung spätestens am **letzten Arbeitstag des Monats** (§ 18).
-- Fortzahlung u. a. bei Freistellung, Ausfall der Ausbildung und unverschuldeter Krankheit bis **6 Wochen** (§ 19).
+- Fortzahlung bei Freistellung sowie bis **6 Wochen** bei Ausfall der Ausbildung oder unverschuldeter Verhinderung aus persönlichen Gründen (§ 19); bei **Krankheit** gilt das EFZG (6 Wochen).
 
 **Mindestausbildungsvergütung (§ 17 Abs. 2) für Ausbildungsbeginn im Jahr 2026** (Stand 2026, wird jährlich fortgeschrieben):
 
@@ -80,6 +80,8 @@ Tarifliche Vergütungen gehen vor, auch wenn sie darunter liegen. Den gesetzlich
 | Prüfung nicht bestanden | Verlängerung **auf Verlangen des Azubis** bis zur nächsten Wiederholungsprüfung, max. 1 Jahr |
 | Weiterbeschäftigung ohne Vereinbarung | **unbefristetes Arbeitsverhältnis** (§ 24), keine neue Probezeit automatisch |
 
+**Nordlicht-Beispiel (Station 1 und 10):** Du bist 17 – Vertrag mit Unterschrift deiner Eltern, Probezeit 4 Monate, Beginn 1. August. Bestehst du am 18. Juni des dritten Jahres, endet die Ausbildung an diesem Tag; arbeitest du am 19. Juni ohne neue Absprache weiter, bist du unbefristet angestellt.
+
 Ein Anspruch auf Übernahme besteht grundsätzlich nicht; der Azubi muss ein Übernahmeangebot auch nicht annehmen (freie Berufswahl, Art. 12 GG). Ausnahme: JAV-/Betriebsratsmitglieder können die Übernahme verlangen (§ 78a BetrVG).
 
 **Schadensersatz (§ 23):** bei vorzeitiger Lösung nach der Probezeit, wenn der andere Teil den Grund zu vertreten hat; geltend machen innerhalb von **3 Monaten**.
@@ -99,7 +101,7 @@ Ein Anspruch auf Übernahme besteht grundsätzlich nicht; der Azubi muss ein Üb
 | 12 | nichtige Vereinbarungen | 22 | Kündigung |
 | 13–14 | Pflichten Azubi / Ausbildender | 23–25 | Schadensersatz, Weiterarbeit, Unabdingbarkeit |
 | 15 | Freistellung, Anrechnung | 28–30 | Eignung Ausbilder |
-| 16 | Zeugnis | 43 | Zulassung zur Abschlussprüfung (u. a. Ausbildungsnachweis) |
+| 16 | Zeugnis | 37, 43–45 | Abschlussprüfung: Wiederholung, Zulassung, vorzeitige Zulassung → [eigenes Blatt](abschlusspruefung.md) |
 
 ## Prüfungsfrage
 
@@ -117,7 +119,7 @@ Ein Anspruch auf Übernahme besteht grundsätzlich nicht; der Azubi muss ein Üb
 
 - Probezeit **1–4 Monate** (Ausbildung) vs. **max. 6 Monate** (Arbeitsverhältnis, § 622 Abs. 3 BGB).
 - Probezeitkündigung ist **ohne** Frist – „mit vier Wochen in der Probezeit“ ist falsch, aber schriftlich muss sie sein.
-- Ende bei vorzeitig bestandener Prüfung: **Bekanntgabe des Ergebnisses** (§ 21 Abs. 2). Achtung: Der Lösungsschlüssel Sommer 2025, Aufg. 9, behauptet das Gegenteil – rechtlich falsch.
+- Ende bei vorzeitig bestandener Prüfung: **Bekanntgabe des Ergebnisses** (§ 21 Abs. 2). Achtung: Der Lösungsschlüssel Winter 2025, Aufg. 3 („endet mit Ablauf der Ausbildungszeit, auch bei früherer Prüfung“) ist rechtlich falsch; Sommer 2025, Aufg. 9, ist bereits korrigiert.
 - Das BBiG regelt die Probezeit – nicht JArbSchG, ArbZG oder die Ausbildungsordnung.
 - Die IHK muss einer Kündigung **nicht** zustimmen.
 - Kündigung per E-Mail oder WhatsApp ist unwirksam (Schriftform, § 22 Abs. 3).
@@ -129,10 +131,12 @@ Ein Anspruch auf Übernahme besteht grundsätzlich nicht; der Azubi muss ein Üb
 ## Verwandt
 
 - [Ausbildungsordnung, Ausbildungsplan & Berichtsheft](ausbildungsordnung-ausbildungsnachweis.md) – § 5, Rahmenplan, Ausbildungsnachweis, Prüfungsaufbau
+- [Abschlussprüfung](abschlusspruefung.md) – Zulassung, Bestehen, Wiederholung, Verlängerung
+- [Pflichten & Haftung](../Arbeitsrecht/pflichten-haftung.md) – Verschwiegenheit, Arbeitnehmerhaftung auch für Azubis
 - [JArbSchG](jarbschg.md) – Zusatzschutz für minderjährige Azubis
 - [IHK & Ausbilder-Eignung](ihk-ausbilder-eignung.md) – zuständige Stelle, Schlichtungsausschuss
 - [Besonderer Kündigungsschutz](../Arbeitsrecht/besonderer-kuendigungsschutz.md) – Azubis nach der Probezeit
 - [Rechts- und Geschäftsfähigkeit](../Recht/rechts-geschaeftsfaehigkeit.md) – Vertrag und Kündigung bei Minderjährigen
 - [Arbeitszeugnis](../Arbeitsrecht/arbeitszeugnis.md) – einfaches vs. qualifiziertes Zeugnis
 - Gesetzestext: https://www.gesetze-im-internet.de/bbig_2005/
-- Echte Aufgaben: [Sommer 2024](../fragen/Sommer-2024.md) (1–3), [Winter 2025](../fragen/Winter-2025.md) (3–4, 7), [Sommer 2026](../fragen/Sommer-2026.md) (1–5)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (1), [Sommer 2022](../fragen/Sommer-2022.md) (2, 8), [Winter 2024](../fragen/Winter-2024.md) (2–4), [Sommer 2024](../fragen/Sommer-2024.md) (1–3), [Sommer 2025](../fragen/Sommer-2025.md) (8–10), [Winter 2025](../fragen/Winter-2025.md) (3–4, 7), [Sommer 2026](../fragen/Sommer-2026.md) (1–5)

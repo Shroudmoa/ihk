@@ -45,6 +45,16 @@ Wem ist nach der Sozialauswahl zu kündigen?
 
 **Musterantwort:** Nach den vier Kriterien ist **B** am wenigsten schutzbedürftig (jung, kurz im Betrieb, keine Unterhaltspflichten). B kann nur herausgenommen werden, wenn seine besonderen Kenntnisse für den Betrieb unverzichtbar sind und der Arbeitgeber das konkret begründet (Leistungsträgerklausel). Dann wäre als nächster C vor A zu kündigen.
 
+**Frage 2 (Multiple Choice, 2 richtige):** Welche Kriterien sind bei der Sozialauswahl nach § 1 Abs. 3 KSchG zu berücksichtigen?
+
+1. Lebensalter
+2. Leistungsbeurteilung des letzten Jahres
+3. Krankheitstage
+4. Unterhaltspflichten
+5. Gewerkschaftsmitgliedschaft
+
+**Musterantwort:** **1 und 4.** Dazu kommen Betriebszugehörigkeit und Schwerbehinderung. Leistung, Krankheit und Gewerkschaft sind keine Sozialkriterien (Leistung zählt nur über die Leistungsträgerklausel).
+
 ## Falle
 
 - Sozialauswahl ist **keine** Leistungsbeurteilung.

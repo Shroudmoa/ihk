@@ -138,7 +138,7 @@
 - b) Bundesurlaubsgesetz: Mindestanspruch von 24 Werktagen.
 - c) Entgeltfortzahlungsgesetz: Zahlung an gesetzlichen Feiertagen.
 - d) Arbeitszeitgesetz: tägliche Arbeitszeit von acht Stunden.
-- e) Schwerbehindertengesetz: besonderer Kündigungsschutz und fünf Tage Zusatzurlaub.
+- e) Schwerbehindertenrecht (seit 2001 **SGB IX**, früher Schwerbehindertengesetz): besonderer Kündigungsschutz und fünf Tage Zusatzurlaub.
 
 ## 19. Aufgabe (Umweltschutz)
 

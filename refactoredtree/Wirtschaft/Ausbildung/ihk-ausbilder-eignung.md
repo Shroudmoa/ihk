@@ -50,7 +50,10 @@ Die Bereitstellung von Räumen, Geräten und ausreichend Fachkräften ist Aufgab
 ### Prüfungs- und Schlichtungsausschuss
 
 - **Prüfungsausschuss** (§ 40 BBiG): mindestens **3 Mitglieder**, Beauftragte der Arbeitgeber und Arbeitnehmer in gleicher Zahl sowie mindestens eine Lehrkraft einer berufsbildenden Schule; ehrenamtlich.
+- **Prüfungsentscheidungen** der IHK sind Verwaltungsakte: Widerspruch bei der IHK, danach **Verwaltungsgericht** (nicht Arbeitsgericht) – Details: [Abschlussprüfung](abschlusspruefung.md).
 - **Schlichtungsausschuss** (§ 111 Abs. 2 ArbGG): Hat die IHK einen gebildet, muss er bei Streitigkeiten aus einem **bestehenden** Ausbildungsverhältnis **vor** dem Arbeitsgericht angerufen werden; eine Pflicht, jede Unstimmigkeit zu melden, gibt es nicht.
+
+**Nordlicht-Beispiel (Station 1):** Nordlicht schickt deinen Vertrag an die IHK, die ihn ins Verzeichnis einträgt. Deine Ausbilderin hat die AEVO-Prüfung abgelegt; Mitglied im Prüfungsausschuss muss sie dafür nicht sein.
 
 ## Prüfungsfrage
 
@@ -80,7 +83,8 @@ Die Bereitstellung von Räumen, Geräten und ausreichend Fachkräften ist Aufgab
 
 - [BBiG](bbig.md) – Ausbildungsvertrag, Pflichten, Prüfung
 - [Ausbildungsordnung, Ausbildungsplan & Berichtsheft](ausbildungsordnung-ausbildungsnachweis.md) – Prüfungsaufbau
+- [Abschlussprüfung](abschlusspruefung.md) – Zulassung, Wiederholung, Prüfungsausschuss
 - [Rechtsformen & Handelsregister](../Unternehmen/rechtsformen-handelsregister.md) – Amtsgericht als Registergericht
 - [Arbeitsschutz & Arbeitssicherheit](../Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md) – BG und Gewerbeaufsicht
 - [Europass, Fortbildung & Umschulung](europass-fortbildung-umschulung.md) – IHK-Fortbildungsprüfungen
-- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (14), [Winter 2022](../fragen/Winter-2022.md) (1, 17), [Sommer 2023](../fragen/Sommer-2023.md) (16, 28), [Winter 2025](../fragen/Winter-2025.md) (1)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (14), [Sommer 2022](../fragen/Sommer-2022.md) (6), [Winter 2022](../fragen/Winter-2022.md) (1, 17), [Sommer 2023](../fragen/Sommer-2023.md) (16, 28), [Winter 2023](../fragen/Winter-2023.md) (12), [Winter 2025](../fragen/Winter-2025.md) (1)

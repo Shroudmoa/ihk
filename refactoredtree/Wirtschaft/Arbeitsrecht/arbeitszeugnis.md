@@ -43,6 +43,8 @@ Hinweis: Der IHK-Schlüssel Winter 2022 bewertet „zu unserer Zufriedenheit“ 
 - **Beweislast:** Für eine bessere Note als „befriedigend“ der Arbeitnehmer, für eine schlechtere der Arbeitgeber (BAG).
 - Klage auf Berichtigung oder Ausstellung beim **Arbeitsgericht**.
 
+**Nordlicht-Beispiel (Station 10):** Zum Ausbildungsende verlangst du ein **qualifiziertes** Ausbildungszeugnis – Nordlicht muss es ausstellen, obwohl du übernommen wirst. Steht darin „stets zu unserer vollen Zufriedenheit“, ist das ein „gut“.
+
 ## Prüfungsfrage
 
 **Frage (Multiple Choice):** Wodurch wird ein Arbeitszeugnis zu einem qualifizierten Zeugnis?
@@ -74,4 +76,4 @@ Hinweis: Der IHK-Schlüssel Winter 2022 bewertet „zu unserer Zufriedenheit“ 
 - [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Beendigung
 - [Gericht](../Recht/gericht.md) – Arbeitsgericht
 - [Personalauswahl & Arbeitsvertrag](personalauswahl-arbeitsvertrag.md) – Bewerbungsunterlagen
-- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (9), [Winter 2022](../fragen/Winter-2022.md) (11), [Sommer 2025](../fragen/Sommer-2025.md) (19)
+- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (9), [Winter 2022](../fragen/Winter-2022.md) (11), [Sommer 2023](../fragen/Sommer-2023.md) (20), [Sommer 2025](../fragen/Sommer-2025.md) (19), [Winter 2025](../fragen/Winter-2025.md) (16)

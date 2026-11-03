@@ -49,7 +49,7 @@ Das Berichtsheft dient **nicht** der Kontrolle durch die Gewerkschaft, ist kein 
 | Teil 2 | Analyse und Entwicklung von Netzwerkinfrastrukturen (GA2) | 10 % |
 | Teil 2 | **Wirtschafts- und Sozialkunde** (60 Minuten, gebundene Aufgaben) | 10 % |
 
-**Bestehen (vereinfacht):** Gesamtergebnis Teil 1 + 2 mindestens „ausreichend“, Teil 2 mindestens „ausreichend“, in mindestens drei Prüfungsbereichen von Teil 2 mindestens „ausreichend“ und in keinem „ungenügend“. In einem schriftlichen Bereich von Teil 2 kann eine **mündliche Ergänzungsprüfung** beantragt werden, wenn sie für das Bestehen den Ausschlag geben kann.
+**Bestehen (vereinfacht):** Gesamtergebnis Teil 1 + 2 und Ergebnis Teil 2 je mindestens „ausreichend“, das **Projekt** mindestens „ausreichend“, mindestens zwei weitere Bereiche von Teil 2 mindestens „ausreichend“, keiner „ungenügend“. Zulassung, Ergänzungsprüfung und Wiederholung: [Abschlussprüfung](abschlusspruefung.md).
 
 ### Verkürzung, Verlängerung, Teilzeit (§§ 7a, 8 BBiG)
 
@@ -57,6 +57,8 @@ Das Berichtsheft dient **nicht** der Kontrolle durch die Gewerkschaft, ist kein 
 - **Vorzeitige Zulassung** zur Abschlussprüfung bei guten Leistungen (§ 45).
 - **Verlängerung** auf Antrag des Azubis, wenn nötig, um das Ziel zu erreichen (z. B. lange Krankheit).
 - **Teilzeitberufsausbildung** möglich; Dauer verlängert sich entsprechend (max. das 1,5-Fache).
+
+**Nordlicht-Beispiel (Station 1):** Am ersten Tag bekommst du den betrieblichen Ausbildungsplan (erst Helpdesk, dann Netzwerk, dann Server) und den Zugang zum digitalen Berichtsheft. Deine Ausbilderin zeichnet es monatlich ab – ohne Berichtsheft keine Zulassung zur Prüfung.
 
 ## Prüfungsfrage
 
@@ -85,6 +87,7 @@ Das Berichtsheft dient **nicht** der Kontrolle durch die Gewerkschaft, ist kein 
 ## Verwandt
 
 - [BBiG](bbig.md) – Vertrag, Pflichten, Probezeit, Ende
+- [Abschlussprüfung](abschlusspruefung.md) – Zulassung, Bestehen, Wiederholung
 - [IHK & Ausbilder-Eignung](ihk-ausbilder-eignung.md) – Prüfungsausschuss, Verkürzung, Zulassung
 - [Europass, Fortbildung & Umschulung](europass-fortbildung-umschulung.md) – nach der Ausbildung
 - [WiSo-Grundlagen (Lektion 11)](../analyse-der-exams/11_WiSo_Grundlagen.md)

@@ -52,6 +52,8 @@
 | § 16 | Maßregelungsverbot |
 | § 22 | **Beweislast:** Bewerber legt Indizien dar (z. B. Anzeigentext) → Arbeitgeber muss beweisen, dass kein Verstoß vorliegt |
 
+**Nordlicht-Beispiel (Station 6):** Für Saras Vertretung entwirft der Vertrieb die Anzeige „Verstärkung für unser junges, dynamisches Team gesucht“. Die Personalabteilung streicht „jung“ – ein Indiz für Altersdiskriminierung (§ 22) – und schreibt stattdessen „Fachinformatiker/in (m/w/d) mit Erfahrung in Windows Server“.
+
 **AGG-konforme Auswahl:** ausschließlich nach Qualifikation und Anforderungsprofil; anonymisierte Bewerbung (ohne Name, Alter, Foto) ist ein mögliches Instrument.
 
 ### Diversity Management und Charta der Vielfalt
@@ -94,4 +96,4 @@
 - [Betriebsrat & JAV](../Mitbestimmung/betriebsrat-jav.md) – Gleichstellung als BR-Aufgabe
 - [Unternehmensziele & Zielkonflikte](../Unternehmen/unternehmensziele-zielkonflikte.md) – Diversity als soziales Ziel
 - [Lektion 23 – Recht & Steuern (AGG)](../analyse-der-exams/L23_WISO_Recht_Steuern.md)
-- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (29–30), [Sommer 2023](../fragen/Sommer-2023.md) (29–30), [Winter 2024](../fragen/Winter-2024.md) (29–30), [Winter 2025](../fragen/Winter-2025.md) (20–21)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (22), [Sommer 2022](../fragen/Sommer-2022.md) (29–30), [Winter 2022](../fragen/Winter-2022.md) (28), [Sommer 2023](../fragen/Sommer-2023.md) (29–30), [Sommer 2024](../fragen/Sommer-2024.md) (27), [Winter 2024](../fragen/Winter-2024.md) (29–30), [Sommer 2025](../fragen/Sommer-2025.md) (24–25), [Winter 2025](../fragen/Winter-2025.md) (20–21)

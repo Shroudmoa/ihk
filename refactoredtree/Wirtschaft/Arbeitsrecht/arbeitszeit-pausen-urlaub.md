@@ -22,7 +22,7 @@
 | Sonn- und Feiertage | 9–11 | grundsätzlich Beschäftigungsverbot; Ausnahmen (IT-Notdienst, Krankenhaus) mit Ersatzruhetag; mind. 15 Sonntage im Jahr frei |
 | Aufzeichnung | 16 | Zeit über 8 Std. aufzeichnen; nach BAG (2022) besteht eine allgemeine Pflicht zur Arbeitszeiterfassung |
 
-Tarifverträge und Betriebsvereinbarungen können in Grenzen abweichen (§ 7). Eine Betriebsvereinbarung über 11 Std. tägliche Arbeitszeit ist unzulässig.
+Tarifverträge und Betriebsvereinbarungen können in Grenzen abweichen (§ 7). Eine Betriebsvereinbarung über 11 Std. tägliche Arbeitszeit ist unzulässig (Sommer 2024, Aufg. 5). Eine Reform (wöchentliche statt tägliche Höchstarbeitszeit, elektronische Zeiterfassung) ist politisch angekündigt – geprüft wird die geltende Regel 8/10 Std.
 
 ### Bundesurlaubsgesetz (BUrlG)
 
@@ -51,6 +51,13 @@ Nach EuGH/BAG verfällt Urlaub nur, wenn der Arbeitgeber rechtzeitig auf den dro
 | danach | **Krankengeld** der Krankenkasse: 70 % des Bruttos, max. 90 % des Nettos, bis 78 Wochen innerhalb von 3 Jahren |
 | Feiertage | Arbeitsentgelt für ausgefallene Arbeit an gesetzlichen Feiertagen (§ 2) |
 | Arbeitsunfall | ebenfalls 6 Wochen Arbeitgeber, danach **Verletztengeld** der Berufsgenossenschaft |
+| neue Krankheit | neuer Anspruch auf 6 Wochen; **dieselbe** Krankheit erneut → nur, wenn dazwischen 6 Monate ohne diese Krankheit liegen oder 12 Monate seit Beginn der ersten AU vergangen sind |
+| Azubis | EFZG gilt auch für sie (§ 1 Abs. 2 EFZG), samt 4 Wochen Wartezeit; Krankmeldung zusätzlich an die Berufsschule |
+| Urlaub | Krankheit im Urlaub mit Attest → Tag wird nicht als Urlaub angerechnet (§ 9 BUrlG) |
+
+Die Dauer der Entgeltfortzahlung ist **gesetzlich zwingend** – weder Betriebsvereinbarung noch Arbeitsvertrag dürfen sie verkürzen (Sommer 2024, Aufg. 5).
+
+**Nordlicht-Beispiel (Station 6):** Du bist von Montag bis Donnerstag krank. Du meldest dich Montag früh vor Arbeitsbeginn telefonisch ab; weil die AU länger als 3 Kalendertage dauert, brauchst du spätestens am Donnerstag eine ärztliche Feststellung – Nordlicht ruft die eAU bei deiner Krankenkasse ab, du gibst keinen gelben Schein mehr ab.
 
 ### Schutzgesetze im Überblick (Prüfungsklassiker „Zuordnung“)
 
@@ -96,4 +103,5 @@ Nach EuGH/BAG verfällt Urlaub nur, wenn der Arbeitgeber rechtzeitig auf den dro
 - [Tarifrecht & Betriebsvereinbarung](../Mitbestimmung/tarifrecht-betriebsvereinbarung.md) – Tarifurlaub, Arbeitszeitregelungen
 - [Betriebsrat & JAV](../Mitbestimmung/betriebsrat-jav.md) – Mitbestimmung bei Arbeitszeit und Urlaubsplan
 - [Gesetzliche Krankenversicherung](../Sozialversicherung/gkv.md) – Krankengeld
-- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (18), [Winter 2022](../fragen/Winter-2022.md) (8)
+- [Pflichten & Haftung](pflichten-haftung.md) – Anzeigepflicht bei Krankheit, Homeoffice und ArbZG
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (18), [Winter 2022](../fragen/Winter-2022.md) (8), [Sommer 2024](../fragen/Sommer-2024.md) (5), [Winter 2024](../fragen/Winter-2024.md) (1), [Sommer 2026](../fragen/Sommer-2026.md) (Pause nach 6 Std.)

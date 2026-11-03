@@ -24,7 +24,18 @@
 
 **Zusätzlich für JAV-Mitglieder und Azubis im Betriebsrat:** Übernahmeanspruch nach § 78a BetrVG – verlangen sie innerhalb der letzten **3 Monate** vor Ausbildungsende schriftlich die Weiterbeschäftigung, gilt ein **unbefristetes Arbeitsverhältnis** als begründet (AG kann nur beim Arbeitsgericht die Auflösung beantragen, wenn Weiterbeschäftigung unzumutbar ist).
 
-**Schwerbehinderung:** Zusatzurlaub 5 Arbeitstage (§ 208 SGB IX); Kündigungsschutz gilt auch, wenn der Arbeitgeber die Schwerbehinderung nicht kannte, sofern der Antrag mindestens 3 Wochen vor der Kündigung gestellt war.
+### Schwerbehinderung kompakt (SGB IX)
+
+| Punkt | Regel |
+|---|---|
+| Begriff | **Grad der Behinderung (GdB) ≥ 50**, festgestellt vom Versorgungsamt (Ausweis); **Gleichstellung** bei GdB 30–40 durch die **Agentur für Arbeit** |
+| Beschäftigungspflicht | Arbeitgeber mit mind. **20 Arbeitsplätzen**: **5 %** mit schwerbehinderten Menschen besetzen, sonst **Ausgleichsabgabe** an das Integrationsamt (§§ 154, 160) |
+| Zusatzurlaub | **5 Arbeitstage** pro Jahr bei 5-Tage-Woche (§ 208) – nicht für Gleichgestellte |
+| Kündigung | nur mit vorheriger **Zustimmung des Integrationsamts** (§ 168), nach 6 Monaten Beschäftigung; gilt auch, wenn der AG nichts wusste, sofern der Antrag mindestens 3 Wochen vor der Kündigung gestellt war |
+| Vertretung | **Schwerbehindertenvertretung** ab 5 schwerbehinderten Beschäftigten; vor jeder Kündigung anhören, sonst unwirksam |
+| Bewerbung | Frage nach Schwerbehinderung **vor** der Einstellung unzulässig; Förderung (mehr Urlaub, bevorzugte Einstellung bei gleicher Eignung) ist **keine** AGG-Diskriminierung |
+
+**Nordlicht-Beispiel (Station 8):** Bei der Krise stehen auf der Liste: Sara (Elternzeit), Betriebsratsmitglied Kai, du als Azubi im dritten Jahr und Systemadministrator Ben (schwerbehindert). Allen vier kann nicht einfach ordentlich gekündigt werden – bei Ben müsste vorher das Integrationsamt zustimmen.
 
 ### Abgrenzung
 
@@ -65,4 +76,5 @@
 - [Mutterschutz & Elternzeit](mutterschutz-elternzeit.md) – MuSchG und BEEG im Detail
 - [Betriebsrat & JAV](../Mitbestimmung/betriebsrat-jav.md) – § 103 BetrVG, § 78a BetrVG
 - [BBiG](../Ausbildung/bbig.md) – Kündigung im Ausbildungsverhältnis
-- Echte Aufgaben: [Winter 2023](../fragen/Winter-2023.md) (17), [Sommer 2024](../fragen/Sommer-2024.md) (23), [Sommer 2025](../fragen/Sommer-2025.md) (20)
+- [AGG & Diversity](agg-diversity.md) – Behinderung als geschütztes Merkmal
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (18e), [Winter 2023](../fragen/Winter-2023.md) (17), [Sommer 2024](../fragen/Sommer-2024.md) (23), [Sommer 2025](../fragen/Sommer-2025.md) (20)

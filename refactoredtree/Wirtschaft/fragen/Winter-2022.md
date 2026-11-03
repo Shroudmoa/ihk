@@ -97,7 +97,7 @@
 - Umbaupläne des Betriebsgeländes sind nicht mitbestimmungspflichtig.
 - Der Personalbedarf ist nicht mitbestimmungspflichtig.
 - Betriebsferien sind mitbestimmungspflichtig.
-- Umweltschutz ist mitbestimmungspflichtig.
+- Umweltschutz: Der Betriebsrat ist zu **beteiligen** (§ 89 BetrVG) und kann eine freiwillige Betriebsvereinbarung schließen (§ 88), ein erzwingbares Mitbestimmungsrecht nach § 87 gibt es aber nicht. *(Hinweis: der ursprüngliche Schlüssel nannte Umweltschutz pauschal „mitbestimmungspflichtig“.)*
 - Die Einstellung leitender Mitarbeiter ist nicht mitbestimmungspflichtig.
 
 ## 14. Aufgabe (JAV)

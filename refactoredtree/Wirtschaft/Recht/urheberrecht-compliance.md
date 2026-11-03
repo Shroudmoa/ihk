@@ -54,9 +54,11 @@
 | IT | Lizenzmanagement, Sicherheitsrichtlinien |
 
 **Instrumente:** Verhaltenskodex (Code of Conduct), Compliance-Beauftragter, Schulungen, Vier-Augen-Prinzip, interne Kontrollen, **Hinweisgebersystem**.
-**Hinweisgeberschutzgesetz (HinSchG, seit 2023):** Unternehmen ab **50 Beschäftigten** müssen eine interne Meldestelle einrichten; Hinweisgeber sind vor Repressalien geschützt.
+**Hinweisgeberschutzgesetz (HinSchG, seit 2.7.2023):** Unternehmen ab **50 Beschäftigten** müssen eine interne Meldestelle einrichten; Hinweisgeber sind vor Repressalien geschützt (Details: [Pflichten & Haftung](../Arbeitsrecht/pflichten-haftung.md)).
 
 Abgrenzung der Begriffe aus Prüfungen: **Datenschutz** ist ein Teilgebiet, **Disruption** bezeichnet bahnbrechende Innovation, „Incidence“ und „Consilience“ sind keine Fachbegriffe für Regelkonformität.
+
+**Nordlicht-Beispiel (Station 6):** Dein PowerShell-Skript für den Kunden Rheinblick hast du im Job geschrieben: Du bist Urheber, Nordlicht darf es verkaufen und weiterentwickeln. Ein Lieferant bietet dir für eine Empfehlung einen Gutschein an – das meldest du nach dem Compliance-Kodex und lehnst ab.
 
 ## Prüfungsfrage
 
@@ -85,7 +87,7 @@ Abgrenzung der Begriffe aus Prüfungen: **Datenschutz** ist ein Teilgebiet, **Di
 ## Verwandt
 
 - [IT-Sicherheit & Datenschutz im Arbeitsalltag](../Arbeitsschutz-Umwelt/it-sicherheit-im-arbeitsalltag.md) – Datenschutz, Sicherheitsregeln
-- [Personalauswahl & Arbeitsvertrag](../Arbeitsrecht/personalauswahl-arbeitsvertrag.md) – Treue- und Verschwiegenheitspflicht
+- [Pflichten & Haftung](../Arbeitsrecht/pflichten-haftung.md) – Verschwiegenheit, Hinweisgeberschutz
 - [Unternehmensverbindungen & Kartellrecht](../Unternehmen/unternehmensverbindungen-kartellrecht.md) – Kartell-Compliance
 - [Lektion 10 – Lizenzierung](../../IT/analyse-der-exams/10_Lizenzierung.md)
 - [DSGVO & TOM (IT)](../../IT/Management/DSGVO/dsgvo-tom.md)

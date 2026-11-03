@@ -4,7 +4,7 @@
 
 - Rechtsgrundlage für Betriebsrat, JAV, Betriebsversammlung und Betriebsvereinbarung: **Betriebsverfassungsgesetz (BetrVG)** – nicht BGB, BBiG oder TVG.
 - Betriebsrat möglich ab **5 ständigen wahlberechtigten AN, davon 3 wählbar** – Pflicht ist er nicht, die Belegschaft muss ihn wählen.
-- **Aktiv** wahlberechtigt ab **16**, Leiharbeitnehmer nach **3 Monaten** Einsatz; **wählbar** ab **18** und **6 Monaten** Betriebszugehörigkeit; Amtszeit **4 Jahre** (regelmäßige Wahlen 1.3.–31.5., zuletzt 2026).
+- **Aktiv** wahlberechtigt ab **16**, Leiharbeitnehmer bei Einsatz **länger als 3 Monate**; **wählbar** ab **18** und **6 Monaten** Betriebszugehörigkeit; Amtszeit **4 Jahre** (regelmäßige Wahlen 1.3.–31.5., zuletzt 2026).
 - Rechte gestuft: **Mitbestimmung** (§ 87 – Arbeitszeit, Pausen, Urlaubsplan, Überwachungstechnik …) > Zustimmungsverweigerung (§ 99) > **Anhörung** (Kündigung, § 102) > Unterrichtung/Beratung (Bau, Personalplanung, Wirtschaft).
 - **JAV** nur in Betrieben **mit** Betriebsrat, ab 5 Jugendlichen bzw. Azubis; Amtszeit **2 Jahre**; handelt über den Betriebsrat, nicht direkt mit der Geschäftsführung.
 - **Betriebsversammlung** einmal pro Kalendervierteljahr, für **alle** AN, während der Arbeitszeit und **bezahlt**.
@@ -16,7 +16,7 @@
 | Punkt | Regel | § BetrVG |
 |---|---|---|
 | Voraussetzung | ≥ 5 ständige wahlberechtigte AN, davon 3 wählbar | 1 |
-| Aktives Wahlrecht | alle AN ab **16 Jahren** (inkl. Azubis, Teilzeit, Minijobber); Leiharbeitnehmer, wenn länger als **3 Monate** eingesetzt | 7 |
+| Aktives Wahlrecht | alle AN ab **16 Jahren** (inkl. Azubis, Teilzeit, Minijobber); Leiharbeitnehmer, wenn sie länger als **3 Monate** eingesetzt werden (gemeint ist der geplante Einsatz; der IHK-Schlüssel zählt „erst seit einem Monat da“ nicht mit) | 7 |
 | Passives Wahlrecht | Wahlberechtigte ab **18 Jahren** mit **6 Monaten** Betriebszugehörigkeit; Gewerkschaftsmitgliedschaft oder Berufsabschluss **nicht** nötig | 8 |
 | Nicht vertreten | **leitende Angestellte** (eigener Sprecherausschuss), Geschäftsführung | 5 Abs. 3 |
 | Amtszeit / Termin | 4 Jahre, regelmäßig 1. März – 31. Mai (2022, 2026, 2030) | 13, 21 |
@@ -42,7 +42,7 @@
 
 | Stufe | Bedeutung | Beispiele |
 |---|---|---|
-| **Echte (erzwingbare) Mitbestimmung** – § 87 soziale Angelegenheiten | ohne Einigung keine Maßnahme; Streit → **Einigungsstelle** | Ordnung im Betrieb (Rauchverbot, Kleiderordnung), **Beginn und Ende der täglichen Arbeitszeit**, Pausen, Verteilung auf Wochentage, **Überstunden/Kurzarbeit**, Auszahlung des Entgelts, **Urlaubsgrundsätze und Urlaubsplan/Betriebsferien**, **technische Überwachung** (Kameras, Zeiterfassung, Software), Gesundheitsschutz, Sozialeinrichtungen (Kantine), Lohngestaltung (nicht Lohnhöhe), Gruppenarbeit, **mobile Arbeit** |
+| **Echte (erzwingbare) Mitbestimmung** – § 87 soziale Angelegenheiten | ohne Einigung keine Maßnahme; Streit → **Einigungsstelle** | Ordnung im Betrieb (Rauchverbot, Kleiderordnung), **Beginn und Ende der täglichen Arbeitszeit**, Pausen, Verteilung auf Wochentage, **Überstunden/Kurzarbeit**, Auszahlung des Entgelts, **Urlaubsgrundsätze und Urlaubsplan/Betriebsferien**, **technische Überwachung** (Kameras, Zeiterfassung, Software), Gesundheitsschutz, Sozialeinrichtungen (Kantine), Lohngestaltung (nicht Lohnhöhe), Gruppenarbeit, **Ausgestaltung mobiler Arbeit** (Nr. 14 – nicht das „Ob“) |
 | **Zustimmungsverweigerungsrecht** – § 99 personelle Einzelmaßnahmen (Unternehmen > 20 AN) | BR kann aus gesetzlichen Gründen verweigern; AG muss Zustimmung beim Arbeitsgericht ersetzen lassen | Einstellung, Versetzung, Ein- und Umgruppierung |
 | **Mitbestimmung bei Berufsbildung** – §§ 96–98 | Durchführung betrieblicher Bildungsmaßnahmen, Bestellung von Ausbildern | |
 | **Anhörung** – § 102 | vor jeder Kündigung; ohne Anhörung unwirksam; Widerspruch möglich, aber **kein Veto** | Kündigung |
@@ -71,6 +71,8 @@
 | Keine Rechte | kein eigenes Verhandlungsmandat gegenüber der Geschäftsführung, kein Mitspracherecht in allen Belangen, keine Anhörungspflicht vor jeder Entscheidung |
 | Übernahme | keine automatische Übernahme; JAV-Mitglieder können sie nach § 78a verlangen (3 Monate vor Ende, schriftlich) |
 
+**Nordlicht-Beispiel (Station 5):** Nordlicht hat 70 Beschäftigte, darunter 6 Azubis – also gibt es einen Betriebsrat mit 5 Mitgliedern und eine JAV (1 Mitglied). Du darfst im Herbst die JAV wählen und dich aufstellen lassen; für den Betriebsrat darfst du mit 17 wählen, aber erst mit 18 kandidieren. Die geplante BYOD-Richtlinie mit MDM-Software ist eine technische Einrichtung zur Überwachung → **echte Mitbestimmung** (§ 87 Abs. 1 Nr. 6).
+
 ## Prüfungsfrage
 
 **Frage (Rechenaufgabe, Winter 2022):** Ein Betrieb hat 537 Arbeitnehmer, 17 volljährige und 2 minderjährige (15 Jahre) Auszubildende. Wie viele Mitglieder hat der Betriebsrat?
@@ -89,6 +91,7 @@
 - Die JAV vertritt nicht selbst gegenüber dem Arbeitgeber – immer **über** den Betriebsrat.
 - Betriebsversammlung ist bezahlte Arbeitszeit für alle, nicht nur für Gewerkschaftsmitglieder.
 - Betriebsvereinbarung schließen **Arbeitgeber und Betriebsrat** – nicht Gewerkschaft, IHK oder Arbeitsagentur.
+- **Umweltschutz:** Der Betriebsrat wird beteiligt (§ 89, freiwillige BV nach § 88) – ein **erzwingbares** Mitbestimmungsrecht nach § 87 hat er nicht. Der Schlüssel Winter 2022, Aufg. 13, nennt Umweltschutz „mitbestimmungspflichtig“; in einer Auswahl gegen Arbeitszeit oder Kameras gewinnt § 87.
 
 ## Merksatz
 
@@ -102,4 +105,6 @@
 - [Kündigung & Kündigungsschutz](../Arbeitsrecht/kuendigung-kuendigungsschutz.md) – Anhörung nach § 102
 - [Rechtsquellen & Günstigkeitsprinzip](../Recht/rechtsquellen-arbeitsrecht.md) – welches Gesetz regelt was
 - [Lektion 20 – Betriebsrat & Mitbestimmung](../analyse-der-exams/L20_Betriebsrat_Mitbestimmung.md)
-- Echte Aufgaben: [Winter 2022](../fragen/Winter-2022.md) (12–14), [Winter 2023](../fragen/Winter-2023.md) (7–10), [Winter 2024](../fragen/Winter-2024.md) (5, 11–12), [Sommer 2026](../fragen/Sommer-2026.md) (Mitbestimmung)
+- [Pflichten & Haftung](../Arbeitsrecht/pflichten-haftung.md) – mobiles Arbeiten und Homeoffice
+- [MDM & BYOD (IT)](../../IT/FiSi-Administrator/Netzwerk-Administration/mdm-byod.md) – technische Umsetzung der BYOD-Betriebsvereinbarung
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (15–16), [Sommer 2022](../fragen/Sommer-2022.md) (10–11), [Winter 2022](../fragen/Winter-2022.md) (12–14), [Sommer 2023](../fragen/Sommer-2023.md) (10–12), [Winter 2023](../fragen/Winter-2023.md) (7–10), [Sommer 2024](../fragen/Sommer-2024.md) (6), [Winter 2024](../fragen/Winter-2024.md) (5, 11–12), [Sommer 2025](../fragen/Sommer-2025.md) (11–13, 15), [Winter 2025](../fragen/Winter-2025.md) (8–10), [Sommer 2026](../fragen/Sommer-2026.md) (Mitbestimmung)

@@ -51,7 +51,7 @@
 - Keine gefährlichen Arbeiten (Gefahrstoffe, Strahlen, Unfallgefahren, die Jugendliche nicht erkennen), keine Arbeit über die Leistungsfähigkeit hinaus.
 - Keine **Akkord- und tempoabhängige Arbeit**.
 - Gefährdungsbeurteilung vor Beginn (§ 28a), **Unterweisung mindestens halbjährlich** (§ 29).
-- Keine Züchtigung, keine Abgabe von Alkohol und Tabak an Jugendliche unter 16 bzw. Branntwein unter 18 (§ 31).
+- Keine Züchtigung; der Arbeitgeber darf Jugendlichen **keine Tabakwaren**, unter 16 **keinen Alkohol** und unter 18 **keinen Branntwein** geben (§ 31).
 - **Zweck:** Schutz vor Überforderung, Gesundheitsgefahren und Entwicklungsstörungen.
 
 ## Prüfungsfrage
@@ -59,6 +59,18 @@
 **Frage (Fallaufgabe):** Die 17-jährige Auszubildende Lea arbeitet am Freitag von 9:00 bis 17:30 Uhr; ihre einzige Pause (60 min) beginnt um 14:00 Uhr. Beurteilen Sie die Regelung.
 
 **Musterantwort:** Arbeitszeit 8,5 Std. minus 1 Std. Pause = 7,5 Std. – zulässig. Die Pausendauer von 60 min ist ausreichend, aber die Pause beginnt erst 5 Stunden nach Arbeitsbeginn. Nach § 11 Abs. 2 JArbSchG dürfen Jugendliche **nicht länger als 4,5 Stunden ohne Pause** beschäftigt werden. Die Pause muss spätestens um 13:30 Uhr beginnen – die Regelung verstößt gegen das JArbSchG.
+
+**Frage 2 (Multiple Choice, 2 richtige):** Welche Aussagen zum JArbSchG treffen zu?
+
+1. Das JArbSchG gilt für alle Auszubildenden, unabhängig vom Alter.
+2. Jugendliche dürfen grundsätzlich nur zwischen 6 und 20 Uhr beschäftigt werden.
+3. Ein Jugendlicher darf nur beschäftigt werden, wenn eine ärztliche Erstuntersuchung vorliegt, die nicht älter als 14 Monate ist.
+4. Nach einem Berufsschultag mit 4 Unterrichtsstunden darf der Jugendliche nicht mehr beschäftigt werden.
+5. Jugendliche haben Anspruch auf zwei freie Tage vor der schriftlichen Abschlussprüfung.
+
+**Musterantwort:** **2 und 3.** (1) Nur für unter 18-Jährige. (4) Die Sperre gilt erst bei **mehr als 5** Unterrichtsstunden. (5) Nur der Arbeitstag unmittelbar vor der schriftlichen Prüfung.
+
+**Nordlicht-Beispiel (Station 1):** Du bist bei Beginn 17: Bevor du anfangen darfst, legst du die Erstuntersuchung vor. Ein Kundeneinsatz bis 21 Uhr ist für dich tabu, für deine 19-jährige Mit-Azubine nach ArbZG zulässig.
 
 ## Falle
 
@@ -80,4 +92,4 @@
 - [Arbeitszeit, Pausen & Urlaub](../Arbeitsrecht/arbeitszeit-pausen-urlaub.md) – ArbZG und BUrlG für Erwachsene
 - [Arbeitsschutz & Arbeitssicherheit](../Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md) – Gefährdungsbeurteilung, Unterweisung
 - [Betriebsrat & JAV](../Mitbestimmung/betriebsrat-jav.md) – Interessenvertretung der Jugendlichen
-- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (3–5), [Winter 2023](../fragen/Winter-2023.md) (11), [Winter 2025](../fragen/Winter-2025.md) (11)
+- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (3–5), [Sommer 2023](../fragen/Sommer-2023.md) (2), [Winter 2023](../fragen/Winter-2023.md) (11), [Winter 2024](../fragen/Winter-2024.md) (1), [Sommer 2025](../fragen/Sommer-2025.md) (14), [Winter 2025](../fragen/Winter-2025.md) (11)

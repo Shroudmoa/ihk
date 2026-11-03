@@ -54,6 +54,8 @@ Mutterschaftsgeld wird nur für die **Schutzfristen** gezahlt, nicht für die ga
 - Kein Anspruch bei zu versteuerndem Einkommen über **175.000 €** (Paare und Alleinerziehende, Geburten ab 1.4.2025).
 - Steuerfinanzierte Familienleistung, Antrag bei der Elterngeldstelle – **keine** Leistung der Sozialversicherung.
 
+**Nordlicht-Beispiel (Station 6):** Sara teilt im Mai ihre Schwangerschaft mit, Geburtstermin ist der 10. Dezember. Ab 29. Oktober beginnt die Schutzfrist (sie könnte freiwillig weiterarbeiten), nach der Geburt darf sie 8 Wochen gar nicht arbeiten. Die Elternzeit ihres Partners muss er 7 Wochen vorher schriftlich bei seinem Arbeitgeber anmelden.
+
 ## Prüfungsfrage
 
 **Frage (Multiple Choice, 2 richtige):** Eine Auszubildende teilt ihrem Ausbildungsbetrieb ihre Schwangerschaft mit. Was gilt?
@@ -70,6 +72,7 @@ Mutterschaftsgeld wird nur für die **Schutzfristen** gezahlt, nicht für die ga
 
 - **6 Wochen vor + 8 Wochen nach** – nicht umgekehrt; nur vor der Geburt ist Verzicht möglich.
 - Kündigungsschutz bis **4 Monate** nach der Entbindung, nicht 8 Wochen.
+- Während der **Schutzfristen** zahlt nicht der Betrieb die Vergütung weiter, sondern Krankenkasse (Mutterschaftsgeld) + Arbeitgeber (Zuschuss) – im Ergebnis bleibt das Netto gleich. Der Schlüssel Sommer 2026 („Vergütung wird weitergezahlt“) meint dieses Ergebnis.
 - Auch eine **fristlose** Kündigung braucht die behördliche Zulässigkeitserklärung.
 - Elternzeit regelt das **BEEG**, nicht das MuSchG.
 - Elternzeit max. **36 Monate**, Elterngeld max. **14 Monate** (Basis).
@@ -85,4 +88,4 @@ Mutterschaftsgeld wird nur für die **Schutzfristen** gezahlt, nicht für die ga
 - [Arbeitszeit, Pausen & Urlaub](arbeitszeit-pausen-urlaub.md) – ArbZG, BUrlG, EFZG
 - [Gesetzliche Krankenversicherung](../Sozialversicherung/gkv.md) – Mutterschaftsgeld
 - [AGG & Diversity](agg-diversity.md) – Benachteiligung wegen Schwangerschaft
-- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (5), [Winter 2022](../fragen/Winter-2022.md) (9), [Sommer 2026](../fragen/Sommer-2026.md) (Schwangerschaft, Rückkehr)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (5), [Winter 2022](../fragen/Winter-2022.md) (9), [Winter 2023](../fragen/Winter-2023.md) (18), [Sommer 2024](../fragen/Sommer-2024.md) (18), [Sommer 2026](../fragen/Sommer-2026.md) (Schwangerschaft, Rückkehr)

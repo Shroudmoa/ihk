@@ -23,9 +23,20 @@
 
 ### Kreislaufwirtschaft und Recycling
 
-- **KrWG** (Kreislaufwirtschaftsgesetz) – Abfallhierarchie; **VerpackG** – Hersteller registrieren sich im Register **LUCID** und beteiligen sich am **Dualen System** (Gelber Sack/Tonne); **ElektroG** – Rücknahme von Altgeräten (Händler ab 400 m² Verkaufsfläche bzw. Lebensmittelhändler ab 800 m²); **BattG** – Batterierücknahme.
+- **KrWG** (Kreislaufwirtschaftsgesetz) – Abfallhierarchie; **VerpackG** – Hersteller registrieren sich im Register **LUCID** und beteiligen sich am **Dualen System** (Gelber Sack/Tonne); **ElektroG** – Rücknahme von Elektroaltgeräten (siehe unten); **Batterien** – Rücknahmepflicht des Handels (BattDG/EU-Batterieverordnung).
 - **Recycling** = Abfälle werden zu neuen Rohstoffen aufbereitet – z. B. **Verpackungen trennen und dem Dualen System zuführen**. Kein Recycling: Produkte mit Umweltsiegel kaufen, Papierhandtücher, Öko-Toilettenspülung, Bio-Lebensmittel.
 - **Verpackung:** Vermeidung unnötiger Verpackung ist besser als jede Entsorgung; Papier- oder Recyclingplastikverpackungen sind nicht automatisch umweltfreundlich; Mehrweg vor Einweg; Kleinpackungen vermeiden.
+
+### Elektroschrott (ElektroG, EU-WEEE-Richtlinie) – Green IT
+
+| Regel | Inhalt |
+|---|---|
+| Kennzeichnung | **durchgestrichene Mülltonne** = gehört **nicht** in den Hausmüll; Hersteller sind bei der stiftung ear registriert (WEEE-Reg.-Nr.) |
+| Rücknahme | kommunale Sammelstellen (Wertstoffhof) und Handel: Elektrohändler ab **400 m²** Verkaufs- bzw. Lagerfläche (auch online), Lebensmittelhändler ab **800 m²**, die Elektrogeräte verkaufen – **kleine Geräte** (keine Kante über 25 cm) kostenlos ohne Neukauf, große **1 : 1** beim Kauf eines neuen Geräts |
+| Pflichten des Besitzers | Batterien/Akkus entnehmen (wenn möglich) und **personenbezogene Daten löschen**, bevor das Gerät abgegeben wird |
+| gewerbliche IT (B2B) | Rücknahme über Hersteller oder **zertifizierten Entsorger** (Entsorgungsfachbetrieb), Nachweis der **Datenvernichtung** (DIN 66399) |
+
+**Nordlicht-Beispiel:** Beim Server-Tausch (Station 9) werden die Altgeräte zuerst **weiterverwendet** (Testumgebung, Refurbisher), erst dann recycelt. Die Festplatten werden vorher zertifiziert gelöscht oder geschreddert – siehe [Datenträgerentsorgung](../../IT/FiSi-Administrator/Sicherheit/datentraeger-entsorgung.md). Die neuen Server wählt ihr nach Energieeffizienz aus – siehe [Energieeffizienz & Stromkosten](../../IT/FiSi-Administrator/Server/energieeffizienz-stromkosten.md).
 
 ### Zeichen und Kennzeichnungen
 
@@ -69,6 +80,8 @@
 | **EU-ETS / BEHG** | Emissionshandel bzw. nationaler CO₂-Preis für Brennstoffe |
 | **EnEfG** | Energieeffizienzgesetz, u. a. Vorgaben für Rechenzentren (Abwärme, PUE) |
 
+**Begriffe:** **CSR** (Corporate Social Responsibility) = freiwillige gesellschaftliche Verantwortung über das Gesetz hinaus (z. B. Ehrenamt-Tage, faire Beschaffung). **ESG** (Environmental, Social, Governance) = Kriterien, nach denen Banken und Investoren Nachhaltigkeit bewerten. **Triple Bottom Line** = ökonomische, ökologische und soziale Bilanz (Nachhaltigkeitsdreieck).
+
 ## Prüfungsfrage
 
 **Frage (Multiple Choice):** Wofür steht das Umweltzeichen „Blauer Engel“ auf einem Kopierpapier?
@@ -80,6 +93,16 @@
 5. dafür, dass das Papier über das Duale System entsorgt werden muss
 
 **Musterantwort:** **3.** Der Blaue Engel kennzeichnet Produkte, die aus ökologischer Sicht besonders umweltfreundlich sind; Haltbarkeit, Sicherheit und Qualität werden nicht bescheinigt, eine Entsorgungsvorschrift ist damit nicht verbunden.
+
+**Frage (Multiple Choice, 2 richtige):** Welche **zwei** Maßnahmen entsprechen der Abfallhierarchie am besten (vgl. Sommer 2023, Aufg. 24)?
+
+1. unnötige Verpackungen beim Versand von Hardware ganz weglassen
+2. Altgeräte grob reinigen und mit dem Restmüll entsorgen
+3. ausgemusterte, funktionsfähige Notebooks nach Datenlöschung an eine Schule weitergeben
+4. statt Kunststoff ausschließlich Papierverpackungen einsetzen, egal wie viel
+5. Altgeräte in einer höheren Halle zwischenlagern
+
+**Musterantwort:** **1 und 3.** Vermeiden (1) und Wiederverwenden (3) stehen ganz oben. Restmüll (2) verstößt gegen ElektroG, Papierverpackungen sind nicht automatisch umweltfreundlich (4), Lagern (5) ist keine Verwertung.
 
 ## Falle
 
@@ -101,4 +124,6 @@
 - [Arbeitsschutz & Arbeitssicherheit](arbeitsschutz-arbeitssicherheit.md) – Beauftragte im Betrieb
 - [Soziale Marktwirtschaft & Sozialstaat](../Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md) – Umweltpolitik
 - [Lektion 25 – Umweltschutz & Nachhaltigkeit](../analyse-der-exams/L25_Umweltschutz_Nachhaltigkeit.md)
-- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (19–20), [Sommer 2022](../fragen/Sommer-2022.md) (27–28), [Winter 2023](../fragen/Winter-2023.md) (29–30), [Sommer 2024](../fragen/Sommer-2024.md) (29–30), [Winter 2024](../fragen/Winter-2024.md) (24–25), [Sommer 2025](../fragen/Sommer-2025.md) (29–30)
+- [Datenträgerentsorgung (IT)](../../IT/FiSi-Administrator/Sicherheit/datentraeger-entsorgung.md) – Löschen und Vernichten vor dem Recycling
+- [Energieeffizienz & Stromkosten (IT)](../../IT/FiSi-Administrator/Server/energieeffizienz-stromkosten.md) – Green IT rechnen
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (19–20), [Sommer 2022](../fragen/Sommer-2022.md) (27–28), [Sommer 2023](../fragen/Sommer-2023.md) (24–25), [Winter 2023](../fragen/Winter-2023.md) (29–30), [Sommer 2024](../fragen/Sommer-2024.md) (29–30), [Winter 2024](../fragen/Winter-2024.md) (23–25), [Sommer 2025](../fragen/Sommer-2025.md) (29–30), [Winter 2025](../fragen/Winter-2025.md) (29–30), [Sommer 2026](../fragen/Sommer-2026.md) (21, 23–24)

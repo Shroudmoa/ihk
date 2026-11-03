@@ -37,15 +37,7 @@ Seit 1.1.2025 genügt **Textform** (z. B. E-Mail/PDF), wenn das Dokument speiche
 
 ### Pflichten aus dem Arbeitsvertrag (§ 611a BGB)
 
-| Arbeitnehmer | Arbeitgeber |
-|---|---|
-| **Arbeitspflicht** (persönlich, nach Weisung) | **Vergütungspflicht** (pünktlich, mind. Mindestlohn) |
-| **Treuepflicht**: Verschwiegenheit über Betriebs- und Geschäftsgeheimnisse, Wettbewerbsverbot während des Arbeitsverhältnisses, keine Schmiergelder | **Fürsorgepflicht**: Schutz von Leben und Gesundheit, Persönlichkeitsrechte, Datenschutz |
-| Sorgfaltspflicht, Schadensabwendung | **Beschäftigungspflicht** |
-| Anzeigepflicht bei Krankheit | **Gleichbehandlungspflicht** (AGG) |
-| Wahrung des Betriebsfriedens | Urlaubsgewährung, Zeugnis, Entgeltfortzahlung |
-
-Eine umfassende Haftungsübernahme ist **keine** Arbeitnehmerpflicht: Bei betrieblich veranlasster Tätigkeit haftet der AN je nach Verschulden (leichte Fahrlässigkeit: gar nicht; mittlere: anteilig; grobe/Vorsatz: in der Regel voll).
+Arbeitnehmer: **Arbeit, Verschwiegenheit, Wettbewerbsverbot**; Arbeitgeber: **Vergütung, Fürsorge, Beschäftigung, Gleichbehandlung**. Eine umfassende Haftungsübernahme ist **keine** Arbeitnehmerpflicht. Ausführlich mit Haftungsstufen, Hinweisgeberschutz und Homeoffice: [Pflichten & Haftung](pflichten-haftung.md).
 
 ### Probezeit im Arbeitsverhältnis
 
@@ -65,12 +57,21 @@ Eine umfassende Haftungsübernahme ist **keine** Arbeitnehmerpflicht: Bei betrie
 | Ende (§ 15) | automatisch mit Zeitablauf/Zweckerreichung, **keine Kündigung** und keine Zustimmung von Betriebsrat oder Arbeitsagentur nötig; ordentliche Kündigung vorher nur, wenn vereinbart |
 | Weiterarbeit | mit Wissen des AG nach Ablauf → unbefristet |
 
+**Nordlicht-Beispiel (Station 6):** Saras Vertretung bekommt einen Vertrag „befristet bis zum Ende der Elternzeit von Frau Sara K.“ – **Sachgrund Vertretung**, deshalb auch länger als 2 Jahre zulässig. Unterschrieben wird **vor** dem ersten Arbeitstag; eine Unterschrift erst am zweiten Tag würde den Vertrag unbefristet machen.
+
+### Teilzeit (TzBfG)
+
+- **Anspruch auf Teilzeit** (§ 8): nach **6 Monaten** Beschäftigung in Betrieben mit **mehr als 15 AN**; Antrag **3 Monate** vorher in Textform; AG kann nur aus betrieblichen Gründen ablehnen.
+- **Brückenteilzeit** (§ 9a): befristet **1 bis 5 Jahre**, danach Rückkehr zur alten Stundenzahl; Betriebe mit **mehr als 45 AN**.
+- **Diskriminierungsverbot** (§ 4): Teilzeitkräfte erhalten Entgelt und Leistungen anteilig („pro rata temporis“).
+- Urlaub bei Teilzeit: 24 Werktage × Arbeitstage pro Woche / 6 (bei 3 Tagen/Woche → 12 Tage).
+
 ### Arbeitnehmerüberlassung (AÜG)
 
 - Dreiecksverhältnis: **Verleiher** (Arbeitgeber, zahlt Lohn, braucht Erlaubnis der Bundesagentur) – **Entleiher** (Weisungsrecht, Arbeitsschutz) – **Leiharbeitnehmer**.
 - **Equal Pay** nach **9 Monaten** beim selben Entleiher (Branchenzuschlags-Tarifverträge: bis 15 Monate stufenweise); Equal Treatment bei Arbeitsbedingungen.
 - **Überlassungshöchstdauer 18 Monate** (Tarifvertrag kann abweichen).
-- Leiharbeitnehmer haben Urlaubsanspruch, sind befristet oder unbefristet beschäftigt und im Entleiherbetrieb nach **3 Monaten** Einsatz betriebsratswahlberechtigt.
+- Leiharbeitnehmer haben Urlaubsanspruch, sind befristet oder unbefristet beschäftigt und im Entleiherbetrieb betriebsratswahlberechtigt, wenn sie **länger als 3 Monate** eingesetzt werden (§ 7 BetrVG; der IHK-Schlüssel Winter 2023, Aufg. 7, zählt „seit einem Monat da“ nicht mit).
 - Abgrenzung **Werkvertrag**: geschuldet ist ein Erfolg, Weisungen erteilt der Werkunternehmer – nicht der Kunde.
 
 ## Prüfungsfrage
@@ -104,4 +105,5 @@ Eine umfassende Haftungsübernahme ist **keine** Arbeitnehmerpflicht: Bei betrie
 - [Kündigung & Kündigungsschutz](kuendigung-kuendigungsschutz.md) – Beendigung, Fristen
 - [Lohn, Steuern & Gehaltsabrechnung](../Sozialversicherung/lohn-steuern-gehaltsabrechnung.md) – Entgelt, Mindestlohn
 - [Datenschutz & TOM (IT)](../../IT/Management/DSGVO/dsgvo-tom.md) – Bewerberdaten
-- Echte Aufgaben: [Sommer 2023](../fragen/Sommer-2023.md) (1–2), [Winter 2022](../fragen/Winter-2022.md) (4–7), [Winter 2023](../fragen/Winter-2023.md) (1–3)
+- [Pflichten & Haftung](pflichten-haftung.md) – Nebenpflichten, Arbeitnehmerhaftung, Homeoffice
+- Echte Aufgaben: [Sommer 2022](../fragen/Sommer-2022.md) (1), [Winter 2022](../fragen/Winter-2022.md) (4–7), [Sommer 2023](../fragen/Sommer-2023.md) (1–3), [Winter 2023](../fragen/Winter-2023.md) (1–3), [Sommer 2024](../fragen/Sommer-2024.md) (4)

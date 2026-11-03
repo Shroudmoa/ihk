@@ -73,7 +73,7 @@
 
 - Für werdende Mütter gilt ein besonderer Kündigungsschutz ab dem Zeitpunkt der Mitteilung an den Arbeitgeber.
 - Das Ausbildungsverhältnis endet nicht durch die Bekanntgabe des Geburtstermins oder die Geburt selbst.
-- Die Ausbildungsvergütung wird während der Schwangerschaft und der Schutzfristen weitergezahlt.
+- Während der Schwangerschaft wird die Vergütung weitergezahlt; während der **Schutzfristen** erhält die Auszubildende **Mutterschaftsgeld** der Krankenkasse plus **Arbeitgeberzuschuss** – zusammen in Höhe des bisherigen Nettos. *(Präzisiert.)*
 - Die werdende Mutter muss kein Elterngeld als Lohnersatzleistung beantragen, um Ansprüche zu sichern.
 
 ## Bei der Rückkehr nach einer Entbindung gilt:

@@ -60,6 +60,8 @@ Der Europass ersetzt keinen Reisepass, ist nicht verpflichtend für eine Ausbild
 
 8 Niveaus nach Kompetenzen: 3–4 Berufsausbildung (FISI: 4), 5 Berufsspezialist, 6 Bachelor/Bachelor Professional/Meister, 7 Master/Master Professional, 8 Promotion.
 
+**Nordlicht-Beispiel (Station 10):** Nach der Übernahme willst du dich bei einer Partnerfirma in Amsterdam bewerben: Du erstellst den Europass-Lebenslauf und hängst die Zeugniserläuterung „Fachinformatiker/in“ an. Später machst du den „Bachelor Professional in IT“ – eine Aufstiegsfortbildung, gefördert über das Aufstiegs-BAföG.
+
 ## Prüfungsfrage
 
 **Frage (Multiple Choice):** Welche der folgenden Maßnahmen ist eine Umschulung?
@@ -91,4 +93,4 @@ Der Europass ersetzt keinen Reisepass, ist nicht verpflichtend für eine Ausbild
 - [Arbeitslosenversicherung & Grundsicherung](../Sozialversicherung/arbeitslosenversicherung-grundsicherung.md) – Bildungsgutschein
 - [Altersvorsorge & Rentenversicherung](../Sozialversicherung/altersvorsorge-rentenversicherung.md) – Reha vor Rente
 - [Lektion 23 – Recht & Steuern (Europass)](../analyse-der-exams/L23_WISO_Recht_Steuern.md)
-- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (24), [Sommer 2023](../fragen/Sommer-2023.md) (4), [Winter 2022](../fragen/Winter-2022.md) (15), [Winter 2025](../fragen/Winter-2025.md) (12)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (24), [Sommer 2022](../fragen/Sommer-2022.md) (16), [Winter 2022](../fragen/Winter-2022.md) (15), [Sommer 2023](../fragen/Sommer-2023.md) (4), [Winter 2025](../fragen/Winter-2025.md) (12), [Sommer 2026](../fragen/Sommer-2026.md) (18)

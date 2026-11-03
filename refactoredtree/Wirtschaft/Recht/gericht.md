@@ -40,8 +40,12 @@
 | Krankenkasse verweigert Krankengeld | Sozialgericht |
 | Streit über Einkommensteuerbescheid | Finanzgericht |
 | Gewerbeamt untersagt das Gewerbe | Verwaltungsgericht |
+| Azubi hält seine IHK-Prüfungsnote für falsch | Widerspruch bei der IHK, dann **Verwaltungsgericht** |
+| Elterngeldstelle lehnt den Antrag ab | Sozialgericht |
 | Kunde zahlt die gelieferte Hardware nicht (8.000 €) | Amtsgericht |
 | Schadensersatz über 10.000 € | Landgericht |
+
+**Nordlicht-Beispiel (Station 6 und 8):** Der gekündigte Kollege klagt binnen 3 Wochen vor dem **Arbeitsgericht** – ohne Anwalt, vertreten durch seine Gewerkschaft. Lehnt die Agentur für Arbeit danach sein Arbeitslosengeld ab, geht es nach dem Widerspruch zum **Sozialgericht**.
 
 ## Prüfungsfrage
 
@@ -73,5 +77,6 @@
 - [Arbeitszeugnis](../Arbeitsrecht/arbeitszeugnis.md) – Zeugnisklage
 - [Arbeitsunfall & Unfallversicherung](../Sozialversicherung/arbeitsunfall-unfallversicherung.md) – Bescheide der BG
 - [IHK & Ausbilder-Eignung](../Ausbildung/ihk-ausbilder-eignung.md) – Schlichtungsausschuss
+- [Abschlussprüfung](../Ausbildung/abschlusspruefung.md) – Rechtsweg gegen Prüfungsentscheidungen
 - [Rechtsformen & Handelsregister](../Unternehmen/rechtsformen-handelsregister.md) – Registergericht
 - Echte Aufgaben: [Sommer 2023](../fragen/Sommer-2023.md) (20), [Sommer 2024](../fragen/Sommer-2024.md) (7), [Sommer 2026](../fragen/Sommer-2026.md) (Rechtsstreit Sozialversicherungsträger)

@@ -48,6 +48,18 @@
 
 **Musterantwort:** Die Verlagerung ist eine unternehmerische Entscheidung, die zum Wegfall der Arbeitsplätze führt. Die Kündigung ist nur wirksam, wenn keine Weiterbeschäftigung auf freien Arbeitsplätzen im Unternehmen möglich ist, bei teilweiser Verlagerung eine korrekte Sozialauswahl stattfindet, der Betriebsrat angehört wurde, Sonderkündigungsschutz beachtet wird und die Kündigung schriftlich mit der Frist des § 622 BGB zugeht. Bei vielen Betroffenen sind die Massenentlassungsanzeige und Verhandlungen über Interessenausgleich und Sozialplan nötig. Die Arbeitnehmer können innerhalb von 3 Wochen Kündigungsschutzklage erheben.
 
+**Frage 2 (Multiple Choice, 2 richtige):** Welche Aussagen zur betriebsbedingten Kündigung treffen zu?
+
+1. Jeder betriebsbedingt gekündigte Arbeitnehmer hat einen gesetzlichen Anspruch auf eine Abfindung.
+2. Vor der Kündigung muss der Betriebsrat angehört werden.
+3. Ein Auftragsrückgang kann ein dringendes betriebliches Erfordernis sein.
+4. Der Betriebsrat muss der Kündigung zustimmen, sonst ist sie unwirksam.
+5. Trunkenheit am Arbeitsplatz ist ein betriebsbedingter Kündigungsgrund.
+
+**Musterantwort:** **2 und 3.** (1) Abfindung nur nach § 1a KSchG, Sozialplan oder Vergleich. (4) Nur Anhörung, keine Zustimmung. (5) Trunkenheit ist verhaltensbedingt (Winter 2024, Aufg. 20).
+
+**Nordlicht-Beispiel (Station 8):** Nach dem Wegfall des Großkunden entfallen bei Nordlicht 8 von 70 Stellen innerhalb von 30 Tagen – das sind mindestens 10 % in einem Betrieb mit 60–499 AN, also eine **Massenentlassung**: Nordlicht muss die Entlassungen vorher bei der Agentur für Arbeit anzeigen und mit dem Betriebsrat über Interessenausgleich und Sozialplan verhandeln.
+
 ## Falle
 
 - Sozialauswahl vergessen → Kündigung sozial ungerechtfertigt.

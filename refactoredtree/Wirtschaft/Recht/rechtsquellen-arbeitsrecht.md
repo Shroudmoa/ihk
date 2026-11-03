@@ -71,6 +71,8 @@ Nicht verwechseln: **Jugendschutzgesetz** (Öffentlichkeit, Alkohol, Medien) ≠
 | Unfallverhütungsvorschriften | öffentliches Recht (Arbeitsschutz) |
 | individuelle Zulage, Homeoffice-Absprache, Startdatum | Einzelvertrag |
 
+**Nordlicht-Beispiel (Station 6):** BUrlG 24 Werktage, IT-Tarif 30 Arbeitstage, dein Vertrag ab dem zweiten Jahr 31 Arbeitstage → du bekommst **31** (Günstigkeitsprinzip). Stünden im Vertrag 18 Tage, gälte trotzdem der Tarif (Rangprinzip).
+
 ## Prüfungsfrage
 
 **Frage (Zuordnung):** Ordnen Sie die Rechtsgrundlage zu: (1) BBiG, (2) JArbSchG, (3) BetrVG, (4) BGB.
@@ -101,4 +103,4 @@ e) Zusammenarbeit von Betriebsrat und Geschäftsführung
 - [Betriebsrat & JAV](../Mitbestimmung/betriebsrat-jav.md) – BetrVG
 - [BBiG](../Ausbildung/bbig.md) – Berufsausbildung
 - [Gericht](gericht.md) – Rechtsweg
-- Echte Aufgaben: [Winter 2022](../fragen/Winter-2022.md) (7), [Winter 2024](../fragen/Winter-2024.md) (10), [Sommer 2025](../fragen/Sommer-2025.md) (11, 16), [Sommer 2026](../fragen/Sommer-2026.md) (Tarifbindung)
+- Echte Aufgaben: [Winter 2021](../fragen/Winter-2021.md) (18), [Winter 2022](../fragen/Winter-2022.md) (7), [Winter 2024](../fragen/Winter-2024.md) (10), [Sommer 2025](../fragen/Sommer-2025.md) (11, 16), [Winter 2025](../fragen/Winter-2025.md) (8, 13), [Sommer 2026](../fragen/Sommer-2026.md) (Tarifbindung)

@@ -50,6 +50,8 @@
 - Personengesellschaften (GbR, OHG, KG) sind seit dem MoPeG (2024) ebenfalls **rechtsfähig**, aber keine juristischen Personen.
 - Juristische Personen handeln durch ihre **Organe** (Geschäftsführer, Vorstand).
 
+**Nordlicht-Beispiel (Station 1):** Du bist 17 – deine Eltern unterschreiben den Ausbildungsvertrag mit. Wirst du im Oktober 18, unterschreibst du alles Weitere (z. B. eine Fortbildungsvereinbarung) allein.
+
 ## Prüfungsfrage
 
 **Frage (Fallaufgabe):** Die 17-jährige Auszubildende Mia kündigt am 12.03. nach der Probezeit schriftlich zum 15.04., weil sie den Beruf wechseln will. Ihre Eltern haben nicht unterschrieben und wussten nichts davon. Ist die Kündigung wirksam?

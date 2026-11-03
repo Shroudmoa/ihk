@@ -52,7 +52,7 @@
 
 - 45 volljährige Mitarbeiter sind wahlberechtigt.
 - 8 volljährige Auszubildende sind wahlberechtigt.
-- 3 Leiharbeiter seit einem Monat sind nicht wahlberechtigt (erst nach drei Monaten).
+- 3 Leiharbeiter seit einem Monat sind nicht wahlberechtigt (wahlberechtigt sind Leiharbeiter, wenn sie **länger als drei Monate** im Betrieb eingesetzt werden sollen – § 7 S. 2 BetrVG; maßgeblich ist der geplante Einsatz).
 - 3 jugendliche Auszubildende (16) sind wahlberechtigt (ab 16 Jahren).
 - 2 jugendliche Auszubildende (17) sind wahlberechtigt.
 - Gesamtzahl: 45 + 8 + 3 + 2 = 58.
