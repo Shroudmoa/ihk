@@ -74,6 +74,10 @@
 - **Social-Engineering-Test (Phishing-Simulation):** Prüft Awareness der Mitarbeiter; identifiziert Schulungsbedarf.
 - **Red-Team-Exercise:** Ganzheitliche Angriffssimulation über mehrere Wochen.
 - **Schwachstellen-Scan (automatisiert):** Regelmäßiger Vulnerability-Scan (z.B. Nessus, OpenVAS).
+- **Malware-Überprüfung** Hierbei wird Performance und Softwares auf APs überwacht um Mlwares zu identifizieren.
+- **Logs vom SIEM/AAA Server** Die vorhandene Logs werden überprüft (IDS Gerät kann verwendet werden).
+- **Installirte Dienste/Softwares** Es wird überprüft was installiert wurde, welche Rechte hat das Programm und ob es nötig/sicher ist.
+
 
 ---
 
@@ -93,6 +97,7 @@
 - **Nutzungsgrenzen:** Private Nutzung erlaubt/verboten; Kostenübernahme (z.B. Datenvolumen).
 - **MDM-Rechte:** Welche Aktionen darf das MDM ausführen (Wipe, Ortung, App-Installation)?
 - **Datenschutz/Überwachung:** Verbot der Leistungs-/Verhaltenskontrolle; Hinweis auf § 87 BetrVG (Mitbestimmung).
+- **Schulunag/Richtlinien** Beispiele sind Passwortrichtlinien
 - **Verhalten bei Verlust/Diebstahl:** Meldepflicht, Sperrung, selektives Wipe.
 - **Exit-Szenario:** Was passiert bei Ausscheiden des Mitarbeiters (Datenlöschung, Rückgabe)?
 
