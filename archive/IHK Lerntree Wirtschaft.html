@@ -1,0 +1,468 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>IHK Lerntree Wirtschaft</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: Kopfleiste, Radialbaum als Vollfläche, Legende als scrollbare Leiste, Infokarte schwebt links unten.
+   Farbe: kühle Neutrale mit Petrol-Akzent; 13 Gruppenfarben über Goldenen Winkel gestreut, Helligkeit pro Theme. */
+:root {
+  --bg: #f2f5f6; --panel: #ffffff; --fg: #13222b; --muted: #566872; --line: #d3dce1;
+  --accent: #0b6f78; --accent-fg: #ffffff; --soft: #e4ecef;
+  --cs: 62%; --cl: 36%;
+  --c0: hsl(8 var(--cs) var(--cl));   --c1: hsl(145 var(--cs) var(--cl));  --c2: hsl(283 var(--cs) var(--cl));
+  --c3: hsl(48 var(--cs) var(--cl));  --c4: hsl(198 var(--cs) var(--cl));  --c5: hsl(336 var(--cs) var(--cl));
+  --c6: hsl(113 var(--cs) var(--cl)); --c7: hsl(251 var(--cs) var(--cl));  --c8: hsl(28 var(--cs) var(--cl));
+  --c9: hsl(166 var(--cs) var(--cl)); --c10: hsl(304 var(--cs) var(--cl)); --c11: hsl(81 var(--cs) var(--cl));
+  --c12: hsl(219 var(--cs) var(--cl));
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e161b; --panel: #162128; --fg: #e5edf1; --muted: #90a3ae; --line: #2a3943;
+    --accent: #52c4cd; --accent-fg: #06262a; --soft: #1d2b33; --cs: 68%; --cl: 66%; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e161b; --panel: #162128; --fg: #e5edf1; --muted: #90a3ae; --line: #2a3943;
+  --accent: #52c4cd; --accent-fg: #06262a; --soft: #1d2b33; --cs: 68%; --cl: 66%; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 14px; line-height: 1.45; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+#app { height: 100%; display: flex; flex-direction: column; min-width: 0; }
+.bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; background: var(--panel);
+  border-bottom: 1px solid var(--line); padding-block: 10px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.brand { min-width: 0; }
+.brand h1 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+.brand p { margin: 0; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--bg); }
+.seg button { border: 0; background: transparent; padding: 7px 13px; font-weight: 500; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
+.search { position: relative; flex: 1 1 220px; max-width: 380px; min-width: 0; display: block; }
+.search input {
+  width: 100%; border: 1px solid var(--line); background: var(--bg); border-radius: 8px;
+  padding: 8px 76px 8px 12px; min-width: 0;
+}
+.search input::placeholder { color: var(--muted); }
+.hits { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; pointer-events: none; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.tools button { border: 1px solid var(--line); background: var(--bg); border-radius: 8px; padding: 7px 12px; font-weight: 500; }
+.tools button:hover { border-color: var(--accent); }
+.tools button[aria-pressed="true"] { background: var(--soft); border-color: var(--accent); color: var(--accent); }
+
+#stage { position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+#svg { width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+#svg:active { cursor: grabbing; }
+.hint { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 10px; margin: 0; max-width: 300px; text-align: right; font-size: 12px; color: var(--muted); pointer-events: none; }
+
+.tl { fill: none; stroke-width: 1.1; stroke-opacity: .5; transition: stroke-opacity .15s; }
+.tl.dim { stroke-opacity: .08; }
+.ed { fill: none; stroke-width: 1; pointer-events: none; transition: opacity .15s; }
+.n { cursor: pointer; }
+.n .dot { transition: opacity .15s; }
+.n.dim .dot, .n.dim text { opacity: .14; }
+.n .lbl { font-size: 11.5px; fill: var(--fg); paint-order: stroke; stroke: var(--bg); stroke-width: 3px; stroke-linejoin: round; dominant-baseline: central; }
+.n.group .lbl { font-size: 12.5px; font-weight: 600; }
+.n.root .lbl { font-weight: 700; fill: var(--accent-fg); stroke: none; text-anchor: middle; }
+.n.hit .lbl { font-weight: 700; }
+.n.hit .dot { stroke: var(--fg); stroke-width: 2; }
+.n.sel .dot { stroke: var(--fg); stroke-width: 2.5; }
+.n.sel .lbl { font-weight: 700; }
+.low .n.topic .lbl, .low .n.sub .lbl { opacity: 0; }
+.low .n.topic.hit .lbl, .low .n.sub.hit .lbl, .low .n.topic.sel .lbl, .low .n.sub.sel .lbl { opacity: 1; }
+.cnt { font-size: 10px; font-weight: 700; fill: var(--bg); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+
+#card {
+  position: absolute; left: max(16px, env(safe-area-inset-left, 0px)); bottom: 12px; width: min(390px, calc(100% - 32px));
+  max-height: min(60%, 460px); overflow: auto; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 12px; padding: 14px 16px; box-shadow: 0 6px 24px rgb(0 0 0 / .14); pointer-events: none;
+}
+#card.pinned { pointer-events: auto; }
+#card h2 { margin: 6px 0 4px; font-size: 16px; line-height: 1.3; text-wrap: balance; }
+#card p { margin: 4px 0; }
+#card .top { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+#card .top .swatch { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+#card .tag { border: 1px solid var(--line); border-radius: 99px; padding: 0 8px; font-size: 11px; }
+#card .path { font-family: var(--font-mono); font-size: 11px; color: var(--muted); word-break: break-all; }
+#card .muted { color: var(--muted); font-size: 12px; }
+#card h3 { margin: 12px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { border: 1px solid var(--line); background: var(--bg); border-radius: 99px; padding: 3px 10px; font-size: 12px; text-align: left; }
+.chips button:hover { border-color: var(--accent); color: var(--accent); }
+#card .gh { display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 600; text-decoration: none; }
+#card .gh:hover { text-decoration: underline; }
+#card .x { position: absolute; right: 8px; top: 6px; border: 0; background: transparent; font-size: 20px; line-height: 1; color: var(--muted); padding: 4px 8px; }
+
+.legend {
+  display: flex; gap: 8px; overflow-x: auto; background: var(--panel); border-top: 1px solid var(--line); padding-block: 9px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.legend button {
+  flex: none; display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); background: var(--bg);
+  border-radius: 99px; padding: 4px 11px; font-size: 12.5px; white-space: nowrap;
+}
+.legend button .sw { width: 10px; height: 10px; border-radius: 50%; }
+.legend button .c { color: var(--muted); font-variant-numeric: tabular-nums; }
+.legend button[aria-pressed="true"] { border-color: var(--fg); background: var(--soft); font-weight: 600; }
+@media (max-width: 700px) {
+  .hint { display: none; }
+  .tools { margin-left: 0; }
+  #card { max-height: 48%; }
+}
+@media (prefers-reduced-motion: reduce) { .tl, .ed, .n .dot { transition: none; } }
+</style>
+
+<div id="app">
+  <header class="bar">
+    <div class="brand"><h1 id="ttl"></h1><p id="stats"></p></div>
+    <div class="seg" role="group" aria-label="Ansicht">
+      <button id="v-themen" type="button" aria-pressed="true">Themen</button>
+      <button id="v-story" type="button" aria-pressed="false">Lerngeschichte</button>
+    </div>
+    <label class="search"><span class="sr">Thema suchen</span>
+      <input id="q" type="search" placeholder="Suchen, z. B. RAID, VLAN, BBiG" autocomplete="off">
+      <span id="hits" class="hits" aria-live="polite"></span>
+    </label>
+    <div class="tools">
+      <button id="b-edges" type="button" aria-pressed="false">Querverweise</button>
+      <button id="b-toggle" type="button">Alle einklappen</button>
+      <button id="b-fit" type="button">Einpassen</button>
+    </div>
+  </header>
+  <main id="stage">
+    <svg id="svg" role="img" aria-label="Lerntree als Radialbaum"></svg>
+    <p class="hint">Ziehen verschiebt, Scrollen zoomt. Gruppe anklicken klappt sie ein, Thema anklicken zeigt Details.</p>
+    <aside id="card" hidden></aside>
+  </main>
+  <nav id="legend" class="legend" aria-label="Gruppen"></nav>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const DATA = {"area":"Wirtschaft","title":"Lerntree Wirtschaft","sub":"Lerntree IHK AP2 FiSi (AO 2020)","groups":[{"name":"Ausbildung","topics":[{"title":"BBiG – Berufsausbildungsvertrag, Probezeit, Ende & Kündigung","short":"BBiG","path":"Wirtschaft/Ausbildung/bbig.md","desc":"Ausbildungsvertrag, Pflichten, Vergütung, Probezeit, Ende und Kündigung nach BBiG.","cross":false,"children":[]},{"title":"Ausbildungsordnung, Ausbildungsplan & Berichtsheft","short":"Ausbildungsordnung, Ausbildungspl…","path":"Wirtschaft/Ausbildung/ausbildungsordnung-ausbildungsnachweis.md","desc":"Ausbildungsordnung, Ausbildungsplan, Berichtsheft und Aufbau der FISI-Prüfung.","cross":false,"children":[]},{"title":"IHK, zuständige Stelle & Ausbilder-Eignung","short":"IHK, zuständige Stelle & Ausbilde…","path":"Wirtschaft/Ausbildung/ihk-ausbilder-eignung.md","desc":"Aufgaben der IHK als zuständige Stelle und Eignung der Ausbilder.","cross":false,"children":[]},{"title":"JArbSchG – Jugendarbeitsschutz","short":"JArbSchG","path":"Wirtschaft/Ausbildung/jarbschg.md","desc":"Arbeitszeit, Pausen, Urlaub und Untersuchungen für Jugendliche.","cross":false,"children":[]},{"title":"Europass, Fortbildung, Umschulung & lebenslanges Lernen","short":"Europass, Fortbildung, Umschulung…","path":"Wirtschaft/Ausbildung/europass-fortbildung-umschulung.md","desc":"Europass, Fortbildung, Umschulung und Fördermöglichkeiten.","cross":false,"children":[]},{"title":"Abschlussprüfung nach BBiG: Zulassung, Bestehen, Wiederholung","short":"Abschlussprüfung nach BBiG","path":"Wirtschaft/Ausbildung/abschlusspruefung.md","desc":"Zulassung, Bestehensregel, Wiederholung, Verlängerung, Prüfungsausschuss.","cross":false,"children":[]}]},{"name":"Arbeitsrecht","topics":[{"title":"Personalauswahl, Arbeitsvertrag, Befristung & Zeitarbeit","short":"Personalauswahl, Arbeitsvertrag…","path":"Wirtschaft/Arbeitsrecht/personalauswahl-arbeitsvertrag.md","desc":"Einstellung, zulässige Fragen, Nachweisgesetz, Befristung, Zeitarbeit.","cross":false,"children":[]},{"title":"Arbeitszeit, Pausen, Urlaub & Entgeltfortzahlung","short":"Arbeitszeit, Pausen, Urlaub & Ent…","path":"Wirtschaft/Arbeitsrecht/arbeitszeit-pausen-urlaub.md","desc":"ArbZG, BUrlG und Entgeltfortzahlung für Erwachsene.","cross":false,"children":[]},{"title":"Mutterschutz, Elternzeit & Elterngeld","short":"Mutterschutz, Elternzeit & Eltern…","path":"Wirtschaft/Arbeitsrecht/mutterschutz-elternzeit.md","desc":"Schutzfristen, Kündigungsverbot, Elternzeit und Elterngeld.","cross":false,"children":[]},{"title":"Kündigung & Kündigungsschutz","short":"Kündigung & Kündigungsschutz","path":"Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md","desc":"Kündigungsarten, Fristen nach § 622 BGB, Anhörung des Betriebsrats, KSchG.","cross":false,"children":[]},{"title":"Besonderer Kündigungsschutz","short":"Besonderer Kündigungsschutz","path":"Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md","desc":"Gruppen mit Sonderkündigungsschutz und wer zustimmen muss.","cross":false,"children":[]},{"title":"Betriebsbedingte Kündigung","short":"Betriebsbedingte Kündigung","path":"Wirtschaft/Arbeitsrecht/betriebsbedingte-kuendigung.md","desc":"Prüfschema der betriebsbedingten Kündigung, Massenentlassung, Sozialplan.","cross":false,"children":[]},{"title":"Sozialauswahl","short":"Sozialauswahl","path":"Wirtschaft/Arbeitsrecht/sozialauswahl.md","desc":"Die vier Kriterien der Sozialauswahl und Leistungsträger.","cross":false,"children":[]},{"title":"Arbeitszeugnis","short":"Arbeitszeugnis","path":"Wirtschaft/Arbeitsrecht/arbeitszeugnis.md","desc":"Einfaches und qualifiziertes Zeugnis, Zeugnissprache, Ansprüche.","cross":false,"children":[]},{"title":"AGG & Diversity Management","short":"AGG & Diversity Management","path":"Wirtschaft/Arbeitsrecht/agg-diversity.md","desc":"Merkmale nach AGG, Stellenanzeigen, Rechtsfolgen, Diversity und Charta der Vielfalt.","cross":false,"children":[]},{"title":"Pflichten im Arbeitsverhältnis, Haftung & Hinweisgeberschutz","short":"Pflichten im Arbeitsverhältnis, H…","path":"Wirtschaft/Arbeitsrecht/pflichten-haftung.md","desc":"Haupt- und Nebenpflichten, Arbeitnehmerhaftung, Hinweisgeberschutz, mobiles Arbeiten.","cross":false,"children":[]}]},{"name":"Mitbestimmung & Sozialpartner","topics":[{"title":"Betriebsrat, JAV & Betriebsversammlung","short":"Betriebsrat, JAV & Betriebsversam…","path":"Wirtschaft/Mitbestimmung/betriebsrat-jav.md","desc":"Wahl, Größe und Rechte des Betriebsrats, JAV, Betriebsversammlung.","cross":false,"children":[]},{"title":"Tarifvertrag & Betriebsvereinbarung","short":"Tarifvertrag & Betriebsvereinbaru…","path":"Wirtschaft/Mitbestimmung/tarifrecht-betriebsvereinbarung.md","desc":"Tarifvertrag (TVG), Tarifarten, Ablauf einer Tarifrunde, Betriebsvereinbarung.","cross":false,"children":[]},{"title":"Gewerkschaften, Arbeitgeberverbände & Arbeitskampf","short":"Gewerkschaften, Arbeitgeberverbän…","path":"Wirtschaft/Mitbestimmung/gewerkschaften-arbeitskampf.md","desc":"Sozialpartner, Aufgaben der Gewerkschaft, Streik, Aussperrung, Schlichtung.","cross":false,"children":[]}]},{"name":"Sozialversicherung & Soziales","topics":[{"title":"Sozialversicherung – die fünf Zweige im Überblick","short":"Sozialversicherung","path":"Wirtschaft/Sozialversicherung/sozialversicherung.md","desc":"Die fünf Zweige, Beitragssätze und Grenzwerte 2026.","cross":false,"children":[]},{"title":"Gesetzliche Krankenversicherung (GKV)","short":"Gesetzliche Krankenversicherung","path":"Wirtschaft/Sozialversicherung/gkv.md","desc":"KV-Beitrag berechnen, Versicherungspflicht, Leistungen, GKV vs. PKV.","cross":false,"children":[]},{"title":"Pflegeversicherung","short":"Pflegeversicherung","path":"Wirtschaft/Sozialversicherung/pflegeversicherung.md","desc":"PV-Beitrag inkl. Kinderlosenzuschlag, Pflegegrade, Leistungen, Pflegezeit.","cross":false,"children":[]},{"title":"Rentenversicherung & Altersvorsorge (Drei-Säulen-Modell)","short":"Rentenversicherung & Altersvorsor…","path":"Wirtschaft/Sozialversicherung/altersvorsorge-rentenversicherung.md","desc":"Gesetzliche Rente, Generationenvertrag, drei Säulen, vermögenswirksame Leistungen.","cross":false,"children":[]},{"title":"Arbeitslosenversicherung, Arbeitslosengeld & Grundsicherung","short":"Arbeitslosenversicherung, Arbeits…","path":"Wirtschaft/Sozialversicherung/arbeitslosenversicherung-grundsicherung.md","desc":"ALG I, Leistungen der Arbeitsförderung, Grundsicherung.","cross":false,"children":[]},{"title":"Arbeitsunfall & gesetzliche Unfallversicherung","short":"Arbeitsunfall & gesetzliche Unfal…","path":"Wirtschaft/Sozialversicherung/arbeitsunfall-unfallversicherung.md","desc":"Berufsgenossenschaft, Versicherungsfälle, Ablauf nach Arbeitsunfall, Leistungen.","cross":false,"children":[]},{"title":"Lohn, Steuern, Mindestlohn & Gehaltsabrechnung","short":"Lohn, Steuern, Mindestlohn & Geha…","path":"Wirtschaft/Sozialversicherung/lohn-steuern-gehaltsabrechnung.md","desc":"Steuerklassen, Abzüge, Mindestlohn, Gehaltsberechnung, Realeinkommen.","cross":false,"children":[]}]},{"name":"Betrieb & Unternehmen","topics":[{"title":"Rechtsformen & Handelsregister","short":"Rechtsformen & Handelsregister","path":"Wirtschaft/Unternehmen/rechtsformen-handelsregister.md","desc":"GmbH, AG, KG, OHG, GbR, eG, Kaufmannsbegriff, Handelsregister.","cross":false,"children":[]},{"title":"Unternehmensgründung, Businessplan & Standortwahl","short":"Unternehmensgründung, Businesspla…","path":"Wirtschaft/Unternehmen/unternehmensgruendung-businessplan.md","desc":"Gründungsschritte, Businessplan, Standortfaktoren.","cross":false,"children":[]},{"title":"Leitungssysteme, Organisation & agiles Arbeiten","short":"Leitungssysteme, Organisation & a…","path":"Wirtschaft/Unternehmen/leitungssysteme-organisation.md","desc":"Ein-, Mehr-, Stab-Linien-System, Matrix, Sparten, agiles Arbeiten.","cross":false,"children":[]},{"title":"Unternehmensziele & Zielbeziehungen","short":"Unternehmensziele & Zielbeziehung…","path":"Wirtschaft/Unternehmen/unternehmensziele-zielkonflikte.md","desc":"Ökonomische, ökologische und soziale Ziele und ihre Beziehungen.","cross":false,"children":[]},{"title":"Unternehmensverbindungen & Kartellrecht","short":"Unternehmensverbindungen & Kartel…","path":"Wirtschaft/Unternehmen/unternehmensverbindungen-kartellrecht.md","desc":"Fusion, Konzern, ARGE, Kartellarten, Fusionskontrolle.","cross":false,"children":[]},{"title":"Ökonomisches Prinzip & Unternehmenskennzahlen","short":"Ökonomisches Prinzip & Unternehme…","path":"Wirtschaft/Unternehmen/oekonomisches-prinzip-kennzahlen.md","desc":"Minimal-/Maximalprinzip, Produktivität, Wirtschaftlichkeit, Rentabilität.","cross":false,"children":[]},{"title":"Break-Even-Point (Gewinnschwelle) & Deckungsbeitrag","short":"Break-Even-Point (Gewinnschwelle)…","path":"Wirtschaft/Unternehmen/bep.md","desc":"Break-Even-Point, Deckungsbeitrag, kritische Menge.","cross":false,"children":[]}]},{"name":"Recht & Gerichte","topics":[{"title":"Rechtsquellen im Arbeitsrecht: Rangprinzip & Günstigkeitsprinzip","short":"Rechtsquellen im Arbeitsrecht","path":"Wirtschaft/Recht/rechtsquellen-arbeitsrecht.md","desc":"Rang- und Günstigkeitsprinzip – welches Gesetz regelt was.","cross":false,"children":[]},{"title":"Rechtsfähigkeit & Geschäftsfähigkeit","short":"Rechtsfähigkeit & Geschäftsfähigk…","path":"Wirtschaft/Recht/rechts-geschaeftsfaehigkeit.md","desc":"Rechts- und Geschäftsfähigkeit, Minderjährige im Ausbildungsverhältnis.","cross":false,"children":[]},{"title":"Gerichtsbarkeit: Welches Gericht ist zuständig?","short":"Gerichtsbarkeit","path":"Wirtschaft/Recht/gericht.md","desc":"Gerichtsbarkeiten, Instanzen und Zuständigkeiten.","cross":false,"children":[]},{"title":"Urheberrecht, Software im Arbeitsverhältnis & Compliance","short":"Urheberrecht, Software im Arbeits…","path":"Wirtschaft/Recht/urheberrecht-compliance.md","desc":"Urheberrecht, Software im Arbeitsverhältnis, Lizenzen, Compliance.","cross":false,"children":[]}]},{"name":"Volkswirtschaft & Markt","topics":[{"title":"Soziale Marktwirtschaft & Sozialstaat","short":"Soziale Marktwirtschaft & Sozials…","path":"Wirtschaft/Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md","desc":"Wirtschaftsordnungen und Sozialstaatsprinzipien.","cross":false,"children":[]},{"title":"Wirtschaftliche Grundbegriffe: Bedürfnisse, Güter, Produktionsfaktoren","short":"Wirtschaftliche Grundbegriffe","path":"Wirtschaft/Volkswirtschaft/wirtschaftliche-grundbegriffe.md","desc":"Bedürfnisse, Güterarten, Produktionsfaktoren, Wirtschaftskreislauf.","cross":false,"children":[]},{"title":"Marktformen & Preisbildung","short":"Marktformen & Preisbildung","path":"Wirtschaft/Volkswirtschaft/marktformen-preisbildung.md","desc":"Marktformen, vollkommener Markt, Preisbildung.","cross":false,"children":[]},{"title":"Konjunktur & Wirtschaftspolitik","short":"Konjunktur & Wirtschaftspolitik","path":"Wirtschaft/Volkswirtschaft/konjunktur-wirtschaftspolitik.md","desc":"Konjunkturphasen, Indikatoren, Fiskal- und Geldpolitik, magisches Viereck.","cross":false,"children":[]},{"title":"Wirtschaftssektoren & Arbeitsteilung","short":"Wirtschaftssektoren & Arbeitsteil…","path":"Wirtschaft/Volkswirtschaft/wirtschaftssektoren-arbeitsteilung.md","desc":"Primärer, sekundärer, tertiärer Sektor und Arten der Arbeitsteilung.","cross":false,"children":[]},{"title":"Globalisierung & EU-Binnenmarkt","short":"Globalisierung & EU-Binnenmarkt","path":"Wirtschaft/Volkswirtschaft/globalisierung-eu-binnenmarkt.md","desc":"Globalisierung, EU-Binnenmarkt, Freizügigkeit.","cross":false,"children":[]},{"title":"Steuern & Steuerarten","short":"Steuern & Steuerarten","path":"Wirtschaft/Volkswirtschaft/steuern-steuerarten.md","desc":"Direkte und indirekte Steuern, ESt, USt, Gewerbesteuer – mit Rechenweg.","cross":false,"children":[]}]},{"name":"Arbeitsschutz, Brandschutz, Umwelt & IT-Sicherheit","topics":[{"title":"Arbeitsschutz & Arbeitssicherheit","short":"Arbeitsschutz & Arbeitssicherheit","path":"Wirtschaft/Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md","desc":"Gefährdungsbeurteilung, Unterweisung, Sicherheitszeichen, Brandfall, Erste Hilfe.","cross":false,"children":[]},{"title":"Umweltschutz & Nachhaltigkeit im Betrieb","short":"Umweltschutz & Nachhaltigkeit im…","path":"Wirtschaft/Arbeitsschutz-Umwelt/umwelt-nachhaltigkeit.md","desc":"Abfallhierarchie, Verursacherprinzip, Blauer Engel, Emissionen, Nachhaltigkeit.","cross":false,"children":[]},{"title":"IT-Sicherheit & Datenschutz im Arbeitsalltag","short":"IT-Sicherheit & Datenschutz im Ar…","path":"Wirtschaft/Arbeitsschutz-Umwelt/it-sicherheit-im-arbeitsalltag.md","desc":"Schutzziele, Phishing, öffentliches WLAN, Datenschutz am Arbeitsplatz.","cross":false,"children":[]},{"title":"Brandschutz & Erste Hilfe","short":"Brandschutz & Erste Hilfe","path":"Wirtschaft/Arbeitsschutz-Umwelt/brandschutz-erste-hilfe.md","desc":"Verhalten im Brandfall, Löschregeln, Brandklassen, Ersthelfer, Notruf.","cross":false,"children":[]},{"title":"Sicherheitszeichen (ASR A1.3)","short":"Sicherheitszeichen","path":"Wirtschaft/Arbeitsschutz-Umwelt/sicherheitszeichen.md","desc":"Die fünf Zeichenarten nach Farbe und Form (ASR A1.3) mit Beispielen.","cross":false,"children":[]},{"title":"Bildschirmarbeitsplatz, Ergonomie & psychische Belastung","short":"Bildschirmarbeitsplatz, Ergonomie…","path":"Wirtschaft/Arbeitsschutz-Umwelt/bildschirmarbeitsplatz-ergonomie.md","desc":"Bildschirmarbeit nach ArbStättV, Ergonomie, Telearbeit, psychische Belastung.","cross":false,"children":[]}]},{"name":"Nice to know (kaum geprüft)","topics":[{"title":"Kaufvertrag, Gewährleistung & AGB (nice to know)","short":"Kaufvertrag, Gewährleistung & AGB","path":"Wirtschaft/nice-to-know/kaufvertrag-agb.md","desc":"Kaufvertrag, Gewährleistung, AGB – kam 2021–2026 kaum vor.","cross":false,"children":[]},{"title":"Vollmachten: Prokura & Handlungsvollmacht (nice to know)","short":"Vollmachten","path":"Wirtschaft/nice-to-know/vollmachten-prokura-handlungsvollmacht.md","desc":"Prokura und Handlungsvollmacht – nicht direkt geprüft.","cross":false,"children":[]},{"title":"Lerneinheit: Bedürfnisse, Güter, Markt & Preis","short":"Lerneinheit","path":"Wirtschaft/nice-to-know/LE.md","desc":"Kompakte Lerneinheit: Bedürfnisse, Güterarten, ökonomisches Prinzip, Markt und Preis.","cross":false,"children":[]}]},{"name":"Prüfungsanalyse WiSo","topics":[{"title":"WiSo-Prüfungsanalyse","short":"WiSo-Prüfungsanalyse","path":"Wirtschaft/analyse-der-exams/README.md","desc":"Master-Index: Themen nach Häufigkeit, Lernplan","cross":false,"children":[{"title":"Sommer-2022","short":"Sommer-2022","path":"Wirtschaft/analyse-der-exams/fragen/Sommer-2022.md","desc":"","cross":false},{"title":"Sommer-2023","short":"Sommer-2023","path":"Wirtschaft/analyse-der-exams/fragen/Sommer-2023.md","desc":"","cross":false},{"title":"Sommer-2024","short":"Sommer-2024","path":"Wirtschaft/analyse-der-exams/fragen/Sommer-2024.md","desc":"","cross":false},{"title":"Sommer-2025","short":"Sommer-2025","path":"Wirtschaft/analyse-der-exams/fragen/Sommer-2025.md","desc":"","cross":false},{"title":"Sommer-2026","short":"Sommer-2026","path":"Wirtschaft/analyse-der-exams/fragen/Sommer-2026.md","desc":"","cross":false},{"title":"Winter-2021","short":"Winter-2021","path":"Wirtschaft/analyse-der-exams/fragen/Winter-2021.md","desc":"","cross":false},{"title":"Winter-2022","short":"Winter-2022","path":"Wirtschaft/analyse-der-exams/fragen/Winter-2022.md","desc":"","cross":false},{"title":"Winter-2023","short":"Winter-2023","path":"Wirtschaft/analyse-der-exams/fragen/Winter-2023.md","desc":"","cross":false},{"title":"Winter-2024","short":"Winter-2024","path":"Wirtschaft/analyse-der-exams/fragen/Winter-2024.md","desc":"","cross":false},{"title":"Winter-2025","short":"Winter-2025","path":"Wirtschaft/analyse-der-exams/fragen/Winter-2025.md","desc":"","cross":false}]},{"title":"11 WiSo-Grundlagen","short":"11 WiSo-Grundlagen","path":"Wirtschaft/analyse-der-exams/11_WiSo_Grundlagen.md","desc":"Überblick Ausbildung, Arbeitsrecht, Betrieb","cross":false,"children":[]},{"title":"L19 Die 5 Zweige der Sozialversicherung","short":"L19 Die 5 Zweige der Sozialversic…","path":"Wirtschaft/analyse-der-exams/L19_Sozialversicherung.md","desc":"Fünf Zweige, Träger, Beiträge","cross":false,"children":[]},{"title":"L20 Betriebsrat & Mitbestimmung","short":"L20 Betriebsrat & Mitbestimmung","path":"Wirtschaft/analyse-der-exams/L20_Betriebsrat_Mitbestimmung.md","desc":"Betriebsrat, JAV, Mitbestimmung","cross":false,"children":[]},{"title":"L21 Unternehmensorganisation & Leitungssysteme","short":"L21 Unternehmensorganisation & Le…","path":"Wirtschaft/analyse-der-exams/L21_Unternehmensorganisation.md","desc":"Leitungssysteme, Aufbauorganisation","cross":false,"children":[]},{"title":"L23 Recht, Verträge & Steuern (WiSo)","short":"L23 Recht, Verträge & Steuern","path":"Wirtschaft/analyse-der-exams/L23_WISO_Recht_Steuern.md","desc":"Rechtsformen, AGG, Europass, Steuern","cross":false,"children":[]},{"title":"L24 Arbeitsschutz, Brandschutz & Erste Hilfe","short":"L24 Arbeitsschutz, Brandschutz…","path":"Wirtschaft/analyse-der-exams/L24_Arbeitsschutz_Brandschutz_ErsteHilfe.md","desc":"Arbeitsschutz, Brandschutz, Erste Hilfe","cross":false,"children":[]},{"title":"L25 Umweltschutz & Nachhaltigkeit","short":"L25 Umweltschutz & Nachhaltigkeit","path":"Wirtschaft/analyse-der-exams/L25_Umweltschutz_Nachhaltigkeit.md","desc":"Umwelt und Nachhaltigkeit","cross":false,"children":[]},{"title":"L26 Wirtschaftssektoren, Konjunktur & Marktformen","short":"L26 Wirtschaftssektoren, Konjunkt…","path":"Wirtschaft/analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md","desc":"Sektoren, Konjunktur, Marktformen","cross":false,"children":[]},{"title":"L22 Kostenrechnung","short":"L22 Kostenrechnung","path":"IT/analyse-der-exams/L22_Kostenrechnung.md","desc":"Wirtschaftlichkeit, Rentabilität (im IT-Teil)","cross":true,"children":[]}]}],"stations":[{"name":"1 · Der Ausbildungsvertrag","paths":["Wirtschaft/Recht/rechts-geschaeftsfaehigkeit.md","Wirtschaft/Ausbildung/bbig.md","Wirtschaft/Ausbildung/ihk-ausbilder-eignung.md","Wirtschaft/Ausbildung/ausbildungsordnung-ausbildungsnachweis.md","Wirtschaft/Ausbildung/jarbschg.md","Wirtschaft/Recht/rechtsquellen-arbeitsrecht.md"]},{"name":"2 · Der erste Tag: Sicherheit zuerst","paths":["Wirtschaft/Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md","Wirtschaft/Arbeitsschutz-Umwelt/sicherheitszeichen.md","Wirtschaft/Arbeitsschutz-Umwelt/brandschutz-erste-hilfe.md","Wirtschaft/Arbeitsschutz-Umwelt/bildschirmarbeitsplatz-ergonomie.md","Wirtschaft/Arbeitsschutz-Umwelt/it-sicherheit-im-arbeitsalltag.md","Wirtschaft/Sozialversicherung/arbeitsunfall-unfallversicherung.md","Wirtschaft/analyse-der-exams/L24_Arbeitsschutz_Brandschutz_ErsteHilfe.md"]},{"name":"3 · Wer ist eigentlich Nordlicht?","paths":["Wirtschaft/Unternehmen/leitungssysteme-organisation.md","Wirtschaft/Unternehmen/rechtsformen-handelsregister.md","Wirtschaft/Unternehmen/unternehmensgruendung-businessplan.md","Wirtschaft/Unternehmen/unternehmensziele-zielkonflikte.md","Wirtschaft/Unternehmen/oekonomisches-prinzip-kennzahlen.md","Wirtschaft/Unternehmen/unternehmensverbindungen-kartellrecht.md","Wirtschaft/nice-to-know/vollmachten-prokura-handlungsvollmacht.md","Wirtschaft/analyse-der-exams/L21_Unternehmensorganisation.md","IT/analyse-der-exams/L22_Kostenrechnung.md"]},{"name":"4 · Die erste Gehaltsabrechnung","paths":["Wirtschaft/Sozialversicherung/lohn-steuern-gehaltsabrechnung.md","Wirtschaft/Volkswirtschaft/steuern-steuerarten.md","Wirtschaft/Sozialversicherung/sozialversicherung.md","Wirtschaft/Sozialversicherung/gkv.md","Wirtschaft/Sozialversicherung/pflegeversicherung.md","Wirtschaft/Sozialversicherung/altersvorsorge-rentenversicherung.md","Wirtschaft/analyse-der-exams/L19_Sozialversicherung.md"]},{"name":"5 · Mitbestimmung: JAV, Betriebsrat, Tarif","paths":["Wirtschaft/Mitbestimmung/betriebsrat-jav.md","Wirtschaft/Mitbestimmung/tarifrecht-betriebsvereinbarung.md","Wirtschaft/Mitbestimmung/gewerkschaften-arbeitskampf.md","Wirtschaft/analyse-der-exams/L20_Betriebsrat_Mitbestimmung.md"]},{"name":"6 · Arbeitsalltag und Recht","paths":["Wirtschaft/Arbeitsrecht/pflichten-haftung.md","Wirtschaft/Arbeitsrecht/mutterschutz-elternzeit.md","Wirtschaft/Arbeitsrecht/agg-diversity.md","Wirtschaft/Arbeitsrecht/personalauswahl-arbeitsvertrag.md","Wirtschaft/Arbeitsrecht/arbeitszeit-pausen-urlaub.md","Wirtschaft/Recht/urheberrecht-compliance.md","Wirtschaft/Recht/gericht.md","Wirtschaft/Recht/rechtsquellen-arbeitsrecht.md","Wirtschaft/analyse-der-exams/L23_WISO_Recht_Steuern.md"]},{"name":"7 · Nordlicht im Markt","paths":["Wirtschaft/Volkswirtschaft/wirtschaftssektoren-arbeitsteilung.md","Wirtschaft/Volkswirtschaft/marktformen-preisbildung.md","Wirtschaft/Volkswirtschaft/wirtschaftliche-grundbegriffe.md","Wirtschaft/nice-to-know/LE.md","Wirtschaft/Volkswirtschaft/konjunktur-wirtschaftspolitik.md","Wirtschaft/Volkswirtschaft/globalisierung-eu-binnenmarkt.md","Wirtschaft/Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md","Wirtschaft/Unternehmen/bep.md","Wirtschaft/nice-to-know/kaufvertrag-agb.md","Wirtschaft/analyse-der-exams/L26_Wirtschaftssektoren_Konjunktur_Marktformen.md"]},{"name":"8 · Die Krise","paths":["Wirtschaft/Arbeitsrecht/betriebsbedingte-kuendigung.md","Wirtschaft/Arbeitsrecht/sozialauswahl.md","Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md","Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md","Wirtschaft/Sozialversicherung/arbeitslosenversicherung-grundsicherung.md"]},{"name":"9 · Grüne IT","paths":["Wirtschaft/Arbeitsschutz-Umwelt/umwelt-nachhaltigkeit.md","Wirtschaft/analyse-der-exams/L25_Umweltschutz_Nachhaltigkeit.md"]},{"name":"10 · Prüfung und Übernahme","paths":["Wirtschaft/Ausbildung/abschlusspruefung.md","Wirtschaft/Ausbildung/bbig.md","Wirtschaft/Arbeitsrecht/personalauswahl-arbeitsvertrag.md","Wirtschaft/Arbeitsrecht/arbeitszeugnis.md","Wirtschaft/Ausbildung/europass-fortbildung-umschulung.md"]}],"edges":[["Wirtschaft/Arbeitsrecht/agg-diversity.md","Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md"],["Wirtschaft/Arbeitsrecht/agg-diversity.md","Wirtschaft/Arbeitsrecht/personalauswahl-arbeitsvertrag.md"],["Wirtschaft/Arbeitsrecht/agg-diversity.md","Wirtschaft/Mitbestimmung/betriebsrat-jav.md"],["Wirtschaft/Arbeitsrecht/agg-diversity.md","Wirtschaft/Unternehmen/unternehmensziele-zielkonflikte.md"],["Wirtschaft/Arbeitsrecht/arbeitszeit-pausen-urlaub.md","Wirtschaft/Arbeitsrecht/mutterschutz-elternzeit.md"],["Wirtschaft/Arbeitsrecht/arbeitszeit-pausen-urlaub.md","Wirtschaft/Arbeitsschutz-Umwelt/bildschirmarbeitsplatz-ergonomie.md"],["Wirtschaft/Arbeitsrecht/arbeitszeit-pausen-urlaub.md","Wirtschaft/Ausbildung/jarbschg.md"],["Wirtschaft/Arbeitsrecht/arbeitszeit-pausen-urlaub.md","Wirtschaft/Mitbestimmung/tarifrecht-betriebsvereinbarung.md"],["Wirtschaft/Arbeitsrecht/arbeitszeugnis.md","Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md"],["Wirtschaft/Arbeitsrecht/arbeitszeugnis.md","Wirtschaft/Ausbildung/bbig.md"],["Wirtschaft/Arbeitsrecht/arbeitszeugnis.md","Wirtschaft/Recht/gericht.md"],["Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md","Wirtschaft/Arbeitsrecht/betriebsbedingte-kuendigung.md"],["Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md","Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md"],["Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md","Wirtschaft/Arbeitsrecht/mutterschutz-elternzeit.md"],["Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md","Wirtschaft/Arbeitsrecht/sozialauswahl.md"],["Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md","Wirtschaft/Mitbestimmung/betriebsrat-jav.md"],["Wirtschaft/Arbeitsrecht/besonderer-kuendigungsschutz.md","Wirtschaft/Sozialversicherung/pflegeversicherung.md"],["Wirtschaft/Arbeitsrecht/betriebsbedingte-kuendigung.md","Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md"],["Wirtschaft/Arbeitsrecht/betriebsbedingte-kuendigung.md","Wirtschaft/Arbeitsrecht/sozialauswahl.md"],["Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md","Wirtschaft/Arbeitsrecht/personalauswahl-arbeitsvertrag.md"],["Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md","Wirtschaft/Arbeitsrecht/pflichten-haftung.md"],["Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md","Wirtschaft/Arbeitsrecht/sozialauswahl.md"],["Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md","Wirtschaft/Recht/gericht.md"],["Wirtschaft/Arbeitsrecht/kuendigung-kuendigungsschutz.md","Wirtschaft/Recht/rechts-geschaeftsfaehigkeit.md"],["Wirtschaft/Arbeitsrecht/mutterschutz-elternzeit.md","Wirtschaft/Sozialversicherung/gkv.md"],["Wirtschaft/Arbeitsrecht/personalauswahl-arbeitsvertrag.md","Wirtschaft/Arbeitsrecht/pflichten-haftung.md"],["Wirtschaft/Arbeitsrecht/personalauswahl-arbeitsvertrag.md","Wirtschaft/Recht/rechtsquellen-arbeitsrecht.md"],["Wirtschaft/Arbeitsrecht/pflichten-haftung.md","Wirtschaft/Ausbildung/bbig.md"],["Wirtschaft/Arbeitsrecht/pflichten-haftung.md","Wirtschaft/Recht/urheberrecht-compliance.md"],["Wirtschaft/Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md","Wirtschaft/Arbeitsschutz-Umwelt/bildschirmarbeitsplatz-ergonomie.md"],["Wirtschaft/Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md","Wirtschaft/Arbeitsschutz-Umwelt/brandschutz-erste-hilfe.md"],["Wirtschaft/Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md","Wirtschaft/Arbeitsschutz-Umwelt/sicherheitszeichen.md"],["Wirtschaft/Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md","Wirtschaft/Arbeitsschutz-Umwelt/umwelt-nachhaltigkeit.md"],["Wirtschaft/Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md","Wirtschaft/Ausbildung/jarbschg.md"],["Wirtschaft/Arbeitsschutz-Umwelt/arbeitsschutz-arbeitssicherheit.md","Wirtschaft/Sozialversicherung/arbeitsunfall-unfallversicherung.md"],["Wirtschaft/Arbeitsschutz-Umwelt/bildschirmarbeitsplatz-ergonomie.md","Wirtschaft/Arbeitsschutz-Umwelt/it-sicherheit-im-arbeitsalltag.md"],["Wirtschaft/Arbeitsschutz-Umwelt/bildschirmarbeitsplatz-ergonomie.md","Wirtschaft/Arbeitsschutz-Umwelt/sicherheitszeichen.md"],["Wirtschaft/Arbeitsschutz-Umwelt/brandschutz-erste-hilfe.md","Wirtschaft/Arbeitsschutz-Umwelt/sicherheitszeichen.md"],["Wirtschaft/Arbeitsschutz-Umwelt/brandschutz-erste-hilfe.md","Wirtschaft/Sozialversicherung/arbeitsunfall-unfallversicherung.md"],["Wirtschaft/Arbeitsschutz-Umwelt/it-sicherheit-im-arbeitsalltag.md","Wirtschaft/Mitbestimmung/betriebsrat-jav.md"],["Wirtschaft/Arbeitsschutz-Umwelt/it-sicherheit-im-arbeitsalltag.md","Wirtschaft/Recht/urheberrecht-compliance.md"],["Wirtschaft/Arbeitsschutz-Umwelt/umwelt-nachhaltigkeit.md","Wirtschaft/Unternehmen/unternehmensziele-zielkonflikte.md"],["Wirtschaft/Arbeitsschutz-Umwelt/umwelt-nachhaltigkeit.md","Wirtschaft/Volkswirtschaft/globalisierung-eu-binnenmarkt.md"],["Wirtschaft/Ausbildung/abschlusspruefung.md","Wirtschaft/Ausbildung/ausbildungsordnung-ausbildungsnachweis.md"],["Wirtschaft/Ausbildung/abschlusspruefung.md","Wirtschaft/Ausbildung/bbig.md"],["Wirtschaft/Ausbildung/abschlusspruefung.md","Wirtschaft/Ausbildung/ihk-ausbilder-eignung.md"],["Wirtschaft/Ausbildung/ausbildungsordnung-ausbildungsnachweis.md","Wirtschaft/Ausbildung/bbig.md"],["Wirtschaft/Ausbildung/ausbildungsordnung-ausbildungsnachweis.md","Wirtschaft/Ausbildung/europass-fortbildung-umschulung.md"],["Wirtschaft/Ausbildung/ausbildungsordnung-ausbildungsnachweis.md","Wirtschaft/Ausbildung/ihk-ausbilder-eignung.md"],["Wirtschaft/Ausbildung/bbig.md","Wirtschaft/Ausbildung/ihk-ausbilder-eignung.md"],["Wirtschaft/Ausbildung/bbig.md","Wirtschaft/Ausbildung/jarbschg.md"],["Wirtschaft/Ausbildung/bbig.md","Wirtschaft/Recht/rechts-geschaeftsfaehigkeit.md"],["Wirtschaft/Ausbildung/europass-fortbildung-umschulung.md","Wirtschaft/Ausbildung/ihk-ausbilder-eignung.md"],["Wirtschaft/Ausbildung/europass-fortbildung-umschulung.md","Wirtschaft/Sozialversicherung/arbeitslosenversicherung-grundsicherung.md"],["Wirtschaft/Mitbestimmung/betriebsrat-jav.md","Wirtschaft/Mitbestimmung/gewerkschaften-arbeitskampf.md"],["Wirtschaft/Mitbestimmung/betriebsrat-jav.md","Wirtschaft/Mitbestimmung/tarifrecht-betriebsvereinbarung.md"],["Wirtschaft/Mitbestimmung/betriebsrat-jav.md","Wirtschaft/Recht/rechtsquellen-arbeitsrecht.md"],["Wirtschaft/Mitbestimmung/gewerkschaften-arbeitskampf.md","Wirtschaft/Mitbestimmung/tarifrecht-betriebsvereinbarung.md"],["Wirtschaft/Mitbestimmung/gewerkschaften-arbeitskampf.md","Wirtschaft/Recht/rechtsquellen-arbeitsrecht.md"],["Wirtschaft/Mitbestimmung/tarifrecht-betriebsvereinbarung.md","Wirtschaft/Recht/rechtsquellen-arbeitsrecht.md"],["Wirtschaft/Recht/gericht.md","Wirtschaft/Sozialversicherung/arbeitsunfall-unfallversicherung.md"],["Wirtschaft/Recht/gericht.md","Wirtschaft/nice-to-know/kaufvertrag-agb.md"],["Wirtschaft/Recht/rechts-geschaeftsfaehigkeit.md","Wirtschaft/Unternehmen/rechtsformen-handelsregister.md"],["Wirtschaft/Recht/rechts-geschaeftsfaehigkeit.md","Wirtschaft/nice-to-know/kaufvertrag-agb.md"],["Wirtschaft/Recht/rechts-geschaeftsfaehigkeit.md","Wirtschaft/nice-to-know/vollmachten-prokura-handlungsvollmacht.md"],["Wirtschaft/Recht/rechtsquellen-arbeitsrecht.md","Wirtschaft/nice-to-know/kaufvertrag-agb.md"],["Wirtschaft/Recht/urheberrecht-compliance.md","Wirtschaft/Unternehmen/unternehmensverbindungen-kartellrecht.md"],["Wirtschaft/Sozialversicherung/altersvorsorge-rentenversicherung.md","Wirtschaft/Sozialversicherung/lohn-steuern-gehaltsabrechnung.md"],["Wirtschaft/Sozialversicherung/altersvorsorge-rentenversicherung.md","Wirtschaft/Sozialversicherung/sozialversicherung.md"],["Wirtschaft/Sozialversicherung/altersvorsorge-rentenversicherung.md","Wirtschaft/Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md"],["Wirtschaft/Sozialversicherung/arbeitslosenversicherung-grundsicherung.md","Wirtschaft/Sozialversicherung/sozialversicherung.md"],["Wirtschaft/Sozialversicherung/arbeitslosenversicherung-grundsicherung.md","Wirtschaft/Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md"],["Wirtschaft/Sozialversicherung/arbeitsunfall-unfallversicherung.md","Wirtschaft/Sozialversicherung/sozialversicherung.md"],["Wirtschaft/Sozialversicherung/gkv.md","Wirtschaft/Sozialversicherung/lohn-steuern-gehaltsabrechnung.md"],["Wirtschaft/Sozialversicherung/gkv.md","Wirtschaft/Sozialversicherung/pflegeversicherung.md"],["Wirtschaft/Sozialversicherung/gkv.md","Wirtschaft/Sozialversicherung/sozialversicherung.md"],["Wirtschaft/Sozialversicherung/lohn-steuern-gehaltsabrechnung.md","Wirtschaft/Sozialversicherung/pflegeversicherung.md"],["Wirtschaft/Sozialversicherung/lohn-steuern-gehaltsabrechnung.md","Wirtschaft/Sozialversicherung/sozialversicherung.md"],["Wirtschaft/Sozialversicherung/lohn-steuern-gehaltsabrechnung.md","Wirtschaft/Volkswirtschaft/konjunktur-wirtschaftspolitik.md"],["Wirtschaft/Sozialversicherung/lohn-steuern-gehaltsabrechnung.md","Wirtschaft/Volkswirtschaft/steuern-steuerarten.md"],["Wirtschaft/Sozialversicherung/pflegeversicherung.md","Wirtschaft/Sozialversicherung/sozialversicherung.md"],["Wirtschaft/Sozialversicherung/sozialversicherung.md","Wirtschaft/Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md"],["Wirtschaft/Unternehmen/bep.md","Wirtschaft/Unternehmen/oekonomisches-prinzip-kennzahlen.md"],["Wirtschaft/Unternehmen/bep.md","Wirtschaft/Unternehmen/unternehmensgruendung-businessplan.md"],["Wirtschaft/Unternehmen/bep.md","Wirtschaft/Unternehmen/unternehmensziele-zielkonflikte.md"],["Wirtschaft/Unternehmen/leitungssysteme-organisation.md","Wirtschaft/Unternehmen/rechtsformen-handelsregister.md"],["Wirtschaft/Unternehmen/leitungssysteme-organisation.md","Wirtschaft/Unternehmen/unternehmensziele-zielkonflikte.md"],["Wirtschaft/Unternehmen/leitungssysteme-organisation.md","Wirtschaft/Volkswirtschaft/wirtschaftssektoren-arbeitsteilung.md"],["Wirtschaft/Unternehmen/leitungssysteme-organisation.md","Wirtschaft/nice-to-know/vollmachten-prokura-handlungsvollmacht.md"],["Wirtschaft/Unternehmen/oekonomisches-prinzip-kennzahlen.md","Wirtschaft/Unternehmen/rechtsformen-handelsregister.md"],["Wirtschaft/Unternehmen/oekonomisches-prinzip-kennzahlen.md","Wirtschaft/Unternehmen/unternehmensgruendung-businessplan.md"],["Wirtschaft/Unternehmen/oekonomisches-prinzip-kennzahlen.md","Wirtschaft/Unternehmen/unternehmensziele-zielkonflikte.md"],["Wirtschaft/Unternehmen/oekonomisches-prinzip-kennzahlen.md","Wirtschaft/Volkswirtschaft/wirtschaftliche-grundbegriffe.md"],["Wirtschaft/Unternehmen/rechtsformen-handelsregister.md","Wirtschaft/Unternehmen/unternehmensgruendung-businessplan.md"],["Wirtschaft/Unternehmen/rechtsformen-handelsregister.md","Wirtschaft/Unternehmen/unternehmensverbindungen-kartellrecht.md"],["Wirtschaft/Unternehmen/rechtsformen-handelsregister.md","Wirtschaft/Volkswirtschaft/steuern-steuerarten.md"],["Wirtschaft/Unternehmen/rechtsformen-handelsregister.md","Wirtschaft/nice-to-know/vollmachten-prokura-handlungsvollmacht.md"],["Wirtschaft/Unternehmen/unternehmensgruendung-businessplan.md","Wirtschaft/Volkswirtschaft/steuern-steuerarten.md"],["Wirtschaft/Unternehmen/unternehmensverbindungen-kartellrecht.md","Wirtschaft/Volkswirtschaft/globalisierung-eu-binnenmarkt.md"],["Wirtschaft/Unternehmen/unternehmensverbindungen-kartellrecht.md","Wirtschaft/Volkswirtschaft/marktformen-preisbildung.md"],["Wirtschaft/Unternehmen/unternehmensverbindungen-kartellrecht.md","Wirtschaft/Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md"],["Wirtschaft/Volkswirtschaft/globalisierung-eu-binnenmarkt.md","Wirtschaft/Volkswirtschaft/konjunktur-wirtschaftspolitik.md"],["Wirtschaft/Volkswirtschaft/globalisierung-eu-binnenmarkt.md","Wirtschaft/Volkswirtschaft/wirtschaftssektoren-arbeitsteilung.md"],["Wirtschaft/Volkswirtschaft/konjunktur-wirtschaftspolitik.md","Wirtschaft/Volkswirtschaft/marktformen-preisbildung.md"],["Wirtschaft/Volkswirtschaft/konjunktur-wirtschaftspolitik.md","Wirtschaft/Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md"],["Wirtschaft/Volkswirtschaft/marktformen-preisbildung.md","Wirtschaft/Volkswirtschaft/soziale-marktwirtschaft-sozialstaat.md"],["Wirtschaft/Volkswirtschaft/marktformen-preisbildung.md","Wirtschaft/Volkswirtschaft/wirtschaftliche-grundbegriffe.md"],["Wirtschaft/Volkswirtschaft/wirtschaftliche-grundbegriffe.md","Wirtschaft/Volkswirtschaft/wirtschaftssektoren-arbeitsteilung.md"]],"fileCount":72};
+const REPO = 'https://github.com/Shroudmoa/ihk/blob/main/refactoredtree/';
+const NC = 13;
+const OTHER = DATA.area === 'IT' ? 'Wirtschaft' : 'IT';
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+const INFO = {};
+DATA.groups.forEach((g) => g.topics.forEach((t) => { INFO[t.path] = t; t.children.forEach((c) => { INFO[c.path] = c; }); }));
+const ADJ = {};
+DATA.edges.forEach(([a, b]) => { (ADJ[a] = ADJ[a] || new Set()).add(b); (ADJ[b] = ADJ[b] || new Set()).add(a); });
+
+const st = { view: 'themen', collapsed: new Set(), edges: false, pin: null, hover: null, q: '', group: null };
+let cur = null, idMap = new Map(), sel = {}, curK = 1, moved = false;
+
+$('ttl').textContent = DATA.title;
+$('stats').textContent = DATA.fileCount + ' Lernblätter · ' + DATA.groups.length + ' Gruppen · ' + DATA.edges.length + ' Querverweise';
+
+/* ---------- Struktur je Ansicht ---------- */
+function topicNode(info, ci, gk, withKids) {
+  const kids = withKids && info.children && info.children.length
+    ? info.children.map((c) => ({ kind: 'sub', path: c.path, info: c, ci, id: gk + '|' + c.path })) : null;
+  return { kind: 'topic', path: info.path, info, ci, id: gk + '|' + info.path, children: kids };
+}
+function structure() {
+  if (st.view === 'themen') {
+    return DATA.groups.map((g, gi) => {
+      const key = 'g' + gi;
+      return { kind: 'group', id: key, key, name: g.name, ci: gi % NC, count: g.topics.length,
+        children: st.collapsed.has(key) ? null : g.topics.map((t) => topicNode(t, gi % NC, key, true)) };
+    });
+  }
+  return DATA.stations.map((s, si) => {
+    const key = 's' + si;
+    return { kind: 'group', id: key, key, name: s.name, ci: si % NC, count: s.paths.length,
+      children: st.collapsed.has(key) ? null : s.paths.map((p) => topicNode(INFO[p], si % NC, key, false)) };
+  });
+}
+function viewSlots() {
+  if (st.view === 'themen') return DATA.groups.reduce((n, g) => n + g.topics.reduce((m, t) => m + Math.max(1, t.children.length), 0), 0);
+  return DATA.stations.reduce((n, s) => n + s.paths.length, 0);
+}
+function lines(s, max) {
+  max = max || 26;
+  if (s.length <= max) return [s];
+  for (const sep of [': ', ' – ', ' · ']) {
+    const i = s.indexOf(sep);
+    if (i > 3 && s.length - i - sep.length > 3) {
+      const a = s.slice(0, i), b = s.slice(i + sep.length);
+      if (a.length <= max + 6 && b.length <= max + 8) return [a, b];
+    }
+  }
+  const mid = Math.floor(s.length / 2); let best = -1;
+  for (let i = 0; i < s.length; i++) if (s[i] === ' ' && (best < 0 || Math.abs(i - mid) < Math.abs(best - mid))) best = i;
+  if (best < 0) return [s.slice(0, max) + '…'];
+  const cut = (x) => (x.length > max + 4 ? x.slice(0, max + 3) + '…' : x);
+  return [cut(s.slice(0, best)), cut(s.slice(best + 1))];
+}
+
+/* ---------- Layout ---------- */
+function layout() {
+  const root = d3.hierarchy({ kind: 'root', id: 'root', name: DATA.area, children: structure() });
+  const r2 = Math.max(440, viewSlots() * 17.5 / (2 * Math.PI));
+  const r1 = Math.max(270, r2 * 0.55);
+  const r3 = r2 + 150;
+  d3.tree().size([2 * Math.PI, 1]).separation((a, b) => (a.parent === b.parent ? 1 : 1.7))(root);
+  const rad = [0, r1, r2, r3];
+  root.each((d) => { d.r = rad[d.depth]; d.px = d.r * Math.sin(d.x); d.py = -d.r * Math.cos(d.x); });
+  const deep = root.descendants().some((d) => d.depth === 3);
+  return { root, r1, r2, r3, extent: (deep ? r3 : r2) + 45 };
+}
+
+/* ---------- Zeichnen ---------- */
+const svg = d3.select('#svg');
+const gz = svg.append('g');
+const gLinks = gz.append('g'), gEdges = gz.append('g'), gNodes = gz.append('g');
+const linkGen = d3.linkRadial().angle((d) => d.x).radius((d) => d.r);
+const edgeGen = d3.lineRadial().curve(d3.curveBundle.beta(0.85)).angle((d) => d.x).radius((d) => d.r);
+
+function draw() {
+  cur = layout();
+  idMap = new Map();
+  cur.root.each((d) => idMap.set(d.data.id, d));
+  gLinks.selectAll('*').remove(); gEdges.selectAll('*').remove(); gNodes.selectAll('*').remove();
+
+  sel.links = gLinks.selectAll('path').data(cur.root.links()).join('path').attr('class', 'tl')
+    .attr('d', linkGen).style('stroke', (d) => 'var(--c' + d.target.data.ci + ')');
+
+  const byPath = new Map();
+  cur.root.each((d) => { if (d.data.path && !byPath.has(d.data.path)) byPath.set(d.data.path, d); });
+  const eds = DATA.edges.map(([a, b]) => ({ a, b, s: byPath.get(a), t: byPath.get(b) })).filter((e) => e.s && e.t);
+  sel.edges = gEdges.selectAll('path').data(eds).join('path').attr('class', 'ed')
+    .attr('d', (e) => edgeGen(e.s.path(e.t))).style('stroke', (e) => 'var(--c' + e.s.data.ci + ')');
+
+  sel.nodes = gNodes.selectAll('g').data(cur.root.descendants()).join('g')
+    .attr('class', (d) => 'n ' + d.data.kind)
+    .attr('transform', (d) => 'translate(' + d.px + ',' + d.py + ')')
+    .on('mouseenter', (e, d) => { if (d.data.kind !== 'root') { st.hover = d.data.id; refresh(); } })
+    .on('mouseleave', () => { st.hover = null; refresh(); })
+    .on('click', (e, d) => {
+      e.stopPropagation();
+      if (d.data.kind === 'group') { toggleGroup(d.data.key); }
+      else if (d.data.kind !== 'root') { st.pin = st.pin === d.data.id ? null : d.data.id; refresh(); }
+    });
+
+  sel.nodes.append('title').text((d) => (d.data.info ? d.data.info.title : d.data.name));
+  sel.nodes.append('circle').attr('class', 'dot')
+    .attr('r', (d) => ({ root: 42, group: 8, topic: 3.8, sub: 3.2 }[d.data.kind]))
+    .style('fill', (d) => {
+      if (d.data.kind === 'root') return 'var(--accent)';
+      if (d.data.info && d.data.info.cross) return 'var(--bg)';
+      return 'var(--c' + d.data.ci + ')';
+    })
+    .style('stroke', (d) => (d.data.info && d.data.info.cross ? 'var(--c' + d.data.ci + ')' : null))
+    .style('stroke-width', (d) => (d.data.info && d.data.info.cross ? 1.8 : null));
+
+  sel.nodes.filter((d) => d.data.kind === 'group' && !d.children).select('circle').attr('r', 11);
+  sel.nodes.filter((d) => d.data.kind === 'group' && !d.children).append('text').attr('class', 'cnt').text((d) => d.data.count);
+
+  sel.nodes.filter((d) => d.data.kind === 'root').append('text').attr('class', 'lbl')
+    .style('font-size', DATA.area.length > 3 ? '15px' : '22px').text(DATA.area);
+
+  const lab = sel.nodes.filter((d) => d.data.kind !== 'root').append('text').attr('class', 'lbl');
+  lab.each(function (d) {
+    const inward = d.data.kind === 'group' || (d.data.kind === 'topic' && d.children);
+    const right = d.x < Math.PI;
+    const anchor = right === !inward ? 'start' : 'end';
+    const dx = anchor === 'start' ? (d.data.kind === 'group' && !d.children ? 15 : 11) : -(d.data.kind === 'group' && !d.children ? 15 : 11);
+    const t = d3.select(this)
+      .attr('transform', 'rotate(' + (d.x * 180 / Math.PI - 90) + ') rotate(' + (right ? 0 : 180) + ')')
+      .attr('text-anchor', anchor).attr('x', dx);
+    if (d.data.kind === 'group') {
+      const ls = lines(d.data.name);
+      if (!d.children) ls[ls.length - 1] += ' · ' + d.data.count;
+      ls.forEach((l, i) => t.append('tspan').attr('x', dx).attr('dy', i === 0 ? (ls.length > 1 ? '-0.55em' : '0') : '1.15em').text(l));
+    } else {
+      t.text(d.data.info.short);
+    }
+  });
+
+  renderLegend();
+  refresh();
+  $('b-toggle').textContent = st.collapsed.size >= groupKeys().length ? 'Alle ausklappen' : 'Alle einklappen';
+}
+
+/* ---------- Zustand anwenden (ohne Neuaufbau) ---------- */
+function groupKeys() { return (st.view === 'themen' ? DATA.groups : DATA.stations).map((_, i) => (st.view === 'themen' ? 'g' : 's') + i); }
+function matchSet() {
+  if (!st.q) return null;
+  const q = st.q, set = new Set();
+  Object.keys(INFO).forEach((p) => { const i = INFO[p]; if ((i.title + ' ' + (i.desc || '') + ' ' + p).toLowerCase().includes(q)) set.add(p); });
+  return set;
+}
+function refresh() {
+  if (!cur) return;
+  const hv = st.hover && idMap.get(st.hover), pn = st.pin && idMap.get(st.pin);
+  const focus = (hv && hv.data.path ? hv : pn) || null;
+  const fpath = focus ? focus.data.path : null;
+  const near = fpath ? new Set([fpath, ...(ADJ[fpath] || [])]) : null;
+  const ms = matchSet();
+  hitsLabel(ms);
+
+  const on = (d) => {
+    if (d.data.kind === 'root') return true;
+    if (d.data.kind === 'group') {
+      if (st.group) return d.data.key === st.group;
+      return true;
+    }
+    if (st.group && groupOf(d).data.key !== st.group) return false;
+    if (near) return near.has(d.data.path);
+    if (ms) return ms.has(d.data.path);
+    return true;
+  };
+  sel.nodes.classed('dim', (d) => !on(d))
+    .classed('hit', (d) => !!ms && !!d.data.path && ms.has(d.data.path))
+    .classed('sel', (d) => !!pn && d.data.id === pn.data.id);
+  sel.links.classed('dim', (d) => !on(d.target) || (d.target.data.kind === 'group' && !!near));
+
+  sel.edges.style('opacity', (e) => {
+    const hit = fpath && (e.a === fpath || e.b === fpath);
+    if (hit) return 0.9;
+    if (fpath) return st.edges ? 0.04 : 0;
+    return st.edges ? 0.12 : 0;
+  }).style('stroke-width', (e) => (fpath && (e.a === fpath || e.b === fpath) ? 1.8 : 1));
+  sel.edges.filter((e) => fpath && (e.a === fpath || e.b === fpath)).raise();
+
+  renderCard(hv, pn);
+  document.querySelectorAll('#legend button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.k === st.group)));
+}
+function groupOf(d) { let n = d; while (n.depth > 1) n = n.parent; return n; }
+function hitsLabel(ms) { $('hits').textContent = ms ? (ms.size + (ms.size === 1 ? ' Treffer' : ' Treffer')) : ''; }
+
+function renderCard(hv, pn) {
+  const card = $('card');
+  const n = hv || pn;
+  if (!n) { card.hidden = true; return; }
+  card.hidden = false;
+  const d = n.data;
+  if (d.kind === 'group') {
+    card.className = '';
+    card.innerHTML = '<div class="top"><span class="swatch" style="background:var(--c' + d.ci + ')"></span><span>' + (st.view === 'themen' ? 'Gruppe' : 'Station') + '</span></div>' +
+      '<h2>' + esc(d.name) + '</h2><p class="muted">' + d.count + ' Lernblätter · Klick klappt die Gruppe ' + (n.children ? 'ein' : 'aus') + '</p>';
+    return;
+  }
+  const pinned = !hv || hv.data.id === (pn && pn.data.id);
+  const i = d.info, rel = [...(ADJ[d.path] || [])].map((p) => INFO[p]).filter(Boolean);
+  card.className = pinned && pn ? 'pinned' : '';
+  card.innerHTML =
+    (pinned && pn ? '<button class="x" type="button" data-x="1" aria-label="Schließen">×</button>' : '') +
+    '<div class="top"><span class="swatch" style="background:var(--c' + d.ci + ')"></span><span>' + esc(groupOf(n).data.name) + '</span>' +
+    (i.cross ? '<span class="tag">Bereich ' + OTHER + '</span>' : '') + '</div>' +
+    '<h2>' + esc(i.title) + '</h2>' + (i.desc ? '<p>' + esc(i.desc) + '</p>' : '') +
+    '<p class="path">' + esc(d.path) + '</p>' +
+    (rel.length ? (pinned && pn
+      ? '<h3>Verknüpft (' + rel.length + ')</h3><div class="chips">' + rel.map((r) => '<button type="button" data-p="' + esc(r.path) + '">' + esc(r.short) + '</button>').join('') + '</div>'
+      : '<p class="muted">' + rel.length + ' Querverweise · anklicken zum Fixieren</p>') : '') +
+    '<a class="gh" href="' + REPO + esc(d.path) + '" target="_blank" rel="noopener">Auf GitHub öffnen ↗</a>';
+}
+$('card').addEventListener('click', (e) => {
+  if (e.target.closest('[data-x]')) { st.pin = null; refresh(); return; }
+  const b = e.target.closest('[data-p]');
+  if (b) pinPath(b.dataset.p);
+});
+
+/* ---------- Gruppen, Legende ---------- */
+function toggleGroup(key) {
+  if (st.collapsed.has(key)) st.collapsed.delete(key); else st.collapsed.add(key);
+  st.pin = null; st.hover = null; draw();
+}
+function renderLegend() {
+  const arr = st.view === 'themen' ? DATA.groups.map((g) => [g.name, g.topics.length]) : DATA.stations.map((s) => [s.name, s.paths.length]);
+  const pre = st.view === 'themen' ? 'g' : 's';
+  $('legend').innerHTML = arr.map(([n, c], i) =>
+    '<button type="button" data-k="' + pre + i + '" aria-pressed="false"><span class="sw" style="background:var(--c' + (i % NC) + ')"></span>' + esc(n) + ' <span class="c">' + c + '</span></button>').join('');
+}
+$('legend').addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  const k = b.dataset.k;
+  if (st.group === k) { st.group = null; refresh(); return; }
+  st.group = k;
+  if (st.collapsed.has(k)) { st.collapsed.delete(k); draw(); } else refresh();
+  const g = idMap.get(k);
+  if (g) {
+    const pts = g.children ? g.children.map((c) => [c.px, c.py]) : [[g.px, g.py]];
+    const mx = d3.mean(pts, (p) => p[0]), my = d3.mean(pts, (p) => p[1]);
+    const spread = g.children ? Math.hypot(d3.max(pts, (p) => p[0]) - d3.min(pts, (p) => p[0]), d3.max(pts, (p) => p[1]) - d3.min(pts, (p) => p[1])) : 200;
+    const box = $('svg').getBoundingClientRect();
+    zoomTo(mx, my, Math.min(2.2, Math.max(0.7, Math.min(box.width, box.height) / (spread + 420))));
+  }
+});
+
+/* ---------- Zoom ---------- */
+const zoom = d3.zoom().scaleExtent([0.08, 5]).on('zoom', (e) => {
+  gz.attr('transform', e.transform); curK = e.transform.k;
+  $('svg').classList.toggle('low', curK < 0.55);
+  if (e.sourceEvent) moved = true;
+});
+svg.call(zoom).on('dblclick.zoom', null).on('click', () => { st.pin = null; refresh(); });
+function zoomTo(x, y, k) {
+  const b = $('svg').getBoundingClientRect();
+  svg.transition().duration(550).call(zoom.transform, d3.zoomIdentity.translate(b.width / 2 - x * k, b.height / 2 - y * k).scale(k));
+}
+function fit(animate) {
+  const b = $('svg').getBoundingClientRect();
+  const k = Math.min(b.width, b.height) / (2 * cur.extent) * 0.97;
+  const t = d3.zoomIdentity.translate(b.width / 2, b.height / 2).scale(k);
+  (animate ? svg.transition().duration(500) : svg).call(zoom.transform, t);
+  moved = false;
+}
+function pinPath(p) {
+  let n = null;
+  cur.root.each((d) => { if (!n && d.data.path === p) n = d; });
+  if (!n) return;
+  st.pin = n.data.id; st.group = null; refresh();
+  zoomTo(n.px, n.py, Math.max(curK, 1.1));
+}
+
+/* ---------- Bedienung ---------- */
+function setView(v) {
+  if (st.view === v) return;
+  st.view = v; st.collapsed = new Set(); st.pin = null; st.hover = null; st.group = null;
+  $('v-themen').setAttribute('aria-pressed', String(v === 'themen'));
+  $('v-story').setAttribute('aria-pressed', String(v === 'story'));
+  try { history.replaceState(null, '', '#' + (v === 'story' ? 'lerngeschichte' : 'themen')); } catch (e) {}
+  draw(); fit(true);
+}
+$('v-themen').onclick = () => setView('themen');
+$('v-story').onclick = () => setView('story');
+$('b-edges').onclick = () => { st.edges = !st.edges; $('b-edges').setAttribute('aria-pressed', String(st.edges)); refresh(); };
+$('b-fit').onclick = () => fit(true);
+$('b-toggle').onclick = () => {
+  const keys = groupKeys();
+  st.collapsed = st.collapsed.size >= keys.length ? new Set() : new Set(keys);
+  st.pin = null; st.hover = null; draw(); fit(true);
+};
+$('q').addEventListener('input', (e) => { st.q = e.target.value.trim().toLowerCase(); st.group = null; refresh(); });
+$('q').addEventListener('keydown', (e) => {
+  if (e.key !== 'Enter' || !st.q) return;
+  const ms = matchSet(); if (!ms || !ms.size) return;
+  const first = [...ms][0];
+  const keys = groupKeys();
+  const src = st.view === 'themen' ? DATA.groups.map((g) => g.topics.flatMap((t) => [t.path, ...t.children.map((c) => c.path)])) : DATA.stations.map((s) => s.paths);
+  let opened = false;
+  src.forEach((ps, i) => { if (ps.includes(first) && st.collapsed.has(keys[i])) { st.collapsed.delete(keys[i]); opened = true; } });
+  if (opened) draw();
+  pinPath(first);
+});
+document.addEventListener('keydown', (e) => { if (e.key === '/' && document.activeElement !== $('q')) { e.preventDefault(); $('q').focus(); } });
+window.addEventListener('resize', () => { if (!moved) fit(false); });
+
+if (location.hash === '#lerngeschichte') { st.view = 'story'; $('v-themen').setAttribute('aria-pressed', 'false'); $('v-story').setAttribute('aria-pressed', 'true'); }
+draw();
+fit(false);
+</script>
+
+</body></html>
